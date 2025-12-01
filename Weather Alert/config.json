@@ -1,0 +1,9 @@
+{
+  "EnableMod": true,
+  "AlertOnRain": true,
+  "AlertOnStorm": true,
+  "AlertOnSnow": true,
+  "AlertOnWind": true,
+  "AlertOnFestival": true,
+  "UsePopupDialogue": false
+}

@@ -1,0 +1,9 @@
+{
+  "Name": "Weather Alert",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Shows a notification when tomorrow's weather is rain, storm, snow, or other special weather.",
+  "UniqueID": "ZeroXPatch.WeatherAlert",
+  "EntryDll": "Weather Alert.dll",
+  "MinimumApiVersion": "4.0.0"
+}
