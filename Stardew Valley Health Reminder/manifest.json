@@ -1,0 +1,9 @@
+{
+  "Name": "Stardew Valley Health Reminder",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Sends a reminder every X real minutes to take a break.",
+  "UniqueID": "ZeroXPatch.StardewValleyHealthReminder",
+  "EntryDll": "Stardew Valley Health Reminder.dll",
+  "MinimumApiVersion": "4.0.0"
+}

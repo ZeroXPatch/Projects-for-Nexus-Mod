@@ -1,0 +1,6 @@
+{
+  "EnableMod": true,
+  "ReminderIntervalMinutes": 60,
+  "ReminderMessageOverride": "",
+  "UsePopupDialogue": false
+}
