@@ -1,0 +1,9 @@
+{
+  "Name": "Now Playing Stardew Reminder",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Shows a friendly message when you load a save: reminding you that you are playing Stardew Valley.",
+  "UniqueID": "ZeroXPatch.NowPlayingStardewReminder",
+  "EntryDll": "NowPlayingReminder.dll",
+  "MinimumApiVersion": "4.0.0"
+}
