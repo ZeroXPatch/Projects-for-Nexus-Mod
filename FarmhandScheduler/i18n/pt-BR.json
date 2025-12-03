@@ -1,0 +1,21 @@
+{
+  "menu.title": "Planejador de Assistente",
+
+  "menu.row.hire": "Contratar assistente para amanhã",
+  "menu.row.water": "Regar plantações",
+  "menu.row.pet": "Acariciar animais",
+  "menu.row.feed": "Alimentar animais",
+  "menu.row.harvest": "Colher plantações",
+  "menu.row.lowtier": "Colher apenas itens de baixo valor",
+  "menu.row.chests": "Organizar baús",
+
+  "menu.workhours": "Horário de trabalho",
+  "menu.workhours.start": "Início: {0}:00",
+  "menu.workhours.end": "Fim: {0}:00",
+
+  "menu.cost": "Custo diário: {0}g",
+  "menu.hint": "Clique esquerdo para aumentar horas, clique direito para reduzir.",
+  "menu.openwith": "Abrir com {0}",
+  "menu.button.save": "Salvar",
+  "menu.button.cancel": "Cancelar"
+}

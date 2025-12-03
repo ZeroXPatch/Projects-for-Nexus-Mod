@@ -1,0 +1,21 @@
+{
+  "menu.title": "农场帮手计划",
+
+  "menu.row.hire": "预约明天雇帮手",
+  "menu.row.water": "浇灌农作物",
+  "menu.row.pet": "抚摸动物",
+  "menu.row.feed": "投放饲料",
+  "menu.row.harvest": "收割作物",
+  "menu.row.lowtier": "只收割低价作物",
+  "menu.row.chests": "整理箱子",
+
+  "menu.workhours": "工作时间",
+  "menu.workhours.start": "开始：{0}:00",
+  "menu.workhours.end": "结束：{0}:00",
+
+  "menu.cost": "每日工资：{0}g",
+  "menu.hint": "左键增加时间，右键减少时间。",
+  "menu.openwith": "按 {0} 打开",
+  "menu.button.save": "保存",
+  "menu.button.cancel": "取消"
+}
