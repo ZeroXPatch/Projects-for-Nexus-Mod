@@ -1,0 +1,15 @@
+{
+  "ExtraWaterChance": 0.18,
+  "ExtraWaterRadius": 1,
+  "ExtraWaterTiles": 2,
+  "SkipWaterChance": 0.1,
+  "MaxSkippedTiles": 2,
+  "FertilizerChance": 0.05,
+  "FertilizerItemId": 368,
+  "OverflowChance": 0.02,
+  "OverflowRadius": 2,
+  "OverflowTiles": 1,
+  "GrowthSpurtChance": 0.03,
+  "GrowthSpurtTiles": 2,
+  "DebugLogging": false
+}

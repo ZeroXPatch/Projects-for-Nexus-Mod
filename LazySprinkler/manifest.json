@@ -1,0 +1,11 @@
+{
+  "Name": "Lazy Sprinkler",
+  "Author": "Nexus Mods Agent",
+  "Version": "1.0.0",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Description": "Sprinklers pick a random personality each morning: sometimes helpful, sometimes lazy, occasionally chaotic.",
+  "UniqueID": "NexusAgent.LazySprinkler",
+  "EntryDll": "LazySprinkler.dll",
+  "UpdateKeys": []
+}
