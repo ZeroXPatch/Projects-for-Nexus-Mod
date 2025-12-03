@@ -175,7 +175,7 @@ namespace TalkingHorse
         {
             var translations = new List<string>();
 
-            for (int i = 1; i <= 12; i++)
+            for (int i = 1; i <= 30; i++)
             {
                 string key = $"lines.{i}";
                 Translation t = Helper.Translation.Get(key);
