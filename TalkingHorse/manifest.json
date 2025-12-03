@@ -1,0 +1,11 @@
+{
+  "Name": "Talking Horse",
+  "Author": "Nexus Mods Agent",
+  "Version": "1.0.0",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Description": "Gives your horse witty commentary with configurable timing and translations.",
+  "UniqueID": "NexusAgent.TalkingHorse",
+  "EntryDll": "TalkingHorse.dll",
+  "UpdateKeys": []
+}
