@@ -3,8 +3,8 @@
 This repository already contains the SMAPI entry point, manifest, and i18n strings. Follow these steps to turn it into the `PetBondMod.dll` you can drop into Stardew Valley's `Mods` folder.
 
 ## Prerequisites
-- **.NET 6 SDK** installed (matching the `net6.0` target in `PetBondMod.csproj`).
-- **SMAPI + Stardew Valley + SpaceCore** installed on the same machine. The build helper package `Pathoschild.Stardew.ModBuildConfig` will try to locate the game/SMAPI automatically; if it cannot, you'll point it to the install path in the build command. SpaceCore should be present in `Mods/SpaceCore` so the build can resolve its skill/profession types.
+- **.NET 5 SDK** installed (matching the `net5.0` target in `PetBondMod.csproj`).
+- **SMAPI + Stardew Valley** installed on the same machine. The build helper package `Pathoschild.Stardew.ModBuildConfig` will try to locate the game/SMAPI automatically; if it cannot, you'll point it to the install path in the build command.
 
 ## Build the DLL
 From the repo root, run:
@@ -14,7 +14,7 @@ From the repo root, run:
  dotnet build PetBondMod/PetBondMod.csproj -c Release
 ```
 
-The compiled DLL will land at `PetBondMod/bin/Release/net6.0/PetBondMod.dll` alongside the copied `manifest.json` and `i18n/` folders. Skill and profession icons are generated at runtime, so no binary art assets are required.
+The compiled DLL will land at `PetBondMod/bin/Release/net5.0/PetBondMod.dll` alongside the copied `manifest.json` and `i18n/` folders. Skill and profession icons are generated at runtime, so no binary art assets are required.
 
 ### If the game path isn't detected automatically
 Add a `GamePath` property pointing to your Stardew install (the folder that contains `Stardew Valley.exe`):
@@ -27,7 +27,7 @@ On Windows PowerShell, escape the space as ``"C:\\Program Files (x86)\\Steam\\st
 
 ## Install and test in-game
 1. Create a new folder in `Stardew Valley/Mods` named `PetBondMod` (or reuse the existing one if you're updating).
-2. Copy the build output from `PetBondMod/bin/Release/net6.0/` into that folder. It should include:
+2. Copy the build output from `PetBondMod/bin/Release/net5.0/` into that folder. It should include:
    - `PetBondMod.dll`
    - `manifest.json`
    - `i18n/` directory (copied during the build).
