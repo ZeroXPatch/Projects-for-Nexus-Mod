@@ -1,0 +1,4 @@
+{
+  "hud.spawned": "You feel danger nearby: {count} monster(s) appeared in {location}.",
+  "hud.blocked": "It is too calm here for monsters to appear."
+}

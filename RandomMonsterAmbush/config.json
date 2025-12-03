@@ -1,0 +1,23 @@
+{
+  "EnableMod": true,
+  "SpawnChance": 0.25,
+  "CheckIntervalTicks": 120,
+  "MinSpawnDistance": 3,
+  "MaxSpawnDistance": 8,
+  "MaxMonstersPerSpawn": 2,
+  "AllowDaytimeSpawns": false,
+  "PreventDuringEvents": true,
+  "DisallowedLocations": [
+    "FarmHouse",
+    "FarmHouse1",
+    "FarmHouse2",
+    "Cellar",
+    "HaleyHouse",
+    "ElliottHouse",
+    "SebastianRoom",
+    "HarveyRoom",
+    "SamHouse",
+    "SeedShop"
+  ],
+  "ShowHudMessage": true
+}
