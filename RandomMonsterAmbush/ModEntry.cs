@@ -31,7 +31,7 @@ namespace RandomMonsterAmbush
             tile => new ShadowBrute(tile * Game1.tileSize),
             tile => new ShadowShaman(tile * Game1.tileSize),
             tile => new Serpent(tile * Game1.tileSize),
-            tile => new Mummy(tile * Game1.tileSize)
+            
         };
 
         /// <summary>Boss-like monsters; one of these can be chosen per ambush and then buffed.</summary>
@@ -40,7 +40,6 @@ namespace RandomMonsterAmbush
             tile => new ShadowBrute(tile * Game1.tileSize),
             tile => new ShadowShaman(tile * Game1.tileSize),
             tile => new Serpent(tile * Game1.tileSize),
-            tile => new Mummy(tile * Game1.tileSize),
             tile => new SquidKid(tile * Game1.tileSize),
             tile => new Ghost(tile * Game1.tileSize)
         };

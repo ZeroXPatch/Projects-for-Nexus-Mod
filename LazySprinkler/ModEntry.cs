@@ -1,12 +1,12 @@
-using StardewModdingAPI;
-using StardewModdingAPI.Events;
-using StardewValley;
-using StardewValley.TerrainFeatures;
-using StardewValley.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
+using StardewModdingAPI;
+using StardewModdingAPI.Events;
+using StardewValley;
+using StardewValley.Extensions;
+using StardewValley.TerrainFeatures;
 
 namespace LazySprinkler
 {
@@ -27,9 +27,7 @@ namespace LazySprinkler
         {
             var api = Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
             if (api is null)
-            {
                 return;
-            }
 
             api.Register(ModManifest, ResetConfig, () => Helper.WriteConfig(Config));
             api.AddSectionTitle(ModManifest, () => Helper.Translation.Get("gmcm.section.behavior"));
@@ -100,10 +98,11 @@ namespace LazySprinkler
                 0.01f
             );
 
+            // Fertilizer ID is stored as string, but exposed as an int slider in GMCM
             api.AddNumberOption(
                 ModManifest,
-                () => Config.FertilizerItemId,
-                value => Config.FertilizerItemId = Math.Max(0, value),
+                () => int.TryParse(Config.FertilizerItemId, out var v) ? v : 368,
+                value => Config.FertilizerItemId = value.ToString(),
                 () => Helper.Translation.Get("gmcm.fertilizerItemId.name"),
                 () => Helper.Translation.Get("gmcm.fertilizerItemId.desc"),
                 0,
@@ -184,22 +183,24 @@ namespace LazySprinkler
         {
             _random = CreateDailyRandom();
             _locationCache.Clear();
-            Utility.ForEachLocation(location => _locationCache.Add(location));
+
+            // Utility.ForEachLocation expects a Func<GameLocation, bool>
+            Utility.ForEachLocation(location =>
+            {
+                _locationCache.Add(location);
+                return true; // keep iterating
+            });
 
             foreach (var location in _locationCache)
             {
                 foreach (var sprinkler in location.Objects.Values)
                 {
                     if (!sprinkler.IsSprinkler())
-                    {
                         continue;
-                    }
 
                     var tiles = sprinkler.GetSprinklerTiles().ToList();
                     if (tiles.Count == 0)
-                    {
                         continue;
-                    }
 
                     ApplyPersonality(location, sprinkler.TileLocation, tiles);
                 }
@@ -209,40 +210,31 @@ namespace LazySprinkler
         private void ApplyPersonality(GameLocation location, Vector2 sprinklerTile, IList<Vector2> coverage)
         {
             if (_random.NextDouble() < Config.SkipWaterChance)
-            {
                 SkipCoverage(location, coverage);
-            }
 
             if (_random.NextDouble() < Config.ExtraWaterChance)
-            {
                 WaterExtraTiles(location, sprinklerTile, coverage);
-            }
 
             if (_random.NextDouble() < Config.FertilizerChance)
-            {
                 ApplyFertilizer(location, coverage);
-            }
 
             if (_random.NextDouble() < Config.OverflowChance)
-            {
                 OverflowWater(location, sprinklerTile, coverage);
-            }
 
             if (_random.NextDouble() < Config.GrowthSpurtChance)
-            {
                 GiveGrowthSpurts(location, coverage);
-            }
         }
 
         private void SkipCoverage(GameLocation location, IList<Vector2> coverage)
         {
             var skipCount = Math.Min(Config.MaxSkippedTiles, coverage.Count);
             if (skipCount <= 0)
-            {
                 return;
-            }
 
-            var shuffled = coverage.OrderBy(_ => _random.NextDouble()).Take(skipCount);
+            var shuffled = coverage
+                .OrderBy(_ => _random.NextDouble())
+                .Take(skipCount);
+
             foreach (var tile in shuffled)
             {
                 if (location.terrainFeatures.TryGetValue(tile, out var feature) && feature is HoeDirt dirt)
@@ -256,44 +248,44 @@ namespace LazySprinkler
         private void WaterExtraTiles(GameLocation location, Vector2 sprinklerTile, IList<Vector2> coverage)
         {
             if (Config.ExtraWaterTiles <= 0)
-            {
                 return;
-            }
 
             var candidateTiles = GetTilesInRadius(sprinklerTile, Config.ExtraWaterRadius)
                 .Where(tile => !coverage.Contains(tile))
                 .ToList();
 
             if (candidateTiles.Count == 0)
-            {
                 return;
-            }
 
-            var selected = candidateTiles.OrderBy(_ => _random.NextDouble()).Take(Config.ExtraWaterTiles);
+            var selected = candidateTiles
+                .OrderBy(_ => _random.NextDouble())
+                .Take(Config.ExtraWaterTiles);
+
             foreach (var tile in selected)
             {
                 if (TryWaterTile(location, tile))
-                {
                     LogDebug($"Sprinkler watered extra tile {tile} in {location.NameOrUniqueName}.");
-                }
             }
         }
 
         private void ApplyFertilizer(GameLocation location, IList<Vector2> coverage)
         {
             var candidates = coverage
-                .Where(tile => location.terrainFeatures.TryGetValue(tile, out var feature) && feature is HoeDirt dirt && dirt.fertilizer.Value == HoeDirt.noFertilizer)
+                .Where(tile =>
+                    location.terrainFeatures.TryGetValue(tile, out var feature) &&
+                    feature is HoeDirt dirt &&
+                    string.IsNullOrEmpty(dirt.fertilizer.Value) // no fertilizer set
+                )
                 .ToList();
 
             if (candidates.Count == 0)
-            {
                 return;
-            }
 
             var chosen = candidates[_random.Next(candidates.Count)];
-            if (location.terrainFeatures.TryGetValue(chosen, out var feature) && feature is HoeDirt dirt)
+            if (location.terrainFeatures.TryGetValue(chosen, out var chosenFeature) &&
+                chosenFeature is HoeDirt chosenDirt)
             {
-                dirt.fertilizer.Value = Config.FertilizerItemId;
+                chosenDirt.fertilizer.Value = Config.FertilizerItemId; // string ID
                 LogDebug($"Sprinkler handed out fertilizer on tile {chosen} in {location.NameOrUniqueName}.");
             }
         }
@@ -301,52 +293,64 @@ namespace LazySprinkler
         private void OverflowWater(GameLocation location, Vector2 sprinklerTile, IList<Vector2> coverage)
         {
             if (Config.OverflowTiles <= 0)
-            {
                 return;
-            }
 
             var candidateTiles = GetTilesInRadius(sprinklerTile, Config.OverflowRadius)
                 .Where(tile => !coverage.Contains(tile))
                 .ToList();
 
             if (candidateTiles.Count == 0)
-            {
                 return;
-            }
 
-            var selected = candidateTiles.OrderBy(_ => _random.NextDouble()).Take(Config.OverflowTiles);
+            var selected = candidateTiles
+                .OrderBy(_ => _random.NextDouble())
+                .Take(Config.OverflowTiles);
+
             foreach (var tile in selected)
             {
                 if (TryWaterTile(location, tile))
-                {
                     LogDebug($"Sprinkler overflowed onto tile {tile} in {location.NameOrUniqueName}.");
-                }
             }
         }
 
         private void GiveGrowthSpurts(GameLocation location, IList<Vector2> coverage)
         {
             if (Config.GrowthSpurtTiles <= 0)
-            {
                 return;
-            }
 
+            // tiles that currently have a crop that isn't ready to harvest
             var candidates = coverage
-                .Where(tile => location.terrainFeatures.TryGetValue(tile, out var feature) && feature is HoeDirt dirt && dirt.crop is { } crop && !crop.readyForHarvest())
+                .Where(tile =>
+                {
+                    if (!location.terrainFeatures.TryGetValue(tile, out var feature))
+                        return false;
+
+                    if (feature is not HoeDirt dirt)
+                        return false;
+
+                    var crop = dirt.crop;
+                    return crop is not null && !crop.readyForHarvest();
+                })
                 .ToList();
 
             if (candidates.Count == 0)
-            {
                 return;
-            }
 
-            var selected = candidates.OrderBy(_ => _random.NextDouble()).Take(Config.GrowthSpurtTiles);
+            var selected = candidates
+                .OrderBy(_ => _random.NextDouble())
+                .Take(Config.GrowthSpurtTiles);
+
             foreach (var tile in selected)
             {
-                if (!location.terrainFeatures.TryGetValue(tile, out var feature) || feature is not HoeDirt dirt || dirt.crop is not { } crop || crop.readyForHarvest())
-                {
+                if (!location.terrainFeatures.TryGetValue(tile, out var feature))
                     continue;
-                }
+
+                if (feature is not HoeDirt dirt)
+                    continue;
+
+                var crop = dirt.crop;
+                if (crop is null || crop.readyForHarvest())
+                    continue;
 
                 if (crop.dayOfCurrentPhase.Value > 0)
                 {
@@ -370,9 +374,7 @@ namespace LazySprinkler
                 for (var dy = -radius; dy <= radius; dy++)
                 {
                     if (dx == 0 && dy == 0)
-                    {
                         continue;
-                    }
 
                     yield return new Vector2(center.X + dx, center.Y + dy);
                 }
@@ -393,15 +395,19 @@ namespace LazySprinkler
         private void LogDebug(string message)
         {
             if (Config.DebugLogging)
-            {
                 Monitor.Log(message, LogLevel.Trace);
-            }
         }
 
         private Random CreateDailyRandom()
         {
-            // Base the seed on stable game values so the same day rolls the same personalities regardless of machine clock.
-            var seed = (int)((Game1.uniqueIDForThisGame + Game1.stats.DaysPlayed + Game1.dayOfMonth + (Game1.year * 17)) % int.MaxValue);
+            // stable seed so the same in-game day = same personalities
+            long baseSeed =
+                (long)(Game1.uniqueIDForThisGame % int.MaxValue) +
+                Game1.stats.DaysPlayed +
+                Game1.dayOfMonth +
+                Game1.year * 17L;
+
+            var seed = (int)(baseSeed % int.MaxValue);
             return new Random(seed);
         }
     }

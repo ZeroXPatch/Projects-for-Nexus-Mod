@@ -8,7 +8,10 @@ namespace LazySprinkler
         public double SkipWaterChance { get; set; } = 0.1;
         public int MaxSkippedTiles { get; set; } = 2;
         public double FertilizerChance { get; set; } = 0.05;
-        public int FertilizerItemId { get; set; } = 368;
+
+        // string now – store the fertilizer item ID as text (e.g. "368")
+        public string FertilizerItemId { get; set; } = "368";
+
         public double OverflowChance { get; set; } = 0.02;
         public int OverflowRadius { get; set; } = 2;
         public int OverflowTiles { get; set; } = 1;

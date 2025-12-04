@@ -1,0 +1,12 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LazySprinkler\obj\Debug\net6.0\LazySprinkler.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LazySprinkler\obj\Debug\net6.0\LazySprinkler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LazySprinkler\obj\Debug\net6.0\LazySprinkler.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LazySprinkler\obj\Debug\net6.0\LazySprinkler.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LazySprinkler\obj\Debug\net6.0\LazySprinkler.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LazySprinkler\obj\Debug\net6.0\LazySprinkler.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LazySprinkler\bin\Debug\net6.0\config.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LazySprinkler\bin\Debug\net6.0\i18n\en.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LazySprinkler\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LazySprinkler\bin\Debug\net6.0\LazySprinkler.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LazySprinkler\bin\Debug\net6.0\LazySprinkler.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LazySprinkler\obj\Debug\net6.0\LazySprinkler.dll

@@ -1,6 +1,5 @@
 using System;
 using StardewModdingAPI;
-using StardewModdingAPI.Utilities;
 
 namespace LazySprinkler
 {
