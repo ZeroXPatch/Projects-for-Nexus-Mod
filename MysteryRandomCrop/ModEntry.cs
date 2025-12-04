@@ -22,6 +22,7 @@ namespace MysteryHarvestCrop
         private IMonitor _monitor = null!;
         private IModHelper _helper = null!;
         private Harmony _harmony = null!;
+        private ModConfig _config = null!;
         private readonly List<string> _randomPool = new();
         private static ModEntry? Instance { get; set; }
 
@@ -30,6 +31,7 @@ namespace MysteryHarvestCrop
             _monitor = Monitor;
             _helper = helper;
             _harmony = new Harmony(ModManifest.UniqueID);
+            _config = helper.ReadConfig<ModConfig>();
             Instance = this;
 
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
@@ -45,6 +47,51 @@ namespace MysteryHarvestCrop
         private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
         {
             _monitor.Log("Mystery Harvest Crop initialized.", LogLevel.Trace);
+
+            var gmcm = _helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
+            if (gmcm != null)
+            {
+                gmcm.Register(
+                    mod: ModManifest,
+                    reset: () =>
+                    {
+                        _config = new ModConfig();
+                        if (Context.IsWorldReady)
+                            BuildRandomPool();
+                    },
+                    save: () => _helper.WriteConfig(_config)
+                );
+
+                gmcm.AddSectionTitle(ModManifest, () => T("gmcm.section.title"), () => T("gmcm.section.desc"));
+                gmcm.AddBoolOption(
+                    ModManifest,
+                    name: () => T("gmcm.includeFruits.name"),
+                    tooltip: () => T("gmcm.includeFruits.desc"),
+                    getValue: () => _config.IncludeFruit,
+                    setValue: value => UpdateConfig(cfg => cfg.IncludeFruit = value)
+                );
+                gmcm.AddBoolOption(
+                    ModManifest,
+                    name: () => T("gmcm.includeVegetables.name"),
+                    tooltip: () => T("gmcm.includeVegetables.desc"),
+                    getValue: () => _config.IncludeVegetable,
+                    setValue: value => UpdateConfig(cfg => cfg.IncludeVegetable = value)
+                );
+                gmcm.AddBoolOption(
+                    ModManifest,
+                    name: () => T("gmcm.includeAnimalProducts.name"),
+                    tooltip: () => T("gmcm.includeAnimalProducts.desc"),
+                    getValue: () => _config.IncludeAnimalProducts,
+                    setValue: value => UpdateConfig(cfg => cfg.IncludeAnimalProducts = value)
+                );
+                gmcm.AddBoolOption(
+                    ModManifest,
+                    name: () => T("gmcm.includeFlowers.name"),
+                    tooltip: () => T("gmcm.includeFlowers.desc"),
+                    getValue: () => _config.IncludeFlowers,
+                    setValue: value => UpdateConfig(cfg => cfg.IncludeFlowers = value)
+                );
+            }
         }
 
         private void OnSaveLoaded(object? sender, SaveLoadedEventArgs e)
@@ -141,7 +188,7 @@ namespace MysteryHarvestCrop
                         continue;
 
                     var category = entry.Value.Category;
-                    if (category is -75 or -79 or -5 or -6 or -18 or -14)
+                    if (IsAllowedCategory(category))
                     {
                         _randomPool.Add(entry.Key);
                     }
@@ -203,6 +250,45 @@ namespace MysteryHarvestCrop
             var chosenId = _randomPool[Game1.random.Next(_randomPool.Count)];
             return ItemRegistry.Create(chosenId, 1);
         }
+
+        private void UpdateConfig(Action<ModConfig> mutator)
+        {
+            mutator(_config);
+            _helper.WriteConfig(_config);
+            if (Context.IsWorldReady)
+                BuildRandomPool();
+        }
+
+        private bool IsAllowedCategory(int category)
+        {
+            return category switch
+            {
+                -75 => _config.IncludeVegetable, // vegetables
+                -79 => _config.IncludeFruit,     // fruits
+                -5 => _config.IncludeAnimalProducts, // milk/animal products
+                -6 => _config.IncludeAnimalProducts, // eggs/animal products
+                -18 => _config.IncludeFlowers,   // flowers
+                -14 => _config.IncludeAnimalProducts, // artisan (includes some animal products)
+                _ => false
+            };
+        }
+
+        private string T(string key) => _helper.Translation.Get(key);
+    }
+
+    public class ModConfig
+    {
+        public bool IncludeFruit { get; set; } = true;
+        public bool IncludeVegetable { get; set; } = true;
+        public bool IncludeAnimalProducts { get; set; } = true;
+        public bool IncludeFlowers { get; set; } = true;
+    }
+
+    public interface IGenericModConfigMenuApi
+    {
+        void Register(IManifest mod, Action reset, Action save, bool titleScreenOnly = false);
+        void AddSectionTitle(IManifest mod, Func<string> text, Func<string>? tooltip = null);
+        void AddBoolOption(IManifest mod, Func<string> name, Func<string>? tooltip, Func<bool> getValue, Action<bool> setValue);
     }
 
 }

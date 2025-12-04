@@ -5,5 +5,11 @@
   "Description": "Adds a mysterious seed sold year-round at Pierre's that grows for 10 days and yields a random product.",
   "UniqueID": "OpenAI.MysteryHarvestCrop",
   "EntryDll": "MysteryHarvestCrop.dll",
-  "MinimumApiVersion": "4.0.0"
+  "MinimumApiVersion": "4.0.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ]
 }

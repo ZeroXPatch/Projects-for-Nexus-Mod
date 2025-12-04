@@ -1,4 +1,14 @@
 {
   "item.name": "Mystery Seed",
-  "item.description": "Plant any time. Takes 10 days to mature. Yields a random product."
+  "item.description": "Plant any time. Takes 10 days to mature. Yields a random product.",
+  "gmcm.section.title": "Mystery Harvest Crop",
+  "gmcm.section.desc": "Choose which categories the mystery harvest can include.",
+  "gmcm.includeFruits.name": "Include fruit",
+  "gmcm.includeFruits.desc": "Allow harvested items to be fruit.",
+  "gmcm.includeVegetables.name": "Include vegetables",
+  "gmcm.includeVegetables.desc": "Allow harvested items to be vegetables.",
+  "gmcm.includeAnimalProducts.name": "Include animal products",
+  "gmcm.includeAnimalProducts.desc": "Allow harvested items to be animal products and artisan goods derived from them.",
+  "gmcm.includeFlowers.name": "Include flowers",
+  "gmcm.includeFlowers.desc": "Allow harvested items to be flowers."
 }
