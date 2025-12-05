@@ -6,5 +6,11 @@
   "UniqueID": "YourName.SafeLightning",
   "EntryDll": "SafeLightning.dll",
   "MinimumApiVersion": "4.0.0",
-  "UpdateKeys": []
+  "UpdateKeys": [],
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ]
 }

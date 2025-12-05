@@ -1,3 +1,6 @@
 {
-  "log.patched": "Safe Lightning is active; lightning will now only affect lightning rods."
+  "log.patched": "Safe Lightning is active; lightning will now only affect lightning rods.",
+  "config.section.general": "Safe Lightning",
+  "config.onlyStrikeLightningRods.name": "Only allow lightning to hit rods",
+  "config.onlyStrikeLightningRods.tooltip": "If enabled, lightning strikes are prevented unless they target a lightning rod."
 }
