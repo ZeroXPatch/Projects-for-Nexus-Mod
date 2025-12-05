@@ -1,0 +1,10 @@
+{
+  "Name": "Better Panning",
+  "Author": "ModAuthor",
+  "Version": "1.0.0",
+  "Description": "Fine-tunes panning spots, adds beach support, and expands treasure tables.",
+  "UniqueID": "Example.BetterPanning",
+  "EntryDll": "BetterPanning.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}
