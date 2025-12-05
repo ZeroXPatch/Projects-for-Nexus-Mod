@@ -1,0 +1,33 @@
+{
+  "hud.enabled": "Auto-fishing enabled.",
+  "hud.disabled": "Auto-fishing disabled.",
+
+  "config.section.behavior": "Fishing Behavior",
+  "config.section.loot": "Looting",
+
+  "config.autofish.enabled.name": "Enable auto-fishing on load",
+  "config.autofish.enabled.tooltip": "Start each session with auto-fishing toggled on.",
+  "config.autofish.key.name": "Toggle auto-fishing key",
+  "config.autofish.key.tooltip": "Press to enable or disable the auto-fishing behavior.",
+
+  "config.maxCastPower.name": "Max cast power",
+  "config.maxCastPower.tooltip": "Force the rod to cast with maximum power.",
+
+  "config.autoHit.name": "Auto hit",
+  "config.autoHit.tooltip": "Automatically hook the fish as soon as it bites.",
+
+  "config.fastBite.name": "Fast bite",
+  "config.fastBite.tooltip": "Reduce bite time so fish bite more quickly.",
+
+  "config.fasterSpeed.name": "Faster bobber movement",
+  "config.fasterSpeed.tooltip": "Increase bobber bar movement speed for quicker catches.",
+
+  "config.catchTreasure.name": "Catch treasure",
+  "config.catchTreasure.tooltip": "Attempt to capture treasure when progress is above 75% and the fish isn't legendary.",
+
+  "config.autoLootFishAndTrash.name": "Auto-loot fish and trash",
+  "config.autoLootFishAndTrash.tooltip": "Automatically pick up fish and trash debris nearby.",
+
+  "config.autoLootTreasure.name": "Auto-loot treasure",
+  "config.autoLootTreasure.tooltip": "Automatically pick up treasure drops nearby."
+}
