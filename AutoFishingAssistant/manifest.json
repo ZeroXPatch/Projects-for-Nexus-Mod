@@ -1,0 +1,10 @@
+{
+  "Name": "Auto Fishing Assistant",
+  "Author": "ChatGPT",
+  "Version": "1.0.0",
+  "Description": "Automates Stardew Valley fishing with max casts, quick bites, auto hits, and treasure catching options.",
+  "UniqueID": "ChatGPT.AutoFishingAssistant",
+  "EntryDll": "AutoFishingAssistant.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": ["Nexus:00000"]
+}
