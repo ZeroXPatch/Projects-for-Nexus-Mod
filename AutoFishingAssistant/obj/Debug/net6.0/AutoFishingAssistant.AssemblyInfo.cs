@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutoFishingAssistant")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+931b32799e4a735571c8c329297700e796897aa8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae8ae81e34cfec418c9d2d87b1c57c50cd61d390")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutoFishingAssistant")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutoFishingAssistant")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
