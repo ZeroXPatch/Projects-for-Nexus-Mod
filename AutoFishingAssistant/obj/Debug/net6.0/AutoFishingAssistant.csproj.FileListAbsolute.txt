@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoFishingAssistant\bin\Debug\net6.0\AutoFishingAssistant.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoFishingAssistant\bin\Debug\net6.0\AutoFishingAssistant.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoFishingAssistant\obj\Debug\net6.0\AutoFishingAssistant.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoFishingAssistant\obj\Debug\net6.0\AutoFishingAssistant.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoFishingAssistant\obj\Debug\net6.0\AutoFishingAssistant.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoFishingAssistant\obj\Debug\net6.0\AutoFishingAssistant.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoFishingAssistant\obj\Debug\net6.0\AutoFishingAssistant.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoFishingAssistant\obj\Debug\net6.0\AutoFishingAssistant.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoFishingAssistant\obj\Debug\net6.0\AutoFishingAssistant.dll
