@@ -1,0 +1,69 @@
+{
+  // cave weather messages
+  "message.fungal_harvest": "The air smells earthy and damp... Mushrooms thrive in the dark today.",
+  "message.temporal_flux": "The ticking of time warps and stutters. The mines feel unstuck from normal time.",
+  "message.berserker_day": "You sense bloodlust echoing through the caverns. Monsters grow furious once wounded.",
+  "message.frenzy_fog": "A pale fog seeps through the tunnels. Shapes rush at you from the mist.",
+  "message.bloodthirst_winds": "Warm, metallic winds blow through the depths. The mines themselves seem hungry.",
+
+  // buff
+  "buff.daybuff.name": "Cave Weather",
+
+  // GMCM sections
+  "config.section.main": "Cave Weather",
+  "config.section.main.tooltip": "Configure how often special cave weather events happen.",
+  "config.section.types": "Enabled cave weather types",
+  "config.section.types.tooltip": "Choose which special cave weather types can occur.",
+  "config.section.intensity": "Intensity & tuning",
+  "config.section.intensity.tooltip": "Adjust how strong each cave weather effect is.",
+
+  // main chance
+  "config.dailyChance.name": "Chance per day (%)",
+  "config.dailyChance.tooltip": "Percent chance that some special cave weather will occur each day.",
+
+  // toggles
+  "config.enableFungalHarvest.name": "Fungal Harvest",
+  "config.enableFungalHarvest.tooltip": "More mushrooms appear and slimes occasionally drop mushrooms. Ambient spores drift through the mines.",
+  "config.enableTemporalFlux.name": "Temporal Flux",
+  "config.enableTemporalFlux.tooltip": "Time in the mines moves slower, and monsters move in strange bursts of speed.",
+  "config.enableBerserkerDay.name": "Berserker Day",
+  "config.enableBerserkerDay.tooltip": "Monsters become enraged and faster after taking damage. You gain extra defense to compensate.",
+  "config.enableFrenzyFog.name": "Frenzy Fog",
+  "config.enableFrenzyFog.tooltip": "All monsters move slightly faster in a weak fog. You gain a small defense buff.",
+  "config.enableBloodthirstWinds.name": "Bloodthirst Winds",
+  "config.enableBloodthirstWinds.tooltip": "Red winds empower monsters to slowly heal, while you suffer a small defense penalty.",
+
+  // intensity options - Fungal Harvest
+  "config.fungalExtra.name": "Fungal Harvest: extra mushrooms per floor",
+  "config.fungalExtra.tooltip": "How many mushrooms should spawn around you when entering a mine floor on Fungal Harvest days.",
+  "config.fungalSlimeDropChance.name": "Fungal Harvest: slime drop chance (%)",
+  "config.fungalSlimeDropChance.tooltip": "Chance per second that each slime drops a mushroom on Fungal Harvest days.",
+
+  // intensity options - Temporal Flux
+  "config.temporalTimeScale.name": "Temporal Flux: time speed (%)",
+  "config.temporalTimeScale.tooltip": "Time speed inside the mines on Temporal Flux days. 70% means time passes 30% slower than normal.",
+
+  // intensity options - Berserker Day
+  "config.berserkerSpeedBonus.name": "Berserker Day: monster speed bonus",
+  "config.berserkerSpeedBonus.tooltip": "Additional speed given to monsters that have been hit at least once.",
+  "config.berserkerAggroBonus.name": "Berserker Day: monster aggro bonus (tiles)",
+  "config.berserkerAggroBonus.tooltip": "Extra tiles of aggro range when monsters become enraged on Berserker Days.",
+  "config.berserkerPlayerDefense.name": "Berserker Day: player defense",
+  "config.berserkerPlayerDefense.tooltip": "Defense adjustment applied while in the mines on Berserker Days.",
+
+  // intensity options - Frenzy Fog
+  "config.frenzyFogMonsterSpeedBonus.name": "Frenzy Fog: monster speed bonus",
+  "config.frenzyFogMonsterSpeedBonus.tooltip": "Flat speed bonus applied to all monsters on Frenzy Fog days.",
+  "config.frenzyFogPlayerDefense.name": "Frenzy Fog: player defense",
+  "config.frenzyFogPlayerDefense.tooltip": "Defense adjustment applied while in the mines on Frenzy Fog days.",
+  "config.frenzyFogOpacity.name": "Frenzy Fog: fog opacity",
+  "config.frenzyFogOpacity.tooltip": "How visible the fog overlay is (0 = invisible, 255 = fully opaque).",
+
+  // intensity options - Bloodthirst Winds
+  "config.bloodthirstDefensePenalty.name": "Bloodthirst Winds: defense penalty",
+  "config.bloodthirstDefensePenalty.tooltip": "How much your Defense is reduced while in the mines on Bloodthirst Winds days.",
+  "config.bloodthirstHealInterval.name": "Bloodthirst Winds: heal interval (ticks)",
+  "config.bloodthirstHealInterval.tooltip": "How often monsters heal themselves on Bloodthirst Winds days. 60 ticks ≈ 1 second.",
+  "config.bloodthirstHealAmount.name": "Bloodthirst Winds: heal per tick",
+  "config.bloodthirstHealAmount.tooltip": "How many health points monsters regenerate each interval on Bloodthirst Winds days."
+}

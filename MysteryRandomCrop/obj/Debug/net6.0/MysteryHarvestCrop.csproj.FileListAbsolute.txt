@@ -1,0 +1,6 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\MysteryRandomCrop\obj\Debug\net6.0\MysteryHarvestCrop.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\MysteryRandomCrop\obj\Debug\net6.0\MysteryHarvestCrop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\MysteryRandomCrop\obj\Debug\net6.0\MysteryHarvestCrop.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\MysteryRandomCrop\obj\Debug\net6.0\MysteryHarvestCrop.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\MysteryRandomCrop\obj\Debug\net6.0\MysteryHarvestCrop.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\MysteryRandomCrop\obj\Debug\net6.0\MysteryHarvestCrop.sourcelink.json

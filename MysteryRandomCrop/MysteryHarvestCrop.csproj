@@ -7,6 +7,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.2" />
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="SpaceCore.Content.Engine">
+      <HintPath>..\..\..\..\..\..\GOG Games\Stardew Valley\Mods\SpaceCore\SpaceCore.Content.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="SpaceCore.Content.Parser">
+      <HintPath>..\..\..\..\..\..\GOG Games\Stardew Valley\Mods\SpaceCore\SpaceCore.Content.Parser.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

@@ -1,0 +1,10 @@
+{
+  "Name": "Cave Weather",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Adds rare 'cave weather' days in the mines: gem wind, lava surge, silence days, bat migrations, and slime blooms.",
+  "UniqueID": "ZeroXPatch.CaveWeather",
+  "EntryDll": "CaveWeather.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}
