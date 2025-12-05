@@ -1,0 +1,28 @@
+{
+  "config.section.general": "Natural Irrigation",
+  "config.section.general.tooltip": "Configure how far crops can draw water from nearby natural water sources.",
+
+  "config.enabled.name": "Enable Natural Irrigation",
+  "config.enabled.tooltip": "If enabled, tilled soil near water is automatically watered at the start of each day.",
+
+  "config.radius.name": "Water search radius",
+  "config.radius.tooltip": "How many tiles around a tilled soil tile to search for nearby water. Set to 0 to disable the effect.",
+
+  "config.section.moisture": "Moisture bonuses",
+  "config.section.moisture.tooltip": "Crops very close to water can benefit from richer soil moisture.",
+
+  "config.moisture.radius.name": "High moisture radius",
+  "config.moisture.radius.tooltip": "Tiles within this many tiles of water are considered in the \"high moisture\" zone and can receive bonus growth. 1 tile means only tiles directly next to water.",
+
+  "config.moisture.chance.name": "Growth chance (%)",
+  "config.moisture.chance.tooltip": "Percent chance per day that crops in the high moisture zone receive an extra day of growth progress.",
+
+  "config.section.overlay": "Natural Irrigation overlay",
+  "config.section.overlay.tooltip": "Debug overlay showing which tiles are being irrigated by Natural Irrigation.",
+
+  "config.overlay.show.name": "Allow overlay",
+  "config.overlay.show.tooltip": "If enabled, you can toggle a debug overlay to see irrigated tiles. The overlay starts hidden by default.",
+
+  "config.overlay.key.name": "Overlay toggle key",
+  "config.overlay.key.tooltip": "Press this key in-game to toggle the Natural Irrigation overlay on or off."
+}

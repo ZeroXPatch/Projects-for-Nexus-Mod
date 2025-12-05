@@ -1,0 +1,36 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\x64\Debug\net10.0\NaturalIrrigation.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\x64\Debug\net10.0\NaturalIrrigation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\x64\Debug\net10.0\NaturalIrrigation.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\x64\Debug\net10.0\NaturalIrrigation.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\x64\Debug\net10.0\NaturalIrrigation.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\x64\Debug\net10.0\NaturalIrrigation.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\NaturalIrrigation.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\NaturalIrrigation.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\NaturalIrrigation.pdb
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\MonoGame.Framework.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\SMAPI.Toolkit.CoreInterfaces.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\Stardew Valley.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\StardewModdingAPI.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\StardewValley.GameData.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\xTile.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\SkiaSharp.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\Steamworks.NET.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\GalaxyCSharp.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\Lidgren.Network.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\System.Data.HashFunction.Interfaces.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\BmFont.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\TextCopy.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\System.Data.HashFunction.xxHash.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\System.Data.HashFunction.Core.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\MonoGame.Framework.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\SMAPI.Toolkit.CoreInterfaces.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\Stardew Valley.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\StardewModdingAPI.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\StardewModdingAPI.exe.config
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\bin\x64\Debug\net10.0\StardewValley.GameData.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\x64\Debug\net10.0\NaturalI.58CBC300.Up2Date
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\x64\Debug\net10.0\NaturalIrrigation.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\x64\Debug\net10.0\refint\NaturalIrrigation.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\x64\Debug\net10.0\NaturalIrrigation.pdb
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\x64\Debug\net10.0\ref\NaturalIrrigation.dll

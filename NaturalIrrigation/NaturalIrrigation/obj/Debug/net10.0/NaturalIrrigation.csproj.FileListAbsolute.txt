@@ -1,0 +1,6 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\Debug\net10.0\NaturalIrrigation.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\Debug\net10.0\NaturalIrrigation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\Debug\net10.0\NaturalIrrigation.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\Debug\net10.0\NaturalIrrigation.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\Debug\net10.0\NaturalIrrigation.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NaturalIrrigation\NaturalIrrigation\obj\Debug\net10.0\NaturalIrrigation.sourcelink.json

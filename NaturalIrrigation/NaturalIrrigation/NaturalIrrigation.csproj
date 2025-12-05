@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="SMAPI.Toolkit.CoreInterfaces">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\smapi-internal\SMAPI.Toolkit.CoreInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Stardew Valley">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\Stardew Valley.dll</HintPath>
+    </Reference>
+    <Reference Include="StardewModdingAPI">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\StardewModdingAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="StardewValley.GameData">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\StardewValley.GameData.dll</HintPath>
+    </Reference>
+    <Reference Include="xTile">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\xTile.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="REM Create mod folder under Stardew Valley\Mods if it doesn't exist&#xD;&#xA;if not exist &quot;C:\GOG Games\Stardew Valley\Mods\NaturalIrrigation&quot; (&#xD;&#xA;    mkdir &quot;C:\GOG Games\Stardew Valley\Mods\NaturalIrrigation&quot;&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;REM Copy everything from the build output into your mod folder&#xD;&#xA;xcopy /E /Y /I &quot;$(TargetDir)*&quot; &quot;C:\GOG Games\Stardew Valley\Mods\NaturalIrrigation\&quot;&#xD;&#xA;" />
+  </Target>
+
+</Project>

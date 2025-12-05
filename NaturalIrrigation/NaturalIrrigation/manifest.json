@@ -1,0 +1,18 @@
+{
+  "Name": "Natural Irrigation",
+  "Description": "Automatically waters crops near water sources, with moisture bonuses and an optional debug overlay.",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "MinimumApiVersion": "4.0.0",
+  "EntryDll": "NaturalIrrigation.dll",
+  "UniqueID": "ZeroXPatch.NaturalIrrigation",
+  "UpdateKeys": [
+    "Nexus:00000"
+  ],
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ]
+}
