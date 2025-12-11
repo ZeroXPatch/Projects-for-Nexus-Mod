@@ -1,0 +1,9 @@
+{
+  "Name": "Startup Optimizer",
+  "Author": "ChatGPT",
+  "Version": "1.0.0",
+  "Description": "Skips logos and intro animations, speeds through the title screen, and optionally quick-resumes your last save.",
+  "UniqueID": "Example.StartupOptimizer",
+  "EntryDll": "StartupOptimizer.dll",
+  "MinimumApiVersion": "4.0.0"
+}
