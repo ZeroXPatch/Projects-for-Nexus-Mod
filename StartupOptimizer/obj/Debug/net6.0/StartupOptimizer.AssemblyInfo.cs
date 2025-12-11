@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StartupOptimizer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74dc989d22c38d4a68cb49aaa29f7a04bef67294")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3393031e8641e97236152d96a7c0cb8d15f90edb")]
 [assembly: System.Reflection.AssemblyProductAttribute("StartupOptimizer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StartupOptimizer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
