@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI;
@@ -13,10 +14,13 @@ namespace RandomMonsterAmbush
     /// <summary>
     /// Periodically spawns random monsters near the player using configurable rules.
     /// No HUD messages, just surprise ambushes.
+    /// Ambush monsters are automatically removed at the start of the next in-game day.
     /// </summary>
     public class ModEntry : Mod
     {
         private readonly Random _random = new();
+
+        private const string AmbushSpawnDayKey = "RandomMonsterAmbush/SpawnDay";
 
         /// <summary>Regular ambush monsters (only ones with simple Vector2 constructors).</summary>
         private readonly List<Func<Vector2, Monster>> _monsterFactories = new()
@@ -31,7 +35,6 @@ namespace RandomMonsterAmbush
             tile => new ShadowBrute(tile * Game1.tileSize),
             tile => new ShadowShaman(tile * Game1.tileSize),
             tile => new Serpent(tile * Game1.tileSize),
-            
         };
 
         /// <summary>Boss-like monsters; one of these can be chosen per ambush and then buffed.</summary>
@@ -65,6 +68,12 @@ namespace RandomMonsterAmbush
         {
             // reload config each morning so edits to config.json are picked up
             LoadConfig();
+
+            if (!Context.IsWorldReady)
+                return;
+
+            // remove any ambush monsters from previous days
+            CleanupOldAmbushMonsters();
         }
 
         /// <summary>
@@ -237,8 +246,18 @@ namespace RandomMonsterAmbush
             if (!e.IsMultipleOf((uint)_config.CheckIntervalTicks))
                 return;
 
-            if (_config.PreventDuringEvents && (Game1.eventUp || Game1.isFestival()))
-                return;
+            // don't spawn during events / festivals / cutscenes / minigames
+            if (_config.PreventDuringEvents)
+            {
+                if (Game1.eventUp || Game1.isFestival())
+                    return;
+
+                if (Game1.currentLocation?.currentEvent != null)
+                    return;
+
+                if (Game1.currentMinigame != null)
+                    return;
+            }
 
             if (!_config.AllowDaytimeSpawns && Game1.timeOfDay < 1800)
                 return;
@@ -279,6 +298,9 @@ namespace RandomMonsterAmbush
                 Monster monster = (spawnBossThisAmbush && i == bossIndex)
                     ? CreateRandomBoss(tile)
                     : CreateRandomMonster(tile);
+
+                // tag this as an ambush monster with its spawn day
+                monster.modData[AmbushSpawnDayKey] = Game1.Date.TotalDays.ToString(CultureInfo.InvariantCulture);
 
                 monster.currentLocation = location;
                 location.characters.Add(monster);
@@ -349,16 +371,58 @@ namespace RandomMonsterAmbush
             return boss;
         }
 
+        /// <summary>
+        /// Returns true if ambushes should never happen in the given location.
+        /// Includes user-configured disallowed locations plus hard-coded safety areas.
+        /// </summary>
         private bool IsLocationBlocked(GameLocation location)
         {
+            string locName = location.NameOrUniqueName;
+
+            // user-configurable blocked locations
             if (_config.DisallowedLocations.Any(name =>
-                    string.Equals(name, location.NameOrUniqueName, StringComparison.OrdinalIgnoreCase)))
+                    string.Equals(name, locName, StringComparison.OrdinalIgnoreCase)))
             {
                 return true;
             }
 
-            // 1.6: check farmhouse via type
-            return location is FarmHouse;
+            // player farmhouse
+            if (location is FarmHouse)
+                return true;
+
+            // Harvey's clinic (where you wake up after dying) and his apartment
+            if (string.Equals(locName, "Hospital", StringComparison.OrdinalIgnoreCase) ||
+                string.Equals(locName, "HarveyRoom", StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Remove any ambush monsters that were spawned on a previous in-game day.
+        /// That means they exist for the day they spawn, but are gone on the second day.
+        /// </summary>
+        private void CleanupOldAmbushMonsters()
+        {
+            int today = Game1.Date.TotalDays;
+
+            Utility.ForEachLocation(location =>
+            {
+                var toRemove = location.characters
+                    .OfType<Monster>()
+                    .Where(monster =>
+                        monster.modData.TryGetValue(AmbushSpawnDayKey, out string value) &&
+                        int.TryParse(value, NumberStyles.Any, CultureInfo.InvariantCulture, out int spawnDay) &&
+                        spawnDay < today)
+                    .ToList();
+
+                foreach (Monster monster in toRemove)
+                    location.characters.Remove(monster);
+
+                return true; // continue to next location
+            });
         }
 
         private void LoadConfig()
@@ -421,8 +485,64 @@ namespace RandomMonsterAmbush
                 changed = true;
             }
 
+            // ensure hard safety locations are in the list for visibility in config
+            void EnsureDisallowed(string name)
+            {
+                if (!_config.DisallowedLocations.Any(n =>
+                        string.Equals(n, name, StringComparison.OrdinalIgnoreCase)))
+                {
+                    _config.DisallowedLocations.Add(name);
+                    changed = true;
+                }
+            }
+
+            EnsureDisallowed("Hospital");
+            EnsureDisallowed("HarveyRoom");
+
             if (changed)
                 Helper.WriteConfig(_config);
         }
+    }
+
+    /// <summary>Configuration for RandomMonsterAmbush.</summary>
+    public class ModConfig
+    {
+        public bool EnableMod { get; set; } = true;
+
+        /// <summary>How many ticks between spawn checks (60 ticks ≈ 1 second).</summary>
+        public int CheckIntervalTicks { get; set; } = 60;
+
+        /// <summary>Maximum monsters per ambush spawn.</summary>
+        public int MaxMonstersPerSpawn { get; set; } = 3;
+
+        /// <summary>Minimum tile distance from the player for spawn.</summary>
+        public int MinSpawnDistance { get; set; } = 3;
+
+        /// <summary>Maximum tile distance from the player for spawn.</summary>
+        public int MaxSpawnDistance { get; set; } = 10;
+
+        /// <summary>Chance that an ambush happens when a spawn check runs (0–1).</summary>
+        public double SpawnChance { get; set; } = 0.25;
+
+        /// <summary>Allow ambushes during the day (before 6pm).</summary>
+        public bool AllowDaytimeSpawns { get; set; } = false;
+
+        /// <summary>Prevent ambushes during festivals, events, and minigames.</summary>
+        public bool PreventDuringEvents { get; set; } = true;
+
+        /// <summary>Enable special boss-style ambush monsters.</summary>
+        public bool EnableBossSpawns { get; set; } = true;
+
+        /// <summary>Chance that an ambush includes a boss (0–1).</summary>
+        public double BossSpawnChance { get; set; } = 0.2;
+
+        /// <summary>Health multiplier applied to boss monsters.</summary>
+        public float BossHealthMultiplier { get; set; } = 2f;
+
+        /// <summary>Damage multiplier applied to boss monsters.</summary>
+        public float BossDamageMultiplier { get; set; } = 2f;
+
+        /// <summary>Locations where ambushes are never allowed.</summary>
+        public List<string> DisallowedLocations { get; set; } = new();
     }
 }
