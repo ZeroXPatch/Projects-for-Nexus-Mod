@@ -9,9 +9,31 @@ public interface IGenericModConfigMenuApi
 
     void AddSectionTitle(IManifest mod, Func<string> text, Func<string>? tooltip = null);
 
-    void AddBoolOption(IManifest mod, Func<bool> getValue, Action<bool> setValue, Func<string> name, Func<string>? tooltip = null, string? fieldId = null);
+    void AddBoolOption(
+        IManifest mod,
+        Func<bool> getValue,
+        Action<bool> setValue,
+        Func<string> name,
+        Func<string>? tooltip = null,
+        string? fieldId = null
+    );
 
-    void AddTextOption(IManifest mod, Func<string> getValue, Action<string> setValue, Func<string> name, Func<string>? tooltip = null, string[]? allowedValues = null, string? fieldId = null);
+    void AddTextOption(
+        IManifest mod,
+        Func<string> getValue,
+        Action<string> setValue,
+        Func<string> name,
+        Func<string>? tooltip = null,
+        string[]? allowedValues = null,
+        string? fieldId = null
+    );
 
-    void AddKeybind(IManifest mod, Func<SButton> getValue, Action<SButton> setValue, Func<string> name, Func<string>? tooltip = null, string? fieldId = null);
+    void AddKeybind(
+        IManifest mod,
+        Func<SButton> getValue,
+        Action<SButton> setValue,
+        Func<string> name,
+        Func<string>? tooltip = null,
+        string? fieldId = null
+    );
 }

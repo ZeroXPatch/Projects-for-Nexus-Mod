@@ -1,9 +1,9 @@
 {
   "Name": "Startup Optimizer",
-  "Author": "ChatGPT",
+  "Author": "ZeroXPatch",
   "Version": "1.0.0",
-  "Description": "Skips logos and intro animations, speeds through the title screen, and optionally quick-resumes your last save.",
-  "UniqueID": "Example.StartupOptimizer",
+  "Description": "Automatically opens the Load Game menu from the title screen.",
+  "UniqueID": "ZeroXPatch.StartupOptimizer",
   "EntryDll": "StartupOptimizer.dll",
   "MinimumApiVersion": "4.0.0"
 }

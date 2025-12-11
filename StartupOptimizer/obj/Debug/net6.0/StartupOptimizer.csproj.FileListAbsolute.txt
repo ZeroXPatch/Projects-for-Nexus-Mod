@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StartupOptimizer\obj\Debug\net6.0\StartupOptimizer.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StartupOptimizer\obj\Debug\net6.0\StartupOptimizer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StartupOptimizer\obj\Debug\net6.0\StartupOptimizer.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StartupOptimizer\obj\Debug\net6.0\StartupOptimizer.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StartupOptimizer\obj\Debug\net6.0\StartupOptimizer.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StartupOptimizer\obj\Debug\net6.0\StartupOptimizer.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StartupOptimizer\bin\Debug\net6.0\StartupOptimizer.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StartupOptimizer\bin\Debug\net6.0\StartupOptimizer.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StartupOptimizer\obj\Debug\net6.0\StartupOptimizer.dll
