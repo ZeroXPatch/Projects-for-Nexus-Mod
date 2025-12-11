@@ -1,0 +1,19 @@
+{
+  "gmcm.section.general": "General",
+  "gmcm.skipIntro.name": "Skip logos & intro movies",
+  "gmcm.skipIntro.tooltip": "Automatically skip the ConcernedApe / Chucklefish logos and intro movies when the game launches.",
+  "gmcm.skipTitleIdle.name": "Skip title screen idle",
+  "gmcm.skipTitleIdle.tooltip": "Jump past the title screen idle animation as soon as possible.",
+  "gmcm.autoLoad.name": "Auto-open Load Game menu",
+  "gmcm.autoLoad.tooltip": "Open the Load Game menu automatically after the title screen. On First Launch does this only once per session.",
+  "gmcm.section.quickResume": "Quick Resume (Advanced)",
+  "gmcm.quickResume.lastSave": "Last detected save: {0}",
+  "gmcm.quickResume.lastSave.none": "Last detected save: None",
+  "gmcm.quickResume.name": "Enable quick resume",
+  "gmcm.quickResume.tooltip": "Automatically load your last played save unless the interrupt key is held during startup.",
+  "gmcm.quickResume.key.name": "Quick resume interrupt key",
+  "gmcm.quickResume.key.tooltip": "Hold this key during startup to show the normal title menu instead of auto-loading.",
+  "gmcm.section.diagnostics": "Diagnostics",
+  "gmcm.diagnostics.name": "Enable diagnostics logging",
+  "gmcm.diagnostics.tooltip": "Log startup timing information to the SMAPI console to help troubleshoot slow boots."
+}
