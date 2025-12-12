@@ -13,7 +13,7 @@ public class ModEntry : Mod
     // title-screen state
     private bool isOnTitleScreen;
     private int titleTicks;
-    private bool hasAutoOpenedLoadMenu;
+    private bool cancelAutoOpenForCurrentTitle; // set by holding LeftShift
 
     public override void Entry(IModHelper helper)
     {
@@ -41,9 +41,15 @@ public class ModEntry : Mod
                 // just arrived at title
                 this.isOnTitleScreen = true;
                 this.titleTicks = 0;
+                this.cancelAutoOpenForCurrentTitle = false;
             }
 
             this.titleTicks++;
+
+            // if player holds LeftShift at any point on this title visit,
+            // cancel auto-open so they can access the Mods/GMCM menu.
+            if (this.Helper.Input.IsDown(SButton.LeftShift))
+                this.cancelAutoOpenForCurrentTitle = true;
 
             // wait a few ticks for the title to fully initialize
             if (this.titleTicks >= 5)
@@ -54,6 +60,7 @@ public class ModEntry : Mod
             // left title screen
             this.isOnTitleScreen = false;
             this.titleTicks = 0;
+            this.cancelAutoOpenForCurrentTitle = false;
         }
     }
 
@@ -65,20 +72,18 @@ public class ModEntry : Mod
         if (!this.ShouldAutoOpenLoadMenu())
             return;
 
-        this.hasAutoOpenedLoadMenu = true;
         TitleMenu.subMenu = new LoadGameMenu();
     }
 
     private bool ShouldAutoOpenLoadMenu()
     {
-        // Only two states:
-        // Off -> never
-        // OnFirstLaunch -> once per SMAPI session
-        if (this.Config.AutoOpenLoadMenu == AutoOpenLoadMenuMode.Off)
+        if (!this.Config.AutoOpenLoadMenu)
             return false;
 
-        // OnFirstLaunch
-        return !this.hasAutoOpenedLoadMenu;
+        if (this.cancelAutoOpenForCurrentTitle)
+            return false;
+
+        return true;
     }
 
     private void RegisterGmcm()
@@ -96,19 +101,12 @@ public class ModEntry : Mod
 
         gmcm.AddSectionTitle(this.ModManifest, () => "Startup Optimizer");
 
-        gmcm.AddTextOption(
+        gmcm.AddBoolOption(
             this.ModManifest,
-            () => this.Config.AutoOpenLoadMenu.ToString(),
-            value => this.Config.AutoOpenLoadMenu = Enum.TryParse(value, out AutoOpenLoadMenuMode parsed)
-                ? parsed
-                : AutoOpenLoadMenuMode.OnFirstLaunch, // fallback to default behaviour
+            () => this.Config.AutoOpenLoadMenu,
+            value => this.Config.AutoOpenLoadMenu = value,
             () => this.Helper.Translation.Get("gmcm.autoLoad.name"),
-            () => this.Helper.Translation.Get("gmcm.autoLoad.tooltip"),
-            new[]
-            {
-                AutoOpenLoadMenuMode.Off.ToString(),
-                AutoOpenLoadMenuMode.OnFirstLaunch.ToString()
-            }
+            () => this.Helper.Translation.Get("gmcm.autoLoad.tooltip")
         );
     }
 }

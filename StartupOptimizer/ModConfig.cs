@@ -2,12 +2,8 @@ namespace StartupOptimizer;
 
 public class ModConfig
 {
-    // Default: OnFirstLaunch so it "just works" when people install the mod.
-    public AutoOpenLoadMenuMode AutoOpenLoadMenu { get; set; } = AutoOpenLoadMenuMode.OnFirstLaunch;
-}
-
-public enum AutoOpenLoadMenuMode
-{
-    Off,
-    OnFirstLaunch
+    /// <summary>
+    /// If true, automatically open the Load Game menu from the title screen.
+    /// </summary>
+    public bool AutoOpenLoadMenu { get; set; } = false;
 }

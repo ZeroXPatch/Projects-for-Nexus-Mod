@@ -1,4 +1,4 @@
 {
   "gmcm.autoLoad.name": "Auto-open Load Game menu",
-  "gmcm.autoLoad.tooltip": "Open the Load Game menu automatically after the title screen. On First Launch does this only once per session."
+  "gmcm.autoLoad.tooltip": "Open the Load Game menu automatically after the title screen when enabled. Hold LeftShift on the title screen to temporarily disable this and access the Mods menu."
 }

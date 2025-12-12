@@ -3,13 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StartupOptimizer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GOG Games\\Stardew Valley\\Mods\\StartupOptimizer\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D69DC7FF-7670-DD06-3C33-5C81573A0CDB}|StartupOptimizer.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\startupoptimizer\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D69DC7FF-7670-DD06-3C33-5C81573A0CDB}|StartupOptimizer.csproj|solutionrelative:i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D69DC7FF-7670-DD06-3C33-5C81573A0CDB}|StartupOptimizer.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\startupoptimizer\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D69DC7FF-7670-DD06-3C33-5C81573A0CDB}|StartupOptimizer.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -20,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{D69DC7FF-7670-DD06-3C33-5C81573A0CDB}|StartupOptimizer.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\startupoptimizer\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D69DC7FF-7670-DD06-3C33-5C81573A0CDB}|StartupOptimizer.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D69DC7FF-7670-DD06-3C33-5C81573A0CDB}|StartupOptimizer.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\startupoptimizer\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D69DC7FF-7670-DD06-3C33-5C81573A0CDB}|StartupOptimizer.csproj|solutionrelative:i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D69DC7FF-7670-DD06-3C33-5C81573A0CDB}|StartupOptimizer.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\startupoptimizer\\gmcmapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -56,19 +53,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "default.json",
-              "DocumentMoniker": "C:\\GOG Games\\Stardew Valley\\Mods\\StartupOptimizer\\i18n\\default.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\StartupOptimizer\\i18n\\default.json",
-              "ToolTip": "C:\\GOG Games\\Stardew Valley\\Mods\\StartupOptimizer\\i18n\\default.json",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\StartupOptimizer\\i18n\\default.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-12T00:15:01.849Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StartupOptimizer\\manifest.json",
               "RelativeDocumentMoniker": "manifest.json",
@@ -81,25 +65,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "default.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StartupOptimizer\\i18n\\default.json",
               "RelativeDocumentMoniker": "i18n\\default.json",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StartupOptimizer\\i18n\\default.json",
               "RelativeToolTip": "i18n\\default.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-12-11T22:39:07.623Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "ModConfig.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StartupOptimizer\\ModConfig.cs",
               "RelativeDocumentMoniker": "ModConfig.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StartupOptimizer\\ModConfig.cs",
-              "RelativeToolTip": "ModConfig.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StartupOptimizer\\ModConfig.cs*",
+              "RelativeToolTip": "ModConfig.cs*",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-11T22:38:48.982Z",
@@ -107,12 +91,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "GmcmApi.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StartupOptimizer\\GmcmApi.cs",
               "RelativeDocumentMoniker": "GmcmApi.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StartupOptimizer\\GmcmApi.cs",
-              "RelativeToolTip": "GmcmApi.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StartupOptimizer\\GmcmApi.cs*",
+              "RelativeToolTip": "GmcmApi.cs*",
               "ViewState": "AgIAAAQAAAAAAAAAAAAgwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-11T22:38:40.33Z",
@@ -120,12 +104,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StartupOptimizer\\ModEntry.cs",
               "RelativeDocumentMoniker": "ModEntry.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StartupOptimizer\\ModEntry.cs",
-              "RelativeToolTip": "ModEntry.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StartupOptimizer\\ModEntry.cs*",
+              "RelativeToolTip": "ModEntry.cs*",
               "ViewState": "AgIAAGAAAAAAAAAAAAAgwHAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-11T22:31:36.182Z",
@@ -133,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "StartupOptimizer.csproj",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StartupOptimizer\\StartupOptimizer.csproj",
               "RelativeDocumentMoniker": "StartupOptimizer.csproj",

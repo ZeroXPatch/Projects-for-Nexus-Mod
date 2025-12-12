@@ -17,23 +17,4 @@ public interface IGenericModConfigMenuApi
         Func<string>? tooltip = null,
         string? fieldId = null
     );
-
-    void AddTextOption(
-        IManifest mod,
-        Func<string> getValue,
-        Action<string> setValue,
-        Func<string> name,
-        Func<string>? tooltip = null,
-        string[]? allowedValues = null,
-        string? fieldId = null
-    );
-
-    void AddKeybind(
-        IManifest mod,
-        Func<SButton> getValue,
-        Action<SButton> setValue,
-        Func<string> name,
-        Func<string>? tooltip = null,
-        string? fieldId = null
-    );
 }
