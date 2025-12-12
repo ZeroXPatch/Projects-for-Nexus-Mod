@@ -1,0 +1,15 @@
+{
+  "search.label": "Search items",
+  "gmcm.section.shops": "Supported Shops",
+  "gmcm.enable.pierre": "Enable for Pierre",
+  "gmcm.tooltip.pierre": "Show the search bar when shopping at Pierre's store.",
+  "gmcm.enable.clint": "Enable for Clint",
+  "gmcm.tooltip.clint": "Show the search bar when using Clint's shop menu.",
+  "gmcm.enable.robin": "Enable for Robin",
+  "gmcm.tooltip.robin": "Show the search bar when talking to Robin about purchases.",
+  "gmcm.section.behavior": "Behavior",
+  "gmcm.focus": "Focus search box on open",
+  "gmcm.tooltip.focus": "Automatically focus the search box when a supported shop opens.",
+  "gmcm.showlabel": "Show search label",
+  "gmcm.tooltip.showlabel": "Display a small label above the search box."
+}

@@ -1,0 +1,9 @@
+{
+  "Name": "Shop Search Bar",
+  "Author": "ChatGPT",
+  "Version": "1.1.0",
+  "Description": "Adds a configurable search bar at the top of Pierre's, Clint's, and Robin's shop menus.",
+  "UniqueID": "ChatGPT.ShopSearchBar",
+  "EntryDll": "ShopSearchBar.dll",
+  "MinimumApiVersion": "4.0.0"
+}
