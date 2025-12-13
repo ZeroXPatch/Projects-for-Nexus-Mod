@@ -1,69 +1,107 @@
 {
-  // cave weather messages
   "message.fungal_harvest": "The air smells earthy and damp... Mushrooms thrive in the dark today.",
   "message.temporal_flux": "The ticking of time warps and stutters. The mines feel unstuck from normal time.",
   "message.berserker_day": "You sense bloodlust echoing through the caverns. Monsters grow furious once wounded.",
   "message.frenzy_fog": "A pale fog seeps through the tunnels. Shapes rush at you from the mist.",
   "message.bloodthirst_winds": "Warm, metallic winds blow through the depths. The mines themselves seem hungry.",
+  "message.unstable_veins": "The rock hums with unstable energy... The veins feel ready to burst.",
+  "message.lucky_veins": "The stone feels soft... like it wants to open.",
 
-  // buff
   "buff.daybuff.name": "Cave Weather",
 
-  // GMCM sections
   "config.section.main": "Cave Weather",
-  "config.section.main.tooltip": "Configure how often special cave weather events happen.",
-  "config.section.types": "Enabled cave weather types",
-  "config.section.types.tooltip": "Choose which special cave weather types can occur.",
-  "config.section.intensity": "Intensity & tuning",
-  "config.section.intensity.tooltip": "Adjust how strong each cave weather effect is.",
-
-  // main chance
+  "config.section.main.tooltip": "Global settings for how often cave weather happens.",
   "config.dailyChance.name": "Chance per day (%)",
-  "config.dailyChance.tooltip": "Percent chance that some special cave weather will occur each day.",
+  "config.dailyChance.tooltip": "Percent chance that a cave weather will occur each day.",
 
-  // toggles
-  "config.enableFungalHarvest.name": "Fungal Harvest",
-  "config.enableFungalHarvest.tooltip": "More mushrooms appear and slimes occasionally drop mushrooms. Ambient spores drift through the mines.",
-  "config.enableTemporalFlux.name": "Temporal Flux",
-  "config.enableTemporalFlux.tooltip": "Time in the mines moves slower, and monsters move in strange bursts of speed.",
-  "config.enableBerserkerDay.name": "Berserker Day",
-  "config.enableBerserkerDay.tooltip": "Monsters become enraged and faster after taking damage. You gain extra defense to compensate.",
-  "config.enableFrenzyFog.name": "Frenzy Fog",
-  "config.enableFrenzyFog.tooltip": "All monsters move slightly faster in a weak fog. You gain a small defense buff.",
-  "config.enableBloodthirstWinds.name": "Bloodthirst Winds",
-  "config.enableBloodthirstWinds.tooltip": "Red winds empower monsters to slowly heal, while you suffer a small defense penalty.",
+  "config.section.weathers": "Weathers & Locations",
+  "config.section.weathers.tooltip": "Enable/disable each weather and choose where it can occur.",
 
-  // intensity options - Fungal Harvest
-  "config.fungalExtra.name": "Fungal Harvest: extra mushrooms per floor",
-  "config.fungalExtra.tooltip": "How many mushrooms should spawn around you when entering a mine floor on Fungal Harvest days.",
-  "config.fungalSlimeDropChance.name": "Fungal Harvest: slime drop chance (%)",
-  "config.fungalSlimeDropChance.tooltip": "Chance per second that each slime drops a mushroom on Fungal Harvest days.",
+  "config.location.mines": "Enable in Mines",
+  "config.location.mines.tooltip": "Applies in the regular Mines (levels 1–120).",
+  "config.location.skull": "Enable in Skull Cavern",
+  "config.location.skull.tooltip": "Applies in the Skull Cavern.",
+  "config.location.volcano": "Enable in Volcano Dungeon",
+  "config.location.volcano.tooltip": "Applies in the Volcano Dungeon.",
 
-  // intensity options - Temporal Flux
-  "config.temporalTimeScale.name": "Temporal Flux: time speed (%)",
-  "config.temporalTimeScale.tooltip": "Time speed inside the mines on Temporal Flux days. 70% means time passes 30% slower than normal.",
+  "config.section.tuning": "Tuning",
+  "config.section.tuning.tooltip": "Adjust the strength of each weather’s effects.",
 
-  // intensity options - Berserker Day
-  "config.berserkerSpeedBonus.name": "Berserker Day: monster speed bonus",
-  "config.berserkerSpeedBonus.tooltip": "Additional speed given to monsters that have been hit at least once.",
-  "config.berserkerAggroBonus.name": "Berserker Day: monster aggro bonus (tiles)",
-  "config.berserkerAggroBonus.tooltip": "Extra tiles of aggro range when monsters become enraged on Berserker Days.",
-  "config.berserkerPlayerDefense.name": "Berserker Day: player defense",
-  "config.berserkerPlayerDefense.tooltip": "Defense adjustment applied while in the mines on Berserker Days.",
+  "config.weather.fungal.title": "Fungal Harvest",
+  "config.weather.fungal.tooltip": "More mushrooms appear; slimes sometimes drop mushrooms; ambient spores float in the air.",
+  "config.weather.fungal.enabled.name": "Enabled",
+  "config.weather.fungal.enabled.tooltip": "Allow Fungal Harvest to be chosen on some days.",
 
-  // intensity options - Frenzy Fog
-  "config.frenzyFogMonsterSpeedBonus.name": "Frenzy Fog: monster speed bonus",
-  "config.frenzyFogMonsterSpeedBonus.tooltip": "Flat speed bonus applied to all monsters on Frenzy Fog days.",
-  "config.frenzyFogPlayerDefense.name": "Frenzy Fog: player defense",
-  "config.frenzyFogPlayerDefense.tooltip": "Defense adjustment applied while in the mines on Frenzy Fog days.",
-  "config.frenzyFogOpacity.name": "Frenzy Fog: fog opacity",
-  "config.frenzyFogOpacity.tooltip": "How visible the fog overlay is (0 = invisible, 255 = fully opaque).",
+  "config.weather.temporal.title": "Temporal Flux",
+  "config.weather.temporal.tooltip": "Time slows in the mines; monsters move in fast bursts and slowdowns.",
+  "config.weather.temporal.enabled.name": "Enabled",
+  "config.weather.temporal.enabled.tooltip": "Allow Temporal Flux to be chosen on some days.",
 
-  // intensity options - Bloodthirst Winds
-  "config.bloodthirstDefensePenalty.name": "Bloodthirst Winds: defense penalty",
-  "config.bloodthirstDefensePenalty.tooltip": "How much your Defense is reduced while in the mines on Bloodthirst Winds days.",
-  "config.bloodthirstHealInterval.name": "Bloodthirst Winds: heal interval (ticks)",
-  "config.bloodthirstHealInterval.tooltip": "How often monsters heal themselves on Bloodthirst Winds days. 60 ticks ≈ 1 second.",
-  "config.bloodthirstHealAmount.name": "Bloodthirst Winds: heal per tick",
-  "config.bloodthirstHealAmount.tooltip": "How many health points monsters regenerate each interval on Bloodthirst Winds days."
+  "config.weather.berserker.title": "Berserker Day",
+  "config.weather.berserker.tooltip": "Monsters become faster and more aggressive after being hit once. You gain defense to compensate.",
+  "config.weather.berserker.enabled.name": "Enabled",
+  "config.weather.berserker.enabled.tooltip": "Allow Berserker Day to be chosen on some days.",
+
+  "config.weather.frenzy.title": "Frenzy Fog",
+  "config.weather.frenzy.tooltip": "A weak fog settles in; monsters are slightly faster; you gain defense to compensate.",
+  "config.weather.frenzy.enabled.name": "Enabled",
+  "config.weather.frenzy.enabled.tooltip": "Allow Frenzy Fog to be chosen on some days.",
+
+  "config.weather.bloodthirst.title": "Bloodthirst Winds",
+  "config.weather.bloodthirst.tooltip": "Monsters slowly heal over time; you suffer a defense penalty; red dust swirls occasionally.",
+  "config.weather.bloodthirst.enabled.name": "Enabled",
+  "config.weather.bloodthirst.enabled.tooltip": "Allow Bloodthirst Winds to be chosen on some days.",
+
+  "config.weather.unstable.title": "Unstable Veins",
+  "config.weather.unstable.tooltip": "Volatile veins burst with minor explosions and knockback, but reward you with extra ore.",
+  "config.weather.unstable.enabled.name": "Enabled",
+  "config.weather.unstable.enabled.tooltip": "Allow Unstable Veins to be chosen on some days.",
+
+  "config.weather.lucky.title": "Lucky Veins",
+  "config.weather.lucky.tooltip": "The stone feels soft—extra ore finds, a small coal bonus, and occasional glints.",
+  "config.weather.lucky.enabled.name": "Enabled",
+  "config.weather.lucky.enabled.tooltip": "Allow Lucky Veins to be chosen on some days.",
+
+  "config.fungal.extraMushrooms.name": "Fungal: extra mushrooms per floor",
+  "config.fungal.extraMushrooms.tooltip": "How many mushrooms spawn near you when entering a floor during Fungal Harvest.",
+  "config.fungal.slimeDropChance.name": "Fungal: slime drop chance (%)",
+  "config.fungal.slimeDropChance.tooltip": "Chance per second that each slime produces a mushroom during Fungal Harvest.",
+
+  "config.temporal.timeScale.name": "Temporal: time speed (%)",
+  "config.temporal.timeScale.tooltip": "Time speed inside the mines on Temporal Flux days. 70% means time passes slower.",
+
+  "config.berserker.speedBonus.name": "Berserker: monster speed bonus",
+  "config.berserker.speedBonus.tooltip": "Speed added to monsters after they are hit once.",
+  "config.berserker.aggroBonus.name": "Berserker: monster aggro bonus (tiles)",
+  "config.berserker.aggroBonus.tooltip": "Extra tiles of detection range after monsters become enraged.",
+  "config.berserker.playerDefense.name": "Berserker: player defense",
+  "config.berserker.playerDefense.tooltip": "Defense adjustment while in mines on Berserker Day.",
+
+  "config.frenzy.monsterSpeed.name": "Frenzy: monster speed bonus",
+  "config.frenzy.monsterSpeed.tooltip": "Flat speed bonus applied to monsters on Frenzy Fog days.",
+  "config.frenzy.playerDefense.name": "Frenzy: player defense",
+  "config.frenzy.playerDefense.tooltip": "Defense adjustment while in mines on Frenzy Fog days.",
+  "config.frenzy.fogOpacity.name": "Frenzy: fog opacity",
+  "config.frenzy.fogOpacity.tooltip": "Fog overlay opacity (0 = invisible, 255 = fully opaque).",
+
+  "config.bloodthirst.defPenalty.name": "Bloodthirst: defense penalty",
+  "config.bloodthirst.defPenalty.tooltip": "How much Defense is reduced while in mines on Bloodthirst Winds days.",
+  "config.bloodthirst.healInterval.name": "Bloodthirst: heal interval (ticks)",
+  "config.bloodthirst.healInterval.tooltip": "How often monsters heal. 60 ticks ≈ 1 second.",
+  "config.bloodthirst.healAmount.name": "Bloodthirst: heal amount",
+  "config.bloodthirst.healAmount.tooltip": "How much HP monsters heal each interval.",
+
+  "config.unstable.pulseChance.name": "Unstable: burst chance per pulse (%)",
+  "config.unstable.pulseChance.tooltip": "Chance that unstable veins trigger a burst each pulse.",
+  "config.unstable.damage.name": "Unstable: burst damage",
+  "config.unstable.damage.tooltip": "Damage dealt by bursts (minor and not intended to be lethal).",
+  "config.unstable.minOre.name": "Unstable: min extra ore drops",
+  "config.unstable.minOre.tooltip": "Minimum extra ore dropped when a burst happens.",
+  "config.unstable.maxOre.name": "Unstable: max extra ore drops",
+  "config.unstable.maxOre.tooltip": "Maximum extra ore dropped when a burst happens.",
+
+  "config.lucky.extraOreFinds.name": "Lucky: extra ore finds per floor",
+  "config.lucky.extraOreFinds.tooltip": "Extra ore spawned near you when you enter a floor on Lucky Veins days.",
+  "config.lucky.coalChance.name": "Lucky: coal find chance per pulse (%)",
+  "config.lucky.coalChance.tooltip": "Chance to find a piece of coal during Lucky Veins pulses."
 }

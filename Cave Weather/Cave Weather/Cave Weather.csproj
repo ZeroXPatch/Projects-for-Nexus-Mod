@@ -1,36 +1,57 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <RootNamespace>Cave_Weather</RootNamespace>
+    <!-- Stardew Valley 1.6 + SMAPI 4.x -->
+    <TargetFramework>net6.0</TargetFramework>
+
+    <!-- SMAPI mods: keep output lean + avoid nullable metadata issues -->
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+
+    <!-- Optional -->
+    <LangVersion>latest</LangVersion>
     <Platforms>AnyCPU;x64</Platforms>
+    <RootNamespace>CaveWeather</RootNamespace>
+
+    <!-- This helps keep the mod folder clean -->
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
       <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\MonoGame.Framework.dll</HintPath>
+      <Private>false</Private>
     </Reference>
     <Reference Include="SMAPI.Toolkit.CoreInterfaces">
       <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\smapi-internal\SMAPI.Toolkit.CoreInterfaces.dll</HintPath>
+      <Private>false</Private>
     </Reference>
     <Reference Include="Stardew Valley">
       <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\Stardew Valley.dll</HintPath>
+      <Private>false</Private>
     </Reference>
     <Reference Include="StardewModdingAPI">
       <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\StardewModdingAPI.dll</HintPath>
+      <Private>false</Private>
     </Reference>
     <Reference Include="StardewValley.GameData">
       <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\StardewValley.GameData.dll</HintPath>
+      <Private>false</Private>
     </Reference>
     <Reference Include="xTile">
       <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\xTile.dll</HintPath>
+      <Private>false</Private>
     </Reference>
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="REM === Create mod folder ===&#xD;&#xA;mkdir &quot;C:\GOG Games\Stardew Valley\Mods\CaveWeather&quot;&#xD;&#xA;&#xD;&#xA;REM === Copy compiled DLL ===&#xD;&#xA;xcopy /Y /I &quot;$(TargetPath)&quot; &quot;C:\GOG Games\Stardew Valley\Mods\CaveWeather\&quot;&#xD;&#xA;&#xD;&#xA;REM === Copy manifest.json ===&#xD;&#xA;xcopy /Y /I &quot;$(ProjectDir)manifest.json&quot; &quot;C:\GOG Games\Stardew Valley\Mods\CaveWeather\&quot;&#xD;&#xA;&#xD;&#xA;REM === Copy i18n folder (and contents) ===&#xD;&#xA;xcopy /E /Y /I &quot;$(ProjectDir)i18n&quot; &quot;C:\GOG Games\Stardew Valley\Mods\CaveWeather\i18n\&quot;&#xD;&#xA;" />
+  <!-- Post-build: copy ONLY what the mod needs -->
+  <Target Name="PostBuild" AfterTargets="Build">
+    <Exec Command='
+      mkdir "C:\GOG Games\Stardew Valley\Mods\CaveWeather" 2&gt;nul
+      copy /Y "$(TargetPath)" "C:\GOG Games\Stardew Valley\Mods\CaveWeather\"
+      copy /Y "$(ProjectDir)manifest.json" "C:\GOG Games\Stardew Valley\Mods\CaveWeather\"
+      if exist "$(ProjectDir)i18n" xcopy /E /Y /I "$(ProjectDir)i18n" "C:\GOG Games\Stardew Valley\Mods\CaveWeather\i18n\"
+    ' />
   </Target>
 
 </Project>

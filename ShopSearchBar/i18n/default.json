@@ -1,5 +1,4 @@
 {
-  "search.label": "Search items",
   "gmcm.section.shops": "Supported Shops",
   "gmcm.enable.pierre": "Enable for Pierre",
   "gmcm.tooltip.pierre": "Show the search bar when shopping at Pierre's store.",
@@ -7,9 +6,24 @@
   "gmcm.tooltip.clint": "Show the search bar when using Clint's shop menu.",
   "gmcm.enable.robin": "Enable for Robin",
   "gmcm.tooltip.robin": "Show the search bar when talking to Robin about purchases.",
-  "gmcm.section.behavior": "Behavior",
-  "gmcm.focus": "Focus search box on open",
-  "gmcm.tooltip.focus": "Automatically focus the search box when a supported shop opens.",
-  "gmcm.showlabel": "Show search label",
-  "gmcm.tooltip.showlabel": "Display a small label above the search box."
+
+  "gmcm.section.custom": "Custom Shops",
+  "gmcm.allowedtokens": "Allowed shop IDs/names",
+  "gmcm.tooltip.allowedtokens": "Comma/semicolon/newline-separated. If any entry matches the shop identity token (NPC name, shopId, storeContext, menu type), the search bar is enabled. Best for modded shops.",
+
+  "gmcm.section.position": "Position",
+  "gmcm.offsetx": "Search bar X offset",
+  "gmcm.tooltip.offsetx": "Move the search bar left/right (pixels). Positive = right, negative = left.",
+  "gmcm.offsety": "Search bar Y offset",
+  "gmcm.tooltip.offsety": "Move the search bar up/down (pixels). Positive = down, negative = up.",
+
+  "gmcm.section.hotkeys": "Hotkeys",
+  "gmcm.focuskey": "Focus search hotkey",
+  "gmcm.tooltip.focuskey": "Press to toggle focus on the search box. If no results are currently shown, pressing it will also show a warning.",
+  "gmcm.forceattach": "Force attach on hotkey",
+  "gmcm.tooltip.forceattach": "If enabled, pressing the hotkey will attach the search bar to any ShopMenu and log its identity token for your allow-list.",
+
+  "hud.noresults": "No matching items found.",
+  "hud.tokenlogged": "Shop token logged (see SMAPI console).",
+  "hud.notattached": "Search bar not attached. Enable Force Attach or add this shop to the allow-list."
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cave Weather")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc49dd1fc8090ef8455602a92da476bef48445d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e1926188e16ccf4c5a6f9d7dc4d0b22ce45e91c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cave Weather")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cave Weather")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
