@@ -4,8 +4,6 @@
   "message.berserker_day": "You sense bloodlust echoing through the caverns. Monsters grow furious once wounded.",
   "message.frenzy_fog": "A pale fog seeps through the tunnels. Shapes rush at you from the mist.",
   "message.bloodthirst_winds": "Warm, metallic winds blow through the depths. The mines themselves seem hungry.",
-  "message.unstable_veins": "The rock hums with unstable energy... The veins feel ready to burst.",
-  "message.lucky_veins": "The stone feels soft... like it wants to open.",
 
   "buff.daybuff.name": "Cave Weather",
 
@@ -52,16 +50,6 @@
   "config.weather.bloodthirst.enabled.name": "Enabled",
   "config.weather.bloodthirst.enabled.tooltip": "Allow Bloodthirst Winds to be chosen on some days.",
 
-  "config.weather.unstable.title": "Unstable Veins",
-  "config.weather.unstable.tooltip": "Volatile veins burst with minor explosions and knockback, but reward you with extra ore.",
-  "config.weather.unstable.enabled.name": "Enabled",
-  "config.weather.unstable.enabled.tooltip": "Allow Unstable Veins to be chosen on some days.",
-
-  "config.weather.lucky.title": "Lucky Veins",
-  "config.weather.lucky.tooltip": "The stone feels soft—extra ore finds, a small coal bonus, and occasional glints.",
-  "config.weather.lucky.enabled.name": "Enabled",
-  "config.weather.lucky.enabled.tooltip": "Allow Lucky Veins to be chosen on some days.",
-
   "config.fungal.extraMushrooms.name": "Fungal: extra mushrooms per floor",
   "config.fungal.extraMushrooms.tooltip": "How many mushrooms spawn near you when entering a floor during Fungal Harvest.",
   "config.fungal.slimeDropChance.name": "Fungal: slime drop chance (%)",
@@ -89,19 +77,5 @@
   "config.bloodthirst.healInterval.name": "Bloodthirst: heal interval (ticks)",
   "config.bloodthirst.healInterval.tooltip": "How often monsters heal. 60 ticks ≈ 1 second.",
   "config.bloodthirst.healAmount.name": "Bloodthirst: heal amount",
-  "config.bloodthirst.healAmount.tooltip": "How much HP monsters heal each interval.",
-
-  "config.unstable.pulseChance.name": "Unstable: burst chance per pulse (%)",
-  "config.unstable.pulseChance.tooltip": "Chance that unstable veins trigger a burst each pulse.",
-  "config.unstable.damage.name": "Unstable: burst damage",
-  "config.unstable.damage.tooltip": "Damage dealt by bursts (minor and not intended to be lethal).",
-  "config.unstable.minOre.name": "Unstable: min extra ore drops",
-  "config.unstable.minOre.tooltip": "Minimum extra ore dropped when a burst happens.",
-  "config.unstable.maxOre.name": "Unstable: max extra ore drops",
-  "config.unstable.maxOre.tooltip": "Maximum extra ore dropped when a burst happens.",
-
-  "config.lucky.extraOreFinds.name": "Lucky: extra ore finds per floor",
-  "config.lucky.extraOreFinds.tooltip": "Extra ore spawned near you when you enter a floor on Lucky Veins days.",
-  "config.lucky.coalChance.name": "Lucky: coal find chance per pulse (%)",
-  "config.lucky.coalChance.tooltip": "Chance to find a piece of coal during Lucky Veins pulses."
+  "config.bloodthirst.healAmount.tooltip": "How much HP monsters heal each interval."
 }

@@ -20,16 +20,11 @@ namespace CaveWeather
     {
         None,
 
-        // preexisting 5
         FungalHarvest,
         TemporalFlux,
         BerserkerDay,
         FrenzyFog,
-        BloodthirstWinds,
-
-        // new 2
-        UnstableVeins,
-        LuckyVeins
+        BloodthirstWinds
     }
 
     public sealed class ModEntry : Mod
@@ -55,11 +50,6 @@ namespace CaveWeather
         private readonly HashSet<Monster> FrenzyAdjustedMonsters = new();
         private bool DrawFrenzyFog;
 
-        // New: Unstable Veins / Lucky Veins helpers
-        // FIX: use int (Game1.ticks is int)
-        private int LastOrePulseTick;
-        private int LastLuckyPulseTick;
-
         private static readonly string[] FungalMushroomItemIds =
         {
             "(O)404", // Common Mushroom
@@ -83,7 +73,7 @@ namespace CaveWeather
         // Day roll
         // --------------------
 
-        private void OnDayStarted(object? sender, DayStartedEventArgs e)
+        private void OnDayStarted(object sender, DayStartedEventArgs e)
         {
             if (!Context.IsWorldReady || Game1.player is null)
                 return;
@@ -98,8 +88,6 @@ namespace CaveWeather
             this.FrenzyAdjustedMonsters.Clear();
             this.DrawFrenzyFog = false;
             this.ResetTemporalFluxPhase();
-            this.LastOrePulseTick = 0;
-            this.LastLuckyPulseTick = 0;
 
             // roll today
             if (this.Rng.NextDouble() > this.Config.DailyCaveWeatherChance)
@@ -131,17 +119,15 @@ namespace CaveWeather
             AddIfEnabled(CaveWeatherType.BerserkerDay, this.Config.BerserkerDay);
             AddIfEnabled(CaveWeatherType.FrenzyFog, this.Config.FrenzyFog);
             AddIfEnabled(CaveWeatherType.BloodthirstWinds, this.Config.BloodthirstWinds);
-            AddIfEnabled(CaveWeatherType.UnstableVeins, this.Config.UnstableVeins);
-            AddIfEnabled(CaveWeatherType.LuckyVeins, this.Config.LuckyVeins);
 
             return list;
         }
 
         // --------------------
-        // Warps: show message once/day on first mine entry
+        // Warps: show message once/day on first cave entry
         // --------------------
 
-        private void OnWarped(object? sender, WarpedEventArgs e)
+        private void OnWarped(object sender, WarpedEventArgs e)
         {
             if (!Context.IsWorldReady || Game1.player is null)
                 return;
@@ -161,19 +147,17 @@ namespace CaveWeather
             // message once per day
             if (!this.HasShownCaveMessageToday)
             {
-                string? key = this.TodayCaveWeather switch
+                string key = this.TodayCaveWeather switch
                 {
                     CaveWeatherType.FungalHarvest => "message.fungal_harvest",
                     CaveWeatherType.TemporalFlux => "message.temporal_flux",
                     CaveWeatherType.BerserkerDay => "message.berserker_day",
                     CaveWeatherType.FrenzyFog => "message.frenzy_fog",
                     CaveWeatherType.BloodthirstWinds => "message.bloodthirst_winds",
-                    CaveWeatherType.UnstableVeins => "message.unstable_veins",
-                    CaveWeatherType.LuckyVeins => "message.lucky_veins",
-                    _ => null
+                    _ => ""
                 };
 
-                if (key is not null)
+                if (!string.IsNullOrWhiteSpace(key))
                 {
                     string text = this.Helper.Translation.Get(key);
                     if (!string.IsNullOrWhiteSpace(text))
@@ -203,22 +187,13 @@ namespace CaveWeather
                 this.FrenzyAdjustedMonsters.Clear();
                 this.DrawFrenzyFog = true;
             }
-            else if (this.TodayCaveWeather == CaveWeatherType.UnstableVeins)
-            {
-                // no special on-enter; handled per tick + pulses
-            }
-            else if (this.TodayCaveWeather == CaveWeatherType.LuckyVeins)
-            {
-                // simulate "more ore nodes" as extra ore finds on entry (safe, stable)
-                this.SpawnLuckyVeinsOreFinds(e.NewLocation, kind, this.Config.LuckyVeins.ExtraOreFindsPerFloor);
-            }
         }
 
         // --------------------
         // Update tick: run current weather logic
         // --------------------
 
-        private void OnUpdateTicked(object? sender, UpdateTickedEventArgs e)
+        private void OnUpdateTicked(object sender, UpdateTickedEventArgs e)
         {
             if (!Context.IsWorldReady || Game1.player is null)
                 return;
@@ -226,7 +201,8 @@ namespace CaveWeather
             GameLocation location = Game1.currentLocation;
             bool inMine = this.IsMineLikeLocation(location, out MineLocationKind kind);
 
-            this.DrawFrenzyFog = inMine && this.TodayCaveWeather == CaveWeatherType.FrenzyFog
+            this.DrawFrenzyFog = inMine
+                                 && this.TodayCaveWeather == CaveWeatherType.FrenzyFog
                                  && this.IsWeatherAllowedHere(this.TodayCaveWeather, kind);
 
             // keep buff synced
@@ -262,18 +238,10 @@ namespace CaveWeather
                 case CaveWeatherType.BloodthirstWinds:
                     this.UpdateBloodthirstWinds(location, e);
                     break;
-
-                case CaveWeatherType.UnstableVeins:
-                    this.UpdateUnstableVeins(location, e);
-                    break;
-
-                case CaveWeatherType.LuckyVeins:
-                    this.UpdateLuckyVeins(location, kind, e);
-                    break;
             }
         }
 
-        private void OnRenderedWorld(object? sender, RenderedWorldEventArgs e)
+        private void OnRenderedWorld(object sender, RenderedWorldEventArgs e)
         {
             if (!this.DrawFrenzyFog)
                 return;
@@ -297,7 +265,7 @@ namespace CaveWeather
             if (count <= 0)
                 return;
 
-            XnaVector2 playerTile = Game1.player!.Tile;
+            XnaVector2 playerTile = Game1.player.Tile;
 
             for (int i = 0; i < count; i++)
             {
@@ -330,7 +298,7 @@ namespace CaveWeather
             // ambient spores
             if (e.IsMultipleOf(cfg.SporeSpawnIntervalTicks))
             {
-                XnaVector2 playerPos = Game1.player!.Position;
+                XnaVector2 playerPos = Game1.player.Position;
 
                 for (int i = 0; i < cfg.SporeParticlesPerBurst; i++)
                 {
@@ -369,9 +337,7 @@ namespace CaveWeather
                     if (monster is GreenSlime or BigSlime)
                     {
                         if (this.Rng.NextDouble() < cfg.SlimeDropChance)
-                        {
                             this.SpawnItemDebris(location, monster.Tile, 1, FungalMushroomItemIds);
-                        }
                     }
                 }
             }
@@ -391,7 +357,7 @@ namespace CaveWeather
         {
             var cfg = this.Config.TemporalFlux;
 
-            // slow mine time (approx). May conflict with time mods; configurable by location toggles.
+            // slow mine time (approx). May conflict with time mods; controllable by per-location toggles.
             if (cfg.TimeScale is > 0.0 and < 1.0)
             {
                 var gameTime = Game1.currentGameTime;
@@ -514,7 +480,7 @@ namespace CaveWeather
 
             if (e.IsMultipleOf(90))
             {
-                XnaVector2 playerPos = Game1.player!.Position;
+                XnaVector2 playerPos = Game1.player.Position;
 
                 for (int i = 0; i < 4; i++)
                 {
@@ -547,166 +513,6 @@ namespace CaveWeather
         }
 
         // --------------------
-        // Weather: Unstable Veins (new)
-        // --------------------
-
-        private void UpdateUnstableVeins(GameLocation location, UpdateTickedEventArgs e)
-        {
-            var cfg = this.Config.UnstableVeins;
-
-            // pulse every N ticks: simulate "ore nodes sometimes explode"
-            if (!e.IsMultipleOf(cfg.PulseIntervalTicks))
-                return;
-
-            // avoid double-pulsing if multiple handlers etc.
-            if (Game1.ticks == this.LastOrePulseTick)
-                return;
-            this.LastOrePulseTick = Game1.ticks;
-
-            // Find nearby "ore-ish" spots: we don't rely on fragile object IDs.
-            // Instead we randomly trigger a small explosion near the player sometimes, and compensate with ore drops.
-            if (this.Rng.NextDouble() > cfg.ExplosionPulseChance)
-                return;
-
-            XnaVector2 baseTile = Game1.player!.Tile;
-            XnaVector2 tile = baseTile + new XnaVector2(this.Rng.Next(-5, 6), this.Rng.Next(-4, 5));
-
-            if (!location.isTileOnMap(tile))
-                return;
-
-            // explosion effect
-            this.DoSmallExplosion(location, tile, cfg.ExplosionDamage, cfg.ExplosionRadiusTiles, cfg.KnockbackStrength);
-
-            // reward compensation: extra ore drops near explosion
-            int oreCount = this.Rng.Next(cfg.MinExtraOreDrops, cfg.MaxExtraOreDrops + 1);
-            if (oreCount > 0)
-            {
-                string oreId = this.ChooseOreForLocation(location);
-                this.SpawnItemDebris(location, tile, oreCount, new[] { oreId });
-            }
-        }
-
-        private void DoSmallExplosion(GameLocation location, XnaVector2 centerTile, int damage, int radiusTiles, float knockback)
-        {
-            if (damage < 0) damage = 0;
-            if (radiusTiles < 1) radiusTiles = 1;
-
-            // sound + small shake
-            location.playSound("explosion");
-            Game1.screenGlowOnce(Color.OrangeRed, false);
-            Game1.currentLocation?.temporarySprites.Add(new TemporaryAnimatedSprite(362, centerTile * 64f, Color.White, 8, false, 60f));
-
-            // apply to player if close
-            float distPlayer = Vector2.Distance(Game1.player!.Tile, centerTile);
-            if (distPlayer <= radiusTiles)
-            {
-                int finalDmg = Math.Max(1, damage);
-                Game1.player.takeDamage(finalDmg, overrideParry: true, damager: null);
-                ApplyKnockbackToFarmer(Game1.player, centerTile, knockback);
-            }
-
-            // apply to monsters
-            foreach (Monster m in location.characters.OfType<Monster>())
-            {
-                float d = Vector2.Distance(m.Tile, centerTile);
-                if (d <= radiusTiles)
-                {
-                    // light damage; Monster.takeDamage signature varies—use Health directly safely
-                    m.Health = Math.Max(0, m.Health - Math.Max(1, damage));
-                    ApplyKnockbackToMonster(m, centerTile, knockback);
-                }
-            }
-        }
-
-        private static void ApplyKnockbackToFarmer(Farmer farmer, XnaVector2 sourceTile, float strength)
-        {
-            if (strength <= 0f)
-                return;
-
-            XnaVector2 dir = farmer.Tile - sourceTile;
-            if (dir.LengthSquared() < 0.001f)
-                dir = new XnaVector2(0f, -1f);
-            dir.Normalize();
-
-            farmer.xVelocity += dir.X * strength;
-            farmer.yVelocity += dir.Y * strength;
-        }
-
-        private static void ApplyKnockbackToMonster(Monster monster, XnaVector2 sourceTile, float strength)
-        {
-            if (strength <= 0f)
-                return;
-
-            XnaVector2 dir = monster.Tile - sourceTile;
-            if (dir.LengthSquared() < 0.001f)
-                dir = new XnaVector2(0f, -1f);
-            dir.Normalize();
-
-            monster.xVelocity += dir.X * strength;
-            monster.yVelocity += dir.Y * strength;
-        }
-
-        // --------------------
-        // Weather: Lucky Veins (new)
-        // --------------------
-
-        private void UpdateLuckyVeins(GameLocation location, MineLocationKind kind, UpdateTickedEventArgs e)
-        {
-            var cfg = this.Config.LuckyVeins;
-
-            // occasional "glint" near the player to hint at ore
-            if (e.IsMultipleOf(cfg.GlintIntervalTicks))
-            {
-                XnaVector2 playerPos = Game1.player!.Position;
-                XnaVector2 pos = playerPos + new XnaVector2(this.Rng.Next(-7, 8) * 64f, this.Rng.Next(-4, 5) * 64f);
-
-                var sprite = new TemporaryAnimatedSprite(
-                    "LooseSprites\\Cursors",
-                    new XnaRectangle(372, 1956, 8, 8),
-                    60f,
-                    4,
-                    2,
-                    pos,
-                    false,
-                    this.Rng.NextDouble() < 0.5
-                )
-                {
-                    motion = new XnaVector2(
-                        0.2f * (this.Rng.NextDouble() < 0.5 ? -1f : 1f),
-                        (float)(this.Rng.NextDouble() - 0.5) * 0.2f
-                    ),
-                    layerDepth = (pos.Y + 32f) / 10000f,
-                    color = Color.LightGoldenrodYellow
-                };
-
-                location.temporarySprites.Add(sprite);
-            }
-
-            // coal bonus (stable simulation): occasionally you "find" coal while mining around
-            if (cfg.CoalFindChancePerPulse > 0 && e.IsMultipleOf(cfg.CoalPulseIntervalTicks))
-            {
-                if (Game1.ticks == this.LastLuckyPulseTick)
-                    return;
-                this.LastLuckyPulseTick = Game1.ticks;
-
-                if (this.Rng.NextDouble() < cfg.CoalFindChancePerPulse)
-                {
-                    this.SpawnItemDebris(location, Game1.player!.Tile, 1, new[] { "(O)382" }); // coal
-                    location.playSound("coin");
-                }
-            }
-        }
-
-        private void SpawnLuckyVeinsOreFinds(GameLocation location, MineLocationKind kind, int count)
-        {
-            if (count <= 0)
-                return;
-
-            string oreId = this.ChooseOreForLocation(location);
-            this.SpawnItemDebris(location, Game1.player!.Tile, count, new[] { oreId });
-        }
-
-        // --------------------
         // Shared helpers
         // --------------------
 
@@ -718,7 +524,7 @@ namespace CaveWeather
             for (int i = 0; i < count; i++)
             {
                 string itemId = possibleItemIds[this.Rng.Next(possibleItemIds.Length)];
-                Item? item = ItemRegistry.Create(itemId);
+                Item item = ItemRegistry.Create(itemId);
                 if (item is null)
                     continue;
 
@@ -727,28 +533,6 @@ namespace CaveWeather
 
                 location.debris.Add(new Debris(item, pos));
             }
-        }
-
-        private string ChooseOreForLocation(GameLocation location)
-        {
-            // safe heuristic based on mine type & depth (no brittle object constants)
-            if (location is MineShaft shaft)
-            {
-                int level = shaft.mineLevel;
-                if (level >= 80)
-                    return "(O)384"; // gold ore
-                if (level >= 40)
-                    return "(O)380"; // iron ore
-                return "(O)378";     // copper ore
-            }
-
-            if (string.Equals(location.NameOrUniqueName, "SkullCave", StringComparison.OrdinalIgnoreCase))
-                return "(O)386"; // iridium ore (Skull Cavern vibe)
-
-            if (string.Equals(location.NameOrUniqueName, "VolcanoDungeon", StringComparison.OrdinalIgnoreCase))
-                return "(O)384"; // gold-ish baseline; can customize later
-
-            return "(O)378";
         }
 
         // --------------------
@@ -816,7 +600,6 @@ namespace CaveWeather
 
             if (location is MineShaft)
             {
-                // Skull Cavern is also MineShaft; identify by name
                 if (string.Equals(location.NameOrUniqueName, "SkullCave", StringComparison.OrdinalIgnoreCase))
                 {
                     kind = MineLocationKind.SkullCavern;
@@ -845,8 +628,6 @@ namespace CaveWeather
                 CaveWeatherType.BerserkerDay => this.Config.BerserkerDay,
                 CaveWeatherType.FrenzyFog => this.Config.FrenzyFog,
                 CaveWeatherType.BloodthirstWinds => this.Config.BloodthirstWinds,
-                CaveWeatherType.UnstableVeins => this.Config.UnstableVeins,
-                CaveWeatherType.LuckyVeins => this.Config.LuckyVeins,
                 _ => this.Config.FungalHarvest
             };
 
@@ -866,7 +647,7 @@ namespace CaveWeather
         // GMCM
         // --------------------
 
-        private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
+        private void OnGameLaunched(object sender, GameLaunchedEventArgs e)
         {
             var gmcm = this.Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
             if (gmcm is null)
@@ -904,14 +685,12 @@ namespace CaveWeather
                 () => this.Helper.Translation.Get("config.section.weathers.tooltip")
             );
 
-            // Add each weather block
-            this.AddWeatherConfig(gmcm, CaveWeatherType.FungalHarvest, this.Config.FungalHarvest, "fungal");
-            this.AddWeatherConfig(gmcm, CaveWeatherType.TemporalFlux, this.Config.TemporalFlux, "temporal");
-            this.AddWeatherConfig(gmcm, CaveWeatherType.BerserkerDay, this.Config.BerserkerDay, "berserker");
-            this.AddWeatherConfig(gmcm, CaveWeatherType.FrenzyFog, this.Config.FrenzyFog, "frenzy");
-            this.AddWeatherConfig(gmcm, CaveWeatherType.BloodthirstWinds, this.Config.BloodthirstWinds, "bloodthirst");
-            this.AddWeatherConfig(gmcm, CaveWeatherType.UnstableVeins, this.Config.UnstableVeins, "unstable");
-            this.AddWeatherConfig(gmcm, CaveWeatherType.LuckyVeins, this.Config.LuckyVeins, "lucky");
+            // per-weather enable + per-location toggles
+            this.AddWeatherConfig(gmcm, this.Config.FungalHarvest, "fungal");
+            this.AddWeatherConfig(gmcm, this.Config.TemporalFlux, "temporal");
+            this.AddWeatherConfig(gmcm, this.Config.BerserkerDay, "berserker");
+            this.AddWeatherConfig(gmcm, this.Config.FrenzyFog, "frenzy");
+            this.AddWeatherConfig(gmcm, this.Config.BloodthirstWinds, "bloodthirst");
 
             gmcm.AddSectionTitle(
                 this.ModManifest,
@@ -919,7 +698,8 @@ namespace CaveWeather
                 () => this.Helper.Translation.Get("config.section.tuning.tooltip")
             );
 
-            // Tuning options (numbers)
+            // ---- Tuning options ----
+
             // Fungal
             gmcm.AddNumberOption(this.ModManifest,
                 () => this.Config.FungalHarvest.ExtraMushroomsPerFloor,
@@ -933,7 +713,7 @@ namespace CaveWeather
                 v => this.Config.FungalHarvest.SlimeDropChance = Math.Clamp(v, 0, 100) / 100.0,
                 () => this.Helper.Translation.Get("config.fungal.slimeDropChance.name"),
                 () => this.Helper.Translation.Get("config.fungal.slimeDropChance.tooltip"),
-                0, 100, 5, v => $"{v}%", "FungalSlimeDropChance");
+                0, 100, 5, vv => $"{vv}%", "FungalSlimeDropChance");
 
             // Temporal
             gmcm.AddNumberOption(this.ModManifest,
@@ -941,7 +721,7 @@ namespace CaveWeather
                 v => this.Config.TemporalFlux.TimeScale = Math.Clamp(v, 10, 200) / 100.0,
                 () => this.Helper.Translation.Get("config.temporal.timeScale.name"),
                 () => this.Helper.Translation.Get("config.temporal.timeScale.tooltip"),
-                10, 200, 10, v => $"{v}%", "TemporalTimeScale");
+                10, 200, 10, vv => $"{vv}%", "TemporalTimeScale");
 
             // Berserker
             gmcm.AddNumberOption(this.ModManifest,
@@ -1008,55 +788,10 @@ namespace CaveWeather
                 () => this.Helper.Translation.Get("config.bloodthirst.healAmount.name"),
                 () => this.Helper.Translation.Get("config.bloodthirst.healAmount.tooltip"),
                 0, 10, 1, null, "BloodthirstHealAmount");
-
-            // Unstable
-            gmcm.AddNumberOption(this.ModManifest,
-                () => (int)(this.Config.UnstableVeins.ExplosionPulseChance * 100),
-                v => this.Config.UnstableVeins.ExplosionPulseChance = Math.Clamp(v, 0, 100) / 100.0,
-                () => this.Helper.Translation.Get("config.unstable.pulseChance.name"),
-                () => this.Helper.Translation.Get("config.unstable.pulseChance.tooltip"),
-                0, 100, 5, vv => $"{vv}%", "UnstablePulseChance");
-
-            gmcm.AddNumberOption(this.ModManifest,
-                () => this.Config.UnstableVeins.ExplosionDamage,
-                v => this.Config.UnstableVeins.ExplosionDamage = Math.Max(0, v),
-                () => this.Helper.Translation.Get("config.unstable.damage.name"),
-                () => this.Helper.Translation.Get("config.unstable.damage.tooltip"),
-                0, 50, 1, null, "UnstableDamage");
-
-            gmcm.AddNumberOption(this.ModManifest,
-                () => this.Config.UnstableVeins.MinExtraOreDrops,
-                v => this.Config.UnstableVeins.MinExtraOreDrops = Math.Clamp(v, 0, 20),
-                () => this.Helper.Translation.Get("config.unstable.minOre.name"),
-                () => this.Helper.Translation.Get("config.unstable.minOre.tooltip"),
-                0, 20, 1, null, "UnstableMinOre");
-
-            gmcm.AddNumberOption(this.ModManifest,
-                () => this.Config.UnstableVeins.MaxExtraOreDrops,
-                v => this.Config.UnstableVeins.MaxExtraOreDrops = Math.Clamp(v, 0, 30),
-                () => this.Helper.Translation.Get("config.unstable.maxOre.name"),
-                () => this.Helper.Translation.Get("config.unstable.maxOre.tooltip"),
-                0, 30, 1, null, "UnstableMaxOre");
-
-            // Lucky
-            gmcm.AddNumberOption(this.ModManifest,
-                () => this.Config.LuckyVeins.ExtraOreFindsPerFloor,
-                v => this.Config.LuckyVeins.ExtraOreFindsPerFloor = Math.Max(0, v),
-                () => this.Helper.Translation.Get("config.lucky.extraOreFinds.name"),
-                () => this.Helper.Translation.Get("config.lucky.extraOreFinds.tooltip"),
-                0, 20, 1, null, "LuckyExtraOreFinds");
-
-            gmcm.AddNumberOption(this.ModManifest,
-                () => (int)(this.Config.LuckyVeins.CoalFindChancePerPulse * 100),
-                v => this.Config.LuckyVeins.CoalFindChancePerPulse = Math.Clamp(v, 0, 100) / 100.0,
-                () => this.Helper.Translation.Get("config.lucky.coalChance.name"),
-                () => this.Helper.Translation.Get("config.lucky.coalChance.tooltip"),
-                0, 100, 5, vv => $"{vv}%", "LuckyCoalChance");
         }
 
-        private void AddWeatherConfig(IGenericModConfigMenuApi gmcm, CaveWeatherType t, ModConfigWeather w, string prefix)
+        private void AddWeatherConfig(IGenericModConfigMenuApi gmcm, ModConfigWeather w, string prefix)
         {
-            // title line per weather
             gmcm.AddSectionTitle(
                 this.ModManifest,
                 () => this.Helper.Translation.Get($"config.weather.{prefix}.title"),
@@ -1102,7 +837,7 @@ namespace CaveWeather
     }
 
     // --------------------------------------------------------------------
-    // 1.6 compatibility helpers for removed tile methods
+    // 1.6 compatibility helpers
     // --------------------------------------------------------------------
     internal static class GameLocationExtensionsCompat
     {

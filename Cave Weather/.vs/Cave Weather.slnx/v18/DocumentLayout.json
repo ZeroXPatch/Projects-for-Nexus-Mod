@@ -3,15 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Cave Weather\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D98282C-424B-AF3A-F2F6-75436460EC7C}|Cave Weather\\Cave Weather.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\cave weather\\cave weather\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D98282C-424B-AF3A-F2F6-75436460EC7C}|Cave Weather\\Cave Weather.csproj|solutionrelative:cave weather\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D98282C-424B-AF3A-F2F6-75436460EC7C}|Cave Weather\\Cave Weather.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\cave weather\\cave weather\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D98282C-424B-AF3A-F2F6-75436460EC7C}|Cave Weather\\Cave Weather.csproj|solutionrelative:cave weather\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D98282C-424B-AF3A-F2F6-75436460EC7C}|Cave Weather\\Cave Weather.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\cave weather\\cave weather\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D98282C-424B-AF3A-F2F6-75436460EC7C}|Cave Weather\\Cave Weather.csproj|solutionrelative:cave weather\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D98282C-424B-AF3A-F2F6-75436460EC7C}|Cave Weather\\Cave Weather.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\cave weather\\cave weather\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D98282C-424B-AF3A-F2F6-75436460EC7C}|Cave Weather\\Cave Weather.csproj|solutionrelative:cave weather\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D98282C-424B-AF3A-F2F6-75436460EC7C}|Cave Weather\\Cave Weather.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\cave weather\\cave weather\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -20,10 +24,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9D98282C-424B-AF3A-F2F6-75436460EC7C}|Cave Weather\\Cave Weather.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\cave weather\\cave weather\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{9D98282C-424B-AF3A-F2F6-75436460EC7C}|Cave Weather\\Cave Weather.csproj|solutionrelative:cave weather\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D98282C-424B-AF3A-F2F6-75436460EC7C}|Cave Weather\\Cave Weather.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\cave weather\\cave weather\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D98282C-424B-AF3A-F2F6-75436460EC7C}|Cave Weather\\Cave Weather.csproj|solutionrelative:cave weather\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
@@ -66,61 +66,54 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "manifest.json",
-              "DocumentMoniker": "C:\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\manifest.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\manifest.json",
-              "ToolTip": "C:\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\manifest.json",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\manifest.json",
+              "Title": "default.json",
+              "DocumentMoniker": "C:\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\i18n\\default.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\i18n\\default.json",
+              "ToolTip": "C:\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\i18n\\default.json",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\i18n\\default.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-12T19:34:45.768Z"
+              "WhenOpened": "2025-12-13T01:44:52.729Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "IGenericModConfigMenuApi.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Cave Weather\\Cave Weather\\IGenericModConfigMenuApi.cs",
               "RelativeDocumentMoniker": "Cave Weather\\IGenericModConfigMenuApi.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Cave Weather\\Cave Weather\\IGenericModConfigMenuApi.cs",
               "RelativeToolTip": "Cave Weather\\IGenericModConfigMenuApi.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAgwCIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAgwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T19:15:46.73Z"
+              "WhenOpened": "2025-12-12T19:15:46.73Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Cave Weather\\Cave Weather\\ModEntry.cs",
               "RelativeDocumentMoniker": "Cave Weather\\ModEntry.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Cave Weather\\Cave Weather\\ModEntry.cs",
               "RelativeToolTip": "Cave Weather\\ModEntry.cs",
-              "ViewState": "AgIAAFoEAAAAAAAAAAAQwGkEAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFwBAAAAAAAAAAASwGMBAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T23:15:02.082Z"
+              "WhenOpened": "2025-12-04T23:15:02.082Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ModConfig.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Cave Weather\\Cave Weather\\ModConfig.cs",
               "RelativeDocumentMoniker": "Cave Weather\\ModConfig.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Cave Weather\\Cave Weather\\ModConfig.cs",
               "RelativeToolTip": "Cave Weather\\ModConfig.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAA1wF8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T19:15:18.625Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "config.json",
-              "DocumentMoniker": "C:\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\config.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\config.json",
-              "ToolTip": "C:\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\config.json",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\config.json",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAMAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-05T01:13:59.512Z"
+              "WhenOpened": "2025-12-12T19:15:18.625Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -147,27 +140,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Cave Weather\\Cave Weather\\manifest.json",
               "RelativeDocumentMoniker": "Cave Weather\\manifest.json",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Cave Weather\\Cave Weather\\manifest.json",
               "RelativeToolTip": "Cave Weather\\manifest.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-05T00:39:16.819Z"
+              "WhenOpened": "2025-12-05T00:39:16.819Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "default.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Cave Weather\\Cave Weather\\i18n\\default.json",
               "RelativeDocumentMoniker": "Cave Weather\\i18n\\default.json",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Cave Weather\\Cave Weather\\i18n\\default.json",
               "RelativeToolTip": "Cave Weather\\i18n\\default.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAUwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-05T00:45:13.89Z"
+              "WhenOpened": "2025-12-05T00:45:13.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "config.json",
+              "DocumentMoniker": "C:\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\config.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\config.json",
+              "ToolTip": "C:\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\config.json",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\CaveWeather\\config.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-05T01:13:59.512Z"
             },
             {
               "$type": "Document",
