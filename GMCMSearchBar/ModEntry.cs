@@ -99,33 +99,150 @@ public sealed class ModEntry : Mod
 
     private List<IManifest> GetRegisteredMods()
     {
-        List<IManifest> results = new();
-
-        if (this.gmcmApi is not null)
+        // Best case: reflect into GMCM internals to get the list of registered mods.
+        try
         {
-            MethodInfo? method = this.gmcmApi.GetType().GetMethod("GetRegisteredMods", BindingFlags.Public | BindingFlags.Instance);
-            if (method?.Invoke(this.gmcmApi, null) is IEnumerable<IManifest> registered)
+            if (this.gmcmApi is not null)
             {
-                results.AddRange(registered);
+                object apiObj = this.gmcmApi;
+
+                // 1) Look for any public property that is IEnumerable<IManifest>
+                foreach (var prop in apiObj.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public))
+                {
+                    if (!prop.CanRead)
+                    {
+                        continue;
+                    }
+
+                    if (typeof(IEnumerable<IManifest>).IsAssignableFrom(prop.PropertyType))
+                    {
+                        if (prop.GetValue(apiObj) is IEnumerable<IManifest> manifests)
+                        {
+                            return this.CleanSort(manifests);
+                        }
+                    }
+                }
+
+                // 2) Look for a field/property holding a dictionary keyed by IManifest
+                IEnumerable<IManifest>? foundFromDict = TryExtractManifestsFromAnyDictionary(apiObj);
+                if (foundFromDict is not null)
+                {
+                    return this.CleanSort(foundFromDict);
+                }
+
+                // 3) Look for a nested manager object, then repeat the dictionary scan on it
+                foreach (var field in apiObj.GetType().GetFields(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public))
+                {
+                    object? inner = field.GetValue(apiObj);
+                    if (inner is null)
+                    {
+                        continue;
+                    }
+
+                    foundFromDict = TryExtractManifestsFromAnyDictionary(inner);
+                    if (foundFromDict is not null)
+                    {
+                        return this.CleanSort(foundFromDict);
+                    }
+                }
             }
         }
-
-        if (results.Count == 0)
+        catch (Exception ex)
         {
-            foreach (IModInfo mod in this.Helper.ModRegistry.GetAll())
+            this.Monitor.Log($"Failed to reflect GMCM registered mods list; falling back to all mods.\n{ex}", LogLevel.Trace);
+        }
+
+        // Fallback: list all installed mods (some won’t be registered with GMCM).
+        return this.CleanSort(this.Helper.ModRegistry.GetAll().Select(m => m.Manifest));
+
+        static IEnumerable<IManifest>? TryExtractManifestsFromAnyDictionary(object obj)
+        {
+            var flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
+
+            // scan fields
+            foreach (var field in obj.GetType().GetFields(flags))
             {
-                if (string.Equals(mod.Manifest.UniqueID, this.ModManifest.UniqueID, StringComparison.OrdinalIgnoreCase))
+                if (field.GetValue(obj) is null)
                 {
                     continue;
                 }
 
-                results.Add(mod.Manifest);
+                if (TryExtractFromDictionaryObject(field.GetValue(obj)!, out var manifests))
+                {
+                    return manifests;
+                }
             }
+
+            // scan properties
+            foreach (var prop in obj.GetType().GetProperties(flags))
+            {
+                if (!prop.CanRead)
+                {
+                    continue;
+                }
+
+                object? value;
+                try
+                {
+                    value = prop.GetValue(obj);
+                }
+                catch
+                {
+                    continue;
+                }
+
+                if (value is null)
+                {
+                    continue;
+                }
+
+                if (TryExtractFromDictionaryObject(value, out var manifests))
+                {
+                    return manifests;
+                }
+            }
+
+            return null;
         }
 
-        return results
-            .Where(manifest => !string.Equals(manifest.UniqueID, this.ModManifest.UniqueID, StringComparison.OrdinalIgnoreCase))
-            .OrderBy(manifest => manifest.Name, StringComparer.OrdinalIgnoreCase)
+        static bool TryExtractFromDictionaryObject(object value, out IEnumerable<IManifest> manifests)
+        {
+            manifests = Array.Empty<IManifest>();
+
+            // If it's IDictionary<IManifest, T> we can grab Keys.
+            var type = value.GetType();
+            var idictIface = type
+                .GetInterfaces()
+                .FirstOrDefault(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IDictionary<,>));
+
+            if (idictIface is null)
+            {
+                return false;
+            }
+
+            var args = idictIface.GetGenericArguments();
+            if (args.Length != 2 || args[0] != typeof(IManifest))
+            {
+                return false;
+            }
+
+            var keysProp = idictIface.GetProperty("Keys");
+            if (keysProp?.GetValue(value) is IEnumerable<IManifest> keys)
+            {
+                manifests = keys;
+                return true;
+            }
+
+            return false;
+        }
+    }
+
+    private List<IManifest> CleanSort(IEnumerable<IManifest> manifests)
+    {
+        return manifests
+            .Where(m => !string.Equals(m.UniqueID, this.ModManifest.UniqueID, StringComparison.OrdinalIgnoreCase))
+            .DistinctBy(m => m.UniqueID, StringComparer.OrdinalIgnoreCase)
+            .OrderBy(m => m.Name, StringComparer.OrdinalIgnoreCase)
             .ToList();
     }
 
@@ -237,6 +354,12 @@ internal sealed class SearchMenu : IClickableMenu
         }
     }
 
+    public override void update(GameTime time)
+    {
+        base.update(time);
+        this.searchBox.Update();
+    }
+
     public override void receiveLeftClick(int x, int y, bool playSound = true)
     {
         base.receiveLeftClick(x, y, playSound);
@@ -342,12 +465,14 @@ internal sealed class SearchMenu : IClickableMenu
     private void OpenAndClose(IManifest manifest)
     {
         bool opened = this.openMod.Invoke(manifest);
-        if (!opened)
+        if (opened)
         {
-            this.monitor.Log(string.Format(this.translation.Get("menu.failed"), manifest.Name), LogLevel.Warn);
+            this.exitThisMenu(true);
         }
-
-        this.exitThisMenu(true);
+        else
+        {
+            Game1.playSound("cancel");
+        }
     }
 
     private int GetItemsPerPage()
