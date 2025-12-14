@@ -34,7 +34,7 @@ public sealed class ModEntry : Mod
             return;
         }
 
-        if (!this.config.AllowOnTitleScreen && !Context.IsWorldReady)
+        if (!Context.IsWorldReady)
         {
             this.Monitor.Log("Search is disabled until a save is loaded.", LogLevel.Info);
             return;
@@ -77,13 +77,6 @@ public sealed class ModEntry : Mod
             value => this.config.ToggleKey = value,
             () => this.Helper.Translation.Get("config.toggle"),
             () => this.Helper.Translation.Get("config.toggle.description")
-        );
-        this.gmcmApi.AddBoolOption(
-            this.ModManifest,
-            () => this.config.AllowOnTitleScreen,
-            value => this.config.AllowOnTitleScreen = value,
-            () => this.Helper.Translation.Get("config.openAtTitle"),
-            () => this.Helper.Translation.Get("config.openAtTitle.description")
         );
     }
 
@@ -283,8 +276,6 @@ public sealed class ModEntry : Mod
 public sealed class ModConfig
 {
     public KeybindList ToggleKey { get; set; } = new(SButton.F8);
-
-    public bool AllowOnTitleScreen { get; set; } = true;
 }
 
 internal sealed class SearchMenu : IClickableMenu
