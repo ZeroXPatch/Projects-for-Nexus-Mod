@@ -78,7 +78,7 @@ public sealed class ModEntry : Mod
 
     private void OpenSearchMenu()
     {
-        if (this.Helper.ModRegistry.GetApi<object>("spacechase0.GenericModConfigMenu") is null)
+        if (this.gmcmApi is null)
         {
             this.Monitor.Log(this.Helper.Translation.Get("menu.gmcmMissing"), LogLevel.Warn);
             return;
@@ -254,16 +254,9 @@ public sealed class ModEntry : Mod
             return false;
         }
 
-        MethodInfo? method = this.gmcmApi.GetType().GetMethod("OpenModMenu", new[] { typeof(IManifest) });
-        if (method is not null)
-        {
-            method.Invoke(this.gmcmApi, new object[] { manifest });
-            this.Monitor.Log(string.Format(this.Helper.Translation.Get("menu.opened"), manifest.Name), LogLevel.Info);
-            return true;
-        }
-
-        this.Monitor.Log(string.Format(this.Helper.Translation.Get("menu.failed"), manifest.Name), LogLevel.Warn);
-        return false;
+        this.gmcmApi.OpenModMenu(manifest);
+        this.Monitor.Log(string.Format(this.Helper.Translation.Get("menu.opened"), manifest.Name), LogLevel.Info);
+        return true;
     }
 }
 
@@ -494,5 +487,7 @@ namespace GenericModConfigMenu
         void AddBoolOption(IManifest mod, Func<bool> getValue, Action<bool> setValue, Func<string> name, Func<string>? tooltip = null, string? fieldId = null);
 
         void AddKeybindList(IManifest mod, Func<KeybindList> getValue, Action<KeybindList> setValue, Func<string> name, Func<string>? tooltip = null, string? fieldId = null);
+
+        void OpenModMenu(IManifest mod);
     }
 }
