@@ -254,9 +254,18 @@ public sealed class ModEntry : Mod
             return false;
         }
 
-        this.gmcmApi.OpenModMenu(manifest);
-        this.Monitor.Log(string.Format(this.Helper.Translation.Get("menu.opened"), manifest.Name), LogLevel.Info);
-        return true;
+        try
+        {
+            this.gmcmApi.OpenModMenu(manifest);
+            this.Monitor.Log(string.Format(this.Helper.Translation.Get("menu.opened"), manifest.Name), LogLevel.Info);
+            return true;
+        }
+        catch (Exception ex)
+        {
+            this.Monitor.Log(string.Format(this.Helper.Translation.Get("menu.failed"), manifest.Name), LogLevel.Warn);
+            this.Monitor.Log($"Failed to open GMCM menu for {manifest.UniqueID}.\n{ex}", LogLevel.Trace);
+            return false;
+        }
     }
 }
 
@@ -274,7 +283,6 @@ internal sealed class SearchMenu : IClickableMenu
     private readonly Func<IManifest, bool> openMod;
     private readonly List<IManifest> mods;
     private readonly TextBox searchBox;
-    private readonly Texture2D textBoxTexture;
     private readonly SpriteFont font;
     private readonly List<IManifest> filtered;
     private int scrollOffset;
@@ -293,10 +301,9 @@ internal sealed class SearchMenu : IClickableMenu
         this.openMod = openMod;
         this.mods = mods;
         this.filtered = new List<IManifest>(mods);
-        this.textBoxTexture = textBoxTexture;
         this.font = font;
 
-        this.searchBox = new TextBox(this.textBoxTexture, null, this.font, Game1.textColor)
+        this.searchBox = new TextBox(textBoxTexture, null, this.font, Game1.textColor)
         {
             X = this.xPositionOnScreen + 48,
             Y = this.yPositionOnScreen + 96,
@@ -457,6 +464,11 @@ internal sealed class SearchMenu : IClickableMenu
 
     private void OpenAndClose(IManifest manifest)
     {
+        if (Game1.keyboardDispatcher.Subscriber == this.searchBox)
+        {
+            Game1.keyboardDispatcher.Subscriber = null;
+        }
+
         bool opened = this.openMod.Invoke(manifest);
         if (opened)
         {
