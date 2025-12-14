@@ -1,0 +1,15 @@
+{
+  "config.title": "Search Launcher",
+  "config.description": "Open a search bar to quickly jump into any mod registered with GMCM.",
+  "config.toggle": "Search hotkey",
+  "config.toggle.description": "Press this to open the GMCM search overlay.",
+  "config.openAtTitle": "Enable search on title screen",
+  "config.openAtTitle.description": "Allow the search overlay to be opened before loading a save.",
+  "menu.title": "GMCM Search",
+  "menu.placeholder": "Type to filter mods...",
+  "menu.noResults": "No matching mods registered.",
+  "menu.subtitle": "Click a result to open its config in GMCM.",
+  "menu.opened": "Opening GMCM for {0}...",
+  "menu.failed": "Could not open GMCM for {0} (is it registered?)",
+  "menu.gmcmMissing": "Generic Mod Config Menu is not installed."
+}
