@@ -40,6 +40,17 @@ public sealed class ModEntry : Mod
             return;
         }
 
+        if (Game1.activeClickableMenu is SearchMenu)
+        {
+            Game1.exitActiveMenu();
+            return;
+        }
+
+        if (Game1.activeClickableMenu is not null)
+        {
+            return;
+        }
+
         this.OpenSearchMenu();
     }
 
@@ -469,15 +480,16 @@ internal sealed class SearchMenu : IClickableMenu
             Game1.keyboardDispatcher.Subscriber = null;
         }
 
-        bool opened = this.openMod.Invoke(manifest);
-        if (opened)
+        this.exitThisMenu(true);
+
+        Game1.delayedActions.Add(new DelayedAction(0, () =>
         {
-            this.exitThisMenu(true);
-        }
-        else
-        {
-            Game1.playSound("cancel");
-        }
+            bool opened = this.openMod.Invoke(manifest);
+            if (!opened)
+            {
+                Game1.playSound("cancel");
+            }
+        }));
     }
 
     private int GetItemsPerPage()
