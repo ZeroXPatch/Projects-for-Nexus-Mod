@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMSearchBar\obj\Debug\net6.0\GMCMSearchBar.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMSearchBar\obj\Debug\net6.0\GMCMSearchBar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMSearchBar\obj\Debug\net6.0\GMCMSearchBar.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMSearchBar\obj\Debug\net6.0\GMCMSearchBar.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMSearchBar\obj\Debug\net6.0\GMCMSearchBar.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMSearchBar\obj\Debug\net6.0\GMCMSearchBar.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMSearchBar\bin\Debug\net6.0\GMCMSearchBar.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMSearchBar\bin\Debug\net6.0\GMCMSearchBar.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMSearchBar\obj\Debug\net6.0\GMCMSearchBar.dll

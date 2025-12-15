@@ -1,508 +1,526 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using GenericModConfigMenu; // for the API interface below
+// ModEntry.cs
+using GenericModConfigMenu;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
-using StardewModdingAPI.Utilities;
 using StardewValley;
+using StardewValley.BellsAndWhistles;
 using StardewValley.Menus;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace GMCMSearchBar;
-
-public sealed class ModEntry : Mod
+namespace GMCMSearchBar
 {
-    private ModConfig config = new();
-    private IGenericModConfigMenuApi? gmcmApi;
-    private Texture2D? textBoxTexture;
-
-    public override void Entry(IModHelper helper)
+    public sealed class ModEntry : Mod
     {
-        this.config = helper.ReadConfig<ModConfig>();
-        helper.Events.GameLoop.GameLaunched += this.OnGameLaunched;
-        helper.Events.Input.ButtonsChanged += this.OnButtonsChanged;
-    }
+        private ModConfig Config = null!;
+        private IGenericModConfigMenuApi? Gmcm;
 
-    private void OnButtonsChanged(object? sender, ButtonsChangedEventArgs e)
-    {
-        if (!this.config.ToggleKey.JustPressed())
+        public override void Entry(IModHelper helper)
         {
-            return;
+            this.Config = helper.ReadConfig<ModConfig>();
+
+            helper.Events.GameLoop.GameLaunched += this.OnGameLaunched;
+            helper.Events.Input.ButtonPressed += this.OnButtonPressed;
         }
 
-        if (!Context.IsWorldReady)
+        private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
         {
-            this.Monitor.Log("Search is disabled until a save is loaded.", LogLevel.Info);
-            return;
+            this.Gmcm = this.Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
+            if (this.Gmcm is null)
+                return;
+
+            this.Gmcm.Register(
+                this.ModManifest,
+                reset: () => this.Config = new ModConfig(),
+                save: () => this.Helper.WriteConfig(this.Config)
+            );
+
+            this.Gmcm.AddKeybindList(
+                this.ModManifest,
+                getValue: () => this.Config.OpenSearchMenuKey,
+                setValue: value => this.Config.OpenSearchMenuKey = value,
+                name: () => "Open GMCM Search",
+                tooltip: () => "Open a searchable list of mods which registered a GMCM config menu."
+            );
+
+            this.Gmcm.AddBoolOption(
+                this.ModManifest,
+                getValue: () => this.Config.ShowUniqueId,
+                setValue: value => this.Config.ShowUniqueId = value,
+                name: () => "Show UniqueID",
+                tooltip: () => "Show each mod's UniqueID under its name."
+            );
         }
 
-        if (Game1.activeClickableMenu is SearchMenu)
+        private void OnButtonPressed(object? sender, ButtonPressedEventArgs e)
         {
-            Game1.exitActiveMenu();
-            return;
-        }
+            if (this.Gmcm is null)
+                return;
 
-        if (Game1.activeClickableMenu is not null)
-        {
-            return;
-        }
+            if (Game1.activeClickableMenu is SearchMenu)
+                return;
 
-        this.OpenSearchMenu();
-    }
+            if (!this.Config.OpenSearchMenuKey.JustPressed())
+                return;
 
-    private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
-    {
-        this.gmcmApi = this.Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
-        if (this.gmcmApi is null)
-        {
-            this.Monitor.Log("Generic Mod Config Menu not detected; the search overlay will not open.", LogLevel.Warn);
-            return;
-        }
+            // Context.IsOnTitleScreen doesn't exist in your SMAPI target; use the actual menu type instead.
+            bool onTitle = Game1.activeClickableMenu is TitleMenu;
+            if (!Context.IsWorldReady && !onTitle)
+                return;
 
-        this.gmcmApi.Register(
-            this.ModManifest,
-            () => this.config = new ModConfig(),
-            () => this.Helper.WriteConfig(this.config),
-            true
-        );
-        this.gmcmApi.AddSectionTitle(this.ModManifest, () => this.Helper.Translation.Get("config.title"));
-        this.gmcmApi.AddParagraph(this.ModManifest, () => this.Helper.Translation.Get("config.description"));
-        this.gmcmApi.AddKeybindList(
-            this.ModManifest,
-            () => this.config.ToggleKey,
-            value => this.config.ToggleKey = value,
-            () => this.Helper.Translation.Get("config.toggle"),
-            () => this.Helper.Translation.Get("config.toggle.description")
-        );
-    }
+            List<IManifest> mods = GMCMRegistryScanner.GetRegisteredModsOrFallback(
+                this.Helper,
+                this.Gmcm,
+                this.Monitor,
+                this.ModManifest
+            );
 
-    private void OpenSearchMenu()
-    {
-        if (this.gmcmApi is null)
-        {
-            this.Monitor.Log(this.Helper.Translation.Get("menu.gmcmMissing"), LogLevel.Warn);
-            return;
-        }
-
-        this.textBoxTexture ??= Game1.content.Load<Texture2D>("LooseSprites/textBox");
-        List<IManifest> modOptions = this.GetRegisteredMods();
-        Func<IManifest, bool> opener = manifest => this.TryOpenModMenu(manifest);
-        Game1.activeClickableMenu = new SearchMenu(
-            this.Helper,
-            this.Monitor,
-            opener,
-            modOptions,
-            this.textBoxTexture,
-            Game1.smallFont
-        );
-    }
-
-    private List<IManifest> GetRegisteredMods()
-    {
-        // Best case: reflect into GMCM internals to get the list of registered mods.
-        try
-        {
-            if (this.gmcmApi is not null)
+            bool Opener(IManifest manifest)
             {
-                object apiObj = this.gmcmApi;
-
-                // 1) Look for any public property that is IEnumerable<IManifest>
-                foreach (var prop in apiObj.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public))
+                try
                 {
-                    if (!prop.CanRead)
-                    {
-                        continue;
-                    }
+                    this.Gmcm!.OpenModMenu(manifest);
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    this.Monitor.Log($"Failed to open GMCM menu for '{manifest.UniqueID}'.\n{ex}", LogLevel.Warn);
+                    return false;
+                }
+            }
 
-                    if (typeof(IEnumerable<IManifest>).IsAssignableFrom(prop.PropertyType))
+            Game1.activeClickableMenu = new SearchMenu(
+                monitor: this.Monitor,
+                openMod: Opener,
+                mods: mods,
+                showUniqueId: this.Config.ShowUniqueId
+            );
+        }
+
+        private sealed class SearchMenu : IClickableMenu
+        {
+            private readonly IMonitor monitor;
+            private readonly Func<IManifest, bool> openMod;
+
+            private readonly List<IManifest> all;
+            private List<IManifest> filtered;
+
+            private readonly SpriteFont font;
+            private readonly Texture2D textBoxTexture;
+            private readonly TextBox searchBox;
+
+            private string lastSearchText = "";
+
+            private Rectangle listRect;
+            private Rectangle scrollTrackRect;
+
+            private int scrollOffset;
+            private int selectedIndex = -1;
+            private int hoverIndex = -1;
+
+            private bool draggingThumb;
+            private int dragGrabOffsetY;
+
+            private readonly bool showUniqueId;
+
+            private const int ScrollbarWidth = 24;
+            private const int RowPaddingY = 6;
+
+            private int RowHeight => this.showUniqueId ? (int)(this.font.LineSpacing * 2f) + 12 : this.font.LineSpacing + 12;
+
+            public SearchMenu(IMonitor monitor, Func<IManifest, bool> openMod, List<IManifest> mods, bool showUniqueId)
+                : base(0, 0, 0, 0, showUpperRightCloseButton: true)
+            {
+                this.monitor = monitor;
+                this.openMod = openMod;
+                this.showUniqueId = showUniqueId;
+
+                this.font = Game1.smallFont;
+                this.textBoxTexture = Game1.content.Load<Texture2D>("LooseSprites\\textBox");
+
+                // Clean + stable ordering
+                this.all = mods
+                    .Where(m => m is not null)
+                    .GroupBy(m => m.UniqueID, StringComparer.OrdinalIgnoreCase)
+                    .Select(g => g.First())
+                    .OrderBy(m => m.Name, StringComparer.OrdinalIgnoreCase)
+                    .ToList();
+
+                this.filtered = new List<IManifest>(this.all);
+
+                // Size + center
+                int w = Math.Min(900, Game1.uiViewport.Width - Game1.tileSize * 2);
+                int h = Math.Min(700, Game1.uiViewport.Height - Game1.tileSize * 2);
+                this.width = w;
+                this.height = h;
+                this.xPositionOnScreen = (Game1.uiViewport.Width - this.width) / 2;
+                this.yPositionOnScreen = (Game1.uiViewport.Height - this.height) / 2;
+
+                // Search box
+                int pad = Game1.tileSize / 2;
+                int searchY = this.yPositionOnScreen + pad + 32;
+                int searchX = this.xPositionOnScreen + pad;
+                int searchW = this.width - pad * 2;
+
+                this.searchBox = new TextBox(this.textBoxTexture, null, this.font, Game1.textColor)
+                {
+                    X = searchX,
+                    Y = searchY,
+                    Width = searchW,
+                    Text = ""
+                };
+
+                // Layout rects
+                int instructionY = searchY + this.textBoxTexture.Height * Game1.pixelZoom + 10;
+                int instructionH = this.font.LineSpacing + 10;
+
+                int listY = instructionY + instructionH + 8;
+                int listH = (this.yPositionOnScreen + this.height - pad) - listY;
+
+                int listW = searchW - ScrollbarWidth - 8;
+                this.listRect = new Rectangle(searchX, listY, listW, listH);
+                this.scrollTrackRect = new Rectangle(this.listRect.Right + 8, this.listRect.Y, ScrollbarWidth, this.listRect.Height);
+
+                this.initializeUpperRightCloseButton();
+                this.ClampScroll();
+
+                // focus text input
+                Game1.keyboardDispatcher.Subscriber = this.searchBox;
+                this.searchBox.Selected = true;
+            }
+
+            protected override void cleanupBeforeExit()
+            {
+                if (Game1.keyboardDispatcher?.Subscriber == this.searchBox)
+                    Game1.keyboardDispatcher.Subscriber = null;
+
+                base.cleanupBeforeExit();
+            }
+
+            public override void update(GameTime time)
+            {
+                base.update(time);
+
+                // No TextBox OnTextChanged in your target; just poll for changes.
+                string now = this.searchBox.Text ?? "";
+                if (!string.Equals(now, this.lastSearchText, StringComparison.Ordinal))
+                {
+                    this.lastSearchText = now;
+                    this.ApplyFilter(now);
+                }
+            }
+
+            private void ApplyFilter(string text)
+            {
+                string q = (text ?? "").Trim();
+                if (q.Length == 0)
+                {
+                    this.filtered = new List<IManifest>(this.all);
+                }
+                else
+                {
+                    this.filtered = this.all
+                        .Where(m =>
+                            m.Name.Contains(q, StringComparison.OrdinalIgnoreCase) ||
+                            m.UniqueID.Contains(q, StringComparison.OrdinalIgnoreCase))
+                        .ToList();
+                }
+
+                this.scrollOffset = 0;
+                this.selectedIndex = this.filtered.Count > 0 ? 0 : -1;
+                this.ClampScroll();
+            }
+
+            public override void receiveKeyPress(Keys key)
+            {
+                if (key == Keys.Escape)
+                {
+                    this.exitThisMenu();
+                    return;
+                }
+
+                if (key == Keys.Up)
+                {
+                    if (this.filtered.Count > 0)
                     {
-                        if (prop.GetValue(apiObj) is IEnumerable<IManifest> manifests)
+                        this.selectedIndex = Math.Max(this.selectedIndex - 1, 0);
+                        this.EnsureSelectionVisible();
+                    }
+                    return;
+                }
+
+                if (key == Keys.Down)
+                {
+                    if (this.filtered.Count > 0)
+                    {
+                        this.selectedIndex = Math.Min(this.selectedIndex + 1, this.filtered.Count - 1);
+                        this.EnsureSelectionVisible();
+                    }
+                    return;
+                }
+
+                if (key == Keys.Enter)
+                {
+                    if (this.filtered.Count > 0 && this.selectedIndex >= 0 && this.selectedIndex < this.filtered.Count)
+                        this.OpenAndClose(this.filtered[this.selectedIndex]);
+                    return;
+                }
+
+                base.receiveKeyPress(key);
+            }
+
+            public override void receiveScrollWheelAction(int direction)
+            {
+                base.receiveScrollWheelAction(direction);
+
+                if (!this.listRect.Contains(Game1.getMouseX(), Game1.getMouseY()))
+                    return;
+
+                int delta = direction > 0 ? -1 : 1;
+                this.scrollOffset += delta;
+                this.ClampScroll();
+            }
+
+            public override void receiveLeftClick(int x, int y, bool playSound = true)
+            {
+                base.receiveLeftClick(x, y, playSound);
+
+                if (this.upperRightCloseButton?.containsPoint(x, y) == true)
+                {
+                    this.exitThisMenu();
+                    return;
+                }
+
+                if (this.TryGetThumbRect(out Rectangle thumb) && thumb.Contains(x, y))
+                {
+                    this.draggingThumb = true;
+                    this.dragGrabOffsetY = y - thumb.Y;
+                    return;
+                }
+
+                if (this.scrollTrackRect.Contains(x, y))
+                {
+                    this.JumpScrollTo(y);
+                    return;
+                }
+
+                if (this.listRect.Contains(x, y))
+                {
+                    int idx = this.GetIndexAtPoint(x, y);
+                    if (idx >= 0 && idx < this.filtered.Count)
+                    {
+                        this.selectedIndex = idx;
+                        this.OpenAndClose(this.filtered[idx]);
+                    }
+                }
+            }
+
+            public override void leftClickHeld(int x, int y)
+            {
+                base.leftClickHeld(x, y);
+
+                if (!this.draggingThumb)
+                    return;
+
+                if (this.filtered.Count <= this.VisibleRows)
+                    return;
+
+                int maxOffset = this.MaxScrollOffset;
+                int trackLen = this.scrollTrackRect.Height;
+                int thumbH = this.GetThumbHeight(trackLen);
+
+                int clampedY = Math.Clamp(y - this.dragGrabOffsetY, this.scrollTrackRect.Y, this.scrollTrackRect.Bottom - thumbH);
+                float t = (clampedY - this.scrollTrackRect.Y) / (float)Math.Max(1, (trackLen - thumbH));
+                this.scrollOffset = (int)Math.Round(t * maxOffset);
+
+                this.ClampScroll();
+            }
+
+            public override void releaseLeftClick(int x, int y)
+            {
+                base.releaseLeftClick(x, y);
+                this.draggingThumb = false;
+            }
+
+            public override void performHoverAction(int x, int y)
+            {
+                base.performHoverAction(x, y);
+
+                this.hoverIndex = -1;
+                if (this.listRect.Contains(x, y))
+                {
+                    int idx = this.GetIndexAtPoint(x, y);
+                    if (idx >= 0 && idx < this.filtered.Count)
+                        this.hoverIndex = idx;
+                }
+            }
+
+            public override void draw(SpriteBatch b)
+            {
+                this.drawBackground(b);
+
+                IClickableMenu.drawTextureBox(b, this.xPositionOnScreen, this.yPositionOnScreen, this.width, this.height, Color.White);
+
+                // Title
+                SpriteText.drawStringHorizontallyCenteredAt(
+                    b,
+                    "GMCM Search",
+                    this.xPositionOnScreen + this.width / 2,
+                    this.yPositionOnScreen + 16
+                );
+
+                // Search box
+                this.searchBox.Draw(b);
+
+                // Placeholder
+                if (string.IsNullOrWhiteSpace(this.searchBox.Text) && !this.searchBox.Selected)
+                {
+                    Vector2 pos = new Vector2(this.searchBox.X + 12, this.searchBox.Y + 10);
+                    b.DrawString(this.font, "Type to filter mods...", pos, Color.Gray);
+                }
+
+                // Instruction
+                int instructionY = this.searchBox.Y + this.textBoxTexture.Height * Game1.pixelZoom + 10;
+                b.DrawString(this.font, "Click a result to open its config in GMCM.", new Vector2(this.searchBox.X, instructionY), Game1.textColor);
+
+                // List box
+                IClickableMenu.drawTextureBox(b, this.listRect.X - 8, this.listRect.Y - 8, this.listRect.Width + 16, this.listRect.Height + 16, Color.White);
+
+                int rows = this.VisibleRows;
+                int start = this.scrollOffset;
+                int end = Math.Min(this.filtered.Count, start + rows);
+
+                if (this.filtered.Count == 0)
+                {
+                    b.DrawString(this.font, "No matching mods.", new Vector2(this.listRect.X + 12, this.listRect.Y + 12), Color.Gray);
+                }
+                else
+                {
+                    for (int i = start; i < end; i++)
+                    {
+                        int row = i - start;
+                        int y = this.listRect.Y + row * this.RowHeight;
+
+                        Rectangle rowRect = new Rectangle(this.listRect.X, y, this.listRect.Width, this.RowHeight);
+                        bool selected = i == this.selectedIndex;
+                        bool hovered = i == this.hoverIndex;
+
+                        Color boxColor = selected ? Color.LightGoldenrodYellow : (hovered ? Color.Beige : Color.White);
+                        IClickableMenu.drawTextureBox(b, rowRect.X, rowRect.Y, rowRect.Width, rowRect.Height, boxColor);
+
+                        IManifest m = this.filtered[i];
+                        Vector2 namePos = new Vector2(rowRect.X + 12, rowRect.Y + RowPaddingY);
+                        b.DrawString(this.font, m.Name, namePos, Game1.textColor);
+
+                        if (this.showUniqueId)
                         {
-                            return this.CleanSort(manifests);
+                            Vector2 idPos = new Vector2(rowRect.X + 12, rowRect.Y + RowPaddingY + this.font.LineSpacing);
+                            b.DrawString(this.font, m.UniqueID, idPos, Color.Gray);
                         }
                     }
                 }
 
-                // 2) Look for a field/property holding a dictionary keyed by IManifest
-                IEnumerable<IManifest>? foundFromDict = TryExtractManifestsFromAnyDictionary(apiObj);
-                if (foundFromDict is not null)
+                // Scrollbar
+                if (this.filtered.Count > this.VisibleRows)
                 {
-                    return this.CleanSort(foundFromDict);
+                    IClickableMenu.drawTextureBox(b, this.scrollTrackRect.X, this.scrollTrackRect.Y, this.scrollTrackRect.Width, this.scrollTrackRect.Height, Color.White);
+
+                    if (this.TryGetThumbRect(out Rectangle thumb))
+                        IClickableMenu.drawTextureBox(b, thumb.X, thumb.Y, thumb.Width, thumb.Height, Color.White);
                 }
 
-                // 3) Look for a nested manager object, then repeat the dictionary scan on it
-                foreach (var field in apiObj.GetType().GetFields(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public))
-                {
-                    object? inner = field.GetValue(apiObj);
-                    if (inner is null)
-                    {
-                        continue;
-                    }
-
-                    foundFromDict = TryExtractManifestsFromAnyDictionary(inner);
-                    if (foundFromDict is not null)
-                    {
-                        return this.CleanSort(foundFromDict);
-                    }
-                }
-            }
-        }
-        catch (Exception ex)
-        {
-            this.Monitor.Log($"Failed to reflect GMCM registered mods list; falling back to all mods.\n{ex}", LogLevel.Trace);
-        }
-
-        // Fallback: list all installed mods (some won’t be registered with GMCM).
-        return this.CleanSort(this.Helper.ModRegistry.GetAll().Select(m => m.Manifest));
-
-        static IEnumerable<IManifest>? TryExtractManifestsFromAnyDictionary(object obj)
-        {
-            var flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
-
-            // scan fields
-            foreach (var field in obj.GetType().GetFields(flags))
-            {
-                if (field.GetValue(obj) is null)
-                {
-                    continue;
-                }
-
-                if (TryExtractFromDictionaryObject(field.GetValue(obj)!, out var manifests))
-                {
-                    return manifests;
-                }
+                this.upperRightCloseButton?.draw(b);
+                this.drawMouse(b);
             }
 
-            // scan properties
-            foreach (var prop in obj.GetType().GetProperties(flags))
+            private int VisibleRows => Math.Max(1, this.listRect.Height / this.RowHeight);
+            private int MaxScrollOffset => Math.Max(0, this.filtered.Count - this.VisibleRows);
+
+            private void ClampScroll()
             {
-                if (!prop.CanRead)
-                {
-                    continue;
-                }
-
-                object? value;
-                try
-                {
-                    value = prop.GetValue(obj);
-                }
-                catch
-                {
-                    continue;
-                }
-
-                if (value is null)
-                {
-                    continue;
-                }
-
-                if (TryExtractFromDictionaryObject(value, out var manifests))
-                {
-                    return manifests;
-                }
+                this.scrollOffset = Math.Clamp(this.scrollOffset, 0, this.MaxScrollOffset);
             }
 
-            return null;
-        }
-
-        static bool TryExtractFromDictionaryObject(object value, out IEnumerable<IManifest> manifests)
-        {
-            manifests = Array.Empty<IManifest>();
-
-            // If it's IDictionary<IManifest, T> we can grab Keys.
-            var type = value.GetType();
-            var idictIface = type
-                .GetInterfaces()
-                .FirstOrDefault(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IDictionary<,>));
-
-            if (idictIface is null)
+            private void EnsureSelectionVisible()
             {
-                return false;
+                if (this.selectedIndex < 0)
+                    return;
+
+                if (this.selectedIndex < this.scrollOffset)
+                    this.scrollOffset = this.selectedIndex;
+                else if (this.selectedIndex >= this.scrollOffset + this.VisibleRows)
+                    this.scrollOffset = this.selectedIndex - this.VisibleRows + 1;
+
+                this.ClampScroll();
             }
 
-            var args = idictIface.GetGenericArguments();
-            if (args.Length != 2 || args[0] != typeof(IManifest))
+            private int GetIndexAtPoint(int x, int y)
             {
-                return false;
+                int row = (y - this.listRect.Y) / this.RowHeight;
+                if (row < 0 || row >= this.VisibleRows)
+                    return -1;
+
+                int idx = this.scrollOffset + row;
+                return idx;
             }
 
-            var keysProp = idictIface.GetProperty("Keys");
-            if (keysProp?.GetValue(value) is IEnumerable<IManifest> keys)
+            private void OpenAndClose(IManifest manifest)
             {
-                manifests = keys;
+                this.exitThisMenu();
+                bool ok = this.openMod(manifest);
+                if (!ok)
+                    Game1.addHUDMessage(new HUDMessage($"Couldn't open GMCM menu for {manifest.Name}.", HUDMessage.error_type));
+            }
+
+            private int GetThumbHeight(int trackHeight)
+            {
+                int total = Math.Max(1, this.filtered.Count);
+                int visible = this.VisibleRows;
+
+                float ratio = visible / (float)total;
+                int h = (int)Math.Round(trackHeight * ratio);
+                return Math.Clamp(h, 24, trackHeight);
+            }
+
+            private bool TryGetThumbRect(out Rectangle thumb)
+            {
+                thumb = Rectangle.Empty;
+
+                int maxOffset = this.MaxScrollOffset;
+                if (maxOffset <= 0)
+                    return false;
+
+                int trackLen = this.scrollTrackRect.Height;
+                int thumbH = this.GetThumbHeight(trackLen);
+
+                float t = this.scrollOffset / (float)maxOffset;
+                int y = this.scrollTrackRect.Y + (int)Math.Round((trackLen - thumbH) * t);
+
+                thumb = new Rectangle(this.scrollTrackRect.X, y, this.scrollTrackRect.Width, thumbH);
                 return true;
             }
 
-            return false;
-        }
-    }
-
-    private List<IManifest> CleanSort(IEnumerable<IManifest> manifests)
-    {
-        return manifests
-            .Where(m => !string.Equals(m.UniqueID, this.ModManifest.UniqueID, StringComparison.OrdinalIgnoreCase))
-            .DistinctBy(m => m.UniqueID, StringComparer.OrdinalIgnoreCase)
-            .OrderBy(m => m.Name, StringComparer.OrdinalIgnoreCase)
-            .ToList();
-    }
-
-    private bool TryOpenModMenu(IManifest manifest)
-    {
-        if (this.gmcmApi is null)
-        {
-            this.Monitor.Log(this.Helper.Translation.Get("menu.gmcmMissing"), LogLevel.Warn);
-            return false;
-        }
-
-        try
-        {
-            this.gmcmApi.OpenModMenu(manifest);
-            this.Monitor.Log(string.Format(this.Helper.Translation.Get("menu.opened"), manifest.Name), LogLevel.Info);
-            return true;
-        }
-        catch (Exception ex)
-        {
-            this.Monitor.Log(string.Format(this.Helper.Translation.Get("menu.failed"), manifest.Name), LogLevel.Warn);
-            this.Monitor.Log($"Failed to open GMCM menu for {manifest.UniqueID}.\n{ex}", LogLevel.Trace);
-            return false;
-        }
-    }
-}
-
-public sealed class ModConfig
-{
-    public KeybindList ToggleKey { get; set; } = new(SButton.F8);
-}
-
-internal sealed class SearchMenu : IClickableMenu
-{
-    private readonly ITranslationHelper translation;
-    private readonly IMonitor monitor;
-    private readonly Func<IManifest, bool> openMod;
-    private readonly List<IManifest> mods;
-    private readonly TextBox searchBox;
-    private readonly SpriteFont font;
-    private readonly List<IManifest> filtered;
-    private int scrollOffset;
-
-    public SearchMenu(
-        IModHelper helper,
-        IMonitor monitor,
-        Func<IManifest, bool> openMod,
-        List<IManifest> mods,
-        Texture2D textBoxTexture,
-        SpriteFont font
-    ) : base(Game1.uiViewport.Width / 2 - 450, Game1.uiViewport.Height / 2 - 300, 900, 600)
-    {
-        this.translation = helper.Translation;
-        this.monitor = monitor;
-        this.openMod = openMod;
-        this.mods = mods;
-        this.filtered = new List<IManifest>(mods);
-        this.font = font;
-
-        this.searchBox = new TextBox(textBoxTexture, null, this.font, Game1.textColor)
-        {
-            X = this.xPositionOnScreen + 48,
-            Y = this.yPositionOnScreen + 96,
-            Width = this.width - 96,
-            Text = string.Empty
-        };
-        this.searchBox.OnTextChanged += (_, _) => this.ApplyFilter();
-        Game1.keyboardDispatcher.Subscriber = this.searchBox;
-    }
-
-    public override void exitThisMenu(bool playSound = true)
-    {
-        if (Game1.keyboardDispatcher.Subscriber == this.searchBox)
-        {
-            Game1.keyboardDispatcher.Subscriber = null;
-        }
-
-        base.exitThisMenu(playSound);
-    }
-
-    public override void receiveScrollWheelAction(int direction)
-    {
-        base.receiveScrollWheelAction(direction);
-        int itemsPerPage = this.GetItemsPerPage();
-        if (this.filtered.Count <= itemsPerPage)
-        {
-            return;
-        }
-
-        this.scrollOffset -= Math.Sign(direction);
-        this.scrollOffset = Math.Clamp(this.scrollOffset, 0, Math.Max(0, this.filtered.Count - itemsPerPage));
-    }
-
-    public override void receiveKeyPress(Keys key)
-    {
-        base.receiveKeyPress(key);
-        if (key == Keys.Escape)
-        {
-            this.exitThisMenu(true);
-        }
-        else if (key == Keys.Enter || key == Keys.Return)
-        {
-            IManifest? manifest = this.filtered.FirstOrDefault();
-            if (manifest is not null)
+            private void JumpScrollTo(int mouseY)
             {
-                this.OpenAndClose(manifest);
+                if (this.filtered.Count <= this.VisibleRows)
+                    return;
+
+                int maxOffset = this.MaxScrollOffset;
+                int trackLen = this.scrollTrackRect.Height;
+                int thumbH = this.GetThumbHeight(trackLen);
+
+                int targetTop = mouseY - (thumbH / 2);
+                int clamped = Math.Clamp(targetTop, this.scrollTrackRect.Y, this.scrollTrackRect.Bottom - thumbH);
+
+                float t = (clamped - this.scrollTrackRect.Y) / (float)Math.Max(1, (trackLen - thumbH));
+                this.scrollOffset = (int)Math.Round(t * maxOffset);
+
+                this.ClampScroll();
             }
         }
-    }
-
-    public override void update(GameTime time)
-    {
-        base.update(time);
-        this.searchBox.Update();
-    }
-
-    public override void receiveLeftClick(int x, int y, bool playSound = true)
-    {
-        base.receiveLeftClick(x, y, playSound);
-        if (this.searchBox.Bounds.Contains(x, y))
-        {
-            Game1.keyboardDispatcher.Subscriber = this.searchBox;
-            return;
-        }
-
-        int index = 0;
-        int itemTop = this.yPositionOnScreen + 180;
-        int itemsPerPage = this.GetItemsPerPage();
-        foreach (IManifest manifest in this.filtered.Skip(this.scrollOffset).Take(itemsPerPage))
-        {
-            Rectangle row = new(this.xPositionOnScreen + 60, itemTop + index * 64, this.width - 120, 60);
-            if (row.Contains(x, y))
-            {
-                this.OpenAndClose(manifest);
-                break;
-            }
-
-            index++;
-        }
-    }
-
-    public override void draw(SpriteBatch b)
-    {
-        base.draw(b);
-        this.drawBackground(b);
-        IClickableMenu.drawTextureBox(b, Game1.menuTexture, new Rectangle(0, 256, 60, 60), this.xPositionOnScreen, this.yPositionOnScreen, this.width, this.height, Color.White, Game1.pixelZoom);
-
-        string title = this.translation.Get("menu.title");
-        Vector2 titleSize = this.font.MeasureString(title);
-        b.DrawString(
-            this.font,
-            title,
-            new Vector2(this.xPositionOnScreen + (this.width - titleSize.X) / 2f, this.yPositionOnScreen + 32),
-            Game1.textColor
-        );
-
-        this.searchBox.Draw(b);
-        if (string.IsNullOrWhiteSpace(this.searchBox.Text))
-        {
-            b.DrawString(
-                this.font,
-                this.translation.Get("menu.placeholder"),
-                new Vector2(this.searchBox.X + 12, this.searchBox.Y + 10),
-                Color.Gray
-            );
-        }
-
-        b.DrawString(
-            this.font,
-            this.translation.Get("menu.subtitle"),
-            new Vector2(this.xPositionOnScreen + 60, this.yPositionOnScreen + 150),
-            Game1.textColor
-        );
-
-        int index = 0;
-        int itemsPerPage = this.GetItemsPerPage();
-        foreach (IManifest manifest in this.filtered.Skip(this.scrollOffset).Take(itemsPerPage))
-        {
-            int y = this.yPositionOnScreen + 180 + index * 64;
-            Rectangle row = new(this.xPositionOnScreen + 60, y, this.width - 120, 60);
-            IClickableMenu.drawTextureBox(b, Game1.menuTexture, new Rectangle(0, 256, 60, 60), row.X, row.Y, row.Width, row.Height, Color.White * 0.35f, Game1.pixelZoom);
-            b.DrawString(this.font, manifest.Name, new Vector2(row.X + 16, row.Y + 16), Game1.textColor);
-            b.DrawString(this.font, manifest.UniqueID, new Vector2(row.X + 16, row.Y + 36), Color.DarkGray);
-            index++;
-        }
-
-        if (this.filtered.Count == 0)
-        {
-            b.DrawString(
-                this.font,
-                this.translation.Get("menu.noResults"),
-                new Vector2(this.xPositionOnScreen + 60, this.yPositionOnScreen + 200),
-                Game1.textColor
-            );
-        }
-
-        this.drawMouse(b);
-    }
-
-    private void ApplyFilter()
-    {
-        string term = this.searchBox.Text?.Trim() ?? string.Empty;
-        if (string.IsNullOrWhiteSpace(term))
-        {
-            this.filtered.Clear();
-            this.filtered.AddRange(this.mods);
-        }
-        else
-        {
-            this.filtered.Clear();
-            this.filtered.AddRange(
-                this.mods.Where(manifest => manifest.Name.Contains(term, StringComparison.OrdinalIgnoreCase) || manifest.UniqueID.Contains(term, StringComparison.OrdinalIgnoreCase))
-            );
-        }
-
-        this.scrollOffset = 0;
-    }
-
-    private void OpenAndClose(IManifest manifest)
-    {
-        if (Game1.keyboardDispatcher.Subscriber == this.searchBox)
-        {
-            Game1.keyboardDispatcher.Subscriber = null;
-        }
-
-        this.exitThisMenu(true);
-
-        Game1.delayedActions.Add(new DelayedAction(0, () =>
-        {
-            bool opened = this.openMod.Invoke(manifest);
-            if (!opened)
-            {
-                Game1.playSound("cancel");
-            }
-        }));
-    }
-
-    private int GetItemsPerPage()
-    {
-        return Math.Max(1, (this.height - 220) / 64);
-    }
-}
-
-namespace GenericModConfigMenu
-{
-    public interface IGenericModConfigMenuApi
-    {
-        void Register(IManifest mod, Action reset, Action save, bool titleScreenOnly = false);
-
-        void AddSectionTitle(IManifest mod, Func<string> text, Func<string>? tooltip = null);
-
-        void AddParagraph(IManifest mod, Func<string> text);
-
-        void AddBoolOption(IManifest mod, Func<bool> getValue, Action<bool> setValue, Func<string> name, Func<string>? tooltip = null, string? fieldId = null);
-
-        void AddKeybindList(IManifest mod, Func<KeybindList> getValue, Action<KeybindList> setValue, Func<string> name, Func<string>? tooltip = null, string? fieldId = null);
-
-        void OpenModMenu(IManifest mod);
     }
 }
