@@ -1,0 +1,10 @@
+{
+  "Name": "Pet Today, Surprise Tomorrow",
+  "Author": "ChatGPT",
+  "Version": "1.0.0",
+  "Description": "If you pet your farm pet today, they'll surprise you with a small favor tomorrow morning.",
+  "UniqueID": "ChatGPT.PetTodaySurpriseTomorrow",
+  "EntryDll": "PetTodaySurpriseTomorrow.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus:00000" ]
+}
