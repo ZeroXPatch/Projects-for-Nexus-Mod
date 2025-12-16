@@ -1,0 +1,16 @@
+{
+  "config.title": "搜索启动器",
+  "config.description": "打开搜索栏以快速跳转到任何在 GMCM 注册的模组。",
+  "config.toggle": "搜索快捷键",
+  "config.toggle.description": "按下此键以打开 GMCM 搜索覆盖层。",
+  "config.openAtTitle": "在标题画面启用搜索",
+  "config.openAtTitle.description": "允许在加载存档前打开搜索覆盖层。",
+  "menu.title": "GMCM 快速搜索",
+  "menu.placeholder": "输入以筛选模组...",
+  "menu.subtitle": "点击结果以在 GMCM 中打开其设置。",
+  "menu.noResults": "未找到匹配的模组。",
+  "menu.opened": "正在为 {0} 打开 GMCM...",
+  "menu.failed": "无法为 {0} 打开 GMCM（已注册吗？）",
+  "menu.gmcmMissing": "Generic Mod Config Menu 未安装。",
+  "menu.registryMissing": "无法读取 GMCM 的已注册模组列表；仅显示非内容模组。"
+}

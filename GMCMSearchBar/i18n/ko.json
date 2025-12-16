@@ -1,0 +1,16 @@
+{
+  "config.title": "검색 실행기",
+  "config.description": "GMCM에 등록된 어떤 모드로도 빠르게 이동할 수 있는 검색창을 엽니다.",
+  "config.toggle": "검색 단축키",
+  "config.toggle.description": "GMCM 검색 오버레이를 열려면 이것을 누르세요.",
+  "config.openAtTitle": "타이틀 화면에서 검색 활성화",
+  "config.openAtTitle.description": "세이브를 불러오기 전에 검색 오버레이를 열 수 있게 합니다.",
+  "menu.title": "GMCM 빠른 검색",
+  "menu.placeholder": "입력하여 모드를 필터링하세요...",
+  "menu.subtitle": "결과를 클릭하면 GMCM에서 해당 설정을 엽니다.",
+  "menu.noResults": "일치하는 모드를 찾을 수 없습니다.",
+  "menu.opened": "{0}의 GMCM을 여는 중...",
+  "menu.failed": "{0}의 GMCM을 열 수 없습니다(등록되어 있나요?).",
+  "menu.gmcmMissing": "Generic Mod Config Menu가 설치되어 있지 않습니다.",
+  "menu.registryMissing": "GMCM의 등록 모드 목록을 읽을 수 없습니다; 콘텐츠가 아닌 모드만 표시합니다."
+}

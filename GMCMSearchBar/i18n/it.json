@@ -1,0 +1,16 @@
+{
+  "config.title": "Avvio ricerca",
+  "config.description": "Apri una barra di ricerca per passare rapidamente a qualsiasi mod registrata con GMCM.",
+  "config.toggle": "Tasto rapido di ricerca",
+  "config.toggle.description": "Premi questo per aprire la sovrapposizione di ricerca di GMCM.",
+  "config.openAtTitle": "Abilita la ricerca nella schermata titolo",
+  "config.openAtTitle.description": "Consenti l'apertura della sovrapposizione di ricerca prima di caricare un salvataggio.",
+  "menu.title": "Ricerca rapida GMCM",
+  "menu.placeholder": "Digita per filtrare le mod...",
+  "menu.subtitle": "Fai clic su un risultato per aprire la sua configurazione in GMCM.",
+  "menu.noResults": "Nessuna mod corrispondente trovata.",
+  "menu.opened": "Apertura di GMCM per {0}...",
+  "menu.failed": "Impossibile aprire GMCM per {0} (è registrata?)",
+  "menu.gmcmMissing": "Generic Mod Config Menu non è installato.",
+  "menu.registryMissing": "Impossibile leggere l'elenco di mod registrate di GMCM; vengono mostrate solo le mod non di contenuto."
+}

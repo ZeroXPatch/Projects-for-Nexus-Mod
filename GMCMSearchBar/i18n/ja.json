@@ -1,0 +1,16 @@
+{
+  "config.title": "検索ランチャー",
+  "config.description": "GMCMに登録された任意のmodへ素早く移動できる検索バーを開きます。",
+  "config.toggle": "検索ホットキー",
+  "config.toggle.description": "GMCMの検索オーバーレイを開くにはこれを押します。",
+  "config.openAtTitle": "タイトル画面で検索を有効化",
+  "config.openAtTitle.description": "セーブを読み込む前に検索オーバーレイを開けるようにします。",
+  "menu.title": "GMCMクイック検索",
+  "menu.placeholder": "入力してModを絞り込み...",
+  "menu.subtitle": "結果をクリックするとGMCMで設定を開きます。",
+  "menu.noResults": "一致するModが見つかりません。",
+  "menu.opened": "{0}のGMCMを開いています...",
+  "menu.failed": "{0}のGMCMを開けませんでした（登録されていますか？）",
+  "menu.gmcmMissing": "Generic Mod Config Menu がインストールされていません。",
+  "menu.registryMissing": "GMCMの登録Mod一覧を読み込めませんでした。コンテンツ以外のModのみ表示します。"
+}

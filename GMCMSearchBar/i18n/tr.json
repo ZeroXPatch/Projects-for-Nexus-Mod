@@ -1,0 +1,16 @@
+{
+  "config.title": "Arama başlatıcı",
+  "config.description": "GMCM'ye kayıtlı herhangi bir moda hızlıca geçmek için bir arama çubuğu aç.",
+  "config.toggle": "Arama kısayolu",
+  "config.toggle.description": "GMCM arama kaplamasını açmak için buna basın.",
+  "config.openAtTitle": "Başlangıç ekranında aramayı etkinleştir",
+  "config.openAtTitle.description": "Bir kayıt yüklenmeden önce arama kaplamasının açılmasına izin ver.",
+  "menu.title": "GMCM Hızlı Arama",
+  "menu.placeholder": "Modları filtrelemek için yazın...",
+  "menu.subtitle": "GMCM'de ayarını açmak için bir sonuca tıklayın.",
+  "menu.noResults": "Eşleşen mod bulunamadı.",
+  "menu.opened": "{0} için GMCM açılıyor...",
+  "menu.failed": "{0} için GMCM açılamadı (kaydedildi mi?)",
+  "menu.gmcmMissing": "Generic Mod Config Menu yüklü değil.",
+  "menu.registryMissing": "GMCM'nin kayıtlı mod listesi okunamadı; yalnızca içerik olmayan modlar gösteriliyor."
+}

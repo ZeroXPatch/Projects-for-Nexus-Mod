@@ -1,0 +1,16 @@
+{
+  "config.title": "Suchstarter",
+  "config.description": "Öffne eine Suchleiste, um schnell zu einem beliebigen bei GMCM registrierten Mod zu springen.",
+  "config.toggle": "Such-Hotkey",
+  "config.toggle.description": "Drücke dies, um das GMCM-Suchoverlay zu öffnen.",
+  "config.openAtTitle": "Suche auf dem Titelbildschirm aktivieren",
+  "config.openAtTitle.description": "Erlaubt das Öffnen des Suchoverlays, bevor ein Spielstand geladen wird.",
+  "menu.title": "GMCM-Schnellsuche",
+  "menu.placeholder": "Tippe, um Mods zu filtern...",
+  "menu.subtitle": "Klicke auf ein Ergebnis, um seine Konfiguration in GMCM zu öffnen.",
+  "menu.noResults": "Keine passenden Mods gefunden.",
+  "menu.opened": "Öffne GMCM für {0}...",
+  "menu.failed": "GMCM konnte für {0} nicht geöffnet werden (ist es registriert?)",
+  "menu.gmcmMissing": "Generic Mod Config Menu ist nicht installiert.",
+  "menu.registryMissing": "GMCMs Modliste konnte nicht gelesen werden; es werden nur Nicht-Content-Mods angezeigt."
+}
