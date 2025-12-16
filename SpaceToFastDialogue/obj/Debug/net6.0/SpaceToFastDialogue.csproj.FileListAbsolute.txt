@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpaceToFastDialogue\obj\Debug\net6.0\SpaceToFastDialogue.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpaceToFastDialogue\obj\Debug\net6.0\SpaceToFastDialogue.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpaceToFastDialogue\obj\Debug\net6.0\SpaceToFastDialogue.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpaceToFastDialogue\obj\Debug\net6.0\SpaceToFastDialogue.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpaceToFastDialogue\obj\Debug\net6.0\SpaceToFastDialogue.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpaceToFastDialogue\obj\Debug\net6.0\SpaceToFastDialogue.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpaceToFastDialogue\bin\Debug\net6.0\SpaceToFastDialogue.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpaceToFastDialogue\bin\Debug\net6.0\SpaceToFastDialogue.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpaceToFastDialogue\obj\Debug\net6.0\SpaceToFastDialogue.dll
