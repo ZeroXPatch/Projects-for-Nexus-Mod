@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using HarmonyLib;
 using Microsoft.Xna.Framework;
 using Netcode;
@@ -8,14 +9,21 @@ using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
 using StardewValley.Characters;
-using StardewValley.Objects;
-using SObject = StardewValley.Object;
+using StardewValley.ItemRegistry;
 
 namespace PetTodaySurpriseTomorrow;
 
 internal sealed class ModEntry : Mod
 {
     private const string SaveDataKey = "state";
+
+    private static readonly FieldInfo PetBowlWateredField = AccessTools.Field(typeof(Farm), "petBowlWatered");
+    private static readonly PropertyInfo? PetBowlWateredProperty = AccessTools.Property(typeof(Farm), "PetBowlWatered");
+    private static readonly FieldInfo PetBowlPositionField = AccessTools.Field(typeof(Farm), "petBowlPosition");
+    private static readonly PropertyInfo? PetBowlPositionProperty = AccessTools.Property(typeof(Farm), "petBowlPosition");
+    private static readonly MethodInfo? PetBowlPositionMethod = AccessTools.Method(typeof(Farm), "GetPetBowlTile");
+    private static readonly FieldInfo PetLastPetDayField = AccessTools.Field(typeof(Pet), "lastPetDay");
+    private static readonly PropertyInfo? PetLastPetDayProperty = AccessTools.Property(typeof(Pet), "LastPetDay");
 
     private Harmony? harmony;
 
@@ -392,8 +400,7 @@ internal sealed class ModEntry : Mod
 
     private void FillWaterBowl(Farm farm)
     {
-        var wateredField = AccessTools.Field(typeof(Farm), "petBowlWatered");
-        if (wateredField?.GetValue(farm) is NetBool netBool)
+        if (PetBowlWateredField?.GetValue(farm) is NetBool netBool)
         {
             if (netBool.Value)
             {
@@ -406,8 +413,7 @@ internal sealed class ModEntry : Mod
             return;
         }
 
-        var wateredProperty = AccessTools.Property(typeof(Farm), "PetBowlWatered");
-        if (wateredProperty?.GetValue(farm) is bool isWatered)
+        if (PetBowlWateredProperty?.GetValue(farm) is bool isWatered)
         {
             if (isWatered)
             {
@@ -415,7 +421,7 @@ internal sealed class ModEntry : Mod
                 return;
             }
 
-            wateredProperty.SetValue(farm, true);
+            PetBowlWateredProperty.SetValue(farm, true);
             Game1.showGlobalMessage(this.Helper.Translation.Get("message.fillBowl"));
         }
         else
@@ -435,15 +441,15 @@ internal sealed class ModEntry : Mod
     {
         var comedyItems = new[]
         {
-            167, // Joja Cola
-            169, // Driftwood
-            170, // Broken Glasses
-            766, // Slime
-            92 // Sap
+            ItemRegistry.QualifiedObjectId("Joja Cola"),
+            ItemRegistry.QualifiedObjectId("Driftwood"),
+            ItemRegistry.QualifiedObjectId("Broken Glasses"),
+            ItemRegistry.QualifiedObjectId("Slime"),
+            ItemRegistry.QualifiedObjectId("Sap")
         };
 
         var index = random.Next(comedyItems.Length);
-        return new SObject(comedyItems[index], 1);
+        return ItemRegistry.Create(comedyItems[index], 1);
     }
 
     private Item? GetStandardItem(Farm farm, Random random)
@@ -509,10 +515,10 @@ internal sealed class ModEntry : Mod
     {
         var entries = new List<ResourceEntry>
         {
-            new(388, this.Config.WoodMin, this.Config.WoodMax, 1f, false),
-            new(390, this.Config.StoneMin, this.Config.StoneMax, 1f, false),
-            new(771, this.Config.FiberMin, this.Config.FiberMax, 1f, true),
-            new(770, this.Config.MixedSeedsMin, this.Config.MixedSeedsMax, 1f, false)
+            new(ItemRegistry.QualifiedObjectId("Wood"), this.Config.WoodMin, this.Config.WoodMax, 1f, false),
+            new(ItemRegistry.QualifiedObjectId("Stone"), this.Config.StoneMin, this.Config.StoneMax, 1f, false),
+            new(ItemRegistry.QualifiedObjectId("Fiber"), this.Config.FiberMin, this.Config.FiberMax, 1f, true),
+            new(ItemRegistry.QualifiedObjectId("Mixed Seeds"), this.Config.MixedSeedsMin, this.Config.MixedSeedsMax, 1f, false)
         };
 
         var season = Game1.GetSeasonForLocation(farm);
@@ -529,7 +535,7 @@ internal sealed class ModEntry : Mod
         var weights = entries.Select(e => (entry: e, weight: (int)(e.Weight * 100))).ToList();
         var chosen = this.WeightedPick(weights);
         var stack = random.Next(chosen.MinStack, chosen.MaxStack + 1);
-        return new SObject(chosen.ItemId, stack);
+        return ItemRegistry.Create(chosen.ItemId, stack);
     }
 
     private Item? GetSeasonalForage(Random random, Farm farm)
@@ -537,11 +543,34 @@ internal sealed class ModEntry : Mod
         var season = Game1.GetSeasonForLocation(farm).ToLowerInvariant();
         var pool = season switch
         {
-            "spring" => new[] { 16, 18, 20, 22 },
-            "summer" => new[] { 396, 402, 398 },
-            "fall" => new[] { 404, 406, 408, 410 },
-            "winter" => new[] { 412, 414, 416, 418 },
-            _ => Array.Empty<int>()
+            "spring" => new[]
+            {
+                ItemRegistry.QualifiedObjectId("Wild Horseradish"),
+                ItemRegistry.QualifiedObjectId("Daffodil"),
+                ItemRegistry.QualifiedObjectId("Leek"),
+                ItemRegistry.QualifiedObjectId("Dandelion")
+            },
+            "summer" => new[]
+            {
+                ItemRegistry.QualifiedObjectId("Spice Berry"),
+                ItemRegistry.QualifiedObjectId("Sweet Pea"),
+                ItemRegistry.QualifiedObjectId("Grape")
+            },
+            "fall" => new[]
+            {
+                ItemRegistry.QualifiedObjectId("Common Mushroom"),
+                ItemRegistry.QualifiedObjectId("Wild Plum"),
+                ItemRegistry.QualifiedObjectId("Hazelnut"),
+                ItemRegistry.QualifiedObjectId("Blackberry")
+            },
+            "winter" => new[]
+            {
+                ItemRegistry.QualifiedObjectId("Winter Root"),
+                ItemRegistry.QualifiedObjectId("Crystal Fruit"),
+                ItemRegistry.QualifiedObjectId("Snow Yam"),
+                ItemRegistry.QualifiedObjectId("Crocus")
+            },
+            _ => Array.Empty<string>()
         };
 
         if (pool.Length == 0)
@@ -550,14 +579,23 @@ internal sealed class ModEntry : Mod
         }
 
         var itemId = pool[random.Next(pool.Length)];
-        return new SObject(itemId, 1);
+        return ItemRegistry.Create(itemId, 1);
     }
 
     private Item? GetBeachFind(Random random)
     {
-        var pool = new[] { 718, 719, 723, 372, 393, 397 };
+        var pool = new[]
+        {
+            ItemRegistry.QualifiedObjectId("Cockle"),
+            ItemRegistry.QualifiedObjectId("Mussel"),
+            ItemRegistry.QualifiedObjectId("Oyster"),
+            ItemRegistry.QualifiedObjectId("Clam"),
+            ItemRegistry.QualifiedObjectId("Coral"),
+            ItemRegistry.QualifiedObjectId("Sea Urchin")
+        };
+
         var itemId = pool[random.Next(pool.Length)];
-        return new SObject(itemId, 1);
+        return ItemRegistry.Create(itemId, 1);
     }
 
     private Vector2 GetDropTile(Farm farm)
@@ -583,22 +621,19 @@ internal sealed class ModEntry : Mod
 
     private Vector2? GetBowlTile(Farm farm)
     {
-        var property = AccessTools.Property(typeof(Farm), "petBowlPosition");
-        if (property?.GetValue(farm) is NetPoint netPoint)
+        if (PetBowlPositionProperty?.GetValue(farm) is NetPoint netPoint)
         {
             return new Vector2(netPoint.X, netPoint.Y);
         }
 
-        var field = AccessTools.Field(typeof(Farm), "petBowlPosition");
-        if (field?.GetValue(farm) is NetPoint fieldPoint)
+        if (PetBowlPositionField?.GetValue(farm) is NetPoint fieldPoint)
         {
             return new Vector2(fieldPoint.X, fieldPoint.Y);
         }
 
-        var method = AccessTools.Method(typeof(Farm), "GetPetBowlTile");
-        if (method != null)
+        if (PetBowlPositionMethod != null)
         {
-            var value = method.Invoke(farm, Array.Empty<object>());
+            var value = PetBowlPositionMethod.Invoke(farm, Array.Empty<object>());
             switch (value)
             {
                 case Vector2 vec:
@@ -657,14 +692,12 @@ internal sealed class ModEntry : Mod
 
     private static bool WasActuallyPetted(Pet pet)
     {
-        var lastPetField = AccessTools.Field(typeof(Pet), "lastPetDay");
-        if (lastPetField?.GetValue(pet) is NetInt netLastPet)
+        if (PetLastPetDayField?.GetValue(pet) is NetInt netLastPet)
         {
             return netLastPet.Value == Game1.Date.TotalDays;
         }
 
-        var lastPetProp = AccessTools.Property(typeof(Pet), "LastPetDay");
-        if (lastPetProp?.GetValue(pet) is int lastPetDay)
+        if (PetLastPetDayProperty?.GetValue(pet) is int lastPetDay)
         {
             return lastPetDay == Game1.Date.TotalDays;
         }
@@ -794,7 +827,7 @@ internal sealed class SaveData
     public bool CrowProtectionTonight { get; set; }
 }
 
-internal sealed record ResourceEntry(int ItemId, int MinStack, int MaxStack, float Weight, bool SkipInWinter);
+int sealed record ResourceEntry(string ItemId, int MinStack, int MaxStack, float Weight, bool SkipInWinter);
 
 internal enum RewardDropStyle
 {
