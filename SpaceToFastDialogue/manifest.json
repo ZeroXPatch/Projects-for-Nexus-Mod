@@ -1,0 +1,10 @@
+{
+  "Name": "Space-to-Fast Dialogue",
+  "Author": "ChatGPT",
+  "Version": "1.0.0",
+  "Description": "Press Space to instantly finish dialogue text, with optional double-tap confirmation to advance lines.",
+  "UniqueID": "ChatGPT.SpaceToFastDialogue",
+  "EntryDll": "SpaceToFastDialogue.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus:00000" ]
+}

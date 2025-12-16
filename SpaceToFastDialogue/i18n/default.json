@@ -1,0 +1,15 @@
+{
+  "config.enable": "Enable mod",
+  "config.enable.tooltip": "Toggle the Space-to-Fast Dialogue feature.",
+  "config.hotkey": "Advance hotkey",
+  "config.hotkey.tooltip": "Key to instantly finish and advance dialogue when a Dialogue Box is open.",
+  "config.confirm": "Require double-tap to advance",
+  "config.confirm.tooltip": "When enabled, press the hotkey twice within the window to advance after the line is fully revealed.",
+  "config.doubleTap": "Double-tap window (ms)",
+  "config.doubleTap.tooltip": "How long you have to press the hotkey a second time to advance when confirmation is required.",
+  "config.cooldown": "Input cooldown (ms)",
+  "config.cooldown.tooltip": "Ignores repeated presses faster than this to prevent spam when holding the key.",
+  "config.confirmMessage": "Show confirm prompt",
+  "config.confirmMessage.tooltip": "Show a HUD hint when the next press will advance the dialogue.",
+  "confirm.prompt": "Press {{key}} again to skip"
+}
