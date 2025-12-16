@@ -48,7 +48,7 @@ namespace GMCMSearchBar
 
             this.Gmcm.AddSectionTitle(
                 this.ModManifest,
-                text: () => "GMCM Search",
+                text: () => "GMCM Quick Search",
                 tooltip: () => "Search and open other mods' GMCM configs quickly."
             );
 
@@ -120,7 +120,7 @@ namespace GMCMSearchBar
             Game1.activeClickableMenu = new SearchMenu(
                 helper: this.Helper,
                 monitor: this.Monitor,
-                title: "GMCM Search",
+                title: "GMCM Quick Search",
                 showUniqueId: this.Config.ShowUniqueId,
                 mods: this.Registered,
                 openMod: this.TryOpenMod

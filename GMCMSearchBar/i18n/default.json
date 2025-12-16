@@ -6,7 +6,7 @@
   "config.openAtTitle": "Enable search on title screen",
   "config.openAtTitle.description": "Allow the search overlay to be opened before loading a save.",
 
-  "menu.title": "GMCM Search",
+  "menu.title": "GMCM Quick Search",
   "menu.placeholder": "Type to filter mods...",
   "menu.subtitle": "Click a result to open its config in GMCM.",
   "menu.noResults": "No matching mods found.",

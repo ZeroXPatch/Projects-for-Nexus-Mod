@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\gmcmsearchbar\\framework\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|solutionrelative:framework\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\gmcmsearchbar\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\gmcmsearchbar\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\gmcmsearchbar\\gmcmregistryscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|solutionrelative:gmcmregistryscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\gmcmsearchbar\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\gmcmsearchbar\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\gmcmsearchbar\\gmcmsearchbar.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|solutionrelative:gmcmsearchbar.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\gmcmsearchbar\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\gmcmsearchbar\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|solutionrelative:i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\gmcmsearchbar\\framework\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|solutionrelative:framework\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\gmcmsearchbar\\gmcmregistryscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4B5E46B-5773-BC77-31EC-9D070E9A910C}|GMCMSearchBar.csproj|solutionrelative:gmcmregistryscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,7 +48,7 @@
         },
         {
           "DockedWidth": 833,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -56,8 +56,8 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GMCMSearchBar",
+              "DocumentIndex": 3,
+              "Title": "GMCMSearchBar.csproj",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\GMCMSearchBar.csproj",
               "RelativeDocumentMoniker": "GMCMSearchBar.csproj",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\GMCMSearchBar.csproj",
@@ -69,38 +69,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "GMCMRegistryScanner.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\GMCMRegistryScanner.cs",
               "RelativeDocumentMoniker": "GMCMRegistryScanner.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\GMCMRegistryScanner.cs*",
-              "RelativeToolTip": "GMCMRegistryScanner.cs*",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\GMCMRegistryScanner.cs",
+              "RelativeToolTip": "GMCMRegistryScanner.cs",
               "ViewState": "AgIAAPUAAAAAAAAAAAAowAsBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T23:40:52.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T23:40:52.168Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\ModEntry.cs",
               "RelativeDocumentMoniker": "ModEntry.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\ModEntry.cs*",
-              "RelativeToolTip": "ModEntry.cs*",
-              "ViewState": "AgIAAIkCAAAAAAAAAAAowJ8CAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\ModEntry.cs",
+              "RelativeToolTip": "ModEntry.cs",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAYwNsAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-14T23:27:12.719Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "IGenericModConfigMenuApi.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\Framework\\IGenericModConfigMenuApi.cs",
               "RelativeDocumentMoniker": "Framework\\IGenericModConfigMenuApi.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\Framework\\IGenericModConfigMenuApi.cs*",
-              "RelativeToolTip": "Framework\\IGenericModConfigMenuApi.cs*",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\Framework\\IGenericModConfigMenuApi.cs",
+              "RelativeToolTip": "Framework\\IGenericModConfigMenuApi.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAowCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-14T23:27:03.832Z",
@@ -112,8 +111,8 @@
               "Title": "ModConfig.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\ModConfig.cs",
               "RelativeDocumentMoniker": "ModConfig.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\ModConfig.cs*",
-              "RelativeToolTip": "ModConfig.cs*",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\ModConfig.cs",
+              "RelativeToolTip": "ModConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-14T23:26:16Z",
@@ -121,20 +120,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\manifest.json",
               "RelativeDocumentMoniker": "manifest.json",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\manifest.json",
               "RelativeToolTip": "manifest.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-12-14T23:26:28.911Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "default.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\i18n\\default.json",
               "RelativeDocumentMoniker": "i18n\\default.json",
@@ -142,7 +141,8 @@
               "RelativeToolTip": "i18n\\default.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-14T23:26:30.824Z"
+              "WhenOpened": "2025-12-14T23:26:30.824Z",
+              "EditorCaption": ""
             }
           ]
         },

@@ -1,7 +1,7 @@
 {
-  "Name": "GMCM Search Bar",
+  "Name": "GMCM Quick Search",
   "Author": "ZeroXPatch",
-  "Version": "1.0.0",
+  "Version": "2.1.0",
   "Description": "Adds a searchable launcher to jump directly into any Generic Mod Config Menu entry.",
   "UniqueID": "ZeroXPatch.GMCMSearchBar",
   "EntryDll": "GMCMSearchBar.dll",
