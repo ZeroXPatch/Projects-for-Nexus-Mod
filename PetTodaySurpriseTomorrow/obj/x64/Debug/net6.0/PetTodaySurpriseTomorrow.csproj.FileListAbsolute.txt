@@ -1,0 +1,6 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PetTodaySurpriseTomorrow\obj\x64\Debug\net6.0\PetTodaySurpriseTomorrow.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PetTodaySurpriseTomorrow\obj\x64\Debug\net6.0\PetTodaySurpriseTomorrow.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PetTodaySurpriseTomorrow\obj\x64\Debug\net6.0\PetTodaySurpriseTomorrow.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PetTodaySurpriseTomorrow\obj\x64\Debug\net6.0\PetTodaySurpriseTomorrow.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PetTodaySurpriseTomorrow\obj\x64\Debug\net6.0\PetTodaySurpriseTomorrow.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PetTodaySurpriseTomorrow\obj\x64\Debug\net6.0\PetTodaySurpriseTomorrow.sourcelink.json

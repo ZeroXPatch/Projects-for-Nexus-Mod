@@ -5,9 +5,19 @@
     <RootNamespace>PetTodaySurpriseTomorrow</RootNamespace>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Fix ModBuildConfig warning + Stardew compatibility -->
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
-    <PackageReference Include="HarmonyX" Version="2.10.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\GOG Games\Stardew Valley\smapi-internal\0Harmony.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

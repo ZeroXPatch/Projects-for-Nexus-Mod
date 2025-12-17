@@ -64,8 +64,7 @@
               "RelativeToolTip": "GMCMSearchBar.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-15T18:58:45.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-15T18:58:45.652Z"
             },
             {
               "$type": "Document",
@@ -85,9 +84,9 @@
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\ModEntry.cs",
               "RelativeDocumentMoniker": "ModEntry.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\ModEntry.cs",
-              "RelativeToolTip": "ModEntry.cs",
-              "ViewState": "AgIAAMoAAAAAAAAAAAAYwNsAAAAjAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\GMCMSearchBar\\ModEntry.cs*",
+              "RelativeToolTip": "ModEntry.cs*",
+              "ViewState": "AgIAALwCAAAAAAAAAAAiwNcCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-14T23:27:12.719Z",
               "EditorCaption": ""
@@ -102,8 +101,7 @@
               "RelativeToolTip": "Framework\\IGenericModConfigMenuApi.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAowCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T23:27:03.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T23:27:03.832Z"
             },
             {
               "$type": "Document",
@@ -115,8 +113,7 @@
               "RelativeToolTip": "ModConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T23:26:16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T23:26:16Z"
             },
             {
               "$type": "Document",
@@ -128,8 +125,7 @@
               "RelativeToolTip": "manifest.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-14T23:26:28.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T23:26:28.911Z"
             },
             {
               "$type": "Document",
@@ -141,8 +137,7 @@
               "RelativeToolTip": "i18n\\default.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-14T23:26:30.824Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T23:26:30.824Z"
             }
           ]
         },

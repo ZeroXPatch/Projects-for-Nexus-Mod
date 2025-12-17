@@ -48,7 +48,7 @@ namespace GMCMSearchBar
 
             this.Gmcm.AddSectionTitle(
                 this.ModManifest,
-                text: () => "GMCM Quick Search",
+                text: () => "GMCM Search",
                 tooltip: () => "Search and open other mods' GMCM configs quickly."
             );
 
@@ -88,7 +88,7 @@ namespace GMCMSearchBar
             if (!this.Config.OpenSearchMenuKey.JustPressed())
                 return;
 
-            // don't open over other menus (except TitleMenu, which is fine)
+            // don’t open over other menus (except TitleMenu, which is fine)
             if (Game1.activeClickableMenu is not null && Game1.activeClickableMenu is not TitleMenu)
                 return;
 
@@ -120,7 +120,7 @@ namespace GMCMSearchBar
             Game1.activeClickableMenu = new SearchMenu(
                 helper: this.Helper,
                 monitor: this.Monitor,
-                title: "GMCM Quick Search",
+                title: "GMCM Search",
                 showUniqueId: this.Config.ShowUniqueId,
                 mods: this.Registered,
                 openMod: this.TryOpenMod
@@ -170,29 +170,36 @@ namespace GMCMSearchBar
         private bool draggingThumb = false;
         private int dragGrabOffsetY = 0;
 
-        // UI tuning knobs
+        // UI tuning knobs (keep your existing element sizes)
         private const int OuterPad = 32;
         private const int TitleGap = 14;
         private const int SearchHeight = 48;
         private const int InstructionHeight = 28;
         private const int ScrollbarWidth = 24;
-
         private const int RowPadX = 14;
-        private const int RowPadY = 8;
 
-        // dynamic row sizing (fixes “highlight smaller than text”)
-        private int rowHeight;
-        private int nameLineH;
-        private int idLineH;
+        // Row layout (fix highlight not covering text)
+        private const int RowPadTop = 10;
+        private const int RowPadBottom = 8;
+        private const int RowLineGap = 4;
 
-        public SearchMenu(
-            IModHelper helper,
-            IMonitor monitor,
-            string title,
-            bool showUniqueId,
-            List<IManifest> mods,
-            Func<IManifest, bool> openMod
-        )
+        private readonly SpriteFont nameFont;
+        private readonly SpriteFont idFont;
+        private readonly int nameLineH;
+        private readonly int idLineH;
+
+        private int RowHeight =>
+            RowPadTop
+            + this.nameLineH
+            + (this.showUniqueId ? (RowLineGap + this.idLineH) : 0)
+            + RowPadBottom;
+
+        // Scrollbar styling (clean, non-9-slice)
+        private const int ScrollOuterBorder = 2;
+        private const int ScrollInnerPad = 4;
+        private const int ThumbMinHeight = 44;
+
+        public SearchMenu(IModHelper helper, IMonitor monitor, string title, bool showUniqueId, List<IManifest> mods, Func<IManifest, bool> openMod)
             : base(0, 0, 0, 0, showUpperRightCloseButton: true)
         {
             this.helper = helper;
@@ -200,6 +207,11 @@ namespace GMCMSearchBar
             this.title = title;
             this.showUniqueId = showUniqueId;
             this.openMod = openMod;
+
+            this.nameFont = Game1.dialogueFont;
+            this.idFont = Game1.smallFont;
+            this.nameLineH = (int)Math.Ceiling(this.nameFont.MeasureString("ABC").Y);
+            this.idLineH = (int)Math.Ceiling(this.idFont.MeasureString("ABC").Y);
 
             this.all = mods
                 .Where(m => m is not null)
@@ -250,8 +262,12 @@ namespace GMCMSearchBar
             int vw = Game1.uiViewport.Width;
             int vh = Game1.uiViewport.Height;
 
-            this.width = Math.Min(920, vw - 160);
-            this.height = Math.Min(720, vh - 140);
+            // BIGGER overall window (elements keep same sizes; list area grows)
+            int maxW = Math.Max(640, vw - 80);
+            int maxH = Math.Max(520, vh - 80);
+
+            this.width = Math.Min(1100, maxW);
+            this.height = Math.Min(860, maxH);
 
             this.xPositionOnScreen = (vw - this.width) / 2;
             this.yPositionOnScreen = (vh - this.height) / 2;
@@ -273,6 +289,7 @@ namespace GMCMSearchBar
 
             int instructionY = this.searchRect.Bottom + 10;
 
+            // list box starts after instruction line
             int listTop = instructionY + InstructionHeight + 8;
             int listHeight = innerY + innerH - listTop;
 
@@ -289,17 +306,9 @@ namespace GMCMSearchBar
                 width: ScrollbarWidth,
                 height: this.listRect.Height
             );
-
-            // ---- dynamic row sizing ----
-            this.nameLineH = Game1.dialogueFont.LineSpacing;
-            this.idLineH = this.showUniqueId ? Game1.smallFont.LineSpacing : 0;
-
-            // rowHeight big enough for text + padding (and never cramped)
-            this.rowHeight = this.nameLineH + this.idLineH + (RowPadY * 2) + (this.showUniqueId ? 2 : 0);
-            this.rowHeight = Math.Max(this.rowHeight, 56);
         }
 
-        private int ItemsPerPage => Math.Max(1, this.listRect.Height / this.rowHeight);
+        private int ItemsPerPage => Math.Max(1, this.listRect.Height / this.RowHeight);
         private int MaxScroll => Math.Max(0, this.filtered.Count - this.ItemsPerPage);
 
         private void ClampScroll()
@@ -469,13 +478,13 @@ namespace GMCMSearchBar
             // click in list
             if (this.listRect.Contains(x, y))
             {
-                int row = (y - this.listRect.Y) / this.rowHeight;
+                int row = (y - this.listRect.Y) / this.RowHeight;
                 int idx = this.scrollOffset + row;
 
                 if (idx >= 0 && idx < this.filtered.Count)
                 {
                     this.selectedIndex = idx;
-                    this.OpenSelected(); // single click opens
+                    this.OpenSelected();
                 }
 
                 return;
@@ -527,42 +536,59 @@ namespace GMCMSearchBar
             if (!ok)
             {
                 Game1.showRedMessage("That entry couldn't be opened in GMCM.");
-                // remove it so the list stays “honest”
                 this.all.RemoveAll(m => m.UniqueID == target.UniqueID);
                 this.filtered.RemoveAll(m => m.UniqueID == target.UniqueID);
                 this.ClampScroll();
             }
         }
 
+        // ===== Scrollbar =====
+
+        private Rectangle GetScrollRailRect()
+        {
+            int inset = ScrollOuterBorder + ScrollInnerPad;
+            return InsetRect(this.scrollTrackRect, inset, inset);
+        }
+
         private Rectangle GetScrollThumbRect()
         {
-            int trackH = this.scrollTrackRect.Height;
+            Rectangle rail = this.GetScrollRailRect();
+            if (rail.Width <= 0 || rail.Height <= 0)
+                return new Rectangle(this.scrollTrackRect.X, this.scrollTrackRect.Y, this.scrollTrackRect.Width, 1);
 
-            if (this.filtered.Count <= 0)
-                return new Rectangle(this.scrollTrackRect.X, this.scrollTrackRect.Y, this.scrollTrackRect.Width, Math.Min(80, trackH));
+            int count = this.filtered.Count;
+            int page = this.ItemsPerPage;
 
-            float ratio = Math.Min(1f, (float)this.ItemsPerPage / Math.Max(1, this.filtered.Count));
-            int thumbH = Math.Max(42, (int)(trackH * ratio));
+            float ratio = Math.Min(1f, (float)page / Math.Max(1, count));
+            int thumbH = (int)Math.Round(rail.Height * ratio);
+            thumbH = Math.Max(ThumbMinHeight, Math.Min(thumbH, rail.Height));
 
-            int maxThumbY = this.scrollTrackRect.Bottom - thumbH;
-            int minThumbY = this.scrollTrackRect.Y;
+            int minY = rail.Y;
+            int maxY = rail.Bottom - thumbH;
 
             float t = this.MaxScroll == 0 ? 0f : (float)this.scrollOffset / this.MaxScroll;
-            int thumbY = (int)Math.Round(minThumbY + (maxThumbY - minThumbY) * t);
+            int thumbY = (int)Math.Round(minY + (maxY - minY) * t);
 
-            return new Rectangle(this.scrollTrackRect.X, thumbY, this.scrollTrackRect.Width, thumbH);
+            int thumbInsetX = 2;
+            return new Rectangle(
+                rail.X + thumbInsetX,
+                thumbY,
+                Math.Max(1, rail.Width - thumbInsetX * 2),
+                thumbH
+            );
         }
 
         private void SetScrollFromThumbTop(int thumbTopY)
         {
+            Rectangle rail = this.GetScrollRailRect();
             Rectangle thumb = this.GetScrollThumbRect();
 
-            int minY = this.scrollTrackRect.Y;
-            int maxY = this.scrollTrackRect.Bottom - thumb.Height;
+            int minY = rail.Y;
+            int maxY = rail.Bottom - thumb.Height;
 
             int clamped = Math.Clamp(thumbTopY, minY, maxY);
-
             float t = (maxY == minY) ? 0f : (float)(clamped - minY) / (maxY - minY);
+
             this.scrollOffset = (int)Math.Round(t * this.MaxScroll);
         }
 
@@ -572,11 +598,63 @@ namespace GMCMSearchBar
             this.SetScrollFromThumbTop(mouseY - thumb.Height / 2);
         }
 
+        private void DrawScrollbar(SpriteBatch b)
+        {
+            Rectangle trackOuter = this.scrollTrackRect;
+            Rectangle rail = this.GetScrollRailRect();
+
+            DrawBorder(b, trackOuter, ScrollOuterBorder, new Color(0, 0, 0, 90));
+            FillRect(b, InsetRect(trackOuter, ScrollOuterBorder, ScrollOuterBorder), new Color(0, 0, 0, 25));
+            FillRect(b, rail, new Color(0, 0, 0, 35));
+
+            Rectangle thumb = this.GetScrollThumbRect();
+            if (thumb.Height <= 0 || thumb.Width <= 0)
+                return;
+
+            FillRect(b, thumb, new Color(255, 255, 255, 170));
+            DrawBorder(b, thumb, 1, new Color(0, 0, 0, 110));
+
+            Rectangle inner = InsetRect(thumb, 2, 2);
+            if (inner.Width > 0 && inner.Height > 0)
+                FillRect(b, inner, new Color(255, 255, 255, 55));
+        }
+
+        private static Rectangle InsetRect(Rectangle r, int dx, int dy)
+        {
+            int x = r.X + dx;
+            int y = r.Y + dy;
+            int w = r.Width - dx * 2;
+            int h = r.Height - dy * 2;
+            if (w < 0) w = 0;
+            if (h < 0) h = 0;
+            return new Rectangle(x, y, w, h);
+        }
+
+        private static void FillRect(SpriteBatch b, Rectangle rect, Color color)
+        {
+            if (rect.Width <= 0 || rect.Height <= 0)
+                return;
+
+            b.Draw(Game1.fadeToBlackRect, rect, color);
+        }
+
+        private static void DrawBorder(SpriteBatch b, Rectangle rect, int thickness, Color color)
+        {
+            if (thickness <= 0 || rect.Width <= 0 || rect.Height <= 0)
+                return;
+
+            FillRect(b, new Rectangle(rect.X, rect.Y, rect.Width, thickness), color);
+            FillRect(b, new Rectangle(rect.X, rect.Bottom - thickness, rect.Width, thickness), color);
+            FillRect(b, new Rectangle(rect.X, rect.Y, thickness, rect.Height), color);
+            FillRect(b, new Rectangle(rect.Right - thickness, rect.Y, thickness, rect.Height), color);
+        }
+
+        // ===== End scrollbar =====
+
         public override void draw(SpriteBatch b)
         {
             this.drawBackground(b);
 
-            // outer frame
             IClickableMenu.drawTextureBox(
                 b,
                 x: this.xPositionOnScreen,
@@ -586,38 +664,29 @@ namespace GMCMSearchBar
                 color: Color.White
             );
 
-            // title
             int titleX = this.xPositionOnScreen + this.width / 2;
             int titleY = this.yPositionOnScreen + OuterPad - 4;
             SpriteText.drawStringHorizontallyCenteredAt(b, this.title, titleX, titleY);
 
-            // search frame
             IClickableMenu.drawTextureBox(b, this.searchRect.X, this.searchRect.Y, this.searchRect.Width, this.searchRect.Height, Color.White);
-
-            // search box
             this.searchBox.Draw(b);
 
-            // placeholder
             if (string.IsNullOrEmpty(this.searchBox.Text) && Game1.keyboardDispatcher.Subscriber != this.searchBox)
             {
-                float phY = this.searchRect.Y + (this.searchRect.Height - Game1.smallFont.LineSpacing) / 2f;
                 Utility.drawTextWithShadow(
                     b,
                     "Type to filter…",
                     Game1.smallFont,
-                    new Vector2(this.searchRect.X + 18, phY),
+                    new Vector2(this.searchRect.X + 18, this.searchRect.Y + 14),
                     new Color(120, 120, 120)
                 );
             }
 
-            // instruction line
             Vector2 instrPos = new Vector2(this.searchRect.X, this.searchRect.Bottom + 10);
             Utility.drawTextWithShadow(b, "Click a result or press Enter to open its config in GMCM.", Game1.smallFont, instrPos, Game1.textColor);
 
-            // list frame
             IClickableMenu.drawTextureBox(b, this.listRect.X, this.listRect.Y, this.listRect.Width, this.listRect.Height, Color.White);
 
-            // rows
             int visible = this.ItemsPerPage;
             int start = this.scrollOffset;
             int end = Math.Min(this.filtered.Count, start + visible);
@@ -625,47 +694,34 @@ namespace GMCMSearchBar
             for (int i = start; i < end; i++)
             {
                 int rowIndex = i - start;
-                int y = this.listRect.Y + rowIndex * this.rowHeight;
+                int y = this.listRect.Y + rowIndex * this.RowHeight;
 
-                // full-height row box (matches computed rowHeight)
-                Rectangle rowRect = new Rectangle(
-                    this.listRect.X + 6,
-                    y + 2,
-                    this.listRect.Width - 12,
-                    this.rowHeight - 4
-                );
+                Rectangle rowRect = new Rectangle(this.listRect.X + 6, y + 2, this.listRect.Width - 12, this.RowHeight - 4);
 
                 bool selected = (i == this.selectedIndex);
                 if (selected)
-                {
-                    // BIG highlight (no more “short highlight”)
                     IClickableMenu.drawTextureBox(b, rowRect.X, rowRect.Y, rowRect.Width, rowRect.Height, Color.White);
-                }
 
                 var m = this.filtered[i];
 
-                float nameY = rowRect.Y + RowPadY;
-                Vector2 namePos = new Vector2(rowRect.X + RowPadX, nameY);
-                Utility.drawTextWithShadow(b, m.Name ?? m.UniqueID, Game1.dialogueFont, namePos, Game1.textColor);
+                Vector2 namePos = new Vector2(rowRect.X + RowPadX, rowRect.Y + RowPadTop);
+                Utility.drawTextWithShadow(b, m.Name ?? m.UniqueID, this.nameFont, namePos, Game1.textColor);
 
                 if (this.showUniqueId)
                 {
-                    float idY = nameY + this.nameLineH - 2;
-                    Vector2 idPos = new Vector2(rowRect.X + RowPadX, idY);
-                    Utility.drawTextWithShadow(b, m.UniqueID ?? "", Game1.smallFont, idPos, new Color(90, 90, 90));
+                    Vector2 idPos = new Vector2(
+                        rowRect.X + RowPadX,
+                        rowRect.Y + RowPadTop + this.nameLineH + RowLineGap
+                    );
+
+                    Utility.drawTextWithShadow(b, m.UniqueID ?? "", this.idFont, idPos, new Color(90, 90, 90));
                 }
             }
 
-            // scrollbar rail
-            IClickableMenu.drawTextureBox(b, this.scrollTrackRect.X, this.scrollTrackRect.Y, this.scrollTrackRect.Width, this.scrollTrackRect.Height, Color.White);
+            this.DrawScrollbar(b);
 
-            // thumb
-            Rectangle thumbRect = this.GetScrollThumbRect();
-            IClickableMenu.drawTextureBox(b, thumbRect.X + 2, thumbRect.Y + 2, thumbRect.Width - 4, thumbRect.Height - 4, Color.White);
-
-            // close button, then cursor last
-            base.draw(b);
             this.drawMouse(b);
+            base.draw(b);
         }
     }
 }
