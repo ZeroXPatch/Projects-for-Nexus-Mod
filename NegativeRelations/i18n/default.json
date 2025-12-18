@@ -1,0 +1,59 @@
+{
+  "gmcm.section.general": "General",
+  "gmcm.section.dialogue": "Dialogue",
+  "gmcm.section.barks": "Passing Comments",
+
+  "gmcm.option.enableMod.name": "Enable mod",
+  "gmcm.option.enableMod.desc": "Toggle all features on or off.",
+
+  "gmcm.option.recovery.name": "Recovery per day",
+  "gmcm.option.recovery.desc": "How many negative points each NPC recovers toward neutral at day start.",
+
+  "gmcm.option.talkOverride.name": "Colder dialogue",
+  "gmcm.option.talkOverride.desc": "Allow hostile dialogue to replace normal talk based on negative tiers.",
+
+  "gmcm.option.talkChance.name": "Talk override chance",
+  "gmcm.option.talkChance.desc": "Chance that a normal conversation line is replaced by a negative one.",
+
+  "gmcm.option.barks.name": "Enable passing comments",
+  "gmcm.option.barks.desc": "Allow hostile NPCs to say short comments when you walk near them.",
+
+  "gmcm.option.barkRadius.name": "Bark radius (tiles)",
+  "gmcm.option.barkRadius.desc": "How close you need to be (in tiles) before a hostile NPC may bark at you.",
+
+  "gmcm.option.barkChance.name": "Bark chance",
+  "gmcm.option.barkChance.desc": "Chance per check that a nearby hostile NPC says a passing comment.",
+
+  "gmcm.option.barkCooldown.name": "Bark cooldown (minutes)",
+  "gmcm.option.barkCooldown.desc": "Minimum in-game minutes before the same NPC can bark again.",
+
+  "talk.tier1.line1": "Yeah?",
+  "talk.tier1.line2": "Make it quick.",
+  "talk.tier1.line3": "What now?",
+  "talk.tier1.line4": "Huh.",
+  "talk.tier1.line5": "Need something?",
+
+  "talk.tier2.line1": "Don't bother me.",
+  "talk.tier2.line2": "Go away.",
+  "talk.tier2.line3": "I'm busy.",
+  "talk.tier2.line4": "Find someone else to bug.",
+  "talk.tier2.line5": "Seriously?",
+
+  "talk.tier3.line1": "I can't stand you.",
+  "talk.tier3.line2": "Just leave.",
+  "talk.tier3.line3": "Why are you here?",
+  "talk.tier3.line4": "You're the worst.",
+  "talk.tier3.line5": "Get lost.",
+
+  "bark.tier2.line1": "Tch.",
+  "bark.tier2.line2": "Move.",
+  "bark.tier2.line3": "Watch it.",
+  "bark.tier2.line4": "Keep walking.",
+  "bark.tier2.line5": "Hm.",
+
+  "bark.tier3.line1": "Ugh.",
+  "bark.tier3.line2": "Seriously?",
+  "bark.tier3.line3": "Leave me alone.",
+  "bark.tier3.line4": "Go away.",
+  "bark.tier3.line5": "..."
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "Negative Relations",
+  "Author": "AI Assistant",
+  "Version": "1.0.0",
+  "Description": "Adds negative relationship tiers with hostile dialogue and barks.",
+  "UniqueID": "AI.NegativeRelations",
+  "EntryDll": "NegativeRelations.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}
