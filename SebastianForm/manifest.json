@@ -1,0 +1,10 @@
+{
+  "Name": "Sebastian Form (Hybrid Overlay)",
+  "Author": "ChatGPT",
+  "Version": "1.0.0",
+  "Description": "Visually appear as Sebastian while idle or moving, and automatically fall back to the farmer sprite for tool and special animations.",
+  "UniqueID": "ChatGPT.SebastianForm",
+  "EntryDll": "SebastianForm.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}
