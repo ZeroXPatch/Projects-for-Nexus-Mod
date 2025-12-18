@@ -1,0 +1,121 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "StardewPriority/1.0.0": {
+        "dependencies": {
+          "MonoGame.Framework": "3.8.0.1641",
+          "SMAPI.Toolkit.CoreInterfaces": "4.3.2.0",
+          "StardewModdingAPI": "4.3.2.0",
+          "StardewValley.GameData": "1.6.15.24354",
+          "xTile": "1.0.0.0"
+        },
+        "runtime": {
+          "StardewPriority.dll": {}
+        }
+      },
+      "MonoGame.Framework/3.8.0.1641": {
+        "runtime": {
+          "MonoGame.Framework.dll": {
+            "assemblyVersion": "3.8.0.1641",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SMAPI.Toolkit.CoreInterfaces/4.3.2.0": {
+        "runtime": {
+          "SMAPI.Toolkit.CoreInterfaces.dll": {
+            "assemblyVersion": "4.3.2.0",
+            "fileVersion": "4.3.2.0"
+          }
+        }
+      },
+      "StardewModdingAPI/4.3.2.0": {
+        "runtime": {
+          "StardewModdingAPI.dll": {
+            "assemblyVersion": "4.3.2.0",
+            "fileVersion": "4.3.2.0"
+          }
+        }
+      },
+      "StardewValley.GameData/1.6.15.24354": {
+        "runtime": {
+          "StardewValley.GameData.dll": {
+            "assemblyVersion": "1.6.15.24354",
+            "fileVersion": "1.6.15.24354"
+          }
+        }
+      },
+      "xTile/1.0.0.0": {
+        "runtime": {
+          "xTile.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SkiaSharp/2.80.0.0": {
+        "runtime": {
+          "SkiaSharp.dll": {
+            "assemblyVersion": "2.80.0.0",
+            "fileVersion": "2.80.3.0"
+          }
+        }
+      },
+      "BmFont/1.0.0.0": {
+        "runtime": {
+          "BmFont.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StardewPriority/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MonoGame.Framework/3.8.0.1641": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SMAPI.Toolkit.CoreInterfaces/4.3.2.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StardewModdingAPI/4.3.2.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StardewValley.GameData/1.6.15.24354": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "xTile/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SkiaSharp/2.80.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BmFont/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "Stardew High Priority",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Sets Stardew Valley's process priority on launch (Windows only).",
+  "UniqueID": "ZeroXPatch.StardewHighPriority",
+  "EntryDll": "StardewHighPriority.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

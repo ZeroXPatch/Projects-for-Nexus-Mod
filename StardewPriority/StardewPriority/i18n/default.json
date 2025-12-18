@@ -1,0 +1,7 @@
+{
+  "log.disabled": "Priority mod is disabled in config.json.",
+  "log.not_windows": "Not running on Windows; skipping process priority change.",
+  "log.invalid_priority": "Invalid Priority value in config.json: '{{value}}'. Allowed: Normal, AboveNormal, High.",
+  "log.set_priority": "Set Stardew Valley process priority to {{value}}.",
+  "log.failed": "Failed to set process priority ({{error}}): {{message}}"
+}

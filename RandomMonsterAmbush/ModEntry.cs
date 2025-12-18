@@ -8,6 +8,7 @@ using StardewModdingAPI.Events;
 using StardewValley;
 using StardewValley.Locations;
 using StardewValley.Monsters;
+using StardewValley.Tools;
 
 namespace RandomMonsterAmbush
 {
@@ -185,6 +186,15 @@ namespace RandomMonsterAmbush
                 tooltip: () => t.Get("config.skipEvents.tooltip")
             );
 
+            // NEW: skip ambushes while holding any fishing rod
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                getValue: () => _config.SkipWhileHoldingFishingRod,
+                setValue: value => _config.SkipWhileHoldingFishingRod = value,
+                name: () => t.Get("config.skipFishingRod.name"),
+                tooltip: () => t.Get("config.skipFishingRod.tooltip")
+            );
+
             // ==== BOSS SECTION ====
             configMenu.AddSectionTitle(
                 mod: this.ModManifest,
@@ -244,6 +254,10 @@ namespace RandomMonsterAmbush
 
             // SMAPI 4: IsMultipleOf takes uint
             if (!e.IsMultipleOf((uint)_config.CheckIntervalTicks))
+                return;
+
+            // NEW: if holding any fishing rod, don't spawn
+            if (_config.SkipWhileHoldingFishingRod && Game1.player.CurrentTool is FishingRod)
                 return;
 
             // don't spawn during events / festivals / cutscenes / minigames
@@ -529,6 +543,11 @@ namespace RandomMonsterAmbush
 
         /// <summary>Prevent ambushes during festivals, events, and minigames.</summary>
         public bool PreventDuringEvents { get; set; } = true;
+
+        /// <summary>
+        /// If true, ambushes won't spawn while the player is currently holding any fishing rod.
+        /// </summary>
+        public bool SkipWhileHoldingFishingRod { get; set; } = false;
 
         /// <summary>Enable special boss-style ambush monsters.</summary>
         public bool EnableBossSpawns { get; set; } = true;

@@ -36,5 +36,8 @@
   "config.bossHealthMult.tooltip": "How much to multiply boss HP. 2.0 means double health.",
 
   "config.bossDamageMult.name": "Boss damage multiplier",
-  "config.bossDamageMult.tooltip": "How much to multiply boss damage. 2.0 means double damage."
+  "config.bossDamageMult.tooltip": "How much to multiply boss damage. 2.0 means double damage.",
+
+  "config.skipFishingRod.name": "Skip ambushes while holding a fishing rod",
+  "config.skipFishingRod.tooltip": "If you currently have any fishing rod equipped, RandomMonsterAmbush won't spawn monsters."
 }
