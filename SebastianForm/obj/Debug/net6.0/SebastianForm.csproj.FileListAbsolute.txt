@@ -1,0 +1,12 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SebastianForm\obj\Debug\net6.0\SebastianForm.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SebastianForm\obj\Debug\net6.0\SebastianForm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SebastianForm\obj\Debug\net6.0\SebastianForm.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SebastianForm\obj\Debug\net6.0\SebastianForm.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SebastianForm\obj\Debug\net6.0\SebastianForm.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SebastianForm\obj\Debug\net6.0\SebastianForm.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SebastianForm\bin\Debug\net6.0\SebastianForm.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SebastianForm\bin\Debug\net6.0\SebastianForm.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SebastianForm\obj\Debug\net6.0\SebastianForm.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SebastianForm\bin\Debug\net6.0\0Harmony.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SebastianForm\bin\Debug\net6.0\0Harmony.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SebastianForm\obj\Debug\net6.0\Sebastia.AE7F1F1B.Up2Date

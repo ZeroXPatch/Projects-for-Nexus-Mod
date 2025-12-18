@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
+using HarmonyLib;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewModdingAPI.Utilities;
 using StardewValley;
-using StardewValley.Tools;
 
 namespace SebastianForm;
 
@@ -15,366 +15,500 @@ public sealed class ModConfig
     public bool Enabled { get; set; } = true;
 
     public KeybindList ToggleKey { get; set; } = new(SButton.K);
+    public KeybindList NextCharacterKey { get; set; } = new(SButton.L);
 
-    public bool HideOverlayInMenus { get; set; } = true;
-
-    public bool DrawAboveFarmer { get; set; } = true;
+    public string CharacterName { get; set; } = "Sebastian";
 
     public bool LocalOnlyInMultiplayer { get; set; } = true;
 
-    public float OverlayOpacity { get; set; } = 1f;
+    public float Opacity { get; set; } = 1f;
 
     public float OffsetX { get; set; } = 0f;
+    public float OffsetY { get; set; } = 0f;
 
-    public float OffsetY { get; set; } = -12f;
-
-    public bool DebugLogging { get; set; }
+    public bool DebugLogging { get; set; } = false;
 }
 
 public sealed class ModEntry : Mod
 {
-    private const float AnimationIntervalMs = 150f;
+    internal static ModEntry? Instance;
 
     private ModConfig Config = new();
-    private bool isFormActive;
-    private Texture2D? sebastianTexture;
-    private int animationFrame;
-    private double animationTimer;
+    private bool isActive;
+
+    private readonly Dictionary<string, Texture2D> textureCache = new(StringComparer.OrdinalIgnoreCase);
+    private Texture2D? currentTexture;
+    private string currentCharacter = "Sebastian";
+
+    private const int FrameW = 16;
+    private const int FrameH = 32;
+    private const int AnimIntervalTicks = 9;
+
+    private static readonly List<string> BuiltInCharacters = new()
+    {
+        "Sebastian",
+        "Haley",
+        "Abigail",
+        "Sam",
+        "Alex",
+        "Emily",
+        "Penny",
+        "Maru",
+        "Leah",
+        "Harvey",
+        "Shane",
+        "Elliott",
+        "Caroline",
+        "Clint",
+        "Demetrius",
+        "Evelyn",
+        "George",
+        "Gus",
+        "Jas",
+        "Jodi",
+        "Kent",
+        "Lewis",
+        "Linus",
+        "Marnie",
+        "Pam",
+        "Pierre",
+        "Robin",
+        "Sandy",
+        "Vincent",
+        "Willy",
+        "Wizard",
+        "Bear",
+        "Morris"
+    };
 
     public override void Entry(IModHelper helper)
     {
-        this.Config = helper.ReadConfig<ModConfig>();
-        this.isFormActive = this.Config.Enabled;
+        Instance = this;
 
-        helper.Events.GameLoop.GameLaunched += this.OnGameLaunched;
-        helper.Events.GameLoop.SaveLoaded += this.OnSaveLoaded;
-        helper.Events.GameLoop.ReturnedToTitle += this.OnReturnedToTitle;
+        this.Config = helper.ReadConfig<ModConfig>();
+        this.isActive = this.Config.Enabled;
+        this.currentCharacter = string.IsNullOrWhiteSpace(this.Config.CharacterName) ? "Sebastian" : this.Config.CharacterName.Trim();
+
+        helper.Events.GameLoop.GameLaunched += (_, _) => this.RegisterGmcm();
+        helper.Events.GameLoop.SaveLoaded += (_, _) => this.ReloadCharacterTexture();
+        helper.Events.GameLoop.ReturnedToTitle += (_, _) =>
+        {
+            this.currentTexture = null;
+            this.textureCache.Clear();
+        };
         helper.Events.GameLoop.UpdateTicked += this.OnUpdateTicked;
         helper.Events.Input.ButtonsChanged += this.OnButtonsChanged;
-        helper.Events.Display.RenderedWorld += this.OnRenderedWorld;
-    }
 
-    private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
-    {
-        this.RegisterConfigMenu();
-    }
+        var harmony = new Harmony(this.ModManifest.UniqueID);
+        this.PatchDraw(harmony);
 
-    private void OnSaveLoaded(object? sender, SaveLoadedEventArgs e)
-    {
-        this.isFormActive = this.Config.Enabled;
-        this.animationFrame = 0;
-        this.animationTimer = 0;
-        this.LoadSebastianTexture();
-    }
-
-    private void OnReturnedToTitle(object? sender, ReturnedToTitleEventArgs e)
-    {
-        this.animationFrame = 0;
-        this.animationTimer = 0;
+        this.Monitor.Log("Wizard’s Wardrobe: NPC Forms loaded. (If you don’t transform, check SMAPI log for patch messages.)", LogLevel.Trace);
     }
 
     private void OnUpdateTicked(object? sender, UpdateTickedEventArgs e)
     {
-        if (!Context.IsWorldReady || !this.isFormActive || this.sebastianTexture is null)
-        {
-            return;
-        }
-
-        Farmer? farmer = Game1.player;
-        if (farmer is null)
-        {
-            return;
-        }
-
-        bool isMoving = farmer.xVelocity != 0f || farmer.yVelocity != 0f || farmer.movementDirections.Count > 0;
-        if (!isMoving)
-        {
-            this.animationFrame = 0;
-            this.animationTimer = 0;
-            return;
-        }
-
-        this.animationTimer += e.GameTime.ElapsedGameTime.TotalMilliseconds;
-        if (this.animationTimer >= AnimationIntervalMs)
-        {
-            this.animationTimer %= AnimationIntervalMs;
-            this.animationFrame = (this.animationFrame + 1) % 4;
-        }
+        // Ensure texture loads once the world is ready, even if SaveLoaded fired before Context.IsWorldReady.
+        if (Context.IsWorldReady && this.currentTexture is null)
+            this.ReloadCharacterTexture();
     }
 
     private void OnButtonsChanged(object? sender, ButtonsChangedEventArgs e)
     {
         if (!Context.IsWorldReady)
-        {
             return;
-        }
 
         if (this.Config.ToggleKey.JustPressed())
         {
-            this.isFormActive = !this.isFormActive;
-            this.Config.Enabled = this.isFormActive;
+            this.isActive = !this.isActive;
+            this.Config.Enabled = this.isActive;
             this.Helper.WriteConfig(this.Config);
 
-            string messageKey = this.isFormActive ? "hud.enabled" : "hud.disabled";
-            Game1.showGlobalMessage(this.Helper.Translation.Get(messageKey));
+            Game1.showGlobalMessage(this.isActive ? "Wizard’s Wardrobe: ON" : "Wizard’s Wardrobe: OFF");
+        }
+
+        if (this.Config.NextCharacterKey.JustPressed())
+        {
+            this.CycleCharacter(+1);
         }
     }
 
-    private void OnRenderedWorld(object? sender, RenderedWorldEventArgs e)
+    private void CycleCharacter(int delta)
     {
-        if (!Context.IsWorldReady || !this.isFormActive || this.sebastianTexture is null)
+        int idx = BuiltInCharacters.FindIndex(n => n.Equals(this.currentCharacter, StringComparison.OrdinalIgnoreCase));
+        if (idx < 0) idx = 0;
+
+        idx = (idx + delta) % BuiltInCharacters.Count;
+        if (idx < 0) idx += BuiltInCharacters.Count;
+
+        this.SetCharacter(BuiltInCharacters[idx], showHud: true);
+    }
+
+    private void SetCharacter(string name, bool showHud)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            return;
+
+        this.currentCharacter = name.Trim();
+        this.Config.CharacterName = this.currentCharacter;
+        this.Helper.WriteConfig(this.Config);
+
+        this.ReloadCharacterTexture();
+
+        if (showHud && Context.IsWorldReady)
+            Game1.showGlobalMessage($"Wardrobe Form: {this.currentCharacter}");
+    }
+
+    private void ReloadCharacterTexture()
+    {
+        this.currentTexture = null;
+
+        if (!Context.IsWorldReady)
+            return;
+
+        string name = string.IsNullOrWhiteSpace(this.currentCharacter) ? "Sebastian" : this.currentCharacter;
+
+        if (this.textureCache.TryGetValue(name, out var cached))
         {
+            this.currentTexture = cached;
             return;
         }
 
-        IEnumerable<Farmer> farmers = this.Config.LocalOnlyInMultiplayer ? new[] { Game1.player } : Game1.getAllFarmers();
-        foreach (Farmer? farmer in farmers)
+        try
         {
-            if (farmer is null)
+            var tex = Game1.content.Load<Texture2D>($"Characters/{name}");
+            this.textureCache[name] = tex;
+            this.currentTexture = tex;
+
+            if (this.Config.DebugLogging)
+                this.Monitor.Log($"Loaded Characters/{name}", LogLevel.Trace);
+        }
+        catch (Exception ex)
+        {
+            this.Monitor.Log($"Failed to load Characters/{name}. Falling back to Sebastian. Error: {ex.Message}", LogLevel.Warn);
+
+            try
             {
-                continue;
-            }
+                var tex = Game1.content.Load<Texture2D>("Characters/Sebastian");
+                this.textureCache["Sebastian"] = tex;
+                this.currentTexture = tex;
 
-            if (this.ShouldFallback(farmer, out string reason))
+                this.currentCharacter = "Sebastian";
+                this.Config.CharacterName = "Sebastian";
+                this.Helper.WriteConfig(this.Config);
+            }
+            catch (Exception ex2)
             {
-                if (this.Config.DebugLogging && Game1.ticks % 30 == 0)
-                {
-                    this.Monitor.Log($"Skipping Sebastian overlay for {farmer.Name}: {reason}", LogLevel.Trace);
-                }
-
-                continue;
+                this.Monitor.Log($"Failed to load fallback Characters/Sebastian too: {ex2}", LogLevel.Error);
+                this.currentTexture = null;
             }
-
-            this.DrawSebastianOverlay(farmer, e);
         }
     }
 
-    private void DrawSebastianOverlay(Farmer farmer, RenderedWorldEventArgs e)
+    private bool ShouldReplace(Farmer farmer)
     {
-        if (this.sebastianTexture is null)
+        if (!this.isActive)
+            return false;
+
+        // Avoid invisible player if texture isn't available.
+        if (this.currentTexture is null)
+            return false;
+
+        if (this.Config.LocalOnlyInMultiplayer && !ReferenceEquals(farmer, Game1.player))
+            return false;
+
+        return true;
+    }
+
+    // -------------------------
+    // Harmony patches (THIS is the key fix)
+    // -------------------------
+    private void PatchDraw(Harmony harmony)
+    {
+        // 1) Patch Farmer.draw(SpriteBatch) (implemented)
+        var farmerDraw = AccessTools.Method(typeof(Farmer), "draw", new[] { typeof(SpriteBatch) });
+        if (farmerDraw is not null)
         {
-            return;
+            harmony.Patch(farmerDraw, prefix: new HarmonyMethod(typeof(ModEntry), nameof(FarmerDraw_Prefix)));
+            if (this.Config.DebugLogging)
+                this.Monitor.Log("Patched Farmer.draw(SpriteBatch)", LogLevel.Trace);
+        }
+        else
+        {
+            this.Monitor.Log("Could not find Farmer.draw(SpriteBatch) to patch.", LogLevel.Warn);
         }
 
-        int directionRow = farmer.FacingDirection switch
+        // 2) Safety net: patch Character.draw(SpriteBatch, float) (declared). Some code paths use alpha draws.
+        var charDrawAlpha = AccessTools.Method(typeof(Character), "draw", new[] { typeof(SpriteBatch), typeof(float) });
+        if (charDrawAlpha is not null)
         {
-            Game1.up => 3,
-            Game1.right => 1,
+            harmony.Patch(charDrawAlpha, prefix: new HarmonyMethod(typeof(ModEntry), nameof(CharacterDrawAlpha_Prefix)));
+            if (this.Config.DebugLogging)
+                this.Monitor.Log("Patched Character.draw(SpriteBatch, float)", LogLevel.Trace);
+        }
+    }
+
+    public static bool FarmerDraw_Prefix(Farmer __instance, SpriteBatch b)
+    {
+        var inst = Instance;
+        if (inst is null)
+            return true;
+
+        if (inst.currentTexture is null && Context.IsWorldReady)
+            inst.ReloadCharacterTexture();
+
+        if (!inst.ShouldReplace(__instance))
+            return true;
+
+        inst.DrawReplacement(__instance, b, alpha: 1f);
+        return false; // skip original farmer sprite
+    }
+
+    public static bool CharacterDrawAlpha_Prefix(Character __instance, SpriteBatch b, float alpha)
+    {
+        var inst = Instance;
+        if (inst is null)
+            return true;
+
+        // Only intercept farmer alpha-draws (do NOT affect NPCs/monsters)
+        if (__instance is not Farmer farmer)
+            return true;
+
+        if (inst.currentTexture is null && Context.IsWorldReady)
+            inst.ReloadCharacterTexture();
+
+        if (!inst.ShouldReplace(farmer))
+            return true;
+
+        inst.DrawReplacement(farmer, b, alpha);
+        return false;
+    }
+
+    private void DrawReplacement(Farmer farmer, SpriteBatch b, float alpha)
+    {
+        if (this.currentTexture is null)
+            return;
+
+        // Vanilla NPC row order: down=0, right=1, up=2, left=3
+        int row = farmer.FacingDirection switch
+        {
             Game1.down => 0,
-            _ => 2
+            Game1.right => 1,
+            Game1.up => 2,
+            Game1.left => 3,
+            _ => 0
         };
 
-        bool isMoving = farmer.xVelocity != 0f || farmer.yVelocity != 0f || farmer.movementDirections.Count > 0;
-        int frameIndex = isMoving ? this.animationFrame : 0;
-        Rectangle sourceRect = new(frameIndex * 16, directionRow * 32, 16, 32);
+        bool moving = farmer.xVelocity != 0f || farmer.yVelocity != 0f || farmer.movementDirections.Count > 0;
+        int frame = moving ? (int)((Game1.ticks / AnimIntervalTicks) % 4) : 0;
 
-        Vector2 drawPosition = this.GetDrawPosition(farmer);
-        float layerDepth = Math.Max(0f, farmer.getStandingY() / 10000f + (this.Config.DrawAboveFarmer ? 0.00011f : -0.00011f));
-        float opacity = MathHelper.Clamp(this.Config.OverlayOpacity, 0f, 1f);
+        Rectangle src = new(frame * FrameW, row * FrameH, FrameW, FrameH);
+
+        // Align to farmer feet using bounding box
+        Rectangle bbox = farmer.GetBoundingBox();
+
+        float worldX = bbox.Center.X - (FrameW * Game1.pixelZoom) / 2f;
+        float worldY = bbox.Bottom - (FrameH * Game1.pixelZoom);
+
+        Vector2 screenPos = Game1.GlobalToLocal(Game1.viewport, new Vector2(worldX, worldY));
+        screenPos.X += this.Config.OffsetX;
+        screenPos.Y += this.Config.OffsetY;
+
+        // Correct depth so trees/fences can cover you properly
+        float layerDepth = Math.Max(0f, bbox.Bottom / 10000f);
+
+        DrawShadow(b, bbox, layerDepth - 0.00001f);
+
+        float opacity = MathHelper.Clamp(this.Config.Opacity, 0f, 1f) * MathHelper.Clamp(alpha, 0f, 1f);
         Color tint = Color.White * opacity;
 
-        e.SpriteBatch.Draw(
-            this.sebastianTexture,
-            drawPosition,
-            sourceRect,
+        b.Draw(
+            this.currentTexture,
+            screenPos,
+            src,
             tint,
             0f,
             Vector2.Zero,
             Game1.pixelZoom,
             SpriteEffects.None,
-            layerDepth);
+            layerDepth
+        );
     }
 
-    private Vector2 GetDrawPosition(Farmer farmer)
+    private static void DrawShadow(SpriteBatch b, Rectangle bbox, float layerDepth)
     {
-        Vector2 basePosition = Game1.GlobalToLocal(Game1.viewport, farmer.Position + new Vector2(-32f, -96f));
-        return new Vector2(basePosition.X + this.Config.OffsetX, basePosition.Y + this.Config.OffsetY);
+        float shadowWorldX = bbox.Center.X - (12f * Game1.pixelZoom) / 2f;
+        float shadowWorldY = bbox.Bottom - (4f * Game1.pixelZoom);
+
+        Vector2 shadowPos = Game1.GlobalToLocal(Game1.viewport, new Vector2(shadowWorldX, shadowWorldY));
+
+        b.Draw(
+            Game1.shadowTexture,
+            shadowPos,
+            new Rectangle(0, 0, 12, 4),
+            Color.White,
+            0f,
+            Vector2.Zero,
+            Game1.pixelZoom,
+            SpriteEffects.None,
+            Math.Max(0f, layerDepth)
+        );
     }
 
-    private bool ShouldFallback(Farmer farmer, out string reason)
-    {
-        if (!this.isFormActive)
-        {
-            reason = "form disabled";
-            return true;
-        }
-
-        if (Game1.activeClickableMenu != null && this.Config.HideOverlayInMenus)
-        {
-            reason = "menu open";
-            return true;
-        }
-
-        if (Game1.eventUp || Game1.CurrentEvent is not null)
-        {
-            reason = "event active";
-            return true;
-        }
-
-        if (farmer.UsingTool || !farmer.canMove)
-        {
-            reason = "tool use or cannot move";
-            return true;
-        }
-
-        if (farmer.swimming.Value)
-        {
-            reason = "swimming";
-            return true;
-        }
-
-        if (farmer.isRidingHorse() || farmer.mount is not null)
-        {
-            reason = "riding mount";
-            return true;
-        }
-
-        if (farmer.isEating || farmer.isDrinking)
-        {
-            reason = "eating or drinking";
-            return true;
-        }
-
-        if (farmer.CurrentTool is FishingRod rod && (rod.isFishing || rod.isCasting || rod.isTimingCast || rod.isReeling))
-        {
-            reason = "fishing";
-            return true;
-        }
-
-        if (farmer.CurrentTool is Slingshot)
-        {
-            reason = "using slingshot";
-            return true;
-        }
-
-        if (farmer.isInBed.Value)
-        {
-            reason = "sleeping";
-            return true;
-        }
-
-        if (farmer.freezePause > 0)
-        {
-            reason = "temporarily frozen";
-            return true;
-        }
-
-        reason = string.Empty;
-        return false;
-    }
-
-    private void RegisterConfigMenu()
+    // -------------------------
+    // GMCM
+    // -------------------------
+    private void RegisterGmcm()
     {
         var gmcm = this.Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
         if (gmcm is null)
         {
+            this.Monitor.Log("GMCM not found. Install 'Generic Mod Config Menu' to configure in-game.", LogLevel.Trace);
             return;
         }
 
         gmcm.Register(
             this.ModManifest,
-            () => this.Config = new ModConfig(),
-            () => this.Helper.WriteConfig(this.Config));
+            reset: () =>
+            {
+                this.Config = new ModConfig();
+                this.isActive = this.Config.Enabled;
+                this.currentCharacter = this.Config.CharacterName;
+                this.Helper.WriteConfig(this.Config);
+                this.ReloadCharacterTexture();
+            },
+            save: () =>
+            {
+                this.Helper.WriteConfig(this.Config);
+                this.isActive = this.Config.Enabled;
+                this.currentCharacter = this.Config.CharacterName;
+                this.ReloadCharacterTexture();
+            }
+        );
 
-        gmcm.AddSectionTitle(this.ModManifest, () => this.Helper.Translation.Get("gmcm.section.general"));
+        gmcm.AddSectionTitle(this.ModManifest, () => "Wizard’s Wardrobe: NPC Forms");
 
         gmcm.AddBoolOption(
             this.ModManifest,
             () => this.Config.Enabled,
-            value =>
+            v =>
             {
-                this.Config.Enabled = value;
-                this.isFormActive = value;
+                this.Config.Enabled = v;
+                this.isActive = v;
+                this.Helper.WriteConfig(this.Config);
             },
-            () => this.Helper.Translation.Get("gmcm.enabled.name"),
-            () => this.Helper.Translation.Get("gmcm.enabled.tooltip"));
+            () => "Enabled",
+            () => "Hide your farmer and draw the selected vanilla NPC sprite instead."
+        );
 
         gmcm.AddKeybindList(
             this.ModManifest,
             () => this.Config.ToggleKey,
-            value => this.Config.ToggleKey = value,
-            () => this.Helper.Translation.Get("gmcm.toggleKey.name"),
-            () => this.Helper.Translation.Get("gmcm.toggleKey.tooltip"));
+            v =>
+            {
+                this.Config.ToggleKey = v;
+                this.Helper.WriteConfig(this.Config);
+            },
+            () => "Toggle key",
+            () => "Hotkey to enable/disable the form."
+        );
 
-        gmcm.AddBoolOption(
+        gmcm.AddKeybindList(
             this.ModManifest,
-            () => this.Config.HideOverlayInMenus,
-            value => this.Config.HideOverlayInMenus = value,
-            () => this.Helper.Translation.Get("gmcm.hideInMenus.name"),
-            () => this.Helper.Translation.Get("gmcm.hideInMenus.tooltip"));
+            () => this.Config.NextCharacterKey,
+            v =>
+            {
+                this.Config.NextCharacterKey = v;
+                this.Helper.WriteConfig(this.Config);
+            },
+            () => "Next character key",
+            () => "Hotkey to cycle the character list."
+        );
 
-        gmcm.AddBoolOption(
+        gmcm.AddTextOption(
             this.ModManifest,
-            () => this.Config.DrawAboveFarmer,
-            value => this.Config.DrawAboveFarmer = value,
-            () => this.Helper.Translation.Get("gmcm.drawAboveFarmer.name"),
-            () => this.Helper.Translation.Get("gmcm.drawAboveFarmer.tooltip"));
+            () => this.Config.CharacterName,
+            v =>
+            {
+                this.Config.CharacterName = v;
+                this.currentCharacter = v;
+                this.Helper.WriteConfig(this.Config);
+                this.ReloadCharacterTexture();
+            },
+            () => "Character",
+            () => "Choose a vanilla NPC sprite sheet (Characters/<Name>).",
+            allowedValues: BuiltInCharacters.ToArray(),
+            formatAllowedValue: s => s
+        );
 
         gmcm.AddBoolOption(
             this.ModManifest,
             () => this.Config.LocalOnlyInMultiplayer,
-            value => this.Config.LocalOnlyInMultiplayer = value,
-            () => this.Helper.Translation.Get("gmcm.localOnly.name"),
-            () => this.Helper.Translation.Get("gmcm.localOnly.tooltip"));
+            v =>
+            {
+                this.Config.LocalOnlyInMultiplayer = v;
+                this.Helper.WriteConfig(this.Config);
+            },
+            () => "Local-only (multiplayer)",
+            () => "If enabled, only your local player is replaced on your client."
+        );
 
         gmcm.AddNumberOption(
             this.ModManifest,
-            () => (int)(this.Config.OverlayOpacity * 100),
-            value => this.Config.OverlayOpacity = MathHelper.Clamp(value / 100f, 0f, 1f),
-            () => this.Helper.Translation.Get("gmcm.opacity.name"),
-            () => this.Helper.Translation.Get("gmcm.opacity.tooltip"),
-            10,
-            100,
-            5,
-            value => string.Format(this.Helper.Translation.Get("gmcm.opacity.format"), value));
+            () => (int)(this.Config.Opacity * 100f),
+            v =>
+            {
+                this.Config.Opacity = MathHelper.Clamp(v / 100f, 0f, 1f);
+                this.Helper.WriteConfig(this.Config);
+            },
+            () => "Opacity",
+            () => "Sprite opacity (100% = fully visible).",
+            min: 10, max: 100, interval: 5,
+            formatValue: v => $"{v}%"
+        );
 
         gmcm.AddNumberOption(
             this.ModManifest,
             () => (int)this.Config.OffsetX,
-            value => this.Config.OffsetX = value,
-            () => this.Helper.Translation.Get("gmcm.offsetX.name"),
-            () => this.Helper.Translation.Get("gmcm.offsetX.tooltip"),
-            -32,
-            32,
-            1);
+            v =>
+            {
+                this.Config.OffsetX = v;
+                this.Helper.WriteConfig(this.Config);
+            },
+            () => "Offset X",
+            () => "Nudge left/right if alignment is off.",
+            min: -64, max: 64, interval: 1
+        );
 
         gmcm.AddNumberOption(
             this.ModManifest,
             () => (int)this.Config.OffsetY,
-            value => this.Config.OffsetY = value,
-            () => this.Helper.Translation.Get("gmcm.offsetY.name"),
-            () => this.Helper.Translation.Get("gmcm.offsetY.tooltip"),
-            -32,
-            32,
-            1);
-
-        gmcm.AddBoolOption(
-            this.ModManifest,
-            () => this.Config.DebugLogging,
-            value => this.Config.DebugLogging = value,
-            () => this.Helper.Translation.Get("gmcm.debug.name"),
-            () => this.Helper.Translation.Get("gmcm.debug.tooltip"));
-    }
-
-    private void LoadSebastianTexture()
-    {
-        try
-        {
-            this.sebastianTexture = Game1.content.Load<Texture2D>("Characters/Sebastian");
-        }
-        catch (Exception ex)
-        {
-            this.Monitor.Log($"Failed to load Sebastian sprite: {ex.Message}", LogLevel.Error);
-            this.sebastianTexture = null;
-        }
+            v =>
+            {
+                this.Config.OffsetY = v;
+                this.Helper.WriteConfig(this.Config);
+            },
+            () => "Offset Y",
+            () => "Nudge up/down if alignment is off.",
+            min: -64, max: 64, interval: 1
+        );
     }
 }
 
+// Minimal GMCM subset (includes AddTextOption)
 public interface IGenericModConfigMenuApi
 {
     void Register(IManifest mod, Action reset, Action save, bool titleScreenOnly = false);
 
     void AddSectionTitle(IManifest mod, Func<string> text, Func<string>? tooltip = null);
+
+    void AddBoolOption(
+        IManifest mod,
+        Func<bool> getValue,
+        Action<bool> setValue,
+        Func<string> name,
+        Func<string>? tooltip = null,
+        string? fieldId = null
+    );
 
     void AddNumberOption(
         IManifest mod,
@@ -386,15 +520,8 @@ public interface IGenericModConfigMenuApi
         int? max = null,
         int? interval = null,
         Func<int, string>? formatValue = null,
-        string? fieldId = null);
-
-    void AddBoolOption(
-        IManifest mod,
-        Func<bool> getValue,
-        Action<bool> setValue,
-        Func<string> name,
-        Func<string>? tooltip = null,
-        string? fieldId = null);
+        string? fieldId = null
+    );
 
     void AddKeybindList(
         IManifest mod,
@@ -402,5 +529,17 @@ public interface IGenericModConfigMenuApi
         Action<KeybindList> setValue,
         Func<string> name,
         Func<string>? tooltip = null,
-        string? fieldId = null);
+        string? fieldId = null
+    );
+
+    void AddTextOption(
+        IManifest mod,
+        Func<string> getValue,
+        Action<string> setValue,
+        Func<string> name,
+        Func<string>? tooltip = null,
+        string[]? allowedValues = null,
+        Func<string, string>? formatAllowedValue = null,
+        string? fieldId = null
+    );
 }

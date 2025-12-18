@@ -1,9 +1,9 @@
 {
-  "Name": "Sebastian Form (Hybrid Overlay)",
-  "Author": "ChatGPT",
+  "Name": "Wizard’s Wardrobe: NPC Forms",
+  "Author": "ZeroXPatch",
   "Version": "1.0.0",
-  "Description": "Visually appear as Sebastian while idle or moving, and automatically fall back to the farmer sprite for tool and special animations.",
-  "UniqueID": "ChatGPT.SebastianForm",
+  "Description": "Hide your farmer and render a vanilla NPC sprite (Sebastian, Haley, etc.) instead. Includes hotkeys + GMCM support.",
+  "UniqueID": "ZeroXPatch.WizardsWardrobeNpcForms",
   "EntryDll": "SebastianForm.dll",
   "MinimumApiVersion": "4.0.0",
   "UpdateKeys": []
