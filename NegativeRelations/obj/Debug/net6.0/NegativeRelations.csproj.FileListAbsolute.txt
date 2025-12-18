@@ -1,0 +1,6 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NegativeRelations\obj\Debug\net6.0\NegativeRelations.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NegativeRelations\obj\Debug\net6.0\NegativeRelations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NegativeRelations\obj\Debug\net6.0\NegativeRelations.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NegativeRelations\obj\Debug\net6.0\NegativeRelations.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NegativeRelations\obj\Debug\net6.0\NegativeRelations.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NegativeRelations\obj\Debug\net6.0\NegativeRelations.sourcelink.json
