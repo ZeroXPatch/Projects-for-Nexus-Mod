@@ -1,31 +1,38 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-
-    <!-- Stardew 1.6 is 64-bit on Windows -->
     <Platforms>AnyCPU;x64</Platforms>
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\smapi-internal\0Harmony.dll</HintPath>
+    </Reference>
     <Reference Include="MonoGame.Framework">
       <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="SMAPI.Toolkit.CoreInterfaces">
       <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\smapi-internal\SMAPI.Toolkit.CoreInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Stardew Valley">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\Stardew Valley.dll</HintPath>
+    </Reference>
+
     <Reference Include="StardewModdingAPI">
       <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\StardewModdingAPI.dll</HintPath>
     </Reference>
+
+    <!-- ✅ THIS is what you are missing -->
+
     <Reference Include="StardewValley.GameData">
       <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\StardewValley.GameData.dll</HintPath>
     </Reference>
+
     <Reference Include="xTile">
       <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\xTile.dll</HintPath>
     </Reference>
   </ItemGroup>
-
 </Project>

@@ -1,7 +1,24 @@
 {
-  "log.disabled": "Priority mod is disabled in config.json.",
-  "log.not_windows": "Not running on Windows; skipping process priority change.",
-  "log.invalid_priority": "Invalid Priority value in config.json: '{{value}}'. Allowed: Normal, AboveNormal, High.",
-  "log.set_priority": "Set Stardew Valley process priority to {{value}}.",
-  "log.failed": "Failed to set process priority ({{error}}): {{message}}"
+  "log.invalid_priority": "Invalid Priority value: '{{value}}'. Allowed: Normal, AboveNormal, High.",
+  "log.set_priority_focused": "Game focused: set process priority to {{value}}.",
+  "log.set_priority_unfocused": "Game unfocused: set process priority to {{value}}.",
+  "log.failed": "Failed to set process priority ({{error}}): {{message}}",
+
+  "gmcm.section.general": "Priority Settings",
+  "gmcm.section.general.tooltip": "Adjust how Stardew Valley's process priority changes based on window focus.",
+
+  "gmcm.enabled": "Enable mod",
+  "gmcm.enabled.tooltip": "If disabled, the mod will not change process priority.",
+
+  "gmcm.focusedPriority": "Focused priority",
+  "gmcm.focusedPriority.tooltip": "Priority to use when the game window is focused.",
+
+  "gmcm.unfocusedPriority": "Unfocused priority",
+  "gmcm.unfocusedPriority.tooltip": "Priority to use when the game window is not focused.",
+
+  "gmcm.logSuccess": "Log success messages",
+  "gmcm.logSuccess.tooltip": "Show a log message when priority is applied.",
+
+  "gmcm.logFailure": "Log failure messages",
+  "gmcm.logFailure.tooltip": "Show a log message if applying priority fails."
 }

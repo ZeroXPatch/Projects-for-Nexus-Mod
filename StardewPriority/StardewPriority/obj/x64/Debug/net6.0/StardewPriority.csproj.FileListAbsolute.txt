@@ -24,3 +24,16 @@ C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPr
 C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPriority\obj\x64\Debug\net6.0\refint\StardewPriority.dll
 C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPriority\obj\x64\Debug\net6.0\StardewPriority.pdb
 C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPriority\obj\x64\Debug\net6.0\ref\StardewPriority.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPriority\bin\x64\Debug\net6.0\0Harmony.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPriority\bin\x64\Debug\net6.0\Stardew Valley.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPriority\bin\x64\Debug\net6.0\Mono.Cecil.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPriority\bin\x64\Debug\net6.0\Steamworks.NET.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPriority\bin\x64\Debug\net6.0\GalaxyCSharp.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPriority\bin\x64\Debug\net6.0\Lidgren.Network.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPriority\bin\x64\Debug\net6.0\System.Data.HashFunction.Interfaces.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPriority\bin\x64\Debug\net6.0\TextCopy.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPriority\bin\x64\Debug\net6.0\System.Data.HashFunction.xxHash.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPriority\bin\x64\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPriority\bin\x64\Debug\net6.0\System.Data.HashFunction.Core.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPriority\bin\x64\Debug\net6.0\0Harmony.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewPriority\StardewPriority\bin\x64\Debug\net6.0\Stardew Valley.xml

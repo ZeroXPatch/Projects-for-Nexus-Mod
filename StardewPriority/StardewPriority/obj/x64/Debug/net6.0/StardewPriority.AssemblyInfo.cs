@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StardewPriority")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83ae621a6964c9635be9702df5228c1210aa6e5d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a3aaa3377a44782db7b409ef9332f225b6be527")]
 [assembly: System.Reflection.AssemblyProductAttribute("StardewPriority")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StardewPriority")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

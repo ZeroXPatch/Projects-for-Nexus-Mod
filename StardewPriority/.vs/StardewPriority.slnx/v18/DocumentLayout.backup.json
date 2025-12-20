@@ -3,19 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StardewPriority\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GOG Games\\Stardew Valley\\Mods\\StardewPriority\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{3D740A7C-84CE-1D4C-792D-143964BF427A}|StardewPriority\\StardewPriority.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\stardewpriority\\stardewpriority\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D740A7C-84CE-1D4C-792D-143964BF427A}|StardewPriority\\StardewPriority.csproj|solutionrelative:stardewpriority\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D740A7C-84CE-1D4C-792D-143964BF427A}|StardewPriority\\StardewPriority.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\stardewpriority\\stardewpriority\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3D740A7C-84CE-1D4C-792D-143964BF427A}|StardewPriority\\StardewPriority.csproj|solutionrelative:stardewpriority\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{3D740A7C-84CE-1D4C-792D-143964BF427A}|StardewPriority\\StardewPriority.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\stardewpriority\\stardewpriority\\stardewpriority.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3D740A7C-84CE-1D4C-792D-143964BF427A}|StardewPriority\\StardewPriority.csproj|solutionrelative:stardewpriority\\stardewpriority.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D740A7C-84CE-1D4C-792D-143964BF427A}|StardewPriority\\StardewPriority.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\stardewpriority\\stardewpriority\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3D740A7C-84CE-1D4C-792D-143964BF427A}|StardewPriority\\StardewPriority.csproj|solutionrelative:stardewpriority\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D740A7C-84CE-1D4C-792D-143964BF427A}|StardewPriority\\StardewPriority.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\stardewpriority\\stardewpriority\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D740A7C-84CE-1D4C-792D-143964BF427A}|StardewPriority\\StardewPriority.csproj|solutionrelative:stardewpriority\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D740A7C-84CE-1D4C-792D-143964BF427A}|StardewPriority\\StardewPriority.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\stardewpriority\\stardewpriority\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D740A7C-84CE-1D4C-792D-143964BF427A}|StardewPriority\\StardewPriority.csproj|solutionrelative:stardewpriority\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D740A7C-84CE-1D4C-792D-143964BF427A}|StardewPriority\\StardewPriority.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\stardewpriority\\stardewpriority\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3D740A7C-84CE-1D4C-792D-143964BF427A}|StardewPriority\\StardewPriority.csproj|solutionrelative:stardewpriority\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GOG Games\\Stardew Valley\\Mods\\StardewPriority\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,7 +43,7 @@
         },
         {
           "DockedWidth": 833,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,7 +51,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "StardewPriority",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StardewPriority\\StardewPriority\\StardewPriority.csproj",
+              "RelativeDocumentMoniker": "StardewPriority\\StardewPriority.csproj",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StardewPriority\\StardewPriority\\StardewPriority.csproj",
+              "RelativeToolTip": "StardewPriority\\StardewPriority.csproj",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-20T03:48:46.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "default.json",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StardewPriority\\StardewPriority\\i18n\\default.json",
+              "RelativeDocumentMoniker": "StardewPriority\\i18n\\default.json",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StardewPriority\\StardewPriority\\i18n\\default.json",
+              "RelativeToolTip": "StardewPriority\\i18n\\default.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-20T03:39:19.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\GOG Games\\Stardew Valley\\Mods\\StardewPriority\\manifest.json",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\StardewPriority\\manifest.json",
@@ -51,44 +85,45 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\StardewPriority\\manifest.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-18T04:12:54.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-18T04:12:54.257Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StardewPriority\\StardewPriority\\manifest.json",
               "RelativeDocumentMoniker": "StardewPriority\\manifest.json",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StardewPriority\\StardewPriority\\manifest.json",
               "RelativeToolTip": "StardewPriority\\manifest.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-12-18T04:10:40.44Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ModConfig.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StardewPriority\\StardewPriority\\ModConfig.cs",
               "RelativeDocumentMoniker": "StardewPriority\\ModConfig.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StardewPriority\\StardewPriority\\ModConfig.cs",
               "RelativeToolTip": "StardewPriority\\ModConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T04:08:23.647Z"
+              "WhenOpened": "2025-12-18T04:08:23.647Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StardewPriority\\StardewPriority\\ModEntry.cs",
               "RelativeDocumentMoniker": "StardewPriority\\ModEntry.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\StardewPriority\\StardewPriority\\ModEntry.cs",
               "RelativeToolTip": "StardewPriority\\ModEntry.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAYwGgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAUwJwAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T04:07:16.511Z"
+              "WhenOpened": "2025-12-18T04:07:16.511Z",
+              "EditorCaption": ""
             }
           ]
         },
