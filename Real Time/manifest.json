@@ -1,0 +1,10 @@
+{
+  "Name": "Real-Time Valley (Clock Sync Only)",
+  "Author": "Real-Time Valley Team",
+  "Version": "1.0.0",
+  "Description": "Synchronize in-game clock with your real-world time (clock sync only).",
+  "UniqueID": "RealTimeValley.ClockSyncOnly",
+  "EntryDll": "RealTimeValley.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}
