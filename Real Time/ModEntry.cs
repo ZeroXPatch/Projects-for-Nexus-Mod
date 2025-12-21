@@ -1,10 +1,10 @@
 using System;
+using System.Linq;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
 using StardewValley.Characters;
-using StardewValley.GameData.Characters;
 using StardewValley.Locations;
 using xTile.Dimensions;
 
@@ -13,20 +13,26 @@ namespace RealTimeValley;
 public class ModEntry : Mod
 {
     private ModConfig Config = new();
+
     private DateTime _lastSyncCheck = DateTime.MinValue;
     private DateTime _lastNpcFix = DateTime.MinValue;
     private DateTime _lastErrorLog = DateTime.MinValue;
+
     private bool _pendingInitialSync;
     private bool _initialSyncDone;
     private bool _wasPaused;
-    private bool _nightHoldLogged;
+
+    private int _lastTenMinuteMarkApplied = -1;
 
     public override void Entry(IModHelper helper)
     {
         Config = helper.ReadConfig<ModConfig>();
-        Helper.Events.GameLoop.GameLaunched += OnGameLaunched;
-        Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
-        Helper.Events.GameLoop.OneSecondUpdateTicking += OnOneSecondUpdate;
+
+        helper.Events.GameLoop.GameLaunched += OnGameLaunched;
+        helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
+
+        helper.Events.GameLoop.OneSecondUpdateTicking += OnOneSecondUpdate;
+        helper.Events.GameLoop.UpdateTicking += OnUpdateTicking;
     }
 
     private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
@@ -40,31 +46,58 @@ public class ModEntry : Mod
 
         api.Register(ModManifest, ResetConfig, SaveConfig);
 
-        api.AddBoolOption(ModManifest, () => Config.Enable, value => Config.Enable = value, () => "Enable");
-        api.AddTextOption(ModManifest, () => Config.RoundMode.ToString(), value => Config.RoundMode = Enum.TryParse<RoundMode>(value, out var r) ? r : Config.RoundMode, () => "Rounding Mode", () => "How to round real-world minutes to Stardew time (10 minute increments).", Enum.GetNames(typeof(RoundMode)));
-        api.AddNumberOption(ModManifest, () => Config.SyncIntervalSeconds, value => Config.SyncIntervalSeconds = Math.Max(1, value), () => "Sync Interval (seconds)");
-        api.AddNumberOption(ModManifest, () => Config.SmallDriftMinutes, value => Config.SmallDriftMinutes = Math.Max(0, value), () => "Small Drift Minutes");
-        api.AddNumberOption(ModManifest, () => Config.LargeDriftMinutes, value => Config.LargeDriftMinutes = Math.Max(Config.SmallDriftMinutes, value), () => "Large Drift Minutes");
-        api.AddTextOption(ModManifest, () => Config.LargeDriftBehavior.ToString(), value => Config.LargeDriftBehavior = Enum.TryParse<LargeDriftBehavior>(value, out var b) ? b : Config.LargeDriftBehavior, () => "Large Drift Behavior", null, Enum.GetNames(typeof(LargeDriftBehavior)));
-        api.AddBoolOption(ModManifest, () => Config.AllowRewind, value => Config.AllowRewind = value, () => "Allow Rewind", () => "Allow time to move backwards to match real time.");
-        api.AddBoolOption(ModManifest, () => Config.PauseWhenPaused, value => Config.PauseWhenPaused = value, () => "Pause When Game Paused");
-        api.AddBoolOption(ModManifest, () => Config.ClampAtNight, value => Config.ClampAtNight = value, () => "Clamp At Night", () => "Keep time within safe night bounds to avoid pass-out.");
-        api.AddBoolOption(ModManifest, () => Config.PauseSyncAtMaxNight, value => Config.PauseSyncAtMaxNight = value, () => "Pause Sync At Night Max", () => "When clamped at night max, pause syncing until morning to avoid endless midnight.");
-        api.AddNumberOption(ModManifest, () => Config.ResumeSyncHour, value => Config.ResumeSyncHour = Math.Clamp(value, 0, 23), () => "Resume Sync Hour", () => "Real-world hour to resume syncing after night clamp (0-23).");
-        api.AddBoolOption(ModManifest, () => Config.TreatMidnightAsLateNight, value => Config.TreatMidnightAsLateNight = value, () => "Treat Midnight As Late Night", () => "Map 12:00-1:59 AM to 24:00-25:59 to avoid rewind blocks.");
-        api.AddNumberOption(ModManifest, () => Config.ClampMinTime, value => Config.ClampMinTime = value, () => "Clamp Min Time");
-        api.AddNumberOption(ModManifest, () => Config.ClampMaxTime, value => Config.ClampMaxTime = Math.Clamp(value, 600, 2600), () => "Clamp Max Time");
-        api.AddBoolOption(ModManifest, () => Config.RunTenMinuteUpdateForLargeForwardJumps, value => Config.RunTenMinuteUpdateForLargeForwardJumps = value, () => "Run 10-Minute Updates On Large Jumps", () => "Step through 10-minute updates when jumping forward to keep world state consistent.");
-        api.AddNumberOption(ModManifest, () => Config.MaxTenMinuteCatchupSteps, value => Config.MaxTenMinuteCatchupSteps = Math.Max(1, value), () => "Max 10-Minute Catch-up Steps");
-        api.AddBoolOption(ModManifest, () => Config.ForceStepCatchupForLargeJumps, value => Config.ForceStepCatchupForLargeJumps = value, () => "Force Step Catch-up", () => "Always use stepped 10-minute catch-up instead of instant snaps for large jumps.");
-        api.AddBoolOption(ModManifest, () => Config.UseShouldTimePassCheck, value => Config.UseShouldTimePassCheck = value, () => "Use ShouldTimePass()", () => "Use the game's shouldTimePass() to detect pauses instead of only menu checks.");
-        api.AddNumberOption(ModManifest, () => Config.NpcWakeEarliestTime, value => Config.NpcWakeEarliestTime = Math.Clamp(value, 600, 2600), () => "NPC Wake Earliest Time", () => "Earliest in-game time to forcibly wake sleeping NPCs when correcting schedules.");
-        api.AddBoolOption(ModManifest, () => Config.NPCFixOnLoad, value => Config.NPCFixOnLoad = value, () => "NPC Fix On Load");
-        api.AddBoolOption(ModManifest, () => Config.NPCFixOnLargeCorrection, value => Config.NPCFixOnLargeCorrection = value, () => "NPC Fix On Large Correction");
-        api.AddNumberOption(ModManifest, () => Config.NpcFixCooldownSeconds, value => Config.NpcFixCooldownSeconds = Math.Max(0, value), () => "NPC Fix Cooldown (seconds)");
-        api.AddTextOption(ModManifest, () => Config.NPCWarpAggressiveness.ToString(), value => Config.NPCWarpAggressiveness = Enum.TryParse<NPCWarpAggressiveness>(value, out var a) ? a : Config.NPCWarpAggressiveness, () => "NPC Warp Aggressiveness", null, Enum.GetNames(typeof(NPCWarpAggressiveness)));
-        api.AddBoolOption(ModManifest, () => Config.ShowCompatibilityWarnings, value => Config.ShowCompatibilityWarnings = value, () => "Show Compatibility Warnings");
-        api.AddBoolOption(ModManifest, () => Config.DebugLogging, value => Config.DebugLogging = value, () => "Debug Logging");
+        api.AddSectionTitle(ModManifest, () => "Real-Time Valley");
+
+        api.AddBoolOption(ModManifest, () => Config.Enable, v => Config.Enable = v, () => "Enable");
+        api.AddBoolOption(ModManifest, () => Config.MinuteAccurateClock, v => Config.MinuteAccurateClock = v,
+            () => "Minute-accurate clock",
+            () => "Freeze vanilla time and set in-game time to your real clock minute-by-minute.");
+
+        api.AddNumberOption(ModManifest, () => Config.SyncIntervalSeconds, v => Config.SyncIntervalSeconds = Math.Max(1, v),
+            () => "Sync Interval (seconds)");
+
+        api.AddSectionTitle(ModManifest, () => "World Catch-up");
+        api.AddBoolOption(ModManifest, () => Config.RunWorldCatchupOnLoad, v => Config.RunWorldCatchupOnLoad = v,
+            () => "Catch-up on load",
+            () => "Simulates 10-minute updates to make shops/NPC schedules correct after time jumps.");
+        api.AddBoolOption(ModManifest, () => Config.RunWorldCatchupOnLargeForwardJump, v => Config.RunWorldCatchupOnLargeForwardJump = v,
+            () => "Catch-up on large forward jump");
+        api.AddNumberOption(ModManifest, () => Config.LargeForwardJumpMinutes, v => Config.LargeForwardJumpMinutes = Math.Max(10, v),
+            () => "Large jump threshold (minutes)");
+        api.AddNumberOption(ModManifest, () => Config.MaxWorldCatchupTenMinuteSteps, v => Config.MaxWorldCatchupTenMinuteSteps = Math.Max(1, v),
+            () => "Max catch-up steps (10-min)");
+
+        api.AddSectionTitle(ModManifest, () => "Festivals (fixes empty festival maps)");
+        api.AddBoolOption(ModManifest, () => Config.FestivalFriendlyMode, v => Config.FestivalFriendlyMode = v,
+            () => "Festival-friendly mode",
+            () => "Avoids syncing you past the festival window so festivals actually spawn.");
+        api.AddBoolOption(ModManifest, () => Config.HoldTimeInsideFestivalWindow, v => Config.HoldTimeInsideFestivalWindow = v,
+            () => "Hold time inside festival window");
+        api.AddNumberOption(ModManifest, () => Config.FestivalHoldTimeDay, v => Config.FestivalHoldTimeDay = Math.Clamp(v, 600, 2600),
+            () => "Festival hold time (day)");
+        api.AddNumberOption(ModManifest, () => Config.FestivalHoldTimeNight, v => Config.FestivalHoldTimeNight = Math.Clamp(v, 1800, 2600),
+            () => "Festival hold time (night)");
+
+        api.AddSectionTitle(ModManifest, () => "NPC Fix");
+        api.AddBoolOption(ModManifest, () => Config.NPCFixOnLoad, v => Config.NPCFixOnLoad = v, () => "NPC Fix On Load");
+        api.AddBoolOption(ModManifest, () => Config.NPCFixAfterWorldCatchup, v => Config.NPCFixAfterWorldCatchup = v,
+            () => "NPC Fix After Catch-up");
+        api.AddNumberOption(ModManifest, () => Config.NpcFixCooldownSeconds, v => Config.NpcFixCooldownSeconds = Math.Max(0, v),
+            () => "NPC Fix Cooldown (seconds)");
+
+        api.AddTextOption(
+            ModManifest,
+            () => Config.NPCWarpAggressiveness.ToString(),
+            v => Config.NPCWarpAggressiveness = Enum.TryParse<NPCWarpAggressiveness>(v, out var a) ? a : Config.NPCWarpAggressiveness,
+            () => "NPC Warp Aggressiveness",
+            () => "Aggressive may nudge sleeping NPCs slightly off tiles to unstick them.",
+            Enum.GetNames(typeof(NPCWarpAggressiveness))
+        );
+
+        api.AddSectionTitle(ModManifest, () => "Debug");
+        api.AddBoolOption(ModManifest, () => Config.PauseWhenPaused, v => Config.PauseWhenPaused = v, () => "Pause When Game Paused");
+        api.AddBoolOption(ModManifest, () => Config.UseShouldTimePassCheck, v => Config.UseShouldTimePassCheck = v, () => "Use shouldTimePass()");
+        api.AddBoolOption(ModManifest, () => Config.DebugLogging, v => Config.DebugLogging = v, () => "Debug Logging");
     }
 
     private void OnSaveLoaded(object? sender, SaveLoadedEventArgs e)
@@ -72,6 +105,23 @@ public class ModEntry : Mod
         _pendingInitialSync = true;
         _initialSyncDone = false;
         _lastSyncCheck = DateTime.MinValue;
+        _lastTenMinuteMarkApplied = -1;
+    }
+
+    /// <summary>Freeze vanilla time in minute-accurate mode.</summary>
+    private void OnUpdateTicking(object? sender, UpdateTickingEventArgs e)
+    {
+        if (!Context.IsWorldReady || !Config.Enable || !Config.MinuteAccurateClock)
+            return;
+
+        if (IsHardTimeLocked())
+            return;
+
+        if (Config.PauseWhenPaused && IsGamePaused())
+            return;
+
+        try { Game1.gameTimeInterval = 0; }
+        catch { /* drift may return if field changes */ }
     }
 
     private void OnOneSecondUpdate(object? sender, OneSecondUpdateTickingEventArgs e)
@@ -81,77 +131,33 @@ public class ModEntry : Mod
             if (!Context.IsWorldReady || !Config.Enable)
                 return;
 
-            if (_pendingInitialSync && !_initialSyncDone)
-            {
-                ApplyInitialSync();
-                return;
-            }
-
             var now = DateTime.Now;
             if ((now - _lastSyncCheck).TotalSeconds < Math.Max(1, Config.SyncIntervalSeconds))
                 return;
 
             _lastSyncCheck = now;
 
-            bool isPaused = IsGamePaused();
-            if (Config.PauseWhenPaused && isPaused)
+            bool paused = IsGamePaused();
+            if (Config.PauseWhenPaused && paused)
             {
                 _wasPaused = true;
                 return;
             }
 
-            bool justUnpaused = _wasPaused && !isPaused;
-            _wasPaused = isPaused;
+            bool justUnpaused = _wasPaused && !paused;
+            _wasPaused = paused;
 
-            if (IsTimeLockedUnsafe())
+            if (IsHardTimeLocked())
                 return;
 
-            int targetTime = GetTargetTimeOfDay(DateTime.Now, Config.RoundMode);
-
-            if (Config.PauseSyncAtMaxNight && targetTime >= Config.ClampMaxTime && DateTime.Now.Hour < Config.ResumeSyncHour)
+            if (_pendingInitialSync && !_initialSyncDone)
             {
-                if (!_nightHoldLogged && Config.DebugLogging)
-                {
-                    Monitor.Log($"Sync paused at night max {Config.ClampMaxTime} until real hour {Config.ResumeSyncHour}.", LogLevel.Debug);
-                    _nightHoldLogged = true;
-                }
+                ApplyInitialSync(now);
                 return;
             }
 
-            _nightHoldLogged = false;
-            int currentTime = Game1.timeOfDay;
-            int driftMinutes = TimeToMinutes(targetTime) - TimeToMinutes(currentTime);
-
-            if (driftMinutes == 0)
-                return;
-
-            bool isBackward = driftMinutes < 0;
-            if (isBackward && !Config.AllowRewind)
-            {
-                if (Config.DebugLogging)
-                    Monitor.Log($"Skipping rewind: target {targetTime} < current {currentTime}", LogLevel.Trace);
-                return;
-            }
-
-            int absDrift = Math.Abs(driftMinutes);
-            if (absDrift >= Config.LargeDriftMinutes || (justUnpaused && absDrift >= Config.SmallDriftMinutes))
-            {
-                HandleLargeDrift(targetTime, currentTime, absDrift);
-                return;
-            }
-
-            if (absDrift > Config.SmallDriftMinutes)
-            {
-                int direction = Math.Sign(driftMinutes);
-                int steps = Math.Clamp(absDrift / 10, 1, 2);
-                int newTime = StepTime(Game1.timeOfDay, direction, steps);
-                ApplyTime(newTime, runNpcFix: false);
-                return;
-            }
-
-            int smallStepDirection = Math.Sign(driftMinutes);
-            int smallStepTime = StepTime(Game1.timeOfDay, smallStepDirection, 1);
-            ApplyTime(smallStepTime, runNpcFix: false);
+            if (Config.MinuteAccurateClock)
+                ApplyMinuteAccurateTime(now, justUnpaused);
         }
         catch (Exception ex)
         {
@@ -163,166 +169,342 @@ public class ModEntry : Mod
         }
     }
 
-    private void ApplyInitialSync()
+    private void ApplyInitialSync(DateTime now)
     {
-        if (!Context.IsWorldReady || IsTimeLockedUnsafe())
-            return;
+        int target = GetTargetTimeOfDayExact(now);
+        target = ApplyFestivalRules(target);
+        target = ClampTime(target);
 
-        int target = GetTargetTimeOfDay(DateTime.Now, Config.RoundMode);
-        ApplyTime(target, Config.NPCFixOnLoad);
+        int current = ClampTime(Game1.timeOfDay);
+
+        _lastTenMinuteMarkApplied = TimeToMinutes(current) / 10;
+
+        // Catch up world logic on load (unless we're mid-event)
+        if (Config.RunWorldCatchupOnLoad && !IsHardTimeLocked())
+        {
+            int curMin = TimeToMinutes(current);
+            int tgtMin = TimeToMinutes(target);
+
+            if (tgtMin > curMin)
+                WorldCatchUpForward(current, target);
+        }
+
+        SetTimeExact(target);
+
+        // If you're already on the festival map, try to kick the festival event to start.
+        TryKickFestivalEvent();
+
+        if (Config.NPCFixOnLoad)
+            RunNpcCatchUp();
+
         _initialSyncDone = true;
         _pendingInitialSync = false;
     }
 
-    private void HandleLargeDrift(int targetTime, int currentTime, int absDrift)
+    private void ApplyMinuteAccurateTime(DateTime now, bool justUnpaused)
     {
-        switch (Config.LargeDriftBehavior)
+        int target = GetTargetTimeOfDayExact(now);
+
+        // Festivals: stop syncing you past the entry window before you've attended
+        target = ApplyFestivalRules(target);
+
+        // Night clamp
+        if (Config.ClampAtNight && Config.PauseSyncAtMaxNight)
         {
-            case LargeDriftBehavior.HardSnap:
-                ApplyTime(targetTime, Config.NPCFixOnLargeCorrection);
-                break;
-            case LargeDriftBehavior.SoftCatchup:
-                int direction = Math.Sign(TimeToMinutes(targetTime) - TimeToMinutes(currentTime));
-                int steps = Math.Min(3, Math.Max(1, absDrift / 10));
-                int newTime = StepTime(currentTime, direction, steps);
-                bool reached = newTime == targetTime;
-                ApplyTime(newTime, runNpcFix: reached && Config.NPCFixOnLargeCorrection);
-                break;
+            int max = Math.Max(Config.ClampMinTime, Config.ClampMaxTime);
+            int t = ClampTime(target);
+
+            if (t >= max && now.Hour < Config.ResumeSyncHour)
+            {
+                SetTimeExact(max);
+                return;
+            }
+        }
+
+        int clampedTarget = ClampTime(target);
+        int current = ClampTime(Game1.timeOfDay);
+
+        if (current == clampedTarget)
+            return;
+
+        int currentMin = TimeToMinutes(current);
+        int targetMin = TimeToMinutes(clampedTarget);
+        int absDrift = Math.Abs(targetMin - currentMin);
+
+        // Large forward jump during play: simulate missing 10-min updates
+        if (Config.RunWorldCatchupOnLargeForwardJump
+            && targetMin > currentMin
+            && absDrift >= Config.LargeForwardJumpMinutes)
+        {
+            WorldCatchUpForward(current, clampedTarget);
+            current = ClampTime(Game1.timeOfDay);
+            currentMin = TimeToMinutes(current);
+        }
+
+        // Run 10-minute updates for boundaries we cross (forward)
+        ApplyTenMinuteBoundaryUpdates(currentMin, targetMin);
+
+        // Set exact minute time
+        SetTimeExact(clampedTarget);
+
+        // If on festival map and festival should be active, try to start it
+        TryKickFestivalEvent();
+
+        if (Config.NPCFixAfterWorldCatchup && absDrift >= Config.LargeForwardJumpMinutes)
+            RunNpcCatchUp();
+    }
+
+    /// <summary>
+    /// Festival fix: if it's a festival day and you're about to sync outside the festival window,
+    /// hold time inside the window so the festival can spawn when you enter the area.
+    /// </summary>
+    private int ApplyFestivalRules(int targetTime)
+    {
+        if (!Config.FestivalFriendlyMode || !Config.HoldTimeInsideFestivalWindow)
+            return targetTime;
+
+        if (!Game1.isFestival())
+            return targetTime;
+
+        // If the festival event is already running, do nothing.
+        if (Game1.eventUp || Game1.CurrentEvent is not null)
+            return targetTime;
+
+        // Determine typical festival time window (simple heuristic that covers most cases)
+        GetFestivalWindow(out int start, out int end, out bool nightFestival);
+
+        int t = targetTime;
+
+        // If target outside window, hold inside window so festival can trigger
+        if (TimeToMinutes(t) < TimeToMinutes(start) || TimeToMinutes(t) > TimeToMinutes(end))
+        {
+            int hold = nightFestival ? Config.FestivalHoldTimeNight : Config.FestivalHoldTimeDay;
+
+            // Keep hold inside window just in case user sets something weird
+            if (TimeToMinutes(hold) < TimeToMinutes(start)) hold = start;
+            if (TimeToMinutes(hold) > TimeToMinutes(end)) hold = end;
+
+            if (Config.DebugLogging)
+                Monitor.Log($"Festival day detected. Holding time at {hold} (window {start}-{end}) so festival can spawn.", LogLevel.Debug);
+
+            return hold;
+        }
+
+        return t;
+    }
+
+    /// <summary>
+    /// Very small heuristic for festival windows.
+    /// Most festivals: 0900-1400
+    /// Night Market: 1700-2600 (Winter 15-17)
+    /// Moonlight Jellies (Summer 28): night
+    /// Spirit's Eve (Fall 27): night
+    /// </summary>
+    private void GetFestivalWindow(out int start, out int end, out bool nightFestival)
+    {
+        nightFestival = false;
+        start = 900;
+        end = 1400;
+
+        string s = Game1.currentSeason;
+        int d = Game1.dayOfMonth;
+
+        // Night Market
+        if (s == "winter" && d is >= 15 and <= 17)
+        {
+            start = 1700;
+            end = 2600;
+            nightFestival = true;
+            return;
+        }
+
+        // Night festivals
+        if (s == "summer" && d == 28) // Dance of the Moonlight Jellies
+        {
+            start = 2200;
+            end = 2600;
+            nightFestival = true;
+            return;
+        }
+
+        if (s == "fall" && d == 27) // Spirit's Eve
+        {
+            start = 2200;
+            end = 2600;
+            nightFestival = true;
+            return;
         }
     }
 
-    private int StepTime(int startTime, int direction, int steps)
+    /// <summary>
+    /// If we're on a festival map and time is within the festival window, nudge the game to start the event.
+    /// This helps cases where you arrive and it's empty due to timing sync.
+    /// </summary>
+    private void TryKickFestivalEvent()
     {
-        int minutes = TimeToMinutes(startTime);
-        minutes += direction * steps * 10;
-        int maxTime = Config.ClampAtNight ? Config.ClampMaxTime : 2600;
-        int clamped = Math.Clamp(minutes, TimeToMinutes(Config.ClampMinTime), TimeToMinutes(maxTime));
-        return MinutesToTime(clamped);
-    }
+        if (!Config.FestivalFriendlyMode)
+            return;
 
-    public int GetTargetTimeOfDay(DateTime now, RoundMode mode)
-    {
-        int minutes = now.Hour * 60 + now.Minute;
-        if (Config.TreatMidnightAsLateNight && now.Hour < 2)
-            minutes += 24 * 60;
+        if (!Game1.isFestival())
+            return;
 
-        int rounded = RoundTo10Min(MinutesToTime(minutes), mode);
-        int roundedMinutes = TimeToMinutes(rounded);
+        if (Game1.eventUp || Game1.CurrentEvent is not null)
+            return;
 
-        int clampedMin = TimeToMinutes(Math.Max(0, Config.ClampMinTime));
-        int clampedMax = Config.ClampAtNight
-            ? TimeToMinutes(Math.Clamp(Config.ClampMaxTime, Config.ClampMinTime, 2600))
-            : TimeToMinutes(2600);
+        // If the player is in a menu/event, don't touch.
+        if (IsGamePaused())
+            return;
 
-        int finalMinutes = Math.Clamp(roundedMinutes, clampedMin, clampedMax);
-        return MinutesToTime(finalMinutes);
-    }
+        // Only attempt if within window
+        GetFestivalWindow(out int start, out int end, out _);
 
-    public int RoundTo10Min(int rawTime, RoundMode mode)
-    {
-        int minutes = TimeToMinutes(rawTime);
-        int remainder = minutes % 10;
-        return mode switch
+        int t = Game1.timeOfDay;
+        if (TimeToMinutes(t) < TimeToMinutes(start) || TimeToMinutes(t) > TimeToMinutes(end))
+            return;
+
+        try
         {
-            RoundMode.Down10 => MinutesToTime(minutes - remainder),
-            RoundMode.Up10 => MinutesToTime(minutes + (remainder == 0 ? 0 : 10 - remainder)),
-            _ => MinutesToTime(minutes + (remainder >= 5 ? 10 - remainder : -remainder))
-        };
+            // Many festivals start when entering the location; this helps if you're already there.
+            Game1.currentLocation?.checkForEvents();
+        }
+        catch
+        {
+            // Method existence can vary; safe no-op.
+        }
     }
 
-    public bool IsGamePaused()
+    /// <summary>
+    /// Simulate time passing in 10-minute steps and run performTenMinuteClockUpdate
+    /// so NPC schedules/shops/world state catch up correctly.
+    /// </summary>
+    private void WorldCatchUpForward(int fromTime, int toTime)
+    {
+        int fromMin = TimeToMinutes(fromTime);
+        int toMin = TimeToMinutes(toTime);
+
+        if (toMin <= fromMin)
+            return;
+
+        int startMark = (fromMin / 10) * 10;
+        int endMark = (toMin / 10) * 10;
+
+        int steps = 0;
+
+        for (int mark = startMark + 10; mark <= endMark; mark += 10)
+        {
+            if (steps++ >= Config.MaxWorldCatchupTenMinuteSteps)
+                break;
+
+            int stepTime = ClampTime(MinutesToTime(mark));
+            Game1.timeOfDay = stepTime;
+
+            try { Game1.performTenMinuteClockUpdate(); }
+            catch (Exception ex)
+            {
+                if (Config.DebugLogging)
+                    Monitor.Log($"Ten-minute update failed at {Game1.timeOfDay}: {ex}", LogLevel.Trace);
+            }
+        }
+
+        _lastTenMinuteMarkApplied = TimeToMinutes(ClampTime(Game1.timeOfDay)) / 10;
+    }
+
+    private void ApplyTenMinuteBoundaryUpdates(int currentMin, int targetMin)
+    {
+        if (_lastTenMinuteMarkApplied < 0)
+            _lastTenMinuteMarkApplied = currentMin / 10;
+
+        if (targetMin <= currentMin)
+        {
+            _lastTenMinuteMarkApplied = targetMin / 10;
+            return;
+        }
+
+        int targetMark = targetMin / 10;
+        if (targetMark <= _lastTenMinuteMarkApplied)
+            return;
+
+        for (int mark = _lastTenMinuteMarkApplied + 1; mark <= targetMark; mark++)
+        {
+            int stepMinutes = mark * 10;
+            int stepTime = ClampTime(MinutesToTime(stepMinutes));
+            Game1.timeOfDay = stepTime;
+
+            try { Game1.performTenMinuteClockUpdate(); }
+            catch (Exception ex)
+            {
+                if (Config.DebugLogging)
+                    Monitor.Log($"Ten-minute update failed at {Game1.timeOfDay}: {ex}", LogLevel.Trace);
+            }
+        }
+
+        _lastTenMinuteMarkApplied = targetMark;
+    }
+
+    private void SetTimeExact(int time)
+    {
+        int clamped = ClampTime(time);
+        if (Game1.timeOfDay != clamped)
+            Game1.timeOfDay = clamped;
+    }
+
+    private int ClampTime(int time)
+    {
+        if (!Config.ClampAtNight)
+            return time;
+
+        int min = Config.ClampMinTime;
+        int max = Math.Max(Config.ClampMinTime, Config.ClampMaxTime);
+        return Math.Clamp(time, min, max);
+    }
+
+    private int GetTargetTimeOfDayExact(DateTime now)
+    {
+        int h = now.Hour;
+        int m = now.Minute;
+
+        if (Config.TreatMidnightAsLateNight && h < 2)
+            h += 24;
+
+        return h * 100 + m;
+    }
+
+    private bool IsGamePaused()
     {
         if (Config.UseShouldTimePassCheck)
         {
-            try
-            {
-                return !Game1.shouldTimePass();
-            }
-            catch
-            {
-                // fall back to menu-based pause detection
-            }
+            try { return !Game1.shouldTimePass(); }
+            catch { }
         }
 
         return Game1.paused || Game1.activeClickableMenu is not null;
     }
 
-    public bool IsTimeLockedUnsafe()
+    /// <summary>
+    /// ONLY block syncing for real event lock states.
+    /// IMPORTANT: do NOT block just because it's a festival day.
+    /// </summary>
+    private bool IsHardTimeLocked()
     {
         if (Game1.eventUp || Game1.CurrentEvent is not null)
             return true;
-        if (Game1.isFestival())
-            return true;
-        if (Game1.currentLocation?.NameOrUniqueName?.Contains("Temp", StringComparison.OrdinalIgnoreCase) == true)
-            return true;
+
         return false;
     }
 
-    public void ApplyTime(int newTime, bool runNpcFix)
+    // NPC catch-up (small safety net)
+    private void RunNpcCatchUp()
     {
-        int maxTime = Config.ClampAtNight ? Config.ClampMaxTime : 2600;
-        int clamped = Math.Clamp(newTime, Config.ClampMinTime, maxTime);
-        if (Game1.timeOfDay == clamped)
-            return;
-
-        if (Config.DebugLogging)
-            Monitor.Log($"Setting time from {Game1.timeOfDay} to {clamped}", LogLevel.Trace);
-
-        int current = Game1.timeOfDay;
-        int currentMinutes = TimeToMinutes(current);
-        int targetMinutes = TimeToMinutes(clamped);
-        bool forward = targetMinutes > currentMinutes;
-        bool shouldStep = Config.ForceStepCatchupForLargeJumps || (forward && Config.RunTenMinuteUpdateForLargeForwardJumps);
-        int diffMinutes = Math.Abs(targetMinutes - currentMinutes);
-
-        if (shouldStep && diffMinutes >= 20)
-        {
-            int stepDirection = Math.Sign(targetMinutes - currentMinutes);
-            int steps = Math.Min(diffMinutes / 10, Config.MaxTenMinuteCatchupSteps);
-            int minutesWalker = currentMinutes;
-            for (int i = 0; i < steps; i++)
-            {
-                minutesWalker += stepDirection * 10;
-                int steppedTime = MinutesToTime(minutesWalker);
-                Game1.timeOfDay = steppedTime;
-                try
-                {
-                    Game1.performTenMinuteClockUpdate(Game1.timeOfDay);
-                }
-                catch (Exception ex)
-                {
-                    if (Config.DebugLogging)
-                        Monitor.Log($"Ten-minute update failed at {Game1.timeOfDay}: {ex}", LogLevel.Trace);
-                }
-            }
-
-            Game1.timeOfDay = clamped;
-        }
-        else
-        {
-            Game1.timeOfDay = clamped;
-        }
-
-        if (runNpcFix)
-            RunNpcCatchUp();
-    }
-
-    public void RunNpcCatchUp()
-    {
-        if (!Context.IsWorldReady || IsTimeLockedUnsafe())
+        if (!Context.IsWorldReady || IsHardTimeLocked())
             return;
 
         if ((DateTime.UtcNow - _lastNpcFix).TotalSeconds < Config.NpcFixCooldownSeconds)
             return;
 
         _lastNpcFix = DateTime.UtcNow;
-        int adjustedCount = 0;
 
-        foreach (var location in Game1.locations)
+        foreach (var location in Game1.locations.Where(l => l is not null))
         {
-            if (location is null)
-                continue;
-
             foreach (var character in location.characters.ToList())
             {
                 if (character is not NPC npc)
@@ -331,25 +513,9 @@ public class ModEntry : Mod
                 if (!ShouldNudgeNpc(npc))
                     continue;
 
-                if (TryRefreshSchedule(npc))
-                {
-                    adjustedCount++;
-                    continue;
-                }
-
-                if (Config.NPCWarpAggressiveness == NPCWarpAggressiveness.Aggressive && npc.currentLocation == location)
-                {
-                    npc.controller = null;
-                    npc.Halt();
-                    npc.faceDirection(2);
-                    npc.isMovingOnPathFindPath.Value = false;
-                    adjustedCount++;
-                }
+                TryWakeNpcBestEffort(npc);
             }
         }
-
-        if (Config.DebugLogging)
-            Monitor.Log($"NPC catch-up ran; adjusted {adjustedCount} NPCs.", LogLevel.Debug);
     }
 
     private bool ShouldNudgeNpc(NPC npc)
@@ -357,87 +523,62 @@ public class ModEntry : Mod
         if (npc is Horse or Pet)
             return false;
 
-        if (Game1.timeOfDay < Config.NpcWakeEarliestTime)
+        if (npc.currentLocation is null)
             return false;
 
-        if (npc.currentLocation is null)
+        if (Game1.timeOfDay < Config.NpcWakeEarliestTime)
             return false;
 
         return npc.isSleeping.Value;
     }
 
-    private bool TryRefreshSchedule(NPC npc)
+    private bool TryWakeNpcBestEffort(NPC npc)
     {
         try
         {
-            bool wasSleeping = npc.isSleeping.Value;
-            if (wasSleeping)
-            {
-                npc.isSleeping.Value = false;
-                npc.sleepIfOutdoors.Value = false;
-                npc.controller = null;
-                npc.Halt();
-                npc.isMovingOnPathFindPath.Value = false;
-            }
+            npc.isSleeping.Value = false;
+            npc.controller = null;
+            npc.Halt();
+            npc.isMovingOnPathFindPath.Value = false;
 
-            npc.Schedule ??= npc.getSchedule(Game1.dayOfMonth);
-            bool applied = npc.checkSchedule(Game1.timeOfDay);
-            if (applied)
-                return true;
+            try { npc.checkSchedule(Game1.timeOfDay); } catch { }
 
-            if (npc.isSleeping.Value)
-            {
-                npc.isSleeping.Value = false;
-                npc.controller = null;
-                npc.Halt();
-                npc.isMovingOnPathFindPath.Value = false;
-            }
-
-            npc.Schedule = npc.getSchedule(Game1.dayOfMonth);
-            if (npc.checkSchedule(Game1.timeOfDay))
+            if (!npc.isSleeping.Value)
                 return true;
 
             if (Config.NPCWarpAggressiveness == NPCWarpAggressiveness.Aggressive && npc.currentLocation is GameLocation loc)
-            {
-                if (MoveNpcToNearbyTile(npc, loc))
-                {
-                    // one more try after un-sticking
-                    if (npc.checkSchedule(Game1.timeOfDay))
-                        return true;
-                    return true;
-                }
-            }
+                return MoveNpcToNearbyTile(npc, loc);
+
+            return true;
         }
         catch (Exception ex)
         {
             if (Config.DebugLogging)
                 Monitor.Log($"NPC catch-up failed for {npc.Name}: {ex}", LogLevel.Trace);
+            return false;
         }
-
-        return false;
     }
 
     private bool MoveNpcToNearbyTile(NPC npc, GameLocation location)
     {
-        var start = npc.getTileLocationPoint();
-        Point[] offsets =
-        {
-            new(1, 0),
-            new(-1, 0),
-            new(0, 1),
-            new(0, -1)
-        };
+        int sx = (int)(npc.Position.X / 64f);
+        int sy = (int)(npc.Position.Y / 64f);
 
-        foreach (var offset in offsets)
+        (int dx, int dy)[] offsets = { (1, 0), (-1, 0), (0, 1), (0, -1) };
+
+        foreach (var (dx, dy) in offsets)
         {
-            var candidate = new Point(start.X + offset.X, start.Y + offset.Y);
-            if (!location.isTileOnMap(candidate))
-                continue;
-            if (!location.isTilePassable(new Location(candidate.X, candidate.Y), Game1.viewport))
+            int x = sx + dx;
+            int y = sy + dy;
+
+            if (!location.isTilePassable(new Location(x, y), Game1.viewport))
                 continue;
 
-            npc.setTilePosition(candidate);
+            try { npc.setTilePosition(x, y); }
+            catch { npc.Position = new Vector2(x * 64f, y * 64f); }
+
             npc.Halt();
+            npc.controller = null;
             npc.isMovingOnPathFindPath.Value = false;
             return true;
         }
@@ -445,29 +586,22 @@ public class ModEntry : Mod
         return false;
     }
 
-    private int TimeToMinutes(int time)
+    private static int TimeToMinutes(int time)
     {
         int hours = time / 100;
         int minutes = time % 100;
         return hours * 60 + minutes;
     }
 
-    private int MinutesToTime(int minutes)
+    private static int MinutesToTime(int minutes)
     {
         int hours = minutes / 60;
         int mins = minutes % 60;
         return hours * 100 + mins;
     }
 
-    private void ResetConfig()
-    {
-        Config = new ModConfig();
-    }
-
-    private void SaveConfig()
-    {
-        Helper.WriteConfig(Config);
-    }
+    private void ResetConfig() => Config = new ModConfig();
+    private void SaveConfig() => Helper.WriteConfig(Config);
 
     private void CheckCompatibilityWarnings()
     {
@@ -482,9 +616,7 @@ public class ModEntry : Mod
         foreach (string modId in timeMods)
         {
             if (Helper.ModRegistry.IsLoaded(modId))
-            {
-                Monitor.Log($"Detected potential time-control mod '{modId}'. Clock syncing may conflict.", LogLevel.Warn);
-            }
+                Monitor.Log($"Detected potential time-control mod '{modId}'. Real-time syncing may conflict.", LogLevel.Warn);
         }
     }
 }

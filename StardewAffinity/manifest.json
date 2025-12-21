@@ -1,0 +1,9 @@
+{
+  "Name": "Stardew CPU Affinity",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Sets Stardew Valley CPU affinity on launch (Windows only). Default excludes CPU 0.",
+  "UniqueID": "ZeroXPatch.StardewCpuAffinity",
+  "EntryDll": "StardewAffinity.dll",
+  "MinimumApiVersion": "4.0.0"
+}

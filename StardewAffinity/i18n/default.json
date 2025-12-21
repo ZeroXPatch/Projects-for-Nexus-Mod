@@ -1,0 +1,37 @@
+{
+  "log.not_windows": "Not running on Windows; CPU affinity changes are skipped.",
+  "log.not_enough_cores": "Only {{cores}} logical CPU detected; skipping affinity changes.",
+  "log.too_many_cores": "This system has {{cores}} logical CPUs. The affinity mask here covers only the first {{usable}} logical CPUs.",
+  "log.invalid_config": "Invalid configuration. Affinity was not applied.",
+  "log.unknown_mode": "Unknown Mode value in config. Use: ExcludeCpu0, AllCores, or CustomMask.",
+  "log.custommask_parse_fail": "CustomMask couldn't be parsed. Use decimal (e.g. 15) or hex (e.g. 0xF).",
+  "log.mask_zero": "Affinity mask resulted in 0 selected CPUs. Nothing was applied.",
+  "log.failed": "Failed to set CPU affinity ({{error}}): {{message}}",
+
+  "log.applied_focused": "Game focused: applied CPU affinity. Mode={{mode}}, Mask={{mask}}, DetectedCores={{cores}}.",
+  "log.restored_unfocused": "Game unfocused: restored original CPU affinity. Mask={{mask}}.",
+  "log.captured_original": "Captured original CPU affinity mask: {{mask}}.",
+  "log.capture_failed": "Couldn't capture original affinity ({{error}}): {{message}}.",
+
+  "gmcm.section.title": "CPU Affinity",
+  "gmcm.section.tooltip": "Control which CPU cores Stardew Valley can use (Windows only). Default matches the Task Manager fix: exclude CPU 0.",
+
+  "gmcm.enabled": "Enable mod",
+  "gmcm.enabled.tooltip": "If disabled, the mod won't change CPU affinity.",
+
+  "gmcm.restoreOnUnfocus": "Restore on unfocus",
+  "gmcm.restoreOnUnfocus.tooltip": "If enabled, when the game loses focus the mod restores the original affinity, and re-applies your settings when refocused.",
+
+  "gmcm.mode": "Affinity mode",
+  "gmcm.mode.tooltip": "Choose how the CPU affinity mask is set while the game is focused.",
+
+  "gmcm.mode.ExcludeCpu0": "Exclude CPU 0 (recommended)",
+  "gmcm.mode.AllCores": "Use all CPU cores",
+  "gmcm.mode.CustomMask": "Custom mask (advanced)",
+
+  "gmcm.custommask": "Custom mask",
+  "gmcm.custommask.tooltip": "Used only in CustomMask mode. Enter decimal (15) or hex (0xF).",
+
+  "gmcm.logInfo": "Log info messages",
+  "gmcm.logInfo.tooltip": "If enabled, the mod logs when affinity is applied/restored."
+}

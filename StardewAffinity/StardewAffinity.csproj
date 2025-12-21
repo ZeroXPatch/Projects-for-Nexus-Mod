@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- SMAPI/Stardew 1.6 runs on .NET 6 -->
+    <TargetFramework>net6.0</TargetFramework>
+
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <!-- Stardew 1.6 is 64-bit on Windows -->
+    <Platforms>AnyCPU;x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+
+    <!-- Optional but nice -->
+    <LangVersion>latest</LangVersion>
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- SMAPI -->
+    <Reference Include="Stardew Valley">
+      <HintPath>..\..\..\..\..\..\GOG Games\Stardew Valley\Stardew Valley.dll</HintPath>
+    </Reference>
+    <Reference Include="StardewModdingAPI">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\StardewModdingAPI.dll</HintPath>
+    </Reference>
+
+    <!-- Needed for IManifest (GMCM API interface uses it) -->
+    <Reference Include="SMAPI.Toolkit.CoreInterfaces">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\smapi-internal\SMAPI.Toolkit.CoreInterfaces.dll</HintPath>
+    </Reference>
+
+    <!-- Stardew base assembly (contains Game1, etc.) -->
+
+    <!-- Usually safe to include for common types; not strictly required for affinity-only mods -->
+    <Reference Include="StardewValley.GameData">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\StardewValley.GameData.dll</HintPath>
+    </Reference>
+
+    <!-- MonoGame (often included by templates; not strictly required for this mod, but OK) -->
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\MonoGame.Framework.dll</HintPath>
+    </Reference>
+
+    <!-- Some mods/templates include xTile; optional here -->
+    <Reference Include="xTile">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\xTile.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

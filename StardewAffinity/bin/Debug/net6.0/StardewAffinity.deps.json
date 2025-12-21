@@ -1,0 +1,239 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "StardewAffinity/1.0.0": {
+        "dependencies": {
+          "MonoGame.Framework": "3.8.0.1641",
+          "SMAPI.Toolkit.CoreInterfaces": "4.3.2.0",
+          "Stardew Valley": "1.6.15.24354",
+          "StardewModdingAPI": "4.3.2.0",
+          "StardewValley.GameData": "1.6.15.24354",
+          "xTile": "1.0.0.0"
+        },
+        "runtime": {
+          "StardewAffinity.dll": {}
+        }
+      },
+      "MonoGame.Framework/3.8.0.1641": {
+        "runtime": {
+          "MonoGame.Framework.dll": {
+            "assemblyVersion": "3.8.0.1641",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SMAPI.Toolkit.CoreInterfaces/4.3.2.0": {
+        "runtime": {
+          "SMAPI.Toolkit.CoreInterfaces.dll": {
+            "assemblyVersion": "4.3.2.0",
+            "fileVersion": "4.3.2.0"
+          }
+        }
+      },
+      "Stardew Valley/1.6.15.24354": {
+        "runtime": {
+          "Stardew Valley.dll": {
+            "assemblyVersion": "1.6.15.24354",
+            "fileVersion": "1.6.15.24354"
+          }
+        }
+      },
+      "StardewModdingAPI/4.3.2.0": {
+        "runtime": {
+          "StardewModdingAPI.dll": {
+            "assemblyVersion": "4.3.2.0",
+            "fileVersion": "4.3.2.0"
+          }
+        }
+      },
+      "StardewValley.GameData/1.6.15.24354": {
+        "runtime": {
+          "StardewValley.GameData.dll": {
+            "assemblyVersion": "1.6.15.24354",
+            "fileVersion": "1.6.15.24354"
+          }
+        }
+      },
+      "xTile/1.0.0.0": {
+        "runtime": {
+          "xTile.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SkiaSharp/2.80.0.0": {
+        "runtime": {
+          "SkiaSharp.dll": {
+            "assemblyVersion": "2.80.0.0",
+            "fileVersion": "2.80.3.0"
+          }
+        }
+      },
+      "Steamworks.NET/20.0.0.0": {
+        "runtime": {
+          "Steamworks.NET.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "20.0.0.0"
+          }
+        }
+      },
+      "GalaxyCSharp/3.133.7.0": {
+        "runtime": {
+          "GalaxyCSharp.dll": {
+            "assemblyVersion": "3.133.7.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Lidgren.Network/2012.1.7.0": {
+        "runtime": {
+          "Lidgren.Network.dll": {
+            "assemblyVersion": "2012.1.7.0",
+            "fileVersion": "2012.1.7.0"
+          }
+        }
+      },
+      "System.Data.HashFunction.Interfaces/1.0.0.2": {
+        "runtime": {
+          "System.Data.HashFunction.Interfaces.dll": {
+            "assemblyVersion": "1.0.0.2",
+            "fileVersion": "1.0.0.2"
+          }
+        }
+      },
+      "BmFont/1.0.0.0": {
+        "runtime": {
+          "BmFont.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TextCopy/1.0.0.0": {
+        "runtime": {
+          "TextCopy.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "System.Data.HashFunction.xxHash/1.8.2.2": {
+        "runtime": {
+          "System.Data.HashFunction.xxHash.dll": {
+            "assemblyVersion": "1.8.2.2",
+            "fileVersion": "1.8.2.2"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0.0": {
+        "runtime": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        }
+      },
+      "System.Data.HashFunction.Core/1.8.2.2": {
+        "runtime": {
+          "System.Data.HashFunction.Core.dll": {
+            "assemblyVersion": "1.8.2.2",
+            "fileVersion": "1.8.2.2"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StardewAffinity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MonoGame.Framework/3.8.0.1641": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SMAPI.Toolkit.CoreInterfaces/4.3.2.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Stardew Valley/1.6.15.24354": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StardewModdingAPI/4.3.2.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StardewValley.GameData/1.6.15.24354": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "xTile/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SkiaSharp/2.80.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Steamworks.NET/20.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GalaxyCSharp/3.133.7.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Lidgren.Network/2012.1.7.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Data.HashFunction.Interfaces/1.0.0.2": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BmFont/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TextCopy/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Data.HashFunction.xxHash/1.8.2.2": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Data.HashFunction.Core/1.8.2.2": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

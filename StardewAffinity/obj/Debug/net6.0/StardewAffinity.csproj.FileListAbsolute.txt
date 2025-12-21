@@ -1,0 +1,36 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\StardewAffinity.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\StardewAffinity.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\StardewAffinity.pdb
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\MonoGame.Framework.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\SMAPI.Toolkit.CoreInterfaces.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\Stardew Valley.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\StardewModdingAPI.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\StardewValley.GameData.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\xTile.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\SkiaSharp.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\Steamworks.NET.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\GalaxyCSharp.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\Lidgren.Network.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\System.Data.HashFunction.Interfaces.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\BmFont.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\TextCopy.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\System.Data.HashFunction.xxHash.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\System.Data.HashFunction.Core.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\Stardew Valley.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\StardewModdingAPI.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\StardewModdingAPI.exe.config
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\SMAPI.Toolkit.CoreInterfaces.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\StardewValley.GameData.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\bin\Debug\net6.0\MonoGame.Framework.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\obj\Debug\net6.0\StardewAffinity.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\obj\Debug\net6.0\StardewAffinity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\obj\Debug\net6.0\StardewAffinity.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\obj\Debug\net6.0\StardewAffinity.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\obj\Debug\net6.0\StardewAffinity.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\obj\Debug\net6.0\StardewAffinity.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\obj\Debug\net6.0\StardewA.67D362AC.Up2Date
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\obj\Debug\net6.0\StardewAffinity.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\obj\Debug\net6.0\refint\StardewAffinity.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\obj\Debug\net6.0\StardewAffinity.pdb
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StardewAffinity\obj\Debug\net6.0\ref\StardewAffinity.dll
