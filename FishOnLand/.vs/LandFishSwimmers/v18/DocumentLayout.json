@@ -1,0 +1,127 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FishOnLand\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GOG Games\\Stardew Valley\\Mods\\FishOnLand\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GOG Games\\Stardew Valley\\Mods\\FishOnLand\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B12F79E2-731E-7BD4-5CFB-FA73A0BE4EC9}|LandFishSwimmers.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\fishonland\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B12F79E2-731E-7BD4-5CFB-FA73A0BE4EC9}|LandFishSwimmers.csproj|solutionrelative:i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B12F79E2-731E-7BD4-5CFB-FA73A0BE4EC9}|LandFishSwimmers.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\fishonland\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B12F79E2-731E-7BD4-5CFB-FA73A0BE4EC9}|LandFishSwimmers.csproj|solutionrelative:igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B12F79E2-731E-7BD4-5CFB-FA73A0BE4EC9}|LandFishSwimmers.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\fishonland\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B12F79E2-731E-7BD4-5CFB-FA73A0BE4EC9}|LandFishSwimmers.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 833,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Default.json",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FishOnLand\\i18n\\Default.json",
+              "RelativeDocumentMoniker": "i18n\\Default.json",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FishOnLand\\i18n\\Default.json",
+              "RelativeToolTip": "i18n\\Default.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-21T05:56:49.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IGenericModConfigMenuApi.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FishOnLand\\IGenericModConfigMenuApi.cs",
+              "RelativeDocumentMoniker": "IGenericModConfigMenuApi.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FishOnLand\\IGenericModConfigMenuApi.cs",
+              "RelativeToolTip": "IGenericModConfigMenuApi.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA8wCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-21T05:56:07.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "config.json",
+              "DocumentMoniker": "C:\\GOG Games\\Stardew Valley\\Mods\\FishOnLand\\config.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\FishOnLand\\config.json",
+              "ToolTip": "C:\\GOG Games\\Stardew Valley\\Mods\\FishOnLand\\config.json",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\FishOnLand\\config.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-21T05:52:38.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "manifest.json",
+              "DocumentMoniker": "C:\\GOG Games\\Stardew Valley\\Mods\\FishOnLand\\manifest.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\FishOnLand\\manifest.json",
+              "ToolTip": "C:\\GOG Games\\Stardew Valley\\Mods\\FishOnLand\\manifest.json",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\FishOnLand\\manifest.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-21T05:45:16.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ModEntry.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FishOnLand\\ModEntry.cs",
+              "RelativeDocumentMoniker": "ModEntry.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FishOnLand\\ModEntry.cs",
+              "RelativeToolTip": "ModEntry.cs",
+              "ViewState": "AgIAAMsBAAAAAAAAAAAwwOYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-21T05:39:46.16Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1016,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

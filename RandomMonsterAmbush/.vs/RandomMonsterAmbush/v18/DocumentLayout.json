@@ -77,8 +77,7 @@
               "RelativeToolTip": "i18n\\en.json",
               "ViewState": "AgIAABsAAAAAAAAAAAAAACYAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-17T19:42:19.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T19:42:19.37Z"
             },
             {
               "$type": "Document",
@@ -90,8 +89,7 @@
               "RelativeToolTip": "IGenericModConfigMenuApi.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAUwEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T19:32:20.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T19:32:20.656Z"
             },
             {
               "$type": "Document",
@@ -103,8 +101,7 @@
               "RelativeToolTip": "config.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-17T19:32:15.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T19:32:15.932Z"
             },
             {
               "$type": "Document",
@@ -116,8 +113,7 @@
               "RelativeToolTip": "manifest.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-17T19:32:12.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T19:32:12.763Z"
             },
             {
               "$type": "Document",
@@ -129,8 +125,7 @@
               "RelativeToolTip": "ModConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T19:32:10.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T19:32:10.538Z"
             },
             {
               "$type": "Document",
@@ -142,8 +137,7 @@
               "RelativeToolTip": "ModEntry.cs",
               "ViewState": "AgIAABwCAAAAAAAAAAAiwCYCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T19:32:06.454Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T19:32:06.454Z"
             }
           ]
         },

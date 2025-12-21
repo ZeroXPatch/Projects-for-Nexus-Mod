@@ -1,0 +1,43 @@
+{
+  "gmcm.section.general": "General",
+  "gmcm.section.general.tooltip": "Basic settings for land fish behavior.",
+
+  "gmcm.enabled.name": "Enabled",
+  "gmcm.enabled.tooltip": "If disabled, the mod does nothing.",
+
+  "gmcm.fishPerLocation.name": "Fish per location",
+  "gmcm.fishPerLocation.tooltip": "How many fish to keep swimming on land in each loaded location.",
+
+  "gmcm.spawnIndoors.name": "Spawn indoors",
+  "gmcm.spawnIndoors.tooltip": "If enabled, fish can appear inside buildings too.",
+
+  "gmcm.respawnEachDay.name": "Respawn each day",
+  "gmcm.respawnEachDay.tooltip": "If enabled, fish are regenerated each morning.",
+
+  "gmcm.updateTicks.name": "Update interval (ticks)",
+  "gmcm.updateTicks.tooltip": "How often fish movement updates. Lower = smoother, higher = less CPU usage.",
+
+  "gmcm.section.movement": "Movement",
+  "gmcm.section.movement.tooltip": "How fish choose targets and move.",
+
+  "gmcm.wanderRadius.name": "Wander radius (tiles)",
+  "gmcm.wanderRadius.tooltip": "How far fish can pick a new target from their current position.",
+
+  "gmcm.speed.name": "Speed",
+  "gmcm.speed.tooltip": "Movement speed in pixels per update. (Displayed as a decimal)",
+
+  "gmcm.section.visuals": "Visuals",
+  "gmcm.section.visuals.tooltip": "How the fish look while swimming.",
+
+  "gmcm.scale.name": "Scale",
+  "gmcm.scale.tooltip": "Fish size as a percentage.",
+
+  "gmcm.opacity.name": "Opacity",
+  "gmcm.opacity.tooltip": "How transparent the fish are.",
+
+  "gmcm.bob.name": "Bobbing",
+  "gmcm.bob.tooltip": "How much the fish bob up and down while swimming.",
+
+  "gmcm.wiggle.name": "Wiggle",
+  "gmcm.wiggle.tooltip": "How much the fish tilt/wiggle while moving."
+}

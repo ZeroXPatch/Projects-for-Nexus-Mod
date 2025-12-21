@@ -1,0 +1,87 @@
+{
+  "buff.none.name": "Clear Skies",
+  "buff.none.description": "No weather-based skill changes today.",
+
+  "buff.rain.name": "Rainfall Rhythm",
+  "buff.rain.description": "Rain: Fishing +2, Farming +1, Foraging -2.",
+
+  "buff.storm.name": "Stormfront Tension",
+  "buff.storm.description": "Storm: Mining +2, Combat +1, Farming -2, Luck -1.",
+
+  "buff.sunny.name": "Summer Blaze",
+  "buff.sunny.description": "Sunny (Summer): Farming +2, Foraging +1, Fishing -2.",
+
+  "buff.snow.name": "Snowbound Focus",
+  "buff.snow.description": "Snow: Luck +2, Mining +1, Foraging -2, Fishing -1.",
+
+  "buff.windy.name": "Gale of Plenty",
+  "buff.windy.description": "Windy: Foraging +2, Luck +1, Combat -2, Fishing -1.",
+
+  "buff.blizzard.name": "Blizzard Fury",
+  "buff.blizzard.description": "Blizzard: Mining +2, Combat +1, Foraging -2, Farming -1.",
+
+  "buff.deluge.name": "Deluge Surge",
+  "buff.deluge.description": "Deluge: Fishing +2, Foraging +1, Farming -2, Mining -1.",
+
+  "buff.drizzle.name": "Gentle Drizzle",
+  "buff.drizzle.description": "Drizzle: Fishing +1, Farming +1, Foraging -1.",
+
+  "buff.drylightning.name": "Dry Lightning",
+  "buff.drylightning.description": "Dry Lightning: Combat +2, Mining +1, Farming -2, Foraging -1.",
+
+  "buff.hailstorm.name": "Hailstorm Hazard",
+  "buff.hailstorm.description": "Hailstorm: Combat +2, Luck +1, Foraging -2, Farming -1.",
+
+  "buff.heatwave.name": "Crushing Heatwave",
+  "buff.heatwave.description": "Heatwave: Mining +1, Luck +1, Farming -2, Combat -1.",
+
+  "buff.mist.name": "Misty Veil",
+  "buff.mist.description": "Mist: Foraging +2, Fishing +1, Combat -2, Luck -1.",
+
+  "buff.muddyrain.name": "Muddy Showers",
+  "buff.muddyrain.description": "Muddy Rain: Farming +2, Mining +1, Foraging -2, Combat -1.",
+
+  "buff.rainsnowmix.name": "Sleetfall",
+  "buff.rainsnowmix.description": "Rain–Snow Mix: Fishing +2, Mining +1, Farming -2, Foraging -1.",
+
+  "buff.acidrain.name": "Corrosive Downpour",
+  "buff.acidrain.description": "Acid Rain: Mining +2, Combat +1, Foraging -2, Farming -1.",
+
+  "buff.cloudy.name": "Overcast Comfort",
+  "buff.cloudy.description": "Cloudy: Foraging +1, Fishing +1, Farming -1.",
+
+
+  "tooltip.none": "Clear day: no weather bonuses or penalties.",
+
+  "tooltip.rain": "Rain:\nFishing +2 (more bites, slightly better quality)\nFarming +1\nForaging -2",
+
+  "tooltip.storm": "Storm:\nMining +2 (great time for the mines)\nCombat +1\nFarming -2\nLuck -1",
+
+  "tooltip.sunny": "Sunny (Summer):\nFarming +2 (efficient crop work)\nForaging +1\nFishing -2 (fish hide from the heat)",
+
+  "tooltip.snow": "Snow:\nLuck +2 (calm, focused day)\nMining +1\nForaging -2\nFishing -1",
+
+  "tooltip.windy": "Windy:\nForaging +2 (more items shaken loose)\nLuck +1\nCombat -2\nFishing -1",
+
+  "tooltip.blizzard": "Blizzard:\nMining +2 (safer underground)\nCombat +1\nForaging -2\nFarming -1",
+
+  "tooltip.deluge": "Deluge:\nFishing +2 (very active fish, better quality)\nForaging +1\nFarming -2\nMining -1",
+
+  "tooltip.drizzle": "Drizzle:\nFishing +1 (pleasant fishing weather)\nFarming +1\nForaging -1",
+
+  "tooltip.drylightning": "Dry Lightning:\nCombat +2 (high alert, crackling air)\nMining +1\nFarming -2\nForaging -1",
+
+  "tooltip.hailstorm": "Hailstorm:\nCombat +2 (dodging hail and debris)\nLuck +1\nForaging -2\nFarming -1",
+
+  "tooltip.heatwave": "Heatwave:\nMining +1 (cooler underground)\nLuck +1\nFarming -2 (wilting crops)\nCombat -1",
+
+  "tooltip.mist": "Mist:\nForaging +2 (mushrooms, snails, damp growth)\nFishing +1 (foggy fishing)\nCombat -2\nLuck -1",
+
+  "tooltip.muddyrain": "Muddy Rain:\nFarming +2 (nutrient-rich soil)\nMining +1\nForaging -2\nCombat -1",
+
+  "tooltip.rainsnowmix": "Rain–Snow Mix:\nFishing +2 (unstable water, active fish)\nMining +1\nFarming -2\nForaging -1",
+
+  "tooltip.acidrain": "Acid Rain:\nMining +2 (exposed rock surfaces)\nCombat +1\nForaging -2\nFarming -1",
+
+  "tooltip.cloudy": "Cloudy:\nForaging +1\nFishing +1 (steady, low-glare light)\nFarming -1"
+}

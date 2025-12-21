@@ -1,0 +1,10 @@
+{
+  "Name": "Land Fish Swimmers",
+  "Author": "YourName",
+  "Version": "1.0.0",
+  "Description": "Fish that 'swim' around on land as a visual effect.",
+  "UniqueID": "YourName.LandFishSwimmers",
+  "EntryDll": "LandFishSwimmers.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

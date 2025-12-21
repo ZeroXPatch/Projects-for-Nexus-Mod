@@ -1,0 +1,11 @@
+{
+  "Name": "Immersive Weather Overhaul",
+  "Author": "ZeroXPatch",
+  "Version": "4.4.0",
+  "Description": "Adds realistic skill buffs and debuffs based on current weather, including support for Weather Wonders.",
+  "UniqueID": "ImmersiveWeatherOverhaul",
+  "EntryDll": "ImmersiveWeatherOverhaul.dll",
+  "MinimumApiVersion": "4.0.0",
+  "DefaultLocale": "en",
+  "UpdateKeys": []
+}

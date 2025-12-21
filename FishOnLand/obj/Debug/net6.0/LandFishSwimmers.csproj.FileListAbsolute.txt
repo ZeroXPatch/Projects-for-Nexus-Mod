@@ -1,0 +1,13 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FishOnLand\obj\Debug\net6.0\LandFishSwimmers.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FishOnLand\obj\Debug\net6.0\LandFishSwimmers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FishOnLand\obj\Debug\net6.0\LandFishSwimmers.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FishOnLand\obj\Debug\net6.0\LandFishSwimmers.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FishOnLand\obj\Debug\net6.0\LandFishSwimmers.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FishOnLand\obj\Debug\net6.0\LandFishSwimmers.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FishOnLand\bin\Debug\net6.0\LandFishSwimmers.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FishOnLand\bin\Debug\net6.0\LandFishSwimmers.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FishOnLand\bin\Debug\net6.0\LandFishSwimmers.pdb
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FishOnLand\obj\Debug\net6.0\LandFishSwimmers.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FishOnLand\obj\Debug\net6.0\refint\LandFishSwimmers.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FishOnLand\obj\Debug\net6.0\LandFishSwimmers.pdb
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FishOnLand\obj\Debug\net6.0\ref\LandFishSwimmers.dll

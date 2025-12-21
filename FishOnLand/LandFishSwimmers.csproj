@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Stardew Valley 1.6 + SMAPI 4 runs on .NET 6 -->
+    <TargetFramework>net6.0</TargetFramework>
+
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <!-- Stardew 1.6 is 64-bit -->
+    <Platforms>AnyCPU;x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+
+    <LangVersion>latest</LangVersion>
+    <DebugType>portable</DebugType>
+
+    <!-- Optional: makes builds deterministic -->
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Stardew + SMAPI core -->
+    <Reference Include="Stardew Valley">
+      <HintPath>..\..\..\..\..\..\GOG Games\Stardew Valley\Stardew Valley.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="StardewModdingAPI">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\StardewModdingAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Needed if you use IManifest in external APIs (e.g., GMCM interface files) -->
+    <Reference Include="SMAPI.Toolkit.CoreInterfaces">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\smapi-internal\SMAPI.Toolkit.CoreInterfaces.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Often useful (safe to include) -->
+    <Reference Include="StardewValley.GameData">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\StardewValley.GameData.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Graphics types (SpriteBatch/Texture2D/etc). Usually not strictly required if referenced transitively, but OK -->
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\MonoGame.Framework.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Map framework (only needed if you directly reference xTile types; our land fish code does indirectly via loc.Map usage) -->
+    <Reference Include="xTile">
+      <HintPath>..\..\..\..\..\..\..\GOG Games\Stardew Valley\xTile.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- OPTIONAL: auto-copy build output into your Mods folder -->
+  <PropertyGroup>
+    <!-- Change this to your actual Mods folder -->
+    <ModsFolder>$(AppData)\StardewValley\Mods\LandFishSwimmers</ModsFolder>
+  </PropertyGroup>
+
+  <Target Name="CopyToModsFolder" AfterTargets="Build">
+    <MakeDir Directories="$(ModsFolder)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModsFolder)" />
+    <Copy SourceFiles="$(TargetDir)$(TargetName).pdb" DestinationFolder="$(ModsFolder)" Condition="Exists('$(TargetDir)$(TargetName).pdb')" />
+  </Target>
+
+</Project>
