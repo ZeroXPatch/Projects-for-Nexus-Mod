@@ -1,9 +1,9 @@
 {
-  "Name": "Land Fish Swimmers",
-  "Author": "YourName",
+  "Name": "Fish Weather: All Fish Day",
+  "Author": "You",
   "Version": "1.0.0",
-  "Description": "Fish that 'swim' around on land as a visual effect.",
-  "UniqueID": "YourName.LandFishSwimmers",
+  "Description": "Occasionally triggers a special night where fish swim on land, you gain Fishing skill, and (optionally) you can catch any fish anywhere.",
+  "UniqueID": "You.FishWeatherAllFishDay",
   "EntryDll": "LandFishSwimmers.dll",
   "MinimumApiVersion": "4.0.0",
   "UpdateKeys": []

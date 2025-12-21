@@ -1,196 +1,83 @@
+#nullable enable
+
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
-using xTile.Dimensions; // Location (for isTilePassable)
-
-using XnaRectangle = Microsoft.Xna.Framework.Rectangle;
+using StardewValley.Buffs;
+using StardewValley.GameData.Locations;
+using StardewValley.ItemTypeDefinitions;
 
 namespace LandFishSwimmers
 {
     internal sealed class ModEntry : Mod
     {
+        private const string BuffId = "LandFishSwimmers.DailyFishingBoost";
+        private const string MsgStateRequest = "DayStateRequest";
+        private const string MsgStateSync = "DayStateSync";
+
+        // Requested name
+        private const string EventName = "Fish Weather: All Fish Day";
+
         private ModConfig Config = new();
-        private readonly Dictionary<string, List<LandFish>> FishByLocation = new(StringComparer.OrdinalIgnoreCase);
-        private readonly Random Rng = new();
+
+        // Host-synced day state
+        private DayState? Today;
+        private bool IsActive;
+        private bool ActivationMessageShown;
+        private bool LocationsOverrideActive;
+
+        // Visual fish stored PER location for this active window
+        private readonly Dictionary<string, List<LandFish>> FishByLocation = new(StringComparer.Ordinal);
+        private string? CurrentLocationKey;
+
+        // Movement RNG (VISUAL ONLY)
+        private readonly Random VisualRng = new();
+
+        // Cache fish sprites (supports modded fish)
+        private readonly Dictionary<string, (Texture2D Tex, Rectangle Src)> SpriteCache
+            = new(StringComparer.OrdinalIgnoreCase);
+
+        // fish IDs from Data/Fish (includes modded)
+        private List<string> FishIds = new();
 
         public override void Entry(IModHelper helper)
         {
             this.Config = helper.ReadConfig<ModConfig>();
 
             helper.Events.GameLoop.GameLaunched += this.OnGameLaunched;
-            helper.Events.GameLoop.SaveLoaded += this.OnSaveLoaded;
             helper.Events.GameLoop.DayStarted += this.OnDayStarted;
             helper.Events.GameLoop.UpdateTicked += this.OnUpdateTicked;
+            helper.Events.GameLoop.ReturnedToTitle += this.OnReturnedToTitle;
+
             helper.Events.Display.RenderedWorld += this.OnRenderedWorld;
+
+            helper.Events.Multiplayer.ModMessageReceived += this.OnModMessageReceived;
+            helper.Events.Multiplayer.PeerConnected += this.OnPeerConnected;
+
+            helper.Events.Content.AssetRequested += this.OnAssetRequested;
         }
 
         private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
         {
-            this.RegisterGmcm();
+            this.SetupGmcm();
         }
 
-        private void RegisterGmcm()
+        private void OnReturnedToTitle(object? sender, ReturnedToTitleEventArgs e)
         {
-            var gmcm = this.Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
-            if (gmcm is null)
-                return;
+            this.Today = null;
+            this.IsActive = false;
+            this.ActivationMessageShown = false;
+            this.LocationsOverrideActive = false;
 
-            string T(string key) => this.Helper.Translation.Get(key);
-
-            gmcm.Register(
-                mod: this.ModManifest,
-                reset: () => this.Config = new ModConfig(),
-                save: () => this.Helper.WriteConfig(this.Config)
-            );
-
-            gmcm.AddSectionTitle(
-                mod: this.ModManifest,
-                text: () => T("gmcm.section.general"),
-                tooltip: () => T("gmcm.section.general.tooltip")
-            );
-
-            gmcm.AddBoolOption(
-                mod: this.ModManifest,
-                getValue: () => this.Config.Enabled,
-                setValue: value => this.Config.Enabled = value,
-                name: () => T("gmcm.enabled.name"),
-                tooltip: () => T("gmcm.enabled.tooltip")
-            );
-
-            gmcm.AddNumberOption(
-                mod: this.ModManifest,
-                getValue: () => this.Config.FishPerLocation,
-                setValue: value => this.Config.FishPerLocation = value,
-                name: () => T("gmcm.fishPerLocation.name"),
-                tooltip: () => T("gmcm.fishPerLocation.tooltip"),
-                min: 0,
-                max: 200,
-                interval: 1
-            );
-
-            gmcm.AddBoolOption(
-                mod: this.ModManifest,
-                getValue: () => this.Config.SpawnIndoors,
-                setValue: value => this.Config.SpawnIndoors = value,
-                name: () => T("gmcm.spawnIndoors.name"),
-                tooltip: () => T("gmcm.spawnIndoors.tooltip")
-            );
-
-            gmcm.AddBoolOption(
-                mod: this.ModManifest,
-                getValue: () => this.Config.RespawnEachDay,
-                setValue: value => this.Config.RespawnEachDay = value,
-                name: () => T("gmcm.respawnEachDay.name"),
-                tooltip: () => T("gmcm.respawnEachDay.tooltip")
-            );
-
-            gmcm.AddNumberOption(
-                mod: this.ModManifest,
-                getValue: () => this.Config.UpdateTicks,
-                setValue: value => this.Config.UpdateTicks = Math.Max(1, value),
-                name: () => T("gmcm.updateTicks.name"),
-                tooltip: () => T("gmcm.updateTicks.tooltip"),
-                min: 1,
-                max: 60,
-                interval: 1
-            );
-
-            gmcm.AddSectionTitle(
-                mod: this.ModManifest,
-                text: () => T("gmcm.section.movement"),
-                tooltip: () => T("gmcm.section.movement.tooltip")
-            );
-
-            gmcm.AddNumberOption(
-                mod: this.ModManifest,
-                getValue: () => this.Config.WanderRadiusTiles,
-                setValue: value => this.Config.WanderRadiusTiles = Math.Max(1, value),
-                name: () => T("gmcm.wanderRadius.name"),
-                tooltip: () => T("gmcm.wanderRadius.tooltip"),
-                min: 1,
-                max: 50,
-                interval: 1
-            );
-
-            // Speed (float) via scaled int (x10)
-            gmcm.AddNumberOption(
-                mod: this.ModManifest,
-                getValue: () => (int)Math.Round(this.Config.SpeedPixelsPerUpdate * 10f),
-                setValue: value => this.Config.SpeedPixelsPerUpdate = Math.Max(0.1f, value / 10f),
-                name: () => T("gmcm.speed.name"),
-                tooltip: () => T("gmcm.speed.tooltip"),
-                min: 1,
-                max: 200,
-                interval: 1,
-                formatValue: v => (v / 10f).ToString("0.0")
-            );
-
-            gmcm.AddSectionTitle(
-                mod: this.ModManifest,
-                text: () => T("gmcm.section.visuals"),
-                tooltip: () => T("gmcm.section.visuals.tooltip")
-            );
-
-            // Scale (float) via percent
-            gmcm.AddNumberOption(
-                mod: this.ModManifest,
-                getValue: () => (int)Math.Round(this.Config.Scale * 100f),
-                setValue: value => this.Config.Scale = Math.Max(0.1f, value / 100f),
-                name: () => T("gmcm.scale.name"),
-                tooltip: () => T("gmcm.scale.tooltip"),
-                min: 25,
-                max: 300,
-                interval: 5,
-                formatValue: v => $"{v}%"
-            );
-
-            // Opacity (float) via percent
-            gmcm.AddNumberOption(
-                mod: this.ModManifest,
-                getValue: () => (int)Math.Round(this.Config.Opacity * 100f),
-                setValue: value => this.Config.Opacity = Math.Clamp(value / 100f, 0f, 1f),
-                name: () => T("gmcm.opacity.name"),
-                tooltip: () => T("gmcm.opacity.tooltip"),
-                min: 0,
-                max: 100,
-                interval: 5,
-                formatValue: v => $"{v}%"
-            );
-
-            // BobPixels (float) via x10
-            gmcm.AddNumberOption(
-                mod: this.ModManifest,
-                getValue: () => (int)Math.Round(this.Config.BobPixels * 10f),
-                setValue: value => this.Config.BobPixels = Math.Max(0f, value / 10f),
-                name: () => T("gmcm.bob.name"),
-                tooltip: () => T("gmcm.bob.tooltip"),
-                min: 0,
-                max: 100,
-                interval: 1,
-                formatValue: v => (v / 10f).ToString("0.0")
-            );
-
-            // WiggleRadians (float) via x1000
-            gmcm.AddNumberOption(
-                mod: this.ModManifest,
-                getValue: () => (int)Math.Round(this.Config.WiggleRadians * 1000f),
-                setValue: value => this.Config.WiggleRadians = Math.Max(0f, value / 1000f),
-                name: () => T("gmcm.wiggle.name"),
-                tooltip: () => T("gmcm.wiggle.tooltip"),
-                min: 0,
-                max: 500,
-                interval: 5,
-                formatValue: v => (v / 1000f).ToString("0.000")
-            );
-        }
-
-        private void OnSaveLoaded(object? sender, SaveLoadedEventArgs e)
-        {
-            this.RebuildAllLocations();
+            this.FishByLocation.Clear();
+            this.CurrentLocationKey = null;
+            this.SpriteCache.Clear();
+            this.FishIds.Clear();
         }
 
         private void OnDayStarted(object? sender, DayStartedEventArgs e)
@@ -198,8 +85,83 @@ namespace LandFishSwimmers
             if (!Context.IsWorldReady || Game1.player is null)
                 return;
 
-            if (this.Config.RespawnEachDay)
-                this.RebuildAllLocations();
+            this.IsActive = false;
+            this.ActivationMessageShown = false;
+            this.LocationsOverrideActive = false;
+
+            this.FishByLocation.Clear();
+            this.CurrentLocationKey = null;
+
+            this.RebuildFishIdCache();
+
+            if (!this.Config.Enabled)
+            {
+                this.Today = null;
+                return;
+            }
+
+            if (Context.IsMainPlayer)
+            {
+                this.Today = this.RollToday();
+
+                this.Helper.Multiplayer.SendMessage(
+                    message: this.Today.Value,
+                    messageType: MsgStateSync,
+                    modIDs: new[] { this.ModManifest.UniqueID }
+                );
+            }
+            else
+            {
+                this.Today = null;
+
+                this.Helper.Multiplayer.SendMessage(
+                    message: new DayStateRequest(),
+                    messageType: MsgStateRequest,
+                    modIDs: new[] { this.ModManifest.UniqueID }
+                );
+            }
+        }
+
+        private void OnPeerConnected(object? sender, PeerConnectedEventArgs e)
+        {
+            if (!Context.IsWorldReady || !Context.IsMainPlayer || this.Today is null)
+                return;
+
+            this.Helper.Multiplayer.SendMessage(
+                message: this.Today.Value,
+                messageType: MsgStateSync,
+                modIDs: new[] { this.ModManifest.UniqueID },
+                playerIDs: new[] { e.Peer.PlayerID }
+            );
+        }
+
+        private void OnModMessageReceived(object? sender, ModMessageReceivedEventArgs e)
+        {
+            if (e.FromModID != this.ModManifest.UniqueID)
+                return;
+
+            if (e.Type == MsgStateRequest)
+            {
+                if (!Context.IsMainPlayer || this.Today is null)
+                    return;
+
+                this.Helper.Multiplayer.SendMessage(
+                    message: this.Today.Value,
+                    messageType: MsgStateSync,
+                    modIDs: new[] { this.ModManifest.UniqueID },
+                    playerIDs: new[] { e.FromPlayerID }
+                );
+                return;
+            }
+
+            if (e.Type == MsgStateSync)
+            {
+                DayState state = e.ReadAs<DayState>();
+                if (!IsToday(state))
+                    return;
+
+                this.Today = state;
+            }
         }
 
         private void OnUpdateTicked(object? sender, UpdateTickedEventArgs e)
@@ -207,49 +169,93 @@ namespace LandFishSwimmers
             if (!Context.IsWorldReady || Game1.player is null)
                 return;
 
-            if (!this.Config.Enabled)
+            if (!this.Config.Enabled || this.Today is null)
+            {
+                this.ForceDeactivate();
+                return;
+            }
+
+            DayState state = this.Today.Value;
+
+            int start = NormalizeTime(state.StartTime);
+            int end = NormalizeTime(state.EndTime);
+
+            // If end is after midnight (00:00–05:50) and less than start, treat as crossing midnight.
+            if (end < start && end < 600)
+                end = NormalizeTime(end + 2400);
+
+            bool shouldBeActive = state.Triggered && IsTimeInWindow(Game1.timeOfDay, start, end);
+
+            if (shouldBeActive && !this.IsActive)
+                this.Activate(state);
+            else if (!shouldBeActive && this.IsActive)
+                this.Deactivate();
+
+            if (!this.IsActive)
                 return;
 
+            // Ensure fish exist for the current location (distributed across map)
+            this.EnsureFishForCurrentLocation(Game1.currentLocation);
+
+            // Update motion (throttled)
             if (!e.IsMultipleOf((uint)Math.Max(1, this.Config.UpdateTicks)))
                 return;
 
-            foreach (GameLocation loc in Game1.locations)
+            this.UpdateFishMotionForCurrentLocation();
+        }
+
+        private void Activate(DayState state)
+        {
+            this.IsActive = true;
+
+            this.ApplyFishingBuff(state.FishingSkillBonus);
+
+            if (!this.ActivationMessageShown && this.Config.ShowActivationMessage)
             {
-                if (loc is null || loc.Map is null)
-                    continue;
-
-                if (!this.Config.SpawnIndoors && loc.IsOutdoors == false)
-                    continue;
-
-                if (!this.FishByLocation.TryGetValue(loc.NameOrUniqueName, out List<LandFish>? list))
-                    continue;
-
-                for (int i = list.Count - 1; i >= 0; i--)
-                {
-                    LandFish fish = list[i];
-
-                    if (!fish.IsValidForLocation(loc))
-                    {
-                        list.RemoveAt(i);
-                        continue;
-                    }
-
-                    fish.Update(loc, this.Config, this.Rng);
-                }
-
-                int targetCount = Math.Max(0, this.Config.FishPerLocation);
-                while (list.Count < targetCount)
-                {
-                    LandFish? spawned = this.TrySpawnFish(loc, this.Rng);
-                    if (spawned is null)
-                        break;
-
-                    list.Add(spawned);
-                }
-
-                while (list.Count > targetCount)
-                    list.RemoveAt(list.Count - 1);
+                this.ActivationMessageShown = true;
+                Game1.addHUDMessage(new HUDMessage(EventName));
             }
+
+            if (state.AllFishEverywhere)
+            {
+                this.LocationsOverrideActive = true;
+                this.Helper.GameContent.InvalidateCache("Data/Locations");
+            }
+
+            this.FishByLocation.Clear();
+            this.CurrentLocationKey = null;
+
+            this.EnsureFishForCurrentLocation(Game1.currentLocation);
+        }
+
+        private void Deactivate()
+        {
+            this.IsActive = false;
+            this.RemoveFishingBuff();
+
+            if (this.LocationsOverrideActive)
+            {
+                this.LocationsOverrideActive = false;
+                this.Helper.GameContent.InvalidateCache("Data/Locations");
+            }
+
+            this.FishByLocation.Clear();
+            this.CurrentLocationKey = null;
+        }
+
+        private void ForceDeactivate()
+        {
+            this.IsActive = false;
+            this.RemoveFishingBuff();
+
+            if (this.LocationsOverrideActive)
+            {
+                this.LocationsOverrideActive = false;
+                this.Helper.GameContent.InvalidateCache("Data/Locations");
+            }
+
+            this.FishByLocation.Clear();
+            this.CurrentLocationKey = null;
         }
 
         private void OnRenderedWorld(object? sender, RenderedWorldEventArgs e)
@@ -257,229 +263,516 @@ namespace LandFishSwimmers
             if (!Context.IsWorldReady || Game1.player is null)
                 return;
 
-            if (!this.Config.Enabled)
+            if (!this.Config.Enabled || !this.IsActive)
                 return;
 
             GameLocation loc = Game1.currentLocation;
-            if (loc is null || loc.Map is null)
+            if (!this.Config.SpawnIndoors && !loc.IsOutdoors)
                 return;
 
-            if (!this.Config.SpawnIndoors && loc.IsOutdoors == false)
+            if (this.CurrentLocationKey is null)
                 return;
 
-            if (!this.FishByLocation.TryGetValue(loc.NameOrUniqueName, out List<LandFish>? list))
+            if (!this.FishByLocation.TryGetValue(this.CurrentLocationKey, out List<LandFish>? fishList))
                 return;
 
             SpriteBatch b = e.SpriteBatch;
-            foreach (LandFish fish in list)
-                fish.Draw(b, this.Config);
+
+            foreach (LandFish fish in fishList)
+            {
+                if (!TryGetFishSprite(fish.FishQualifiedId, out Texture2D tex, out Rectangle src))
+                    continue;
+
+                float bob = (float)Math.Sin(fish.BobPhase) * this.Config.BobPixels;
+
+                Vector2 world = new(fish.Position.X, fish.Position.Y + bob);
+                Vector2 screen = Game1.GlobalToLocal(Game1.viewport, world);
+
+                float scale = Math.Max(0.1f, this.Config.Scale) * 4f;
+                float depth = Math.Max(0f, (world.Y + 16f) / 10000f);
+
+                float rotation = fish.Facing + (float)Math.Sin(fish.BobPhase * 0.5f) * this.Config.WiggleRadians;
+                Vector2 origin = new(src.Width / 2f, src.Height / 2f);
+
+                b.Draw(
+                    tex,
+                    screen,
+                    src,
+                    Color.White * this.Config.Opacity,
+                    rotation,
+                    origin,
+                    scale,
+                    SpriteEffects.None,
+                    depth
+                );
+            }
         }
 
-        private void RebuildAllLocations()
+        private void EnsureFishForCurrentLocation(GameLocation loc)
         {
-            this.FishByLocation.Clear();
-
-            if (!Context.IsWorldReady || Game1.player is null)
-                return;
-
-            if (!this.Config.Enabled)
-                return;
-
-            foreach (GameLocation loc in Game1.locations)
+            if (!this.Config.SpawnIndoors && !loc.IsOutdoors)
             {
-                if (loc is null || loc.Map is null)
-                    continue;
+                this.CurrentLocationKey = loc.NameOrUniqueName;
+                return;
+            }
 
-                if (!this.Config.SpawnIndoors && loc.IsOutdoors == false)
-                    continue;
+            string key = loc.NameOrUniqueName;
+            this.CurrentLocationKey = key;
 
-                var list = new List<LandFish>();
-                for (int i = 0; i < Math.Max(0, this.Config.FishPerLocation); i++)
+            if (this.FishByLocation.ContainsKey(key))
+                return;
+
+            List<LandFish> list = this.GenerateFishAcrossMap(loc, key, Math.Max(0, this.Config.FishCount));
+            this.FishByLocation[key] = list;
+        }
+
+        private List<LandFish> GenerateFishAcrossMap(GameLocation loc, string locationKey, int count)
+        {
+            var list = new List<LandFish>(count);
+
+            if (count <= 0 || this.FishIds.Count == 0 || loc.Map is null || loc.Map.Layers.Count == 0)
+                return list;
+
+            // Deterministic per day + location so it looks stable (and similar in MP).
+            int seed = unchecked((int)(Game1.uniqueIDForThisGame ^ (uint)Game1.Date.TotalDays) ^ locationKey.GetHashCode());
+            var rng = new Random(seed);
+
+            int mapW = loc.Map.Layers[0].LayerWidth;
+            int mapH = loc.Map.Layers[0].LayerHeight;
+
+            const int attemptsPerFish = 80;
+
+            for (int i = 0; i < count; i++)
+            {
+                bool spawned = false;
+
+                for (int attempt = 0; attempt < attemptsPerFish; attempt++)
                 {
-                    LandFish? spawned = this.TrySpawnFish(loc, this.Rng);
-                    if (spawned is null)
-                        break;
+                    int x = rng.Next(0, mapW);
+                    int y = rng.Next(0, mapH);
+                    Vector2 tile = new(x, y);
 
-                    list.Add(spawned);
+                    if (!IsGoodLandTile(loc, tile))
+                        continue;
+
+                    string id = this.FishIds[rng.Next(this.FishIds.Count)];
+                    string qualified = QualifyObjectId(id);
+
+                    if (!TryGetFishSprite(qualified, out _, out _))
+                        continue;
+
+                    Vector2 pos = tile * 64f + new Vector2(32f, 32f);
+
+                    float ang = (float)(rng.NextDouble() * Math.PI * 2);
+                    float speedPx = Math.Max(0f, this.Config.SpeedTilesPerSecond) * 64f;
+                    Vector2 vel = new((float)Math.Cos(ang), (float)Math.Sin(ang));
+                    vel *= speedPx;
+
+                    list.Add(new LandFish(qualified, pos, vel));
+                    spawned = true;
+                    break;
                 }
 
-                this.FishByLocation[loc.NameOrUniqueName] = list;
-            }
-        }
-
-        private LandFish? TrySpawnFish(GameLocation loc, Random rng)
-        {
-            if (loc.Map is null || loc.Map.Layers.Count == 0)
-                return null;
-
-            int fishId = this.PickFishObjectId(rng);
-            if (fishId <= 0)
-                return null;
-
-            int width = Math.Max(1, loc.Map.Layers[0].LayerWidth);
-            int height = Math.Max(1, loc.Map.Layers[0].LayerHeight);
-
-            for (int tries = 0; tries < 60; tries++)
-            {
-                int x = rng.Next(0, width);
-                int y = rng.Next(0, height);
-                Vector2 tile = new(x, y);
-
-                if (!IsGoodLandTile(loc, tile))
-                    continue;
-
-                Vector2 pixel = tile * 64f + new Vector2(32f, 44f);
-                var fish = new LandFish(fishId, pixel);
-                fish.PickNewTarget(loc, this.Config, rng);
-                return fish;
+                if (!spawned)
+                    break;
             }
 
-            return null;
+            return list;
         }
 
-        private int PickFishObjectId(Random rng)
+        private void UpdateFishMotionForCurrentLocation()
         {
-            if (this.Config.FishObjectIds is { Length: > 0 })
-                return this.Config.FishObjectIds[rng.Next(this.Config.FishObjectIds.Length)];
+            if (this.CurrentLocationKey is null)
+                return;
 
-            int[] defaults =
+            if (!this.FishByLocation.TryGetValue(this.CurrentLocationKey, out List<LandFish>? list))
+                return;
+
+            GameLocation loc = Game1.currentLocation;
+
+            float dt = (float)(Game1.currentGameTime?.ElapsedGameTime.TotalSeconds ?? 1.0 / 60.0);
+            float speedPx = Math.Max(0f, this.Config.SpeedTilesPerSecond) * 64f;
+
+            for (int i = list.Count - 1; i >= 0; i--)
             {
-                145, 132, 136, 137, 138,
-                139, 142, 143, 146, 148
-            };
+                LandFish fish = list[i];
 
-            return defaults[rng.Next(defaults.Length)];
+                // ✅ VisualRng exists now (fixes your CS1061 errors)
+                if (this.VisualRng.NextDouble() < this.Config.TurnChancePerUpdate)
+                {
+                    float ang = (float)(this.VisualRng.NextDouble() * Math.PI * 2);
+                    fish.Velocity = new Vector2((float)Math.Cos(ang), (float)Math.Sin(ang)) * speedPx;
+                }
+
+                Vector2 next = fish.Position + fish.Velocity * dt;
+                Vector2 nextTile = new((int)(next.X / 64f), (int)(next.Y / 64f));
+
+                if (!IsGoodLandTile(loc, nextTile))
+                {
+                    fish.Velocity *= -1f;
+                    next = fish.Position + fish.Velocity * dt;
+                }
+
+                fish.Position = next;
+
+                if (fish.Velocity.LengthSquared() > 0.01f)
+                    fish.Facing = (float)Math.Atan2(fish.Velocity.Y, fish.Velocity.X);
+
+                fish.BobPhase += this.Config.BobSpeed;
+
+                list[i] = fish;
+            }
         }
 
         private static bool IsGoodLandTile(GameLocation loc, Vector2 tile)
         {
-            if (loc?.Map is null || loc.Map.Layers.Count == 0)
-                return false;
-
-            if (!loc.isTileOnMap(tile))
+            if (loc.Map is null || loc.Map.Layers.Count == 0)
                 return false;
 
             int x = (int)tile.X;
             int y = (int)tile.Y;
 
-            if (loc.isWaterTile(x, y))
+            int w = loc.Map.Layers[0].LayerWidth;
+            int h = loc.Map.Layers[0].LayerHeight;
+
+            if (x < 0 || y < 0 || x >= w || y >= h)
                 return false;
 
-            if (!loc.isTilePassable(new Location(x, y), Game1.viewport))
+            if (loc.isWaterTile(x, y))
                 return false;
 
             if (loc.Objects.ContainsKey(tile))
                 return false;
 
+            if (loc.terrainFeatures.ContainsKey(tile))
+                return false;
+
             return true;
         }
 
-        private sealed class LandFish
+        private void ApplyFishingBuff(int bonus)
         {
-            private readonly int FishObjectId;
+            bonus = Math.Max(0, bonus);
 
-            private Vector2 Position;
-            private Vector2 Target;
-            private float BobPhase;
-            private float Facing;
-            private int StuckCounter;
-
-            public LandFish(int fishObjectId, Vector2 startPixel)
+            if (bonus <= 0)
             {
-                this.FishObjectId = fishObjectId;
-                this.Position = startPixel;
-                this.Target = startPixel;
-                this.BobPhase = (float)Game1.random.NextDouble() * 100f;
+                this.RemoveFishingBuff();
+                return;
             }
 
-            public bool IsValidForLocation(GameLocation loc)
+            var effects = new BuffEffects();
+            effects.FishingLevel.Add(bonus);
+
+            Buff buff = new Buff(
+                id: BuffId,
+                displayName: EventName,
+                iconTexture: Game1.buffsIcons,
+                iconSheetIndex: 0,
+                duration: Buff.ENDLESS,
+                effects: effects
+            );
+
+            Game1.player.applyBuff(buff);
+        }
+
+        private void RemoveFishingBuff()
+        {
+            if (Game1.player is null)
+                return;
+
+            Game1.player.buffs.Remove(BuffId);
+        }
+
+        private void OnAssetRequested(object? sender, AssetRequestedEventArgs e)
+        {
+            if (!this.Config.Enabled || !this.LocationsOverrideActive)
+                return;
+
+            if (!e.NameWithoutLocale.IsEquivalentTo("Data/Locations"))
+                return;
+
+            e.Edit(asset =>
             {
-                return loc.Map?.Layers?.Count > 0;
-            }
+                var dict = asset.AsDictionary<string, LocationData>().Data;
 
-            public void PickNewTarget(GameLocation loc, ModConfig config, Random rng)
-            {
-                int radiusTiles = Math.Max(1, config.WanderRadiusTiles);
-                Point originTile = new((int)(this.Position.X / 64f), (int)(this.Position.Y / 64f));
-
-                for (int tries = 0; tries < 40; tries++)
-                {
-                    int dx = rng.Next(-radiusTiles, radiusTiles + 1);
-                    int dy = rng.Next(-radiusTiles, radiusTiles + 1);
-
-                    Vector2 tile = new(originTile.X + dx, originTile.Y + dy);
-                    if (!IsGoodLandTile(loc, tile))
-                        continue;
-
-                    this.Target = tile * 64f + new Vector2(32f, 44f);
-                    this.StuckCounter = 0;
+                if (!dict.TryGetValue("Default", out LocationData? def) || def is null)
                     return;
-                }
 
-                this.Target = this.Position;
+                def.Fish ??= new List<SpawnFishData>();
+
+                foreach (string fishId in this.FishIds)
+                {
+                    def.Fish.Add(new SpawnFishData
+                    {
+                        ItemId = QualifyObjectId(fishId),
+                        Chance = 1f,
+                        Precedence = 0,
+                        IgnoreFishDataRequirements = true,
+                        Season = null
+                    });
+                }
+            }, AssetEditPriority.Late);
+        }
+
+        private void RebuildFishIdCache()
+        {
+            try
+            {
+                Dictionary<string, string> fish = this.Helper.GameContent.Load<Dictionary<string, string>>("Data/Fish");
+                this.FishIds = fish.Keys
+                    .Where(k => !string.IsNullOrWhiteSpace(k))
+                    .Distinct(StringComparer.OrdinalIgnoreCase)
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+                this.Monitor.Log($"Could not load Data/Fish: {ex}", LogLevel.Warn);
+                this.FishIds.Clear();
+            }
+        }
+
+        private bool TryGetFishSprite(string qualifiedItemId, out Texture2D tex, out Rectangle src)
+        {
+            if (this.SpriteCache.TryGetValue(qualifiedItemId, out var cached))
+            {
+                tex = cached.Tex;
+                src = cached.Src;
+                return true;
             }
 
-            public void Update(GameLocation loc, ModConfig config, Random rng)
+            ParsedItemData? data = ItemRegistry.GetData(qualifiedItemId);
+            if (data is null)
             {
-                float speed = Math.Max(0.1f, config.SpeedPixelsPerUpdate);
-
-                Vector2 delta = this.Target - this.Position;
-                float dist = delta.Length();
-
-                if (dist < 6f)
-                {
-                    this.PickNewTarget(loc, config, rng);
-                    delta = this.Target - this.Position;
-                    dist = delta.Length();
-                }
-
-                Vector2 step = dist > 0.001f ? (delta / dist) * Math.Min(speed, dist) : Vector2.Zero;
-
-                Vector2 nextPos = this.Position + step;
-                Vector2 nextTile = new((int)(nextPos.X / 64f), (int)(nextPos.Y / 64f));
-                if (!IsGoodLandTile(loc, nextTile))
-                {
-                    this.StuckCounter++;
-                    if (this.StuckCounter >= 3)
-                        this.PickNewTarget(loc, config, rng);
-                    return;
-                }
-
-                this.Position = nextPos;
-
-                if (step.LengthSquared() > 0.01f)
-                    this.Facing = (float)Math.Atan2(step.Y, step.X);
-
-                this.BobPhase += 0.25f;
+                tex = null!;
+                src = Rectangle.Empty;
+                return false;
             }
 
-            public void Draw(SpriteBatch b, ModConfig config)
+            tex = data.GetTexture();
+            src = data.GetSourceRect();
+
+            this.SpriteCache[qualifiedItemId] = (tex, src);
+            return true;
+        }
+
+        private DayState RollToday()
+        {
+            int seasonIndex = SeasonIndex(Game1.currentSeason);
+            int dayKey = (Game1.year * 1000) + (seasonIndex * 100) + Game1.dayOfMonth;
+            int seed = unchecked((int)(Game1.uniqueIDForThisGame ^ (uint)dayKey));
+            var rng = new Random(seed);
+
+            double chance = Math.Clamp(this.Config.DailyChancePercent / 100.0, 0.0, 1.0);
+            bool triggered = rng.NextDouble() < chance;
+
+            int start = NormalizeTime(this.Config.StartTime);
+            int end = NormalizeTime(this.Config.EndTime);
+
+            if (end < 600)
+                end = NormalizeTime(end + 2400);
+
+            return new DayState(
+                Year: Game1.year,
+                Season: Game1.currentSeason,
+                DayOfMonth: Game1.dayOfMonth,
+                Triggered: triggered,
+                StartTime: start,
+                EndTime: end,
+                FishingSkillBonus: this.Config.FishingSkillBonus,
+                AllFishEverywhere: this.Config.AllFishEverywhere
+            );
+        }
+
+        private static bool IsToday(DayState s)
+        {
+            return s.Year == Game1.year
+                && string.Equals(s.Season, Game1.currentSeason, StringComparison.Ordinal)
+                && s.DayOfMonth == Game1.dayOfMonth;
+        }
+
+        private static int SeasonIndex(string season)
+        {
+            return season switch
             {
-                Texture2D tex = Game1.objectSpriteSheet;
-                XnaRectangle src = Game1.getSourceRectForStandardTileSheet(tex, this.FishObjectId, 16, 16);
+                "spring" => 0,
+                "summer" => 1,
+                "fall" => 2,
+                "winter" => 3,
+                _ => 0
+            };
+        }
 
-                float bob = (float)Math.Sin(this.BobPhase) * config.BobPixels;
+        private static bool IsTimeInWindow(int time, int start, int end)
+        {
+            time = NormalizeTime(time);
+            start = NormalizeTime(start);
+            end = NormalizeTime(end);
 
-                Vector2 world = new(this.Position.X, this.Position.Y + bob);
-                Vector2 screen = Game1.GlobalToLocal(Game1.viewport, world);
+            if (end <= start)
+                return false;
 
-                float scale = Math.Max(0.1f, config.Scale);
-                float depth = Math.Max(0f, (world.Y + 16f) / 10000f);
+            return time >= start && time < end;
+        }
 
-                float rotation = this.Facing + (float)Math.Sin(this.BobPhase * 0.5f) * config.WiggleRadians;
-                Vector2 origin = new(8f, 8f);
+        private static int NormalizeTime(int time)
+        {
+            if (time < 0) time = 0;
 
-                b.Draw(
-                    texture: tex,
-                    position: screen,
-                    sourceRectangle: src,
-                    color: Color.White * config.Opacity,
-                    rotation: rotation,
-                    origin: origin,
-                    scale: 4f * scale,
-                    effects: SpriteEffects.None,
-                    layerDepth: depth
-                );
+            int mins = time % 100;
+            int hours = time / 100;
+
+            mins = (mins / 10) * 10;
+            if (mins >= 60)
+            {
+                hours++;
+                mins = 0;
+            }
+
+            if (hours > 26)
+                hours = 26;
+
+            if (hours == 26 && mins > 0)
+                mins = 0;
+
+            return hours * 100 + mins;
+        }
+
+        private static string QualifyObjectId(string objectId)
+        {
+            return objectId.StartsWith("(O)", StringComparison.OrdinalIgnoreCase)
+                ? objectId
+                : $"(O){objectId}";
+        }
+
+        private void SetupGmcm()
+        {
+            var gmcm = this.Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
+            if (gmcm is null)
+                return;
+
+            gmcm.Register(
+                mod: this.ModManifest,
+                reset: () => this.Config = new ModConfig(),
+                save: () => this.Helper.WriteConfig(this.Config)
+            );
+
+            gmcm.AddSectionTitle(this.ModManifest, () => EventName);
+
+            gmcm.AddBoolOption(this.ModManifest,
+                getValue: () => this.Config.Enabled,
+                setValue: v => this.Config.Enabled = v,
+                name: () => "Enable");
+
+            gmcm.AddNumberOption(this.ModManifest,
+                getValue: () => this.Config.DailyChancePercent,
+                setValue: v => this.Config.DailyChancePercent = v,
+                name: () => "Daily chance",
+                min: 0,
+                max: 100,
+                interval: 1,
+                formatValue: v => $"{v}%");
+
+            gmcm.AddNumberOption(this.ModManifest,
+                getValue: () => this.Config.FishingSkillBonus,
+                setValue: v => this.Config.FishingSkillBonus = v,
+                name: () => "Fishing skill bonus",
+                min: 0,
+                max: 10,
+                interval: 1);
+
+            gmcm.AddNumberOption(this.ModManifest,
+                getValue: () => this.Config.StartTime,
+                setValue: v => this.Config.StartTime = v,
+                name: () => "Start time",
+                min: 600,
+                max: 2600,
+                interval: 10,
+                formatValue: v => FormatTime12h(v));
+
+            gmcm.AddNumberOption(this.ModManifest,
+                getValue: () => this.Config.EndTime,
+                setValue: v => this.Config.EndTime = v,
+                name: () => "End time",
+                min: 0,
+                max: 2600,
+                interval: 10,
+                formatValue: v =>
+                {
+                    int t = NormalizeTime(v);
+                    if (t < 600) t = NormalizeTime(t + 2400);
+                    return FormatTime12h(t);
+                });
+
+            gmcm.AddBoolOption(this.ModManifest,
+                getValue: () => this.Config.ShowActivationMessage,
+                setValue: v => this.Config.ShowActivationMessage = v,
+                name: () => "Show activation popup");
+
+            gmcm.AddBoolOption(this.ModManifest,
+                getValue: () => this.Config.AllFishEverywhere,
+                setValue: v => this.Config.AllFishEverywhere = v,
+                name: () => "Catch all fish anywhere",
+                tooltip: () => "During the active window, temporarily adds all fish to the global fishing pool and ignores season/time/weather restrictions.");
+
+            gmcm.AddSectionTitle(this.ModManifest, () => "Visuals");
+
+            gmcm.AddNumberOption(this.ModManifest,
+                getValue: () => this.Config.FishCount,
+                setValue: v => this.Config.FishCount = v,
+                name: () => "Fish sprite count",
+                min: 0,
+                max: 120,
+                interval: 1);
+
+            gmcm.AddBoolOption(this.ModManifest,
+                getValue: () => this.Config.SpawnIndoors,
+                setValue: v => this.Config.SpawnIndoors = v,
+                name: () => "Spawn indoors too");
+        }
+
+        private static string FormatTime12h(int hhmm)
+        {
+            hhmm = NormalizeTime(hhmm);
+
+            int hours = hhmm / 100;
+            int mins = hhmm % 100;
+
+            int display24 = hours % 24;
+            bool pm = display24 >= 12;
+            int h12 = display24 % 12;
+            if (h12 == 0) h12 = 12;
+
+            return $"{h12}:{mins:00} {(pm ? "PM" : "AM")}";
+        }
+
+        private readonly record struct DayStateRequest();
+
+        private readonly record struct DayState(
+            int Year,
+            string Season,
+            int DayOfMonth,
+            bool Triggered,
+            int StartTime,
+            int EndTime,
+            int FishingSkillBonus,
+            bool AllFishEverywhere
+        );
+
+        private struct LandFish
+        {
+            public string FishQualifiedId;
+            public Vector2 Position;
+            public Vector2 Velocity;
+            public float Facing;
+            public float BobPhase;
+
+            public LandFish(string fishQualifiedId, Vector2 position, Vector2 velocity)
+            {
+                this.FishQualifiedId = fishQualifiedId;
+                this.Position = position;
+                this.Velocity = velocity;
+                this.Facing = 0f;
+                this.BobPhase = 0f;
             }
         }
     }

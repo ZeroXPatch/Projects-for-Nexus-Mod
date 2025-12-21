@@ -1,33 +1,45 @@
+#nullable enable
+
 namespace LandFishSwimmers
 {
     internal sealed class ModConfig
     {
         public bool Enabled { get; set; } = true;
 
-        // How many fish to keep active in each location.
-        public int FishPerLocation { get; set; } = 10;
+        // Daily trigger chance (percent)
+        public int DailyChancePercent { get; set; } = 5;
 
-        // If false, only outdoors locations will get land fish.
+        // Active window (10pm to 2am default)
+        public int StartTime { get; set; } = 2200;
+        public int EndTime { get; set; } = 2600;
+
+        // Buff amount during the active window
+        public int FishingSkillBonus { get; set; } = 2;
+
+        // If true, show a HUD popup when the event activates
+        public bool ShowActivationMessage { get; set; } = true;
+
+        // Default ON: allow catching every fish in any water during the event window
+        public bool AllFishEverywhere { get; set; } = true;
+
+        // Visual fish settings (now distributed across map, not around player)
+        public int FishCount { get; set; } = 20;
+
+        // If false, fish sprites only appear outdoors
         public bool SpawnIndoors { get; set; } = false;
 
-        // If true, rebuild fish spawns each morning.
-        public bool RespawnEachDay { get; set; } = true;
+        // Visual update frequency
+        public int UpdateTicks { get; set; } = 4;
 
-        // How often to update movement logic (in ticks; 60 ticks = ~1 second).
-        public int UpdateTicks { get; set; } = 6;
+        // Fish movement/animation tuning
+        public float SpeedTilesPerSecond { get; set; } = 1.25f;
+        public float TurnChancePerUpdate { get; set; } = 0.10f;
 
-        // Movement tuning
-        public int WanderRadiusTiles { get; set; } = 12;
-        public float SpeedPixelsPerUpdate { get; set; } = 2.4f;
-
-        // Visual tuning
         public float Scale { get; set; } = 1.0f;
         public float Opacity { get; set; } = 1.0f;
-        public float BobPixels { get; set; } = 2.5f;
-        public float WiggleRadians { get; set; } = 0.08f;
 
-        // Optional: set this to force specific fish item IDs (object IDs).
-        // Example: [145, 136, 143]
-        public int[] FishObjectIds { get; set; } = System.Array.Empty<int>();
+        public float BobPixels { get; set; } = 2.5f;
+        public float BobSpeed { get; set; } = 0.25f;
+        public float WiggleRadians { get; set; } = 0.10f;
     }
 }

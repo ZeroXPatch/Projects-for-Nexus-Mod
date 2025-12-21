@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LandFishSwimmers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d49826b5878f506241770ca2ad480c8f48324bc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a531cef816e183363405cf14e446381d3264da3")]
 [assembly: System.Reflection.AssemblyProductAttribute("LandFishSwimmers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LandFishSwimmers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
