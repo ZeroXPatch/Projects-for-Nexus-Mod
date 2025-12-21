@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StardewAffinity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce17714801ff89cf9d487740caafe08638497b7d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6a3ffbe02dfb3adc43731ce38bc64157d63c6e69")]
 [assembly: System.Reflection.AssemblyProductAttribute("StardewAffinity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StardewAffinity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
