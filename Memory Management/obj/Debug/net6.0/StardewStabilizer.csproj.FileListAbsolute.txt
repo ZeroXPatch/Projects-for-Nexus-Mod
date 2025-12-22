@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Memory Management\obj\Debug\net6.0\StardewStabilizer.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Memory Management\obj\Debug\net6.0\StardewStabilizer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Memory Management\obj\Debug\net6.0\StardewStabilizer.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Memory Management\obj\Debug\net6.0\StardewStabilizer.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Memory Management\obj\Debug\net6.0\StardewStabilizer.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Memory Management\obj\Debug\net6.0\StardewStabilizer.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Memory Management\bin\Debug\net6.0\StardewStabilizer.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Memory Management\bin\Debug\net6.0\StardewStabilizer.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Memory Management\obj\Debug\net6.0\StardewStabilizer.dll

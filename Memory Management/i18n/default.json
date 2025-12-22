@@ -1,0 +1,92 @@
+{
+  "hud.soft_cleanup": "Stabilizer cleanup (light): Managed {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.hard_cleanup": "Stabilizer cleanup (deep): Managed {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.manual_soft": "Stabilizer (light now): Managed {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.manual_hard": "Stabilizer (deep now): Managed {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.emergency_hard": "Stabilizer emergency cleanup: Managed {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.queued_hard": "Stabilizer cleanup (deep, queued): Managed {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.soft_waiting_for_hard": "Stabilizer cleanup (light while waiting): Managed {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+
+  "overlay.line": "Stabilizer  P:{{current}}%  Avg({{window}}s):{{avg}}%  Trend:{{delta}}  Managed:{{managed}}MB  RAM:{{ws}}MB",
+
+  "gmcm.section.general": "General",
+  "gmcm.section.general.tip": "Main switches for Stardew Stabilizer.",
+
+  "gmcm.enabled.name": "Enable mod",
+  "gmcm.enabled.tip": "Turn Stardew Stabilizer on or off.",
+
+  "gmcm.autocleanup.name": "Auto cleanup",
+  "gmcm.autocleanup.tip": "Let the mod run cleanups automatically based on memory pressure.",
+
+  "gmcm.section.thresholds": "Thresholds",
+  "gmcm.section.thresholds.tip": "When pressure crosses these levels, the mod will act.",
+
+  "gmcm.softpressure.name": "Soft cleanup threshold (%)",
+  "gmcm.softpressure.tip": "Above this pressure, the mod may run a light cleanup (low stutter).",
+
+  "gmcm.hardpressure.name": "Hard cleanup threshold (%)",
+  "gmcm.hardpressure.tip": "Above this pressure, the mod may run a deep cleanup (can stutter).",
+
+  "gmcm.emergencypressure.name": "Emergency hard threshold (%)",
+  "gmcm.emergencypressure.tip": "Above this level, a deep cleanup may run anywhere to prevent crashes.",
+
+  "gmcm.section.trend": "Spike filtering (trend)",
+  "gmcm.section.trend.tip": "Reduces reacting to one-second spikes.",
+
+  "gmcm.usetrendavg.name": "Use average pressure",
+  "gmcm.usetrendavg.tip": "Use the recent average pressure (not just the latest second) when deciding to clean.",
+
+  "gmcm.trendwindow.name": "Trend window (seconds)",
+  "gmcm.trendwindow.tip": "How many seconds to average for the trend.",
+
+  "gmcm.sustain.name": "Sustain time (seconds)",
+  "gmcm.sustain.tip": "Pressure must stay above the soft threshold for this long before auto cleanup triggers. Set 0 to disable.",
+
+  "gmcm.hysteresis.name": "Hysteresis (%)",
+  "gmcm.hysteresis.tip": "Prevents repeated cleanups when pressure hovers around the threshold.",
+
+  "gmcm.section.freezecontrol": "Freeze control",
+  "gmcm.section.freezecontrol.tip": "Settings that minimize noticeable freezes.",
+
+  "gmcm.hardmenuonly.name": "Hard cleanup menu-only",
+  "gmcm.hardmenuonly.tip": "Deep cleanups only happen in menus/fades (unless emergency).",
+
+  "gmcm.prefersoft.name": "Prefer soft while waiting",
+  "gmcm.prefersoft.tip": "If a deep cleanup is queued, do light cleanups while waiting for a safe moment.",
+
+  "gmcm.section.cooldowns": "Cooldowns",
+  "gmcm.section.cooldowns.tip": "Minimum time between cleanups.",
+
+  "gmcm.softcooldown.name": "Soft cooldown (seconds)",
+  "gmcm.softcooldown.tip": "Minimum time between light cleanups.",
+
+  "gmcm.hardcooldown.name": "Hard cooldown (seconds)",
+  "gmcm.hardcooldown.tip": "Minimum time between deep cleanups.",
+
+  "gmcm.section.ui": "UI",
+  "gmcm.section.ui.tip": "Overlay and messages.",
+
+  "gmcm.hudmessages.name": "Show HUD messages",
+  "gmcm.hudmessages.tip": "Show a short message when a cleanup happens.",
+
+  "gmcm.overlay.name": "Show overlay",
+  "gmcm.overlay.tip": "Show a small overlay with pressure and trend.",
+
+  "gmcm.overlayx.name": "Overlay X",
+  "gmcm.overlayx.tip": "Horizontal position for the overlay.",
+
+  "gmcm.overlayy.name": "Overlay Y",
+  "gmcm.overlayy.tip": "Vertical position for the overlay.",
+
+  "gmcm.section.advanced": "Advanced",
+  "gmcm.section.advanced.tip": "Optional settings. Change carefully.",
+
+  "gmcm.lohcompact.name": "Compact large allocations on hard cleanup",
+  "gmcm.lohcompact.tip": "May reduce memory growth, but can increase stutter during deep cleanups.",
+
+  "gmcm.trimws.name": "Trim Windows working set",
+  "gmcm.trimws.tip": "Can reduce reported RAM usage, but may cause stutter later. Off by default.",
+
+  "gmcm.fallbackmem.name": "Fallback available memory (MB)",
+  "gmcm.fallbackmem.tip": "Used if the runtime can't detect available memory. Set close to your system RAM."
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.1.11312.151 d18.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StardewStabilizer", "StardewStabilizer.csproj", "{7ACA5142-EABC-B1E6-8134-254C9E069ED4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7ACA5142-EABC-B1E6-8134-254C9E069ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ACA5142-EABC-B1E6-8134-254C9E069ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ACA5142-EABC-B1E6-8134-254C9E069ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ACA5142-EABC-B1E6-8134-254C9E069ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD577853-0FCD-4735-9F03-3FF977B24E4D}
+	EndGlobalSection
+EndGlobal

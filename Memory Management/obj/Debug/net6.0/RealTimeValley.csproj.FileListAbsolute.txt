@@ -1,0 +1,6 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Memory Management\obj\Debug\net6.0\RealTimeValley.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Memory Management\obj\Debug\net6.0\RealTimeValley.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Memory Management\obj\Debug\net6.0\RealTimeValley.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Memory Management\obj\Debug\net6.0\RealTimeValley.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Memory Management\obj\Debug\net6.0\RealTimeValley.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Memory Management\obj\Debug\net6.0\RealTimeValley.sourcelink.json
