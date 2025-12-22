@@ -1,0 +1,12 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Reel Tension\obj\Debug\net6.0\Reel Tension.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Reel Tension\obj\Debug\net6.0\Reel Tension.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Reel Tension\obj\Debug\net6.0\Reel Tension.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Reel Tension\obj\Debug\net6.0\Reel Tension.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Reel Tension\obj\Debug\net6.0\Reel Tension.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Reel Tension\obj\Debug\net6.0\Reel Tension.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Reel Tension\bin\Debug\net6.0\ReelTensionFishing.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Reel Tension\bin\Debug\net6.0\ReelTensionFishing.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Reel Tension\bin\Debug\net6.0\0Harmony.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Reel Tension\bin\Debug\net6.0\0Harmony.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Reel Tension\obj\Debug\net6.0\Reel Ten.01D75A55.Up2Date
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Reel Tension\obj\Debug\net6.0\ReelTensionFishing.dll

@@ -50,13 +50,9 @@
           ]
         },
         {
-          "DockedWidth": 833,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 405,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -104,8 +100,7 @@
               "RelativeToolTip": "ModEntry.cs",
               "ViewState": "AgIAALwCAAAAAAAAAAAiwNcCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T23:27:12.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T23:27:12.719Z"
             },
             {
               "$type": "Document",
@@ -154,6 +149,10 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-12-14T23:26:30.824Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         },
