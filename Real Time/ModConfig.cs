@@ -4,56 +4,66 @@ public class ModConfig
 {
     public bool Enable { get; set; } = true;
 
-    /// <summary>
-    /// Freeze vanilla time and sync the in-game clock to real time minute-by-minute.
-    /// </summary>
+    // Real-time clock
     public bool MinuteAccurateClock { get; set; } = true;
-
-    /// <summary>How often to sync to real time.</summary>
     public int SyncIntervalSeconds { get; set; } = 1;
 
-    // World catch-up (10-min updates) so shops/NPCs update correctly after big jumps
-    public bool RunWorldCatchupOnLoad { get; set; } = true;
-    public bool RunWorldCatchupOnLargeForwardJump { get; set; } = true;
-    public int LargeForwardJumpMinutes { get; set; } = 60;
-    public int MaxWorldCatchupTenMinuteSteps { get; set; } = 200;
-
-    // Festival handling (the new important part)
+    // Festival-friendly (optional): prevents "empty festival" when real time is outside festival hours
     public bool FestivalFriendlyMode { get; set; } = true;
-
-    /// <summary>
-    /// If true: when it's a festival day and you haven't triggered the festival event yet,
-    /// the mod will hold time inside the festival window so you can enter and start it.
-    /// </summary>
     public bool HoldTimeInsideFestivalWindow { get; set; } = true;
-
-    /// <summary>Which time (HHMM) to hold at if current real time is outside the festival window.</summary>
     public int FestivalHoldTimeDay { get; set; } = 1200;   // noon
     public int FestivalHoldTimeNight { get; set; } = 2230; // night festivals
-
-    public bool PauseWhenPaused { get; set; } = true;
-    public bool UseShouldTimePassCheck { get; set; } = true;
 
     // Night clamp
     public bool ClampAtNight { get; set; } = true;
     public bool PauseSyncAtMaxNight { get; set; } = true;
     public int ResumeSyncHour { get; set; } = 6;
-
-    /// <summary>Use 24xx/25xx for after midnight when enabled.</summary>
     public bool TreatMidnightAsLateNight { get; set; } = true;
-
     public int ClampMinTime { get; set; } = 600;
     public int ClampMaxTime { get; set; } = 2600;
 
+    // World catch-up (recommended ON): runs 10-min updates forward on load so shops/NPC states aren't "stuck"
+    public bool RunWorldCatchupOnLoad { get; set; } = true;
+    public int MaxWorldCatchupTenMinuteSteps { get; set; } = 200;
+
+    // Pause handling
+    public bool PauseWhenPaused { get; set; } = true;
+    public bool UseShouldTimePassCheck { get; set; } = true;
+
     // NPC fix (light safety net)
-    public int NpcWakeEarliestTime { get; set; } = 700;
     public bool NPCFixOnLoad { get; set; } = true;
-    public bool NPCFixAfterWorldCatchup { get; set; } = true;
+    public int NpcWakeEarliestTime { get; set; } = 700;
     public int NpcFixCooldownSeconds { get; set; } = 10;
     public NPCWarpAggressiveness NPCWarpAggressiveness { get; set; } = NPCWarpAggressiveness.Conservative;
 
-    public bool ShowCompatibilityWarnings { get; set; } = true;
+    // NEW: Machine acceleration (the fix you asked for)
+    public bool AccelerateMachines { get; set; } = true;
+
+    public MachineSpeedMode MachineSpeedMode { get; set; } = MachineSpeedMode.MatchVanilla;
+
+    /// <summary>
+    /// Only used when MachineSpeedMode = CustomMultiplier.
+    /// Multiplier is relative to real-time world minutes.
+    /// Example: 10 => machines run 10x faster than real-time.
+    /// To match vanilla, use ~85.714.
+    /// </summary>
+    public double MachineSpeedMultiplier { get; set; } = 85.71428571428571;
+
+    /// <summary>
+    /// Safety cap: max minutes applied to machines per second-tick.
+    /// Prevents insane catch-ups if the game hitches.
+    /// </summary>
+    public int MachineMaxMinutesPerTick { get; set; } = 120;
+
     public bool DebugLogging { get; set; } = false;
+    public bool ShowCompatibilityWarnings { get; set; } = true;
+}
+
+public enum MachineSpeedMode
+{
+    Off,
+    MatchVanilla,
+    CustomMultiplier
 }
 
 public enum NPCWarpAggressiveness

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RealTimeValley")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce17714801ff89cf9d487740caafe08638497b7d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae0820760c2e5c728d757e3439fc62556f459ca9")]
 [assembly: System.Reflection.AssemblyProductAttribute("RealTimeValley")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RealTimeValley")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
