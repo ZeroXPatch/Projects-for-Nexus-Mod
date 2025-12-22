@@ -1,10 +1,10 @@
 {
   "Name": "Stardew Stabilizer",
-  "Author": "YourName",
+  "Author": "ZeroXPatch",
   "Version": "1.0.0",
   "Description": "Helps keep long modded sessions stable by monitoring memory pressure and running gentle cleanups when needed.",
-  "UniqueID": "YourName.StardewStabilizer",
+  "UniqueID": "ZeroXPatch.StardewStabilizer",
   "EntryDll": "StardewStabilizer.dll",
   "MinimumApiVersion": "4.0.0",
-  "UpdateKeys": []
+  "UpdateKeys": [ "Nexus:40484" ]
 }

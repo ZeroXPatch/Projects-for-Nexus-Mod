@@ -1,0 +1,92 @@
+{
+  "hud.soft_cleanup": "Czyszczenie Stabilizatora (lekkie): Zarządzane {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.hard_cleanup": "Czyszczenie Stabilizatora (głębokie): Zarządzane {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.manual_soft": "Stabilizator (lekkie teraz): Zarządzane {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.manual_hard": "Stabilizator (głębokie teraz): Zarządzane {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.emergency_hard": "Awaryjne czyszczenie Stabilizatora: Zarządzane {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.queued_hard": "Czyszczenie Stabilizatora (głębokie, w kolejce): Zarządzane {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.soft_waiting_for_hard": "Czyszczenie Stabilizatora (lekkie podczas oczekiwania): Zarządzane {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+
+  "overlay.line": "Stabilizator  P:{{current}}%  Śr({{window}}s):{{avg}}%  Trend:{{delta}}  Zarządzane:{{managed}}MB  RAM:{{ws}}MB",
+
+  "gmcm.section.general": "Ogólne",
+  "gmcm.section.general.tip": "Główne przełączniki dla Stardew Stabilizer.",
+
+  "gmcm.enabled.name": "Włącz mod",
+  "gmcm.enabled.tip": "Włącza lub wyłącza Stardew Stabilizer.",
+
+  "gmcm.autocleanup.name": "Automatyczne czyszczenie",
+  "gmcm.autocleanup.tip": "Pozwala modowi wykonywać czyszczenia automatycznie na podstawie presji pamięci.",
+
+  "gmcm.section.thresholds": "Progi",
+  "gmcm.section.thresholds.tip": "Gdy presja przekroczy te poziomy, mod zareaguje.",
+
+  "gmcm.softpressure.name": "Próg lekkiego czyszczenia (%)",
+  "gmcm.softpressure.tip": "Powyżej tej presji mod może wykonać lekkie czyszczenie (małe przycięcia).",
+
+  "gmcm.hardpressure.name": "Próg głębokiego czyszczenia (%)",
+  "gmcm.hardpressure.tip": "Powyżej tej presji mod może wykonać głębokie czyszczenie (możliwe przycięcia).",
+
+  "gmcm.emergencypressure.name": "Awaryjny próg głęboki (%)",
+  "gmcm.emergencypressure.tip": "Powyżej tego poziomu głębokie czyszczenie może uruchomić się wszędzie, by zapobiec awariom.",
+
+  "gmcm.section.trend": "Filtrowanie skoków (trend)",
+  "gmcm.section.trend.tip": "Zmniejsza reakcje na jednosekundowe skoki.",
+
+  "gmcm.usetrendavg.name": "Użyj średniej presji",
+  "gmcm.usetrendavg.tip": "Przy decyzji o czyszczeniu używaj ostatniej średniej presji (nie tylko ostatniej sekundy).",
+
+  "gmcm.trendwindow.name": "Okno trendu (sekundy)",
+  "gmcm.trendwindow.tip": "Ile sekund uśredniać dla trendu.",
+
+  "gmcm.sustain.name": "Czas podtrzymania (sekundy)",
+  "gmcm.sustain.tip": "Presja musi pozostawać powyżej lekkiego progu przez ten czas, zanim włączy się auto-czyszczenie. Ustaw 0, aby wyłączyć.",
+
+  "gmcm.hysteresis.name": "Histereza (%)",
+  "gmcm.hysteresis.tip": "Zapobiega powtarzającym się czyszczeniom, gdy presja waha się wokół progu.",
+
+  "gmcm.section.freezecontrol": "Kontrola zacięć",
+  "gmcm.section.freezecontrol.tip": "Ustawienia minimalizujące zauważalne zacięcia.",
+
+  "gmcm.hardmenuonly.name": "Głębokie czyszczenie tylko w menu",
+  "gmcm.hardmenuonly.tip": "Głębokie czyszczenia odbywają się tylko w menu/przejściach (chyba że awaria).",
+
+  "gmcm.prefersoft.name": "Preferuj lekkie w oczekiwaniu",
+  "gmcm.prefersoft.tip": "Jeśli głębokie czyszczenie jest w kolejce, wykonuj lekkie czyszczenia w oczekiwaniu na bezpieczny moment.",
+
+  "gmcm.section.cooldowns": "Czasy odnowienia",
+  "gmcm.section.cooldowns.tip": "Minimalny czas między czyszczeniami.",
+
+  "gmcm.softcooldown.name": "Odnawianie lekkie (sekundy)",
+  "gmcm.softcooldown.tip": "Minimalny czas między lekkimi czyszczeniami.",
+
+  "gmcm.hardcooldown.name": "Odnawianie głębokie (sekundy)",
+  "gmcm.hardcooldown.tip": "Minimalny czas między głębokimi czyszczeniami.",
+
+  "gmcm.section.ui": "UI",
+  "gmcm.section.ui.tip": "Nakładka i komunikaty.",
+
+  "gmcm.hudmessages.name": "Pokaż komunikaty HUD",
+  "gmcm.hudmessages.tip": "Wyświetl krótki komunikat, gdy nastąpi czyszczenie.",
+
+  "gmcm.overlay.name": "Pokaż nakładkę",
+  "gmcm.overlay.tip": "Pokaż małą nakładkę z presją i trendem.",
+
+  "gmcm.overlayx.name": "Nakładka X",
+  "gmcm.overlayx.tip": "Pozycja pozioma nakładki.",
+
+  "gmcm.overlayy.name": "Nakładka Y",
+  "gmcm.overlayy.tip": "Pozycja pionowa nakładki.",
+
+  "gmcm.section.advanced": "Zaawansowane",
+  "gmcm.section.advanced.tip": "Ustawienia opcjonalne. Zmieniaj ostrożnie.",
+
+  "gmcm.lohcompact.name": "Kompaktuj duże alokacje przy głębokim czyszczeniu",
+  "gmcm.lohcompact.tip": "Może ograniczyć wzrost pamięci, ale może zwiększyć przycięcia podczas głębokich czyszczeń.",
+
+  "gmcm.trimws.name": "Przytnij zestaw roboczy Windows",
+  "gmcm.trimws.tip": "Może zmniejszyć zgłaszane użycie RAM, ale może powodować późniejsze przycięcia. Domyślnie wyłączone.",
+
+  "gmcm.fallbackmem.name": "Zapasowa dostępna pamięć (MB)",
+  "gmcm.fallbackmem.tip": "Używana, jeśli środowisko nie wykrywa dostępnej pamięci. Ustaw wartość zbliżoną do pamięci RAM systemu."
+}

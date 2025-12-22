@@ -1,0 +1,92 @@
+{
+  "hud.soft_cleanup": "稳定器清理（轻量）：托管内存 {{managedBefore}}MB -> {{managedAfter}}MB，RAM {{wsBefore}}MB -> {{wsAfter}}MB。",
+  "hud.hard_cleanup": "稳定器清理（深度）：托管内存 {{managedBefore}}MB -> {{managedAfter}}MB，RAM {{wsBefore}}MB -> {{wsAfter}}MB。",
+  "hud.manual_soft": "稳定器（立即轻量）：托管内存 {{managedBefore}}MB -> {{managedAfter}}MB，RAM {{wsBefore}}MB -> {{wsAfter}}MB。",
+  "hud.manual_hard": "稳定器（立即深度）：托管内存 {{managedBefore}}MB -> {{managedAfter}}MB，RAM {{wsBefore}}MB -> {{wsAfter}}MB。",
+  "hud.emergency_hard": "稳定器紧急清理：托管内存 {{managedBefore}}MB -> {{managedAfter}}MB，RAM {{wsBefore}}MB -> {{wsAfter}}MB。",
+  "hud.queued_hard": "稳定器清理（深度，已排队）：托管内存 {{managedBefore}}MB -> {{managedAfter}}MB，RAM {{wsBefore}}MB -> {{wsAfter}}MB。",
+  "hud.soft_waiting_for_hard": "稳定器清理（等待时轻量）：托管内存 {{managedBefore}}MB -> {{managedAfter}}MB，RAM {{wsBefore}}MB -> {{wsAfter}}MB。",
+
+  "overlay.line": "Stabilizer  压力:{{current}}%  平均({{window}}秒):{{avg}}%  趋势:{{delta}}  托管:{{managed}}MB  RAM:{{ws}}MB",
+
+  "gmcm.section.general": "常规",
+  "gmcm.section.general.tip": "Stardew Stabilizer 的主要开关。",
+
+  "gmcm.enabled.name": "启用模组",
+  "gmcm.enabled.tip": "开启或关闭 Stardew Stabilizer。",
+
+  "gmcm.autocleanup.name": "自动清理",
+  "gmcm.autocleanup.tip": "让模组根据内存压力自动执行清理。",
+
+  "gmcm.section.thresholds": "阈值",
+  "gmcm.section.thresholds.tip": "当压力超过这些级别时，模组会采取行动。",
+
+  "gmcm.softpressure.name": "轻量清理阈值 (%)",
+  "gmcm.softpressure.tip": "高于该压力时，模组可能进行轻量清理（卡顿较低）。",
+
+  "gmcm.hardpressure.name": "深度清理阈值 (%)",
+  "gmcm.hardpressure.tip": "高于该压力时，模组可能进行深度清理（可能会卡顿）。",
+
+  "gmcm.emergencypressure.name": "紧急深度阈值 (%)",
+  "gmcm.emergencypressure.tip": "高于此级别时，可能在任何地方运行深度清理以防崩溃。",
+
+  "gmcm.section.trend": "峰值过滤（趋势）",
+  "gmcm.section.trend.tip": "减少对一秒峰值的反应。",
+
+  "gmcm.usetrendavg.name": "使用平均压力",
+  "gmcm.usetrendavg.tip": "决定清理时使用最近的平均压力（而非仅最新一秒）。",
+
+  "gmcm.trendwindow.name": "趋势窗口（秒）",
+  "gmcm.trendwindow.tip": "用于趋势平均的秒数。",
+
+  "gmcm.sustain.name": "持续时间（秒）",
+  "gmcm.sustain.tip": "压力必须在轻量阈值之上保持这么久，自动清理才会触发。设为 0 可禁用。",
+
+  "gmcm.hysteresis.name": "滞后 (%)",
+  "gmcm.hysteresis.tip": "防止压力在阈值附近波动时重复清理。",
+
+  "gmcm.section.freezecontrol": "卡顿控制",
+  "gmcm.section.freezecontrol.tip": "尽量减少明显卡顿的设置。",
+
+  "gmcm.hardmenuonly.name": "深度清理仅限菜单",
+  "gmcm.hardmenuonly.tip": "深度清理仅在菜单/渐变时发生（紧急情况除外）。",
+
+  "gmcm.prefersoft.name": "等待时优先轻量",
+  "gmcm.prefersoft.tip": "如果有深度清理排队，等待安全时刻期间执行轻量清理。",
+
+  "gmcm.section.cooldowns": "冷却",
+  "gmcm.section.cooldowns.tip": "清理之间的最短时间。",
+
+  "gmcm.softcooldown.name": "轻量冷却（秒）",
+  "gmcm.softcooldown.tip": "两次轻量清理之间的最短时间。",
+
+  "gmcm.hardcooldown.name": "深度冷却（秒）",
+  "gmcm.hardcooldown.tip": "两次深度清理之间的最短时间。",
+
+  "gmcm.section.ui": "界面",
+  "gmcm.section.ui.tip": "覆盖层和消息。",
+
+  "gmcm.hudmessages.name": "显示 HUD 消息",
+  "gmcm.hudmessages.tip": "清理发生时显示简短消息。",
+
+  "gmcm.overlay.name": "显示覆盖层",
+  "gmcm.overlay.tip": "显示包含压力和趋势的小型覆盖层。",
+
+  "gmcm.overlayx.name": "覆盖层 X",
+  "gmcm.overlayx.tip": "覆盖层的水平位置。",
+
+  "gmcm.overlayy.name": "覆盖层 Y",
+  "gmcm.overlayy.tip": "覆盖层的垂直位置。",
+
+  "gmcm.section.advanced": "高级",
+  "gmcm.section.advanced.tip": "可选设置，请谨慎更改。",
+
+  "gmcm.lohcompact.name": "深度清理时压缩大块分配",
+  "gmcm.lohcompact.tip": "可减少内存增长，但会增加深度清理时的卡顿。",
+
+  "gmcm.trimws.name": "修剪 Windows 工作集",
+  "gmcm.trimws.tip": "可降低报告的 RAM 占用，但可能稍后导致卡顿。默认关闭。",
+
+  "gmcm.fallbackmem.name": "备用可用内存 (MB)",
+  "gmcm.fallbackmem.tip": "当运行时无法检测可用内存时使用。设为接近你的系统内存。"
+}

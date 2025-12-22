@@ -1,0 +1,92 @@
+{
+  "hud.soft_cleanup": "Stabilizer temizliği (hafif): Yönetilen {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.hard_cleanup": "Stabilizer temizliği (derin): Yönetilen {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.manual_soft": "Stabilizer (hafif şimdi): Yönetilen {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.manual_hard": "Stabilizer (derin şimdi): Yönetilen {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.emergency_hard": "Stabilizer acil temizliği: Yönetilen {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.queued_hard": "Stabilizer temizliği (derin, sırada): Yönetilen {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.soft_waiting_for_hard": "Stabilizer temizliği (beklerken hafif): Yönetilen {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+
+  "overlay.line": "Stabilizer  P:{{current}}%  Ort({{window}}sn):{{avg}}%  Trend:{{delta}}  Yönetilen:{{managed}}MB  RAM:{{ws}}MB",
+
+  "gmcm.section.general": "Genel",
+  "gmcm.section.general.tip": "Stardew Stabilizer için ana anahtarlar.",
+
+  "gmcm.enabled.name": "Modu etkinleştir",
+  "gmcm.enabled.tip": "Stardew Stabilizer'ı aç veya kapat.",
+
+  "gmcm.autocleanup.name": "Otomatik temizlik",
+  "gmcm.autocleanup.tip": "Modun bellek baskısına göre otomatik temizlik yapmasına izin verin.",
+
+  "gmcm.section.thresholds": "Eşikler",
+  "gmcm.section.thresholds.tip": "Baskı bu seviyeleri geçince mod harekete geçer.",
+
+  "gmcm.softpressure.name": "Hafif temizlik eşiği (%)",
+  "gmcm.softpressure.tip": "Bu baskının üzerinde mod hafif temizlik yapabilir (az takılma).",
+
+  "gmcm.hardpressure.name": "Derin temizlik eşiği (%)",
+  "gmcm.hardpressure.tip": "Bu baskının üzerinde mod derin temizlik yapabilir (takılma olabilir).",
+
+  "gmcm.emergencypressure.name": "Acil derin eşik (%)",
+  "gmcm.emergencypressure.tip": "Bu seviyenin üzerinde, çöküşleri önlemek için her yerde derin temizlik çalışabilir.",
+
+  "gmcm.section.trend": "Sıçrama filtreleme (trend)",
+  "gmcm.section.trend.tip": "1 saniyelik sıçramalara verilen tepkiyi azaltır.",
+
+  "gmcm.usetrendavg.name": "Ortalama baskıyı kullan",
+  "gmcm.usetrendavg.tip": "Temizliğe karar verirken son ortalama baskıyı (sadece son saniye değil) kullanın.",
+
+  "gmcm.trendwindow.name": "Trend penceresi (saniye)",
+  "gmcm.trendwindow.tip": "Trend için kaç saniyeyi ortalamaya dahil edeceğiniz.",
+
+  "gmcm.sustain.name": "Sürdürme süresi (saniye)",
+  "gmcm.sustain.tip": "Otomatik temizlik tetiklenmeden önce baskı bu süre boyunca hafif eşik üzerinde kalmalıdır. Devre dışı bırakmak için 0 girin.",
+
+  "gmcm.hysteresis.name": "Histerezis (%)",
+  "gmcm.hysteresis.tip": "Baskı eşik etrafında gezinirken tekrarlayan temizliği önler.",
+
+  "gmcm.section.freezecontrol": "Donma kontrolü",
+  "gmcm.section.freezecontrol.tip": "Fark edilir donmaları en aza indiren ayarlar.",
+
+  "gmcm.hardmenuonly.name": "Derin temizlik sadece menüde",
+  "gmcm.hardmenuonly.tip": "Derin temizlemeler yalnızca menülerde/geçişlerde gerçekleşir (acil durumlar hariç).",
+
+  "gmcm.prefersoft.name": "Beklerken hafifi tercih et",
+  "gmcm.prefersoft.tip": "Derin temizlik sıradaysa, güvenli anı beklerken hafif temizlikler yapın.",
+
+  "gmcm.section.cooldowns": "Bekleme süreleri",
+  "gmcm.section.cooldowns.tip": "Temizlikler arasındaki minimum süre.",
+
+  "gmcm.softcooldown.name": "Hafif bekleme (saniye)",
+  "gmcm.softcooldown.tip": "Hafif temizlemeler arasındaki minimum süre.",
+
+  "gmcm.hardcooldown.name": "Derin bekleme (saniye)",
+  "gmcm.hardcooldown.tip": "Derin temizlemeler arasındaki minimum süre.",
+
+  "gmcm.section.ui": "Arayüz",
+  "gmcm.section.ui.tip": "Kaplama ve mesajlar.",
+
+  "gmcm.hudmessages.name": "HUD mesajlarını göster",
+  "gmcm.hudmessages.tip": "Temizlik gerçekleştiğinde kısa bir mesaj göster.",
+
+  "gmcm.overlay.name": "Kaplamayı göster",
+  "gmcm.overlay.tip": "Baskı ve trendi gösteren küçük bir kaplama göster.",
+
+  "gmcm.overlayx.name": "Kaplama X",
+  "gmcm.overlayx.tip": "Kaplamanın yatay konumu.",
+
+  "gmcm.overlayy.name": "Kaplama Y",
+  "gmcm.overlayy.tip": "Kaplamanın dikey konumu.",
+
+  "gmcm.section.advanced": "Gelişmiş",
+  "gmcm.section.advanced.tip": "İsteğe bağlı ayarlar. Dikkatle değiştirin.",
+
+  "gmcm.lohcompact.name": "Derin temizlikte büyük ayırmaları sıkıştır",
+  "gmcm.lohcompact.tip": "Bellek artışını azaltabilir ancak derin temizleme sırasında takılma artırabilir.",
+
+  "gmcm.trimws.name": "Windows çalışma kümesini kırp",
+  "gmcm.trimws.tip": "RAM kullanım raporunu azaltabilir, ancak sonrasında takılma yapabilir. Varsayılan olarak kapalıdır.",
+
+  "gmcm.fallbackmem.name": "Yedek kullanılabilir bellek (MB)",
+  "gmcm.fallbackmem.tip": "Çalışma zamanı kullanılabilir belleği algılayamazsa kullanılır. Sistem RAM'inize yakın bir değer girin."
+}
