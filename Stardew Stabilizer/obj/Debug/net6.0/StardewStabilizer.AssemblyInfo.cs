@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StardewStabilizer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45f33e6e797fba17a0abb1d6a366eee358ea0506")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a0c36a9965338e55266a09a27136d467a31a9013")]
 [assembly: System.Reflection.AssemblyProductAttribute("StardewStabilizer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StardewStabilizer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

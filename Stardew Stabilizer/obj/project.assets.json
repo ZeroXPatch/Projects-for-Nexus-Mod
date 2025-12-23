@@ -43,11 +43,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Memory Management\\StardewStabilizer.csproj",
+      "projectUniqueName": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Stardew Stabilizer\\StardewStabilizer.csproj",
       "projectName": "StardewStabilizer",
-      "projectPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Memory Management\\StardewStabilizer.csproj",
+      "projectPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Stardew Stabilizer\\StardewStabilizer.csproj",
       "packagesPath": "C:\\Users\\zjmto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Memory Management\\obj\\",
+      "outputPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Stardew Stabilizer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zjmto\\AppData\\Roaming\\NuGet\\NuGet.Config",

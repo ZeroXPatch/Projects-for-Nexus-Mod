@@ -6,6 +6,10 @@ namespace StardewStabilizer
     {
         public bool Enabled { get; set; } = true;
 
+        // How often to sample memory & make decisions (seconds).
+        // Note: SMAPI's OneSecondUpdateTicked fires once per second, so the minimum effective value is 1.
+        public int CheckIntervalSeconds { get; set; } = 1;
+
         // Auto cleanup behavior
         public bool AutoCleanup { get; set; } = true;
 

@@ -88,5 +88,9 @@
   "gmcm.trimws.tip": "Can reduce reported RAM usage, but may cause stutter later. Off by default.",
 
   "gmcm.fallbackmem.name": "Fallback available memory (MB)",
-  "gmcm.fallbackmem.tip": "Used if the runtime can't detect available memory. Set close to your system RAM."
+  "gmcm.fallbackmem.tip": "Used if the runtime can't detect available memory. Set close to your system RAM.",
+
+  "gmcm.checkinterval.name": "Check interval (seconds)",
+  "gmcm.checkinterval.tip": "How often Stardew Stabilizer checks memory and makes decisions. Larger = fewer checks (recommended 2–5)."
+
 }

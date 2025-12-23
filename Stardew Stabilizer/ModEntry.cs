@@ -25,9 +25,12 @@ namespace StardewStabilizer
         private string OverlayText = "";
         private DateTime LastOverlayUpdateUtc = DateTime.MinValue;
 
+        private DateTime LastDecisionTickUtc = DateTime.MinValue;
+
         public override void Entry(IModHelper helper)
         {
             this.Config = this.Helper.ReadConfig<ModConfig>();
+            this.ClampConfig();
             this.Trend.Configure(this.Config.TrendWindowSeconds);
 
             helper.Events.GameLoop.GameLaunched += this.OnGameLaunched;
@@ -41,21 +44,9 @@ namespace StardewStabilizer
 
             helper.Events.Display.RenderedHud += this.OnRenderedHud;
 
-            helper.ConsoleCommands.Add(
-                name: "stabilizer_status",
-                documentation: "Show current memory stats and pressure.",
-                callback: this.OnCmdStatus
-            );
-            helper.ConsoleCommands.Add(
-                name: "stabilizer_clean",
-                documentation: "Run a light cleanup (Gen0/Gen1).",
-                callback: this.OnCmdSoftClean
-            );
-            helper.ConsoleCommands.Add(
-                name: "stabilizer_fullclean",
-                documentation: "Run a deep cleanup (full GC; optional LOH compaction).",
-                callback: this.OnCmdHardClean
-            );
+            helper.ConsoleCommands.Add("stabilizer_status", "Show current memory stats and pressure.", this.OnCmdStatus);
+            helper.ConsoleCommands.Add("stabilizer_clean", "Run a light cleanup (Gen0/Gen1).", this.OnCmdSoftClean);
+            helper.ConsoleCommands.Add("stabilizer_fullclean", "Run a deep cleanup (full GC; optional LOH compaction).", this.OnCmdHardClean);
         }
 
         private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
@@ -69,17 +60,19 @@ namespace StardewStabilizer
                 reset: () =>
                 {
                     this.Config = new ModConfig();
+                    this.ClampConfig();
                     this.Trend.Configure(this.Config.TrendWindowSeconds);
                     this.Planner.ResetForNewSession();
+                    this.LastDecisionTickUtc = DateTime.MinValue;
                 },
                 save: () =>
                 {
+                    this.ClampConfig();
                     this.Helper.WriteConfig(this.Config);
                     this.Trend.Configure(this.Config.TrendWindowSeconds);
                 }
             );
 
-            // ----- General -----
             this.Gmcm.AddSectionTitle(this.ModManifest,
                 text: () => this.T("gmcm.section.general"),
                 tooltip: () => this.T("gmcm.section.general.tip"));
@@ -96,7 +89,17 @@ namespace StardewStabilizer
                 name: () => this.T("gmcm.autocleanup.name"),
                 tooltip: () => this.T("gmcm.autocleanup.tip"));
 
-            // ----- Thresholds -----
+            // NEW: Check interval
+            this.Gmcm.AddNumberOption(this.ModManifest,
+                getValue: () => this.Config.CheckIntervalSeconds,
+                setValue: v => this.Config.CheckIntervalSeconds = v,
+                name: () => this.T("gmcm.checkinterval.name"),
+                tooltip: () => this.T("gmcm.checkinterval.tip"),
+                min: 1,
+                max: 60,
+                interval: 1);
+
+            // Thresholds
             this.Gmcm.AddSectionTitle(this.ModManifest,
                 text: () => this.T("gmcm.section.thresholds"),
                 tooltip: () => this.T("gmcm.section.thresholds.tip"));
@@ -128,7 +131,7 @@ namespace StardewStabilizer
                 max: 100,
                 interval: 1);
 
-            // ----- Spike filtering (trend) -----
+            // Trend
             this.Gmcm.AddSectionTitle(this.ModManifest,
                 text: () => this.T("gmcm.section.trend"),
                 tooltip: () => this.T("gmcm.section.trend.tip"));
@@ -158,7 +161,7 @@ namespace StardewStabilizer
                 name: () => this.T("gmcm.sustain.name"),
                 tooltip: () => this.T("gmcm.sustain.tip"),
                 min: 0,
-                max: 30,
+                max: 60,
                 interval: 1);
 
             this.Gmcm.AddNumberOption(this.ModManifest,
@@ -170,7 +173,7 @@ namespace StardewStabilizer
                 max: 25,
                 interval: 1);
 
-            // ----- Freeze control (when to hard clean) -----
+            // Freeze control
             this.Gmcm.AddSectionTitle(this.ModManifest,
                 text: () => this.T("gmcm.section.freezecontrol"),
                 tooltip: () => this.T("gmcm.section.freezecontrol.tip"));
@@ -187,7 +190,7 @@ namespace StardewStabilizer
                 name: () => this.T("gmcm.prefersoft.name"),
                 tooltip: () => this.T("gmcm.prefersoft.tip"));
 
-            // ----- Cooldowns -----
+            // Cooldowns
             this.Gmcm.AddSectionTitle(this.ModManifest,
                 text: () => this.T("gmcm.section.cooldowns"),
                 tooltip: () => this.T("gmcm.section.cooldowns.tip"));
@@ -210,7 +213,7 @@ namespace StardewStabilizer
                 max: 7200,
                 interval: 10);
 
-            // ----- UI -----
+            // UI
             this.Gmcm.AddSectionTitle(this.ModManifest,
                 text: () => this.T("gmcm.section.ui"),
                 tooltip: () => this.T("gmcm.section.ui.tip"));
@@ -245,7 +248,7 @@ namespace StardewStabilizer
                 max: 4000,
                 interval: 1);
 
-            // ----- Advanced -----
+            // Advanced
             this.Gmcm.AddSectionTitle(this.ModManifest,
                 text: () => this.T("gmcm.section.advanced"),
                 tooltip: () => this.T("gmcm.section.advanced.tip"));
@@ -277,11 +280,13 @@ namespace StardewStabilizer
             if (!Context.IsWorldReady || Game1.player == null)
                 return;
 
+            this.ClampConfig();
             this.Planner.ResetForNewSession();
             this.Trend.Clear();
-            this.UpdateOverlay(force: true);
+            this.LastDecisionTickUtc = DateTime.MinValue;
 
-            this.Monitor.Log("Stardew Stabilizer active. Use stabilizer_status in the SMAPI console.", LogLevel.Info);
+            this.UpdateOverlay(force: true);
+            this.Monitor.Log("Stardew Stabilizer active.", LogLevel.Info);
         }
 
         private void OnDayStarted(object? sender, DayStartedEventArgs e)
@@ -289,8 +294,10 @@ namespace StardewStabilizer
             if (!Context.IsWorldReady || Game1.player == null)
                 return;
 
+            this.ClampConfig();
             this.Planner.ResetForNewDay();
             this.Trend.Clear();
+
             this.UpdateOverlay(force: true);
         }
 
@@ -299,6 +306,7 @@ namespace StardewStabilizer
             this.Planner.ResetForNewSession();
             this.Trend.Clear();
             this.OverlayText = "";
+            this.LastDecisionTickUtc = DateTime.MinValue;
         }
 
         private void OnOneSecondUpdateTicked(object? sender, OneSecondUpdateTickedEventArgs e)
@@ -309,6 +317,16 @@ namespace StardewStabilizer
             if (!Context.IsWorldReady || Game1.player == null)
                 return;
 
+            // NEW: only do "real work" every N seconds
+            DateTime now = DateTime.UtcNow;
+            if (this.LastDecisionTickUtc != DateTime.MinValue)
+            {
+                double elapsed = (now - this.LastDecisionTickUtc).TotalSeconds;
+                if (elapsed < this.Config.CheckIntervalSeconds)
+                    return;
+            }
+            this.LastDecisionTickUtc = now;
+
             MemorySnapshot snap = this.Meter.Capture(this.Config);
 
             this.Trend.Configure(this.Config.TrendWindowSeconds);
@@ -316,35 +334,29 @@ namespace StardewStabilizer
 
             TrendSummary trend = this.Trend.GetSummary();
 
+            // Overlay updates with the same cadence as the check interval
             this.UpdateOverlay(force: false, snap, trend);
 
             if (!this.Config.AutoCleanup)
                 return;
 
-            bool isSafe = this.IsLikelySafeMoment();
-
-            // Anti-spike: require pressure to be sustained above the soft threshold for SustainSeconds
+            // Anti-spike: require pressure to be sustained above soft threshold for SustainSeconds
             if (this.Config.SustainSeconds > 0)
             {
-                int soft = this.Config.SoftPressurePercent;
-                if (!this.Trend.IsSustainedAbove(soft, this.Config.SustainSeconds))
+                if (!this.Trend.IsSustainedAbove(this.Config.SoftPressurePercent, this.Config.SustainSeconds))
                     return;
             }
 
-            CleanupDecision decision = this.Planner.Evaluate(
-                snapshot: snap,
-                trend: trend,
-                config: this.Config,
-                isSafeMoment: isSafe
-            );
+            bool isSafe = this.IsLikelySafeMoment();
 
+            CleanupDecision decision = this.Planner.Evaluate(snap, trend, this.Config, isSafe);
             if (decision.Action == CleanupAction.None)
                 return;
 
             if (decision.Action == CleanupAction.Soft)
-                this.RunSoftCleanup(snap, reasonKey: decision.ReasonKey);
+                this.RunSoftCleanup(snap, decision.ReasonKey);
             else
-                this.RunHardCleanup(snap, reasonKey: decision.ReasonKey);
+                this.RunHardCleanup(snap, decision.ReasonKey);
         }
 
         private void OnButtonsChanged(object? sender, ButtonsChangedEventArgs e)
@@ -361,12 +373,12 @@ namespace StardewStabilizer
             if (this.Config.SoftCleanKey.JustPressed())
             {
                 MemorySnapshot snap = this.Meter.Capture(this.Config);
-                this.RunSoftCleanup(snap, reasonKey: "hud.manual_soft");
+                this.RunSoftCleanup(snap, "hud.manual_soft");
             }
             else if (this.Config.HardCleanKey.JustPressed())
             {
                 MemorySnapshot snap = this.Meter.Capture(this.Config);
-                this.RunHardCleanup(snap, reasonKey: "hud.manual_hard");
+                this.RunHardCleanup(snap, "hud.manual_hard");
             }
         }
 
@@ -385,12 +397,7 @@ namespace StardewStabilizer
             Vector2 pos = new Vector2(this.Config.OverlayX, this.Config.OverlayY);
 
             Vector2 size = Game1.smallFont.MeasureString(this.OverlayText);
-            Rectangle bg = new Rectangle(
-                (int)pos.X - 6,
-                (int)pos.Y - 4,
-                (int)size.X + 12,
-                (int)size.Y + 8
-            );
+            Rectangle bg = new Rectangle((int)pos.X - 6, (int)pos.Y - 4, (int)size.X + 12, (int)size.Y + 8);
 
             b.Draw(Game1.fadeToBlackRect, bg, Color.Black * 0.45f);
             b.DrawString(Game1.smallFont, this.OverlayText, pos, Color.White);
@@ -420,11 +427,11 @@ namespace StardewStabilizer
             if (this.Config.TrimWorkingSetOnWindows)
                 WindowsWorkingSet.TryTrim();
 
-            long afterManaged = GC.GetTotalMemory(forceFullCollection: false);
+            long afterManaged = GC.GetTotalMemory(false);
             long afterWorkingSet = Process.GetCurrentProcess().WorkingSet64;
 
             this.EmitHud(reasonKey, beforeManaged, afterManaged, beforeWorkingSet, afterWorkingSet);
-            this.LogCleanup("Soft", beforeManaged, afterManaged, beforeWorkingSet, afterWorkingSet);
+            this.Monitor.Log($"[Soft] managed {Bytes.ToMB(beforeManaged)}MB -> {Bytes.ToMB(afterManaged)}MB, ws {Bytes.ToMB(beforeWorkingSet)}MB -> {Bytes.ToMB(afterWorkingSet)}MB", LogLevel.Trace);
         }
 
         private void RunHardCleanup(MemorySnapshot snap, string reasonKey)
@@ -445,11 +452,11 @@ namespace StardewStabilizer
             if (this.Config.TrimWorkingSetOnWindows)
                 WindowsWorkingSet.TryTrim();
 
-            long afterManaged = GC.GetTotalMemory(forceFullCollection: false);
+            long afterManaged = GC.GetTotalMemory(false);
             long afterWorkingSet = Process.GetCurrentProcess().WorkingSet64;
 
             this.EmitHud(reasonKey, beforeManaged, afterManaged, beforeWorkingSet, afterWorkingSet);
-            this.LogCleanup("Hard", beforeManaged, afterManaged, beforeWorkingSet, afterWorkingSet);
+            this.Monitor.Log($"[Hard] managed {Bytes.ToMB(beforeManaged)}MB -> {Bytes.ToMB(afterManaged)}MB, ws {Bytes.ToMB(beforeWorkingSet)}MB -> {Bytes.ToMB(afterWorkingSet)}MB", LogLevel.Trace);
         }
 
         private void EmitHud(string reasonKey, long beforeManaged, long afterManaged, long beforeWs, long afterWs)
@@ -468,13 +475,15 @@ namespace StardewStabilizer
             Game1.addHUDMessage(new HUDMessage(text, 3));
         }
 
-        private void LogCleanup(string label, long beforeManaged, long afterManaged, long beforeWs, long afterWs)
+        private void UpdateOverlay(bool force)
         {
-            this.Monitor.Log(
-                $"[{label}] managed {Bytes.ToMB(beforeManaged)}MB -> {Bytes.ToMB(afterManaged)}MB, " +
-                $"working set {Bytes.ToMB(beforeWs)}MB -> {Bytes.ToMB(afterWs)}MB",
-                LogLevel.Trace
-            );
+            if (!this.Config.ShowOverlay)
+                return;
+
+            MemorySnapshot snap = this.Meter.Capture(this.Config);
+            this.Trend.AddSample(snap.PressurePercent);
+            TrendSummary t = this.Trend.GetSummary();
+            this.UpdateOverlay(force, snap, t);
         }
 
         private void UpdateOverlay(bool force, MemorySnapshot snapshot, TrendSummary trend)
@@ -483,7 +492,7 @@ namespace StardewStabilizer
                 return;
 
             DateTime now = DateTime.UtcNow;
-            if (!force && (now - this.LastOverlayUpdateUtc).TotalMilliseconds < 950)
+            if (!force && (now - this.LastOverlayUpdateUtc).TotalMilliseconds < 200) // keep cheap, but not important anymore
                 return;
 
             this.LastOverlayUpdateUtc = now;
@@ -499,17 +508,6 @@ namespace StardewStabilizer
                 managed = Bytes.ToMB(snapshot.ManagedBytes),
                 ws = Bytes.ToMB(snapshot.WorkingSetBytes)
             });
-        }
-
-        private void UpdateOverlay(bool force)
-        {
-            if (!this.Config.ShowOverlay)
-                return;
-
-            MemorySnapshot snap = this.Meter.Capture(this.Config);
-            this.Trend.AddSample(snap.PressurePercent);
-            TrendSummary t = this.Trend.GetSummary();
-            this.UpdateOverlay(force, snap, t);
         }
 
         private void OnCmdStatus(string command, string[] args)
@@ -537,7 +535,7 @@ namespace StardewStabilizer
                 return;
 
             MemorySnapshot snap = this.Meter.Capture(this.Config);
-            this.RunSoftCleanup(snap, reasonKey: "hud.manual_soft");
+            this.RunSoftCleanup(snap, "hud.manual_soft");
         }
 
         private void OnCmdHardClean(string command, string[] args)
@@ -546,22 +544,45 @@ namespace StardewStabilizer
                 return;
 
             MemorySnapshot snap = this.Meter.Capture(this.Config);
-            this.RunHardCleanup(snap, reasonKey: "hud.manual_hard");
+            this.RunHardCleanup(snap, "hud.manual_hard");
+        }
+
+        private void ClampConfig()
+        {
+            if (this.Config.CheckIntervalSeconds < 1) this.Config.CheckIntervalSeconds = 1;
+            if (this.Config.CheckIntervalSeconds > 60) this.Config.CheckIntervalSeconds = 60;
+
+            if (this.Config.TrendWindowSeconds < 3) this.Config.TrendWindowSeconds = 3;
+            if (this.Config.TrendWindowSeconds > 60) this.Config.TrendWindowSeconds = 60;
+
+            if (this.Config.SustainSeconds < 0) this.Config.SustainSeconds = 0;
+            if (this.Config.SustainSeconds > 60) this.Config.SustainSeconds = 60;
+
+            if (this.Config.SoftPressurePercent < 1) this.Config.SoftPressurePercent = 1;
+            if (this.Config.SoftPressurePercent > 100) this.Config.SoftPressurePercent = 100;
+
+            if (this.Config.HardPressurePercent < 1) this.Config.HardPressurePercent = 1;
+            if (this.Config.HardPressurePercent > 100) this.Config.HardPressurePercent = 100;
+
+            if (this.Config.EmergencyPressurePercent < 1) this.Config.EmergencyPressurePercent = 1;
+            if (this.Config.EmergencyPressurePercent > 100) this.Config.EmergencyPressurePercent = 100;
+
+            if (this.Config.HysteresisPercent < 0) this.Config.HysteresisPercent = 0;
+            if (this.Config.HysteresisPercent > 25) this.Config.HysteresisPercent = 25;
         }
 
         private string T(string key) => this.Helper.Translation.Get(key);
 
-        // ---------------- core types ----------------
+        // ---------- internals ----------
 
         private sealed class PressureMeter
         {
             public MemorySnapshot Capture(ModConfig config)
             {
-                long managed = GC.GetTotalMemory(forceFullCollection: false);
+                long managed = GC.GetTotalMemory(false);
                 long workingSet = Process.GetCurrentProcess().WorkingSet64;
                 long available = GetAvailableMemoryBytes(config);
                 int pressure = ComputePressurePercent(managed, workingSet, available);
-
                 return new MemorySnapshot(managed, workingSet, available, pressure);
             }
 
@@ -573,10 +594,7 @@ namespace StardewStabilizer
                     if (info.TotalAvailableMemoryBytes > 0)
                         return info.TotalAvailableMemoryBytes;
                 }
-                catch
-                {
-                    // ignore and fallback
-                }
+                catch { }
 
                 return Math.Max(256L, (long)config.FallbackAvailableMemoryMB) * Bytes.MB;
             }
@@ -609,10 +627,7 @@ namespace StardewStabilizer
                 this.TrimOld();
             }
 
-            public void Clear()
-            {
-                this.Samples.Clear();
-            }
+            public void Clear() => this.Samples.Clear();
 
             public void AddSample(int pressurePercent)
             {
@@ -640,7 +655,7 @@ namespace StardewStabilizer
                 }
 
                 int avg = (int)Math.Round((double)sum / this.Samples.Count);
-                int delta = (newest!.Value.Pressure - oldest!.Value.Pressure);
+                int delta = newest!.Value.Pressure - oldest!.Value.Pressure;
 
                 return new TrendSummary(avg, delta, this.WindowSeconds);
             }
@@ -698,7 +713,6 @@ namespace StardewStabilizer
         {
             private DateTime LastSoftUtc = DateTime.MinValue;
             private DateTime LastHardUtc = DateTime.MinValue;
-
             private bool HardQueued;
 
             public void ResetForNewSession()
@@ -719,55 +733,27 @@ namespace StardewStabilizer
                 int hard = ClampPercent(config.HardPressurePercent);
                 int emergency = ClampPercent(config.EmergencyPressurePercent);
 
-                // choose which pressure we trust for decisions
                 int effectivePressure = config.UseTrendAverageForDecisions ? trend.Average : snapshot.PressurePercent;
 
-                // below soft - hysteresis => clear queued hard
                 if (effectivePressure <= Math.Max(0, soft - config.HysteresisPercent))
                 {
                     this.HardQueued = false;
                     return CleanupDecision.None();
                 }
 
-                // Emergency: act immediately (prevents crash spirals)
                 if (snapshot.PressurePercent >= emergency)
                 {
                     this.HardQueued = false;
                     return new CleanupDecision(CleanupAction.Hard, "hud.emergency_hard");
                 }
 
-                // Require sustained pressure to avoid one-second spikes
-                if (config.SustainSeconds > 0)
-                {
-                    // If not enough recent data or it dipped, skip actions.
-                    // (Caller ensures trend samples are updated per second.)
-                }
-
-                // Hard conditions
-                bool hardCondition = effectivePressure >= hard;
-
-                if (hardCondition)
-                {
-                    // Must be sustained above hard line (if configured)
-                    // Note: sustain check uses raw samples, not the average.
-                    // This is intentional: it prevents reacting to a brief spike.
-                    // We can't access the sample list here, so the mod should pass "trend sustained" via config.
-                    // We'll approximate: require sustain using effective pressure + hysteresis via caller settings.
-                    // (Primary anti-spike is trend average + SustainSeconds on soft line.)
-                }
-
-                // Soft conditions
-                bool softCondition = effectivePressure >= soft;
-
-                // If a hard cleanup is queued and we're now safe, do it.
                 if (this.HardQueued && isSafeMoment)
                 {
                     this.HardQueued = false;
                     return new CleanupDecision(CleanupAction.Hard, "hud.queued_hard");
                 }
 
-                // If hard is needed:
-                if (hardCondition)
+                if (effectivePressure >= hard)
                 {
                     if (!config.HardCleanupMenuOnly || isSafeMoment)
                     {
@@ -775,25 +761,16 @@ namespace StardewStabilizer
                         return new CleanupDecision(CleanupAction.Hard, "hud.hard_cleanup");
                     }
 
-                    // Not safe: queue hard until a safe moment. Prefer soft meanwhile (less freeze).
                     this.HardQueued = true;
 
-                    if (config.PreferSoftWhileWaitingForHard && softCondition)
+                    if (config.PreferSoftWhileWaitingForHard && effectivePressure >= soft)
                         return new CleanupDecision(CleanupAction.Soft, "hud.soft_waiting_for_hard");
 
                     return CleanupDecision.None();
                 }
 
-                // If only soft is needed, prefer safe moment but allow forcing after SustainSeconds
-                if (softCondition)
+                if (effectivePressure >= soft)
                 {
-                    // If we want to filter spikes: require that we're above soft for SustainSeconds.
-                    // We can’t see the internal samples here, so we rely on caller doing the sustained check.
-                    // The caller will only call Evaluate when trend says "sustained above" if SustainSeconds > 0.
-                    if (isSafeMoment)
-                        return new CleanupDecision(CleanupAction.Soft, "hud.soft_cleanup");
-
-                    // Outside menus, soft cleanup is non-blocking; it's okay to do it.
                     return new CleanupDecision(CleanupAction.Soft, "hud.soft_cleanup");
                 }
 
@@ -827,11 +804,11 @@ namespace StardewStabilizer
                 return true;
             }
 
-            private static int ClampPercent(int value)
+            private static int ClampPercent(int v)
             {
-                if (value < 0) return 0;
-                if (value > 100) return 100;
-                return value;
+                if (v < 0) return 0;
+                if (v > 100) return 100;
+                return v;
             }
         }
 
@@ -889,14 +866,7 @@ namespace StardewStabilizer
         private static class Bytes
         {
             public const long MB = 1024L * 1024L;
-
-            public static long ToMB(long bytes)
-            {
-                if (bytes <= 0)
-                    return 0;
-
-                return bytes / MB;
-            }
+            public static long ToMB(long bytes) => bytes <= 0 ? 0 : bytes / MB;
         }
 
         private static class WindowsWorkingSet
