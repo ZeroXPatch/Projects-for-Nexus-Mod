@@ -1,0 +1,16 @@
+{
+  "Name": "Performance HUD",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Configurable HUD for FPS, frame time, memory, location ID, temporary sprites, update load estimate, and debug QoL stats.",
+  "UniqueID": "ZeroXPatch.PerformanceHud",
+  "EntryDll": "PerformanceHud.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [],
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ]
+}

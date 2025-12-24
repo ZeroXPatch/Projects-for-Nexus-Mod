@@ -1,0 +1,28 @@
+{
+  "gmcm.section.general": "일반",
+  "gmcm.section.performance": "성능",
+  "gmcm.section.location": "위치",
+  "gmcm.section.animations": "애니메이션",
+  "gmcm.section.debug": "디버그 편의",
+
+  "gmcm.enabled": "HUD 활성화",
+  "gmcm.drawBackground": "배경 상자 그리기",
+  "gmcm.toggleKey": "HUD 전환 키",
+  "gmcm.posX": "HUD 위치 X",
+  "gmcm.posY": "HUD 위치 Y",
+
+  "gmcm.showFps": "FPS 표시",
+  "gmcm.showFrameTime": "프레임 시간 표시",
+  "gmcm.showMemory": "메모리 표시",
+  "gmcm.showUpdateLoad": "업데이트 부하 추정 표시",
+
+  "gmcm.showLocationId": "현재 위치 ID 표시",
+
+  "gmcm.showTempSprites": "임시 스프라이트 수 표시",
+
+  "gmcm.showPlayerTile": "플레이어 타일 위치 표시",
+  "gmcm.showPlayerFacing": "플레이어가 보는 방향 표시",
+  "gmcm.showDateTime": "게임 내 날짜/시간 표시",
+  "gmcm.showWeather": "날씨 표시",
+  "gmcm.showMultiplayer": "멀티플레이어 정보 표시"
+}

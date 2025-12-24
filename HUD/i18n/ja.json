@@ -1,0 +1,28 @@
+{
+  "gmcm.section.general": "一般",
+  "gmcm.section.performance": "パフォーマンス",
+  "gmcm.section.location": "位置",
+  "gmcm.section.animations": "アニメーション",
+  "gmcm.section.debug": "デバッグの快適性",
+
+  "gmcm.enabled": "HUDを有効にする",
+  "gmcm.drawBackground": "背景枠を表示",
+  "gmcm.toggleKey": "HUD切り替えキー",
+  "gmcm.posX": "HUD位置X",
+  "gmcm.posY": "HUD位置Y",
+
+  "gmcm.showFps": "FPSを表示",
+  "gmcm.showFrameTime": "フレーム時間を表示",
+  "gmcm.showMemory": "メモリを表示",
+  "gmcm.showUpdateLoad": "更新負荷の推定を表示",
+
+  "gmcm.showLocationId": "現在の場所IDを表示",
+
+  "gmcm.showTempSprites": "一時的なスプライト数を表示",
+
+  "gmcm.showPlayerTile": "プレイヤーのタイル位置を表示",
+  "gmcm.showPlayerFacing": "プレイヤーの向きを表示",
+  "gmcm.showDateTime": "ゲーム内の日付/時刻を表示",
+  "gmcm.showWeather": "天気を表示",
+  "gmcm.showMultiplayer": "マルチプレイ情報を表示"
+}

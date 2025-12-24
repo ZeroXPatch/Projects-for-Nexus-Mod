@@ -1,0 +1,11 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HUD\obj\Debug\net6.0\PerformanceHud.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HUD\obj\Debug\net6.0\PerformanceHud.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HUD\obj\Debug\net6.0\PerformanceHud.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HUD\obj\Debug\net6.0\PerformanceHud.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HUD\obj\Debug\net6.0\PerformanceHud.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HUD\obj\Debug\net6.0\PerformanceHud.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HUD\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HUD\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HUD\bin\Debug\net6.0\PerformanceHud.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HUD\bin\Debug\net6.0\PerformanceHud.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HUD\obj\Debug\net6.0\PerformanceHud.dll

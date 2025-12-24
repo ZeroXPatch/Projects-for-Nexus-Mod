@@ -1,0 +1,28 @@
+{
+  "gmcm.section.general": "General",
+  "gmcm.section.performance": "Performance",
+  "gmcm.section.location": "Location",
+  "gmcm.section.animations": "Animations",
+  "gmcm.section.debug": "Debug QoL",
+
+  "gmcm.enabled": "Enable HUD",
+  "gmcm.drawBackground": "Draw background box",
+  "gmcm.toggleKey": "Toggle HUD keybind",
+  "gmcm.posX": "HUD position X",
+  "gmcm.posY": "HUD position Y",
+
+  "gmcm.showFps": "Show FPS",
+  "gmcm.showFrameTime": "Show frame time",
+  "gmcm.showMemory": "Show memory",
+  "gmcm.showUpdateLoad": "Show update load estimate",
+
+  "gmcm.showLocationId": "Show current location ID",
+
+  "gmcm.showTempSprites": "Show temporary sprites count",
+
+  "gmcm.showPlayerTile": "Show player tile position",
+  "gmcm.showPlayerFacing": "Show player facing direction",
+  "gmcm.showDateTime": "Show in-game date/time",
+  "gmcm.showWeather": "Show weather",
+  "gmcm.showMultiplayer": "Show multiplayer info"
+}

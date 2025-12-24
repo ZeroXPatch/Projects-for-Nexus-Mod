@@ -1,0 +1,28 @@
+{
+  "gmcm.section.general": "Загальні",
+  "gmcm.section.performance": "Продуктивність",
+  "gmcm.section.location": "Локація",
+  "gmcm.section.animations": "Анімації",
+  "gmcm.section.debug": "Налагодження QoL",
+
+  "gmcm.enabled": "Увімкнути HUD",
+  "gmcm.drawBackground": "Малювати фонову рамку",
+  "gmcm.toggleKey": "Клавіша перемикання HUD",
+  "gmcm.posX": "Позиція HUD X",
+  "gmcm.posY": "Позиція HUD Y",
+
+  "gmcm.showFps": "Показувати FPS",
+  "gmcm.showFrameTime": "Показувати час кадру",
+  "gmcm.showMemory": "Показувати пам'ять",
+  "gmcm.showUpdateLoad": "Показувати оцінку навантаження оновлення",
+
+  "gmcm.showLocationId": "Показувати ID поточної локації",
+
+  "gmcm.showTempSprites": "Показувати кількість тимчасових спрайтів",
+
+  "gmcm.showPlayerTile": "Показувати позицію гравця на клітинці",
+  "gmcm.showPlayerFacing": "Показувати напрямок гравця",
+  "gmcm.showDateTime": "Показувати внутрішньоігрову дату/час",
+  "gmcm.showWeather": "Показувати погоду",
+  "gmcm.showMultiplayer": "Показувати інформацію про мультиплеєр"
+}

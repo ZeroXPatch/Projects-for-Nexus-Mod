@@ -1,0 +1,28 @@
+{
+  "gmcm.section.general": "常规",
+  "gmcm.section.performance": "性能",
+  "gmcm.section.location": "位置",
+  "gmcm.section.animations": "动画",
+  "gmcm.section.debug": "调试便利性",
+
+  "gmcm.enabled": "启用HUD",
+  "gmcm.drawBackground": "绘制背景框",
+  "gmcm.toggleKey": "HUD切换快捷键",
+  "gmcm.posX": "HUD 位置 X",
+  "gmcm.posY": "HUD 位置 Y",
+
+  "gmcm.showFps": "显示 FPS",
+  "gmcm.showFrameTime": "显示帧时间",
+  "gmcm.showMemory": "显示内存",
+  "gmcm.showUpdateLoad": "显示更新负载估计",
+
+  "gmcm.showLocationId": "显示当前位置ID",
+
+  "gmcm.showTempSprites": "显示临时精灵数量",
+
+  "gmcm.showPlayerTile": "显示玩家所在格位置",
+  "gmcm.showPlayerFacing": "显示玩家朝向",
+  "gmcm.showDateTime": "显示游戏内日期/时间",
+  "gmcm.showWeather": "显示天气",
+  "gmcm.showMultiplayer": "显示多人信息"
+}

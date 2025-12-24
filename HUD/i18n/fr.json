@@ -1,0 +1,28 @@
+{
+  "gmcm.section.general": "Général",
+  "gmcm.section.performance": "Performances",
+  "gmcm.section.location": "Emplacement",
+  "gmcm.section.animations": "Animations",
+  "gmcm.section.debug": "Débogage confort",
+
+  "gmcm.enabled": "Activer le HUD",
+  "gmcm.drawBackground": "Dessiner la boîte de fond",
+  "gmcm.toggleKey": "Raccourci pour afficher/masquer le HUD",
+  "gmcm.posX": "Position X du HUD",
+  "gmcm.posY": "Position Y du HUD",
+
+  "gmcm.showFps": "Afficher les FPS",
+  "gmcm.showFrameTime": "Afficher le temps de frame",
+  "gmcm.showMemory": "Afficher la mémoire",
+  "gmcm.showUpdateLoad": "Afficher l'estimation de charge de mise à jour",
+
+  "gmcm.showLocationId": "Afficher l'ID de l'emplacement actuel",
+
+  "gmcm.showTempSprites": "Afficher le nombre de sprites temporaires",
+
+  "gmcm.showPlayerTile": "Afficher la position de la case du joueur",
+  "gmcm.showPlayerFacing": "Afficher la direction du joueur",
+  "gmcm.showDateTime": "Afficher la date/heure en jeu",
+  "gmcm.showWeather": "Afficher la météo",
+  "gmcm.showMultiplayer": "Afficher les infos multijoueur"
+}

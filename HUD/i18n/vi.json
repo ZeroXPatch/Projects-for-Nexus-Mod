@@ -1,0 +1,28 @@
+{
+  "gmcm.section.general": "Chung",
+  "gmcm.section.performance": "Hiệu năng",
+  "gmcm.section.location": "Khu vực",
+  "gmcm.section.animations": "Hoạt ảnh",
+  "gmcm.section.debug": "Gỡ lỗi QoL",
+
+  "gmcm.enabled": "Bật HUD",
+  "gmcm.drawBackground": "Vẽ hộp nền",
+  "gmcm.toggleKey": "Phím bật/tắt HUD",
+  "gmcm.posX": "Vị trí HUD X",
+  "gmcm.posY": "Vị trí HUD Y",
+
+  "gmcm.showFps": "Hiển thị FPS",
+  "gmcm.showFrameTime": "Hiển thị thời gian khung",
+  "gmcm.showMemory": "Hiển thị bộ nhớ",
+  "gmcm.showUpdateLoad": "Hiển thị ước tính tải cập nhật",
+
+  "gmcm.showLocationId": "Hiển thị ID khu vực hiện tại",
+
+  "gmcm.showTempSprites": "Hiển thị số lượng sprite tạm thời",
+
+  "gmcm.showPlayerTile": "Hiển thị vị trí ô của người chơi",
+  "gmcm.showPlayerFacing": "Hiển thị hướng người chơi đang nhìn",
+  "gmcm.showDateTime": "Hiển thị ngày/giờ trong game",
+  "gmcm.showWeather": "Hiển thị thời tiết",
+  "gmcm.showMultiplayer": "Hiển thị thông tin nhiều người chơi"
+}

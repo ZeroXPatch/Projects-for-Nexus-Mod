@@ -1,0 +1,28 @@
+{
+  "gmcm.section.general": "Genel",
+  "gmcm.section.performance": "Performans",
+  "gmcm.section.location": "Konum",
+  "gmcm.section.animations": "Animasyonlar",
+  "gmcm.section.debug": "Hata ayıklama QoL",
+
+  "gmcm.enabled": "HUD'u etkinleştir",
+  "gmcm.drawBackground": "Arka plan kutusu çiz",
+  "gmcm.toggleKey": "HUD geçiş tuşu",
+  "gmcm.posX": "HUD konumu X",
+  "gmcm.posY": "HUD konumu Y",
+
+  "gmcm.showFps": "FPS göster",
+  "gmcm.showFrameTime": "Kare süresini göster",
+  "gmcm.showMemory": "Belleği göster",
+  "gmcm.showUpdateLoad": "Güncelleme yükü tahminini göster",
+
+  "gmcm.showLocationId": "Geçerli konum kimliğini göster",
+
+  "gmcm.showTempSprites": "Geçici sprite sayısını göster",
+
+  "gmcm.showPlayerTile": "Oyuncu karo konumunu göster",
+  "gmcm.showPlayerFacing": "Oyuncunun baktığı yönü göster",
+  "gmcm.showDateTime": "Oyun içi tarih/saat göster",
+  "gmcm.showWeather": "Hava durumunu göster",
+  "gmcm.showMultiplayer": "Çok oyunculu bilgilerini göster"
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "Oops All George (Random Event)",
+  "Author": "YourName",
+  "Version": "1.1.0",
+  "Description": "Randomly triggers a \"George Day\" where every NPC uses George's sprite/portrait. Configurable chance + GMCM menu.",
+  "UniqueID": "YourName.OopsAllGeorgeEvent",
+  "EntryDll": "OopsAllGeorge.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

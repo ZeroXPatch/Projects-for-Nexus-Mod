@@ -1,0 +1,28 @@
+{
+  "gmcm.section.general": "Общие",
+  "gmcm.section.performance": "Производительность",
+  "gmcm.section.location": "Локация",
+  "gmcm.section.animations": "Анимации",
+  "gmcm.section.debug": "Отладка QoL",
+
+  "gmcm.enabled": "Включить HUD",
+  "gmcm.drawBackground": "Отрисовывать фон",
+  "gmcm.toggleKey": "Клавиша переключения HUD",
+  "gmcm.posX": "Положение HUD по X",
+  "gmcm.posY": "Положение HUD по Y",
+
+  "gmcm.showFps": "Показывать FPS",
+  "gmcm.showFrameTime": "Показывать время кадра",
+  "gmcm.showMemory": "Показывать память",
+  "gmcm.showUpdateLoad": "Показывать оценку нагрузки обновления",
+
+  "gmcm.showLocationId": "Показывать ID текущей локации",
+
+  "gmcm.showTempSprites": "Показывать количество временных спрайтов",
+
+  "gmcm.showPlayerTile": "Показывать клетку, где стоит игрок",
+  "gmcm.showPlayerFacing": "Показывать направление игрока",
+  "gmcm.showDateTime": "Показывать внутриигровые дату/время",
+  "gmcm.showWeather": "Показывать погоду",
+  "gmcm.showMultiplayer": "Показывать информацию о мультиплеере"
+}

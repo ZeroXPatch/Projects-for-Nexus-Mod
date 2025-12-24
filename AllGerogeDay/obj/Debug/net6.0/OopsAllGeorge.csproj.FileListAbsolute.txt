@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AllGerogeDay\obj\Debug\net6.0\OopsAllGeorge.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AllGerogeDay\obj\Debug\net6.0\OopsAllGeorge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AllGerogeDay\obj\Debug\net6.0\OopsAllGeorge.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AllGerogeDay\obj\Debug\net6.0\OopsAllGeorge.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AllGerogeDay\obj\Debug\net6.0\OopsAllGeorge.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AllGerogeDay\obj\Debug\net6.0\OopsAllGeorge.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AllGerogeDay\bin\Debug\net6.0\OopsAllGeorge.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AllGerogeDay\bin\Debug\net6.0\OopsAllGeorge.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AllGerogeDay\obj\Debug\net6.0\OopsAllGeorge.dll
