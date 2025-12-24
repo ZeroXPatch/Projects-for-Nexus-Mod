@@ -1,0 +1,34 @@
+{
+  "gmcm.section.general": "General",
+  "gmcm.section.general.tooltip": "Basic controls for enabling/disabling preloading.",
+
+  "gmcm.section.performance": "Performance",
+  "gmcm.section.performance.tooltip": "Limits to keep preloading lightweight each tick.",
+
+  "gmcm.section.debug": "Debug",
+  "gmcm.section.debug.tooltip": "Logging options for troubleshooting.",
+
+  "gmcm.common.unlimited": "Unlimited",
+  "gmcm.common.ms": "{{value}} ms",
+
+  "gmcm.enabled.name": "Enabled",
+  "gmcm.enabled.tooltip": "Turn the mod on or off.",
+
+  "gmcm.preloadWarpTargets.name": "Preload warp targets",
+  "gmcm.preloadWarpTargets.tooltip": "When you enter a location, preload the locations you can warp to from there (doors/exits).",
+
+  "gmcm.clearQueueOnWarp.name": "Clear queue on warp",
+  "gmcm.clearQueueOnWarp.tooltip": "Clears pending preloads whenever you change locations. Already-preloaded assets stay remembered for the day.",
+
+  "gmcm.customLocations.name": "Custom locations",
+  "gmcm.customLocations.tooltip": "Extra location names to preload (comma-separated). Example: Town, Forest, Mountain",
+
+  "gmcm.maxAssetsPerTick.name": "Max assets per tick",
+  "gmcm.maxAssetsPerTick.tooltip": "How many assets to preload each tick (0 = no limit). Lower values reduce risk of micro-stutter.",
+
+  "gmcm.maxMillisecondsPerTick.name": "Max ms per tick",
+  "gmcm.maxMillisecondsPerTick.tooltip": "Time budget per tick for preloading (0 = unlimited). If both limits are set, whichever hits first stops loading.",
+
+  "gmcm.verboseLogging.name": "Verbose logging",
+  "gmcm.verboseLogging.tooltip": "Log every asset preload to the SMAPI console (useful for debugging)."
+}

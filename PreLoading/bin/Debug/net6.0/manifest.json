@@ -1,0 +1,16 @@
+{
+  "Name": "Location Preload",
+  "Author": "YourName",
+  "Version": "1.0.0",
+  "Description": "Preloads likely next location maps to reduce stutter when changing areas.",
+  "UniqueID": "YourName.LocationPreload",
+  "EntryDll": "LocationPreload.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [],
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ]
+}

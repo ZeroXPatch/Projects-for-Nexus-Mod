@@ -1,0 +1,11 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading\bin\Debug\net6.0\LocationPreload.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading\bin\Debug\net6.0\LocationPreload.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading\obj\Debug\net6.0\LocationPreload.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading\obj\Debug\net6.0\LocationPreload.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading\obj\Debug\net6.0\LocationPreload.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading\obj\Debug\net6.0\LocationPreload.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading\obj\Debug\net6.0\LocationPreload.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading\obj\Debug\net6.0\LocationPreload.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading\obj\Debug\net6.0\LocationPreload.dll
