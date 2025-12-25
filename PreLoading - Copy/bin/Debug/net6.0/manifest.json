@@ -1,0 +1,10 @@
+{
+  "Name": "Freeze Offscreen Animations",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Freezes offscreen critters and (optionally) looping ambient sprites to reduce background frame tax.",
+  "UniqueID": "ZeroXPatch.FreezeOffscreenAnimations",
+  "EntryDll": "FreezeOffscreenAnimations.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

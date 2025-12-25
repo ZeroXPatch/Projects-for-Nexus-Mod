@@ -1,0 +1,80 @@
+{
+  "config.section.general": "General settings",
+  "config.section.monsters": "Monster pool",
+  "config.section.boss": "Boss ambushes",
+
+  "config.enableMod.name": "Enable mod",
+  "config.enableMod.tooltip": "Master switch for random monster ambushes.",
+
+  "config.checkInterval.name": "Check interval (ticks)",
+  "config.checkInterval.tooltip": "How often the mod checks for an ambush. 60 ticks = 1 second.",
+
+  "config.maxMonsters.name": "Max monsters per ambush",
+  "config.maxMonsters.tooltip": "Upper limit on how many monsters spawn at once.",
+
+  "config.minDistance.name": "Minimum spawn distance",
+  "config.minDistance.tooltip": "Closest monsters are allowed to spawn from the player (in tiles).",
+
+  "config.maxDistance.name": "Maximum spawn distance",
+  "config.maxDistance.tooltip": "Furthest monsters are allowed to spawn from the player (in tiles).",
+
+  "config.spawnChance.name": "Ambush chance",
+  "config.spawnChance.tooltip": "Chance (0–1) that an ambush happens when a check runs.",
+
+  "config.allowDaytime.name": "Allow daytime ambushes",
+  "config.allowDaytime.tooltip": "If disabled, ambushes are clamped to start at 6:00 PM or later.",
+
+  "config.ambushStartTime.name": "Ambush start time",
+  "config.ambushStartTime.tooltip": "Earliest time ambushes can start (e.g. 1800 = 6:00 PM). If daytime ambushes are disabled, this will be clamped to 6:00 PM or later.",
+
+  "config.skipEvents.name": "Skip during events & festivals",
+  "config.skipEvents.tooltip": "If enabled, ambushes are disabled during events and festivals.",
+
+  "config.skipFishingRod.name": "Skip ambushes while holding a fishing rod",
+  "config.skipFishingRod.tooltip": "If you currently have any fishing rod equipped, RandomMonsterAmbush won't spawn monsters.",
+
+  "config.disallowIndoors.name": "Disallow indoors",
+  "config.disallowIndoors.tooltip": "If enabled, ambushes will only happen in outdoor locations (ALL indoor locations are blocked).",
+
+  "config.monster.greenSlime.name": "Green Slime",
+  "config.monster.greenSlime.tooltip": "If enabled, Green Slimes can appear in ambushes (and as bosses if applicable).",
+
+  "config.monster.dustSpirit.name": "Dust Spirit",
+  "config.monster.dustSpirit.tooltip": "If enabled, Dust Spirits can appear in ambushes.",
+
+  "config.monster.bat.name": "Bat",
+  "config.monster.bat.tooltip": "If enabled, Bats can appear in ambushes.",
+
+  "config.monster.rockCrab.name": "Rock Crab",
+  "config.monster.rockCrab.tooltip": "If enabled, Rock Crabs can appear in ambushes.",
+
+  "config.monster.ghost.name": "Ghost",
+  "config.monster.ghost.tooltip": "If enabled, Ghosts can appear in ambushes (and as bosses).",
+
+  "config.monster.skeleton.name": "Skeleton",
+  "config.monster.skeleton.tooltip": "If enabled, Skeletons can appear in ambushes.",
+
+  "config.monster.squidKid.name": "Squid Kid",
+  "config.monster.squidKid.tooltip": "If enabled, Squid Kids can appear in ambushes (and as bosses).",
+
+  "config.monster.shadowBrute.name": "Shadow Brute",
+  "config.monster.shadowBrute.tooltip": "If enabled, Shadow Brutes can appear in ambushes (and as bosses).",
+
+  "config.monster.shadowShaman.name": "Shadow Shaman",
+  "config.monster.shadowShaman.tooltip": "If enabled, Shadow Shamans can appear in ambushes (and as bosses).",
+
+  "config.monster.serpent.name": "Serpent",
+  "config.monster.serpent.tooltip": "If enabled, Serpents can appear in ambushes (and as bosses).",
+
+  "config.enableBoss.name": "Enable boss ambushes",
+  "config.enableBoss.tooltip": "If enabled, some ambushes will contain one tougher elite monster.",
+
+  "config.bossChance.name": "Boss ambush chance",
+  "config.bossChance.tooltip": "Chance (0–1) that a successful ambush becomes a boss ambush.",
+
+  "config.bossHealthMult.name": "Boss health multiplier",
+  "config.bossHealthMult.tooltip": "How much to multiply boss HP. 2.0 means double health.",
+
+  "config.bossDamageMult.name": "Boss damage multiplier",
+  "config.bossDamageMult.tooltip": "How much to multiply boss damage. 2.0 means double damage."
+}

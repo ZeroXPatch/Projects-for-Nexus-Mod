@@ -1,0 +1,10 @@
+{
+  "Name": "Auto Fill Pet Bowl",
+  "Author": "YourName",
+  "Version": "1.0.0",
+  "Description": "Automatically fills the pet's water bowl every morning.",
+  "UniqueID": "YourName.AutoFillPetBowl",
+  "EntryDll": "AutoFillPetBowl.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

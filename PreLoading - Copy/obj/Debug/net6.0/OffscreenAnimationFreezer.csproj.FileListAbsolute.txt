@@ -1,0 +1,14 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading - Copy\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading - Copy\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading - Copy\bin\Debug\net6.0\OffscreenAnimationFreezer.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading - Copy\bin\Debug\net6.0\OffscreenAnimationFreezer.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading - Copy\obj\Debug\net6.0\OffscreenAnimationFreezer.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading - Copy\obj\Debug\net6.0\OffscreenAnimationFreezer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading - Copy\obj\Debug\net6.0\OffscreenAnimationFreezer.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading - Copy\obj\Debug\net6.0\OffscreenAnimationFreezer.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading - Copy\obj\Debug\net6.0\OffscreenAnimationFreezer.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading - Copy\obj\Debug\net6.0\OffscreenAnimationFreezer.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading - Copy\obj\Debug\net6.0\OffscreenAnimationFreezer.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading - Copy\bin\Debug\net6.0\0Harmony.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading - Copy\bin\Debug\net6.0\0Harmony.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PreLoading - Copy\obj\Debug\net6.0\Offscree.DD844CC2.Up2Date

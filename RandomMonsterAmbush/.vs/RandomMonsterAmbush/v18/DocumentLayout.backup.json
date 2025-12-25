@@ -3,32 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\bin\\Debug\\net6.0\\RandomMonsterAmbush 1.0.0\\RandomMonsterAmbush\\i18n\\en.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bin\\Debug\\net6.0\\RandomMonsterAmbush 1.0.0\\RandomMonsterAmbush\\i18n\\en.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{277A1EA4-7705-147B-9F93-1CBBB0605AA1}|RandomMonsterAmbush.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\randommonsterambush\\i18n\\en.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{277A1EA4-7705-147B-9F93-1CBBB0605AA1}|RandomMonsterAmbush.csproj|solutionrelative:i18n\\en.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{277A1EA4-7705-147B-9F93-1CBBB0605AA1}|RandomMonsterAmbush.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\randommonsterambush\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{277A1EA4-7705-147B-9F93-1CBBB0605AA1}|RandomMonsterAmbush.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{277A1EA4-7705-147B-9F93-1CBBB0605AA1}|RandomMonsterAmbush.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\randommonsterambush\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{277A1EA4-7705-147B-9F93-1CBBB0605AA1}|RandomMonsterAmbush.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{277A1EA4-7705-147B-9F93-1CBBB0605AA1}|RandomMonsterAmbush.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\randommonsterambush\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{277A1EA4-7705-147B-9F93-1CBBB0605AA1}|RandomMonsterAmbush.csproj|solutionrelative:i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{277A1EA4-7705-147B-9F93-1CBBB0605AA1}|RandomMonsterAmbush.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\randommonsterambush\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{277A1EA4-7705-147B-9F93-1CBBB0605AA1}|RandomMonsterAmbush.csproj|solutionrelative:igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{277A1EA4-7705-147B-9F93-1CBBB0605AA1}|RandomMonsterAmbush.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\randommonsterambush\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{277A1EA4-7705-147B-9F93-1CBBB0605AA1}|RandomMonsterAmbush.csproj|solutionrelative:config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{277A1EA4-7705-147B-9F93-1CBBB0605AA1}|RandomMonsterAmbush.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\randommonsterambush\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{277A1EA4-7705-147B-9F93-1CBBB0605AA1}|RandomMonsterAmbush.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{277A1EA4-7705-147B-9F93-1CBBB0605AA1}|RandomMonsterAmbush.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\randommonsterambush\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{277A1EA4-7705-147B-9F93-1CBBB0605AA1}|RandomMonsterAmbush.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GOG Games\\Stardew Valley\\Mods\\RandomMonsterAmbush\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\bin\\Debug\\net6.0\\RandomMonsterAmbush 1.0.0\\RandomMonsterAmbush\\i18n\\en.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bin\\Debug\\net6.0\\RandomMonsterAmbush 1.0.0\\RandomMonsterAmbush\\i18n\\en.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,37 +46,20 @@
           ]
         },
         {
-          "DockedWidth": 833,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 405,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "en.json",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\bin\\Debug\\net6.0\\RandomMonsterAmbush 1.0.0\\RandomMonsterAmbush\\i18n\\en.json",
-              "RelativeDocumentMoniker": "bin\\Debug\\net6.0\\RandomMonsterAmbush 1.0.0\\RandomMonsterAmbush\\i18n\\en.json",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\bin\\Debug\\net6.0\\RandomMonsterAmbush 1.0.0\\RandomMonsterAmbush\\i18n\\en.json",
-              "RelativeToolTip": "bin\\Debug\\net6.0\\RandomMonsterAmbush 1.0.0\\RandomMonsterAmbush\\i18n\\en.json",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "default.json",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\i18n\\default.json",
+              "RelativeDocumentMoniker": "i18n\\default.json",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\i18n\\default.json",
+              "RelativeToolTip": "i18n\\default.json",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-17T19:44:46.235Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "en.json",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\i18n\\en.json",
-              "RelativeDocumentMoniker": "i18n\\en.json",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\i18n\\en.json",
-              "RelativeToolTip": "i18n\\en.json",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACYAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-17T19:42:19.37Z",
+              "WhenOpened": "2025-12-24T22:30:58.777Z",
               "EditorCaption": ""
             },
             {
@@ -88,7 +70,7 @@
               "RelativeDocumentMoniker": "IGenericModConfigMenuApi.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\IGenericModConfigMenuApi.cs",
               "RelativeToolTip": "IGenericModConfigMenuApi.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAUwEEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-17T19:32:20.656Z",
               "EditorCaption": ""
@@ -96,54 +78,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "config.json",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\config.json",
-              "RelativeDocumentMoniker": "config.json",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\config.json",
-              "RelativeToolTip": "config.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-17T19:32:15.932Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\manifest.json",
               "RelativeDocumentMoniker": "manifest.json",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\manifest.json",
               "RelativeToolTip": "manifest.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-12-17T19:32:12.763Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ModEntry.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\ModEntry.cs",
+              "RelativeDocumentMoniker": "ModEntry.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\ModEntry.cs*",
+              "RelativeToolTip": "ModEntry.cs*",
+              "ViewState": "AgIAAKcBAAAAAAAAAAAIwLkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T19:32:06.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "config.json",
+              "DocumentMoniker": "C:\\GOG Games\\Stardew Valley\\Mods\\RandomMonsterAmbush\\config.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\RandomMonsterAmbush\\config.json",
+              "ToolTip": "C:\\GOG Games\\Stardew Valley\\Mods\\RandomMonsterAmbush\\config.json",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\RandomMonsterAmbush\\config.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-24T22:19:29.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "en.json",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\bin\\Debug\\net6.0\\RandomMonsterAmbush 1.0.0\\RandomMonsterAmbush\\i18n\\en.json",
+              "RelativeDocumentMoniker": "bin\\Debug\\net6.0\\RandomMonsterAmbush 1.0.0\\RandomMonsterAmbush\\i18n\\en.json",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\bin\\Debug\\net6.0\\RandomMonsterAmbush 1.0.0\\RandomMonsterAmbush\\i18n\\en.json",
+              "RelativeToolTip": "bin\\Debug\\net6.0\\RandomMonsterAmbush 1.0.0\\RandomMonsterAmbush\\i18n\\en.json",
+              "ViewState": "AgIAABAAAAAAAAAAAAAqwBoAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-17T19:44:46.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ModConfig.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\ModConfig.cs",
               "RelativeDocumentMoniker": "ModConfig.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\ModConfig.cs",
               "RelativeToolTip": "ModConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAwwEYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-17T19:32:10.538Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ModEntry.cs",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\ModEntry.cs",
-              "RelativeDocumentMoniker": "ModEntry.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\RandomMonsterAmbush\\ModEntry.cs",
-              "RelativeToolTip": "ModEntry.cs",
-              "ViewState": "AgIAABwCAAAAAAAAAAAiwCYCAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T19:32:06.454Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         },
@@ -154,6 +153,16 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 414,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
             }
           ]
         }

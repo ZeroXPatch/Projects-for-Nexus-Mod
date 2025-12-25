@@ -1,0 +1,69 @@
+{
+  "menu.title": "Planer pomocnika farmy",
+
+  "menu.row.hire": "Zatrudnij pomocnika",
+  "menu.row.water": "Podlej uprawy",
+  "menu.row.pet": "Pogłaszcz zwierzęta",
+  "menu.row.feed": "Nakarm zwierzęta",
+  "menu.row.harvest": "Zbierz plony",
+  "menu.row.lowtier": "Zbieraj tylko niskowartościowe (opcjonalne)",
+  "menu.row.noflowers": "Pomiń kwiaty (zachowaj premię do miodu)",
+  "menu.row.chests": "Uporządkuj skrzynie (posortuj przedmioty)",
+
+  "menu.workhours": "Godziny pracy",
+  "menu.workhours.start": "Start: {0}:00",
+  "menu.workhours.end": "Koniec: {0}:00",
+
+  "menu.bill": "Dzienne koszty (pobierane każdego ranka): {0}g",
+  "menu.hint": "Lewy przycisk, aby przełączyć. Prawy klik +/- przy godzinach pracy, aby zmniejszyć.",
+  "menu.openwith": "Otwórz ten planer klawiszem: {0}",
+
+  "menu.button.save": "Zapisz",
+  "menu.button.cancel": "Anuluj",
+
+  "hud.bill.unpaid": "Za mało złota, aby zatrudnić dziś pomocnika (potrzeba {0}g). Żadne zadania nie zostaną uruchomione.",
+  "hud.bill.paid": "Pomocnik zatrudniony! Zapłacono {0}g.",
+  "hud.bill.free": "Pomocnik zatrudniony! Dziś bez opłat.",
+  "hud.hired.ok": "Twój pomocnik jest gotów do pracy dziś.",
+  "hud.changes.tomorrow": "Zapisano. Zmiany będą obowiązywać jutro rano.",
+
+  "gmcm.section.main": "Główne",
+  "gmcm.section.tasks": "Zadania",
+  "gmcm.section.harvest": "Opcje zbiorów",
+  "gmcm.section.costs": "Koszty",
+
+  "gmcm.helperEnabled.name": "Włącz pomocnika",
+  "gmcm.helperEnabled.tooltip": "Po wyłączeniu pomocnik nie będzie pracował i nie zostaniesz obciążony każdego ranka.",
+
+  "gmcm.key.name": "Skrót planera",
+  "gmcm.key.tooltip": "Otwórz w grze menu Planera pomocnika.",
+
+  "gmcm.starthour.name": "Godzina rozpoczęcia",
+  "gmcm.starthour.tooltip": "Najwcześniejsza godzina, o której pomocnik zacznie pracę (czas w grze).",
+
+  "gmcm.endhour.name": "Godzina zakończenia",
+  "gmcm.endhour.tooltip": "Najpóźniejsza godzina, o której pomocnik zakończy pracę (czas w grze).",
+
+  "gmcm.water.name": "Podlej uprawy",
+  "gmcm.pet.name": "Pogłaszcz zwierzęta",
+  "gmcm.feed.name": "Nakarm zwierzęta",
+  "gmcm.harvest.name": "Zbierz plony",
+  "gmcm.chests.name": "Uporządkuj skrzynie",
+
+  "gmcm.lowtier.name": "Zbieraj tylko niskowartościowe",
+  "gmcm.lowtier.tooltip": "Po włączeniu pomocnik pominie plony warte więcej niż limit.",
+
+  "gmcm.harvestcap.name": "Limit wartości",
+  "gmcm.harvestcap.tooltip": "Zbiera tylko plony o cenie sprzedaży na lub poniżej tej wartości (gdy opcja tylko niskowartościowe jest włączona).",
+
+  "gmcm.excludeflowers.name": "Pomiń kwiaty",
+  "gmcm.excludeflowers.tooltip": "Pomiń zbieranie kwiatów, aby ule zachowały premie do miodu.",
+
+  "gmcm.costs.note": "Koszty są pobierane każdego ranka przed rozpoczęciem pracy. Jeśli nie masz dość złota, żadne zadania nie zostaną wykonane.",
+
+  "gmcm.cost.water": "Koszt podlewania upraw",
+  "gmcm.cost.pet": "Koszt głaskania zwierząt",
+  "gmcm.cost.feed": "Koszt karmienia zwierząt",
+  "gmcm.cost.harvest": "Koszt zbierania plonów",
+  "gmcm.cost.chests": "Koszt porządkowania skrzyń"
+}

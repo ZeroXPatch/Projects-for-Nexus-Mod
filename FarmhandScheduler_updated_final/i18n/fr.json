@@ -1,0 +1,69 @@
+{
+  "menu.title": "Planificateur d'ouvrier agricole",
+
+  "menu.row.hire": "Engager un ouvrier agricole",
+  "menu.row.water": "Arroser les cultures",
+  "menu.row.pet": "Caresser les animaux",
+  "menu.row.feed": "Nourrir les animaux",
+  "menu.row.harvest": "Récolter les cultures",
+  "menu.row.lowtier": "Récolter uniquement les cultures de faible valeur (optionnel)",
+  "menu.row.noflowers": "Exclure les fleurs (conserver les bonus de miel)",
+  "menu.row.chests": "Organiser les coffres (trier les objets)",
+
+  "menu.workhours": "Heures de travail",
+  "menu.workhours.start": "Début : {0} h",
+  "menu.workhours.end": "Fin : {0} h",
+
+  "menu.bill": "Coût quotidien (facturé chaque matin) : {0}g",
+  "menu.hint": "Clic gauche pour activer/désactiver. Clic droit +/- sur les heures de travail pour diminuer.",
+  "menu.openwith": "Ouvrir ce planificateur avec : {0}",
+
+  "menu.button.save": "Enregistrer",
+  "menu.button.cancel": "Annuler",
+
+  "hud.bill.unpaid": "Pas assez d'or pour engager l'ouvrier aujourd'hui (nécessite {0}g). Aucune tâche ne sera lancée.",
+  "hud.bill.paid": "Ouvrier engagé ! {0}g payés.",
+  "hud.bill.free": "Ouvrier engagé ! Aucun frais aujourd'hui.",
+  "hud.hired.ok": "Votre ouvrier est prêt à travailler aujourd'hui.",
+  "hud.changes.tomorrow": "Enregistré. Les changements s'appliqueront demain matin.",
+
+  "gmcm.section.main": "Principal",
+  "gmcm.section.tasks": "Tâches",
+  "gmcm.section.harvest": "Options de récolte",
+  "gmcm.section.costs": "Coûts",
+
+  "gmcm.helperEnabled.name": "Activer l'ouvrier agricole",
+  "gmcm.helperEnabled.tooltip": "Si désactivé, l'ouvrier ne travaillera pas et vous ne serez pas facturé chaque matin.",
+
+  "gmcm.key.name": "Raccourci du planificateur",
+  "gmcm.key.tooltip": "Ouvre le menu du planificateur Farmhand en jeu.",
+
+  "gmcm.starthour.name": "Heure de début",
+  "gmcm.starthour.tooltip": "Heure la plus tôt à laquelle l'ouvrier commencera à travailler (heure en jeu).",
+
+  "gmcm.endhour.name": "Heure de fin",
+  "gmcm.endhour.tooltip": "Heure la plus tardive à laquelle l'ouvrier cessera de travailler (heure en jeu).",
+
+  "gmcm.water.name": "Arroser les cultures",
+  "gmcm.pet.name": "Caresser les animaux",
+  "gmcm.feed.name": "Nourrir les animaux",
+  "gmcm.harvest.name": "Récolter les cultures",
+  "gmcm.chests.name": "Organiser les coffres",
+
+  "gmcm.lowtier.name": "Récolter uniquement les cultures de faible valeur",
+  "gmcm.lowtier.tooltip": "Si activé, l'ouvrier ignorera les cultures dont la valeur dépasse le plafond.",
+
+  "gmcm.harvestcap.name": "Plafond de valeur",
+  "gmcm.harvestcap.tooltip": "Récolte uniquement les cultures avec un prix de vente inférieur ou égal à cette valeur (lorsque l'option faible valeur est activée).",
+
+  "gmcm.excludeflowers.name": "Exclure les fleurs",
+  "gmcm.excludeflowers.tooltip": "Ignore la récolte des fleurs pour que les ruches conservent leurs bonus de miel.",
+
+  "gmcm.costs.note": "Les coûts sont facturés chaque matin avant le début du travail. Si vous n'avez pas assez d'or, aucune tâche ne sera effectuée.",
+
+  "gmcm.cost.water": "Coût pour arroser les cultures",
+  "gmcm.cost.pet": "Coût pour caresser les animaux",
+  "gmcm.cost.feed": "Coût pour nourrir les animaux",
+  "gmcm.cost.harvest": "Coût pour récolter les cultures",
+  "gmcm.cost.chests": "Coût pour organiser les coffres"
+}

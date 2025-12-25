@@ -1,0 +1,69 @@
+{
+  "menu.title": "농장 일꾼 플래너",
+
+  "menu.row.hire": "농장 일꾼 고용",
+  "menu.row.water": "작물 물주기",
+  "menu.row.pet": "동물 쓰다듬기",
+  "menu.row.feed": "동물 먹이주기",
+  "menu.row.harvest": "작물 수확",
+  "menu.row.lowtier": "저가치만 수확(선택)",
+  "menu.row.noflowers": "꽃 제외(꿀 보너스 유지)",
+  "menu.row.chests": "상자 정리(아이템 정렬)",
+
+  "menu.workhours": "근무 시간",
+  "menu.workhours.start": "{0}:00 시작",
+  "menu.workhours.end": "{0}:00 종료",
+
+  "menu.bill": "일일 비용(매일 아침 청구): {0}g",
+  "menu.hint": "좌클릭으로 전환. 근무 시간의 +/-를 우클릭하면 감소합니다.",
+  "menu.openwith": "다음으로 이 플래너 열기: {0}",
+
+  "menu.button.save": "저장",
+  "menu.button.cancel": "취소",
+
+  "hud.bill.unpaid": "오늘 농장 일꾼을 고용할 골드가 부족합니다({0}g 필요). 작업이 실행되지 않습니다.",
+  "hud.bill.paid": "농장 일꾼을 고용했습니다! {0}g 지불했습니다.",
+  "hud.bill.free": "농장 일꾼을 고용했습니다! 오늘은 무료입니다.",
+  "hud.hired.ok": "농장 일꾼이 오늘 일할 준비가 되었습니다.",
+  "hud.changes.tomorrow": "저장되었습니다. 변경 사항은 내일 아침부터 적용됩니다.",
+
+  "gmcm.section.main": "메인",
+  "gmcm.section.tasks": "작업",
+  "gmcm.section.harvest": "수확 옵션",
+  "gmcm.section.costs": "비용",
+
+  "gmcm.helperEnabled.name": "농장 일꾼 활성화",
+  "gmcm.helperEnabled.tooltip": "비활성화하면 농장 일꾼은 일하지 않으며 매일 아침 비용도 청구되지 않습니다.",
+
+  "gmcm.key.name": "플래너 단축키",
+  "gmcm.key.tooltip": "게임 내에서 농장 일꾼 플래너 메뉴를 엽니다.",
+
+  "gmcm.starthour.name": "시작 시각",
+  "gmcm.starthour.tooltip": "농장 일꾼이 일을 시작할 가장 이른 시각(게임 시간)입니다.",
+
+  "gmcm.endhour.name": "종료 시각",
+  "gmcm.endhour.tooltip": "농장 일꾼이 일을 멈출 가장 늦은 시각(게임 시간)입니다.",
+
+  "gmcm.water.name": "작물 물주기",
+  "gmcm.pet.name": "동물 쓰다듬기",
+  "gmcm.feed.name": "동물 먹이주기",
+  "gmcm.harvest.name": "작물 수확",
+  "gmcm.chests.name": "상자 정리",
+
+  "gmcm.lowtier.name": "저가치만 수확",
+  "gmcm.lowtier.tooltip": "활성화 시 가치 한도를 넘는 작물을 건너뜁니다.",
+
+  "gmcm.harvestcap.name": "가치 한도",
+  "gmcm.harvestcap.tooltip": "저가치만 옵션이 켜져 있을 때 판매 가격이 이 값 이하인 작물만 수확합니다.",
+
+  "gmcm.excludeflowers.name": "꽃 제외",
+  "gmcm.excludeflowers.tooltip": "꽃 수확을 건너뛰어 양봉통의 꿀 보너스를 유지합니다.",
+
+  "gmcm.costs.note": "비용은 작업 시작 전 매일 아침 청구됩니다. 골드가 부족하면 작업이 실행되지 않습니다.",
+
+  "gmcm.cost.water": "작물 물주기 비용",
+  "gmcm.cost.pet": "동물 쓰다듬기 비용",
+  "gmcm.cost.feed": "동물 먹이주기 비용",
+  "gmcm.cost.harvest": "작물 수확 비용",
+  "gmcm.cost.chests": "상자 정리 비용"
+}

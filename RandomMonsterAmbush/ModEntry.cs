@@ -23,30 +23,33 @@ namespace RandomMonsterAmbush
 
         private const string AmbushSpawnDayKey = "RandomMonsterAmbush/SpawnDay";
 
-        /// <summary>Regular ambush monsters (only ones with simple Vector2 constructors).</summary>
-        private readonly List<Func<Vector2, Monster>> _monsterFactories = new()
+        // master list of monster factories (key -> factory)
+        private readonly Dictionary<string, Func<Vector2, Monster>> _allMonsterFactories = new()
         {
-            tile => new GreenSlime(tile * Game1.tileSize),
-            tile => new DustSpirit(tile * Game1.tileSize),
-            tile => new Bat(tile * Game1.tileSize),
-            tile => new RockCrab(tile * Game1.tileSize),
-            tile => new Ghost(tile * Game1.tileSize),
-            tile => new Skeleton(tile * Game1.tileSize),
-            tile => new SquidKid(tile * Game1.tileSize),
-            tile => new ShadowBrute(tile * Game1.tileSize),
-            tile => new ShadowShaman(tile * Game1.tileSize),
-            tile => new Serpent(tile * Game1.tileSize),
+            ["GreenSlime"] = tile => new GreenSlime(tile * Game1.tileSize),
+            ["DustSpirit"] = tile => new DustSpirit(tile * Game1.tileSize),
+            ["Bat"] = tile => new Bat(tile * Game1.tileSize),
+            ["RockCrab"] = tile => new RockCrab(tile * Game1.tileSize),
+            ["Ghost"] = tile => new Ghost(tile * Game1.tileSize),
+            ["Skeleton"] = tile => new Skeleton(tile * Game1.tileSize),
+            ["SquidKid"] = tile => new SquidKid(tile * Game1.tileSize),
+            ["ShadowBrute"] = tile => new ShadowBrute(tile * Game1.tileSize),
+            ["ShadowShaman"] = tile => new ShadowShaman(tile * Game1.tileSize),
+            ["Serpent"] = tile => new Serpent(tile * Game1.tileSize),
         };
 
-        /// <summary>Boss-like monsters; one of these can be chosen per ambush and then buffed.</summary>
-        private readonly List<Func<Vector2, Monster>> _bossFactories = new()
+        // boss pool is a subset of the above (and also filtered by toggles)
+        private static readonly string[] BossMonsterIds =
         {
-            tile => new ShadowBrute(tile * Game1.tileSize),
-            tile => new ShadowShaman(tile * Game1.tileSize),
-            tile => new Serpent(tile * Game1.tileSize),
-            tile => new SquidKid(tile * Game1.tileSize),
-            tile => new Ghost(tile * Game1.tileSize)
+            "ShadowBrute",
+            "ShadowShaman",
+            "Serpent",
+            "SquidKid",
+            "Ghost"
         };
+
+        private readonly List<Func<Vector2, Monster>> _enabledMonsterFactories = new();
+        private readonly List<Func<Vector2, Monster>> _enabledBossFactories = new();
 
         private ModConfig _config = null!;
 
@@ -73,7 +76,6 @@ namespace RandomMonsterAmbush
             if (!Context.IsWorldReady)
                 return;
 
-            // remove any ambush monsters from previous days
             CleanupOldAmbushMonsters();
         }
 
@@ -86,19 +88,23 @@ namespace RandomMonsterAmbush
             if (configMenu is null)
                 return;
 
-            // register mod
+            var t = this.Helper.Translation;
+
             configMenu.Register(
                 mod: this.ModManifest,
                 reset: () =>
                 {
                     _config = new ModConfig();
                     Helper.WriteConfig(_config);
+                    RebuildMonsterPools();
                 },
-                save: () => Helper.WriteConfig(_config),
+                save: () =>
+                {
+                    Helper.WriteConfig(_config);
+                    RebuildMonsterPools();
+                },
                 titleScreenOnly: false
             );
-
-            var t = Helper.Translation;
 
             // ==== GENERAL SECTION ====
             configMenu.AddSectionTitle(
@@ -178,6 +184,18 @@ namespace RandomMonsterAmbush
                 tooltip: () => t.Get("config.allowDaytime.tooltip")
             );
 
+            configMenu.AddNumberOption(
+                mod: this.ModManifest,
+                getValue: () => _config.AmbushStartTime,
+                setValue: value => _config.AmbushStartTime = value,
+                name: () => t.Get("config.ambushStartTime.name"),
+                tooltip: () => t.Get("config.ambushStartTime.tooltip"),
+                min: 600,
+                max: 2600,
+                interval: 10,
+                formatValue: FormatTime
+            );
+
             configMenu.AddBoolOption(
                 mod: this.ModManifest,
                 getValue: () => _config.PreventDuringEvents,
@@ -186,7 +204,6 @@ namespace RandomMonsterAmbush
                 tooltip: () => t.Get("config.skipEvents.tooltip")
             );
 
-            // NEW: skip ambushes while holding any fishing rod
             configMenu.AddBoolOption(
                 mod: this.ModManifest,
                 getValue: () => _config.SkipWhileHoldingFishingRod,
@@ -194,6 +211,31 @@ namespace RandomMonsterAmbush
                 name: () => t.Get("config.skipFishingRod.name"),
                 tooltip: () => t.Get("config.skipFishingRod.tooltip")
             );
+
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                getValue: () => _config.DisallowIndoors,
+                setValue: value => _config.DisallowIndoors = value,
+                name: () => t.Get("config.disallowIndoors.name"),
+                tooltip: () => t.Get("config.disallowIndoors.tooltip")
+            );
+
+            // ==== MONSTER POOL SECTION ====
+            configMenu.AddSectionTitle(
+                mod: this.ModManifest,
+                text: () => t.Get("config.section.monsters")
+            );
+
+            AddMonsterToggle(configMenu, "GreenSlime", () => _config.EnableGreenSlime, v => _config.EnableGreenSlime = v, t);
+            AddMonsterToggle(configMenu, "DustSpirit", () => _config.EnableDustSpirit, v => _config.EnableDustSpirit = v, t);
+            AddMonsterToggle(configMenu, "Bat", () => _config.EnableBat, v => _config.EnableBat = v, t);
+            AddMonsterToggle(configMenu, "RockCrab", () => _config.EnableRockCrab, v => _config.EnableRockCrab = v, t);
+            AddMonsterToggle(configMenu, "Ghost", () => _config.EnableGhost, v => _config.EnableGhost = v, t);
+            AddMonsterToggle(configMenu, "Skeleton", () => _config.EnableSkeleton, v => _config.EnableSkeleton = v, t);
+            AddMonsterToggle(configMenu, "SquidKid", () => _config.EnableSquidKid, v => _config.EnableSquidKid = v, t);
+            AddMonsterToggle(configMenu, "ShadowBrute", () => _config.EnableShadowBrute, v => _config.EnableShadowBrute = v, t);
+            AddMonsterToggle(configMenu, "ShadowShaman", () => _config.EnableShadowShaman, v => _config.EnableShadowShaman = v, t);
+            AddMonsterToggle(configMenu, "Serpent", () => _config.EnableSerpent, v => _config.EnableSerpent = v, t);
 
             // ==== BOSS SECTION ====
             configMenu.AddSectionTitle(
@@ -252,11 +294,17 @@ namespace RandomMonsterAmbush
             if (!Context.IsWorldReady || !_config.EnableMod)
                 return;
 
+            if (Game1.player is null)
+                return;
+
             // SMAPI 4: IsMultipleOf takes uint
             if (!e.IsMultipleOf((uint)_config.CheckIntervalTicks))
                 return;
 
-            // NEW: if holding any fishing rod, don't spawn
+            if (_enabledMonsterFactories.Count == 0)
+                return;
+
+            // skip ambushes while holding any fishing rod
             if (_config.SkipWhileHoldingFishingRod && Game1.player.CurrentTool is FishingRod)
                 return;
 
@@ -273,11 +321,16 @@ namespace RandomMonsterAmbush
                     return;
             }
 
-            if (!_config.AllowDaytimeSpawns && Game1.timeOfDay < 1800)
+            // start time logic:
+            // - if AllowDaytimeSpawns is OFF, enforce >= 1800, but still allow customizing later start time (e.g. 2000)
+            int earliest = _config.AmbushStartTime;
+            if (!_config.AllowDaytimeSpawns)
+                earliest = Math.Max(earliest, 1800);
+
+            if (Game1.timeOfDay < earliest)
                 return;
 
             GameLocation location = Game1.player.currentLocation;
-
             if (IsLocationBlocked(location))
                 return;
 
@@ -298,10 +351,9 @@ namespace RandomMonsterAmbush
 
             bool spawnBossThisAmbush =
                 _config.EnableBossSpawns &&
-                _bossFactories.Count > 0 &&
+                _enabledBossFactories.Count > 0 &&
                 _random.NextDouble() < _config.BossSpawnChance;
 
-            // choose which index (0..spawnCount-1) will be boss, if any
             int bossIndex = spawnBossThisAmbush ? _random.Next(spawnCount) : -1;
 
             for (int i = 0; i < spawnCount; i++)
@@ -313,7 +365,6 @@ namespace RandomMonsterAmbush
                     ? CreateRandomBoss(tile)
                     : CreateRandomMonster(tile);
 
-                // tag this as an ambush monster with its spawn day
                 monster.modData[AmbushSpawnDayKey] = Game1.Date.TotalDays.ToString(CultureInfo.InvariantCulture);
 
                 monster.currentLocation = location;
@@ -326,7 +377,6 @@ namespace RandomMonsterAmbush
 
         private bool TryFindSpawnTile(GameLocation location, out Vector2 tile)
         {
-            // 1.6: use Tile property instead of getTileLocation()
             Vector2 origin = Game1.player.Tile;
 
             int minDistance = Math.Max(1, _config.MinSpawnDistance);
@@ -356,7 +406,6 @@ namespace RandomMonsterAmbush
             if (!location.isTileOnMap(tile))
                 return false;
 
-            // 1.6 helper: handles walkability + collision + blocking objects
             if (!location.CanSpawnCharacterHere(tile))
                 return false;
 
@@ -366,24 +415,31 @@ namespace RandomMonsterAmbush
 
         private Monster CreateRandomMonster(Vector2 tile)
         {
-            Func<Vector2, Monster> factory = _monsterFactories[_random.Next(_monsterFactories.Count)];
+            Func<Vector2, Monster> factory = _enabledMonsterFactories[_random.Next(_enabledMonsterFactories.Count)];
             return factory(tile);
         }
 
-        /// <summary>Create a boss monster by picking from the boss pool and scaling its stats.</summary>
+        /// <summary>Create an elite boss monster by picking from the boss pool and scaling its stats.</summary>
         private Monster CreateRandomBoss(Vector2 tile)
         {
-            Func<Vector2, Monster> factory = _bossFactories[_random.Next(_bossFactories.Count)];
+            Func<Vector2, Monster> factory = _enabledBossFactories[_random.Next(_enabledBossFactories.Count)];
             Monster boss = factory(tile);
 
             boss.MaxHealth = (int)(boss.MaxHealth * _config.BossHealthMultiplier);
             boss.Health = boss.MaxHealth;
             boss.DamageToFarmer = (int)(boss.DamageToFarmer * _config.BossDamageMultiplier);
-            boss.Scale *= 1.3f;
 
-            boss.Name = $"Ambush {boss.Name}";
+            // ELITE LOOK: larger + glowing
+            boss.Scale *= 1.8f;
+
+            // Glow (1.6 uses plain bool/Color here, not .Value)
+            boss.isGlowing = true;
+            boss.glowingColor = Color.Gold;
+
+            boss.Name = $"Elite {boss.Name}";
             return boss;
         }
+
 
         /// <summary>
         /// Returns true if ambushes should never happen in the given location.
@@ -392,6 +448,10 @@ namespace RandomMonsterAmbush
         private bool IsLocationBlocked(GameLocation location)
         {
             string locName = location.NameOrUniqueName;
+
+            // disallow ALL indoor locations (default ON)
+            if (_config.DisallowIndoors && !location.IsOutdoors)
+                return true;
 
             // user-configurable blocked locations
             if (_config.DisallowedLocations.Any(name =>
@@ -404,7 +464,7 @@ namespace RandomMonsterAmbush
             if (location is FarmHouse)
                 return true;
 
-            // Harvey's clinic (where you wake up after dying) and his apartment
+            // Harvey's clinic + apartment
             if (string.Equals(locName, "Hospital", StringComparison.OrdinalIgnoreCase) ||
                 string.Equals(locName, "HarveyRoom", StringComparison.OrdinalIgnoreCase))
             {
@@ -435,15 +495,23 @@ namespace RandomMonsterAmbush
                 foreach (Monster monster in toRemove)
                     location.characters.Remove(monster);
 
-                return true; // continue to next location
+                return true;
             });
         }
 
         private void LoadConfig()
         {
             _config = Helper.ReadConfig<ModConfig>();
-
             bool changed = false;
+
+            // Defaults requested
+            // (If player already has a config.json, we won't overwrite it unless invalid.
+            // New installs will get these defaults from ModConfig.)
+            if (_config.CheckIntervalTicks < 30)
+            {
+                _config.CheckIntervalTicks = 30;
+                changed = true;
+            }
 
             if (_config.SpawnChance < 0 || _config.SpawnChance > 1)
             {
@@ -454,12 +522,6 @@ namespace RandomMonsterAmbush
             if (_config.BossSpawnChance < 0 || _config.BossSpawnChance > 1)
             {
                 _config.BossSpawnChance = Math.Clamp(_config.BossSpawnChance, 0.0, 1.0);
-                changed = true;
-            }
-
-            if (_config.CheckIntervalTicks < 30)
-            {
-                _config.CheckIntervalTicks = 30;
                 changed = true;
             }
 
@@ -493,13 +555,27 @@ namespace RandomMonsterAmbush
                 changed = true;
             }
 
+            // Validate ambush start time
+            int fixedTime = FixTime(_config.AmbushStartTime);
+            if (fixedTime != _config.AmbushStartTime)
+            {
+                _config.AmbushStartTime = fixedTime;
+                changed = true;
+            }
+
+            // If daytime spawns are OFF, enforce >= 1800
+            if (!_config.AllowDaytimeSpawns && _config.AmbushStartTime < 1800)
+            {
+                _config.AmbushStartTime = 1800;
+                changed = true;
+            }
+
             if (_config.DisallowedLocations == null)
             {
                 _config.DisallowedLocations = new List<string>();
                 changed = true;
             }
 
-            // ensure hard safety locations are in the list for visibility in config
             void EnsureDisallowed(string name)
             {
                 if (!_config.DisallowedLocations.Any(n =>
@@ -515,53 +591,129 @@ namespace RandomMonsterAmbush
 
             if (changed)
                 Helper.WriteConfig(_config);
+
+            RebuildMonsterPools();
         }
-    }
 
-    /// <summary>Configuration for RandomMonsterAmbush.</summary>
-    public class ModConfig
-    {
-        public bool EnableMod { get; set; } = true;
+        private void RebuildMonsterPools()
+        {
+            _enabledMonsterFactories.Clear();
+            _enabledBossFactories.Clear();
 
-        /// <summary>How many ticks between spawn checks (60 ticks ≈ 1 second).</summary>
-        public int CheckIntervalTicks { get; set; } = 60;
+            foreach (var pair in _allMonsterFactories)
+            {
+                if (IsMonsterEnabled(pair.Key))
+                    _enabledMonsterFactories.Add(pair.Value);
+            }
 
-        /// <summary>Maximum monsters per ambush spawn.</summary>
-        public int MaxMonstersPerSpawn { get; set; } = 3;
+            foreach (string id in BossMonsterIds)
+            {
+                if (IsMonsterEnabled(id) && _allMonsterFactories.TryGetValue(id, out var factory))
+                    _enabledBossFactories.Add(factory);
+            }
+        }
 
-        /// <summary>Minimum tile distance from the player for spawn.</summary>
-        public int MinSpawnDistance { get; set; } = 3;
+        private bool IsMonsterEnabled(string id)
+        {
+            return id switch
+            {
+                "GreenSlime" => _config.EnableGreenSlime,
+                "DustSpirit" => _config.EnableDustSpirit,
+                "Bat" => _config.EnableBat,
+                "RockCrab" => _config.EnableRockCrab,
+                "Ghost" => _config.EnableGhost,
+                "Skeleton" => _config.EnableSkeleton,
+                "SquidKid" => _config.EnableSquidKid,
+                "ShadowBrute" => _config.EnableShadowBrute,
+                "ShadowShaman" => _config.EnableShadowShaman,
+                "Serpent" => _config.EnableSerpent,
+                _ => true
+            };
+        }
 
-        /// <summary>Maximum tile distance from the player for spawn.</summary>
-        public int MaxSpawnDistance { get; set; } = 10;
+        private static void AddMonsterToggle(
+            IGenericModConfigMenuApi configMenu,
+            string monsterId,
+            Func<bool> getValue,
+            Action<bool> setValue,
+            ITranslationHelper t)
+        {
+            string keyBase = monsterId switch
+            {
+                "GreenSlime" => "config.monster.greenSlime",
+                "DustSpirit" => "config.monster.dustSpirit",
+                "Bat" => "config.monster.bat",
+                "RockCrab" => "config.monster.rockCrab",
+                "Ghost" => "config.monster.ghost",
+                "Skeleton" => "config.monster.skeleton",
+                "SquidKid" => "config.monster.squidKid",
+                "ShadowBrute" => "config.monster.shadowBrute",
+                "ShadowShaman" => "config.monster.shadowShaman",
+                "Serpent" => "config.monster.serpent",
+                _ => "config.monster.unknown"
+            };
 
-        /// <summary>Chance that an ambush happens when a spawn check runs (0–1).</summary>
-        public double SpawnChance { get; set; } = 0.25;
+            configMenu.AddBoolOption(
+                mod: ModEntryStatic.Manifest!,
+                getValue: getValue,
+                setValue: value =>
+                {
+                    setValue(value);
+                    // pools rebuild on save/reset; live rebuild isn’t required, but we can do it on the fly if wanted
+                },
+                name: () => t.Get($"{keyBase}.name"),
+                tooltip: () => t.Get($"{keyBase}.tooltip")
+            );
+        }
 
-        /// <summary>Allow ambushes during the day (before 6pm).</summary>
-        public bool AllowDaytimeSpawns { get; set; } = false;
+        // Helper: GMCM interface doesn't pass ModManifest into AddMonsterToggle, so we stash it.
+        // This avoids changing your IGenericModConfigMenuApi.
+        private static class ModEntryStatic
+        {
+            public static IManifest? Manifest { get; set; }
+        }
 
-        /// <summary>Prevent ambushes during festivals, events, and minigames.</summary>
-        public bool PreventDuringEvents { get; set; } = true;
+        private static string FormatTime(int time)
+        {
+            time = FixTime(time);
+            int hour24 = time / 100;
+            int min = time % 100;
 
-        /// <summary>
-        /// If true, ambushes won't spawn while the player is currently holding any fishing rod.
-        /// </summary>
-        public bool SkipWhileHoldingFishingRod { get; set; } = false;
+            // SDV uses 6..26
+            int hour = hour24;
+            string ampm = "AM";
+            if (hour24 >= 12)
+                ampm = "PM";
 
-        /// <summary>Enable special boss-style ambush monsters.</summary>
-        public bool EnableBossSpawns { get; set; } = true;
+            int hour12 = hour24 % 12;
+            if (hour12 == 0)
+                hour12 = 12;
 
-        /// <summary>Chance that an ambush includes a boss (0–1).</summary>
-        public double BossSpawnChance { get; set; } = 0.2;
+            return $"{hour12}:{min:00} {ampm}";
+        }
 
-        /// <summary>Health multiplier applied to boss monsters.</summary>
-        public float BossHealthMultiplier { get; set; } = 2f;
+        private static int FixTime(int time)
+        {
+            // clamp
+            time = Math.Clamp(time, 600, 2600);
 
-        /// <summary>Damage multiplier applied to boss monsters.</summary>
-        public float BossDamageMultiplier { get; set; } = 2f;
+            // force to nearest 10
+            time = (time / 10) * 10;
 
-        /// <summary>Locations where ambushes are never allowed.</summary>
-        public List<string> DisallowedLocations { get; set; } = new();
+            int hour = time / 100;
+            int min = time % 100;
+
+            // if minutes invalid, clamp down
+            if (min >= 60)
+                min = 50;
+
+            return hour * 100 + min;
+        }
+
+        // Hook Manifest stash when the class loads (Entry is too late for static helpers)
+        public ModEntry()
+        {
+            ModEntryStatic.Manifest = this.ModManifest;
+        }
     }
 }

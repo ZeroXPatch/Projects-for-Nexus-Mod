@@ -1,0 +1,69 @@
+{
+  "menu.title": "Planificador del ayudante de granja",
+
+  "menu.row.hire": "Contratar ayudante",
+  "menu.row.water": "Regar cultivos",
+  "menu.row.pet": "Acariciar animales",
+  "menu.row.feed": "Alimentar animales",
+  "menu.row.harvest": "Cosechar cultivos",
+  "menu.row.lowtier": "Cosechar solo los de bajo valor (opcional)",
+  "menu.row.noflowers": "Excluir flores (mantiene los bonos de miel)",
+  "menu.row.chests": "Organizar cofres (ordenar objetos)",
+
+  "menu.workhours": "Horas de trabajo",
+  "menu.workhours.start": "Inicio: {0}:00",
+  "menu.workhours.end": "Fin: {0}:00",
+
+  "menu.bill": "Costo diario (cobrado cada mañana): {0}g",
+  "menu.hint": "Clic izquierdo para alternar. Clic derecho en +/- de horas de trabajo para reducir.",
+  "menu.openwith": "Abrir este planificador con: {0}",
+
+  "menu.button.save": "Guardar",
+  "menu.button.cancel": "Cancelar",
+
+  "hud.bill.unpaid": "No hay suficiente oro para contratar al ayudante hoy (se necesitan {0}g). No se ejecutarán tareas.",
+  "hud.bill.paid": "¡Ayudante contratado! Se pagaron {0}g.",
+  "hud.bill.free": "¡Ayudante contratado! Hoy no hay cargo.",
+  "hud.hired.ok": "Tu ayudante está listo para trabajar hoy.",
+  "hud.changes.tomorrow": "Guardado. Los cambios se aplican mañana por la mañana.",
+
+  "gmcm.section.main": "Principal",
+  "gmcm.section.tasks": "Tareas",
+  "gmcm.section.harvest": "Opciones de cosecha",
+  "gmcm.section.costs": "Costos",
+
+  "gmcm.helperEnabled.name": "Activar ayudante",
+  "gmcm.helperEnabled.tooltip": "Si está desactivado, el ayudante no trabajará y no se te cobrará cada mañana.",
+
+  "gmcm.key.name": "Atajo del planificador",
+  "gmcm.key.tooltip": "Abre el menú del Planificador del Ayudante en el juego.",
+
+  "gmcm.starthour.name": "Hora de inicio",
+  "gmcm.starthour.tooltip": "Hora más temprana en la que el ayudante empezará a trabajar (hora del juego).",
+
+  "gmcm.endhour.name": "Hora de fin",
+  "gmcm.endhour.tooltip": "Hora más tardía en la que el ayudante dejará de trabajar (hora del juego).",
+
+  "gmcm.water.name": "Regar cultivos",
+  "gmcm.pet.name": "Acariciar animales",
+  "gmcm.feed.name": "Alimentar animales",
+  "gmcm.harvest.name": "Cosechar cultivos",
+  "gmcm.chests.name": "Organizar cofres",
+
+  "gmcm.lowtier.name": "Cosechar solo los de bajo valor",
+  "gmcm.lowtier.tooltip": "Si está activado, el ayudante omitirá cultivos que superen el límite de valor.",
+
+  "gmcm.harvestcap.name": "Límite de valor",
+  "gmcm.harvestcap.tooltip": "Solo cosechar cultivos con precio de venta en o por debajo de este valor (cuando se activa 'solo bajo valor').",
+
+  "gmcm.excludeflowers.name": "Excluir flores",
+  "gmcm.excludeflowers.tooltip": "Omitir la cosecha de flores para que las colmenas mantengan sus bonificaciones de miel.",
+
+  "gmcm.costs.note": "Los costos se cobran cada mañana antes de que comience el trabajo. Si no tienes suficiente oro, no se ejecutarán tareas.",
+
+  "gmcm.cost.water": "Costo de regar cultivos",
+  "gmcm.cost.pet": "Costo de acariciar animales",
+  "gmcm.cost.feed": "Costo de alimentar animales",
+  "gmcm.cost.harvest": "Costo de cosechar cultivos",
+  "gmcm.cost.chests": "Costo de organizar cofres"
+}

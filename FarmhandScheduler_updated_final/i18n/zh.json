@@ -1,0 +1,69 @@
+{
+  "menu.title": "农场助手规划器",
+
+  "menu.row.hire": "雇佣农场助手",
+  "menu.row.water": "浇灌作物",
+  "menu.row.pet": "抚摸动物",
+  "menu.row.feed": "喂养动物",
+  "menu.row.harvest": "收获作物",
+  "menu.row.lowtier": "仅收获低价值作物（可选）",
+  "menu.row.noflowers": "排除花卉（保持蜂蜜加成）",
+  "menu.row.chests": "整理箱子（排序物品）",
+
+  "menu.workhours": "工作时间",
+  "menu.workhours.start": "开始：{0}:00",
+  "menu.workhours.end": "结束：{0}:00",
+
+  "menu.bill": "每日费用（每天早晨扣除）：{0}g",
+  "menu.hint": "左键切换。右键单击工作时间上的 +/- 以减少。",
+  "menu.openwith": "使用以下方式打开此规划器：{0}",
+
+  "menu.button.save": "保存",
+  "menu.button.cancel": "取消",
+
+  "hud.bill.unpaid": "今天的金币不足以雇佣农场助手（需要 {0}g）。不会执行任何任务。",
+  "hud.bill.paid": "已雇佣农场助手！支付了 {0}g。",
+  "hud.bill.free": "已雇佣农场助手！今天免费。",
+  "hud.hired.ok": "你的农场助手今天已准备好工作。",
+  "hud.changes.tomorrow": "已保存。更改将于明天早晨生效。",
+
+  "gmcm.section.main": "主界面",
+  "gmcm.section.tasks": "任务",
+  "gmcm.section.harvest": "收获选项",
+  "gmcm.section.costs": "费用",
+
+  "gmcm.helperEnabled.name": "启用农场助手",
+  "gmcm.helperEnabled.tooltip": "如果禁用，农场助手将不会工作，你每天早晨也不会被收费。",
+
+  "gmcm.key.name": "规划器快捷键",
+  "gmcm.key.tooltip": "打开游戏内的农场助手规划器菜单。",
+
+  "gmcm.starthour.name": "开始时间",
+  "gmcm.starthour.tooltip": "农场助手开始工作的最早时间（游戏内时间）。",
+
+  "gmcm.endhour.name": "结束时间",
+  "gmcm.endhour.tooltip": "农场助手停止工作的最晚时间（游戏内时间）。",
+
+  "gmcm.water.name": "浇灌作物",
+  "gmcm.pet.name": "抚摸动物",
+  "gmcm.feed.name": "喂养动物",
+  "gmcm.harvest.name": "收获作物",
+  "gmcm.chests.name": "整理箱子",
+
+  "gmcm.lowtier.name": "仅收获低价值作物",
+  "gmcm.lowtier.tooltip": "启用时，农场助手会跳过价值高于上限的作物。",
+
+  "gmcm.harvestcap.name": "价值上限",
+  "gmcm.harvestcap.tooltip": "仅收获售卖价格不超过该值的作物（启用仅收获低价值作物时）。",
+
+  "gmcm.excludeflowers.name": "排除花卉",
+  "gmcm.excludeflowers.tooltip": "跳过收获花卉，以便蜂箱保留蜂蜜加成。",
+
+  "gmcm.costs.note": "费用将在每天工作开始前扣除。如果你没有足够的金币，将不会执行任何任务。",
+
+  "gmcm.cost.water": "浇灌作物费用",
+  "gmcm.cost.pet": "抚摸动物费用",
+  "gmcm.cost.feed": "喂养动物费用",
+  "gmcm.cost.harvest": "收获作物费用",
+  "gmcm.cost.chests": "整理箱子费用"
+}

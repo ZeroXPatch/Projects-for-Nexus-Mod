@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+
+    <AssemblyName>FarmhandScheduler</AssemblyName>
+    <RootNamespace>FarmhandScheduler</RootNamespace>
+
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- FIX: stop ModBuildConfig from running DeployModTask (the error in config.targets line ~87) -->
+    <EnableModDeploy>false</EnableModDeploy>
+    <EnableModZip>false</EnableModZip>
+
+    <!-- If you WANT auto-deploy later, set these:
+         <EnableModDeploy>true</EnableModDeploy>
+         <EnableModZip>true</EnableModZip>
+         <GamePath>C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley</GamePath>
+         <GameModPath>$(AppData)\StardewValley\Mods</GameModPath>
+    -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.2.0" />
+  </ItemGroup>
+
+  <!-- Make sure these ship to bin output -->
+  <ItemGroup>
+    <None Update="manifest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="i18n\**\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

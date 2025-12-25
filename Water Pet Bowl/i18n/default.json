@@ -1,0 +1,14 @@
+{
+  "gmcm.section.general": "General",
+
+  "gmcm.enabled.name": "Enabled",
+  "gmcm.enabled.tooltip": "If disabled, the mod won't change the pet bowl.",
+
+  "gmcm.onlyOnFarm.name": "Only on Farm",
+  "gmcm.onlyOnFarm.tooltip": "If enabled, only fills bowls on the Farm location. If disabled, scans all locations.",
+
+  "gmcm.showMessage.name": "Show message",
+  "gmcm.showMessage.tooltip": "Show a small HUD message after filling the bowl(s).",
+
+  "message.filled": "Filled pet bowl(s): {{count}}"
+}

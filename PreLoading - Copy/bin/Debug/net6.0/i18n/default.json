@@ -1,0 +1,22 @@
+{
+  "gmcm.section.general": "Offscreen Animation Freezer",
+  "gmcm.enabled.name": "Enable mod",
+  "gmcm.enabled.tooltip": "If disabled, everything runs normally.",
+  "gmcm.mode.name": "Freeze scope",
+  "gmcm.mode.tooltip": "Safe = critters only. Balanced = critters + likely looping ambient sprites.",
+  "gmcm.mode.safe": "Safe (critters only)",
+  "gmcm.mode.balanced": "Balanced (critters + ambient sprites)",
+  "gmcm.margin.name": "Offscreen margin (tiles)",
+  "gmcm.margin.tooltip": "How far beyond the camera view something can be before it's frozen.",
+  "gmcm.disableEvents.name": "Disable during events",
+  "gmcm.disableEvents.tooltip": "Don’t freeze anything during cutscenes/events.",
+
+  "gmcm.section.debug": "Debug / Testing",
+  "gmcm.debug.name": "Debug logging",
+  "gmcm.debug.tooltip": "Logs how many updates/draws were skipped each second (toggle with F7).",
+  "gmcm.freezeAllTas.name": "Freeze ALL temporary sprites (test)",
+  "gmcm.freezeAllTas.tooltip": "Very aggressive. Use to confirm the mod is working, then turn it off.",
+
+  "hud.debugOn": "Offscreen Freezer: Debug ON",
+  "hud.debugOff": "Offscreen Freezer: Debug OFF"
+}

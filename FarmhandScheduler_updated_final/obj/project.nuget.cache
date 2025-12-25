@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "wDR2fELpy5c=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FarmhandScheduler_updated_final\\FarmhandScheduler.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zjmto\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.2.0\\pathoschild.stardew.modbuildconfig.4.2.0.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
+  ],
+  "logs": []
+}

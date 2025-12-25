@@ -1,0 +1,69 @@
+{
+  "menu.title": "Çiftlik İşçisi Planlayıcı",
+
+  "menu.row.hire": "Çiftlik işçisi tut",
+  "menu.row.water": "Mahsulleri sula",
+  "menu.row.pet": "Hayvanları sev",
+  "menu.row.feed": "Hayvanları besle",
+  "menu.row.harvest": "Mahsulleri hasat et",
+  "menu.row.lowtier": "Sadece düşük değerli hasat et (isteğe bağlı)",
+  "menu.row.noflowers": "Çiçekleri hariç tut (bal bonuslarını koru)",
+  "menu.row.chests": "Sandıkları düzenle (eşyaları sırala)",
+
+  "menu.workhours": "Çalışma saatleri",
+  "menu.workhours.start": "Başlangıç: {0}:00",
+  "menu.workhours.end": "Bitiş: {0}:00",
+
+  "menu.bill": "Günlük maliyet (her sabah alınır): {0}g",
+  "menu.hint": "Aç/Kapat için sol tıklayın. Çalışma saatlerindeki +/- üzerine sağ tıklamak azaltır.",
+  "menu.openwith": "Bu planlayıcıyı şununla aç: {0}",
+
+  "menu.button.save": "Kaydet",
+  "menu.button.cancel": "İptal",
+
+  "hud.bill.unpaid": "Bugün çiftlik işçisi tutmak için yeterli altının yok ({0}g gerekli). Görevler çalışmayacak.",
+  "hud.bill.paid": "Çiftlik işçisi tutuldu! {0}g ödendi.",
+  "hud.bill.free": "Çiftlik işçisi tutuldu! Bugün ücret yok.",
+  "hud.hired.ok": "Çiftlik işçin bugün çalışmaya hazır.",
+  "hud.changes.tomorrow": "Kaydedildi. Değişiklikler yarın sabah uygulanacak.",
+
+  "gmcm.section.main": "Ana",
+  "gmcm.section.tasks": "Görevler",
+  "gmcm.section.harvest": "Hasat seçenekleri",
+  "gmcm.section.costs": "Maliyetler",
+
+  "gmcm.helperEnabled.name": "Çiftlik işçisini etkinleştir",
+  "gmcm.helperEnabled.tooltip": "Devre dışı bırakılırsa çiftlik işçisi çalışmaz ve her sabah ücret alınmaz.",
+
+  "gmcm.key.name": "Planlayıcı kısayolu",
+  "gmcm.key.tooltip": "Oyun içi Çiftlik İşçisi Planlayıcısı menüsünü açar.",
+
+  "gmcm.starthour.name": "Başlangıç saati",
+  "gmcm.starthour.tooltip": "Çiftlik işçisinin işe başlayacağı en erken saat (oyun saati).",
+
+  "gmcm.endhour.name": "Bitiş saati",
+  "gmcm.endhour.tooltip": "Çiftlik işçisinin işi bırakacağı en geç saat (oyun saati).",
+
+  "gmcm.water.name": "Mahsulleri sula",
+  "gmcm.pet.name": "Hayvanları sev",
+  "gmcm.feed.name": "Hayvanları besle",
+  "gmcm.harvest.name": "Mahsulleri hasat et",
+  "gmcm.chests.name": "Sandıkları düzenle",
+
+  "gmcm.lowtier.name": "Sadece düşük değerli hasat et",
+  "gmcm.lowtier.tooltip": "Etkinleştirilirse çiftlik işçisi değer sınırını aşan mahsulleri atlar.",
+
+  "gmcm.harvestcap.name": "Değer sınırı",
+  "gmcm.harvestcap.tooltip": "Sadece satış fiyatı bu değerde veya altında olan mahsulleri hasat et (yalnızca düşük değerli açıkken).",
+
+  "gmcm.excludeflowers.name": "Çiçekleri hariç tut",
+  "gmcm.excludeflowers.tooltip": "Balhane bonuslarını korumak için çiçek hasadını atlar.",
+
+  "gmcm.costs.note": "Maliyetler çalışmaya başlamadan önce her sabah alınır. Yeterli altının yoksa hiçbir görev çalışmaz.",
+
+  "gmcm.cost.water": "Mahsul sulama maliyeti",
+  "gmcm.cost.pet": "Hayvanları sevme maliyeti",
+  "gmcm.cost.feed": "Hayvanları besleme maliyeti",
+  "gmcm.cost.harvest": "Hasat etme maliyeti",
+  "gmcm.cost.chests": "Sandıkları düzenleme maliyeti"
+}

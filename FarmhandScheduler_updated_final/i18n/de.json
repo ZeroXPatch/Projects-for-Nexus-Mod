@@ -1,0 +1,69 @@
+{
+  "menu.title": "Farmhelfer-Planer",
+
+  "menu.row.hire": "Farmhelfer anheuern",
+  "menu.row.water": "Feldfrüchte gießen",
+  "menu.row.pet": "Tiere streicheln",
+  "menu.row.feed": "Tiere füttern",
+  "menu.row.harvest": "Feldfrüchte ernten",
+  "menu.row.lowtier": "Nur geringwertige ernten (optional)",
+  "menu.row.noflowers": "Blumen ausschließen (Honigbonus behalten)",
+  "menu.row.chests": "Truhen ordnen (Gegenstände sortieren)",
+
+  "menu.workhours": "Arbeitszeiten",
+  "menu.workhours.start": "Beginn: {0}:00",
+  "menu.workhours.end": "Ende: {0}:00",
+
+  "menu.bill": "Tägliche Kosten (jeden Morgen abgebucht): {0}g",
+  "menu.hint": "Linksklick zum Umschalten. Rechtsklick auf +/- bei Arbeitszeiten zum Verringern.",
+  "menu.openwith": "Diesen Planer öffnen mit: {0}",
+
+  "menu.button.save": "Speichern",
+  "menu.button.cancel": "Abbrechen",
+
+  "hud.bill.unpaid": "Nicht genug Gold, um den Farmhelfer heute anzuheuern (benötigt {0}g). Es werden keine Aufgaben ausgeführt.",
+  "hud.bill.paid": "Farmhelfer angeheuert! {0}g bezahlt.",
+  "hud.bill.free": "Farmhelfer angeheuert! Heute keine Kosten.",
+  "hud.hired.ok": "Dein Farmhelfer ist bereit zu arbeiten.",
+  "hud.changes.tomorrow": "Gespeichert. Änderungen gelten morgen früh.",
+
+  "gmcm.section.main": "Allgemein",
+  "gmcm.section.tasks": "Aufgaben",
+  "gmcm.section.harvest": "Ernteoptionen",
+  "gmcm.section.costs": "Kosten",
+
+  "gmcm.helperEnabled.name": "Farmhelfer aktivieren",
+  "gmcm.helperEnabled.tooltip": "Wenn deaktiviert, arbeitet der Farmhelfer nicht und es werden morgens keine Kosten berechnet.",
+
+  "gmcm.key.name": "Planer-Hotkey",
+  "gmcm.key.tooltip": "Öffnet das Farmhelfer-Planermenü im Spiel.",
+
+  "gmcm.starthour.name": "Startzeit",
+  "gmcm.starthour.tooltip": "Früheste Zeit, zu der der Farmhelfer zu arbeiten beginnt (Spielzeit).",
+
+  "gmcm.endhour.name": "Endzeit",
+  "gmcm.endhour.tooltip": "Späteste Zeit, zu der der Farmhelfer die Arbeit einstellt (Spielzeit).",
+
+  "gmcm.water.name": "Feldfrüchte gießen",
+  "gmcm.pet.name": "Tiere streicheln",
+  "gmcm.feed.name": "Tiere füttern",
+  "gmcm.harvest.name": "Feldfrüchte ernten",
+  "gmcm.chests.name": "Truhen ordnen",
+
+  "gmcm.lowtier.name": "Nur geringwertige ernten",
+  "gmcm.lowtier.tooltip": "Wenn aktiviert, überspringt der Farmhelfer Feldfrüchte, die über dem Wertlimit liegen.",
+
+  "gmcm.harvestcap.name": "Wertlimit",
+  "gmcm.harvestcap.tooltip": "Erntet nur Feldfrüchte mit Verkaufspreis bis zu diesem Wert (wenn 'nur geringwertige' aktiviert ist).",
+
+  "gmcm.excludeflowers.name": "Blumen ausschließen",
+  "gmcm.excludeflowers.tooltip": "Überspringt Blumen, damit Bienenstöcke ihre Honigboni behalten können.",
+
+  "gmcm.costs.note": "Kosten werden jeden Morgen vor Arbeitsbeginn berechnet. Wenn du nicht genug Gold hast, werden keine Aufgaben ausgeführt.",
+
+  "gmcm.cost.water": "Kosten fürs Gießen",
+  "gmcm.cost.pet": "Kosten fürs Streicheln",
+  "gmcm.cost.feed": "Kosten fürs Füttern",
+  "gmcm.cost.harvest": "Kosten fürs Ernten",
+  "gmcm.cost.chests": "Kosten fürs Truhen ordnen"
+}

@@ -1,0 +1,69 @@
+{
+  "menu.title": "Pianificatore del bracciante",
+
+  "menu.row.hire": "Assumi bracciante",
+  "menu.row.water": "Annaffia le colture",
+  "menu.row.pet": "Coccola gli animali",
+  "menu.row.feed": "Nutri gli animali",
+  "menu.row.harvest": "Raccogli le colture",
+  "menu.row.lowtier": "Raccogli solo quelle di basso valore (opzionale)",
+  "menu.row.noflowers": "Escludi i fiori (mantieni i bonus del miele)",
+  "menu.row.chests": "Organizza le casse (ordina gli oggetti)",
+
+  "menu.workhours": "Orario di lavoro",
+  "menu.workhours.start": "Inizio: {0}:00",
+  "menu.workhours.end": "Fine: {0}:00",
+
+  "menu.bill": "Costo giornaliero (addebitato ogni mattina): {0}g",
+  "menu.hint": "Clic sinistro per attivare/disattivare. Clic destro +/- sugli orari di lavoro per diminuire.",
+  "menu.openwith": "Apri questo pianificatore con: {0}",
+
+  "menu.button.save": "Salva",
+  "menu.button.cancel": "Annulla",
+
+  "hud.bill.unpaid": "Oro insufficiente per assumere il bracciante oggi (servono {0}g). Nessuna attività verrà eseguita.",
+  "hud.bill.paid": "Bracciante assunto! Pagati {0}g.",
+  "hud.bill.free": "Bracciante assunto! Nessun costo oggi.",
+  "hud.hired.ok": "Il tuo bracciante è pronto a lavorare oggi.",
+  "hud.changes.tomorrow": "Salvato. Le modifiche si applicano domani mattina.",
+
+  "gmcm.section.main": "Principale",
+  "gmcm.section.tasks": "Attività",
+  "gmcm.section.harvest": "Opzioni di raccolto",
+  "gmcm.section.costs": "Costi",
+
+  "gmcm.helperEnabled.name": "Abilita bracciante",
+  "gmcm.helperEnabled.tooltip": "Se disabilitato, il bracciante non lavorerà e non ti verrà addebitato nulla ogni mattina.",
+
+  "gmcm.key.name": "Tasto di scelta rapida del pianificatore",
+  "gmcm.key.tooltip": "Apri il menu Pianificatore del bracciante in gioco.",
+
+  "gmcm.starthour.name": "Ora di inizio",
+  "gmcm.starthour.tooltip": "Orario più precoce in cui il bracciante inizierà a lavorare (orario di gioco).",
+
+  "gmcm.endhour.name": "Ora di fine",
+  "gmcm.endhour.tooltip": "Orario più tardivo in cui il bracciante smetterà di lavorare (orario di gioco).",
+
+  "gmcm.water.name": "Annaffia le colture",
+  "gmcm.pet.name": "Coccola gli animali",
+  "gmcm.feed.name": "Nutri gli animali",
+  "gmcm.harvest.name": "Raccogli le colture",
+  "gmcm.chests.name": "Organizza le casse",
+
+  "gmcm.lowtier.name": "Raccogli solo quelle di basso valore",
+  "gmcm.lowtier.tooltip": "Se abilitato, il bracciante salterà le colture che superano il limite di valore.",
+
+  "gmcm.harvestcap.name": "Limite di valore",
+  "gmcm.harvestcap.tooltip": "Raccoglie solo le colture con prezzo di vendita pari o inferiore a questo valore (quando l'opzione solo basso valore è abilitata).",
+
+  "gmcm.excludeflowers.name": "Escludi i fiori",
+  "gmcm.excludeflowers.tooltip": "Salta la raccolta dei fiori così gli alveari mantengono i bonus al miele.",
+
+  "gmcm.costs.note": "I costi vengono addebitati ogni mattina prima dell'inizio del lavoro. Se non hai abbastanza oro, nessuna attività verrà eseguita.",
+
+  "gmcm.cost.water": "Costo per annaffiare le colture",
+  "gmcm.cost.pet": "Costo per coccolare gli animali",
+  "gmcm.cost.feed": "Costo per nutrire gli animali",
+  "gmcm.cost.harvest": "Costo per raccogliere le colture",
+  "gmcm.cost.chests": "Costo per organizzare le casse"
+}

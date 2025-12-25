@@ -1,0 +1,21 @@
+{
+  "menu.title": "Planificador de Ayudante",
+
+  "menu.row.hire": "Contratar ayudante para mañana",
+  "menu.row.water": "Regar cultivos",
+  "menu.row.pet": "Acariciar animales",
+  "menu.row.feed": "Alimentar animales",
+  "menu.row.harvest": "Cosechar cultivos",
+  "menu.row.lowtier": "Solo cosecha de bajo valor",
+  "menu.row.chests": "Organizar cofres",
+
+  "menu.workhours": "Horario de trabajo",
+  "menu.workhours.start": "Inicio: {0}:00",
+  "menu.workhours.end": "Fin: {0}:00",
+
+  "menu.cost": "Costo diario: {0}g",
+  "menu.hint": "Clic izquierdo para aumentar horas, clic derecho para reducir.",
+  "menu.openwith": "Abrir con {0}",
+  "menu.button.save": "Guardar",
+  "menu.button.cancel": "Cancelar"
+}

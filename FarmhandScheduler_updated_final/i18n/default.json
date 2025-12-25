@@ -1,0 +1,69 @@
+{
+  "menu.title": "Farmhand Planner",
+
+  "menu.row.hire": "Hire farmhand",
+  "menu.row.water": "Water crops",
+  "menu.row.pet": "Pet animals",
+  "menu.row.feed": "Feed animals",
+  "menu.row.harvest": "Harvest crops",
+  "menu.row.lowtier": "Harvest low-value only (optional)",
+  "menu.row.noflowers": "Exclude flowers (keep honey boosts)",
+  "menu.row.chests": "Organize chests (sort items)",
+
+  "menu.workhours": "Work hours",
+  "menu.workhours.start": "Start: {0}:00",
+  "menu.workhours.end": "End: {0}:00",
+
+  "menu.bill": "Daily cost (charged each morning): {0}g",
+  "menu.hint": "Left click to toggle. Right click +/- on work hours to decrease.",
+  "menu.openwith": "Open this planner with: {0}",
+
+  "menu.button.save": "Save",
+  "menu.button.cancel": "Cancel",
+
+  "hud.bill.unpaid": "Not enough gold to hire the farmhand today (needs {0}g). No tasks will run.",
+  "hud.bill.paid": "Farmhand hired! Paid {0}g.",
+  "hud.bill.free": "Farmhand hired! No charge today.",
+  "hud.hired.ok": "Your farmhand is ready to work today.",
+  "hud.changes.tomorrow": "Saved. Changes apply tomorrow morning.",
+
+  "gmcm.section.main": "Main",
+  "gmcm.section.tasks": "Tasks",
+  "gmcm.section.harvest": "Harvest options",
+  "gmcm.section.costs": "Costs",
+
+  "gmcm.helperEnabled.name": "Enable farmhand",
+  "gmcm.helperEnabled.tooltip": "If disabled, the farmhand won't work and you won't be charged each morning.",
+
+  "gmcm.key.name": "Planner hotkey",
+  "gmcm.key.tooltip": "Open the in-game Farmhand Planner menu.",
+
+  "gmcm.starthour.name": "Start hour",
+  "gmcm.starthour.tooltip": "Earliest hour the farmhand will start working (in-game time).",
+
+  "gmcm.endhour.name": "End hour",
+  "gmcm.endhour.tooltip": "Latest hour the farmhand will stop working (in-game time).",
+
+  "gmcm.water.name": "Water crops",
+  "gmcm.pet.name": "Pet animals",
+  "gmcm.feed.name": "Feed animals",
+  "gmcm.harvest.name": "Harvest crops",
+  "gmcm.chests.name": "Organize chests",
+
+  "gmcm.lowtier.name": "Harvest low-value only",
+  "gmcm.lowtier.tooltip": "If enabled, the farmhand will skip crops worth more than the value cap.",
+
+  "gmcm.harvestcap.name": "Value cap",
+  "gmcm.harvestcap.tooltip": "Only harvest crops with sell price at or below this value (when low-value-only is enabled).",
+
+  "gmcm.excludeflowers.name": "Exclude flowers",
+  "gmcm.excludeflowers.tooltip": "Skip harvesting flowers so beehouses can keep their honey bonuses.",
+
+  "gmcm.costs.note": "Costs are charged each morning before work starts. If you don't have enough gold, no tasks will run.",
+
+  "gmcm.cost.water": "Water crops cost",
+  "gmcm.cost.pet": "Pet animals cost",
+  "gmcm.cost.feed": "Feed animals cost",
+  "gmcm.cost.harvest": "Harvest crops cost",
+  "gmcm.cost.chests": "Organize chests cost"
+}

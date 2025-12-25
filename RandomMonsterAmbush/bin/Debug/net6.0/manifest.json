@@ -1,11 +1,11 @@
 {
   "Name": "Random Monster Ambush",
-  "Author": "Nexus Mods Agent",
-  "Version": "1.0.0",
+  "Author": "ZeroXPatch",
+  "Version": "3.0.0",
   "MinimumApiVersion": "4.0.0",
   "MinimumGameVersion": "1.6.0",
   "Description": "Adds configurable random monster spawns near the player on any map for added danger and variety.",
-  "UniqueID": "NexusAgent.RandomMonsterAmbush",
+  "UniqueID": "ZeroXPatch.RandomMonsterAmbush",
   "EntryDll": "RandomMonsterAmbush.dll",
-  "UpdateKeys": []
+  "UpdateKeys": [ "Nexus:39891" ]
 }

@@ -4,9 +4,8 @@ C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RandomMonsterAmbush\obj\D
 C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RandomMonsterAmbush\obj\Debug\net6.0\RandomMonsterAmbush.AssemblyInfo.cs
 C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RandomMonsterAmbush\obj\Debug\net6.0\RandomMonsterAmbush.csproj.CoreCompileInputs.cache
 C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RandomMonsterAmbush\obj\Debug\net6.0\RandomMonsterAmbush.sourcelink.json
-C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RandomMonsterAmbush\bin\Debug\net6.0\config.json
-C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RandomMonsterAmbush\bin\Debug\net6.0\i18n\en.json
 C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RandomMonsterAmbush\bin\Debug\net6.0\manifest.json
 C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RandomMonsterAmbush\bin\Debug\net6.0\RandomMonsterAmbush.deps.json
 C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RandomMonsterAmbush\bin\Debug\net6.0\RandomMonsterAmbush.dll
 C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RandomMonsterAmbush\obj\Debug\net6.0\RandomMonsterAmbush.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RandomMonsterAmbush\bin\Debug\net6.0\i18n\default.json

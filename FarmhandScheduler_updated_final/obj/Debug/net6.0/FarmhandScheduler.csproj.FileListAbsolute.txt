@@ -1,0 +1,11 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmhandScheduler_updated_final\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmhandScheduler_updated_final\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmhandScheduler_updated_final\bin\Debug\net6.0\FarmhandScheduler.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmhandScheduler_updated_final\bin\Debug\net6.0\FarmhandScheduler.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmhandScheduler_updated_final\obj\Debug\net6.0\FarmhandScheduler.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmhandScheduler_updated_final\obj\Debug\net6.0\FarmhandScheduler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmhandScheduler_updated_final\obj\Debug\net6.0\FarmhandScheduler.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmhandScheduler_updated_final\obj\Debug\net6.0\FarmhandScheduler.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmhandScheduler_updated_final\obj\Debug\net6.0\FarmhandScheduler.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmhandScheduler_updated_final\obj\Debug\net6.0\FarmhandScheduler.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmhandScheduler_updated_final\obj\Debug\net6.0\FarmhandScheduler.dll

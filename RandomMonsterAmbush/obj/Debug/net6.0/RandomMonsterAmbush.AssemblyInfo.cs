@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RandomMonsterAmbush")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83ae621a6964c9635be9702df5228c1210aa6e5d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26982886f9f949a23307da8b16dcdb38b98fb898")]
 [assembly: System.Reflection.AssemblyProductAttribute("RandomMonsterAmbush")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RandomMonsterAmbush")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

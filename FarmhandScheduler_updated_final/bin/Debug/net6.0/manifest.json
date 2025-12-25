@@ -1,0 +1,10 @@
+{
+  "Name": "Farmhand Scheduler",
+  "Author": "ZeroXPatch",
+  "Version": "2。0.0",
+  "Description": "Hire a farmhand to do daily chores you select. Charged each morning based on selected tasks.",
+  "UniqueID": "ZeroXPatch.FarmhandScheduler",
+  "EntryDll": "FarmhandScheduler.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

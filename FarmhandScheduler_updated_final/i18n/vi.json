@@ -1,0 +1,69 @@
+{
+  "menu.title": "Trình lập kế hoạch Người làm nông",
+
+  "menu.row.hire": "Thuê người làm nông",
+  "menu.row.water": "Tưới cây trồng",
+  "menu.row.pet": "Vuốt ve động vật",
+  "menu.row.feed": "Cho động vật ăn",
+  "menu.row.harvest": "Thu hoạch cây trồng",
+  "menu.row.lowtier": "Chỉ thu hoạch giá trị thấp (tùy chọn)",
+  "menu.row.noflowers": "Bỏ qua hoa (giữ hiệu ứng mật ong)",
+  "menu.row.chests": "Sắp xếp rương (phân loại vật phẩm)",
+
+  "menu.workhours": "Giờ làm việc",
+  "menu.workhours.start": "Bắt đầu: {0}:00",
+  "menu.workhours.end": "Kết thúc: {0}:00",
+
+  "menu.bill": "Chi phí mỗi ngày (tính vào mỗi sáng): {0}g",
+  "menu.hint": "Nhấp trái để bật/tắt. Nhấp phải vào +/- giờ làm để giảm.",
+  "menu.openwith": "Mở trình lập kế hoạch này bằng: {0}",
+
+  "menu.button.save": "Lưu",
+  "menu.button.cancel": "Hủy",
+
+  "hud.bill.unpaid": "Không đủ vàng để thuê người làm nông hôm nay (cần {0}g). Sẽ không có nhiệm vụ nào chạy.",
+  "hud.bill.paid": "Đã thuê người làm nông! Đã trả {0}g.",
+  "hud.bill.free": "Đã thuê người làm nông! Hôm nay không tốn phí.",
+  "hud.hired.ok": "Người làm nông của bạn đã sẵn sàng làm việc hôm nay.",
+  "hud.changes.tomorrow": "Đã lưu. Thay đổi sẽ áp dụng vào sáng mai.",
+
+  "gmcm.section.main": "Chính",
+  "gmcm.section.tasks": "Nhiệm vụ",
+  "gmcm.section.harvest": "Tùy chọn thu hoạch",
+  "gmcm.section.costs": "Chi phí",
+
+  "gmcm.helperEnabled.name": "Bật người làm nông",
+  "gmcm.helperEnabled.tooltip": "Nếu tắt, người làm nông sẽ không làm việc và bạn sẽ không bị tính phí mỗi sáng.",
+
+  "gmcm.key.name": "Phím tắt trình lập kế hoạch",
+  "gmcm.key.tooltip": "Mở menu Trình lập kế hoạch Người làm nông trong trò chơi.",
+
+  "gmcm.starthour.name": "Giờ bắt đầu",
+  "gmcm.starthour.tooltip": "Giờ sớm nhất người làm nông bắt đầu làm việc (giờ trong game).",
+
+  "gmcm.endhour.name": "Giờ kết thúc",
+  "gmcm.endhour.tooltip": "Giờ muộn nhất người làm nông ngừng làm việc (giờ trong game).",
+
+  "gmcm.water.name": "Tưới cây trồng",
+  "gmcm.pet.name": "Vuốt ve động vật",
+  "gmcm.feed.name": "Cho động vật ăn",
+  "gmcm.harvest.name": "Thu hoạch cây trồng",
+  "gmcm.chests.name": "Sắp xếp rương",
+
+  "gmcm.lowtier.name": "Chỉ thu hoạch giá trị thấp",
+  "gmcm.lowtier.tooltip": "Nếu bật, người làm nông sẽ bỏ qua cây trồng có giá trị cao hơn giới hạn.",
+
+  "gmcm.harvestcap.name": "Giới hạn giá trị",
+  "gmcm.harvestcap.tooltip": "Chỉ thu hoạch cây trồng có giá bán bằng hoặc thấp hơn giá trị này (khi bật chế độ chỉ giá trị thấp).",
+
+  "gmcm.excludeflowers.name": "Bỏ qua hoa",
+  "gmcm.excludeflowers.tooltip": "Bỏ qua việc thu hoạch hoa để giữ hiệu ứng cộng thêm từ mật ong.",
+
+  "gmcm.costs.note": "Chi phí được tính mỗi sáng trước khi bắt đầu làm việc. Nếu bạn không đủ vàng, sẽ không chạy nhiệm vụ nào.",
+
+  "gmcm.cost.water": "Chi phí tưới cây trồng",
+  "gmcm.cost.pet": "Chi phí vuốt ve động vật",
+  "gmcm.cost.feed": "Chi phí cho động vật ăn",
+  "gmcm.cost.harvest": "Chi phí thu hoạch cây trồng",
+  "gmcm.cost.chests": "Chi phí sắp xếp rương"
+}

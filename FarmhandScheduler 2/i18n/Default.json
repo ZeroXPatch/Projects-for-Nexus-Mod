@@ -1,0 +1,27 @@
+{
+  "menu.title": "Farmhand Planner",
+  "menu.row.hire": "Hire farmhand",
+  "menu.row.water": "Water crops",
+  "menu.row.pet": "Pet animals",
+  "menu.row.feed": "Feed animals (use hay)",
+  "menu.row.harvest": "Harvest crops",
+  "menu.row.lowtier": "Harvest low-value only (optional)",
+  "menu.row.noflowers": "Exclude flowers (keep beehive boost)",
+  "menu.row.chests": "Organize chests (sort items)",
+
+  "menu.workhours": "Work hours",
+  "menu.workhours.start": "Start: {0}:00",
+  "menu.workhours.end": "End: {0}:00",
+
+  "menu.bill": "Daily cost (charged each morning): {0}g",
+  "menu.hint": "Left click to toggle. Right click +/- to decrease.",
+  "menu.openwith": "Open this planner with: {0}",
+  "menu.button.save": "Save",
+  "menu.button.cancel": "Cancel",
+
+  "hud.bill.paid": "Paid farmhand bill for today: {{amount}}g.",
+  "hud.bill.free": "Farmhand bill for today: 0g (free).",
+  "hud.bill.unpaid": "Not enough gold to pay today's farmhand bill ({{amount}}g). No tasks will be performed today.",
+  "hud.hired.ok": "Farmhand is on duty today.",
+  "hud.changes.tomorrow": "Planner changes will apply tomorrow."
+}

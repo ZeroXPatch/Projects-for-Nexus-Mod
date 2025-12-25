@@ -1,0 +1,69 @@
+{
+  "menu.title": "Planejador do Ajudante da Fazenda",
+
+  "menu.row.hire": "Contratar ajudante",
+  "menu.row.water": "Regar plantações",
+  "menu.row.pet": "Acariciar animais",
+  "menu.row.feed": "Alimentar animais",
+  "menu.row.harvest": "Colher plantações",
+  "menu.row.lowtier": "Colher apenas as de baixo valor (opcional)",
+  "menu.row.noflowers": "Excluir flores (manter bônus de mel)",
+  "menu.row.chests": "Organizar baús (ordenar itens)",
+
+  "menu.workhours": "Horário de trabalho",
+  "menu.workhours.start": "Início: {0}:00",
+  "menu.workhours.end": "Fim: {0}:00",
+
+  "menu.bill": "Custo diário (cobrado toda manhã): {0}g",
+  "menu.hint": "Clique esquerdo para alternar. Clique direito em +/- do horário para diminuir.",
+  "menu.openwith": "Abrir este planejador com: {0}",
+
+  "menu.button.save": "Salvar",
+  "menu.button.cancel": "Cancelar",
+
+  "hud.bill.unpaid": "Ouro insuficiente para contratar o ajudante hoje (precisa de {0}g). Nenhuma tarefa será executada.",
+  "hud.bill.paid": "Ajudante contratado! Pago {0}g.",
+  "hud.bill.free": "Ajudante contratado! Sem cobrança hoje.",
+  "hud.hired.ok": "Seu ajudante está pronto para trabalhar hoje.",
+  "hud.changes.tomorrow": "Salvo. As alterações valem amanhã de manhã.",
+
+  "gmcm.section.main": "Principal",
+  "gmcm.section.tasks": "Tarefas",
+  "gmcm.section.harvest": "Opções de colheita",
+  "gmcm.section.costs": "Custos",
+
+  "gmcm.helperEnabled.name": "Ativar ajudante",
+  "gmcm.helperEnabled.tooltip": "Se desativado, o ajudante não trabalhará e você não será cobrado de manhã.",
+
+  "gmcm.key.name": "Atalho do planejador",
+  "gmcm.key.tooltip": "Abre o menu do Planejador do Ajudante no jogo.",
+
+  "gmcm.starthour.name": "Hora de início",
+  "gmcm.starthour.tooltip": "Horário mais cedo em que o ajudante começará a trabalhar (horário do jogo).",
+
+  "gmcm.endhour.name": "Hora de término",
+  "gmcm.endhour.tooltip": "Horário mais tarde em que o ajudante parará de trabalhar (horário do jogo).",
+
+  "gmcm.water.name": "Regar plantações",
+  "gmcm.pet.name": "Acariciar animais",
+  "gmcm.feed.name": "Alimentar animais",
+  "gmcm.harvest.name": "Colher plantações",
+  "gmcm.chests.name": "Organizar baús",
+
+  "gmcm.lowtier.name": "Colher apenas baixo valor",
+  "gmcm.lowtier.tooltip": "Se ativado, o ajudante vai ignorar plantações que excedam o limite de valor.",
+
+  "gmcm.harvestcap.name": "Limite de valor",
+  "gmcm.harvestcap.tooltip": "Apenas colher plantações com preço de venda menor ou igual a esse valor (quando 'apenas baixo valor' estiver ativado).",
+
+  "gmcm.excludeflowers.name": "Excluir flores",
+  "gmcm.excludeflowers.tooltip": "Pular colheita de flores para que as colmeias mantenham os bônus de mel.",
+
+  "gmcm.costs.note": "Os custos são cobrados toda manhã antes do início do trabalho. Se você não tiver ouro suficiente, nenhuma tarefa será executada.",
+
+  "gmcm.cost.water": "Custo de regar plantações",
+  "gmcm.cost.pet": "Custo de acariciar animais",
+  "gmcm.cost.feed": "Custo de alimentar animais",
+  "gmcm.cost.harvest": "Custo de colher plantações",
+  "gmcm.cost.chests": "Custo de organizar baús"
+}

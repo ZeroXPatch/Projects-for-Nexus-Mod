@@ -1,0 +1,21 @@
+{
+  "menu.title": "Планировщик Помощника",
+
+  "menu.row.hire": "Нанять помощника на завтра",
+  "menu.row.water": "Поливать урожай",
+  "menu.row.pet": "Гладить животных",
+  "menu.row.feed": "Кормить животных",
+  "menu.row.harvest": "Собирать урожай",
+  "menu.row.lowtier": "Только низкая ценность",
+  "menu.row.chests": "Организовать сундуки",
+
+  "menu.workhours": "Рабочие часы",
+  "menu.workhours.start": "Начало: {0}:00",
+  "menu.workhours.end": "Конец: {0}:00",
+
+  "menu.cost": "Ежедневная стоимость: {0}g",
+  "menu.hint": "ЛКМ — увеличить время, ПКМ — уменьшить.",
+  "menu.openwith": "Открыть клавишей {0}",
+  "menu.button.save": "Сохранить",
+  "menu.button.cancel": "Отмена"
+}

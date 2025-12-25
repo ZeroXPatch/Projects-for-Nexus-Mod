@@ -1,0 +1,69 @@
+{
+  "menu.title": "ファームハンドプランナー",
+
+  "menu.row.hire": "ファームハンドを雇う",
+  "menu.row.water": "作物に水やり",
+  "menu.row.pet": "動物をなでる",
+  "menu.row.feed": "動物にエサをやる",
+  "menu.row.harvest": "作物を収穫",
+  "menu.row.lowtier": "低価値のみ収穫（オプション）",
+  "menu.row.noflowers": "花を除外（はちみつボーナス維持）",
+  "menu.row.chests": "チェストを整理（アイテムを並べ替え）",
+
+  "menu.workhours": "労働時間",
+  "menu.workhours.start": "{0}:00から開始",
+  "menu.workhours.end": "{0}:00まで",
+
+  "menu.bill": "毎朝請求される日額：{0}g",
+  "menu.hint": "左クリックで切り替え。作業時間の+/-を右クリックで減少。",
+  "menu.openwith": "このプランナーを開くキー：{0}",
+
+  "menu.button.save": "保存",
+  "menu.button.cancel": "キャンセル",
+
+  "hud.bill.unpaid": "今日ファームハンドを雇うだけのゴールドが足りません（{0}g必要）。タスクは実行されません。",
+  "hud.bill.paid": "ファームハンドを雇いました！ {0}g支払いました。",
+  "hud.bill.free": "ファームハンドを雇いました！ 今日は無料です。",
+  "hud.hired.ok": "ファームハンドは今日働く準備ができています。",
+  "hud.changes.tomorrow": "保存しました。変更は明日の朝から適用されます。",
+
+  "gmcm.section.main": "メイン",
+  "gmcm.section.tasks": "タスク",
+  "gmcm.section.harvest": "収穫オプション",
+  "gmcm.section.costs": "コスト",
+
+  "gmcm.helperEnabled.name": "ファームハンドを有効化",
+  "gmcm.helperEnabled.tooltip": "無効にするとファームハンドは働かず、毎朝の請求もありません。",
+
+  "gmcm.key.name": "プランナーのホットキー",
+  "gmcm.key.tooltip": "ゲーム内でファームハンドプランナーのメニューを開きます。",
+
+  "gmcm.starthour.name": "開始時刻",
+  "gmcm.starthour.tooltip": "ファームハンドが作業を開始する最も早い時刻（ゲーム内時間）。",
+
+  "gmcm.endhour.name": "終了時刻",
+  "gmcm.endhour.tooltip": "ファームハンドが作業をやめる最も遅い時刻（ゲーム内時間）。",
+
+  "gmcm.water.name": "作物に水やり",
+  "gmcm.pet.name": "動物をなでる",
+  "gmcm.feed.name": "動物にエサをやる",
+  "gmcm.harvest.name": "作物を収穫",
+  "gmcm.chests.name": "チェストを整理",
+
+  "gmcm.lowtier.name": "低価値のみ収穫",
+  "gmcm.lowtier.tooltip": "有効にすると、価値上限を超える作物をスキップします。",
+
+  "gmcm.harvestcap.name": "価値上限",
+  "gmcm.harvestcap.tooltip": "（低価値のみが有効なとき）販売価格がこの値以下の作物だけを収穫します。",
+
+  "gmcm.excludeflowers.name": "花を除外",
+  "gmcm.excludeflowers.tooltip": "花の収穫をスキップして、養蜂箱のハニーボーナスを維持します。",
+
+  "gmcm.costs.note": "コストは作業開始前の毎朝に請求されます。ゴールドが足りない場合、タスクは実行されません。",
+
+  "gmcm.cost.water": "水やりのコスト",
+  "gmcm.cost.pet": "なでるコスト",
+  "gmcm.cost.feed": "エサやりのコスト",
+  "gmcm.cost.harvest": "収穫のコスト",
+  "gmcm.cost.chests": "チェスト整理のコスト"
+}
