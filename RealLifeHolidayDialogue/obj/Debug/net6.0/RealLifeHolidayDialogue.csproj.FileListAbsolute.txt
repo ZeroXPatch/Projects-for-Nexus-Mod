@@ -1,0 +1,13 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RealLifeHolidayDialogue\obj\Debug\net6.0\RealLifeHolidayDialogue.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RealLifeHolidayDialogue\obj\Debug\net6.0\RealLifeHolidayDialogue.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RealLifeHolidayDialogue\obj\Debug\net6.0\RealLifeHolidayDialogue.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RealLifeHolidayDialogue\obj\Debug\net6.0\RealLifeHolidayDialogue.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RealLifeHolidayDialogue\obj\Debug\net6.0\RealLifeHolidayDialogue.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RealLifeHolidayDialogue\obj\Debug\net6.0\RealLifeHolidayDialogue.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RealLifeHolidayDialogue\bin\Debug\net6.0\RealLifeHolidayDialogue.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RealLifeHolidayDialogue\bin\Debug\net6.0\RealLifeHolidayDialogue.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RealLifeHolidayDialogue\bin\Debug\net6.0\0Harmony.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RealLifeHolidayDialogue\bin\Debug\net6.0\0Harmony.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RealLifeHolidayDialogue\obj\Debug\net6.0\RealLife.56327CCE.Up2Date
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RealLifeHolidayDialogue\obj\Debug\net6.0\RealLifeHolidayDialogue.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\RealLifeHolidayDialogue\bin\Debug\net6.0\manifest.json

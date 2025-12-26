@@ -1,0 +1,10 @@
+{
+  "Name": "Real Life Holiday Dialogue",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Shows holiday greetings above NPCs on matching real-life dates (e.g., 12/25, 1/1), with fully configurable date/dialogue pools via config.json.",
+  "UniqueID": "ZeroXPatch.RealLifeHolidayDialogue",
+  "EntryDll": "RealLifeHolidayDialogue.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}
