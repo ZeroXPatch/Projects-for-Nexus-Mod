@@ -1,10 +1,10 @@
 {
-  "Name": "Auto Fill Water for Pet Bowl",
-  "Author": "ZeroXPatch",
+  "Name": "Auto Fill Pet Bowl",
+  "Author": "YourName",
   "Version": "1.0.0",
   "Description": "Automatically fills all pet bowls on the farm at the start of every day.",
-  "UniqueID": "ZeroXPatch.AutoFillWaterforPetBowl",
-  "EntryDll": "AutoFillWaterforPetBowl.dll",
+  "UniqueID": "YourName.AutoFillPetBowl",
+  "EntryDll": "AutoFillPetBowl.dll",
   "MinimumApiVersion": "4.0.0",
   "UpdateKeys": []
 }

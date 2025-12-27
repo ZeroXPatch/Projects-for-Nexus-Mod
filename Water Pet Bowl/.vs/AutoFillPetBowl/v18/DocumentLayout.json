@@ -3,24 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Water Pet Bowl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D23CDCA-2BE0-81CC-2BAA-3FDF1C442B95}|AutoFillPetBowl.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\water pet bowl\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D23CDCA-2BE0-81CC-2BAA-3FDF1C442B95}|AutoFillPetBowl.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GOG Games\\Stardew Valley\\Mods\\AutoFillPetBowl\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D23CDCA-2BE0-81CC-2BAA-3FDF1C442B95}|AutoFillPetBowl.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\water pet bowl\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D23CDCA-2BE0-81CC-2BAA-3FDF1C442B95}|AutoFillPetBowl.csproj|solutionrelative:igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D23CDCA-2BE0-81CC-2BAA-3FDF1C442B95}|AutoFillPetBowl.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\water pet bowl\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D23CDCA-2BE0-81CC-2BAA-3FDF1C442B95}|AutoFillPetBowl.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zjmto\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\build\\Pathoschild.Stardew.ModBuildConfig.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D23CDCA-2BE0-81CC-2BAA-3FDF1C442B95}|AutoFillPetBowl.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\water pet bowl\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{6D23CDCA-2BE0-81CC-2BAA-3FDF1C442B95}|AutoFillPetBowl.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D23CDCA-2BE0-81CC-2BAA-3FDF1C442B95}|AutoFillPetBowl.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\water pet bowl\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6D23CDCA-2BE0-81CC-2BAA-3FDF1C442B95}|AutoFillPetBowl.csproj|solutionrelative:i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{6D23CDCA-2BE0-81CC-2BAA-3FDF1C442B95}|AutoFillPetBowl.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\water pet bowl\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D23CDCA-2BE0-81CC-2BAA-3FDF1C442B95}|AutoFillPetBowl.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D23CDCA-2BE0-81CC-2BAA-3FDF1C442B95}|AutoFillPetBowl.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\water pet bowl\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D23CDCA-2BE0-81CC-2BAA-3FDF1C442B95}|AutoFillPetBowl.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,74 +38,76 @@
         },
         {
           "DockedWidth": 405,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ModConfig.cs",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Water Pet Bowl\\ModConfig.cs",
-              "RelativeDocumentMoniker": "ModConfig.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Water Pet Bowl\\ModConfig.cs",
-              "RelativeToolTip": "ModConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T04:56:58.627Z",
+              "DocumentIndex": 0,
+              "Title": "manifest.json",
+              "DocumentMoniker": "C:\\GOG Games\\Stardew Valley\\Mods\\AutoFillPetBowl\\manifest.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\AutoFillPetBowl\\manifest.json",
+              "ToolTip": "C:\\GOG Games\\Stardew Valley\\Mods\\AutoFillPetBowl\\manifest.json",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\AutoFillPetBowl\\manifest.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-27T22:48:34.019Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IGenericModConfigMenuApi.cs",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Water Pet Bowl\\IGenericModConfigMenuApi.cs",
-              "RelativeDocumentMoniker": "IGenericModConfigMenuApi.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Water Pet Bowl\\IGenericModConfigMenuApi.cs",
-              "RelativeToolTip": "IGenericModConfigMenuApi.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAA9wCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T04:46:29.387Z",
+              "Title": "Pathoschild.Stardew.ModBuildConfig.targets",
+              "DocumentMoniker": "C:\\Users\\zjmto\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\build\\Pathoschild.Stardew.ModBuildConfig.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\build\\Pathoschild.Stardew.ModBuildConfig.targets",
+              "ToolTip": "C:\\Users\\zjmto\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\build\\Pathoschild.Stardew.ModBuildConfig.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\build\\Pathoschild.Stardew.ModBuildConfig.targets",
+              "ViewState": "AgIAAEUAAAAAAAAAAAASwE4AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-12-27T22:43:00.394Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ModEntry.cs",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Water Pet Bowl\\ModEntry.cs",
-              "RelativeDocumentMoniker": "ModEntry.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Water Pet Bowl\\ModEntry.cs",
-              "RelativeToolTip": "ModEntry.cs",
-              "ViewState": "AgIAAOoBAAAAAAAAAAAwwAICAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T04:46:04.097Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Water Pet Bowl\\manifest.json",
               "RelativeDocumentMoniker": "manifest.json",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Water Pet Bowl\\manifest.json",
               "RelativeToolTip": "manifest.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-25T04:45:57.687Z"
+              "WhenOpened": "2025-12-27T22:42:29.308Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "default.json",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Water Pet Bowl\\i18n\\default.json",
-              "RelativeDocumentMoniker": "i18n\\default.json",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Water Pet Bowl\\i18n\\default.json",
-              "RelativeToolTip": "i18n\\default.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-25T04:45:44.48Z"
+              "DocumentIndex": 3,
+              "Title": "ModConfig.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Water Pet Bowl\\ModConfig.cs",
+              "RelativeDocumentMoniker": "ModConfig.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Water Pet Bowl\\ModConfig.cs",
+              "RelativeToolTip": "ModConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T22:42:17.414Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ModEntry.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Water Pet Bowl\\ModEntry.cs",
+              "RelativeDocumentMoniker": "ModEntry.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Water Pet Bowl\\ModEntry.cs",
+              "RelativeToolTip": "ModEntry.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAowC4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T22:42:18.355Z",
+              "EditorCaption": ""
             }
           ]
         },

@@ -1,14 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>AutoFillPetBowl</AssemblyName>
     <RootNamespace>AutoFillPetBowl</RootNamespace>
-    <Nullable>enable</Nullable>
+    <!-- Enables strict null checking and modern C# features -->
+    <Nullable>enable</Nullable> 
     <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>x64</Platforms>
+    <EnableHarmony>true</EnableHarmony>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.2.0" />
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,4 +23,5 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+
 </Project>

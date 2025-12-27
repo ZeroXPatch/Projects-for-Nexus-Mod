@@ -1,0 +1,11 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Water Pet Bowl\bin\x64\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Water Pet Bowl\bin\x64\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Water Pet Bowl\bin\x64\Debug\net6.0\AutoFillPetBowl.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Water Pet Bowl\bin\x64\Debug\net6.0\AutoFillPetBowl.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Water Pet Bowl\obj\x64\Debug\net6.0\AutoFillPetBowl.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Water Pet Bowl\obj\x64\Debug\net6.0\AutoFillPetBowl.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Water Pet Bowl\obj\x64\Debug\net6.0\AutoFillPetBowl.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Water Pet Bowl\obj\x64\Debug\net6.0\AutoFillPetBowl.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Water Pet Bowl\obj\x64\Debug\net6.0\AutoFillPetBowl.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Water Pet Bowl\obj\x64\Debug\net6.0\AutoFillPetBowl.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Water Pet Bowl\obj\x64\Debug\net6.0\AutoFillPetBowl.dll
