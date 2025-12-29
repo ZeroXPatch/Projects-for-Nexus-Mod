@@ -11,9 +11,6 @@ namespace CyberpunkPriorityOnce
         [DllImport("user32.dll")]
         private static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
 
-        /// <summary>
-        /// Returns true if the given process ID owns the current foreground window.
-        /// </summary>
         public static bool IsProcessInForeground(int pid)
         {
             IntPtr hwnd = GetForegroundWindow();

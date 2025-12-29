@@ -8,7 +8,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <!-- Embed the background image into the EXE -->
+  <!-- Embed background image into the EXE -->
   <ItemGroup>
     <EmbeddedResource Include="cyberpunk_bg.png" />
   </ItemGroup>
