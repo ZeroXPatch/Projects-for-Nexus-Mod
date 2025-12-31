@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>GoToBed</AssemblyName>
+    <RootNamespace>GoToBed</RootNamespace>
+    <!-- Enables strict null checking and modern C# features -->
+    <Nullable>enable</Nullable> 
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="manifest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <!-- Keep this if you plan to add translations later, otherwise it is optional -->
+    <None Update="i18n\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
