@@ -1,0 +1,10 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PerfectCatchStreak\obj\x64\Debug\net6.0\PerfectCatchStreak.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PerfectCatchStreak\obj\x64\Debug\net6.0\PerfectCatchStreak.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PerfectCatchStreak\obj\x64\Debug\net6.0\PerfectCatchStreak.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PerfectCatchStreak\obj\x64\Debug\net6.0\PerfectCatchStreak.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PerfectCatchStreak\obj\x64\Debug\net6.0\PerfectCatchStreak.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PerfectCatchStreak\obj\x64\Debug\net6.0\PerfectCatchStreak.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PerfectCatchStreak\bin\x64\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PerfectCatchStreak\bin\x64\Debug\net6.0\PerfectCatchStreak.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PerfectCatchStreak\bin\x64\Debug\net6.0\PerfectCatchStreak.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PerfectCatchStreak\obj\x64\Debug\net6.0\PerfectCatchStreak.dll

@@ -1,0 +1,10 @@
+{
+  "Name": "Perfect Catch Streak",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Increases a streak counter for every perfect catch and awards bonus XP.",
+  "UniqueID": "ZeroXPatch.PerfectCatchStreak",
+  "EntryDll": "PerfectCatchStreak.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}
