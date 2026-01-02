@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{2FD4F7DD-2789-952A-0F75-F93BD66A0159}|PerfectCatchStreak.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\perfectcatchstreak\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FD4F7DD-2789-952A-0F75-F93BD66A0159}|PerfectCatchStreak.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FD4F7DD-2789-952A-0F75-F93BD66A0159}|PerfectCatchStreak.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\perfectcatchstreak\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FD4F7DD-2789-952A-0F75-F93BD66A0159}|PerfectCatchStreak.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,19 +28,32 @@
         },
         {
           "DockedWidth": 405,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ModConfig.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\PerfectCatchStreak\\ModConfig.cs",
+              "RelativeDocumentMoniker": "ModConfig.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\PerfectCatchStreak\\ModConfig.cs",
+              "RelativeToolTip": "ModConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-01T02:45:02.184Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\PerfectCatchStreak\\ModEntry.cs",
               "RelativeDocumentMoniker": "ModEntry.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\PerfectCatchStreak\\ModEntry.cs",
-              "RelativeToolTip": "ModEntry.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAqwHYAAAARAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\PerfectCatchStreak\\ModEntry.cs*",
+              "RelativeToolTip": "ModEntry.cs*",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAqwH0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-01T02:38:12.785Z",
+              "WhenOpened": "2026-01-01T02:45:02.825Z",
               "EditorCaption": ""
             },
             {
