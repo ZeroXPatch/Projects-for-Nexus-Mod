@@ -1,0 +1,10 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Buffs\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Buffs\bin\Debug\net6.0\SleepBuffs.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Buffs\bin\Debug\net6.0\SleepBuffs.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Buffs\obj\Debug\net6.0\SleepBuffs.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Buffs\obj\Debug\net6.0\SleepBuffs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Buffs\obj\Debug\net6.0\SleepBuffs.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Buffs\obj\Debug\net6.0\SleepBuffs.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Buffs\obj\Debug\net6.0\SleepBuffs.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Buffs\obj\Debug\net6.0\SleepBuffs.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Buffs\obj\Debug\net6.0\SleepBuffs.dll

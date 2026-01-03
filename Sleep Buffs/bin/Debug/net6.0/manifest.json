@@ -1,0 +1,10 @@
+{
+  "Name": "Sleep Buffs",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Rewards 8+ hours of sleep with buffs and penalizes < 6 hours with debuffs.",
+  "UniqueID": "ZeroXPatch.SleepBuffs",
+  "EntryDll": "SleepBuffs.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

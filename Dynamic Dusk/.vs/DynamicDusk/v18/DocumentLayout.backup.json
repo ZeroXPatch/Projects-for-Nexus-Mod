@@ -7,19 +7,22 @@
       "RelativeMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\dynamic dusk\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|solutionrelative:i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zjmto\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\build\\Pathoschild.Stardew.ModBuildConfig.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GOG Games\\Stardew Valley\\Mods\\DynamicDusk\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\dynamic dusk\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\dynamic dusk\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|solutionrelative:igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\dynamic dusk\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\dynamic dusk\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|solutionrelative:i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GOG Games\\Stardew Valley\\Mods\\DynamicDusk\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zjmto\\AppData\\Local\\Temp\\360zip$Temp\\360$0\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
@@ -53,20 +56,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "default.json",
-              "DocumentMoniker": "C:\\GOG Games\\Stardew Valley\\Mods\\DynamicDusk\\i18n\\default.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\DynamicDusk\\i18n\\default.json",
-              "ToolTip": "C:\\GOG Games\\Stardew Valley\\Mods\\DynamicDusk\\i18n\\default.json",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\DynamicDusk\\i18n\\default.json",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAmwBcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-03T02:32:01.487Z",
+              "DocumentIndex": 1,
+              "Title": "Pathoschild.Stardew.ModBuildConfig.targets",
+              "DocumentMoniker": "C:\\Users\\zjmto\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\build\\Pathoschild.Stardew.ModBuildConfig.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\build\\Pathoschild.Stardew.ModBuildConfig.targets",
+              "ToolTip": "C:\\Users\\zjmto\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\build\\Pathoschild.Stardew.ModBuildConfig.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\build\\Pathoschild.Stardew.ModBuildConfig.targets",
+              "ViewState": "AgIAAE4AAAAAAAAAAAApwFYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-01-03T15:58:28.181Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\AppData\\Local\\Temp\\360zip$Temp\\360$0\\manifest.json",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\360zip$Temp\\360$0\\manifest.json",
@@ -77,20 +80,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "ModConfig.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Dynamic Dusk\\ModConfig.cs",
               "RelativeDocumentMoniker": "ModConfig.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Dynamic Dusk\\ModConfig.cs",
               "RelativeToolTip": "ModConfig.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAA6wCQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAqwCAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-03T01:11:40.739Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Dynamic Dusk\\manifest.json",
               "RelativeDocumentMoniker": "manifest.json",
@@ -102,13 +105,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "default.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Dynamic Dusk\\i18n\\default.json",
               "RelativeDocumentMoniker": "i18n\\default.json",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Dynamic Dusk\\i18n\\default.json*",
-              "RelativeToolTip": "i18n\\default.json*",
-              "ViewState": "AgIAABEAAAAAAAAAAAAmwB4AAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Dynamic Dusk\\i18n\\default.json",
+              "RelativeToolTip": "i18n\\default.json",
+              "ViewState": "AgIAABMAAAAAAAAAAAAmwCAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-01-02T19:52:24.081Z",
               "EditorCaption": ""
@@ -121,7 +124,7 @@
               "RelativeDocumentMoniker": "IGenericModConfigMenuApi.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Dynamic Dusk\\IGenericModConfigMenuApi.cs",
               "RelativeToolTip": "IGenericModConfigMenuApi.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAqwAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAA6wBIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-02T19:51:52.935Z",
               "EditorCaption": ""
@@ -134,14 +137,14 @@
               "RelativeDocumentMoniker": "ModEntry.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Dynamic Dusk\\ModEntry.cs*",
               "RelativeToolTip": "ModEntry.cs*",
-              "ViewState": "AgIAAMwAAAAAAAAAAAAqwNkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAABAAAAAAAAAAAqwA0BAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-02T19:51:37.106Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "config.json",
               "DocumentMoniker": "C:\\GOG Games\\Stardew Valley\\Mods\\DynamicDusk\\config.json",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\DynamicDusk\\config.json",
@@ -154,6 +157,18 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "default.json",
+              "DocumentMoniker": "C:\\GOG Games\\Stardew Valley\\Mods\\DynamicDusk\\i18n\\default.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\DynamicDusk\\i18n\\default.json",
+              "ToolTip": "C:\\GOG Games\\Stardew Valley\\Mods\\DynamicDusk\\i18n\\default.json",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\DynamicDusk\\i18n\\default.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAmwB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-03T02:32:01.487Z"
             }
           ]
         },
