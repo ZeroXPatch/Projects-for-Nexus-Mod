@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.1.11312.151 d18.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicDusk", "DynamicDusk.csproj", "{4432858F-85F4-D43D-3401-ACF25133F0B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4432858F-85F4-D43D-3401-ACF25133F0B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4432858F-85F4-D43D-3401-ACF25133F0B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4432858F-85F4-D43D-3401-ACF25133F0B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4432858F-85F4-D43D-3401-ACF25133F0B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A090CC1-5045-4017-BCAD-4DB432524E62}
+	EndGlobalSection
+EndGlobal

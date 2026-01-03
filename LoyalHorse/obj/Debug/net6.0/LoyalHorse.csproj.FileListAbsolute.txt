@@ -1,0 +1,10 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoyalHorse\obj\Debug\net6.0\LoyalHorse.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoyalHorse\obj\Debug\net6.0\LoyalHorse.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoyalHorse\obj\Debug\net6.0\LoyalHorse.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoyalHorse\obj\Debug\net6.0\LoyalHorse.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoyalHorse\obj\Debug\net6.0\LoyalHorse.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoyalHorse\obj\Debug\net6.0\LoyalHorse.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoyalHorse\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoyalHorse\bin\Debug\net6.0\LoyalHorse.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoyalHorse\bin\Debug\net6.0\LoyalHorse.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoyalHorse\obj\Debug\net6.0\LoyalHorse.dll

@@ -1,0 +1,31 @@
+{
+  "config.section.random": "Cài đặt ngẫu nhiên",
+  "config.section.manual": "Cài đặt thủ công (cố định)",
+
+  "config.random_mode.name": "Bật chế độ ngẫu nhiên",
+  "config.random_mode.desc": "Nếu bật, giờ hoàng hôn sẽ thay đổi linh hoạt.",
+
+  "config.frequency.name": "Tần suất",
+  "config.frequency.desc": "Tần suất giờ hoàng hôn thay đổi.",
+  "config.frequency.daily": "Hàng ngày",
+  "config.frequency.weekly": "Hàng tuần",
+  "config.frequency.seasonal": "Theo mùa",
+
+  "config.min_time.name": "Hoàng hôn sớm nhất",
+  "config.min_time.desc": "Thời gian sớm nhất mặt trời có thể bắt đầu lặn (Định dạng: 1600 = 4 giờ chiều).",
+
+  "config.max_time.name": "Hoàng hôn muộn nhất",
+  "config.max_time.desc": "Thời gian muộn nhất mặt trời có thể bắt đầu lặn (Định dạng: 2000 = 8 giờ tối).",
+
+  "config.manual_spring.name": "Giờ mùa xuân",
+  "config.manual_spring.desc": "Giờ hoàng hôn cố định cho mùa xuân (Chỉ dùng khi chế độ ngẫu nhiên TẮT).",
+
+  "config.manual_summer.name": "Giờ mùa hè",
+  "config.manual_summer.desc": "Giờ hoàng hôn cố định cho mùa hè (Chỉ dùng khi chế độ ngẫu nhiên TẮT).",
+
+  "config.manual_fall.name": "Giờ mùa thu",
+  "config.manual_fall.desc": "Giờ hoàng hôn cố định cho mùa thu (Chỉ dùng khi chế độ ngẫu nhiên TẮT).",
+
+  "config.manual_winter.name": "Giờ mùa đông",
+  "config.manual_winter.desc": "Giờ hoàng hôn cố định cho mùa đông (Chỉ dùng khi chế độ ngẫu nhiên TẮT)."
+}

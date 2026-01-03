@@ -1,0 +1,31 @@
+{
+  "config.section.random": "Настройки случайного режима",
+  "config.section.manual": "Ручные настройки (фиксированные)",
+
+  "config.random_mode.name": "Включить случайный режим",
+  "config.random_mode.desc": "Если включено, время заката будет меняться динамически.",
+
+  "config.frequency.name": "Частота",
+  "config.frequency.desc": "Как часто меняется время заката.",
+  "config.frequency.daily": "Ежедневно",
+  "config.frequency.weekly": "Еженедельно",
+  "config.frequency.seasonal": "По сезонам",
+
+  "config.min_time.name": "Самый ранний закат",
+  "config.min_time.desc": "Самое раннее время начала заката (формат: 1600 = 16:00).",
+
+  "config.max_time.name": "Самый поздний закат",
+  "config.max_time.desc": "Самое позднее время начала заката (формат: 2000 = 20:00).",
+
+  "config.manual_spring.name": "Время весной",
+  "config.manual_spring.desc": "Фиксированное время заката весной (используется только если случайный режим выключен).",
+
+  "config.manual_summer.name": "Время летом",
+  "config.manual_summer.desc": "Фиксированное время заката летом (используется только если случайный режим выключен).",
+
+  "config.manual_fall.name": "Время осенью",
+  "config.manual_fall.desc": "Фиксированное время заката осенью (используется только если случайный режим выключен).",
+
+  "config.manual_winter.name": "Время зимой",
+  "config.manual_winter.desc": "Фиксированное время заката зимой (используется только если случайный режим выключен)."
+}

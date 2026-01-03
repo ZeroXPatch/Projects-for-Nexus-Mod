@@ -1,0 +1,31 @@
+{
+  "config.section.random": "Paramètres aléatoires",
+  "config.section.manual": "Paramètres manuels (fixes)",
+
+  "config.random_mode.name": "Activer le mode aléatoire",
+  "config.random_mode.desc": "Si activé, l'heure du coucher de soleil changera dynamiquement.",
+
+  "config.frequency.name": "Fréquence",
+  "config.frequency.desc": "À quelle fréquence l'heure du coucher de soleil change.",
+  "config.frequency.daily": "Quotidien",
+  "config.frequency.weekly": "Hebdomadaire",
+  "config.frequency.seasonal": "Saisonnier",
+
+  "config.min_time.name": "Crépuscule le plus tôt",
+  "config.min_time.desc": "L'heure la plus précoce à laquelle le soleil peut commencer à se coucher (Format : 1600 = 16h00).",
+
+  "config.max_time.name": "Crépuscule le plus tard",
+  "config.max_time.desc": "L'heure la plus tardive à laquelle le soleil peut commencer à se coucher (Format : 2000 = 20h00).",
+
+  "config.manual_spring.name": "Heure de printemps",
+  "config.manual_spring.desc": "Heure fixe du coucher du soleil pour le printemps (Utilisé uniquement si le mode aléatoire est désactivé).",
+
+  "config.manual_summer.name": "Heure d'été",
+  "config.manual_summer.desc": "Heure fixe du coucher du soleil pour l'été (Utilisé uniquement si le mode aléatoire est désactivé).",
+
+  "config.manual_fall.name": "Heure d'automne",
+  "config.manual_fall.desc": "Heure fixe du coucher du soleil pour l'automne (Utilisé uniquement si le mode aléatoire est désactivé).",
+
+  "config.manual_winter.name": "Heure d'hiver",
+  "config.manual_winter.desc": "Heure fixe du coucher du soleil pour l'hiver (Utilisé uniquement si le mode aléatoire est désactivé)."
+}

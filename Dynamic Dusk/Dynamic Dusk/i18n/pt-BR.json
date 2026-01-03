@@ -1,0 +1,31 @@
+{
+  "config.section.random": "Configurações aleatórias",
+  "config.section.manual": "Configurações manuais (fixas)",
+
+  "config.random_mode.name": "Ativar modo aleatório",
+  "config.random_mode.desc": "Se ativado, o horário do pôr do sol mudará dinamicamente.",
+
+  "config.frequency.name": "Frequência",
+  "config.frequency.desc": "Com que frequência o horário do pôr do sol muda.",
+  "config.frequency.daily": "Diariamente",
+  "config.frequency.weekly": "Semanalmente",
+  "config.frequency.seasonal": "Sazonal",
+
+  "config.min_time.name": "Pôr do sol mais cedo",
+  "config.min_time.desc": "O horário mais cedo em que o sol pode começar a se pôr (Formato: 1600 = 16h).",
+
+  "config.max_time.name": "Pôr do sol mais tarde",
+  "config.max_time.desc": "O horário mais tarde em que o sol pode começar a se pôr (Formato: 2000 = 20h).",
+
+  "config.manual_spring.name": "Horário da primavera",
+  "config.manual_spring.desc": "Horário fixo do pôr do sol na primavera (usado apenas se o modo aleatório estiver desativado).",
+
+  "config.manual_summer.name": "Horário do verão",
+  "config.manual_summer.desc": "Horário fixo do pôr do sol no verão (usado apenas se o modo aleatório estiver desativado).",
+
+  "config.manual_fall.name": "Horário do outono",
+  "config.manual_fall.desc": "Horário fixo do pôr do sol no outono (usado apenas se o modo aleatório estiver desativado).",
+
+  "config.manual_winter.name": "Horário do inverno",
+  "config.manual_winter.desc": "Horário fixo do pôr do sol no inverno (usado apenas se o modo aleatório estiver desativado)."
+}

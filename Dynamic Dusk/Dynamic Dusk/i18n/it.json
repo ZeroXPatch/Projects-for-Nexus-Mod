@@ -1,0 +1,31 @@
+{
+  "config.section.random": "Impostazioni casuali",
+  "config.section.manual": "Impostazioni manuali (fisse)",
+
+  "config.random_mode.name": "Abilita modalità casuale",
+  "config.random_mode.desc": "Se abilitata, l'ora del tramonto cambierà dinamicamente.",
+
+  "config.frequency.name": "Frequenza",
+  "config.frequency.desc": "Quanto spesso cambia l'orario del tramonto.",
+  "config.frequency.daily": "Giornaliera",
+  "config.frequency.weekly": "Settimanale",
+  "config.frequency.seasonal": "Stagionale",
+
+  "config.min_time.name": "Tramonto più precoce",
+  "config.min_time.desc": "L'ora più precoce in cui il sole può iniziare a tramontare (Formato: 1600 = 16:00).",
+
+  "config.max_time.name": "Tramonto più tardivo",
+  "config.max_time.desc": "L'ora più tarda in cui il sole può iniziare a tramontare (Formato: 2000 = 20:00).",
+
+  "config.manual_spring.name": "Orario primaverile",
+  "config.manual_spring.desc": "Orario fisso del tramonto per la primavera (Usato solo se la modalità casuale è DISATTIVATA).",
+
+  "config.manual_summer.name": "Orario estivo",
+  "config.manual_summer.desc": "Orario fisso del tramonto per l'estate (Usato solo se la modalità casuale è DISATTIVATA).",
+
+  "config.manual_fall.name": "Orario autunnale",
+  "config.manual_fall.desc": "Orario fisso del tramonto per l'autunno (Usato solo se la modalità casuale è DISATTIVATA).",
+
+  "config.manual_winter.name": "Orario invernale",
+  "config.manual_winter.desc": "Orario fisso del tramonto per l'inverno (Usato solo se la modalità casuale è DISATTIVATA)."
+}

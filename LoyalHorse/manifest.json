@@ -1,0 +1,10 @@
+{
+  "Name": "Loyal Horse Follower",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Makes your horse follow you, toggled with a shortcut key.",
+  "UniqueID": "ZeroXPatch.LoyalHorse",
+  "EntryDll": "LoyalHorse.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}
