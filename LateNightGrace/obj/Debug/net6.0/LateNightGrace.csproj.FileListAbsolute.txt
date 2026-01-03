@@ -1,0 +1,10 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LateNightGrace\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LateNightGrace\bin\Debug\net6.0\LateNightGrace.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LateNightGrace\bin\Debug\net6.0\LateNightGrace.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LateNightGrace\obj\Debug\net6.0\LateNightGrace.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LateNightGrace\obj\Debug\net6.0\LateNightGrace.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LateNightGrace\obj\Debug\net6.0\LateNightGrace.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LateNightGrace\obj\Debug\net6.0\LateNightGrace.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LateNightGrace\obj\Debug\net6.0\LateNightGrace.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LateNightGrace\obj\Debug\net6.0\LateNightGrace.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LateNightGrace\obj\Debug\net6.0\LateNightGrace.dll

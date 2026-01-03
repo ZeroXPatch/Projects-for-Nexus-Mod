@@ -1,0 +1,10 @@
+{
+  "Name": "Late Night Grace",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Grants a 20-minute grace period at 2AM if you are on your farm or in your home.",
+  "UniqueID": "ZeroXPatch.LateNightGrace",
+  "EntryDll": "LateNightGrace.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}
