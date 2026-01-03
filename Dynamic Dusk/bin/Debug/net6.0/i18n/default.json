@@ -1,0 +1,31 @@
+{
+  "config.section.general": "General Settings",
+  "config.section.ranges": "Random Ranges (Active if Random Mode is ON)",
+  "config.section.manual": "Manual Fixed Times (Active if Random Mode is OFF)",
+
+  "config.random_mode.name": "Enable Random Mode",
+  "config.random_mode.desc": "If enabled, the sunset time will change dynamically.",
+
+  "config.frequency.name": "Frequency",
+  "config.frequency.desc": "How often the sunset time changes.",
+  "config.frequency.daily": "Daily",
+  "config.frequency.weekly": "Weekly",
+  "config.frequency.seasonal": "Seasonal",
+
+  "config.spring_min.name": "Spring: Earliest",
+  "config.spring_max.name": "Spring: Latest",
+  "config.summer_min.name": "Summer: Earliest",
+  "config.summer_max.name": "Summer: Latest",
+  "config.fall_min.name": "Fall: Earliest",
+  "config.fall_max.name": "Fall: Latest",
+  "config.winter_min.name": "Winter: Earliest",
+  "config.winter_max.name": "Winter: Latest",
+
+  "config.range.desc": "The sunset will happen randomly between these two times.",
+
+  "config.manual_spring.name": "Spring Fixed Time",
+  "config.manual_summer.name": "Summer Fixed Time",
+  "config.manual_fall.name": "Fall Fixed Time",
+  "config.manual_winter.name": "Winter Fixed Time",
+  "config.manual.desc": "The exact time sunset will start."
+}
