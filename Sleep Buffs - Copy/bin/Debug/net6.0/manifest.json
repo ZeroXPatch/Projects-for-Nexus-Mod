@@ -1,0 +1,10 @@
+{
+  "Name": "Auto Swap Back",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Automatically swaps back to your previous tool after using seeds, food, or bombs based on configuration.",
+  "UniqueID": "ZeroXPatch.AutoSwapBack",
+  "EntryDll": "AutoSwapBack.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}
