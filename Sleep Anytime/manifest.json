@@ -1,0 +1,16 @@
+{
+  "Name": "Sleep Anywhere",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Allows you to sleep anywhere via a button or hotkey.",
+  "UniqueID": "ZeroXPatch.SleepAnywhere",
+  "EntryDll": "SleepAnywhereMod.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [],
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ]
+}

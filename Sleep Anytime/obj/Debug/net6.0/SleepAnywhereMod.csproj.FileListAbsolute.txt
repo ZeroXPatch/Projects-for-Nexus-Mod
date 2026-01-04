@@ -1,0 +1,10 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Anytime\obj\Debug\net6.0\SleepAnywhereMod.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Anytime\obj\Debug\net6.0\SleepAnywhereMod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Anytime\obj\Debug\net6.0\SleepAnywhereMod.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Anytime\obj\Debug\net6.0\SleepAnywhereMod.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Anytime\obj\Debug\net6.0\SleepAnywhereMod.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Anytime\obj\Debug\net6.0\SleepAnywhereMod.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Anytime\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Anytime\bin\Debug\net6.0\SleepAnywhereMod.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Anytime\bin\Debug\net6.0\SleepAnywhereMod.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sleep Anytime\obj\Debug\net6.0\SleepAnywhereMod.dll

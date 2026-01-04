@@ -1,0 +1,18 @@
+{
+  "config.enable-auto-deposit.name": "Enable Auto-Deposit",
+  "config.enable-auto-deposit.tooltip": "If true, items are automatically sucked from your inventory when you get close.",
+
+  "config.auto-deposit-range.name": "Auto-Deposit Range",
+  "config.auto-deposit-range.tooltip": "How many tiles away you can be for auto-deposit to work.",
+
+  "config.cooldown.name": "Cooldown (Seconds)",
+  "config.cooldown.tooltip": "Time to wait after closing the menu before Auto-Deposit starts again.",
+
+  "config.allow-resource.name": "Allow 'Resource' Items",
+  "config.allow-resource.tooltip": "If true, allows storing Stone, Clay, Coal, etc. (Category: Resource).",
+
+  "config.allow-trash.name": "Allow 'Trash' Items",
+  "config.allow-trash.tooltip": "If true, allows storing Broken CDs, Driftwood, Soggy Newspaper, etc. (Category: Trash).",
+
+  "hud.items-stored": "+{{count}} Items Stored"
+}

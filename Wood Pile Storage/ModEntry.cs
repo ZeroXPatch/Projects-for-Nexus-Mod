@@ -14,16 +14,78 @@ namespace WoodPileStorage
         private Chest? virtualChest;
         private const string SaveKey = "wood-pile-inventory";
 
-        // Logic to track menu state and cooldowns
+        // Configuration
+        private ModConfig config = new();
+
+        // Logic state
         private bool wasMenuOpen = false;
-        private double cooldownTime = 0; // When the cooldown expires (in TotalGameTime seconds)
+        private double cooldownTime = 0;
 
         public override void Entry(IModHelper helper)
         {
+            this.config = helper.ReadConfig<ModConfig>();
+
+            helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.Input.ButtonPressed += OnButtonPressed;
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             helper.Events.GameLoop.Saving += OnSaving;
             helper.Events.GameLoop.UpdateTicked += OnUpdateTicked;
+        }
+
+        private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
+        {
+            var configMenu = this.Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
+            if (configMenu == null) return;
+
+            configMenu.Register(
+                mod: this.ModManifest,
+                reset: () => this.config = new ModConfig(),
+                save: () => this.Helper.WriteConfig(this.config)
+            );
+
+            // --- Existing Options ---
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                name: () => this.Helper.Translation.Get("config.enable-auto-deposit.name"),
+                tooltip: () => this.Helper.Translation.Get("config.enable-auto-deposit.tooltip"),
+                getValue: () => this.config.EnableAutoDeposit,
+                setValue: value => this.config.EnableAutoDeposit = value
+            );
+
+            configMenu.AddNumberOption(
+                mod: this.ModManifest,
+                name: () => this.Helper.Translation.Get("config.auto-deposit-range.name"),
+                tooltip: () => this.Helper.Translation.Get("config.auto-deposit-range.tooltip"),
+                getValue: () => this.config.AutoDepositRange,
+                setValue: value => this.config.AutoDepositRange = value,
+                min: 1, max: 10
+            );
+
+            configMenu.AddNumberOption(
+                mod: this.ModManifest,
+                name: () => this.Helper.Translation.Get("config.cooldown.name"),
+                tooltip: () => this.Helper.Translation.Get("config.cooldown.tooltip"),
+                getValue: () => this.config.AutoDepositCooldown,
+                setValue: value => this.config.AutoDepositCooldown = value,
+                min: 0, max: 60
+            );
+
+            // --- New Options ---
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                name: () => this.Helper.Translation.Get("config.allow-resource.name"),
+                tooltip: () => this.Helper.Translation.Get("config.allow-resource.tooltip"),
+                getValue: () => this.config.EnableResourceStorage,
+                setValue: value => this.config.EnableResourceStorage = value
+            );
+
+            configMenu.AddBoolOption(
+                mod: this.ModManifest,
+                name: () => this.Helper.Translation.Get("config.allow-trash.name"),
+                tooltip: () => this.Helper.Translation.Get("config.allow-trash.tooltip"),
+                getValue: () => this.config.EnableTrashStorage,
+                setValue: value => this.config.EnableTrashStorage = value
+            );
         }
 
         private void OnSaveLoaded(object? sender, SaveLoadedEventArgs e)
@@ -57,58 +119,46 @@ namespace WoodPileStorage
             if (!Context.IsWorldReady || !Context.IsPlayerFree) return;
             if (Game1.currentLocation is not Farm) return;
 
-            // 1. Check if our specific menu is currently open
+            // --- Menu Logic ---
             bool isMenuOpen = Game1.activeClickableMenu is ItemGrabMenu menu && menu.sourceItem == virtualChest;
 
-            // 2. Detect Menu Close: If it WAS open, but now is NOT, start the timer
             if (wasMenuOpen && !isMenuOpen)
             {
-                // Set cooldown for 15 seconds (Approx 20 in-game minutes)
-                cooldownTime = Game1.currentGameTime.TotalGameTime.TotalSeconds + 15;
+                cooldownTime = Game1.currentGameTime.TotalGameTime.TotalSeconds + config.AutoDepositCooldown;
             }
-
-            // Update state for next tick
             wasMenuOpen = isMenuOpen;
 
-            // 3. Stop here if menu is open OR we are in cooldown period
-            if (isMenuOpen || Game1.currentGameTime.TotalGameTime.TotalSeconds < cooldownTime)
-            {
-                return;
-            }
+            // --- Auto Deposit Logic ---
+            if (!config.EnableAutoDeposit) return;
+            if (isMenuOpen || Game1.currentGameTime.TotalGameTime.TotalSeconds < cooldownTime) return;
 
-            Vector2 playerTile = Game1.player.Tile;
-
-            if (IsNearWoodPile(playerTile))
+            if (IsNearWoodPile(Game1.player.Tile))
             {
-                // Visual Cursor effect
                 if (IsWoodPile(this.Helper.Input.GetCursorPosition().Tile))
                 {
                     Game1.mouseCursor = Game1.cursor_grab;
                 }
 
-                // Auto-Suck Logic (Run every 15 ticks)
                 if (e.IsMultipleOf(15))
                 {
-                    AutoStoreWood();
+                    AutoStoreItems();
                 }
             }
         }
 
-        private void AutoStoreWood()
+        private void AutoStoreItems()
         {
             if (virtualChest == null) return;
 
             bool movedAnything = false;
-            int totalWoodMoved = 0;
+            int totalCountMoved = 0;
 
-            // Loop backwards to safely remove items from player
             for (int i = Game1.player.Items.Count - 1; i >= 0; i--)
             {
                 Item item = Game1.player.Items[i];
                 if (item == null) continue;
 
-                // Check for Wood (388) or Hardwood (709)
-                if (item.ItemId == "388" || item.ItemId == "709")
+                if (IsAllowedItem(item))
                 {
                     Item leftover = virtualChest.addItem(item);
 
@@ -118,7 +168,7 @@ namespace WoodPileStorage
                     if (amountMoved > 0)
                     {
                         movedAnything = true;
-                        totalWoodMoved += amountMoved;
+                        totalCountMoved += amountMoved;
 
                         if (leftover == null)
                             Game1.player.Items[i] = null;
@@ -130,9 +180,11 @@ namespace WoodPileStorage
 
             if (movedAnything)
             {
-                // CHANGED: Use "coin" sound to avoid "pickupItem" crash
                 Game1.playSound("coin");
-                Game1.addHUDMessage(new HUDMessage($"+{totalWoodMoved} Wood Stored", 1));
+
+                // TRANSLATION FIX: Using tokens {{count}} for dynamic numbers
+                string msg = this.Helper.Translation.Get("hud.items-stored", new { count = totalCountMoved });
+                Game1.addHUDMessage(new HUDMessage(msg, 1));
             }
         }
 
@@ -144,17 +196,21 @@ namespace WoodPileStorage
 
             Vector2 clickedTile = e.Cursor.GrabTile;
 
-            if (IsWoodPile(clickedTile) && IsNearWoodPile(Game1.player.Tile))
+            if (IsWoodPile(clickedTile))
             {
-                this.Helper.Input.Suppress(e.Button);
-                OpenWoodPileMenu();
+                if (Utility.distance(Game1.player.Tile.X, clickedTile.X, Game1.player.Tile.Y, clickedTile.Y) <= 2f)
+                {
+                    this.Helper.Input.Suppress(e.Button);
+                    OpenWoodPileMenu();
+                }
             }
         }
 
         private bool IsNearWoodPile(Vector2 playerTile)
         {
             Point entry = Game1.getFarm().GetMainFarmHouseEntry();
-            return Utility.distance(playerTile.X, entry.X - 4, playerTile.Y, entry.Y) <= 3f;
+            float range = (float)config.AutoDepositRange;
+            return Utility.distance(playerTile.X, entry.X - 4, playerTile.Y, entry.Y) <= range;
         }
 
         private bool IsWoodPile(Vector2 tile)
@@ -165,45 +221,57 @@ namespace WoodPileStorage
             return validX && validY;
         }
 
+        private bool IsAllowedItem(Item item)
+        {
+            if (item == null) return false;
+
+            if (item.ItemId == "388" || item.ItemId == "709") return true;
+            if (config.EnableResourceStorage && item.Category == -16) return true;
+            if (config.EnableTrashStorage && item.Category == -20) return true;
+
+            return false;
+        }
+
         private void OpenWoodPileMenu()
         {
             if (virtualChest == null) virtualChest = new Chest(playerChest: true);
             Game1.playSound("woodWhack");
 
             var menu = new ItemGrabMenu(
-                virtualChest.Items,     // Inventory
-                false,                  // reverseGrab
-                true,                   // showReceivingMenu
-                InventoryHighlight,     // highlightFunction
-                null,                   // behaviorOnItemSelect
-                null,                   // message
-                null,                   // behaviorOnItemGrab
-                false,                  // snapToBottom
-                true,                   // canBeExitedWithKey
-                true,                   // playRightClickSound
-                true,                   // allowRightClick
-                true,                   // showOrganizeButton
-                1,                      // source
-                virtualChest,           // sourceItem
-                -1,                     // whichSpecialButton
-                this                    // context
+                virtualChest.Items,
+                false,
+                true,
+                InventoryHighlight,
+                virtualChest.grabItemFromInventory,
+                null,
+                null,
+                false,
+                true,
+                true,
+                true,
+                true,
+                1,
+                virtualChest,
+                -1,
+                this
             );
 
             Game1.activeClickableMenu = menu;
-
-            // Mark menu as open so our timer logic knows
             wasMenuOpen = true;
         }
 
         private bool InventoryHighlight(Item item)
         {
-            // If the item is inside the VIRTUAL CHEST (Top), allow clicking (return true)
             if (virtualChest != null && virtualChest.Items.Contains(item))
             {
                 return true;
             }
 
-            // If the item is in PLAYER inventory (Bottom), disable clicking (return false)
+            if (IsAllowedItem(item))
+            {
+                return true;
+            }
+
             return false;
         }
     }
