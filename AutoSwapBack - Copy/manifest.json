@@ -1,0 +1,10 @@
+{
+  "Name": "Farm Safety Net",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Asks for confirmation before placing bombs on the Farm or inside the Farmhouse.",
+  "UniqueID": "ZeroXPatch.FarmSafetyNet",
+  "EntryDll": "FarmSafetyNet.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

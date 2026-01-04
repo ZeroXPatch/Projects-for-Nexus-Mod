@@ -1,0 +1,10 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoSwapBack - Copy\obj\Debug\net6.0\FarmSafetyNet.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoSwapBack - Copy\obj\Debug\net6.0\FarmSafetyNet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoSwapBack - Copy\obj\Debug\net6.0\FarmSafetyNet.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoSwapBack - Copy\obj\Debug\net6.0\FarmSafetyNet.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoSwapBack - Copy\obj\Debug\net6.0\FarmSafetyNet.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoSwapBack - Copy\obj\Debug\net6.0\FarmSafetyNet.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoSwapBack - Copy\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoSwapBack - Copy\bin\Debug\net6.0\FarmSafetyNet.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoSwapBack - Copy\bin\Debug\net6.0\FarmSafetyNet.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AutoSwapBack - Copy\obj\Debug\net6.0\FarmSafetyNet.dll
