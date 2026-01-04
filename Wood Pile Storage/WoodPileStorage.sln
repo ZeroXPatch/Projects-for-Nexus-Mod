@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.1.11312.151 d18.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoodPileStorage", "WoodPileStorage.csproj", "{01A09C14-9B5A-EC8A-D1DB-E328C86C7CFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01A09C14-9B5A-EC8A-D1DB-E328C86C7CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A09C14-9B5A-EC8A-D1DB-E328C86C7CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01A09C14-9B5A-EC8A-D1DB-E328C86C7CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01A09C14-9B5A-EC8A-D1DB-E328C86C7CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E230179-6584-49B6-AE71-515B211E6823}
+	EndGlobalSection
+EndGlobal

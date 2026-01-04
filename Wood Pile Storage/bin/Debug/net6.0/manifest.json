@@ -1,0 +1,10 @@
+{
+  "Name": "Wood Pile Storage",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Makes the farmhouse wood pile clickable for storage.",
+  "UniqueID": "ZeroXPatch.WoodPileStorage",
+  "EntryDll": "WoodPileStorage.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}
