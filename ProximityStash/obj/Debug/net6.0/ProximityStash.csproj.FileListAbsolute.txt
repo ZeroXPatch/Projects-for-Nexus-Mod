@@ -1,0 +1,10 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ProximityStash\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ProximityStash\bin\Debug\net6.0\ProximityStash.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ProximityStash\bin\Debug\net6.0\ProximityStash.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ProximityStash\obj\Debug\net6.0\ProximityStash.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ProximityStash\obj\Debug\net6.0\ProximityStash.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ProximityStash\obj\Debug\net6.0\ProximityStash.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ProximityStash\obj\Debug\net6.0\ProximityStash.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ProximityStash\obj\Debug\net6.0\ProximityStash.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ProximityStash\obj\Debug\net6.0\ProximityStash.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ProximityStash\obj\Debug\net6.0\ProximityStash.dll

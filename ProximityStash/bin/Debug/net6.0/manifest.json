@@ -1,0 +1,10 @@
+{
+  "Name": "Proximity Stash",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Automatically deposits items into nearby chests if the chest already contains that item.",
+  "UniqueID": "ZeroXPatch.ProximityStash",
+  "EntryDll": "ProximityStash.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

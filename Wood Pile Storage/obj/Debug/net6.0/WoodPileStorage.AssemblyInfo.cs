@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WoodPileStorage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfaa76996048fc9bcc62b36b8aba9028b86fd307")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+581ed0e495a406841e8427410e0cc4996f13bc6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("WoodPileStorage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WoodPileStorage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

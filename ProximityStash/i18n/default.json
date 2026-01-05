@@ -1,0 +1,18 @@
+{
+  "config.enabled.name": "Enable Mod",
+  "config.enabled.tooltip": "Turn the mod on or off.",
+
+  "config.hud-messages.name": "Show HUD Messages",
+  "config.hud-messages.tooltip": "Show a message (e.g. '+5 Wood') when items are moved.",
+
+  "config.range.name": "Trigger Range",
+  "config.range.tooltip": "How close you must be to a chest (in tiles) for it to pull items.",
+
+  "config.sound-cooldown.name": "Sound Cooldown",
+  "config.sound-cooldown.tooltip": "How many ticks to wait between sound effects (60 ticks = 1 second).",
+
+  "config.menu-cooldown.name": "Menu Exit Cooldown",
+  "config.menu-cooldown.tooltip": "Seconds to disable auto-deposit after closing a chest (prevents items from being sucked back in immediately).",
+
+  "hud.items-moved": "+{{count}} {{itemName}}"
+}

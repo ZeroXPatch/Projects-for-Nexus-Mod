@@ -1,0 +1,10 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Golden Transitions\obj\Debug\net6.0\GoldenTransitions.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Golden Transitions\obj\Debug\net6.0\GoldenTransitions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Golden Transitions\obj\Debug\net6.0\GoldenTransitions.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Golden Transitions\obj\Debug\net6.0\GoldenTransitions.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Golden Transitions\obj\Debug\net6.0\GoldenTransitions.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Golden Transitions\obj\Debug\net6.0\GoldenTransitions.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Golden Transitions\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Golden Transitions\bin\Debug\net6.0\GoldenTransitions.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Golden Transitions\bin\Debug\net6.0\GoldenTransitions.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Golden Transitions\obj\Debug\net6.0\GoldenTransitions.dll

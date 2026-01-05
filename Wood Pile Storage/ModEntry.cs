@@ -9,6 +9,15 @@ using StardewValley.Objects;
 
 namespace WoodPileStorage
 {
+    // 1. Define a simple model to save data safely.
+    // This ignores complex properties (like boundingBox) that cause the crash.
+    public class SavedItem
+    {
+        public string ItemId { get; set; }
+        public int Stack { get; set; }
+        public int Quality { get; set; }
+    }
+
     public class ModEntry : Mod
     {
         private Chest? virtualChest;
@@ -91,13 +100,20 @@ namespace WoodPileStorage
         private void OnSaveLoaded(object? sender, SaveLoadedEventArgs e)
         {
             virtualChest = new Chest(playerChest: true);
-            var savedItems = this.Helper.Data.ReadSaveData<List<Item>>(SaveKey);
+
+            // 2. Read the simple 'SavedItem' list instead of the complex Item list
+            var savedItems = this.Helper.Data.ReadSaveData<List<SavedItem>>(SaveKey);
 
             if (savedItems != null)
             {
-                foreach (var item in savedItems)
+                foreach (var saved in savedItems)
                 {
-                    virtualChest.Items.Add(item);
+                    // 3. Reconstruct the actual Item object using ItemRegistry
+                    Item item = ItemRegistry.Create(saved.ItemId, saved.Stack, saved.Quality);
+                    if (item != null)
+                    {
+                        virtualChest.Items.Add(item);
+                    }
                 }
             }
         }
@@ -106,12 +122,30 @@ namespace WoodPileStorage
         {
             if (virtualChest == null) return;
 
+            // Clean up empty slots
             for (int i = virtualChest.Items.Count - 1; i >= 0; i--)
             {
                 if (virtualChest.Items[i] == null)
                     virtualChest.Items.RemoveAt(i);
             }
-            this.Helper.Data.WriteSaveData(SaveKey, virtualChest.Items);
+
+            // 4. Convert the game items into our safe 'SavedItem' model
+            var dataToSave = new List<SavedItem>();
+            foreach (var item in virtualChest.Items)
+            {
+                if (item != null)
+                {
+                    dataToSave.Add(new SavedItem
+                    {
+                        ItemId = item.ItemId,
+                        Stack = item.Stack,
+                        Quality = item.Quality
+                    });
+                }
+            }
+
+            // 5. Write the safe list (prevents JSON loop crash)
+            this.Helper.Data.WriteSaveData(SaveKey, dataToSave);
         }
 
         private void OnUpdateTicked(object? sender, UpdateTickedEventArgs e)
@@ -181,8 +215,6 @@ namespace WoodPileStorage
             if (movedAnything)
             {
                 Game1.playSound("coin");
-
-                // TRANSLATION FIX: Using tokens {{count}} for dynamic numbers
                 string msg = this.Helper.Translation.Get("hud.items-stored", new { count = totalCountMoved });
                 Game1.addHUDMessage(new HUDMessage(msg, 1));
             }
