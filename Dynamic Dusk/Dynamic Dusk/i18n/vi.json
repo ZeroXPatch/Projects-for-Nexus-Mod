@@ -1,0 +1,34 @@
+{
+  "config.section.general": "Cài đặt chung",
+  "config.section.ranges": "Khoảng ngẫu nhiên (kích hoạt nếu Bật chế độ ngẫu nhiên)",
+  "config.section.manual": "Lịch thủ công hằng tuần (kích hoạt nếu Tắt chế độ ngẫu nhiên)",
+  "config.subtitle.spring": "--- Lịch mùa xuân ---",
+  "config.subtitle.summer": "--- Lịch mùa hè ---",
+  "config.subtitle.fall": "--- Lịch mùa thu ---",
+  "config.subtitle.winter": "--- Lịch mùa đông ---",
+
+  "config.random_mode.name": "Bật chế độ ngẫu nhiên",
+  "config.random_mode.desc": "Nếu bật, thời gian hoàng hôn sẽ thay đổi linh hoạt theo các khoảng bên dưới.",
+
+  "config.frequency.name": "Tần suất",
+  "config.frequency.desc": "Tần suất thay đổi thời gian hoàng hôn trong chế độ ngẫu nhiên.",
+  "config.frequency.daily": "Hằng ngày",
+  "config.frequency.weekly": "Hằng tuần",
+  "config.frequency.seasonal": "Theo mùa",
+
+  "config.spring_min.name": "Khoảng mùa xuân: sớm nhất",
+  "config.spring_max.name": "Khoảng mùa xuân: muộn nhất",
+  "config.summer_min.name": "Khoảng mùa hè: sớm nhất",
+  "config.summer_max.name": "Khoảng mùa hè: muộn nhất",
+  "config.fall_min.name": "Khoảng mùa thu: sớm nhất",
+  "config.fall_max.name": "Khoảng mùa thu: muộn nhất",
+  "config.winter_min.name": "Khoảng mùa đông: sớm nhất",
+  "config.winter_max.name": "Khoảng mùa đông: muộn nhất",
+  "config.range.desc": "Chế độ ngẫu nhiên dùng khoảng này.",
+
+  "config.week1": "Tuần 1 (Ngày 1-7)",
+  "config.week2": "Tuần 2 (Ngày 8-14)",
+  "config.week3": "Tuần 3 (Ngày 15-21)",
+  "config.week4": "Tuần 4 (Ngày 22-28)",
+  "config.manual.desc": "Thời gian hoàng hôn cố định cho tuần cụ thể này."
+}

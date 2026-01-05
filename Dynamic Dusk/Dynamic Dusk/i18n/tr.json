@@ -1,0 +1,34 @@
+{
+  "config.section.general": "Genel Ayarlar",
+  "config.section.ranges": "Rastgele Aralıklar (Rastgele Mod AÇIK ise etkin)",
+  "config.section.manual": "Manuel Haftalık Program (Rastgele Mod KAPALI ise etkin)",
+  "config.subtitle.spring": "--- İlkbahar Programı ---",
+  "config.subtitle.summer": "--- Yaz Programı ---",
+  "config.subtitle.fall": "--- Sonbahar Programı ---",
+  "config.subtitle.winter": "--- Kış Programı ---",
+
+  "config.random_mode.name": "Rastgele Modu Etkinleştir",
+  "config.random_mode.desc": "Etkinse, gün batımı saati aşağıdaki aralıklar kullanılarak dinamik olarak değişir.",
+
+  "config.frequency.name": "Sıklık",
+  "config.frequency.desc": "Rastgele modda gün batımı saatinin ne sıklıkta değiştiği.",
+  "config.frequency.daily": "Günlük",
+  "config.frequency.weekly": "Haftalık",
+  "config.frequency.seasonal": "Mevsimlik",
+
+  "config.spring_min.name": "İlkbahar Aralığı: En erken",
+  "config.spring_max.name": "İlkbahar Aralığı: En geç",
+  "config.summer_min.name": "Yaz Aralığı: En erken",
+  "config.summer_max.name": "Yaz Aralığı: En geç",
+  "config.fall_min.name": "Sonbahar Aralığı: En erken",
+  "config.fall_max.name": "Sonbahar Aralığı: En geç",
+  "config.winter_min.name": "Kış Aralığı: En erken",
+  "config.winter_max.name": "Kış Aralığı: En geç",
+  "config.range.desc": "Rastgele mod bu aralığı kullanır.",
+
+  "config.week1": "1. Hafta (1-7. günler)",
+  "config.week2": "2. Hafta (8-14. günler)",
+  "config.week3": "3. Hafta (15-21. günler)",
+  "config.week4": "4. Hafta (22-28. günler)",
+  "config.manual.desc": "Bu belirli hafta için sabit gün batımı saati."
+}

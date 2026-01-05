@@ -1,0 +1,34 @@
+{
+  "config.section.general": "常规设置",
+  "config.section.ranges": "随机范围（随机模式开启时生效）",
+  "config.section.manual": "手动每周安排（随机模式关闭时生效）",
+  "config.subtitle.spring": "--- 春季时间表 ---",
+  "config.subtitle.summer": "--- 夏季时间表 ---",
+  "config.subtitle.fall": "--- 秋季时间表 ---",
+  "config.subtitle.winter": "--- 冬季时间表 ---",
+
+  "config.random_mode.name": "启用随机模式",
+  "config.random_mode.desc": "如果启用，日落时间将根据下方的范围动态变化。",
+
+  "config.frequency.name": "频率",
+  "config.frequency.desc": "随机模式下日落时间变化的频率。",
+  "config.frequency.daily": "每日",
+  "config.frequency.weekly": "每周",
+  "config.frequency.seasonal": "每季",
+
+  "config.spring_min.name": "春季范围：最早",
+  "config.spring_max.name": "春季范围：最晚",
+  "config.summer_min.name": "夏季范围：最早",
+  "config.summer_max.name": "夏季范围：最晚",
+  "config.fall_min.name": "秋季范围：最早",
+  "config.fall_max.name": "秋季范围：最晚",
+  "config.winter_min.name": "冬季范围：最早",
+  "config.winter_max.name": "冬季范围：最晚",
+  "config.range.desc": "随机模式使用此范围。",
+
+  "config.week1": "第1周（第1-7天）",
+  "config.week2": "第2周（第8-14天）",
+  "config.week3": "第3周（第15-21天）",
+  "config.week4": "第4周（第22-28天）",
+  "config.manual.desc": "此特定周的固定日落时间。"
+}

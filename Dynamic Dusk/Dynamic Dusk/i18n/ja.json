@@ -1,0 +1,34 @@
+{
+  "config.section.general": "全般設定",
+  "config.section.ranges": "ランダム範囲（ランダムモードがONのとき有効）",
+  "config.section.manual": "手動の週間スケジュール（ランダムモードがOFFのとき有効）",
+  "config.subtitle.spring": "--- 春のスケジュール ---",
+  "config.subtitle.summer": "--- 夏のスケジュール ---",
+  "config.subtitle.fall": "--- 秋のスケジュール ---",
+  "config.subtitle.winter": "--- 冬のスケジュール ---",
+
+  "config.random_mode.name": "ランダムモードを有効にする",
+  "config.random_mode.desc": "有効にすると、以下の範囲を使って日没時刻が動的に変わります。",
+
+  "config.frequency.name": "頻度",
+  "config.frequency.desc": "ランダムモードで日没時刻がどれくらいの頻度で変わるか。",
+  "config.frequency.daily": "毎日",
+  "config.frequency.weekly": "毎週",
+  "config.frequency.seasonal": "季節ごと",
+
+  "config.spring_min.name": "春の範囲：最も早い",
+  "config.spring_max.name": "春の範囲：最も遅い",
+  "config.summer_min.name": "夏の範囲：最も早い",
+  "config.summer_max.name": "夏の範囲：最も遅い",
+  "config.fall_min.name": "秋の範囲：最も早い",
+  "config.fall_max.name": "秋の範囲：最も遅い",
+  "config.winter_min.name": "冬の範囲：最も早い",
+  "config.winter_max.name": "冬の範囲：最も遅い",
+  "config.range.desc": "ランダムモードはこの範囲を使用します。",
+
+  "config.week1": "第1週（1～7日）",
+  "config.week2": "第2週（8～14日）",
+  "config.week3": "第3週（15～21日）",
+  "config.week4": "第4週（22～28日）",
+  "config.manual.desc": "この特定の週の固定された日没時刻。"
+}
