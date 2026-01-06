@@ -1,0 +1,92 @@
+{
+  "hud.soft_cleanup": "スタビライザーのクリーンアップ（軽度）：管理 {{managedBefore}}MB -> {{managedAfter}}MB、RAM {{wsBefore}}MB -> {{wsAfter}}MB。",
+  "hud.hard_cleanup": "スタビライザーのクリーンアップ（深度）：管理 {{managedBefore}}MB -> {{managedAfter}}MB、RAM {{wsBefore}}MB -> {{wsAfter}}MB。",
+  "hud.manual_soft": "スタビライザー（軽度を今すぐ）：管理 {{managedBefore}}MB -> {{managedAfter}}MB、RAM {{wsBefore}}MB -> {{wsAfter}}MB。",
+  "hud.manual_hard": "スタビライザー（深度を今すぐ）：管理 {{managedBefore}}MB -> {{managedAfter}}MB、RAM {{wsBefore}}MB -> {{wsAfter}}MB。",
+  "hud.emergency_hard": "スタビライザー緊急クリーンアップ：管理 {{managedBefore}}MB -> {{managedAfter}}MB、RAM {{wsBefore}}MB -> {{wsAfter}}MB。",
+  "hud.queued_hard": "スタビライザーのクリーンアップ（深度、待機中）：管理 {{managedBefore}}MB -> {{managedAfter}}MB、RAM {{wsBefore}}MB -> {{wsAfter}}MB。",
+  "hud.soft_waiting_for_hard": "スタビライザーのクリーンアップ（待機中の軽度）：管理 {{managedBefore}}MB -> {{managedAfter}}MB、RAM {{wsBefore}}MB -> {{wsAfter}}MB。",
+
+  "overlay.line": "スタビライザー  P:{{current}}%  平均({{window}}秒):{{avg}}%  傾向:{{delta}}  管理:{{managed}}MB  RAM:{{ws}}MB",
+
+  "gmcm.section.general": "全般",
+  "gmcm.section.general.tip": "Stardew Stabilizer の主なスイッチ。",
+
+  "gmcm.enabled.name": "Mod を有効化",
+  "gmcm.enabled.tip": "Stardew Stabilizer をオンまたはオフにします。",
+
+  "gmcm.autocleanup.name": "自動クリーンアップ",
+  "gmcm.autocleanup.tip": "メモリプレッシャーに基づき、Mod が自動でクリーンアップを実行します。",
+
+  "gmcm.section.thresholds": "しきい値",
+  "gmcm.section.thresholds.tip": "プレッシャーがこれらのレベルを超えると、Mod が動作します。",
+
+  "gmcm.softpressure.name": "軽度クリーンアップしきい値 (%)",
+  "gmcm.softpressure.tip": "このプレッシャーを超えると、軽いクリーンアップを実行することがあります（小さなカクつき）。",
+
+  "gmcm.hardpressure.name": "深度クリーンアップしきい値 (%)",
+  "gmcm.hardpressure.tip": "このプレッシャーを超えると、深いクリーンアップを実行することがあります（カクつく場合あり）。",
+
+  "gmcm.emergencypressure.name": "緊急深度しきい値 (%)",
+  "gmcm.emergencypressure.tip": "このレベルを超えると、クラッシュを防ぐためにどこでも深いクリーンアップが走る可能性があります。",
+
+  "gmcm.section.trend": "スパイクのフィルタリング（傾向）",
+  "gmcm.section.trend.tip": "1 秒のスパイクへの反応を減らします。",
+
+  "gmcm.usetrendavg.name": "平均プレッシャーを使用",
+  "gmcm.usetrendavg.tip": "クリーンアップを判断する際、直近の平均プレッシャー（最新 1 秒だけでなく）を使います。",
+
+  "gmcm.trendwindow.name": "傾向の計測窓（秒）",
+  "gmcm.trendwindow.tip": "傾向を平均する秒数。",
+
+  "gmcm.sustain.name": "持続時間（秒）",
+  "gmcm.sustain.tip": "自動クリーンアップが発動する前に、プレッシャーが軽度しきい値をこの時間だけ超えている必要があります。0 で無効。",
+
+  "gmcm.hysteresis.name": "ヒステリシス (%)",
+  "gmcm.hysteresis.tip": "プレッシャーがしきい値付近で揺れるときの繰り返しクリーンアップを防ぎます。",
+
+  "gmcm.section.freezecontrol": "フリーズ対策",
+  "gmcm.section.freezecontrol.tip": "目立つフリーズを抑える設定。",
+
+  "gmcm.hardmenuonly.name": "深度クリーンアップをメニューのみ",
+  "gmcm.hardmenuonly.tip": "深いクリーンアップはメニューやフェード中のみ行います（緊急時を除く）。",
+
+  "gmcm.prefersoft.name": "待機中は軽度を優先",
+  "gmcm.prefersoft.tip": "深いクリーンアップがキューにある場合、安全なタイミングを待つ間は軽いクリーンアップを行います。",
+
+  "gmcm.section.cooldowns": "クールダウン",
+  "gmcm.section.cooldowns.tip": "クリーンアップ間の最小時間。",
+
+  "gmcm.softcooldown.name": "軽度クールダウン（秒）",
+  "gmcm.softcooldown.tip": "軽いクリーンアップの最小間隔。",
+
+  "gmcm.hardcooldown.name": "深度クールダウン（秒）",
+  "gmcm.hardcooldown.tip": "深いクリーンアップの最小間隔。",
+
+  "gmcm.section.ui": "UI",
+  "gmcm.section.ui.tip": "オーバーレイとメッセージ。",
+
+  "gmcm.hudmessages.name": "HUD メッセージを表示",
+  "gmcm.hudmessages.tip": "クリーンアップが行われたときに短いメッセージを表示します。",
+
+  "gmcm.overlay.name": "オーバーレイを表示",
+  "gmcm.overlay.tip": "プレッシャーと傾向を表示する小さなオーバーレイを表示します。",
+
+  "gmcm.overlayx.name": "オーバーレイ X",
+  "gmcm.overlayx.tip": "オーバーレイの水平位置。",
+
+  "gmcm.overlayy.name": "オーバーレイ Y",
+  "gmcm.overlayy.tip": "オーバーレイの垂直位置。",
+
+  "gmcm.section.advanced": "高度な設定",
+  "gmcm.section.advanced.tip": "オプションの設定。慎重に変更してください。",
+
+  "gmcm.lohcompact.name": "深度クリーンアップ時に大規模割り当てを圧縮",
+  "gmcm.lohcompact.tip": "メモリの増加を抑えられる場合がありますが、深いクリーンアップ中のカクつきが増える可能性があります。",
+
+  "gmcm.trimws.name": "Windows ワーキングセットをトリム",
+  "gmcm.trimws.tip": "報告される RAM 使用量を減らすことがありますが、後でカクつきを招く場合があります。デフォルトではオフ。",
+
+  "gmcm.fallbackmem.name": "代替の使用可能メモリ (MB)",
+  "gmcm.fallbackmem.tip": "ランタイムが使用可能メモリを検出できない場合に使用します。システム RAM に近い値を設定してください。"
+}

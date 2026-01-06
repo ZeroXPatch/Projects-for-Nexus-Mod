@@ -1,0 +1,92 @@
+{
+  "hud.soft_cleanup": "Очищення стабілізатора (легке): Керовано {{managedBefore}}МБ -> {{managedAfter}}МБ, RAM {{wsBefore}}МБ -> {{wsAfter}}МБ.",
+  "hud.hard_cleanup": "Очищення стабілізатора (глибоке): Керовано {{managedBefore}}МБ -> {{managedAfter}}МБ, RAM {{wsBefore}}МБ -> {{wsAfter}}МБ.",
+  "hud.manual_soft": "Стабілізатор (легке зараз): Керовано {{managedBefore}}МБ -> {{managedAfter}}МБ, RAM {{wsBefore}}МБ -> {{wsAfter}}МБ.",
+  "hud.manual_hard": "Стабілізатор (глибоке зараз): Керовано {{managedBefore}}МБ -> {{managedAfter}}МБ, RAM {{wsBefore}}МБ -> {{wsAfter}}МБ.",
+  "hud.emergency_hard": "Аварійне очищення стабілізатора: Керовано {{managedBefore}}МБ -> {{managedAfter}}МБ, RAM {{wsBefore}}МБ -> {{wsAfter}}МБ.",
+  "hud.queued_hard": "Очищення стабілізатора (глибоке, у черзі): Керовано {{managedBefore}}МБ -> {{managedAfter}}МБ, RAM {{wsBefore}}МБ -> {{wsAfter}}МБ.",
+  "hud.soft_waiting_for_hard": "Очищення стабілізатора (легке під час очікування): Керовано {{managedBefore}}МБ -> {{managedAfter}}МБ, RAM {{wsBefore}}МБ -> {{wsAfter}}МБ.",
+
+  "overlay.line": "Стабілізатор  P:{{current}}%  Серед({{window}}с):{{avg}}%  Тренд:{{delta}}  Керовано:{{managed}}МБ  RAM:{{ws}}МБ",
+
+  "gmcm.section.general": "Загальне",
+  "gmcm.section.general.tip": "Основні перемикачі Stardew Stabilizer.",
+
+  "gmcm.enabled.name": "Увімкнути мод",
+  "gmcm.enabled.tip": "Увімкнути чи вимкнути Stardew Stabilizer.",
+
+  "gmcm.autocleanup.name": "Автоочищення",
+  "gmcm.autocleanup.tip": "Дозволити моду виконувати очищення автоматично залежно від тиску пам'яті.",
+
+  "gmcm.section.thresholds": "Пороги",
+  "gmcm.section.thresholds.tip": "Коли тиск перетинає ці рівні, мод діє.",
+
+  "gmcm.softpressure.name": "Поріг легкого очищення (%)",
+  "gmcm.softpressure.tip": "Понад цей тиск мод може виконати легке очищення (мінімальні посмикування).",
+
+  "gmcm.hardpressure.name": "Поріг глибокого очищення (%)",
+  "gmcm.hardpressure.tip": "Понад цей тиск мод може виконати глибоке очищення (можливі посмикування).",
+
+  "gmcm.emergencypressure.name": "Аварійний глибокий поріг (%)",
+  "gmcm.emergencypressure.tip": "Понад цей рівень глибоке очищення може запуститися будь-де, щоб уникнути збоїв.",
+
+  "gmcm.section.trend": "Фільтрація стрибків (тренд)",
+  "gmcm.section.trend.tip": "Зменшує реакцію на одноcекундні стрибки.",
+
+  "gmcm.usetrendavg.name": "Використовувати середній тиск",
+  "gmcm.usetrendavg.tip": "Під час рішення про очищення використовувати недавній середній тиск (не лише останню секунду).",
+
+  "gmcm.trendwindow.name": "Вікно тренду (секунди)",
+  "gmcm.trendwindow.tip": "Скільки секунд усереднювати для тренду.",
+
+  "gmcm.sustain.name": "Час утримання (секунди)",
+  "gmcm.sustain.tip": "Тиск має залишатися вище легкого порогу стільки часу, перш ніж спрацює автоочищення. 0 — вимкнути.",
+
+  "gmcm.hysteresis.name": "Гістерезис (%)",
+  "gmcm.hysteresis.tip": "Запобігає повторним очищенням, коли тиск коливається біля порогу.",
+
+  "gmcm.section.freezecontrol": "Контроль фризів",
+  "gmcm.section.freezecontrol.tip": "Налаштування, що мінімізують помітні фризи.",
+
+  "gmcm.hardmenuonly.name": "Глибоке очищення лише в меню",
+  "gmcm.hardmenuonly.tip": "Глибокі очищення виконуються тільки в меню/затемненнях (окрім аварій).",
+
+  "gmcm.prefersoft.name": "Перевага легкого під час очікування",
+  "gmcm.prefersoft.tip": "Якщо глибоке очищення в черзі, виконувати легкі очищення, очікуючи безпечний момент.",
+
+  "gmcm.section.cooldowns": "Відновлення",
+  "gmcm.section.cooldowns.tip": "Мінімальний час між очищеннями.",
+
+  "gmcm.softcooldown.name": "Легке відновлення (секунди)",
+  "gmcm.softcooldown.tip": "Мінімальний час між легкими очищеннями.",
+
+  "gmcm.hardcooldown.name": "Глибоке відновлення (секунди)",
+  "gmcm.hardcooldown.tip": "Мінімальний час між глибокими очищеннями.",
+
+  "gmcm.section.ui": "Інтерфейс",
+  "gmcm.section.ui.tip": "Оверлей і повідомлення.",
+
+  "gmcm.hudmessages.name": "Показувати повідомлення HUD",
+  "gmcm.hudmessages.tip": "Показувати коротке повідомлення, коли відбувається очищення.",
+
+  "gmcm.overlay.name": "Показувати оверлей",
+  "gmcm.overlay.tip": "Показувати невеликий оверлей із тиском і трендом.",
+
+  "gmcm.overlayx.name": "Оверлей X",
+  "gmcm.overlayx.tip": "Горизонтальна позиція оверлею.",
+
+  "gmcm.overlayy.name": "Оверлей Y",
+  "gmcm.overlayy.tip": "Вертикальна позиція оверлею.",
+
+  "gmcm.section.advanced": "Розширені",
+  "gmcm.section.advanced.tip": "Необов'язкові налаштування. Змінюйте обережно.",
+
+  "gmcm.lohcompact.name": "Стискати великі виділення під час глибокого очищення",
+  "gmcm.lohcompact.tip": "Може зменшити ріст пам'яті, але може збільшити фризи під час глибоких очищень.",
+
+  "gmcm.trimws.name": "Обрізати робочий набір Windows",
+  "gmcm.trimws.tip": "Може зменшити зазначене використання RAM, але може викликати фризи пізніше. За замовчуванням вимкнено.",
+
+  "gmcm.fallbackmem.name": "Резерв доступної пам'яті (МБ)",
+  "gmcm.fallbackmem.tip": "Використовується, якщо середовище не може визначити доступну пам'ять. Встановіть близько до обсягу RAM системи."
+}

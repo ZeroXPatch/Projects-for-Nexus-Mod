@@ -1,0 +1,10 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\New folder\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\New folder\bin\Debug\net6.0\SafeReturnScepter.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\New folder\bin\Debug\net6.0\SafeReturnScepter.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\New folder\obj\Debug\net6.0\SafeReturnScepter.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\New folder\obj\Debug\net6.0\SafeReturnScepter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\New folder\obj\Debug\net6.0\SafeReturnScepter.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\New folder\obj\Debug\net6.0\SafeReturnScepter.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\New folder\obj\Debug\net6.0\SafeReturnScepter.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\New folder\obj\Debug\net6.0\SafeReturnScepter.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\New folder\obj\Debug\net6.0\SafeReturnScepter.dll

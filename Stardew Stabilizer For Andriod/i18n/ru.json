@@ -1,0 +1,92 @@
+{
+  "hud.soft_cleanup": "Очистка стабилизатора (легкая): Управляемая память {{managedBefore}}МБ -> {{managedAfter}}МБ, RAM {{wsBefore}}МБ -> {{wsAfter}}МБ.",
+  "hud.hard_cleanup": "Очистка стабилизатора (глубокая): Управляемая память {{managedBefore}}МБ -> {{managedAfter}}МБ, RAM {{wsBefore}}МБ -> {{wsAfter}}МБ.",
+  "hud.manual_soft": "Стабилизатор (легкая сейчас): Управляемая память {{managedBefore}}МБ -> {{managedAfter}}МБ, RAM {{wsBefore}}МБ -> {{wsAfter}}МБ.",
+  "hud.manual_hard": "Стабилизатор (глубокая сейчас): Управляемая память {{managedBefore}}МБ -> {{managedAfter}}МБ, RAM {{wsBefore}}МБ -> {{wsAfter}}МБ.",
+  "hud.emergency_hard": "Аварийная очистка стабилизатора: Управляемая память {{managedBefore}}МБ -> {{managedAfter}}МБ, RAM {{wsBefore}}МБ -> {{wsAfter}}МБ.",
+  "hud.queued_hard": "Очистка стабилизатора (глубокая, в очереди): Управляемая память {{managedBefore}}МБ -> {{managedAfter}}МБ, RAM {{wsBefore}}МБ -> {{wsAfter}}МБ.",
+  "hud.soft_waiting_for_hard": "Очистка стабилизатора (легкая в ожидании): Управляемая память {{managedBefore}}МБ -> {{managedAfter}}МБ, RAM {{wsBefore}}МБ -> {{wsAfter}}МБ.",
+
+  "overlay.line": "Stabilizer  P:{{current}}%  Ср({{window}}с):{{avg}}%  Тренд:{{delta}}  Управляемая:{{managed}}МБ  RAM:{{ws}}МБ",
+
+  "gmcm.section.general": "Общее",
+  "gmcm.section.general.tip": "Основные переключатели Stardew Stabilizer.",
+
+  "gmcm.enabled.name": "Включить мод",
+  "gmcm.enabled.tip": "Включить или выключить Stardew Stabilizer.",
+
+  "gmcm.autocleanup.name": "Автоочистка",
+  "gmcm.autocleanup.tip": "Позволить моду автоматически выполнять очистки при нагрузке на память.",
+
+  "gmcm.section.thresholds": "Пороги",
+  "gmcm.section.thresholds.tip": "Когда давление превышает эти уровни, мод срабатывает.",
+
+  "gmcm.softpressure.name": "Порог лёгкой очистки (%)",
+  "gmcm.softpressure.tip": "Выше этого давления мод может выполнить лёгкую очистку (минимальные фризы).",
+
+  "gmcm.hardpressure.name": "Порог глубокой очистки (%)",
+  "gmcm.hardpressure.tip": "Выше этого давления мод может выполнить глубокую очистку (возможны фризы).",
+
+  "gmcm.emergencypressure.name": "Аварийный порог глубокой очистки (%)",
+  "gmcm.emergencypressure.tip": "Выше этого уровня глубокая очистка может запуститься где угодно, чтобы предотвратить вылеты.",
+
+  "gmcm.section.trend": "Фильтр всплесков (тренд)",
+  "gmcm.section.trend.tip": "Уменьшает реакцию на односекундные всплески.",
+
+  "gmcm.usetrendavg.name": "Использовать среднее давление",
+  "gmcm.usetrendavg.tip": "Использовать среднее давление за последнее время (не только последнюю секунду) при решении об очистке.",
+
+  "gmcm.trendwindow.name": "Окно тренда (секунды)",
+  "gmcm.trendwindow.tip": "Сколько секунд усреднять для тренда.",
+
+  "gmcm.sustain.name": "Время удержания (секунды)",
+  "gmcm.sustain.tip": "Давление должно оставаться выше лёгкого порога столько времени, прежде чем сработает автоочистка. 0 — отключить.",
+
+  "gmcm.hysteresis.name": "Гистерезис (%)",
+  "gmcm.hysteresis.tip": "Предотвращает повторные очистки, когда давление колеблется вокруг порога.",
+
+  "gmcm.section.freezecontrol": "Контроль фризов",
+  "gmcm.section.freezecontrol.tip": "Настройки, минимизирующие заметные фризы.",
+
+  "gmcm.hardmenuonly.name": "Глубокая очистка только в меню",
+  "gmcm.hardmenuonly.tip": "Глубокие очистки происходят только в меню/затуханиях (кроме аварий).",
+
+  "gmcm.prefersoft.name": "Предпочитать лёгкие во время ожидания",
+  "gmcm.prefersoft.tip": "Если глубокая очистка в очереди, выполнять лёгкие очистки в ожидании безопасного момента.",
+
+  "gmcm.section.cooldowns": "Перезарядки",
+  "gmcm.section.cooldowns.tip": "Минимальное время между очистками.",
+
+  "gmcm.softcooldown.name": "Перезарядка лёгкой (секунды)",
+  "gmcm.softcooldown.tip": "Минимальное время между лёгкими очистками.",
+
+  "gmcm.hardcooldown.name": "Перезарядка глубокой (секунды)",
+  "gmcm.hardcooldown.tip": "Минимальное время между глубокими очистками.",
+
+  "gmcm.section.ui": "Интерфейс",
+  "gmcm.section.ui.tip": "Оверлей и сообщения.",
+
+  "gmcm.hudmessages.name": "Показывать сообщения HUD",
+  "gmcm.hudmessages.tip": "Показывать короткое сообщение при очистке.",
+
+  "gmcm.overlay.name": "Показывать оверлей",
+  "gmcm.overlay.tip": "Показывать небольшой оверлей с давлением и трендом.",
+
+  "gmcm.overlayx.name": "Оверлей X",
+  "gmcm.overlayx.tip": "Горизонтальное положение оверлея.",
+
+  "gmcm.overlayy.name": "Оверлей Y",
+  "gmcm.overlayy.tip": "Вертикальное положение оверлея.",
+
+  "gmcm.section.advanced": "Дополнительно",
+  "gmcm.section.advanced.tip": "Необязательные настройки. Меняйте осторожно.",
+
+  "gmcm.lohcompact.name": "Компактировать крупные выделения при глубокой очистке",
+  "gmcm.lohcompact.tip": "Может уменьшить рост памяти, но увеличить фризы во время глубоких очисток.",
+
+  "gmcm.trimws.name": "Подрезать рабочий набор Windows",
+  "gmcm.trimws.tip": "Может уменьшить отображаемое использование RAM, но позже вызвать фризы. По умолчанию выключено.",
+
+  "gmcm.fallbackmem.name": "Резерв доступной памяти (МБ)",
+  "gmcm.fallbackmem.tip": "Используется, если среда исполнения не может определить доступную память. Установите близко к объёму RAM системы."
+}

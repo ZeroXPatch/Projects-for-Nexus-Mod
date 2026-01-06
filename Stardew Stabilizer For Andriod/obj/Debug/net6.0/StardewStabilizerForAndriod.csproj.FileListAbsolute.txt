@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Stardew Stabilizer For Andriod Beta\bin\Debug\net6.0\StardewStabilizer.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Stardew Stabilizer For Andriod Beta\bin\Debug\net6.0\StardewStabilizer.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Stardew Stabilizer For Andriod Beta\obj\Debug\net6.0\StardewStabilizerForAndriod.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Stardew Stabilizer For Andriod Beta\obj\Debug\net6.0\StardewStabilizerForAndriod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Stardew Stabilizer For Andriod Beta\obj\Debug\net6.0\StardewStabilizerForAndriod.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Stardew Stabilizer For Andriod Beta\obj\Debug\net6.0\StardewStabilizerForAndriod.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Stardew Stabilizer For Andriod Beta\obj\Debug\net6.0\StardewStabilizerForAndriod.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Stardew Stabilizer For Andriod Beta\obj\Debug\net6.0\StardewStabilizerForAndriod.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Stardew Stabilizer For Andriod Beta\obj\Debug\net6.0\StardewStabilizer.dll

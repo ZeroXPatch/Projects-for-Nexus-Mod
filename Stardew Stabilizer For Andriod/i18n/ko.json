@@ -1,0 +1,92 @@
+{
+  "hud.soft_cleanup": "스태빌라이저 정리(가벼움): 관리 {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.hard_cleanup": "스태빌라이저 정리(깊게): 관리 {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.manual_soft": "스태빌라이저(가벼움 지금): 관리 {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.manual_hard": "스태빌라이저(깊게 지금): 관리 {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.emergency_hard": "스태빌라이저 긴급 정리: 관리 {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.queued_hard": "스태빌라이저 정리(깊게, 대기 중): 관리 {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.soft_waiting_for_hard": "스태빌라이저 정리(대기 중 가벼움): 관리 {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+
+  "overlay.line": "스태빌라이저  P:{{current}}%  평균({{window}}초):{{avg}}%  추세:{{delta}}  관리:{{managed}}MB  RAM:{{ws}}MB",
+
+  "gmcm.section.general": "일반",
+  "gmcm.section.general.tip": "Stardew Stabilizer의 기본 스위치입니다.",
+
+  "gmcm.enabled.name": "모드 활성화",
+  "gmcm.enabled.tip": "Stardew Stabilizer를 켜거나 끕니다.",
+
+  "gmcm.autocleanup.name": "자동 정리",
+  "gmcm.autocleanup.tip": "메모리 압력에 따라 모드가 자동으로 정리를 수행합니다.",
+
+  "gmcm.section.thresholds": "임계값",
+  "gmcm.section.thresholds.tip": "압력이 이 수준을 넘으면 모드가 동작합니다.",
+
+  "gmcm.softpressure.name": "가벼운 정리 임계값 (%)",
+  "gmcm.softpressure.tip": "이 압력을 넘으면 모드가 가벼운 정리를 실행할 수 있습니다(적은 끊김).",
+
+  "gmcm.hardpressure.name": "깊은 정리 임계값 (%)",
+  "gmcm.hardpressure.tip": "이 압력을 넘으면 모드가 깊은 정리를 실행할 수 있습니다(끊김 가능).",
+
+  "gmcm.emergencypressure.name": "긴급 깊은 임계값 (%)",
+  "gmcm.emergencypressure.tip": "이 수준을 넘으면 크래시를 막기 위해 어디서든 깊은 정리가 실행될 수 있습니다.",
+
+  "gmcm.section.trend": "스파이크 필터링(추세)",
+  "gmcm.section.trend.tip": "1초 스파이크에 대한 반응을 줄입니다.",
+
+  "gmcm.usetrendavg.name": "평균 압력 사용",
+  "gmcm.usetrendavg.tip": "정리 여부를 결정할 때 최근 평균 압력(마지막 1초만이 아님)을 사용합니다.",
+
+  "gmcm.trendwindow.name": "추세 창(초)",
+  "gmcm.trendwindow.tip": "추세를 평균할 초 단위 길이.",
+
+  "gmcm.sustain.name": "지속 시간(초)",
+  "gmcm.sustain.tip": "자동 정리가 발동하기 전에 압력이 가벼운 임계값을 이 시간 동안 유지해야 합니다. 0이면 비활성화.",
+
+  "gmcm.hysteresis.name": "히스테리시스 (%)",
+  "gmcm.hysteresis.tip": "압력이 임계값 주변을 맴돌 때 반복 정리를 방지합니다.",
+
+  "gmcm.section.freezecontrol": "멈춤 제어",
+  "gmcm.section.freezecontrol.tip": "눈에 띄는 멈춤을 줄이는 설정입니다.",
+
+  "gmcm.hardmenuonly.name": "깊은 정리 메뉴 전용",
+  "gmcm.hardmenuonly.tip": "깊은 정리는 메뉴/페이드 중에만 수행됩니다(긴급 상황 제외).",
+
+  "gmcm.prefersoft.name": "대기 중 가벼운 정리 우선",
+  "gmcm.prefersoft.tip": "깊은 정리가 대기 중이면, 안전한 순간을 기다리는 동안 가벼운 정리를 수행합니다.",
+
+  "gmcm.section.cooldowns": "쿨다운",
+  "gmcm.section.cooldowns.tip": "정리 사이의 최소 시간입니다.",
+
+  "gmcm.softcooldown.name": "가벼운 쿨다운(초)",
+  "gmcm.softcooldown.tip": "가벼운 정리 사이의 최소 간격.",
+
+  "gmcm.hardcooldown.name": "깊은 쿨다운(초)",
+  "gmcm.hardcooldown.tip": "깊은 정리 사이의 최소 간격.",
+
+  "gmcm.section.ui": "UI",
+  "gmcm.section.ui.tip": "오버레이와 메시지.",
+
+  "gmcm.hudmessages.name": "HUD 메시지 표시",
+  "gmcm.hudmessages.tip": "정리가 발생할 때 짧은 메시지를 표시합니다.",
+
+  "gmcm.overlay.name": "오버레이 표시",
+  "gmcm.overlay.tip": "압력과 추세를 보여주는 작은 오버레이를 표시합니다.",
+
+  "gmcm.overlayx.name": "오버레이 X",
+  "gmcm.overlayx.tip": "오버레이의 가로 위치.",
+
+  "gmcm.overlayy.name": "오버레이 Y",
+  "gmcm.overlayy.tip": "오버레이의 세로 위치.",
+
+  "gmcm.section.advanced": "고급",
+  "gmcm.section.advanced.tip": "선택 사항 설정입니다. 신중히 변경하세요.",
+
+  "gmcm.lohcompact.name": "깊은 정리 시 큰 할당 압축",
+  "gmcm.lohcompact.tip": "메모리 증가를 줄일 수 있지만, 깊은 정리 중 끊김이 늘어날 수 있습니다.",
+
+  "gmcm.trimws.name": "Windows 워킹 집합 정리",
+  "gmcm.trimws.tip": "보고되는 RAM 사용량을 줄일 수 있지만, 이후 끊김을 유발할 수 있습니다. 기본값은 꺼짐입니다.",
+
+  "gmcm.fallbackmem.name": "대체 사용 가능 메모리(MB)",
+  "gmcm.fallbackmem.tip": "런타임이 사용 가능 메모리를 감지하지 못할 때 사용됩니다. 시스템 RAM과 비슷한 값으로 설정하세요."
+}

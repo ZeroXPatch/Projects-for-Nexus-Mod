@@ -1,0 +1,92 @@
+{
+  "hud.soft_cleanup": "Pulizia stabilizzatore (leggera): Gestito {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.hard_cleanup": "Pulizia stabilizzatore (profonda): Gestito {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.manual_soft": "Stabilizzatore (leggera ora): Gestito {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.manual_hard": "Stabilizzatore (profonda ora): Gestito {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.emergency_hard": "Pulizia d'emergenza dello stabilizzatore: Gestito {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.queued_hard": "Pulizia stabilizzatore (profonda, in coda): Gestito {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.soft_waiting_for_hard": "Pulizia stabilizzatore (leggera in attesa): Gestito {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+
+  "overlay.line": "Stabilizzatore  P:{{current}}%  Media({{window}}s):{{avg}}%  Tendenza:{{delta}}  Gestito:{{managed}}MB  RAM:{{ws}}MB",
+
+  "gmcm.section.general": "Generale",
+  "gmcm.section.general.tip": "Interruttori principali per Stardew Stabilizer.",
+
+  "gmcm.enabled.name": "Abilita mod",
+  "gmcm.enabled.tip": "Attiva o disattiva Stardew Stabilizer.",
+
+  "gmcm.autocleanup.name": "Pulizia automatica",
+  "gmcm.autocleanup.tip": "Permetti al mod di eseguire pulizie automaticamente in base alla pressione della memoria.",
+
+  "gmcm.section.thresholds": "Soglie",
+  "gmcm.section.thresholds.tip": "Quando la pressione supera questi livelli, il mod interviene.",
+
+  "gmcm.softpressure.name": "Soglia pulizia leggera (%)",
+  "gmcm.softpressure.tip": "Sopra questa pressione, il mod può avviare una pulizia leggera (pochi scatti).",
+
+  "gmcm.hardpressure.name": "Soglia pulizia profonda (%)",
+  "gmcm.hardpressure.tip": "Sopra questa pressione, il mod può avviare una pulizia profonda (può causare scatti).",
+
+  "gmcm.emergencypressure.name": "Soglia d'emergenza profonda (%)",
+  "gmcm.emergencypressure.tip": "Sopra questo livello, una pulizia profonda può partire ovunque per prevenire crash.",
+
+  "gmcm.section.trend": "Filtraggio picchi (trend)",
+  "gmcm.section.trend.tip": "Riduce le reazioni ai picchi di un secondo.",
+
+  "gmcm.usetrendavg.name": "Usa pressione media",
+  "gmcm.usetrendavg.tip": "Usa la pressione media recente (non solo l'ultimo secondo) per decidere se pulire.",
+
+  "gmcm.trendwindow.name": "Finestra trend (secondi)",
+  "gmcm.trendwindow.tip": "Quanti secondi mediare per il trend.",
+
+  "gmcm.sustain.name": "Tempo di mantenimento (secondi)",
+  "gmcm.sustain.tip": "La pressione deve restare sopra la soglia leggera per questo tempo prima che parta la pulizia automatica. Imposta 0 per disabilitare.",
+
+  "gmcm.hysteresis.name": "Isteresi (%)",
+  "gmcm.hysteresis.tip": "Evita pulizie ripetute quando la pressione oscilla intorno alla soglia.",
+
+  "gmcm.section.freezecontrol": "Controllo dei blocchi",
+  "gmcm.section.freezecontrol.tip": "Impostazioni che riducono i blocchi percepibili.",
+
+  "gmcm.hardmenuonly.name": "Pulizia profonda solo nei menu",
+  "gmcm.hardmenuonly.tip": "Le pulizie profonde avvengono solo nei menu/schermate nere (tranne emergenza).",
+
+  "gmcm.prefersoft.name": "Preferisci leggera in attesa",
+  "gmcm.prefersoft.tip": "Se una pulizia profonda è in coda, esegui pulizie leggere mentre si attende un momento sicuro.",
+
+  "gmcm.section.cooldowns": "Raffreddamenti",
+  "gmcm.section.cooldowns.tip": "Tempo minimo tra le pulizie.",
+
+  "gmcm.softcooldown.name": "Raffreddamento leggero (secondi)",
+  "gmcm.softcooldown.tip": "Tempo minimo tra le pulizie leggere.",
+
+  "gmcm.hardcooldown.name": "Raffreddamento profondo (secondi)",
+  "gmcm.hardcooldown.tip": "Tempo minimo tra le pulizie profonde.",
+
+  "gmcm.section.ui": "Interfaccia",
+  "gmcm.section.ui.tip": "Overlay e messaggi.",
+
+  "gmcm.hudmessages.name": "Mostra messaggi HUD",
+  "gmcm.hudmessages.tip": "Mostra un breve messaggio quando avviene una pulizia.",
+
+  "gmcm.overlay.name": "Mostra overlay",
+  "gmcm.overlay.tip": "Mostra un piccolo overlay con pressione e trend.",
+
+  "gmcm.overlayx.name": "Overlay X",
+  "gmcm.overlayx.tip": "Posizione orizzontale per l'overlay.",
+
+  "gmcm.overlayy.name": "Overlay Y",
+  "gmcm.overlayy.tip": "Posizione verticale per l'overlay.",
+
+  "gmcm.section.advanced": "Avanzato",
+  "gmcm.section.advanced.tip": "Impostazioni facoltative. Cambia con cautela.",
+
+  "gmcm.lohcompact.name": "Compatta grandi allocazioni con la pulizia profonda",
+  "gmcm.lohcompact.tip": "Può ridurre la crescita della memoria, ma può aumentare gli scatti durante le pulizie profonde.",
+
+  "gmcm.trimws.name": "Riduci working set di Windows",
+  "gmcm.trimws.tip": "Può ridurre l'uso di RAM riportato, ma può causare scatti dopo. Disattivato per impostazione predefinita.",
+
+  "gmcm.fallbackmem.name": "Memoria disponibile di fallback (MB)",
+  "gmcm.fallbackmem.tip": "Usata se il runtime non può rilevare la memoria disponibile. Imposta vicino alla RAM del sistema."
+}

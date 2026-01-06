@@ -1,0 +1,92 @@
+{
+  "hud.soft_cleanup": "Stabilisator-Bereinigung (leicht): Verwaltet {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.hard_cleanup": "Stabilisator-Bereinigung (tief): Verwaltet {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.manual_soft": "Stabilisator (leicht jetzt): Verwaltet {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.manual_hard": "Stabilisator (tief jetzt): Verwaltet {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.emergency_hard": "Stabilisator-Notbereinigung: Verwaltet {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.queued_hard": "Stabilisator-Bereinigung (tief, eingereiht): Verwaltet {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+  "hud.soft_waiting_for_hard": "Stabilisator-Bereinigung (leicht beim Warten): Verwaltet {{managedBefore}}MB -> {{managedAfter}}MB, RAM {{wsBefore}}MB -> {{wsAfter}}MB.",
+
+  "overlay.line": "Stabilisator  P:{{current}}%  Ø({{window}}s):{{avg}}%  Trend:{{delta}}  Verwaltet:{{managed}}MB  RAM:{{ws}}MB",
+
+  "gmcm.section.general": "Allgemein",
+  "gmcm.section.general.tip": "Hauptschalter für Stardew Stabilizer.",
+
+  "gmcm.enabled.name": "Mod aktivieren",
+  "gmcm.enabled.tip": "Stardew Stabilizer ein- oder ausschalten.",
+
+  "gmcm.autocleanup.name": "Automatische Bereinigung",
+  "gmcm.autocleanup.tip": "Der Mod führt Bereinigungen automatisch nach Speicherdruck aus.",
+
+  "gmcm.section.thresholds": "Schwellenwerte",
+  "gmcm.section.thresholds.tip": "Wenn der Druck diese Werte überschreitet, greift der Mod ein.",
+
+  "gmcm.softpressure.name": "Schwelle für leichte Bereinigung (%)",
+  "gmcm.softpressure.tip": "Über diesem Druck kann der Mod eine leichte Bereinigung ausführen (kaum Ruckler).",
+
+  "gmcm.hardpressure.name": "Schwelle für tiefe Bereinigung (%)",
+  "gmcm.hardpressure.tip": "Über diesem Druck kann der Mod eine tiefe Bereinigung ausführen (kann ruckeln).",
+
+  "gmcm.emergencypressure.name": "Notfall-Schwelle für tiefe Bereinigung (%)",
+  "gmcm.emergencypressure.tip": "Über diesem Wert kann überall eine tiefe Bereinigung laufen, um Abstürze zu verhindern.",
+
+  "gmcm.section.trend": "Spitzen filtern (Trend)",
+  "gmcm.section.trend.tip": "Verringert Reaktionen auf Ein-Sekunden-Spitzen.",
+
+  "gmcm.usetrendavg.name": "Durchschnittlichen Druck nutzen",
+  "gmcm.usetrendavg.tip": "Beim Entscheiden über Bereinigung den aktuellen Durchschnittsdruck nutzen (nicht nur die letzte Sekunde).",
+
+  "gmcm.trendwindow.name": "Trendfenster (Sekunden)",
+  "gmcm.trendwindow.tip": "Wie viele Sekunden für den Trend gemittelt werden.",
+
+  "gmcm.sustain.name": "Haltezeit (Sekunden)",
+  "gmcm.sustain.tip": "Der Druck muss so lange über der leichten Schwelle bleiben, bevor Auto-Bereinigung startet. 0 zum Deaktivieren.",
+
+  "gmcm.hysteresis.name": "Hysterese (%)",
+  "gmcm.hysteresis.tip": "Verhindert wiederholte Bereinigungen, wenn der Druck um die Schwelle schwankt.",
+
+  "gmcm.section.freezecontrol": "Freeze-Kontrolle",
+  "gmcm.section.freezecontrol.tip": "Einstellungen, die spürbare Freezes minimieren.",
+
+  "gmcm.hardmenuonly.name": "Tiefe Bereinigung nur im Menü",
+  "gmcm.hardmenuonly.tip": "Tiefe Bereinigungen passieren nur in Menüs/Blenden (außer im Notfall).",
+
+  "gmcm.prefersoft.name": "Leichte Bereinigung beim Warten bevorzugen",
+  "gmcm.prefersoft.tip": "Wenn eine tiefe Bereinigung in der Warteschlange ist, werden beim Warten leichte Bereinigungen ausgeführt.",
+
+  "gmcm.section.cooldowns": "Abklingzeiten",
+  "gmcm.section.cooldowns.tip": "Mindestzeit zwischen Bereinigungen.",
+
+  "gmcm.softcooldown.name": "Leichte Abklingzeit (Sekunden)",
+  "gmcm.softcooldown.tip": "Mindestzeit zwischen leichten Bereinigungen.",
+
+  "gmcm.hardcooldown.name": "Tiefe Abklingzeit (Sekunden)",
+  "gmcm.hardcooldown.tip": "Mindestzeit zwischen tiefen Bereinigungen.",
+
+  "gmcm.section.ui": "UI",
+  "gmcm.section.ui.tip": "Overlay und Meldungen.",
+
+  "gmcm.hudmessages.name": "HUD-Meldungen anzeigen",
+  "gmcm.hudmessages.tip": "Kurze Meldung anzeigen, wenn eine Bereinigung passiert.",
+
+  "gmcm.overlay.name": "Overlay anzeigen",
+  "gmcm.overlay.tip": "Kleines Overlay mit Druck und Trend anzeigen.",
+
+  "gmcm.overlayx.name": "Overlay X",
+  "gmcm.overlayx.tip": "Horizontale Position des Overlays.",
+
+  "gmcm.overlayy.name": "Overlay Y",
+  "gmcm.overlayy.tip": "Vertikale Position des Overlays.",
+
+  "gmcm.section.advanced": "Erweitert",
+  "gmcm.section.advanced.tip": "Optionale Einstellungen. Vorsichtig ändern.",
+
+  "gmcm.lohcompact.name": "Große Allokationen bei tiefer Bereinigung komprimieren",
+  "gmcm.lohcompact.tip": "Kann Speicherwachstum reduzieren, aber Ruckler bei tiefen Bereinigungen erhöhen.",
+
+  "gmcm.trimws.name": "Windows Working Set trimmen",
+  "gmcm.trimws.tip": "Kann gemeldete RAM-Nutzung senken, aber später Ruckler verursachen. Standardmäßig aus.",
+
+  "gmcm.fallbackmem.name": "Ersatzwert für verfügbaren Speicher (MB)",
+  "gmcm.fallbackmem.tip": "Wird genutzt, wenn die Laufzeit den verfügbaren Speicher nicht erkennen kann. Setze nahe deiner System-RAM."
+}
