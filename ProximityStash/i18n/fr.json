@@ -1,0 +1,18 @@
+{
+  "config.enabled.name": "Activer le mod",
+  "config.enabled.tooltip": "Active ou désactive le mod.",
+
+  "config.hud-messages.name": "Afficher les messages du HUD",
+  "config.hud-messages.tooltip": "Afficher un message (ex. '+5 Bois') lorsque des objets sont déplacés.",
+
+  "config.range.name": "Portée de déclenchement",
+  "config.range.tooltip": "Distance (en cases) à laquelle vous devez être d'un coffre pour qu'il aspire des objets.",
+
+  "config.sound-cooldown.name": "Temps de recharge sonore",
+  "config.sound-cooldown.tooltip": "Nombre de ticks à attendre entre les effets sonores (60 ticks = 1 seconde).",
+
+  "config.menu-cooldown.name": "Recharge après fermeture du menu",
+  "config.menu-cooldown.tooltip": "Secondes pendant lesquelles le dépôt automatique est désactivé après avoir fermé un coffre (empêche les objets d'être réaspirés immédiatement).",
+
+  "hud.items-moved": "+{{count}} {{itemName}}"
+}

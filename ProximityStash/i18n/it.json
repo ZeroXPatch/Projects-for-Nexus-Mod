@@ -1,0 +1,18 @@
+{
+  "config.enabled.name": "Abilita mod",
+  "config.enabled.tooltip": "Attiva o disattiva la mod.",
+
+  "config.hud-messages.name": "Mostra messaggi HUD",
+  "config.hud-messages.tooltip": "Mostra un messaggio (es. '+5 Legno') quando gli oggetti vengono spostati.",
+
+  "config.range.name": "Raggio di attivazione",
+  "config.range.tooltip": "Quanto vicino devi essere a una cassa (in caselle) perché possa prelevare oggetti.",
+
+  "config.sound-cooldown.name": "Ritardo suono",
+  "config.sound-cooldown.tooltip": "Numero di tick da attendere tra gli effetti sonori (60 tick = 1 secondo).",
+
+  "config.menu-cooldown.name": "Ritardo chiusura menu",
+  "config.menu-cooldown.tooltip": "Secondi di disattivazione del deposito automatico dopo la chiusura di una cassa (impedisce che gli oggetti vengano risucchiati subito).",
+
+  "hud.items-moved": "+{{count}} {{itemName}}"
+}

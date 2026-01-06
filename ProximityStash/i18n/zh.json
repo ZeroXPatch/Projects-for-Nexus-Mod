@@ -1,0 +1,18 @@
+{
+  "config.enabled.name": "启用模组",
+  "config.enabled.tooltip": "打开或关闭该模组。",
+
+  "config.hud-messages.name": "显示HUD消息",
+  "config.hud-messages.tooltip": "在物品被移动时显示消息（例如“+5 木材”）。",
+
+  "config.range.name": "触发范围",
+  "config.range.tooltip": "你需要距离箱子多近（以格为单位）才能让它拉取物品。",
+
+  "config.sound-cooldown.name": "音效冷却",
+  "config.sound-cooldown.tooltip": "音效之间需要等待的刻数（60刻 = 1秒）。",
+
+  "config.menu-cooldown.name": "菜单关闭冷却",
+  "config.menu-cooldown.tooltip": "关闭箱子后禁用自动存放的秒数（防止物品立即被再次吸回）。",
+
+  "hud.items-moved": "+{{count}} {{itemName}}"
+}

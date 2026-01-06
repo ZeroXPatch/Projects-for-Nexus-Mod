@@ -1,0 +1,18 @@
+{
+  "config.enabled.name": "모드 활성화",
+  "config.enabled.tooltip": "모드를 켜거나 끕니다.",
+
+  "config.hud-messages.name": "HUD 메시지 표시",
+  "config.hud-messages.tooltip": "아이템이 이동될 때 메시지(예: '+5 목재')를 표시합니다.",
+
+  "config.range.name": "발동 범위",
+  "config.range.tooltip": "상자가 아이템을 끌어오기 위해 접근해야 하는 거리(타일 단위).",
+
+  "config.sound-cooldown.name": "사운드 재사용 대기시간",
+  "config.sound-cooldown.tooltip": "효과음 사이에 기다릴 틱 수(60틱 = 1초).",
+
+  "config.menu-cooldown.name": "메뉴 종료 대기시간",
+  "config.menu-cooldown.tooltip": "상자를 닫은 후 자동 입금을 비활성화하는 시간(초)입니다(아이템이 즉시 다시 빨려들어가는 것을 방지).",
+
+  "hud.items-moved": "+{{count}} {{itemName}}"
+}

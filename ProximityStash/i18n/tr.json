@@ -1,0 +1,18 @@
+{
+  "config.enabled.name": "Modu Etkinleştir",
+  "config.enabled.tooltip": "Modu açar veya kapatır.",
+
+  "config.hud-messages.name": "HUD Mesajlarını Göster",
+  "config.hud-messages.tooltip": "Eşyalar taşındığında bir mesaj gösterir (örn. '+5 Odun').",
+
+  "config.range.name": "Tetikleme Mesafesi",
+  "config.range.tooltip": "Bir sandığın eşyaları çekmesi için ne kadar yakın olmanız gerektiği (kare cinsinden).",
+
+  "config.sound-cooldown.name": "Ses Bekleme Süresi",
+  "config.sound-cooldown.tooltip": "Ses efektleri arasında beklenecek tik sayısı (60 tik = 1 saniye).",
+
+  "config.menu-cooldown.name": "Menüden Çıkış Bekleme Süresi",
+  "config.menu-cooldown.tooltip": "Bir sandığı kapattıktan sonra otomatik yatırmayı devre dışı bırakma süresi (eşyaların hemen geri çekilmesini önler).",
+
+  "hud.items-moved": "+{{count}} {{itemName}}"
+}

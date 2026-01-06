@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DynamicDusk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c75358f680cf0c08e346d944686b0fab24303ce3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5f10ddfad4a11e13deebe7791f32a97c1c87351")]
 [assembly: System.Reflection.AssemblyProductAttribute("DynamicDusk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DynamicDusk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

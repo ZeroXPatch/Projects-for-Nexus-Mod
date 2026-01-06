@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Dynamic Dusk\\Dynamic Dusk\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\dynamic dusk\\dynamic dusk\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\dynamic dusk\\dynamic dusk\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\dynamic dusk\\dynamic dusk\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|solutionrelative:i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\dynamic dusk\\dynamic dusk\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4432858F-85F4-D43D-3401-ACF25133F0B7}|DynamicDusk.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\dynamic dusk\\dynamic dusk\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,15 +49,11 @@
         },
         {
           "DockedWidth": 405,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Dynamic Dusk\\Dynamic Dusk\\manifest.json",
               "RelativeDocumentMoniker": "manifest.json",
@@ -70,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "IGenericModConfigMenuApi.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Dynamic Dusk\\Dynamic Dusk\\IGenericModConfigMenuApi.cs",
               "RelativeDocumentMoniker": "IGenericModConfigMenuApi.cs",
@@ -78,12 +74,11 @@
               "RelativeToolTip": "IGenericModConfigMenuApi.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-02T19:51:52.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-02T19:51:52.935Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "default.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Dynamic Dusk\\Dynamic Dusk\\i18n\\default.json",
               "RelativeDocumentMoniker": "i18n\\default.json",
@@ -91,18 +86,17 @@
               "RelativeToolTip": "i18n\\default.json",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-02T19:52:24.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-02T19:52:24.081Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Dynamic Dusk\\Dynamic Dusk\\ModEntry.cs",
               "RelativeDocumentMoniker": "ModEntry.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Dynamic Dusk\\Dynamic Dusk\\ModEntry.cs",
               "RelativeToolTip": "ModEntry.cs",
-              "ViewState": "AgIAAMgAAAAAAAAAAAAIwN0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAUBAAAAAAAAAADwvw8BAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-02T19:51:37.106Z",
               "EditorCaption": ""
@@ -117,8 +111,7 @@
               "RelativeToolTip": "ModConfig.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAwwDIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T01:11:40.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T01:11:40.739Z"
             },
             {
               "$type": "Document",
@@ -154,6 +147,10 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-01-02T19:43:03.571Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         },

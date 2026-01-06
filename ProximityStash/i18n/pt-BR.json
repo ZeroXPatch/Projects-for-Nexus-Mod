@@ -1,0 +1,18 @@
+{
+  "config.enabled.name": "Ativar mod",
+  "config.enabled.tooltip": "Liga ou desliga o mod.",
+
+  "config.hud-messages.name": "Mostrar mensagens do HUD",
+  "config.hud-messages.tooltip": "Mostra uma mensagem (ex.: '+5 Madeira') quando itens são movidos.",
+
+  "config.range.name": "Alcance de ativação",
+  "config.range.tooltip": "Quão perto você precisa estar de um baú (em blocos) para ele puxar itens.",
+
+  "config.sound-cooldown.name": "Tempo de recarga do som",
+  "config.sound-cooldown.tooltip": "Quantos ticks esperar entre efeitos sonoros (60 ticks = 1 segundo).",
+
+  "config.menu-cooldown.name": "Tempo de recarga ao sair do menu",
+  "config.menu-cooldown.tooltip": "Segundos para desativar o depósito automático após fechar um baú (impede que os itens sejam sugados de volta imediatamente).",
+
+  "hud.items-moved": "+{{count}} {{itemName}}"
+}

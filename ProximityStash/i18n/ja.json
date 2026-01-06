@@ -1,0 +1,18 @@
+{
+  "config.enabled.name": "Modを有効にする",
+  "config.enabled.tooltip": "Modをオン/オフにします。",
+
+  "config.hud-messages.name": "HUDメッセージを表示",
+  "config.hud-messages.tooltip": "アイテムが移動されたときに（例: '+5 木材'などの）メッセージを表示します。",
+
+  "config.range.name": "発動範囲",
+  "config.range.tooltip": "チェストがアイテムを引き寄せるために近づく必要のある距離（タイル数）。",
+
+  "config.sound-cooldown.name": "サウンドのクールダウン",
+  "config.sound-cooldown.tooltip": "効果音の間に待機するティック数（60ティック＝1秒）。",
+
+  "config.menu-cooldown.name": "メニュー終了のクールダウン",
+  "config.menu-cooldown.tooltip": "チェストを閉じた後に自動預け入れを無効化する秒数（アイテムがすぐ吸い戻されるのを防止）。",
+
+  "hud.items-moved": "+{{count}} {{itemName}}"
+}

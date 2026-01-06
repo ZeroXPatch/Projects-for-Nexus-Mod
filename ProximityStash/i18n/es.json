@@ -1,0 +1,18 @@
+{
+  "config.enabled.name": "Activar mod",
+  "config.enabled.tooltip": "Activa o desactiva el mod.",
+
+  "config.hud-messages.name": "Mostrar mensajes del HUD",
+  "config.hud-messages.tooltip": "Muestra un mensaje (p. ej., '+5 Madera') cuando se mueven objetos.",
+
+  "config.range.name": "Alcance de activación",
+  "config.range.tooltip": "Qué tan cerca debes estar de un cofre (en casillas) para que absorba objetos.",
+
+  "config.sound-cooldown.name": "Enfriamiento de sonido",
+  "config.sound-cooldown.tooltip": "Cuántos ticks esperar entre efectos de sonido (60 ticks = 1 segundo).",
+
+  "config.menu-cooldown.name": "Enfriamiento al salir del menú",
+  "config.menu-cooldown.tooltip": "Segundos para desactivar el depósito automático tras cerrar un cofre (evita que los objetos se vuelvan a absorber de inmediato).",
+
+  "hud.items-moved": "+{{count}} {{itemName}}"
+}

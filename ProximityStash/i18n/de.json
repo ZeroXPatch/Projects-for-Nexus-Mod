@@ -1,0 +1,18 @@
+{
+  "config.enabled.name": "Mod aktivieren",
+  "config.enabled.tooltip": "Schaltet den Mod ein oder aus.",
+
+  "config.hud-messages.name": "HUD-Nachrichten anzeigen",
+  "config.hud-messages.tooltip": "Zeigt eine Nachricht (z. B. '+5 Holz'), wenn Gegenstände verschoben werden.",
+
+  "config.range.name": "Auslösebereich",
+  "config.range.tooltip": "Wie nah du an einer Truhe sein musst (in Feldern), damit sie Gegenstände abzieht.",
+
+  "config.sound-cooldown.name": "Sound-Abklingzeit",
+  "config.sound-cooldown.tooltip": "Wie viele Ticks zwischen Soundeffekten gewartet werden (60 Ticks = 1 Sekunde).",
+
+  "config.menu-cooldown.name": "Abklingzeit nach Menü",
+  "config.menu-cooldown.tooltip": "Sekunden, in denen nach dem Schließen einer Truhe das automatische Einlagern deaktiviert ist (verhindert, dass Gegenstände sofort wieder eingesaugt werden).",
+
+  "hud.items-moved": "+{{count}} {{itemName}}"
+}

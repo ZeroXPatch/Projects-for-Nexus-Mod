@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using HarmonyLib;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
@@ -14,14 +16,19 @@ namespace DynamicDusk
 
         private const string ModDataKey = "Zero.DynamicDusk/CurrentSunset";
 
+        // cache valid time strings to use in the menu
+        private string[] ValidTimeStrings = Array.Empty<string>();
+
         public override void Entry(IModHelper helper)
         {
             Config = helper.ReadConfig<ModConfig>();
             SMonitor = Monitor;
 
+            // Generate list of valid times (1200 to 2800) to fix the slider issue
+            GenerateValidTimeStrings();
+
             var harmony = new Harmony(this.ModManifest.UniqueID);
 
-            // Harmony Patches
             harmony.Patch(
                 original: AccessTools.Method(typeof(Game1), nameof(Game1.getStartingToGetDarkTime)),
                 postfix: new HarmonyMethod(typeof(ModEntry), nameof(Postfix_GetStartingToGetDarkTime))
@@ -34,10 +41,42 @@ namespace DynamicDusk
                 { priority = Priority.Last }
             );
 
-            // Events
             helper.Events.GameLoop.DayStarted += OnDayStarted;
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
+        }
+
+        private void GenerateValidTimeStrings()
+        {
+            // Create a list of times from 12:00 PM (1200) to 2:00 AM (2600)
+            // skipping invalid minutes like 60, 70, 80, 90
+            var list = new List<string>();
+            for (int hour = 12; hour <= 26; hour++)
+            {
+                for (int min = 0; min < 60; min += 10)
+                {
+                    int time = (hour * 100) + min;
+                    list.Add(time.ToString());
+                }
+            }
+            ValidTimeStrings = list.ToArray();
+        }
+
+        private string FormatTimeDisplay(string rawTime)
+        {
+            if (int.TryParse(rawTime, out int time))
+            {
+                // Convert 1750 -> "5:50 PM"
+                int hour = time / 100;
+                int min = time % 100;
+                string ampm = (hour >= 12 && hour < 24) ? "PM" : "AM";
+
+                int displayHour = hour % 12;
+                if (displayHour == 0) displayHour = 12;
+
+                return $"{displayHour}:{min:00} {ampm} ({time})";
+            }
+            return rawTime;
         }
 
         private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
@@ -66,28 +105,28 @@ namespace DynamicDusk
             // 3. MANUAL SCHEDULE
             configMenu.AddSectionTitle(mod: ModManifest, text: () => Helper.Translation.Get("config.section.manual"));
 
-            // Spring Manual
+            // Spring
             configMenu.AddSectionTitle(mod: ModManifest, text: () => Helper.Translation.Get("config.subtitle.spring"));
             AddWeeklyOption(configMenu, () => Config.ManualSpringWeek1, v => Config.ManualSpringWeek1 = v, 1);
             AddWeeklyOption(configMenu, () => Config.ManualSpringWeek2, v => Config.ManualSpringWeek2 = v, 2);
             AddWeeklyOption(configMenu, () => Config.ManualSpringWeek3, v => Config.ManualSpringWeek3 = v, 3);
             AddWeeklyOption(configMenu, () => Config.ManualSpringWeek4, v => Config.ManualSpringWeek4 = v, 4);
 
-            // Summer Manual
+            // Summer
             configMenu.AddSectionTitle(mod: ModManifest, text: () => Helper.Translation.Get("config.subtitle.summer"));
             AddWeeklyOption(configMenu, () => Config.ManualSummerWeek1, v => Config.ManualSummerWeek1 = v, 1);
             AddWeeklyOption(configMenu, () => Config.ManualSummerWeek2, v => Config.ManualSummerWeek2 = v, 2);
             AddWeeklyOption(configMenu, () => Config.ManualSummerWeek3, v => Config.ManualSummerWeek3 = v, 3);
             AddWeeklyOption(configMenu, () => Config.ManualSummerWeek4, v => Config.ManualSummerWeek4 = v, 4);
 
-            // Fall Manual
+            // Fall
             configMenu.AddSectionTitle(mod: ModManifest, text: () => Helper.Translation.Get("config.subtitle.fall"));
             AddWeeklyOption(configMenu, () => Config.ManualFallWeek1, v => Config.ManualFallWeek1 = v, 1);
             AddWeeklyOption(configMenu, () => Config.ManualFallWeek2, v => Config.ManualFallWeek2 = v, 2);
             AddWeeklyOption(configMenu, () => Config.ManualFallWeek3, v => Config.ManualFallWeek3 = v, 3);
             AddWeeklyOption(configMenu, () => Config.ManualFallWeek4, v => Config.ManualFallWeek4 = v, 4);
 
-            // Winter Manual
+            // Winter
             configMenu.AddSectionTitle(mod: ModManifest, text: () => Helper.Translation.Get("config.subtitle.winter"));
             AddWeeklyOption(configMenu, () => Config.ManualWinterWeek1, v => Config.ManualWinterWeek1 = v, 1);
             AddWeeklyOption(configMenu, () => Config.ManualWinterWeek2, v => Config.ManualWinterWeek2 = v, 2);
@@ -95,16 +134,44 @@ namespace DynamicDusk
             AddWeeklyOption(configMenu, () => Config.ManualWinterWeek4, v => Config.ManualWinterWeek4 = v, 4);
         }
 
-        // Helpers
+        // --- UPDATED HELPERS: Using AddTextOption instead of AddNumberOption ---
+
         private void AddRandomRangeOption(IGenericModConfigMenuApi menu, string seasonKey, Func<int> getMin, Action<int> setMin, Func<int> getMax, Action<int> setMax)
         {
-            menu.AddNumberOption(mod: ModManifest, getValue: getMin, setValue: setMin, name: () => Helper.Translation.Get($"config.{seasonKey.ToLower()}_min.name"), tooltip: () => Helper.Translation.Get("config.range.desc"), min: 1200, max: 2600, interval: 10);
-            menu.AddNumberOption(mod: ModManifest, getValue: getMax, setValue: setMax, name: () => Helper.Translation.Get($"config.{seasonKey.ToLower()}_max.name"), tooltip: () => Helper.Translation.Get("config.range.desc"), min: 1200, max: 2600, interval: 10);
+            // Min Slider
+            menu.AddTextOption(
+                mod: ModManifest,
+                getValue: () => getMin().ToString(),
+                setValue: val => setMin(int.Parse(val)),
+                name: () => Helper.Translation.Get($"config.{seasonKey.ToLower()}_min.name"),
+                tooltip: () => Helper.Translation.Get("config.range.desc"),
+                allowedValues: ValidTimeStrings,
+                formatAllowedValue: FormatTimeDisplay
+            );
+
+            // Max Slider
+            menu.AddTextOption(
+                mod: ModManifest,
+                getValue: () => getMax().ToString(),
+                setValue: val => setMax(int.Parse(val)),
+                name: () => Helper.Translation.Get($"config.{seasonKey.ToLower()}_max.name"),
+                tooltip: () => Helper.Translation.Get("config.range.desc"),
+                allowedValues: ValidTimeStrings,
+                formatAllowedValue: FormatTimeDisplay
+            );
         }
 
         private void AddWeeklyOption(IGenericModConfigMenuApi menu, Func<int> get, Action<int> set, int weekNum)
         {
-            menu.AddNumberOption(mod: ModManifest, getValue: get, setValue: set, name: () => Helper.Translation.Get($"config.week{weekNum}"), tooltip: () => Helper.Translation.Get("config.manual.desc"), min: 1200, max: 2600, interval: 10);
+            menu.AddTextOption(
+                mod: ModManifest,
+                getValue: () => get().ToString(),
+                setValue: val => set(int.Parse(val)),
+                name: () => Helper.Translation.Get($"config.week{weekNum}"),
+                tooltip: () => Helper.Translation.Get("config.manual.desc"),
+                allowedValues: ValidTimeStrings,
+                formatAllowedValue: FormatTimeDisplay
+            );
         }
 
         private void OnSaveLoaded(object? sender, SaveLoadedEventArgs e) { UpdateDailySunsetTime(); }
@@ -139,7 +206,6 @@ namespace DynamicDusk
 
         private void UpdateDailySunsetTime()
         {
-            // 1. Random Mode
             if (Config.EnableRandomMode)
             {
                 if (Game1.player != null && Game1.player.modData.TryGetValue(ModDataKey, out string timeStr))
@@ -148,12 +214,11 @@ namespace DynamicDusk
                 }
             }
 
-            // 2. Manual Weekly Mode
+            // Manual Weekly Mode
             int day = Game1.dayOfMonth;
             string season = Game1.currentSeason;
-            int week = (day - 1) / 7; // 0=Week1, 1=Week2, 2=Week3, 3=Week4
-
-            if (week > 3) week = 3; // Safety clamp
+            int week = (day - 1) / 7;
+            if (week > 3) week = 3;
 
             switch (season)
             {
@@ -181,9 +246,7 @@ namespace DynamicDusk
                     else if (week == 2) CurrentDailySunset = Config.ManualWinterWeek3;
                     else CurrentDailySunset = Config.ManualWinterWeek4;
                     break;
-                default:
-                    CurrentDailySunset = 1800;
-                    break;
+                default: CurrentDailySunset = 1800; break;
             }
         }
 

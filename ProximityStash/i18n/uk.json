@@ -1,0 +1,18 @@
+{
+  "config.enabled.name": "Увімкнути мод",
+  "config.enabled.tooltip": "Увімкнути чи вимкнути мод.",
+
+  "config.hud-messages.name": "Показувати повідомлення HUD",
+  "config.hud-messages.tooltip": "Показувати повідомлення (наприклад, '+5 Дерева'), коли предмети переміщуються.",
+
+  "config.range.name": "Радіус спрацювання",
+  "config.range.tooltip": "Наскільки близько до скрині (у клітинках) треба бути, щоб вона втягувала предмети.",
+
+  "config.sound-cooldown.name": "Затримка звуку",
+  "config.sound-cooldown.tooltip": "Скільки тіків чекати між звуковими ефектами (60 тіків = 1 секунда).",
+
+  "config.menu-cooldown.name": "Затримка після закриття меню",
+  "config.menu-cooldown.tooltip": "Секунди вимкнення авто-депозиту після закриття скрині (запобігає миттєвому поверненню предметів назад).",
+
+  "hud.items-moved": "+{{count}} {{itemName}}"
+}

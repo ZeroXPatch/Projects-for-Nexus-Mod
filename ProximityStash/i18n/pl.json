@@ -1,0 +1,18 @@
+{
+  "config.enabled.name": "Włącz mod",
+  "config.enabled.tooltip": "Włącza lub wyłącza moda.",
+
+  "config.hud-messages.name": "Pokaż komunikaty HUD",
+  "config.hud-messages.tooltip": "Pokazuje wiadomość (np. '+5 Drewna') podczas przenoszenia przedmiotów.",
+
+  "config.range.name": "Zasięg wyzwalania",
+  "config.range.tooltip": "Jak blisko skrzyni (w polach) musisz być, by pobierała przedmioty.",
+
+  "config.sound-cooldown.name": "Czas odnowienia dźwięku",
+  "config.sound-cooldown.tooltip": "Ile ticków czekać między efektami dźwiękowymi (60 ticków = 1 sekunda).",
+
+  "config.menu-cooldown.name": "Czas odnowienia po zamknięciu menu",
+  "config.menu-cooldown.tooltip": "Sekundy wyłączenia auto-depozytu po zamknięciu skrzyni (zapobiega natychmiastowemu ponownemu wciąganiu przedmiotów).",
+
+  "hud.items-moved": "+{{count}} {{itemName}}"
+}

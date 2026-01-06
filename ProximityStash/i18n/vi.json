@@ -1,0 +1,18 @@
+{
+  "config.enabled.name": "Bật mod",
+  "config.enabled.tooltip": "Bật hoặc tắt mod.",
+
+  "config.hud-messages.name": "Hiển thị thông báo HUD",
+  "config.hud-messages.tooltip": "Hiện thông báo (vd: '+5 Gỗ') khi vật phẩm được di chuyển.",
+
+  "config.range.name": "Phạm vi kích hoạt",
+  "config.range.tooltip": "Khoảng cách bạn phải đứng gần rương (tính bằng ô) để nó kéo vật phẩm.",
+
+  "config.sound-cooldown.name": "Thời gian hồi âm thanh",
+  "config.sound-cooldown.tooltip": "Số tick phải chờ giữa các hiệu ứng âm thanh (60 tick = 1 giây).",
+
+  "config.menu-cooldown.name": "Thời gian hồi sau khi đóng menu",
+  "config.menu-cooldown.tooltip": "Số giây tắt tự động gửi đồ sau khi đóng rương (tránh việc đồ bị hút ngược lại ngay).",
+
+  "hud.items-moved": "+{{count}} {{itemName}}"
+}
