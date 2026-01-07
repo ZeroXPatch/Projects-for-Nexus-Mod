@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.1.11312.151 d18.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HorseFollower", "HorseFollower.csproj", "{528A772F-7143-EB01-3862-F62FE5C03C64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{528A772F-7143-EB01-3862-F62FE5C03C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{528A772F-7143-EB01-3862-F62FE5C03C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{528A772F-7143-EB01-3862-F62FE5C03C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{528A772F-7143-EB01-3862-F62FE5C03C64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D6047B5-B4D9-4CCA-82DF-BA3A91177482}
+	EndGlobalSection
+EndGlobal

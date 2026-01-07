@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Horse following\bin\Debug\net6.0\HorseFollower.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Horse following\bin\Debug\net6.0\HorseFollower.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Horse following\obj\Debug\net6.0\HorseFollower.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Horse following\obj\Debug\net6.0\HorseFollower.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Horse following\obj\Debug\net6.0\HorseFollower.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Horse following\obj\Debug\net6.0\HorseFollower.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Horse following\obj\Debug\net6.0\HorseFollower.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Horse following\obj\Debug\net6.0\HorseFollower.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Horse following\obj\Debug\net6.0\HorseFollower.dll

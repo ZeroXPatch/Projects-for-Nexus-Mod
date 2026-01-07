@@ -1,7 +1,0 @@
-{
-  "EnableRandomSpeech": true,
-  "SpeechIntervalMinutes": 10,
-  "SpeechChance": 0.25,
-  "UpdateCheckIntervalTicks": 30,
-  "Lines": []
-}

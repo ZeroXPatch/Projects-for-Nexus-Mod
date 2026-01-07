@@ -3,9 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Teleport you to bed\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GOG Games\\Stardew Valley\\Mods\\Auto Teleport you to Home by 0140 AM\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GOG Games\\Stardew Valley\\Mods\\GoToBed\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -32,25 +29,14 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "config.json",
-              "DocumentMoniker": "C:\\GOG Games\\Stardew Valley\\Mods\\Auto Teleport you to Home by 0140 AM\\config.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\Auto Teleport you to Home by 0140 AM\\config.json",
-              "ToolTip": "C:\\GOG Games\\Stardew Valley\\Mods\\Auto Teleport you to Home by 0140 AM\\config.json",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\Auto Teleport you to Home by 0140 AM\\config.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-06T23:39:04.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "config.json",
               "DocumentMoniker": "C:\\GOG Games\\Stardew Valley\\Mods\\GoToBed\\config.json",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\GoToBed\\config.json",
               "ToolTip": "C:\\GOG Games\\Stardew Valley\\Mods\\GoToBed\\config.json",
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\GOG Games\\Stardew Valley\\Mods\\GoToBed\\config.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-31T02:31:58.446Z"
+              "WhenOpened": "2025-12-31T02:31:58.446Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",

@@ -1,0 +1,10 @@
+{
+  "Name": "Safe Return Scepter",
+  "Author": "ZeroXPatch",
+  "Version": "1.1.0",
+  "Description": "Requires a double-click to activate the Return Scepter to prevent accidental warping.",
+  "UniqueID": "ZeroXPatch.SafeReturnScepter",
+  "EntryDll": "SafeReturnScepter.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus:40921" ]
+}

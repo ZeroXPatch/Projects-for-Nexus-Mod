@@ -1,0 +1,10 @@
+{
+  "Name": "Horse Follower",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Toggle horse follow/stay modes. Horse warps across maps.",
+  "UniqueID": "ZeroXPatch.HorseFollower",
+  "EntryDll": "HorseFollower.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}
