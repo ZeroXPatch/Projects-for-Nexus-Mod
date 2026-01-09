@@ -1,0 +1,15 @@
+{
+  "config.section.general": "一般",
+  "config.section.friendship": "友好度スケーリング",
+  "config.section.items": "アイテム",
+  "config.enabled.name": "Modを有効にする",
+  "config.enabled.desc": "Modをオン/オフにします。",
+  "config.base_chance.name": "基本確率",
+  "config.base_chance.desc": "NPCがお返しのプレゼントをくれる基本確率（0.01 = 1%）。",
+  "config.scaling.name": "スケーリングを有効化",
+  "config.scaling.desc": "有効にすると、友好度が高いほどプレゼントを受け取る確率が上がります。",
+  "config.heart_chance.name": "ハートごとの確率",
+  "config.heart_chance.desc": "友好度ハート1つあたりに追加される確率（0.005 = +0.5%）。",
+  "config.max_value.name": "最大ギフト価値",
+  "config.max_value.desc": "NPCがくれるアイテムの最大売却価格。強すぎるアイテムの受け取りを防ぎます。"
+}

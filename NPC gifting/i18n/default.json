@@ -1,0 +1,20 @@
+{
+  "config.section.general": "General",
+  "config.section.friendship": "Friendship Scaling",
+  "config.section.items": "Items",
+
+  "config.enabled.name": "Enable Mod",
+  "config.enabled.desc": "Toggle the mod on or off.",
+
+  "config.base_chance.name": "Base Chance",
+  "config.base_chance.desc": "The base percentage chance an NPC will gift you back (0.01 = 1%).",
+
+  "config.scaling.name": "Enable Scaling",
+  "config.scaling.desc": "If enabled, higher friendship levels increase the chance of receiving a gift.",
+
+  "config.heart_chance.name": "Chance Per Heart",
+  "config.heart_chance.desc": "How much extra chance is added per friendship heart (0.005 = +0.5%).",
+
+  "config.max_value.name": "Max Gift Value",
+  "config.max_value.desc": "The maximum sell price of items NPCs can give you. Prevents receiving overpowered items."
+}

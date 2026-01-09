@@ -1,0 +1,10 @@
+{
+  "Name": "Gift Back",
+  "Author": "YourName",
+  "Version": "1.0.0",
+  "Description": "NPCs have a chance to give a gift back immediately after receiving one.",
+  "UniqueID": "YourName.GiftBack",
+  "EntryDll": "GiftBack.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

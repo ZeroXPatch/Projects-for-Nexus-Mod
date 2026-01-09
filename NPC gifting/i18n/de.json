@@ -1,0 +1,15 @@
+{
+  "config.section.general": "Allgemein",
+  "config.section.friendship": "Freundschaftsskalierung",
+  "config.section.items": "Gegenstände",
+  "config.enabled.name": "Mod aktivieren",
+  "config.enabled.desc": "Schaltet den Mod ein oder aus.",
+  "config.base_chance.name": "Grundchance",
+  "config.base_chance.desc": "Die grundlegende prozentuale Chance, dass ein NPC dir ein Geschenk zurückgibt (0.01 = 1%).",
+  "config.scaling.name": "Skalierung aktivieren",
+  "config.scaling.desc": "Wenn aktiviert, erhöhen höhere Freundschaftsstufen die Chance, ein Geschenk zu erhalten.",
+  "config.heart_chance.name": "Chance pro Herz",
+  "config.heart_chance.desc": "Wie viel zusätzliche Chance pro Freundschaftsherz hinzugefügt wird (0.005 = +0.5%).",
+  "config.max_value.name": "Max. Geschenkwert",
+  "config.max_value.desc": "Der maximale Verkaufspreis von Gegenständen, die NPCs dir geben können. Verhindert übermächtige Gegenstände."
+}

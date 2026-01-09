@@ -1,0 +1,10 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMShortcut\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMShortcut\bin\Debug\net6.0\GMCMShortcut.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMShortcut\bin\Debug\net6.0\GMCMShortcut.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMShortcut\obj\Debug\net6.0\GMCMShortcut.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMShortcut\obj\Debug\net6.0\GMCMShortcut.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMShortcut\obj\Debug\net6.0\GMCMShortcut.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMShortcut\obj\Debug\net6.0\GMCMShortcut.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMShortcut\obj\Debug\net6.0\GMCMShortcut.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMShortcut\obj\Debug\net6.0\GMCMShortcut.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\GMCMShortcut\obj\Debug\net6.0\GMCMShortcut.dll

@@ -1,0 +1,15 @@
+{
+  "config.section.general": "Generale",
+  "config.section.friendship": "Scalatura dell'amicizia",
+  "config.section.items": "Oggetti",
+  "config.enabled.name": "Abilita mod",
+  "config.enabled.desc": "Attiva o disattiva la mod.",
+  "config.base_chance.name": "Probabilità base",
+  "config.base_chance.desc": "La probabilità percentuale base che un PNG ti faccia un regalo in risposta (0.01 = 1%).",
+  "config.scaling.name": "Abilita scalatura",
+  "config.scaling.desc": "Se attivata, livelli di amicizia più alti aumentano la probabilità di ricevere un regalo.",
+  "config.heart_chance.name": "Probabilità per cuore",
+  "config.heart_chance.desc": "Quanta probabilità extra viene aggiunta per ogni cuore di amicizia (0.005 = +0.5%).",
+  "config.max_value.name": "Valore massimo del regalo",
+  "config.max_value.desc": "Il prezzo di vendita massimo degli oggetti che i PNG possono darti. Evita di ricevere oggetti troppo potenti."
+}

@@ -1,0 +1,15 @@
+{
+  "config.section.general": "General",
+  "config.section.friendship": "Escalado de amistad",
+  "config.section.items": "Objetos",
+  "config.enabled.name": "Activar mod",
+  "config.enabled.desc": "Activa o desactiva el mod.",
+  "config.base_chance.name": "Probabilidad base",
+  "config.base_chance.desc": "La probabilidad porcentual base de que un PNJ te devuelva un regalo (0.01 = 1%).",
+  "config.scaling.name": "Activar escalado",
+  "config.scaling.desc": "Si está activado, niveles de amistad más altos aumentan la probabilidad de recibir un regalo.",
+  "config.heart_chance.name": "Probabilidad por corazón",
+  "config.heart_chance.desc": "Cuánta probabilidad extra se añade por cada corazón de amistad (0.005 = +0.5%).",
+  "config.max_value.name": "Valor máximo del regalo",
+  "config.max_value.desc": "El precio de venta máximo de los objetos que los PNJ pueden darte. Evita recibir objetos demasiado poderosos."
+}

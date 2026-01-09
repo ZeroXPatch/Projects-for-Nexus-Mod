@@ -1,0 +1,10 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPC gifting\obj\Debug\net6.0\GiftBack.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPC gifting\obj\Debug\net6.0\GiftBack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPC gifting\obj\Debug\net6.0\GiftBack.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPC gifting\obj\Debug\net6.0\GiftBack.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPC gifting\obj\Debug\net6.0\GiftBack.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPC gifting\obj\Debug\net6.0\GiftBack.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPC gifting\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPC gifting\bin\Debug\net6.0\GiftBack.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPC gifting\bin\Debug\net6.0\GiftBack.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPC gifting\obj\Debug\net6.0\GiftBack.dll

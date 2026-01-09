@@ -1,0 +1,15 @@
+{
+  "config.section.general": "Ogólne",
+  "config.section.friendship": "Skalowanie przyjaźni",
+  "config.section.items": "Przedmioty",
+  "config.enabled.name": "Włącz mod",
+  "config.enabled.desc": "Włącza lub wyłącza moda.",
+  "config.base_chance.name": "Podstawowa szansa",
+  "config.base_chance.desc": "Podstawowa procentowa szansa, że NPC odwdzięczy się prezentem (0.01 = 1%).",
+  "config.scaling.name": "Włącz skalowanie",
+  "config.scaling.desc": "Po włączeniu wyższy poziom przyjaźni zwiększa szansę na otrzymanie prezentu.",
+  "config.heart_chance.name": "Szansa na serce",
+  "config.heart_chance.desc": "Ile dodatkowej szansy jest dodawane za każde serce przyjaźni (0.005 = +0.5%).",
+  "config.max_value.name": "Maks. wartość prezentu",
+  "config.max_value.desc": "Maksymalna cena sprzedaży przedmiotów, które NPC mogą ci dać. Zapobiega otrzymywaniu zbyt potężnych przedmiotów."
+}

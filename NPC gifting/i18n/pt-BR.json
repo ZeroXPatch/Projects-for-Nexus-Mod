@@ -1,0 +1,15 @@
+{
+  "config.section.general": "Geral",
+  "config.section.friendship": "Escalonamento de amizade",
+  "config.section.items": "Itens",
+  "config.enabled.name": "Ativar mod",
+  "config.enabled.desc": "Liga ou desliga o mod.",
+  "config.base_chance.name": "Chance base",
+  "config.base_chance.desc": "A chance percentual base de um NPC te dar um presente de volta (0.01 = 1%).",
+  "config.scaling.name": "Ativar escalonamento",
+  "config.scaling.desc": "Se ativado, níveis de amizade mais altos aumentam a chance de receber um presente.",
+  "config.heart_chance.name": "Chance por coração",
+  "config.heart_chance.desc": "Quanto de chance extra é adicionada por coração de amizade (0.005 = +0.5%).",
+  "config.max_value.name": "Valor máximo do presente",
+  "config.max_value.desc": "O preço máximo de venda dos itens que os NPCs podem te dar. Evita receber itens muito fortes."
+}

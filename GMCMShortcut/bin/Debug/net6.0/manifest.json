@@ -1,0 +1,16 @@
+{
+  "Name": "GMCM Shortcut",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Adds a configurable shortcut (default F10) to open GMCM.",
+  "UniqueID": "ZeroXPatch.GMCMShortcut",
+  "EntryDll": "GMCMShortcut.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [],
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": true
+    }
+  ]
+}

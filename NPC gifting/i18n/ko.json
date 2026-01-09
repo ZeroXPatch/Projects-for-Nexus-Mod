@@ -1,0 +1,15 @@
+{
+  "config.section.general": "일반",
+  "config.section.friendship": "친밀도 스케일링",
+  "config.section.items": "아이템",
+  "config.enabled.name": "모드 활성화",
+  "config.enabled.desc": "모드를 켜거나 끕니다.",
+  "config.base_chance.name": "기본 확률",
+  "config.base_chance.desc": "NPC가 답례 선물을 줄 기본 확률(0.01 = 1%).",
+  "config.scaling.name": "스케일링 활성화",
+  "config.scaling.desc": "활성화하면 친밀도 레벨이 높을수록 선물을 받을 확률이 증가합니다.",
+  "config.heart_chance.name": "하트당 확률",
+  "config.heart_chance.desc": "친밀도 하트당 추가되는 확률(0.005 = +0.5%).",
+  "config.max_value.name": "최대 선물 가치",
+  "config.max_value.desc": "NPC가 줄 수 있는 아이템의 최대 판매 가격입니다. 너무 강한 아이템을 받는 것을 방지합니다."
+}

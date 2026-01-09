@@ -1,0 +1,15 @@
+{
+  "config.section.general": "Общие",
+  "config.section.friendship": "Масштабирование дружбы",
+  "config.section.items": "Предметы",
+  "config.enabled.name": "Включить мод",
+  "config.enabled.desc": "Включает или отключает мод.",
+  "config.base_chance.name": "Базовый шанс",
+  "config.base_chance.desc": "Базовый процентный шанс того, что NPC подарит вам подарок в ответ (0.01 = 1%).",
+  "config.scaling.name": "Включить масштабирование",
+  "config.scaling.desc": "Если включено, более высокий уровень дружбы повышает шанс получить подарок.",
+  "config.heart_chance.name": "Шанс за сердце",
+  "config.heart_chance.desc": "Сколько дополнительного шанса добавляется за каждое сердце дружбы (0.005 = +0.5%).",
+  "config.max_value.name": "Макс. ценность подарка",
+  "config.max_value.desc": "Максимальная цена продажи предметов, которые NPC могут вам дать. Предотвращает получение слишком сильных предметов."
+}

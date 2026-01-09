@@ -1,0 +1,15 @@
+{
+  "config.section.general": "Chung",
+  "config.section.friendship": "Điều chỉnh theo tình bạn",
+  "config.section.items": "Vật phẩm",
+  "config.enabled.name": "Bật mod",
+  "config.enabled.desc": "Bật hoặc tắt mod.",
+  "config.base_chance.name": "Tỷ lệ cơ bản",
+  "config.base_chance.desc": "Tỷ lệ phần trăm cơ bản để NPC tặng quà lại cho bạn (0.01 = 1%).",
+  "config.scaling.name": "Bật điều chỉnh",
+  "config.scaling.desc": "Nếu bật, mức tình bạn cao hơn sẽ tăng cơ hội nhận quà.",
+  "config.heart_chance.name": "Tỷ lệ mỗi tim",
+  "config.heart_chance.desc": "Lượng tỷ lệ tăng thêm cho mỗi tim tình bạn (0.005 = +0.5%).",
+  "config.max_value.name": "Giá trị quà tối đa",
+  "config.max_value.desc": "Giá bán tối đa của vật phẩm mà NPC có thể tặng bạn. Ngăn nhận vật phẩm quá mạnh."
+}

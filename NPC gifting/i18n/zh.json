@@ -1,0 +1,15 @@
+{
+  "config.section.general": "常规",
+  "config.section.friendship": "友谊缩放",
+  "config.section.items": "物品",
+  "config.enabled.name": "启用模组",
+  "config.enabled.desc": "打开或关闭该模组。",
+  "config.base_chance.name": "基础概率",
+  "config.base_chance.desc": "NPC回赠礼物的基础百分比概率（0.01 = 1%）。",
+  "config.scaling.name": "启用缩放",
+  "config.scaling.desc": "启用后，更高的友谊等级会提高收到礼物的概率。",
+  "config.heart_chance.name": "每颗心的概率",
+  "config.heart_chance.desc": "每颗友谊之心增加的额外概率（0.005 = +0.5%）。",
+  "config.max_value.name": "礼物最大价值",
+  "config.max_value.desc": "NPC可赠送物品的最高出售价格。防止收到过强的物品。"
+}

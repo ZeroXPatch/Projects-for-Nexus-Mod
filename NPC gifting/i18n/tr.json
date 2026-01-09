@@ -1,0 +1,15 @@
+{
+  "config.section.general": "Genel",
+  "config.section.friendship": "Dostluk ölçeklendirmesi",
+  "config.section.items": "Eşyalar",
+  "config.enabled.name": "Modu Etkinleştir",
+  "config.enabled.desc": "Modu açar veya kapatır.",
+  "config.base_chance.name": "Temel şans",
+  "config.base_chance.desc": "Bir NPC'nin size karşılık hediye vermesinin temel yüzde şansı (0.01 = 1%).",
+  "config.scaling.name": "Ölçeklendirmeyi etkinleştir",
+  "config.scaling.desc": "Etkinleştirilirse, daha yüksek dostluk seviyeleri hediye alma şansını artırır.",
+  "config.heart_chance.name": "Kalp başına şans",
+  "config.heart_chance.desc": "Dostluk kalbi başına eklenen ek şans miktarı (0.005 = +0.5%).",
+  "config.max_value.name": "Maksimum hediye değeri",
+  "config.max_value.desc": "NPC'lerin size verebileceği eşyaların maksimum satış fiyatı. Aşırı güçlü eşyalar alınmasını engeller."
+}

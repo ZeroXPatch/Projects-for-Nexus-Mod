@@ -1,0 +1,15 @@
+{
+  "config.section.general": "Général",
+  "config.section.friendship": "Mise à l'échelle de l'amitié",
+  "config.section.items": "Objets",
+  "config.enabled.name": "Activer le mod",
+  "config.enabled.desc": "Active ou désactive le mod.",
+  "config.base_chance.name": "Chance de base",
+  "config.base_chance.desc": "La chance de base (en pourcentage) qu'un PNJ te rende un cadeau (0.01 = 1 %).",
+  "config.scaling.name": "Activer la mise à l'échelle",
+  "config.scaling.desc": "Si activé, des niveaux d'amitié plus élevés augmentent la chance de recevoir un cadeau.",
+  "config.heart_chance.name": "Chance par cœur",
+  "config.heart_chance.desc": "Quantité de chance supplémentaire ajoutée par cœur d'amitié (0.005 = +0,5 %).",
+  "config.max_value.name": "Valeur max du cadeau",
+  "config.max_value.desc": "Le prix de vente maximum des objets que les PNJ peuvent te donner. Empêche de recevoir des objets trop puissants."
+}
