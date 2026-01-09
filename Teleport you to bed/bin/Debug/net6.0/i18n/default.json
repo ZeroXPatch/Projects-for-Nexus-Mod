@@ -1,0 +1,21 @@
+{
+  "warning.message": "You will be teleported home in 20 mins. Please be ready...",
+  
+  "config.warp-time.name": "Warp Time",
+  "config.warp-time.desc": "The time (in 24h format) when you will be teleported home (e.g., 2540 = 1:40 AM).",
+  
+  "config.warning-time.name": "Warning Time",
+  "config.warning-time.desc": "The time (in 24h format) when the warning message appears.",
+  
+  "config.warning-msg.name": "Warning Message",
+  "config.warning-msg.desc": "The message displayed to the player.",
+  
+  "config.target-loc.name": "Target Location",
+  "config.target-loc.desc": "The internal map name of your home (Default: FarmHouse).",
+  
+  "config.target-x.name": "Target X",
+  "config.target-x.desc": "The X coordinate tile to land on.",
+  
+  "config.target-y.name": "Target Y",
+  "config.target-y.desc": "The Y coordinate tile to land on."
+}

@@ -9,15 +9,6 @@ using StardewValley.Objects;
 
 namespace WoodPileStorage
 {
-    // 1. Define a simple model to save data safely.
-    // This ignores complex properties (like boundingBox) that cause the crash.
-    public class SavedItem
-    {
-        public string ItemId { get; set; }
-        public int Stack { get; set; }
-        public int Quality { get; set; }
-    }
-
     public class ModEntry : Mod
     {
         private Chest? virtualChest;
@@ -52,7 +43,6 @@ namespace WoodPileStorage
                 save: () => this.Helper.WriteConfig(this.config)
             );
 
-            // --- Existing Options ---
             configMenu.AddBoolOption(
                 mod: this.ModManifest,
                 name: () => this.Helper.Translation.Get("config.enable-auto-deposit.name"),
@@ -79,7 +69,6 @@ namespace WoodPileStorage
                 min: 0, max: 60
             );
 
-            // --- New Options ---
             configMenu.AddBoolOption(
                 mod: this.ModManifest,
                 name: () => this.Helper.Translation.Get("config.allow-resource.name"),
@@ -100,20 +89,13 @@ namespace WoodPileStorage
         private void OnSaveLoaded(object? sender, SaveLoadedEventArgs e)
         {
             virtualChest = new Chest(playerChest: true);
-
-            // 2. Read the simple 'SavedItem' list instead of the complex Item list
-            var savedItems = this.Helper.Data.ReadSaveData<List<SavedItem>>(SaveKey);
+            var savedItems = this.Helper.Data.ReadSaveData<List<Item>>(SaveKey);
 
             if (savedItems != null)
             {
-                foreach (var saved in savedItems)
+                foreach (var item in savedItems)
                 {
-                    // 3. Reconstruct the actual Item object using ItemRegistry
-                    Item item = ItemRegistry.Create(saved.ItemId, saved.Stack, saved.Quality);
-                    if (item != null)
-                    {
-                        virtualChest.Items.Add(item);
-                    }
+                    virtualChest.Items.Add(item);
                 }
             }
         }
@@ -122,30 +104,12 @@ namespace WoodPileStorage
         {
             if (virtualChest == null) return;
 
-            // Clean up empty slots
             for (int i = virtualChest.Items.Count - 1; i >= 0; i--)
             {
                 if (virtualChest.Items[i] == null)
                     virtualChest.Items.RemoveAt(i);
             }
-
-            // 4. Convert the game items into our safe 'SavedItem' model
-            var dataToSave = new List<SavedItem>();
-            foreach (var item in virtualChest.Items)
-            {
-                if (item != null)
-                {
-                    dataToSave.Add(new SavedItem
-                    {
-                        ItemId = item.ItemId,
-                        Stack = item.Stack,
-                        Quality = item.Quality
-                    });
-                }
-            }
-
-            // 5. Write the safe list (prevents JSON loop crash)
-            this.Helper.Data.WriteSaveData(SaveKey, dataToSave);
+            this.Helper.Data.WriteSaveData(SaveKey, virtualChest.Items);
         }
 
         private void OnUpdateTicked(object? sender, UpdateTickedEventArgs e)
@@ -153,7 +117,6 @@ namespace WoodPileStorage
             if (!Context.IsWorldReady || !Context.IsPlayerFree) return;
             if (Game1.currentLocation is not Farm) return;
 
-            // --- Menu Logic ---
             bool isMenuOpen = Game1.activeClickableMenu is ItemGrabMenu menu && menu.sourceItem == virtualChest;
 
             if (wasMenuOpen && !isMenuOpen)
@@ -162,7 +125,6 @@ namespace WoodPileStorage
             }
             wasMenuOpen = isMenuOpen;
 
-            // --- Auto Deposit Logic ---
             if (!config.EnableAutoDeposit) return;
             if (isMenuOpen || Game1.currentGameTime.TotalGameTime.TotalSeconds < cooldownTime) return;
 
@@ -253,12 +215,23 @@ namespace WoodPileStorage
             return validX && validY;
         }
 
+        // --- UPDATED LOGIC ---
         private bool IsAllowedItem(Item item)
         {
             if (item == null) return false;
 
+            // 1. Always Allow: Wood & Hardwood
             if (item.ItemId == "388" || item.ItemId == "709") return true;
-            if (config.EnableResourceStorage && item.Category == -16) return true;
+
+            // 2. Allow Resources if enabled
+            if (config.EnableResourceStorage)
+            {
+                // Category -16 (Stone, Fiber, Clay)
+                // Category -15 (Coal, Copper, Iron, Gold, Iridium)
+                if (item.Category == -16 || item.Category == -15) return true;
+            }
+
+            // 3. Allow Trash if enabled (Category -20)
             if (config.EnableTrashStorage && item.Category == -20) return true;
 
             return false;
@@ -294,16 +267,8 @@ namespace WoodPileStorage
 
         private bool InventoryHighlight(Item item)
         {
-            if (virtualChest != null && virtualChest.Items.Contains(item))
-            {
-                return true;
-            }
-
-            if (IsAllowedItem(item))
-            {
-                return true;
-            }
-
+            if (virtualChest != null && virtualChest.Items.Contains(item)) return true;
+            if (IsAllowedItem(item)) return true;
             return false;
         }
     }

@@ -28,9 +28,7 @@ namespace SafeReturnScepter
             if (!e.Button.IsUseToolButton())
                 return;
 
-            // 3. Check specifically for the Return Scepter using its Unique ID.
-            // "(T)ReturnScepter" is the Qualified Item ID in Stardew Valley 1.6+.
-            // This is safer than checking names or generic types.
+            // 3. Check specifically for the Return Scepter using its Unique ID
             if (Game1.player.CurrentItem?.QualifiedItemId != "(T)ReturnScepter")
                 return;
 
@@ -47,8 +45,7 @@ namespace SafeReturnScepter
                 string message = this.Helper.Translation.Get("notification.double-click");
                 Game1.addHUDMessage(new HUDMessage(message, 3));
 
-                // Audio Feedback
-                Game1.playSound("refuse");
+                // Audio removed as requested
 
                 // Prevent the warp
                 this.Helper.Input.Suppress(e.Button);

@@ -7,7 +7,7 @@
     <!-- Enables strict null checking and modern C# features -->
     <Nullable>enable</Nullable> 
     <ImplicitUsings>enable</ImplicitUsings>
-    <Platforms>x64</Platforms>
+    <Platforms>x64;AnyCPU</Platforms>
   </PropertyGroup>
 
   <ItemGroup>

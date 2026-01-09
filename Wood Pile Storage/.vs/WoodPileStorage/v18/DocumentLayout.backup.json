@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Wood Pile Storage\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zjmto\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\build\\Pathoschild.Stardew.ModBuildConfig.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{01A09C14-9B5A-EC8A-D1DB-E328C86C7CFB}|WoodPileStorage.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\wood pile storage\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01A09C14-9B5A-EC8A-D1DB-E328C86C7CFB}|WoodPileStorage.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01A09C14-9B5A-EC8A-D1DB-E328C86C7CFB}|WoodPileStorage.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\wood pile storage\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01A09C14-9B5A-EC8A-D1DB-E328C86C7CFB}|WoodPileStorage.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zjmto\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\build\\Pathoschild.Stardew.ModBuildConfig.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01A09C14-9B5A-EC8A-D1DB-E328C86C7CFB}|WoodPileStorage.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\wood pile storage\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -16,10 +20,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{01A09C14-9B5A-EC8A-D1DB-E328C86C7CFB}|WoodPileStorage.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\wood pile storage\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{01A09C14-9B5A-EC8A-D1DB-E328C86C7CFB}|WoodPileStorage.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01A09C14-9B5A-EC8A-D1DB-E328C86C7CFB}|WoodPileStorage.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\wood pile storage\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01A09C14-9B5A-EC8A-D1DB-E328C86C7CFB}|WoodPileStorage.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01A09C14-9B5A-EC8A-D1DB-E328C86C7CFB}|WoodPileStorage.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\wood pile storage\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,11 +43,11 @@
         },
         {
           "DockedWidth": 405,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Pathoschild.Stardew.ModBuildConfig.targets",
               "DocumentMoniker": "C:\\Users\\zjmto\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\build\\Pathoschild.Stardew.ModBuildConfig.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\build\\Pathoschild.Stardew.ModBuildConfig.targets",
@@ -60,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "default.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Wood Pile Storage\\i18n\\default.json",
               "RelativeDocumentMoniker": "i18n\\default.json",
@@ -68,12 +68,11 @@
               "RelativeToolTip": "i18n\\default.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-04T20:16:05.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-04T20:16:05.015Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Wood Pile Storage\\manifest.json",
               "RelativeDocumentMoniker": "manifest.json",
@@ -97,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "ModConfig.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Wood Pile Storage\\ModConfig.cs",
               "RelativeDocumentMoniker": "ModConfig.cs",
@@ -105,17 +104,18 @@
               "RelativeToolTip": "ModConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-04T16:44:11.637Z"
+              "WhenOpened": "2026-01-04T16:44:11.637Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Wood Pile Storage\\ModEntry.cs",
               "RelativeDocumentMoniker": "ModEntry.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Wood Pile Storage\\ModEntry.cs",
-              "RelativeToolTip": "ModEntry.cs",
-              "ViewState": "AgIAACEBAAAAAAAAAAAAwDUBAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Wood Pile Storage\\ModEntry.cs*",
+              "RelativeToolTip": "ModEntry.cs*",
+              "ViewState": "AgIAAAUBAAAAAAAAAAAUwBIBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-04T05:59:42.781Z",
               "EditorCaption": ""

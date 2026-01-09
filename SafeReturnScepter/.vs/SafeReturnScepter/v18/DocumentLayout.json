@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\SafeReturnScepter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5536BB31-C23E-E5C1-88E6-B5C3EDA0AE7E}|SafeReturnScepter.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\safereturnscepter\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5536BB31-C23E-E5C1-88E6-B5C3EDA0AE7E}|SafeReturnScepter.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5536BB31-C23E-E5C1-88E6-B5C3EDA0AE7E}|SafeReturnScepter.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\safereturnscepter\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5536BB31-C23E-E5C1-88E6-B5C3EDA0AE7E}|SafeReturnScepter.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5536BB31-C23E-E5C1-88E6-B5C3EDA0AE7E}|SafeReturnScepter.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\safereturnscepter\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5536BB31-C23E-E5C1-88E6-B5C3EDA0AE7E}|SafeReturnScepter.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,11 +28,11 @@
         },
         {
           "DockedWidth": 405,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\SafeReturnScepter\\manifest.json",
               "RelativeDocumentMoniker": "manifest.json",
@@ -45,13 +45,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\SafeReturnScepter\\ModEntry.cs",
               "RelativeDocumentMoniker": "ModEntry.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\SafeReturnScepter\\ModEntry.cs",
               "RelativeToolTip": "ModEntry.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAADwvz8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAwDwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-06T22:39:42.97Z",
               "EditorCaption": ""

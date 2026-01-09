@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SafeReturnScepter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b177d63ca9cd0dcc32161ffb4f583cce2cb1a5cd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25aa110da210b88788b44a10c42d0f8d6e36104f")]
 [assembly: System.Reflection.AssemblyProductAttribute("SafeReturnScepter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SafeReturnScepter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

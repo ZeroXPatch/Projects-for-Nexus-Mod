@@ -11,7 +11,8 @@ namespace GoToBed
         public int WarningTime { get; set; } = 2520;
 
         // Message to display
-        public string WarningMessage { get; set; } = "You will be teleported home in 20 mins. Please be ready...";
+        // Added '?' to string to allow it to be null
+        public string? WarningMessage { get; set; } = null;
 
         // Target location name (FarmHouse is the standard name for the player's home interior)
         public string TargetLocation { get; set; } = "FarmHouse";
