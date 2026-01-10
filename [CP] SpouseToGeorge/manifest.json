@@ -1,0 +1,11 @@
+{
+  "Name": "Spouse to George",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Dynamically transforms your current spouse into George.",
+  "UniqueID": "ZeroXPatch.SpouseToGeorge",
+  "UpdateKeys": [],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  }
+}

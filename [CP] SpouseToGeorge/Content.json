@@ -1,0 +1,23 @@
+{
+  Format 2.0.0,
+  Changes [
+    {
+      LogName Replace Spouse Sprite with George,
+      Action Load,
+      Target Characters{{Spouse}},
+      FromFile assetsGeorge_Sprite.png,
+      When {
+        HasValue{{Spouse}} true
+      }
+    },
+    {
+      LogName Replace Spouse Portrait with George,
+      Action Load,
+      Target Portraits{{Spouse}},
+      FromFile assetsGeorge_Portrait.png,
+      When {
+        HasValue{{Spouse}} true
+      }
+    }
+  ]
+}

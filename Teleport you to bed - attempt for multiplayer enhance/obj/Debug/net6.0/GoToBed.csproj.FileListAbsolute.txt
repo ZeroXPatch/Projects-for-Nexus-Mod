@@ -1,0 +1,22 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed\bin\Debug\net6.0\GoToBed.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed\bin\Debug\net6.0\GoToBed.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed\obj\Debug\net6.0\GoToBed.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed\obj\Debug\net6.0\GoToBed.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed\obj\Debug\net6.0\GoToBed.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed\obj\Debug\net6.0\GoToBed.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed\obj\Debug\net6.0\GoToBed.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed\obj\Debug\net6.0\GoToBed.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed\obj\Debug\net6.0\GoToBed.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed - attempt for multiplayer enhance\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed - attempt for multiplayer enhance\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed - attempt for multiplayer enhance\bin\Debug\net6.0\GoToBed.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed - attempt for multiplayer enhance\bin\Debug\net6.0\GoToBed.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed - attempt for multiplayer enhance\obj\Debug\net6.0\GoToBed.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed - attempt for multiplayer enhance\obj\Debug\net6.0\GoToBed.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed - attempt for multiplayer enhance\obj\Debug\net6.0\GoToBed.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed - attempt for multiplayer enhance\obj\Debug\net6.0\GoToBed.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed - attempt for multiplayer enhance\obj\Debug\net6.0\GoToBed.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed - attempt for multiplayer enhance\obj\Debug\net6.0\GoToBed.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Teleport you to bed - attempt for multiplayer enhance\obj\Debug\net6.0\GoToBed.dll

@@ -1,0 +1,17 @@
+{
+  "Name": "Go To Bed",
+  "Author": "ZeroXPatch",
+  "Version": "1.1.0",
+  "Description": "Teleports the player home at 1:40 AM with a warning at 1:20 AM.",
+  "UniqueID": "ZeroXPatch.GoToBed",
+  "EntryDll": "GoToBed.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [],
+  "Translation": "i18n",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ]
+}

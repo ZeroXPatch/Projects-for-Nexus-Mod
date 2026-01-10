@@ -1,0 +1,24 @@
+{
+  "warning.message": "You will be teleported home in 20 mins. Please be ready...",
+
+  "config.warp-time.name": "Warp Time",
+  "config.warp-time.desc": "The time when you will be teleported home.",
+
+  "config.warning-time.name": "Warning Time",
+  "config.warning-time.desc": "The time when the warning message appears.",
+
+  "config.warning-msg.name": "Warning Message",
+  "config.warning-msg.desc": "The message displayed to the player.",
+
+  "config.warp-bed.name": "Warp to Bed",
+  "config.warp-bed.desc": "If checked, warps you directly to your specific bed (Recommended for Multiplayer). Ignores the manual coordinates below.",
+
+  "config.target-loc.name": "Target Location",
+  "config.target-loc.desc": "Manual Override: The map name (e.g., FarmHouse). Ignored if 'Warp to Bed' is true.",
+
+  "config.target-x.name": "Target X",
+  "config.target-x.desc": "Manual Override: X coordinate.",
+
+  "config.target-y.name": "Target Y",
+  "config.target-y.desc": "Manual Override: Y coordinate."
+}
