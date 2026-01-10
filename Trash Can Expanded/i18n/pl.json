@@ -1,0 +1,15 @@
+{
+  "config.section.general": "Ustawienia ogólne",
+  "config.section.chances": "Dzienne szanse",
+  "config.enabled.name": "Włącz mod",
+  "config.enabled.desc": "Włącza lub wyłącza mod.",
+  "config.max_value.name": "Maksymalna wartość przedmiotu",
+  "config.max_value.desc": "Maksymalna cena sprzedaży przedmiotów znalezionych w śmieciach. Wyższe wartości pozwalają na rzadsze przedmioty (np. diamenty), ale tanie przedmioty nadal będą częstsze.",
+  "config.day.mon": "Szansa w poniedziałek",
+  "config.day.tue": "Szansa we wtorek",
+  "config.day.wed": "Szansa w środę",
+  "config.day.thu": "Szansa w czwartek",
+  "config.day.fri": "Szansa w piątek",
+  "config.day.sat": "Szansa w sobotę",
+  "config.day.sun": "Szansa w niedzielę"
+}

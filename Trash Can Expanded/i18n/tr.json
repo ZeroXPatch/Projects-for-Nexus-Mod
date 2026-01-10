@@ -1,0 +1,15 @@
+{
+  "config.section.general": "Genel Ayarlar",
+  "config.section.chances": "Günlük Olasılıklar",
+  "config.enabled.name": "Modu etkinleştir",
+  "config.enabled.desc": "Modu açar veya kapatır.",
+  "config.max_value.name": "Maksimum Öğe Değeri",
+  "config.max_value.desc": "Çöpte bulunan öğelerin maksimum satış fiyatı. Daha yüksek değerler (Elmas gibi) daha nadir öğelere izin verir, ancak ucuz öğeler yine de daha yaygın olur.",
+  "config.day.mon": "Pazartesi Olasılığı",
+  "config.day.tue": "Salı Olasılığı",
+  "config.day.wed": "Çarşamba Olasılığı",
+  "config.day.thu": "Perşembe Olasılığı",
+  "config.day.fri": "Cuma Olasılığı",
+  "config.day.sat": "Cumartesi Olasılığı",
+  "config.day.sun": "Pazar Olasılığı"
+}

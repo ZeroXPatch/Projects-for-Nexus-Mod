@@ -1,0 +1,15 @@
+{
+  "config.section.general": "一般設定",
+  "config.section.chances": "日別確率",
+  "config.enabled.name": "MODを有効化",
+  "config.enabled.desc": "MODをオン/オフに切り替えます。",
+  "config.max_value.name": "最大アイテム価値",
+  "config.max_value.desc": "ゴミ箱で見つかるアイテムの最大売値。値を高くすると（ダイヤモンドのような）希少なアイテムが出る可能性が増えますが、安価なアイテムの方が依然として一般的です。",
+  "config.day.mon": "月曜の確率",
+  "config.day.tue": "火曜の確率",
+  "config.day.wed": "水曜の確率",
+  "config.day.thu": "木曜の確率",
+  "config.day.fri": "金曜の確率",
+  "config.day.sat": "土曜の確率",
+  "config.day.sun": "日曜の確率"
+}

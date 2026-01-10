@@ -1,0 +1,59 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "TrashCanExpanded/1.0.0": {
+        "dependencies": {
+          "Lib.Harmony": "2.3.3"
+        },
+        "runtime": {
+          "TrashCanExpanded.dll": {}
+        }
+      },
+      "Lib.Harmony/2.3.3": {
+        "dependencies": {
+          "System.Text.Json": "6.0.9"
+        },
+        "runtime": {
+          "lib/net6.0/0Harmony.dll": {
+            "assemblyVersion": "2.3.3.0",
+            "fileVersion": "2.3.3.0"
+          }
+        }
+      },
+      "System.Text.Json/6.0.9": {
+        "runtime": {
+          "lib/net6.0/System.Text.Json.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.2523.51912"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TrashCanExpanded/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Lib.Harmony/2.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qxO8d2q7luoY8mTfCStQFOgRSd3dWZSS0Ffi5nrjX4qFkZxEBAEvNh5b/ZejTl2kY0fJs62LmfRJkBBTeiuuyQ==",
+      "path": "lib.harmony/2.3.3",
+      "hashPath": "lib.harmony.2.3.3.nupkg.sha512"
+    },
+    "System.Text.Json/6.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2j16oUgtIzl7Xtk7demG0i/v5aU/ZvULcAnJvPb63U3ZhXJ494UYcxuEj5Fs49i3XDrk5kU/8I+6l9zRCw3cJw==",
+      "path": "system.text.json/6.0.9",
+      "hashPath": "system.text.json.6.0.9.nupkg.sha512"
+    }
+  }
+}

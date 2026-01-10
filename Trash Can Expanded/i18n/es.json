@@ -1,0 +1,15 @@
+{
+  "config.section.general": "Configuración general",
+  "config.section.chances": "Probabilidades diarias",
+  "config.enabled.name": "Activar mod",
+  "config.enabled.desc": "Activa o desactiva el mod.",
+  "config.max_value.name": "Valor máximo de objeto",
+  "config.max_value.desc": "El precio máximo de venta de los objetos encontrados en la basura. Valores más altos permiten objetos más raros (como diamantes), pero los objetos baratos seguirán siendo más comunes.",
+  "config.day.mon": "Probabilidad del lunes",
+  "config.day.tue": "Probabilidad del martes",
+  "config.day.wed": "Probabilidad del miércoles",
+  "config.day.thu": "Probabilidad del jueves",
+  "config.day.fri": "Probabilidad del viernes",
+  "config.day.sat": "Probabilidad del sábado",
+  "config.day.sun": "Probabilidad del domingo"
+}

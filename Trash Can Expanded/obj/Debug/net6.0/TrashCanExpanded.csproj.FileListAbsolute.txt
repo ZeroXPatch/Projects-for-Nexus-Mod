@@ -1,0 +1,11 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Can Expanded\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Can Expanded\obj\Debug\net6.0\TrashCanExpanded.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Can Expanded\obj\Debug\net6.0\TrashCanExpanded.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Can Expanded\obj\Debug\net6.0\TrashCanExpanded.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Can Expanded\obj\Debug\net6.0\TrashCanExpanded.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Can Expanded\obj\Debug\net6.0\TrashCanExpanded.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Can Expanded\obj\Debug\net6.0\TrashCanExpanded.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Can Expanded\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Can Expanded\bin\Debug\net6.0\TrashCanExpanded.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Can Expanded\bin\Debug\net6.0\TrashCanExpanded.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Can Expanded\obj\Debug\net6.0\TrashCanExpanded.dll

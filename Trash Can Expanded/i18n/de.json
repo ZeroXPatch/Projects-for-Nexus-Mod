@@ -1,0 +1,15 @@
+{
+  "config.section.general": "Allgemeine Einstellungen",
+  "config.section.chances": "Tägliche Chancen",
+  "config.enabled.name": "Mod aktivieren",
+  "config.enabled.desc": "Schaltet den Mod ein oder aus.",
+  "config.max_value.name": "Maximaler Itemwert",
+  "config.max_value.desc": "Der maximale Verkaufspreis von Gegenständen, die im Müll gefunden werden. Höhere Werte ermöglichen seltenere Gegenstände (wie Diamanten), aber günstige Gegenstände sind weiterhin häufiger.",
+  "config.day.mon": "Montag-Chance",
+  "config.day.tue": "Dienstag-Chance",
+  "config.day.wed": "Mittwoch-Chance",
+  "config.day.thu": "Donnerstag-Chance",
+  "config.day.fri": "Freitag-Chance",
+  "config.day.sat": "Samstag-Chance",
+  "config.day.sun": "Sonntag-Chance"
+}

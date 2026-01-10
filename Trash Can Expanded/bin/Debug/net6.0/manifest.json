@@ -1,0 +1,10 @@
+{
+  "Name": "Trash Can Expanded",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Rummaging through trash cans has a daily chance to yield extra items.",
+  "UniqueID": "ZeroXPatch.TrashCanExpanded",
+  "EntryDll": "TrashCanExpanded.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

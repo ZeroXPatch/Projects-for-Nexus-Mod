@@ -1,0 +1,15 @@
+{
+  "config.section.general": "일반 설정",
+  "config.section.chances": "요일별 확률",
+  "config.enabled.name": "모드 활성화",
+  "config.enabled.desc": "모드를 켜거나 끕니다.",
+  "config.max_value.name": "아이템 최대 가치",
+  "config.max_value.desc": "쓰레기통에서 찾는 아이템의 최대 판매가입니다. 값을 높이면 (다이아몬드 같은) 희귀 아이템이 나올 수 있지만, 저가 아이템은 여전히 더 흔합니다.",
+  "config.day.mon": "월요일 확률",
+  "config.day.tue": "화요일 확률",
+  "config.day.wed": "수요일 확률",
+  "config.day.thu": "목요일 확률",
+  "config.day.fri": "금요일 확률",
+  "config.day.sat": "토요일 확률",
+  "config.day.sun": "일요일 확률"
+}

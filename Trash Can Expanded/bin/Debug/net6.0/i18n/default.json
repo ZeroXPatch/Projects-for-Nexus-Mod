@@ -1,0 +1,18 @@
+{
+  "config.section.general": "General Settings",
+  "config.section.chances": "Daily Chances",
+
+  "config.enabled.name": "Enable Mod",
+  "config.enabled.desc": "Toggle the mod on or off.",
+
+  "config.max_value.name": "Max Item Value",
+  "config.max_value.desc": "The maximum sell price of items found in trash. Higher values allow for rarer items (like Diamonds), but cheap items will still be more common.",
+
+  "config.day.mon": "Monday Chance",
+  "config.day.tue": "Tuesday Chance",
+  "config.day.wed": "Wednesday Chance",
+  "config.day.thu": "Thursday Chance",
+  "config.day.fri": "Friday Chance",
+  "config.day.sat": "Saturday Chance",
+  "config.day.sun": "Sunday Chance"
+}

@@ -1,0 +1,15 @@
+{
+  "config.section.general": "常规设置",
+  "config.section.chances": "每日概率",
+  "config.enabled.name": "启用模组",
+  "config.enabled.desc": "开启或关闭该模组。",
+  "config.max_value.name": "物品最大价值",
+  "config.max_value.desc": "垃圾桶中找到物品的最高出售价格。较高的数值允许出现更稀有的物品（如钻石），但便宜的物品仍会更常见。",
+  "config.day.mon": "周一概率",
+  "config.day.tue": "周二概率",
+  "config.day.wed": "周三概率",
+  "config.day.thu": "周四概率",
+  "config.day.fri": "周五概率",
+  "config.day.sat": "周六概率",
+  "config.day.sun": "周日概率"
+}

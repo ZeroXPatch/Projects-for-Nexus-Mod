@@ -55,8 +55,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\build\\Pathoschild.Stardew.ModBuildConfig.targets",
               "ViewState": "AgIAAEoAAAAAAAAAAAAvwFYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-01-05T06:11:34.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T06:11:34.385Z"
             },
             {
               "$type": "Document",
@@ -104,8 +103,7 @@
               "RelativeToolTip": "ModConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-04T16:44:11.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-04T16:44:11.637Z"
             },
             {
               "$type": "Document",
@@ -113,9 +111,9 @@
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Wood Pile Storage\\ModEntry.cs",
               "RelativeDocumentMoniker": "ModEntry.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Wood Pile Storage\\ModEntry.cs*",
-              "RelativeToolTip": "ModEntry.cs*",
-              "ViewState": "AgIAAAUBAAAAAAAAAAAUwBIBAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Wood Pile Storage\\ModEntry.cs",
+              "RelativeToolTip": "ModEntry.cs",
+              "ViewState": "AgIAABgBAAAAAAAAAAAUwCUBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-04T05:59:42.781Z",
               "EditorCaption": ""
