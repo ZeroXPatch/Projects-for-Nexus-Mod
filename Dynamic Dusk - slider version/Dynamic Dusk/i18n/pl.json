@@ -1,0 +1,34 @@
+{
+  "config.section.general": "Ustawienia ogólne",
+  "config.section.ranges": "Losowe przedziały (aktywne, gdy tryb losowy jest WŁĄCZONY)",
+  "config.section.manual": "Ręczny tygodniowy harmonogram (aktywny, gdy tryb losowy jest WYŁĄCZONY)",
+  "config.subtitle.spring": "--- Harmonogram wiosenny ---",
+  "config.subtitle.summer": "--- Harmonogram letni ---",
+  "config.subtitle.fall": "--- Harmonogram jesienny ---",
+  "config.subtitle.winter": "--- Harmonogram zimowy ---",
+
+  "config.random_mode.name": "Włącz tryb losowy",
+  "config.random_mode.desc": "Jeśli jest włączony, czas zachodu słońca będzie się dynamicznie zmieniać w oparciu o poniższe zakresy.",
+
+  "config.frequency.name": "Częstotliwość",
+  "config.frequency.desc": "Jak często w trybie losowym zmienia się czas zachodu słońca.",
+  "config.frequency.daily": "Codziennie",
+  "config.frequency.weekly": "Tygodniowo",
+  "config.frequency.seasonal": "Sezonowo",
+
+  "config.spring_min.name": "Zakres wiosenny: najwcześniej",
+  "config.spring_max.name": "Zakres wiosenny: najpóźniej",
+  "config.summer_min.name": "Zakres letni: najwcześniej",
+  "config.summer_max.name": "Zakres letni: najpóźniej",
+  "config.fall_min.name": "Zakres jesienny: najwcześniej",
+  "config.fall_max.name": "Zakres jesienny: najpóźniej",
+  "config.winter_min.name": "Zakres zimowy: najwcześniej",
+  "config.winter_max.name": "Zakres zimowy: najpóźniej",
+  "config.range.desc": "Tryb losowy używa tego zakresu.",
+
+  "config.week1": "Tydzień 1 (dni 1-7)",
+  "config.week2": "Tydzień 2 (dni 8-14)",
+  "config.week3": "Tydzień 3 (dni 15-21)",
+  "config.week4": "Tydzień 4 (dni 22-28)",
+  "config.manual.desc": "Stały czas zachodu słońca dla tego konkretnego tygodnia."
+}

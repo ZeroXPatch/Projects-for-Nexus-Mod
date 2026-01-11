@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Golden Transitions\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FA35785B-7B74-33E4-A2C3-B0B5CDEDD824}|GoldenTransitions.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\golden transitions\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA35785B-7B74-33E4-A2C3-B0B5CDEDD824}|GoldenTransitions.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FA35785B-7B74-33E4-A2C3-B0B5CDEDD824}|GoldenTransitions.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\golden transitions\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA35785B-7B74-33E4-A2C3-B0B5CDEDD824}|GoldenTransitions.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA35785B-7B74-33E4-A2C3-B0B5CDEDD824}|GoldenTransitions.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\golden transitions\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA35785B-7B74-33E4-A2C3-B0B5CDEDD824}|GoldenTransitions.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA35785B-7B74-33E4-A2C3-B0B5CDEDD824}|GoldenTransitions.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\golden transitions\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -32,30 +32,30 @@
         },
         {
           "DockedWidth": 405,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ModConfig.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Golden Transitions\\ModConfig.cs",
               "RelativeDocumentMoniker": "ModConfig.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Golden Transitions\\ModConfig.cs",
               "RelativeToolTip": "ModConfig.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwA0AAABKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-05T01:09:23.529Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Golden Transitions\\ModEntry.cs",
               "RelativeDocumentMoniker": "ModEntry.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Golden Transitions\\ModEntry.cs",
               "RelativeToolTip": "ModEntry.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAwIkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAuwJcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-05T00:56:45.836Z",
               "EditorCaption": ""
@@ -70,8 +70,7 @@
               "RelativeToolTip": "IGenericModConfigMenuApi.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T00:56:37.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T00:56:37.719Z"
             },
             {
               "$type": "Bookmark",

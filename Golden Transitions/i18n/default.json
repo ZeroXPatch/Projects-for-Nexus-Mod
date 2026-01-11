@@ -1,0 +1,18 @@
+{
+  config.section.appearance Appearance Settings,
+  config.section.color Color Customization,
+  config.section.schedule Schedule Settings,
+
+  config.intensity.name Max Intensity %,
+  config.intensity.desc The opacity of the glow at the exact moment of sunset (0-100%).,
+
+  config.red.name Red Amount,
+  config.green.name Green Amount,
+  config.blue.name Blue Amount,
+
+  config.buildup.name Build-Up Duration,
+  config.buildup.desc Minutes BEFORE sunset that the glow begins to appear (Golden Hour).,
+
+  config.fadeout.name Fade-Out Duration,
+  config.fadeout.desc Minutes AFTER sunset that the glow takes to disappear (Twilight).
+}

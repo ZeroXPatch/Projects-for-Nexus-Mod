@@ -11,24 +11,24 @@ namespace GoldenTransitions
     public class ModEntry : Mod
     {
         private ModConfig Config = null!;
-        private Texture2D Pixel = null!;
-
-        // Deep Sunset Orange
-        private readonly Color GoldenColor = new Color(255, 140, 20);
+        private Texture2D OverlayTexture = null!;
 
         public override void Entry(IModHelper helper)
         {
             Config = helper.ReadConfig<ModConfig>();
 
-            Pixel = new Texture2D(Game1.graphics.GraphicsDevice, 1, 1);
-            Pixel.SetData(new[] { Color.White });
+            // Generate a 1x1 white texture to serve as our overlay canvas
+            OverlayTexture = new Texture2D(Game1.graphics.GraphicsDevice, 1, 1);
+            OverlayTexture.SetData(new[] { Color.White });
 
+            // Hook into the rendering loop to draw on top of the world
             helper.Events.Display.RenderedWorld += OnRenderedWorld;
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
         }
 
         private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
         {
+            // Register with Generic Mod Config Menu
             var configMenu = Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
             if (configMenu is null) return;
 
@@ -38,101 +38,115 @@ namespace GoldenTransitions
                 save: () => Helper.WriteConfig(Config)
             );
 
-            configMenu.AddSectionTitle(mod: ModManifest, text: () => "Timing");
+            // --- SECTION 1: APPEARANCE ---
+            configMenu.AddSectionTitle(mod: ModManifest, text: () => Helper.Translation.Get("config.section.appearance"));
 
             configMenu.AddNumberOption(
                 mod: ModManifest,
-                getValue: () => Config.StartOffsetMinutes,
-                setValue: value => Config.StartOffsetMinutes = value,
-                name: () => "Start Offset (Minutes)",
-                tooltip: () => "When to start the effect relative to sunset.\n0 = At Sunset.\n-60 = 1 Hour Before.",
-                min: -120, max: 120, interval: 10
+                getValue: () => (int)(Config.PeakOpacity * 100),
+                setValue: value => Config.PeakOpacity = value / 100f,
+                name: () => Helper.Translation.Get("config.intensity.name"),
+                tooltip: () => Helper.Translation.Get("config.intensity.desc"),
+                min: 0, max: 100
             );
 
-            configMenu.AddSectionTitle(mod: ModManifest, text: () => "Intensity Timeline (0-100%)");
+            // --- SECTION 2: COLOR ---
+            configMenu.AddSectionTitle(mod: ModManifest, text: () => Helper.Translation.Get("config.section.color"));
 
-            configMenu.AddNumberOption(mod: ModManifest, getValue: () => Config.IntensityAt0Min, setValue: v => Config.IntensityAt0Min = v, name: () => "0 Minutes (Start)", min: 0, max: 100);
-            configMenu.AddNumberOption(mod: ModManifest, getValue: () => Config.IntensityAt30Min, setValue: v => Config.IntensityAt30Min = v, name: () => "+ 30 Minutes", min: 0, max: 100);
-            configMenu.AddNumberOption(mod: ModManifest, getValue: () => Config.IntensityAt60Min, setValue: v => Config.IntensityAt60Min = v, name: () => "+ 60 Minutes", min: 0, max: 100);
-            configMenu.AddNumberOption(mod: ModManifest, getValue: () => Config.IntensityAt90Min, setValue: v => Config.IntensityAt90Min = v, name: () => "+ 90 Minutes", min: 0, max: 100);
-            configMenu.AddNumberOption(mod: ModManifest, getValue: () => Config.IntensityAt120Min, setValue: v => Config.IntensityAt120Min = v, name: () => "+ 120 Minutes (End)", min: 0, max: 100);
+            configMenu.AddNumberOption(mod: ModManifest, getValue: () => Config.ColorRed, setValue: v => Config.ColorRed = v, name: () => Helper.Translation.Get("config.red.name"), min: 0, max: 255);
+            configMenu.AddNumberOption(mod: ModManifest, getValue: () => Config.ColorGreen, setValue: v => Config.ColorGreen = v, name: () => Helper.Translation.Get("config.green.name"), min: 0, max: 255);
+            configMenu.AddNumberOption(mod: ModManifest, getValue: () => Config.ColorBlue, setValue: v => Config.ColorBlue = v, name: () => Helper.Translation.Get("config.blue.name"), min: 0, max: 255);
+
+            // --- SECTION 3: SCHEDULE ---
+            configMenu.AddSectionTitle(mod: ModManifest, text: () => Helper.Translation.Get("config.section.schedule"));
+
+            configMenu.AddNumberOption(
+                mod: ModManifest,
+                getValue: () => Config.BuildUpMinutes,
+                setValue: value => Config.BuildUpMinutes = value,
+                name: () => Helper.Translation.Get("config.buildup.name"),
+                tooltip: () => Helper.Translation.Get("config.buildup.desc"),
+                min: 0, max: 120, interval: 10
+            );
+
+            configMenu.AddNumberOption(
+                mod: ModManifest,
+                getValue: () => Config.FadeOutMinutes,
+                setValue: value => Config.FadeOutMinutes = value,
+                name: () => Helper.Translation.Get("config.fadeout.name"),
+                tooltip: () => Helper.Translation.Get("config.fadeout.desc"),
+                min: 0, max: 240, interval: 10
+            );
         }
 
         private void OnRenderedWorld(object? sender, RenderedWorldEventArgs e)
         {
+            // Only render when the world is active and we are outdoors
             if (!Context.IsWorldReady || Game1.currentLocation == null) return;
             if (!Game1.currentLocation.IsOutdoors) return;
 
-            // 1. Get Sunset Time (from Vanilla or Dynamic Dusk)
-            int sunsetTime = Game1.getStartingToGetDarkTime(Game1.currentLocation);
+            // 1. Fetch the Sunset Time
+            // This grabs the time calculated by the game logic (Vanilla or modified by Dynamic Dusk)
+            int targetSunsetTime = Game1.getStartingToGetDarkTime(Game1.currentLocation);
 
-            // 2. Calculate Intensity based on the Timeline
-            float opacity = CalculateTimelineOpacity(sunsetTime);
+            // 2. Calculate current overlay strength
+            float currentOpacity = CalculateOverlayOpacity(targetSunsetTime);
 
-            // 3. Draw Overlay
-            if (opacity > 0f)
+            // 3. Draw the overlay if visible
+            if (currentOpacity > 0f)
             {
-                // This draws ON TOP of the game's lighting, adding our orange tint
-                Color drawColor = GoldenColor * opacity;
+                Color baseColor = new Color(Config.ColorRed, Config.ColorGreen, Config.ColorBlue);
+                Color renderColor = baseColor * currentOpacity;
 
+                // Draw the colored rectangle over the entire viewport
                 e.SpriteBatch.Draw(
-                    Pixel,
+                    OverlayTexture,
                     new Rectangle(0, 0, Game1.viewport.Width, Game1.viewport.Height),
-                    drawColor
+                    renderColor
                 );
             }
         }
 
-        private float CalculateTimelineOpacity(int sunsetTime)
+        private float CalculateOverlayOpacity(int sunsetTime)
         {
             int currentTime = Game1.timeOfDay;
 
-            // Convert times to absolute minutes
-            int currentMins = (currentTime / 100 * 60) + (currentTime % 100);
-            int sunsetMins = (sunsetTime / 100 * 60) + (sunsetTime % 100);
+            // Normalize Stardew time (100s) to Linear Minutes (60s) for accurate math
+            int currentTotalMinutes = (currentTime / 100 * 60) + (currentTime % 100);
+            int sunsetTotalMinutes = (sunsetTime / 100 * 60) + (sunsetTime % 100);
 
-            // Determine Start Time based on Config Offset
-            int startMins = sunsetMins + Config.StartOffsetMinutes;
-            int elapsed = currentMins - startMins;
+            // Define the active window for the effect
+            int startMinute = sunsetTotalMinutes - Config.BuildUpMinutes;
+            int endMinute = sunsetTotalMinutes + Config.FadeOutMinutes;
 
-            // Outside the 2-hour (120 min) window? Return 0.
-            if (elapsed < 0 || elapsed > 120) return 0f;
+            // Optimization: If outside the window, return 0 immediately
+            if (currentTotalMinutes < startMinute || currentTotalMinutes > endMinute)
+                return 0f;
 
-            // Interpolate between the 30-minute keyframes
-            // We use MathHelper.Lerp(StartVal, EndVal, Progress 0-1)
+            // Logic: Linearly interpolate (Lerp) the opacity based on time position
 
-            float valA, valB, progress;
-
-            if (elapsed <= 30)
+            // Phase 1: Pre-Sunset (Rising Opacity)
+            if (currentTotalMinutes <= sunsetTotalMinutes)
             {
-                // 0 to 30 mins
-                valA = Config.IntensityAt0Min / 100f;
-                valB = Config.IntensityAt30Min / 100f;
-                progress = elapsed / 30f;
+                if (Config.BuildUpMinutes <= 0) return Config.PeakOpacity;
+
+                float elapsed = currentTotalMinutes - startMinute;
+                float progress = elapsed / Config.BuildUpMinutes;
+
+                // Smoothly go from 0 -> Peak
+                return MathHelper.Lerp(0f, Config.PeakOpacity, progress);
             }
-            else if (elapsed <= 60)
-            {
-                // 30 to 60 mins
-                valA = Config.IntensityAt30Min / 100f;
-                valB = Config.IntensityAt60Min / 100f;
-                progress = (elapsed - 30) / 30f;
-            }
-            else if (elapsed <= 90)
-            {
-                // 60 to 90 mins
-                valA = Config.IntensityAt60Min / 100f;
-                valB = Config.IntensityAt90Min / 100f;
-                progress = (elapsed - 60) / 30f;
-            }
+            // Phase 2: Post-Sunset (Falling Opacity)
             else
             {
-                // 90 to 120 mins
-                valA = Config.IntensityAt90Min / 100f;
-                valB = Config.IntensityAt120Min / 100f;
-                progress = (elapsed - 90) / 30f;
-            }
+                if (Config.FadeOutMinutes <= 0) return 0f;
 
-            return MathHelper.Lerp(valA, valB, progress);
+                float elapsed = currentTotalMinutes - sunsetTotalMinutes;
+                float progress = elapsed / Config.FadeOutMinutes;
+
+                // Smoothly go from Peak -> 0
+                return MathHelper.Lerp(Config.PeakOpacity, 0f, progress);
+            }
         }
     }
 }

@@ -1,0 +1,33 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\bin\Debug\net6.0\DynamicDusk.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\bin\Debug\net6.0\DynamicDusk.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\Dynamic Dusk\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\Dynamic Dusk\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\Dynamic Dusk\bin\Debug\net6.0\DynamicDusk.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\Dynamic Dusk\bin\Debug\net6.0\DynamicDusk.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk - slider version\Dynamic Dusk\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk - slider version\Dynamic Dusk\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk - slider version\Dynamic Dusk\bin\Debug\net6.0\DynamicDusk.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk - slider version\Dynamic Dusk\bin\Debug\net6.0\DynamicDusk.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk - slider version\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk - slider version\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk - slider version\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk - slider version\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk - slider version\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk - slider version\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Dynamic Dusk - slider version\Dynamic Dusk\obj\Debug\net6.0\DynamicDusk.dll

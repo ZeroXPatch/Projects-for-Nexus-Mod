@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GoldenTransitions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+581ed0e495a406841e8427410e0cc4996f13bc6c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+565fff34f7b09227843a387801b6134a8f5682fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("GoldenTransitions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GoldenTransitions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

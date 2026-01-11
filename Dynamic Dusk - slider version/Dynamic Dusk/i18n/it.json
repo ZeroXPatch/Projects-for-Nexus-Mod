@@ -1,0 +1,34 @@
+{
+  "config.section.general": "Impostazioni generali",
+  "config.section.ranges": "Intervalli casuali (attivi se la modalità casuale è ON)",
+  "config.section.manual": "Programmazione settimanale manuale (attiva se la modalità casuale è OFF)",
+  "config.subtitle.spring": "--- Programmazione primaverile ---",
+  "config.subtitle.summer": "--- Programmazione estiva ---",
+  "config.subtitle.fall": "--- Programmazione autunnale ---",
+  "config.subtitle.winter": "--- Programmazione invernale ---",
+
+  "config.random_mode.name": "Abilita modalità casuale",
+  "config.random_mode.desc": "Se abilitata, l'orario del tramonto cambierà dinamicamente usando gli intervalli seguenti.",
+
+  "config.frequency.name": "Frequenza",
+  "config.frequency.desc": "Quanto spesso cambia l'orario del tramonto in modalità casuale.",
+  "config.frequency.daily": "Giornaliera",
+  "config.frequency.weekly": "Settimanale",
+  "config.frequency.seasonal": "Stagionale",
+
+  "config.spring_min.name": "Intervallo primavera: più presto",
+  "config.spring_max.name": "Intervallo primavera: più tardi",
+  "config.summer_min.name": "Intervallo estate: più presto",
+  "config.summer_max.name": "Intervallo estate: più tardi",
+  "config.fall_min.name": "Intervallo autunno: più presto",
+  "config.fall_max.name": "Intervallo autunno: più tardi",
+  "config.winter_min.name": "Intervallo inverno: più presto",
+  "config.winter_max.name": "Intervallo inverno: più tardi",
+  "config.range.desc": "La modalità casuale utilizza questo intervallo.",
+
+  "config.week1": "Settimana 1 (giorni 1-7)",
+  "config.week2": "Settimana 2 (giorni 8-14)",
+  "config.week3": "Settimana 3 (giorni 15-21)",
+  "config.week4": "Settimana 4 (giorni 22-28)",
+  "config.manual.desc": "Orario del tramonto fisso per questa settimana specifica."
+}

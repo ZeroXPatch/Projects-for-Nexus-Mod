@@ -1,0 +1,16 @@
+{
+  "Name": "Dynamic Dusk",
+  "Author": "ZeroXPatch",
+  "Version": "1.3.0",
+  "Description": "Randomizes or configures the time afternoon transitions to night.",
+  "UniqueID": "ZeroXPatch.DynamicDusk",
+  "EntryDll": "DynamicDusk.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus:40783" ],
+  "Dependencies": [
+    {
+      "UniqueID": "Knoche.DynamicNightTime",
+      "IsRequired": false
+    }
+  ]
+}
