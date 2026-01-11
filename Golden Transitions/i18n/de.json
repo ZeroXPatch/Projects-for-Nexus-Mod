@@ -1,0 +1,19 @@
+{
+  "config.section.random": "Zufallseinstellungen",
+  "config.random_mode.name": "Zufallsmodus aktivieren",
+  "config.random_mode.desc": "Wenn aktiviert, wählt der Mod zufällig eines der unten stehenden 4 Saison-Presets (täglich, wöchentlich oder saisonal).",
+  "config.frequency.name": "Häufigkeit",
+  "config.frequency.daily": "Täglich",
+  "config.frequency.weekly": "Wöchentlich",
+  "config.frequency.seasonal": "Saisonal",
+  "config.preset.spring": "Frühling-Preset",
+  "config.preset.summer": "Sommer-Preset",
+  "config.preset.fall": "Herbst-Preset",
+  "config.preset.winter": "Winter-Preset",
+  "config.red": "Rot",
+  "config.green": "Grün",
+  "config.blue": "Blau",
+  "config.intensity": "Intensität %",
+  "config.buildup": "Aufbau (Min.)",
+  "config.fadeout": "Ausblendung (Min.)"
+}

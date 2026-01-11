@@ -1,0 +1,19 @@
+{
+  "config.section.random": "Rastgeleleştirme Ayarları",
+  "config.random_mode.name": "Rastgele Modu Etkinleştir",
+  "config.random_mode.desc": "Etkinleştirilirse mod, aşağıdaki 4 mevsim önayarından birini rastgele seçer (Günlük, Haftalık veya Mevsimlik).",
+  "config.frequency.name": "Sıklık",
+  "config.frequency.daily": "Günlük",
+  "config.frequency.weekly": "Haftalık",
+  "config.frequency.seasonal": "Mevsimlik",
+  "config.preset.spring": "İlkbahar Önayarı",
+  "config.preset.summer": "Yaz Önayarı",
+  "config.preset.fall": "Sonbahar Önayarı",
+  "config.preset.winter": "Kış Önayarı",
+  "config.red": "Kırmızı",
+  "config.green": "Yeşil",
+  "config.blue": "Mavi",
+  "config.intensity": "Yoğunluk %",
+  "config.buildup": "Artış (dk)",
+  "config.fadeout": "Solma (dk)"
+}

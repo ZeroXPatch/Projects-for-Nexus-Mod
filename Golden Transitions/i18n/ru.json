@@ -1,0 +1,19 @@
+{
+  "config.section.random": "Настройки случайности",
+  "config.random_mode.name": "Включить случайный режим",
+  "config.random_mode.desc": "Если включено, мод случайным образом выберет один из 4 сезонных пресетов ниже (ежедневный, еженедельный или сезонный).",
+  "config.frequency.name": "Частота",
+  "config.frequency.daily": "Ежедневно",
+  "config.frequency.weekly": "Еженедельно",
+  "config.frequency.seasonal": "Сезонно",
+  "config.preset.spring": "Весенний пресет",
+  "config.preset.summer": "Летний пресет",
+  "config.preset.fall": "Осенний пресет",
+  "config.preset.winter": "Зимний пресет",
+  "config.red": "Красный",
+  "config.green": "Зелёный",
+  "config.blue": "Синий",
+  "config.intensity": "Интенсивность %",
+  "config.buildup": "Нарастание (мин.)",
+  "config.fadeout": "Затухание (мин.)"
+}

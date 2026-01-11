@@ -1,0 +1,19 @@
+{
+  "config.section.random": "ランダム化設定",
+  "config.random_mode.name": "ランダムモードを有効化",
+  "config.random_mode.desc": "有効にすると、MODは以下の4つの季節プリセットのいずれか（毎日、毎週、季節ごと）をランダムに選びます。",
+  "config.frequency.name": "頻度",
+  "config.frequency.daily": "毎日",
+  "config.frequency.weekly": "毎週",
+  "config.frequency.seasonal": "季節ごと",
+  "config.preset.spring": "春プリセット",
+  "config.preset.summer": "夏プリセット",
+  "config.preset.fall": "秋プリセット",
+  "config.preset.winter": "冬プリセット",
+  "config.red": "赤",
+  "config.green": "緑",
+  "config.blue": "青",
+  "config.intensity": "強度 %",
+  "config.buildup": "立ち上がり（分）",
+  "config.fadeout": "フェードアウト（分）"
+}

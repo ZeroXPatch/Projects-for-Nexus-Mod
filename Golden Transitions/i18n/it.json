@@ -1,0 +1,19 @@
+{
+  "config.section.random": "Impostazioni di randomizzazione",
+  "config.random_mode.name": "Abilita modalità casuale",
+  "config.random_mode.desc": "Se abilitata, la mod sceglierà casualmente uno dei 4 preset stagionali qui sotto (giornaliero, settimanale o stagionale).",
+  "config.frequency.name": "Frequenza",
+  "config.frequency.daily": "Giornaliero",
+  "config.frequency.weekly": "Settimanale",
+  "config.frequency.seasonal": "Stagionale",
+  "config.preset.spring": "Preset primavera",
+  "config.preset.summer": "Preset estate",
+  "config.preset.fall": "Preset autunno",
+  "config.preset.winter": "Preset inverno",
+  "config.red": "Rosso",
+  "config.green": "Verde",
+  "config.blue": "Blu",
+  "config.intensity": "Intensità %",
+  "config.buildup": "Incremento (min)",
+  "config.fadeout": "Dissolvenza (min)"
+}

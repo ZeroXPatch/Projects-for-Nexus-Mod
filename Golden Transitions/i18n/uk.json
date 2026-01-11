@@ -1,0 +1,19 @@
+{
+  "config.section.random": "Налаштування випадковості",
+  "config.random_mode.name": "Увімкнути випадковий режим",
+  "config.random_mode.desc": "Якщо увімкнено, мод випадково вибере один із 4 сезонних пресетів нижче (щодня, щотижня або сезонно).",
+  "config.frequency.name": "Частота",
+  "config.frequency.daily": "Щодня",
+  "config.frequency.weekly": "Щотижня",
+  "config.frequency.seasonal": "Сезонно",
+  "config.preset.spring": "Весняний пресет",
+  "config.preset.summer": "Літній пресет",
+  "config.preset.fall": "Осінній пресет",
+  "config.preset.winter": "Зимовий пресет",
+  "config.red": "Червоний",
+  "config.green": "Зелений",
+  "config.blue": "Синій",
+  "config.intensity": "Інтенсивність %",
+  "config.buildup": "Наростання (хв)",
+  "config.fadeout": "Згасання (хв)"
+}

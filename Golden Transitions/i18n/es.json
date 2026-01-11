@@ -1,0 +1,19 @@
+{
+  "config.section.random": "Ajustes de aleatorización",
+  "config.random_mode.name": "Activar modo aleatorio",
+  "config.random_mode.desc": "Si se activa, el mod elegirá aleatoriamente uno de los 4 ajustes predefinidos estacionales de abajo (diario, semanal o estacional).",
+  "config.frequency.name": "Frecuencia",
+  "config.frequency.daily": "Diario",
+  "config.frequency.weekly": "Semanal",
+  "config.frequency.seasonal": "Estacional",
+  "config.preset.spring": "Preajuste de primavera",
+  "config.preset.summer": "Preajuste de verano",
+  "config.preset.fall": "Preajuste de otoño",
+  "config.preset.winter": "Preajuste de invierno",
+  "config.red": "Rojo",
+  "config.green": "Verde",
+  "config.blue": "Azul",
+  "config.intensity": "Intensidad %",
+  "config.buildup": "Incremento (min)",
+  "config.fadeout": "Desvanecimiento (min)"
+}

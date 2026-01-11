@@ -1,0 +1,19 @@
+{
+  "config.section.random": "Cài đặt ngẫu nhiên",
+  "config.random_mode.name": "Bật chế độ ngẫu nhiên",
+  "config.random_mode.desc": "Nếu bật, bản mod sẽ ngẫu nhiên chọn một trong 4 bộ thiết lập mùa bên dưới (hàng ngày, hàng tuần hoặc theo mùa).",
+  "config.frequency.name": "Tần suất",
+  "config.frequency.daily": "Hàng ngày",
+  "config.frequency.weekly": "Hàng tuần",
+  "config.frequency.seasonal": "Theo mùa",
+  "config.preset.spring": "Thiết lập mùa xuân",
+  "config.preset.summer": "Thiết lập mùa hè",
+  "config.preset.fall": "Thiết lập mùa thu",
+  "config.preset.winter": "Thiết lập mùa đông",
+  "config.red": "Đỏ",
+  "config.green": "Xanh lá",
+  "config.blue": "Xanh dương",
+  "config.intensity": "Cường độ %",
+  "config.buildup": "Tăng dần (phút)",
+  "config.fadeout": "Giảm dần (phút)"
+}

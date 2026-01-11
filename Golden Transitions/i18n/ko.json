@@ -1,0 +1,19 @@
+{
+  "config.section.random": "무작위 설정",
+  "config.random_mode.name": "무작위 모드 사용",
+  "config.random_mode.desc": "활성화하면 모드가 아래의 4가지 계절 프리셋(일간, 주간 또는 계절별) 중 하나를 무작위로 선택합니다.",
+  "config.frequency.name": "빈도",
+  "config.frequency.daily": "매일",
+  "config.frequency.weekly": "매주",
+  "config.frequency.seasonal": "계절별",
+  "config.preset.spring": "봄 프리셋",
+  "config.preset.summer": "여름 프리셋",
+  "config.preset.fall": "가을 프리셋",
+  "config.preset.winter": "겨울 프리셋",
+  "config.red": "빨강",
+  "config.green": "초록",
+  "config.blue": "파랑",
+  "config.intensity": "강도 %",
+  "config.buildup": "증가(분)",
+  "config.fadeout": "페이드아웃(분)"
+}

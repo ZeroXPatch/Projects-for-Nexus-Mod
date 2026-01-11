@@ -1,18 +1,21 @@
 {
-  config.section.appearance Appearance Settings,
-  config.section.color Color Customization,
-  config.section.schedule Schedule Settings,
+  "config.section.random": "Randomization Settings",
+  "config.random_mode.name": "Enable Random Mode",
+  "config.random_mode.desc": "If enabled, the mod will randomly pick one of the 4 Seasonal Presets below (Daily, Weekly, or Seasonally).",
+  "config.frequency.name": "Frequency",
+  "config.frequency.daily": "Daily",
+  "config.frequency.weekly": "Weekly",
+  "config.frequency.seasonal": "Seasonal",
 
-  config.intensity.name Max Intensity %,
-  config.intensity.desc The opacity of the glow at the exact moment of sunset (0-100%).,
+  "config.preset.spring": "Spring Preset",
+  "config.preset.summer": "Summer Preset",
+  "config.preset.fall": "Fall Preset",
+  "config.preset.winter": "Winter Preset",
 
-  config.red.name Red Amount,
-  config.green.name Green Amount,
-  config.blue.name Blue Amount,
-
-  config.buildup.name Build-Up Duration,
-  config.buildup.desc Minutes BEFORE sunset that the glow begins to appear (Golden Hour).,
-
-  config.fadeout.name Fade-Out Duration,
-  config.fadeout.desc Minutes AFTER sunset that the glow takes to disappear (Twilight).
+  "config.red": "Red",
+  "config.green": "Green",
+  "config.blue": "Blue",
+  "config.intensity": "Intensity %",
+  "config.buildup": "Build-Up (Mins)",
+  "config.fadeout": "Fade-Out (Mins)"
 }

@@ -1,0 +1,19 @@
+{
+  "config.section.random": "Ustawienia losowości",
+  "config.random_mode.name": "Włącz tryb losowy",
+  "config.random_mode.desc": "Po włączeniu mod losowo wybierze jeden z 4 poniższych presetów sezonowych (dzienny, tygodniowy lub sezonowy).",
+  "config.frequency.name": "Częstotliwość",
+  "config.frequency.daily": "Dziennie",
+  "config.frequency.weekly": "Tygodniowo",
+  "config.frequency.seasonal": "Sezonowo",
+  "config.preset.spring": "Preset wiosenny",
+  "config.preset.summer": "Preset letni",
+  "config.preset.fall": "Preset jesienny",
+  "config.preset.winter": "Preset zimowy",
+  "config.red": "Czerwony",
+  "config.green": "Zielony",
+  "config.blue": "Niebieski",
+  "config.intensity": "Intensywność %",
+  "config.buildup": "Narastanie (min)",
+  "config.fadeout": "Wygaszanie (min)"
+}
