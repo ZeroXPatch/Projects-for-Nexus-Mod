@@ -1,0 +1,10 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Tractor Delivery Service\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Tractor Delivery Service\bin\Debug\net6.0\TractorDelivery.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Tractor Delivery Service\bin\Debug\net6.0\TractorDelivery.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Tractor Delivery Service\obj\Debug\net6.0\TractorDelivery.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Tractor Delivery Service\obj\Debug\net6.0\TractorDelivery.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Tractor Delivery Service\obj\Debug\net6.0\TractorDelivery.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Tractor Delivery Service\obj\Debug\net6.0\TractorDelivery.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Tractor Delivery Service\obj\Debug\net6.0\TractorDelivery.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Tractor Delivery Service\obj\Debug\net6.0\TractorDelivery.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Tractor Delivery Service\obj\Debug\net6.0\TractorDelivery.dll

@@ -1,0 +1,15 @@
+{
+  "Name": "Tractor Delivery Service",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Sends a Tractor Kit by mail to establish a garage.",
+  "UniqueID": "ZeroXPatch.TractorDelivery",
+  "EntryDll": "TractorDelivery.dll",
+  "MinimumApiVersion": "4.0.0",
+  "Dependencies": [
+    {
+      "UniqueID": "Pathoschild.TractorMod",
+      "IsRequired": true
+    }
+  ]
+}
