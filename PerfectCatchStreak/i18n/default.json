@@ -1,0 +1,6 @@
+{
+"hud.streak": "Streak: {{current}} (Best: {{max}})",
+"hud.streak_lost": "{{reason}} Final Streak: {{final}}",
+"reason.escaped": "Fish escaped!",
+"reason.broken": "Streak broken!"
+}

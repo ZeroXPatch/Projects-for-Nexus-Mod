@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PerfectCatchStreak")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83c702f16751a6a0895456901236a1ad64876a97")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+487f7418a9c24697ab7d99df566af2179a5fa25c")]
 [assembly: System.Reflection.AssemblyProductAttribute("PerfectCatchStreak")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PerfectCatchStreak")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

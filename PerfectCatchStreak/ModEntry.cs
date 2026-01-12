@@ -3,14 +3,12 @@ using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
 using StardewValley.Menus;
-
 namespace PerfectCatchStreak
 {
     public class ModEntry : Mod
     {
         private ModConfig Config = null!;
         private int CurrentStreak = 0;
-
         private bool IsFishingMenuOpen = false;
         private bool IsCurrentCatchPerfect = true;
         private bool RewardProcessed = false;
@@ -84,7 +82,10 @@ namespace PerfectCatchStreak
             {
                 // If the menu closed but RewardProcessed is false, the fish escaped.
                 if (!RewardProcessed)
-                    ResetStreak("Fish escaped!");
+                {
+                    string reason = this.Helper.Translation.Get("reason.escaped");
+                    ResetStreak(reason);
+                }
 
                 IsFishingMenuOpen = false;
             }
@@ -105,7 +106,7 @@ namespace PerfectCatchStreak
 
             if (Config.ShowHUDNotification)
             {
-                string msg = $"Streak: {CurrentStreak} (Best: {Config.MaxStreak})";
+                string msg = this.Helper.Translation.Get("hud.streak", new { current = CurrentStreak, max = Config.MaxStreak });
                 Game1.addHUDMessage(new HUDMessage(msg, HUDMessage.achievement_type));
             }
 
@@ -115,7 +116,8 @@ namespace PerfectCatchStreak
 
         private void HandleImperfectCatch()
         {
-            ResetStreak("Streak broken!");
+            string reason = this.Helper.Translation.Get("reason.broken");
+            ResetStreak(reason);
         }
 
         private void ResetStreak(string reason)
@@ -124,7 +126,7 @@ namespace PerfectCatchStreak
             {
                 if (Config.ShowHUDNotification)
                 {
-                    string msg = $"{reason} Final Streak: {CurrentStreak}";
+                    string msg = this.Helper.Translation.Get("hud.streak_lost", new { reason = reason, final = CurrentStreak });
                     Game1.addHUDMessage(new HUDMessage(msg, HUDMessage.error_type));
                 }
             }
