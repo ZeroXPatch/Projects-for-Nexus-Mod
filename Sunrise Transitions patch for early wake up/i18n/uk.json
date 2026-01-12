@@ -1,0 +1,20 @@
+{
+  "config.section.random": "Налаштування випадковості",
+  "config.random_mode.name": "Увімкнути випадковий режим",
+  "config.random_mode.desc": "Якщо ввімкнено, мод випадково вибере один із 4 сезонних пресетів нижче (щодня, щотижня або сезонно).",
+  "config.frequency.name": "Частота",
+  "config.frequency.daily": "Щодня",
+  "config.frequency.weekly": "Щотижня",
+  "config.frequency.seasonal": "Сезонно",
+  "config.preset.spring": "Весняний пресет",
+  "config.preset.summer": "Літній пресет",
+  "config.preset.fall": "Осінній пресет",
+  "config.preset.winter": "Зимовий пресет",
+  "config.red": "Червоний",
+  "config.green": "Зелений",
+  "config.blue": "Синій",
+  "config.intensity.name": "Початкова інтенсивність %",
+  "config.intensity.desc": "Наскільки сильне сяйво о 6:00 ранку, коли ви прокидаєтесь.",
+  "config.duration.name": "Тривалість згасання",
+  "config.duration.desc": "Скільки хвилин потрібно, щоб ранкове сяйво повністю зникло."
+}

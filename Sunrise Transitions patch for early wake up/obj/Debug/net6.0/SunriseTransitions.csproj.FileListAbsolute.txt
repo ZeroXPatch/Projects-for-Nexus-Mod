@@ -1,0 +1,22 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions\bin\Debug\net6.0\SunriseTransitions.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions\bin\Debug\net6.0\SunriseTransitions.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions\obj\Debug\net6.0\SunriseTransitions.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions\obj\Debug\net6.0\SunriseTransitions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions\obj\Debug\net6.0\SunriseTransitions.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions\obj\Debug\net6.0\SunriseTransitions.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions\obj\Debug\net6.0\SunriseTransitions.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions\obj\Debug\net6.0\SunriseTransitions.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions\obj\Debug\net6.0\SunriseTransitions.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions patch for early wake up\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions patch for early wake up\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions patch for early wake up\bin\Debug\net6.0\SunriseTransitions.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions patch for early wake up\bin\Debug\net6.0\SunriseTransitions.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions patch for early wake up\obj\Debug\net6.0\SunriseTransitions.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions patch for early wake up\obj\Debug\net6.0\SunriseTransitions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions patch for early wake up\obj\Debug\net6.0\SunriseTransitions.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions patch for early wake up\obj\Debug\net6.0\SunriseTransitions.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions patch for early wake up\obj\Debug\net6.0\SunriseTransitions.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions patch for early wake up\obj\Debug\net6.0\SunriseTransitions.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sunrise Transitions patch for early wake up\obj\Debug\net6.0\SunriseTransitions.dll

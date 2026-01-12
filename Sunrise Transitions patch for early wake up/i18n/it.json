@@ -1,0 +1,20 @@
+{
+  "config.section.random": "Impostazioni di casualità",
+  "config.random_mode.name": "Abilita modalità casuale",
+  "config.random_mode.desc": "Se abilitata, la mod sceglierà casualmente uno dei 4 preset stagionali qui sotto (giornaliero, settimanale o stagionale).",
+  "config.frequency.name": "Frequenza",
+  "config.frequency.daily": "Giornaliera",
+  "config.frequency.weekly": "Settimanale",
+  "config.frequency.seasonal": "Stagionale",
+  "config.preset.spring": "Preset primaverile",
+  "config.preset.summer": "Preset estivo",
+  "config.preset.fall": "Preset autunnale",
+  "config.preset.winter": "Preset invernale",
+  "config.red": "Rosso",
+  "config.green": "Verde",
+  "config.blue": "Blu",
+  "config.intensity.name": "Intensità iniziale %",
+  "config.intensity.desc": "Quanto è forte il bagliore alle 6:00 del mattino quando ti svegli.",
+  "config.duration.name": "Durata dissolvenza",
+  "config.duration.desc": "Quanti minuti servono perché il bagliore mattutino scompaia completamente."
+}

@@ -1,0 +1,25 @@
+{
+  "config.section.random": "Randomization Settings",
+  "config.random_mode.name": "Enable Random Mode",
+  "config.random_mode.desc": "If enabled, randomly picks one of the 4 seasonal presets below (Daily/Weekly).",
+  "config.frequency.name": "Frequency",
+  "config.frequency.daily": "Daily",
+  "config.frequency.weekly": "Weekly",
+  "config.frequency.seasonal": "Seasonal",
+
+  "config.preset.spring": "Spring Preset",
+  "config.preset.summer": "Summer Preset",
+  "config.preset.fall": "Fall Preset",
+  "config.preset.winter": "Winter Preset",
+
+  "config.red": "Red",
+  "config.green": "Green",
+  "config.blue": "Blue",
+  "config.intensity.name": "Start Intensity %",
+  "config.intensity.desc": "How strong the glow is when it starts.",
+  "config.duration.name": "Fade-Out Duration",
+  "config.duration.desc": "Minutes it takes for the glow to disappear.",
+
+  "config.starttime.name": "Peak Start Time",
+  "config.starttime.desc": "When the sunrise effect begins (Format: 600 = 6:00 AM). Useful for Early Wake Up mods."
+}

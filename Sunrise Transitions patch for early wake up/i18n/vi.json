@@ -1,0 +1,20 @@
+{
+  "config.section.random": "Cài đặt ngẫu nhiên",
+  "config.random_mode.name": "Bật chế độ ngẫu nhiên",
+  "config.random_mode.desc": "Nếu bật, mod sẽ ngẫu nhiên chọn một trong 4 preset theo mùa bên dưới (Hàng ngày, Hàng tuần hoặc Theo mùa).",
+  "config.frequency.name": "Tần suất",
+  "config.frequency.daily": "Hàng ngày",
+  "config.frequency.weekly": "Hàng tuần",
+  "config.frequency.seasonal": "Theo mùa",
+  "config.preset.spring": "Preset mùa xuân",
+  "config.preset.summer": "Preset mùa hè",
+  "config.preset.fall": "Preset mùa thu",
+  "config.preset.winter": "Preset mùa đông",
+  "config.red": "Đỏ",
+  "config.green": "Xanh lá",
+  "config.blue": "Xanh dương",
+  "config.intensity.name": "Cường độ bắt đầu %",
+  "config.intensity.desc": "Mức độ mạnh của ánh sáng lúc 6:00 sáng khi bạn thức dậy.",
+  "config.duration.name": "Thời lượng mờ dần",
+  "config.duration.desc": "Mất bao nhiêu phút để ánh sáng buổi sáng biến mất hoàn toàn."
+}

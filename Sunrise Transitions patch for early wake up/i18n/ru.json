@@ -1,0 +1,20 @@
+{
+  "config.section.random": "Настройки случайности",
+  "config.random_mode.name": "Включить случайный режим",
+  "config.random_mode.desc": "Если включено, мод случайным образом выберет один из 4 сезонных пресетов ниже (ежедневно, еженедельно или сезонно).",
+  "config.frequency.name": "Частота",
+  "config.frequency.daily": "Ежедневно",
+  "config.frequency.weekly": "Еженедельно",
+  "config.frequency.seasonal": "Сезонно",
+  "config.preset.spring": "Весенний пресет",
+  "config.preset.summer": "Летний пресет",
+  "config.preset.fall": "Осенний пресет",
+  "config.preset.winter": "Зимний пресет",
+  "config.red": "Красный",
+  "config.green": "Зелёный",
+  "config.blue": "Синий",
+  "config.intensity.name": "Начальная интенсивность %",
+  "config.intensity.desc": "Насколько сильное свечение в 6:00 утра, когда вы просыпаетесь.",
+  "config.duration.name": "Длительность затухания",
+  "config.duration.desc": "Сколько минут требуется, чтобы утреннее свечение полностью исчезло."
+}

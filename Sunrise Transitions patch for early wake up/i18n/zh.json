@@ -1,0 +1,20 @@
+{
+  "config.section.random": "随机化设置",
+  "config.random_mode.name": "启用随机模式",
+  "config.random_mode.desc": "启用后，模组将随机选择下面 4 个季节预设中的一个（每日、每周或季节性）。",
+  "config.frequency.name": "频率",
+  "config.frequency.daily": "每日",
+  "config.frequency.weekly": "每周",
+  "config.frequency.seasonal": "季节性",
+  "config.preset.spring": "春季预设",
+  "config.preset.summer": "夏季预设",
+  "config.preset.fall": "秋季预设",
+  "config.preset.winter": "冬季预设",
+  "config.red": "红色",
+  "config.green": "绿色",
+  "config.blue": "蓝色",
+  "config.intensity.name": "起始强度 %",
+  "config.intensity.desc": "你醒来时早上 6:00 的光晕强度。",
+  "config.duration.name": "淡出时长",
+  "config.duration.desc": "晨光完全消失需要多少分钟。"
+}

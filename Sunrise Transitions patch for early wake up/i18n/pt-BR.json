@@ -1,0 +1,20 @@
+{
+  "config.section.random": "Configurações de aleatoriedade",
+  "config.random_mode.name": "Ativar modo aleatório",
+  "config.random_mode.desc": "Se ativado, o mod escolherá aleatoriamente um dos 4 predefinições sazonais abaixo (diário, semanal ou sazonal).",
+  "config.frequency.name": "Frequência",
+  "config.frequency.daily": "Diário",
+  "config.frequency.weekly": "Semanal",
+  "config.frequency.seasonal": "Sazonal",
+  "config.preset.spring": "Predefinição de primavera",
+  "config.preset.summer": "Predefinição de verão",
+  "config.preset.fall": "Predefinição de outono",
+  "config.preset.winter": "Predefinição de inverno",
+  "config.red": "Vermelho",
+  "config.green": "Verde",
+  "config.blue": "Azul",
+  "config.intensity.name": "Intensidade inicial %",
+  "config.intensity.desc": "Quão forte é o brilho às 6:00 da manhã quando você acorda.",
+  "config.duration.name": "Duração do esmaecimento",
+  "config.duration.desc": "Quantos minutos leva para o brilho da manhã desaparecer completamente."
+}
