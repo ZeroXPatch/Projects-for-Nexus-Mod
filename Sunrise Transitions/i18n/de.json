@@ -1,0 +1,20 @@
+{
+  "config.section.random": "Einstellungen zur Zufallssteuerung",
+  "config.random_mode.name": "Zufallsmodus aktivieren",
+  "config.random_mode.desc": "Wenn aktiviert, wählt die Mod zufällig eine der 4 saisonalen Voreinstellungen unten (täglich, wöchentlich oder saisonal) aus.",
+  "config.frequency.name": "Häufigkeit",
+  "config.frequency.daily": "Täglich",
+  "config.frequency.weekly": "Wöchentlich",
+  "config.frequency.seasonal": "Saisonal",
+  "config.preset.spring": "Frühling-Voreinstellung",
+  "config.preset.summer": "Sommer-Voreinstellung",
+  "config.preset.fall": "Herbst-Voreinstellung",
+  "config.preset.winter": "Winter-Voreinstellung",
+  "config.red": "Rot",
+  "config.green": "Grün",
+  "config.blue": "Blau",
+  "config.intensity.name": "Startintensität %",
+  "config.intensity.desc": "Wie stark das Leuchten um 6:00 Uhr morgens ist, wenn du aufwachst.",
+  "config.duration.name": "Ausblenddauer",
+  "config.duration.desc": "Wie viele Minuten es dauert, bis das morgendliche Leuchten vollständig verschwindet."
+}

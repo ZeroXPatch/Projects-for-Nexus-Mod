@@ -1,0 +1,26 @@
+{
+  "config.section.random": "Randomization Settings",
+  
+  "config.random_mode.name": "Enable Random Mode",
+  "config.random_mode.desc": "If enabled, the mod will randomly pick one of the 4 Seasonal Presets below (Daily, Weekly, or Seasonally).",
+  
+  "config.frequency.name": "Frequency",
+  "config.frequency.daily": "Daily",
+  "config.frequency.weekly": "Weekly",
+  "config.frequency.seasonal": "Seasonal",
+
+  "config.preset.spring": "Spring Preset",
+  "config.preset.summer": "Summer Preset",
+  "config.preset.fall": "Fall Preset",
+  "config.preset.winter": "Winter Preset",
+
+  "config.red": "Red",
+  "config.green": "Green",
+  "config.blue": "Blue",
+  
+  "config.intensity.name": "Start Intensity %",
+  "config.intensity.desc": "How strong the glow is at 6:00 AM when you wake up.",
+
+  "config.duration.name": "Fade-Out Duration",
+  "config.duration.desc": "How many minutes it takes for the morning glow to completely disappear."
+}

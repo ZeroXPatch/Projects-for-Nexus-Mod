@@ -1,0 +1,20 @@
+{
+  "config.section.random": "Ajustes de aleatoriedad",
+  "config.random_mode.name": "Activar modo aleatorio",
+  "config.random_mode.desc": "Si se activa, el mod escogerá al azar uno de los 4 preajustes estacionales de abajo (diario, semanal o estacional).",
+  "config.frequency.name": "Frecuencia",
+  "config.frequency.daily": "Diario",
+  "config.frequency.weekly": "Semanal",
+  "config.frequency.seasonal": "Estacional",
+  "config.preset.spring": "Preajuste de primavera",
+  "config.preset.summer": "Preajuste de verano",
+  "config.preset.fall": "Preajuste de otoño",
+  "config.preset.winter": "Preajuste de invierno",
+  "config.red": "Rojo",
+  "config.green": "Verde",
+  "config.blue": "Azul",
+  "config.intensity.name": "Intensidad inicial %",
+  "config.intensity.desc": "Qué tan fuerte es el resplandor a las 6:00 a. m. cuando te despiertas.",
+  "config.duration.name": "Duración del desvanecimiento",
+  "config.duration.desc": "Cuántos minutos tarda en desaparecer por completo el resplandor de la mañana."
+}

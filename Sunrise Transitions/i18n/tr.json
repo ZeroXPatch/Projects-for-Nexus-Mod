@@ -1,0 +1,20 @@
+{
+  "config.section.random": "Rastgeleleştirme Ayarları",
+  "config.random_mode.name": "Rastgele Modu Etkinleştir",
+  "config.random_mode.desc": "Etkinleştirilirse, mod aşağıdaki 4 mevsim ön ayarından birini rastgele seçer (Günlük, Haftalık veya Mevsimlik).",
+  "config.frequency.name": "Sıklık",
+  "config.frequency.daily": "Günlük",
+  "config.frequency.weekly": "Haftalık",
+  "config.frequency.seasonal": "Mevsimlik",
+  "config.preset.spring": "İlkbahar Ön Ayarı",
+  "config.preset.summer": "Yaz Ön Ayarı",
+  "config.preset.fall": "Sonbahar Ön Ayarı",
+  "config.preset.winter": "Kış Ön Ayarı",
+  "config.red": "Kırmızı",
+  "config.green": "Yeşil",
+  "config.blue": "Mavi",
+  "config.intensity.name": "Başlangıç Yoğunluğu %",
+  "config.intensity.desc": "Uyandığınızda sabah 6:00'daki parıltının ne kadar güçlü olduğu.",
+  "config.duration.name": "Solma Süresi",
+  "config.duration.desc": "Sabah parıltısının tamamen kaybolmasının kaç dakika sürdüğü."
+}

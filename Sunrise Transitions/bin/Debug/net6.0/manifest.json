@@ -1,0 +1,10 @@
+{
+  "Name": "Sunrise Transitions",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Adds a customizable morning glow that starts at 6 AM and fades into the day.",
+  "UniqueID": "ZeroXPatch.SunriseTransitions",
+  "EntryDll": "SunriseTransitions.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

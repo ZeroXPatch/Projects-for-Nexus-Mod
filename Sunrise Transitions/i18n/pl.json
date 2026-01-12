@@ -1,0 +1,20 @@
+{
+  "config.section.random": "Ustawienia losowości",
+  "config.random_mode.name": "Włącz tryb losowy",
+  "config.random_mode.desc": "Po włączeniu mod losowo wybierze jeden z 4 presetów sezonowych poniżej (dzienny, tygodniowy lub sezonowy).",
+  "config.frequency.name": "Częstotliwość",
+  "config.frequency.daily": "Dziennie",
+  "config.frequency.weekly": "Tygodniowo",
+  "config.frequency.seasonal": "Sezonowo",
+  "config.preset.spring": "Preset wiosenny",
+  "config.preset.summer": "Preset letni",
+  "config.preset.fall": "Preset jesienny",
+  "config.preset.winter": "Preset zimowy",
+  "config.red": "Czerwony",
+  "config.green": "Zielony",
+  "config.blue": "Niebieski",
+  "config.intensity.name": "Początkowa intensywność %",
+  "config.intensity.desc": "Jak silna jest poświata o 6:00 rano, gdy się budzisz.",
+  "config.duration.name": "Czas zanikania",
+  "config.duration.desc": "Ile minut zajmuje całkowite zniknięcie porannej poświaty."
+}
