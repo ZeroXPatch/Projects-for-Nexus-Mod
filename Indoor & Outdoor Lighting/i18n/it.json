@@ -1,0 +1,13 @@
+{
+  "config.outdoor.section": "Impostazioni esterne",
+  "config.outdoor.enable": "Abilita esterni",
+  "config.outdoor.enable.desc": "Applica illuminazione personalizzata a lampioni e finestre esterne.",
+  "config.indoor.section": "Impostazioni interne",
+  "config.indoor.enable": "Abilita interni",
+  "config.indoor.enable.desc": "Applica illuminazione personalizzata alle lampade all'interno degli edifici.",
+  "config.radius": "Raggio",
+  "config.intensity": "Intensità",
+  "config.red": "Rosso",
+  "config.green": "Verde",
+  "config.blue": "Blu"
+}

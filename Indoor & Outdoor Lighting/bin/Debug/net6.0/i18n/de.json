@@ -1,0 +1,13 @@
+{
+  "config.outdoor.section": "Außeneinstellungen",
+  "config.outdoor.enable": "Außen aktivieren",
+  "config.outdoor.enable.desc": "Benutzerdefinierte Beleuchtung für Straßenlampen und Außenfenster anwenden.",
+  "config.indoor.section": "Inneneinstellungen",
+  "config.indoor.enable": "Innen aktivieren",
+  "config.indoor.enable.desc": "Benutzerdefinierte Beleuchtung für Lampen in Gebäuden anwenden.",
+  "config.radius": "Radius",
+  "config.intensity": "Intensität",
+  "config.red": "Rot",
+  "config.green": "Grün",
+  "config.blue": "Blau"
+}

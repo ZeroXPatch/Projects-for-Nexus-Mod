@@ -1,0 +1,6 @@
+{
+  "hud.streak": "连胜：{{current}}（最佳：{{max}}）",
+  "hud.streak_lost": "{{reason}} 最终连胜：{{final}}",
+  "reason.escaped": "鱼逃走了！",
+  "reason.broken": "连胜中断！"
+}

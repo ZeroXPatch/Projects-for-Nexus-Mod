@@ -1,0 +1,35 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sudden Squalls\obj\Debug\net6.0\CustomNightLights.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sudden Squalls\obj\Debug\net6.0\CustomNightLights.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sudden Squalls\obj\Debug\net6.0\CustomNightLights.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sudden Squalls\obj\Debug\net6.0\CustomNightLights.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sudden Squalls\obj\Debug\net6.0\CustomNightLights.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sudden Squalls\obj\Debug\net6.0\CustomNightLights.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sudden Squalls\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sudden Squalls\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sudden Squalls\bin\Debug\net6.0\CustomNightLights.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sudden Squalls\bin\Debug\net6.0\CustomNightLights.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Sudden Squalls\obj\Debug\net6.0\CustomNightLights.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\i18n\de.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\i18n\es.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\i18n\fr.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\i18n\it.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\i18n\ja.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\i18n\ko.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\i18n\pl.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\i18n\pt-BR.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\i18n\ru.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\i18n\tr.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\i18n\uk.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\i18n\vi.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\i18n\zh.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\CustomNightLights.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\bin\Debug\net6.0\CustomNightLights.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\obj\Debug\net6.0\CustomNightLights.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\obj\Debug\net6.0\CustomNightLights.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\obj\Debug\net6.0\CustomNightLights.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\obj\Debug\net6.0\CustomNightLights.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\obj\Debug\net6.0\CustomNightLights.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\obj\Debug\net6.0\CustomNightLights.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Indoor & Outdoor Lighting\obj\Debug\net6.0\CustomNightLights.dll

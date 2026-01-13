@@ -1,0 +1,15 @@
+{
+  "config.outdoor.title": "Outdoor Settings",
+  "config.outdoor.enable": "Enable Outdoors",
+  "config.outdoor.enable.desc": "Apply these settings to street lamps, windows, and exterior lights.",
+
+  "config.indoor.title": "Indoor Settings",
+  "config.indoor.enable": "Enable Indoors",
+  "config.indoor.enable.desc": "Apply these settings inside buildings, houses, and caves.",
+
+  "config.radius": "Light Radius",
+  "config.intensity": "Light Intensity",
+  "config.red": "Red Channel",
+  "config.green": "Green Channel",
+  "config.blue": "Blue Channel"
+}

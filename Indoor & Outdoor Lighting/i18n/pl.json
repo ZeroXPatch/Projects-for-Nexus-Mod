@@ -1,0 +1,13 @@
+{
+  "config.outdoor.section": "Ustawienia zewnętrzne",
+  "config.outdoor.enable": "Włącz zewnętrzne",
+  "config.outdoor.enable.desc": "Zastosuj niestandardowe oświetlenie do latarni ulicznych i okien na zewnątrz.",
+  "config.indoor.section": "Ustawienia wewnętrzne",
+  "config.indoor.enable": "Włącz wewnętrzne",
+  "config.indoor.enable.desc": "Zastosuj niestandardowe oświetlenie do lamp wewnątrz budynków.",
+  "config.radius": "Promień",
+  "config.intensity": "Intensywność",
+  "config.red": "Czerwony",
+  "config.green": "Zielony",
+  "config.blue": "Niebieski"
+}

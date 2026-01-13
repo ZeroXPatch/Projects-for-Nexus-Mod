@@ -1,0 +1,6 @@
+{
+  "hud.streak": "Chuỗi: {{current}} (Tốt nhất: {{max}})",
+  "hud.streak_lost": "{{reason}} Chuỗi cuối: {{final}}",
+  "reason.escaped": "Cá đã trốn thoát!",
+  "reason.broken": "Chuỗi bị đứt!"
+}

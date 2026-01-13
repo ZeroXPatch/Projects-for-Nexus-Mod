@@ -1,0 +1,13 @@
+{
+  "config.outdoor.section": "Configuración exterior",
+  "config.outdoor.enable": "Activar exteriores",
+  "config.outdoor.enable.desc": "Aplica iluminación personalizada a farolas y ventanas exteriores.",
+  "config.indoor.section": "Configuración interior",
+  "config.indoor.enable": "Activar interiores",
+  "config.indoor.enable.desc": "Aplica iluminación personalizada a lámparas dentro de los edificios.",
+  "config.radius": "Radio",
+  "config.intensity": "Intensidad",
+  "config.red": "Rojo",
+  "config.green": "Verde",
+  "config.blue": "Azul"
+}

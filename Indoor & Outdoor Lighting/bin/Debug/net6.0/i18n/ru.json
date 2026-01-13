@@ -1,0 +1,13 @@
+{
+  "config.outdoor.section": "Наружные настройки",
+  "config.outdoor.enable": "Включить наружное",
+  "config.outdoor.enable.desc": "Применить пользовательское освещение к уличным фонарям и внешним окнам.",
+  "config.indoor.section": "Внутренние настройки",
+  "config.indoor.enable": "Включить внутреннее",
+  "config.indoor.enable.desc": "Применить пользовательское освещение к лампам внутри зданий.",
+  "config.radius": "Радиус",
+  "config.intensity": "Интенсивность",
+  "config.red": "Красный",
+  "config.green": "Зелёный",
+  "config.blue": "Синий"
+}

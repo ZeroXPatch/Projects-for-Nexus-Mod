@@ -1,0 +1,13 @@
+{
+  "config.outdoor.section": "室外设置",
+  "config.outdoor.enable": "启用室外",
+  "config.outdoor.enable.desc": "为路灯和室外窗户应用自定义照明。",
+  "config.indoor.section": "室内设置",
+  "config.indoor.enable": "启用室内",
+  "config.indoor.enable.desc": "为建筑物内的灯具应用自定义照明。",
+  "config.radius": "半径",
+  "config.intensity": "强度",
+  "config.red": "红色",
+  "config.green": "绿色",
+  "config.blue": "蓝色"
+}

@@ -1,0 +1,6 @@
+{
+  "hud.streak": "Seri: {{current}} (En iyi: {{max}})",
+  "hud.streak_lost": "{{reason}} Nihai seri: {{final}}",
+  "reason.escaped": "Balık kaçtı!",
+  "reason.broken": "Seri bozuldu!"
+}

@@ -1,0 +1,6 @@
+{
+  "hud.streak": "Серия: {{current}} (Лучший: {{max}})",
+  "hud.streak_lost": "{{reason}} Итоговая серия: {{final}}",
+  "reason.escaped": "Рыба сбежала!",
+  "reason.broken": "Серия прервана!"
+}

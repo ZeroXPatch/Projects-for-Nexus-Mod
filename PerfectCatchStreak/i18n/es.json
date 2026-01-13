@@ -1,0 +1,6 @@
+{
+  "hud.streak": "Racha: {{current}} (Mejor: {{max}})",
+  "hud.streak_lost": "{{reason}} Racha final: {{final}}",
+  "reason.escaped": "¡El pez escapó!",
+  "reason.broken": "¡Racha rota!"
+}

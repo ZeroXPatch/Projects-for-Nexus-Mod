@@ -1,0 +1,13 @@
+{
+  "config.outdoor.section": "Зовнішні налаштування",
+  "config.outdoor.enable": "Увімкнути зовнішнє",
+  "config.outdoor.enable.desc": "Застосувати користувацьке освітлення до вуличних ліхтарів і зовнішніх вікон.",
+  "config.indoor.section": "Внутрішні налаштування",
+  "config.indoor.enable": "Увімкнути внутрішнє",
+  "config.indoor.enable.desc": "Застосувати користувацьке освітлення до ламп усередині будівель.",
+  "config.radius": "Радіус",
+  "config.intensity": "Інтенсивність",
+  "config.red": "Червоний",
+  "config.green": "Зелений",
+  "config.blue": "Синій"
+}

@@ -1,0 +1,13 @@
+{
+  "config.outdoor.section": "Dış Mekân Ayarları",
+  "config.outdoor.enable": "Dış Mekânı Etkinleştir",
+  "config.outdoor.enable.desc": "Sokak lambaları ve dış pencerelere özel aydınlatma uygula.",
+  "config.indoor.section": "İç Mekân Ayarları",
+  "config.indoor.enable": "İç Mekânı Etkinleştir",
+  "config.indoor.enable.desc": "Binaların içindeki lambalara özel aydınlatma uygula.",
+  "config.radius": "Yarıçap",
+  "config.intensity": "Yoğunluk",
+  "config.red": "Kırmızı",
+  "config.green": "Yeşil",
+  "config.blue": "Mavi"
+}

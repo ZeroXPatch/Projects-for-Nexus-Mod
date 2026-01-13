@@ -1,0 +1,13 @@
+{
+  "config.outdoor.section": "Cài đặt ngoài trời",
+  "config.outdoor.enable": "Bật ngoài trời",
+  "config.outdoor.enable.desc": "Áp dụng ánh sáng tùy chỉnh cho đèn đường và cửa sổ bên ngoài.",
+  "config.indoor.section": "Cài đặt trong nhà",
+  "config.indoor.enable": "Bật trong nhà",
+  "config.indoor.enable.desc": "Áp dụng ánh sáng tùy chỉnh cho đèn bên trong các tòa nhà.",
+  "config.radius": "Bán kính",
+  "config.intensity": "Cường độ",
+  "config.red": "Đỏ",
+  "config.green": "Xanh lá",
+  "config.blue": "Xanh dương"
+}

@@ -1,0 +1,13 @@
+{
+  "config.outdoor.section": "Configurações externas",
+  "config.outdoor.enable": "Ativar exterior",
+  "config.outdoor.enable.desc": "Aplicar iluminação personalizada a postes de luz e janelas externas.",
+  "config.indoor.section": "Configurações internas",
+  "config.indoor.enable": "Ativar interior",
+  "config.indoor.enable.desc": "Aplicar iluminação personalizada às lâmpadas dentro dos edifícios.",
+  "config.radius": "Raio",
+  "config.intensity": "Intensidade",
+  "config.red": "Vermelho",
+  "config.green": "Verde",
+  "config.blue": "Azul"
+}

@@ -1,0 +1,13 @@
+{
+  "config.outdoor.section": "屋外設定",
+  "config.outdoor.enable": "屋外を有効化",
+  "config.outdoor.enable.desc": "街灯や屋外の窓にカスタム照明を適用します。",
+  "config.indoor.section": "屋内設定",
+  "config.indoor.enable": "屋内を有効化",
+  "config.indoor.enable.desc": "建物内のランプにカスタム照明を適用します。",
+  "config.radius": "半径",
+  "config.intensity": "強度",
+  "config.red": "赤",
+  "config.green": "緑",
+  "config.blue": "青"
+}

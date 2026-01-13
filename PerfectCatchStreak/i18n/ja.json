@@ -1,0 +1,6 @@
+{
+  "hud.streak": "連続: {{current}} (最高: {{max}})",
+  "hud.streak_lost": "{{reason}} 最終連続: {{final}}",
+  "reason.escaped": "魚が逃げた！",
+  "reason.broken": "連続が途切れた！"
+}

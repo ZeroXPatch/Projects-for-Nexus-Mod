@@ -1,0 +1,13 @@
+{
+  "config.outdoor.section": "실외 설정",
+  "config.outdoor.enable": "실외 활성화",
+  "config.outdoor.enable.desc": "가로등과 실외 창문에 사용자 지정 조명을 적용합니다.",
+  "config.indoor.section": "실내 설정",
+  "config.indoor.enable": "실내 활성화",
+  "config.indoor.enable.desc": "건물 내부의 램프에 사용자 지정 조명을 적용합니다.",
+  "config.radius": "반경",
+  "config.intensity": "강도",
+  "config.red": "빨강",
+  "config.green": "초록",
+  "config.blue": "파랑"
+}

@@ -1,0 +1,6 @@
+{
+  "hud.streak": "연속: {{current}} (최고: {{max}})",
+  "hud.streak_lost": "{{reason}} 최종 연속: {{final}}",
+  "reason.escaped": "물고기가 도망쳤어요!",
+  "reason.broken": "연속이 끊겼어요!"
+}
