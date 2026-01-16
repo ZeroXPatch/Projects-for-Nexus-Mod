@@ -29,10 +29,8 @@ namespace ShadowsOfTheDeep
             _possibleFishIds.Clear();
 
             if (location == null) return;
-
             if (ModEntry.Config.FarmOnly && !location.IsFarm) return;
             if (ModEntry.Config.ExcludedLocations.Contains(location.Name)) return;
-
             if (IsPastCurfew()) return;
 
             PopulateFishCache(location);
@@ -53,10 +51,8 @@ namespace ShadowsOfTheDeep
         {
             if (!ModEntry.Config.HideFishAtNight) return false;
             if (_currentLocation == null) return false;
-
             int sunset = Game1.getStartingToGetDarkTime(_currentLocation);
             int cutoff = sunset + (ModEntry.Config.HoursAfterSunset * 100);
-
             return Game1.timeOfDay >= cutoff;
         }
 
@@ -64,20 +60,14 @@ namespace ShadowsOfTheDeep
         {
             var locData = location.GetData();
             if (locData?.Fish == null) return;
-
             var allData = DataLoader.Fish(Game1.content);
             foreach (var spawnData in locData.Fish)
             {
                 string? itemId = spawnData.ItemId;
                 if (string.IsNullOrEmpty(itemId)) continue;
-
                 string qualId = itemId.StartsWith("(O)") ? itemId : "(O)" + itemId;
                 string rawId = qualId.Replace("(O)", "");
-
-                if (allData.ContainsKey(rawId))
-                {
-                    _possibleFishIds.Add(qualId);
-                }
+                if (allData.ContainsKey(rawId)) _possibleFishIds.Add(qualId);
             }
             _possibleFishIds = _possibleFishIds.Distinct().ToList();
         }
@@ -90,13 +80,8 @@ namespace ShadowsOfTheDeep
 
             for (int i = _shadows.Count - 1; i >= 0; i--)
             {
-                if (isNight)
-                {
-                    _shadows[i].StartDespawn();
-                }
-
+                if (isNight) _shadows[i].StartDespawn();
                 _shadows[i].Update(Game1.currentGameTime);
-
                 if (_shadows[i].IsDead)
                 {
                     _shadows[i].Cleanup();
@@ -108,13 +93,10 @@ namespace ShadowsOfTheDeep
             {
                 bool aggressive = _shadows.Count < 5;
                 uint tickRate = aggressive ? 10u : 60u;
-
                 if (e.IsMultipleOf(tickRate) && _shadows.Count < ModEntry.Config.MaxFishCount)
                 {
                     if (_random.NextDouble() < ModEntry.Config.SpawnChance)
-                    {
                         TrySpawnFish(forceRandomMapPosition: false);
-                    }
                 }
             }
         }
@@ -137,24 +119,45 @@ namespace ShadowsOfTheDeep
                     int buffer = 4;
                     int rangeX = (vp.Width / 64) + (buffer * 2);
                     int rangeY = (vp.Height / 64) + (buffer * 2);
-
                     x = (vp.X / 64) - buffer + _random.Next(0, rangeX);
                     y = (vp.Y / 64) - buffer + _random.Next(0, rangeY);
                 }
 
-                // CHECK: Only spawn if the specific tile is water
-                if (_currentLocation.isOpenWater(x, y))
+                Vector2 candidatePos = new Vector2(x * 64f + 32f, y * 64f + 32f);
+
+                if (IsSafeSpawn(x, y))
                 {
                     string randomFishId = _possibleFishIds[_random.Next(_possibleFishIds.Count)];
-
-                    // FIX: Spawn at Center of Tile (+32f, +32f) 
-                    // Previously: (x * 64, y * 64) put it at top-left corner, causing land clipping.
-                    Vector2 spawnPos = new Vector2(x * 64f + 32f, y * 64f + 32f);
-
-                    _shadows.Add(new ShadowBoid(spawnPos, randomFishId, _currentLocation));
+                    _shadows.Add(new ShadowBoid(candidatePos, randomFishId, _currentLocation));
                     return;
                 }
             }
+        }
+
+        private bool IsTileWater(int x, int y)
+        {
+            if (_currentLocation.doesTileHaveProperty(x, y, "Water", "Back") == null) return false;
+            if (_currentLocation.getTileIndexAt(x, y, "Buildings") != -1)
+            {
+                if (_currentLocation.doesTileHaveProperty(x, y, "Passable", "Buildings") == null)
+                    return false;
+            }
+            return true;
+        }
+
+        private bool IsSafeSpawn(int tileX, int tileY)
+        {
+            if (!IsTileWater(tileX, tileY)) return false;
+
+            if (!IsTileWater(tileX + 1, tileY) || !IsTileWater(tileX - 1, tileY) ||
+                !IsTileWater(tileX, tileY + 1) || !IsTileWater(tileX, tileY - 1))
+                return false;
+
+            if (!IsTileWater(tileX + 1, tileY + 1) || !IsTileWater(tileX - 1, tileY - 1) ||
+                !IsTileWater(tileX + 1, tileY - 1) || !IsTileWater(tileX - 1, tileY + 1))
+                return false;
+
+            return true;
         }
 
         public void Draw(SpriteBatch b)
@@ -164,11 +167,9 @@ namespace ShadowsOfTheDeep
             foreach (var shadow in _shadows)
             {
                 if (!shadow.IsVisible) continue;
-
                 if (shadow.Position.X + 128 < viewport.X || shadow.Position.X - 128 > viewport.X + viewport.Width ||
                     shadow.Position.Y + 128 < viewport.Y || shadow.Position.Y - 128 > viewport.Y + viewport.Height)
                     continue;
-
                 shadow.Draw(b);
             }
         }
