@@ -1,0 +1,17 @@
+{
+  "config.section.visuals": "Görseller",
+  "config.opacity.name": "Gölge Opaklığı",
+  "config.opacity.tooltip": "Gölgelerin ne kadar koyu olduğu. Daha düşük değerler daha yumuşaktır.",
+  "config.scale.name": "Gölge Ölçeği",
+  "config.scale.tooltip": "Gölgelerin balıklara göre boyutu.",
+  "config.section.population": "Popülasyon",
+  "config.max-fish.name": "Maks. Balık",
+  "config.max-fish.tooltip": "Bir konumda izin verilen maksimum balık sayısı.",
+  "config.density.name": "Doğma Olasılığı",
+  "config.density.tooltip": "Her karo kontrolünde balık doğma olasılığı.",
+  "config.section.locations": "Konumlar",
+  "config.farm-only.name": "Sadece Çiftlik",
+  "config.farm-only.tooltip": "Etkinse, balıklar yalnızca çiftlikte görünür.",
+  "config.excluded.name": "Hariç Tutulan Konumlar",
+  "config.excluded.tooltip": "Yoksayılacak konum adlarının virgülle ayrılmış listesi (örn. Sewer, BugLand)."
+}

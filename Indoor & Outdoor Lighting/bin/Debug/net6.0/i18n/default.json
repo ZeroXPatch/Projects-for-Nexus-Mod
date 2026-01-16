@@ -1,15 +1,24 @@
 {
-  "config.outdoor.title": "Outdoor Settings",
+  "config.outdoor.section": "Outdoor Settings",
   "config.outdoor.enable": "Enable Outdoors",
-  "config.outdoor.enable.desc": "Apply these settings to street lamps, windows, and exterior lights.",
+  "config.outdoor.enable.desc": "Apply custom lighting to street lamps and windows outside.",
 
-  "config.indoor.title": "Indoor Settings",
+  "config.indoor.section": "Indoor Settings",
   "config.indoor.enable": "Enable Indoors",
-  "config.indoor.enable.desc": "Apply these settings inside buildings, houses, and caves.",
+  "config.indoor.enable.desc": "Apply custom lighting to lamps inside buildings.",
 
-  "config.radius": "Light Radius",
-  "config.intensity": "Light Intensity",
-  "config.red": "Red Channel",
-  "config.green": "Green Channel",
-  "config.blue": "Blue Channel"
+  "config.indoor.farmhouseonly": "FarmHouse Only",
+  "config.indoor.farmhouseonly.desc": "If enabled, indoor lighting changes will only happen in your FarmHouse and cabins.",
+
+  "config.nightonly": "Night Time Only",
+  "config.nightonly.desc": "If enabled, custom effects only activate 2 hours after sunset (adapts to seasons/mods).",
+
+  "config.indoor.excluded": "Excluded Locations",
+  "config.indoor.excluded.desc": "Comma-separated list of Location IDs (e.g., Greenhouse, Cellar) to ignore.",
+
+  "config.radius": "Radius",
+  "config.intensity": "Intensity",
+  "config.red": "Red",
+  "config.green": "Green",
+  "config.blue": "Blue"
 }

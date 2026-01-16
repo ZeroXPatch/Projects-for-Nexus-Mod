@@ -1,0 +1,17 @@
+{
+  "config.section.visuals": "Grafika",
+  "config.opacity.name": "Przezroczystość Cienia",
+  "config.opacity.tooltip": "Jak ciemne są cienie. Niższa wartość jest subtelniejsza.",
+  "config.scale.name": "Skala Cienia",
+  "config.scale.tooltip": "Rozmiar cieni względem ryb.",
+  "config.section.population": "Populacja",
+  "config.max-fish.name": "Maks. Ryby",
+  "config.max-fish.tooltip": "Maksymalna liczba ryb w jednej lokacji.",
+  "config.density.name": "Szansa Pojawienia",
+  "config.density.tooltip": "Prawdopodobieństwo pojawienia się ryby na jedno sprawdzenie pola.",
+  "config.section.locations": "Lokacje",
+  "config.farm-only.name": "Tylko Farma",
+  "config.farm-only.tooltip": "Jeśli włączone, ryby pojawiają się tylko na farmie.",
+  "config.excluded.name": "Wykluczone Lokacje",
+  "config.excluded.tooltip": "Lista lokacji do zignorowania, oddzielona przecinkami (np. Sewer, BugLand)."
+}

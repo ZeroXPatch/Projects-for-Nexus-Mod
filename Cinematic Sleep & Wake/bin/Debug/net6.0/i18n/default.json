@@ -1,0 +1,9 @@
+{
+  "morning-section": "MORNING FADE-IN",
+  "morning-duration": "Duration (Seconds)",
+  "morning-preset": "Atmosphere Preset",
+  "morning-custom-header": "CUSTOM TINT (Only used if Preset is 'Custom')",
+  "morning-red": "Haze: Red",
+  "morning-green": "Haze: Green",
+  "morning-blue": "Haze: Blue"
+}

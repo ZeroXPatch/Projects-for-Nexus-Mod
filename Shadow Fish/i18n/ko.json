@@ -1,0 +1,17 @@
+{
+  "config.section.visuals": "비주얼",
+  "config.opacity.name": "그림자 불투명도",
+  "config.opacity.tooltip": "그림자의 어두운 정도입니다. 낮을수록 더 은은합니다.",
+  "config.scale.name": "그림자 크기",
+  "config.scale.tooltip": "물고기에 비해 그림자의 크기입니다.",
+  "config.section.population": "개체 수",
+  "config.max-fish.name": "최대 물고기",
+  "config.max-fish.tooltip": "한 위치에 허용되는 최대 물고기 수입니다.",
+  "config.density.name": "생성 확률",
+  "config.density.tooltip": "타일 검사당 물고기가 생성될 확률입니다.",
+  "config.section.locations": "위치",
+  "config.farm-only.name": "농장 전용",
+  "config.farm-only.tooltip": "활성화하면 물고기는 농장에만 나타납니다.",
+  "config.excluded.name": "제외된 위치",
+  "config.excluded.tooltip": "무시할 위치 이름을 쉼표로 구분하여 입력하세요 (예: Sewer, BugLand)."
+}

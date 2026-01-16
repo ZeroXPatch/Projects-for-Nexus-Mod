@@ -1,0 +1,17 @@
+{
+  "config.section.visuals": "Hình Ảnh",
+  "config.opacity.name": "Độ Mờ Bóng",
+  "config.opacity.tooltip": "Mức độ tối của bóng. Giá trị thấp sẽ nhẹ hơn.",
+  "config.scale.name": "Tỷ Lệ Bóng",
+  "config.scale.tooltip": "Kích thước bóng so với cá.",
+  "config.section.population": "Số Lượng",
+  "config.max-fish.name": "Cá Tối Đa",
+  "config.max-fish.tooltip": "Số lượng cá tối đa cho phép tại một vị trí.",
+  "config.density.name": "Tỷ Lệ Xuất Hiện",
+  "config.density.tooltip": "Xác suất cá xuất hiện mỗi lần kiểm tra ô.",
+  "config.section.locations": "Địa Điểm",
+  "config.farm-only.name": "Chỉ Trang Trại",
+  "config.farm-only.tooltip": "Nếu bật, cá chỉ xuất hiện tại trang trại.",
+  "config.excluded.name": "Địa Điểm Bị Loại Trừ",
+  "config.excluded.tooltip": "Danh sách địa điểm cần bỏ qua, phân tách bằng dấu phẩy (vd: Sewer, BugLand)."
+}

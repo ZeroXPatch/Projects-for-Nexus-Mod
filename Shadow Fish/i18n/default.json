@@ -1,0 +1,19 @@
+{
+  "config.section.visuals": "Visuals",
+  "config.opacity.name": "Shadow Opacity",
+  "config.opacity.tooltip": "How dark the shadows are. Lower is more subtle.",
+  "config.scale.name": "Shadow Scale",
+  "config.scale.tooltip": "Size of the shadows relative to the fish items.",
+  
+  "config.section.population": "Population",
+  "config.max-fish.name": "Max Fish",
+  "config.max-fish.tooltip": "Maximum number of fish allowed in one location.",
+  "config.density.name": "Spawn Chance",
+  "config.density.tooltip": "Probability of a fish spawning per tile check.",
+  
+  "config.section.locations": "Locations",
+  "config.farm-only.name": "Farm Only",
+  "config.farm-only.tooltip": "If true, fish only appear on the farm.",
+  "config.excluded.name": "Excluded Locations",
+  "config.excluded.tooltip": "Comma-separated list of location names to ignore (e.g. Sewer, BugLand)."
+}

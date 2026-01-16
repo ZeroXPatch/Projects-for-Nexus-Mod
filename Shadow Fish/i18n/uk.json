@@ -1,0 +1,17 @@
+{
+  "config.section.visuals": "Візуальні ефекти",
+  "config.opacity.name": "Прозорість Тіні",
+  "config.opacity.tooltip": "Наскільки темні тіні. Менше — м’якше.",
+  "config.scale.name": "Масштаб Тіні",
+  "config.scale.tooltip": "Розмір тіней відносно риб.",
+  "config.section.population": "Популяція",
+  "config.max-fish.name": "Макс. Риб",
+  "config.max-fish.tooltip": "Максимальна кількість риб в одній локації.",
+  "config.density.name": "Ймовірність Появи",
+  "config.density.tooltip": "Ймовірність появи риби при перевірці клітинки.",
+  "config.section.locations": "Локації",
+  "config.farm-only.name": "Лише Ферма",
+  "config.farm-only.tooltip": "Якщо увімкнено, риби з’являються лише на фермі.",
+  "config.excluded.name": "Виключені Локації",
+  "config.excluded.tooltip": "Список локацій для ігнорування, розділений комами (напр.: Sewer, BugLand)."
+}

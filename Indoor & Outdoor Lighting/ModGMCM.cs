@@ -16,16 +16,21 @@ namespace CustomNightLights
                 reset: () =>
                 {
                     var defaults = new ModConfig();
-                    // Outdoor Defaults
+
+                    // --- Outdoor Defaults ---
                     config.EnableOutdoor = defaults.EnableOutdoor;
+                    config.OutdoorNightOnly = defaults.OutdoorNightOnly;
                     config.OutdoorRed = defaults.OutdoorRed;
                     config.OutdoorGreen = defaults.OutdoorGreen;
                     config.OutdoorBlue = defaults.OutdoorBlue;
                     config.OutdoorIntensity = defaults.OutdoorIntensity;
                     config.OutdoorRadius = defaults.OutdoorRadius;
 
-                    // Indoor Defaults
+                    // --- Indoor Defaults ---
                     config.EnableIndoor = defaults.EnableIndoor;
+                    config.IndoorNightOnly = defaults.IndoorNightOnly;
+                    config.IndoorFarmHouseOnly = defaults.IndoorFarmHouseOnly;
+                    config.IndoorExcludedLocations = defaults.IndoorExcludedLocations;
                     config.IndoorRed = defaults.IndoorRed;
                     config.IndoorGreen = defaults.IndoorGreen;
                     config.IndoorBlue = defaults.IndoorBlue;
@@ -35,9 +40,9 @@ namespace CustomNightLights
                 save: saveConfig
             );
 
-            // ============================================
-            // OUTDOOR CONFIGURATION
-            // ============================================
+            // ===============================================
+            // OUTDOOR SECTION
+            // ===============================================
             configMenu.AddSectionTitle(mod: manifest, text: () => helper.Translation.Get("config.outdoor.section"));
 
             configMenu.AddBoolOption(
@@ -46,6 +51,14 @@ namespace CustomNightLights
                 setValue: v => config.EnableOutdoor = v,
                 name: () => helper.Translation.Get("config.outdoor.enable"),
                 tooltip: () => helper.Translation.Get("config.outdoor.enable.desc")
+            );
+
+            configMenu.AddBoolOption(
+                mod: manifest,
+                getValue: () => config.OutdoorNightOnly,
+                setValue: v => config.OutdoorNightOnly = v,
+                name: () => helper.Translation.Get("config.nightonly"),
+                tooltip: () => helper.Translation.Get("config.nightonly.desc")
             );
 
             configMenu.AddNumberOption(
@@ -68,9 +81,9 @@ namespace CustomNightLights
             configMenu.AddNumberOption(mod: manifest, getValue: () => config.OutdoorGreen, setValue: v => config.OutdoorGreen = v, name: () => helper.Translation.Get("config.green"), min: 0, max: 255);
             configMenu.AddNumberOption(mod: manifest, getValue: () => config.OutdoorBlue, setValue: v => config.OutdoorBlue = v, name: () => helper.Translation.Get("config.blue"), min: 0, max: 255);
 
-            // ============================================
-            // INDOOR CONFIGURATION
-            // ============================================
+            // ===============================================
+            // INDOOR SECTION
+            // ===============================================
             configMenu.AddSectionTitle(mod: manifest, text: () => helper.Translation.Get("config.indoor.section"));
 
             configMenu.AddBoolOption(
@@ -79,6 +92,31 @@ namespace CustomNightLights
                 setValue: v => config.EnableIndoor = v,
                 name: () => helper.Translation.Get("config.indoor.enable"),
                 tooltip: () => helper.Translation.Get("config.indoor.enable.desc")
+            );
+
+            configMenu.AddBoolOption(
+                mod: manifest,
+                getValue: () => config.IndoorNightOnly,
+                setValue: v => config.IndoorNightOnly = v,
+                name: () => helper.Translation.Get("config.nightonly"),
+                tooltip: () => helper.Translation.Get("config.nightonly.desc")
+            );
+
+            configMenu.AddBoolOption(
+                mod: manifest,
+                getValue: () => config.IndoorFarmHouseOnly,
+                setValue: v => config.IndoorFarmHouseOnly = v,
+                name: () => helper.Translation.Get("config.indoor.farmhouseonly"),
+                tooltip: () => helper.Translation.Get("config.indoor.farmhouseonly.desc")
+            );
+
+            // Text Option for Excluded Locations
+            configMenu.AddTextOption(
+                mod: manifest,
+                getValue: () => config.IndoorExcludedLocations,
+                setValue: v => config.IndoorExcludedLocations = v,
+                name: () => helper.Translation.Get("config.indoor.excluded"),
+                tooltip: () => helper.Translation.Get("config.indoor.excluded.desc")
             );
 
             configMenu.AddNumberOption(

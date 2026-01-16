@@ -1,0 +1,10 @@
+{
+  "Name": "Cinematic Wake",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "A cinematic, eye-opening fade-in effect when waking up in the morning.",
+  "UniqueID": "ZeroXPatch.CinematicWake",
+  "EntryDll": "CinematicWake.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus:41252" ]
+}

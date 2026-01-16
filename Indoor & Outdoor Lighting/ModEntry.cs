@@ -1,18 +1,23 @@
-using System;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
+using StardewValley.Locations;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CustomNightLights
 {
     public class ModEntry : Mod
     {
         public ModConfig Config = null!;
+        private HashSet<string> ExcludedLocationIds = new();
 
         public override void Entry(IModHelper helper)
         {
             this.Config = helper.ReadConfig<ModConfig>();
+            UpdateExclusionList();
 
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.OneSecondUpdateTicked += OnOneSecondUpdateTicked;
@@ -21,8 +26,20 @@ namespace CustomNightLights
 
         private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
         {
-            // Pass logic to the GMCM helper
-            ModGMCM.Setup(this.Helper, this.ModManifest, this.Config, () => Helper.WriteConfig(this.Config));
+            ModGMCM.Setup(this.Helper, this.ModManifest, this.Config, () =>
+            {
+                Helper.WriteConfig(this.Config);
+                UpdateExclusionList();
+            });
+        }
+
+        private void UpdateExclusionList()
+        {
+            ExcludedLocationIds = this.Config.IndoorExcludedLocations
+                .Split(',')
+                .Select(s => s.Trim())
+                .Where(s => !string.IsNullOrEmpty(s))
+                .ToHashSet(StringComparer.OrdinalIgnoreCase);
         }
 
         private void OnWarped(object? sender, WarpedEventArgs e)
@@ -38,18 +55,29 @@ namespace CustomNightLights
         private void ApplyLightSettings()
         {
             if (Game1.currentLocation == null) return;
+            var location = Game1.currentLocation; // This variable is used below
+            bool isOutdoors = location.IsOutdoors;
 
-            // 1. Determine Context (Indoors vs Outdoors)
-            bool isOutdoors = Game1.currentLocation.IsOutdoors;
+            // --- 1. Filter Logic (Location Level) ---
+            if (!isOutdoors)
+            {
+                if (ExcludedLocationIds.Contains(location.Name) || ExcludedLocationIds.Contains(location.NameOrUniqueName))
+                    return;
 
-            // 2. Load the correct settings based on location
+                if (this.Config.IndoorFarmHouseOnly && !(location is FarmHouse))
+                    return;
+            }
+
+            // --- 2. Determine Profile ---
             bool active;
+            bool nightOnly;
             int r, g, b;
             float intensity, radius;
 
             if (isOutdoors)
             {
                 active = this.Config.EnableOutdoor;
+                nightOnly = this.Config.OutdoorNightOnly;
                 r = this.Config.OutdoorRed;
                 g = this.Config.OutdoorGreen;
                 b = this.Config.OutdoorBlue;
@@ -59,6 +87,7 @@ namespace CustomNightLights
             else
             {
                 active = this.Config.EnableIndoor;
+                nightOnly = this.Config.IndoorNightOnly;
                 r = this.Config.IndoorRed;
                 g = this.Config.IndoorGreen;
                 b = this.Config.IndoorBlue;
@@ -66,31 +95,35 @@ namespace CustomNightLights
                 radius = this.Config.IndoorRadius;
             }
 
-            // If this specific section is disabled, do nothing (leave lights as default)
             if (!active) return;
 
-            // 3. Prepare Data
-            // Fix for "Light stays off": Ensure we don't accidentally set Alpha to 0 permanently if intensity is 0.
-            // We use the intensity value directly.
+            // --- 3. DYNAMIC TIME CHECK ---
+            if (nightOnly)
+            {
+                // FIX: Pass 'location' to getStartingToGetDarkTime
+                int sunsetTime = Game1.getStartingToGetDarkTime(location);
+
+                // Add 2 hours (200 in SDV time format)
+                int activationTime = sunsetTime + 200;
+
+                if (Game1.timeOfDay < activationTime)
+                {
+                    return;
+                }
+            }
+
+            // --- 4. Prepare Values ---
             float clampedIntensity = Math.Clamp(intensity, 0f, 1f);
             byte alphaValue = (byte)(clampedIntensity * 255);
 
-            Color targetColor = new(r, g, b)
-            {
-                A = alphaValue
-            };
-
-            // Fix for "Light deleted": Stardew deletes lights with Radius 0. 
-            // We clamp the minimum to 0.1f so the light source persists even if "turned off" visually.
+            Color targetColor = new(r, g, b) { A = alphaValue };
             float targetRadius = Math.Max(0.1f, radius);
 
-            // 4. Apply to all lights in the list
+            // --- 5. Apply to Lights ---
             foreach (var light in Game1.currentLightSources.Values)
             {
-                // Skip player lights (Glow Rings, Torches held)
                 if (light.PlayerID != 0) continue;
 
-                // Apply separate configuration
                 light.color.Value = targetColor;
                 light.radius.Value = targetRadius;
             }
