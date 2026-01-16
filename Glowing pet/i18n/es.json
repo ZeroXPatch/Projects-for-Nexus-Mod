@@ -1,0 +1,16 @@
+{
+  "config.enabled.name": "Activado",
+  "config.enabled.tooltip": "Si está activado, tu mascota emitirá luz por la noche.",
+  "config.delay.name": "Activación tardía",
+  "config.delay.tooltip": "Si está activado, la luz se enciende 2 horas después del atardecer. Si no, se enciende exactamente al atardecer.",
+  "config.preset.name": "Preajuste de color",
+  "config.preset.tooltip": "Elige un tema de color para la luz.",
+  "preset.Normal": "Normal",
+  "preset.Moonlight": "Luz lunar",
+  "preset.Spooky": "Espeluznante",
+  "preset.Custom": "Personalizado",
+  "config.radius.name": "Radio de luz",
+  "config.radius.tooltip": "Qué tan lejos brilla la luz.",
+  "config.section.custom": "Colores personalizados",
+  "config.section.custom.text": "Ajusta estos valores si seleccionaste el preajuste «Personalizado»."
+}

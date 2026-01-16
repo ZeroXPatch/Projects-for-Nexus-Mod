@@ -1,0 +1,17 @@
+{
+  "config.section.visuals": "Grafik",
+  "config.opacity.name": "Schatten-Deckkraft",
+  "config.opacity.tooltip": "Wie dunkel die Schatten sind. Niedriger ist dezenter.",
+  "config.scale.name": "Schatten-Skalierung",
+  "config.scale.tooltip": "Größe der Schatten relativ zu den Fischobjekten.",
+  "config.section.population": "Population",
+  "config.max-fish.name": "Maximale Fische",
+  "config.max-fish.tooltip": "Maximale Anzahl von Fischen an einem Ort.",
+  "config.density.name": "Spawn-Chance",
+  "config.density.tooltip": "Wahrscheinlichkeit, dass ein Fisch pro Feldprüfung erscheint.",
+  "config.section.locations": "Orte",
+  "config.farm-only.name": "Nur Farm",
+  "config.farm-only.tooltip": "Wenn aktiviert, erscheinen Fische nur auf der Farm.",
+  "config.excluded.name": "Ausgeschlossene Orte",
+  "config.excluded.tooltip": "Kommagetrennte Liste von Ortsnamen, die ignoriert werden (z.B. Kanalisation, BugLand)."
+}

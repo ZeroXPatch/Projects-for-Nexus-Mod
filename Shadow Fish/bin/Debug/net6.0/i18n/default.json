@@ -1,19 +1,26 @@
 {
   "config.section.visuals": "Visuals",
   "config.opacity.name": "Shadow Opacity",
-  "config.opacity.tooltip": "How dark the shadows are. Lower is more subtle.",
+  "config.opacity.tooltip": "How dark the shadows are (0.1 = faint, 1.0 = solid black).",
   "config.scale.name": "Shadow Scale",
   "config.scale.tooltip": "Size of the shadows relative to the fish items.",
-  
+  "config.fade.name": "Enable Fade Effects",
+  "config.fade.tooltip": "If true, fish fade in smoothly when spawning and fade out when leaving.",
+
   "config.section.population": "Population",
   "config.max-fish.name": "Max Fish",
   "config.max-fish.tooltip": "Maximum number of fish allowed in one location.",
-  "config.density.name": "Spawn Chance",
+  "config.density.name": "Spawn Density",
   "config.density.tooltip": "Probability of a fish spawning per tile check.",
-  
-  "config.section.locations": "Locations",
+
+  "config.section.locations": "Locations & Time",
   "config.farm-only.name": "Farm Only",
   "config.farm-only.tooltip": "If true, fish only appear on the farm.",
   "config.excluded.name": "Excluded Locations",
-  "config.excluded.tooltip": "Comma-separated list of location names to ignore (e.g. Sewer, BugLand)."
+  "config.excluded.tooltip": "Comma-separated list of location names to ignore (e.g. Sewer, BugLand).",
+
+  "config.hide-night.name": "Hide at Night",
+  "config.hide-night.tooltip": "If true, fish will disappear after sunset.",
+  "config.sunset-offset.name": "Hours After Sunset",
+  "config.sunset-offset.tooltip": "How many hours after sunset before fish disappear (Default: 2)."
 }

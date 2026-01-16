@@ -1,0 +1,21 @@
+{
+  "config.enabled.name": "Enabled",
+  "config.enabled.tooltip": "If enabled, your pet will emit light at night.",
+
+  "config.delay.name": "Late Activation",
+  "config.delay.tooltip": "If enabled, the light turns on 2 hours after sunset. If disabled, it turns on exactly at sunset.",
+
+  "config.preset.name": "Color Preset",
+  "config.preset.tooltip": "Choose a color theme for the light.",
+
+  "preset.Normal": "Normal",
+  "preset.Moonlight": "Moonlight",
+  "preset.Spooky": "Spooky",
+  "preset.Custom": "Custom",
+
+  "config.radius.name": "Light Radius",
+  "config.radius.tooltip": "How far the light shines.",
+
+  "config.section.custom": "Custom Colors",
+  "config.section.custom.text": "Adjust these values if you selected the 'Custom' preset above."
+}

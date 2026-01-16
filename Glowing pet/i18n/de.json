@@ -1,0 +1,16 @@
+{
+  "config.enabled.name": "Aktiviert",
+  "config.enabled.tooltip": "Wenn aktiviert, strahlt dein Haustier nachts Licht aus.",
+  "config.delay.name": "Späte Aktivierung",
+  "config.delay.tooltip": "Wenn aktiviert, schaltet sich das Licht 2 Stunden nach Sonnenuntergang ein. Wenn deaktiviert, genau bei Sonnenuntergang.",
+  "config.preset.name": "Farbvorgabe",
+  "config.preset.tooltip": "Wähle ein Farbthema für das Licht.",
+  "preset.Normal": "Normal",
+  "preset.Moonlight": "Mondlicht",
+  "preset.Spooky": "Gruselig",
+  "preset.Custom": "Benutzerdefiniert",
+  "config.radius.name": "Lichtradius",
+  "config.radius.tooltip": "Wie weit das Licht scheint.",
+  "config.section.custom": "Benutzerdefinierte Farben",
+  "config.section.custom.text": "Passe diese Werte an, wenn du oben die Voreinstellung „Benutzerdefiniert“ gewählt hast."
+}

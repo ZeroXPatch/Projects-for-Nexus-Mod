@@ -13,7 +13,7 @@ namespace ShadowsOfTheDeep
         internal static ModConfig Config = null!;
         internal static IMonitor ModMonitor = null!;
 
-        // PerScreen creates a unique instance for every split-screen player automatically.
+        // PerScreen ensures split-screen players have their own fish logic
         internal static readonly PerScreen<ShadowManager> ShadowManagers = new();
 
         public override void Entry(IModHelper helper)
@@ -26,7 +26,6 @@ namespace ShadowsOfTheDeep
             helper.Events.GameLoop.UpdateTicked += OnUpdateTicked;
             helper.Events.Player.Warped += OnWarped;
 
-            // Initialize Harmony
             var harmony = new Harmony(ModManifest.UniqueID);
             harmony.Patch(
                 original: AccessTools.Method(typeof(GameLocation), "drawWater", new[] { typeof(Microsoft.Xna.Framework.Graphics.SpriteBatch) }),
@@ -41,29 +40,47 @@ namespace ShadowsOfTheDeep
 
             configMenu.Register(ModManifest, () => Config = new ModConfig(), () => Helper.WriteConfig(Config));
 
-            // Section: Visuals
+            // --- VISUALS SECTION ---
             configMenu.AddSectionTitle(ModManifest, () => Helper.Translation.Get("config.section.visuals"));
+
             configMenu.AddNumberOption(ModManifest, () => Config.ShadowOpacity, val => Config.ShadowOpacity = val,
                 name: () => Helper.Translation.Get("config.opacity.name"),
                 tooltip: () => Helper.Translation.Get("config.opacity.tooltip"), min: 0.1f, max: 1.0f);
+
             configMenu.AddNumberOption(ModManifest, () => Config.ShadowScale, val => Config.ShadowScale = val,
                 name: () => Helper.Translation.Get("config.scale.name"),
                 tooltip: () => Helper.Translation.Get("config.scale.tooltip"), min: 0.5f, max: 2.0f);
 
-            // Section: Population
+            configMenu.AddBoolOption(ModManifest, () => Config.EnableFadeEffects, val => Config.EnableFadeEffects = val,
+                name: () => Helper.Translation.Get("config.fade.name"),
+                tooltip: () => Helper.Translation.Get("config.fade.tooltip"));
+
+            // --- POPULATION SECTION ---
             configMenu.AddSectionTitle(ModManifest, () => Helper.Translation.Get("config.section.population"));
+
             configMenu.AddNumberOption(ModManifest, () => Config.MaxFishCount, val => Config.MaxFishCount = val,
                 name: () => Helper.Translation.Get("config.max-fish.name"),
                 tooltip: () => Helper.Translation.Get("config.max-fish.tooltip"), min: 5, max: 500);
+
             configMenu.AddNumberOption(ModManifest, () => Config.SpawnChance, val => Config.SpawnChance = val,
                 name: () => Helper.Translation.Get("config.density.name"),
                 tooltip: () => Helper.Translation.Get("config.density.tooltip"), min: 0.01f, max: 1.0f);
 
-            // Section: Locations
+            // --- LOCATIONS & TIME SECTION ---
             configMenu.AddSectionTitle(ModManifest, () => Helper.Translation.Get("config.section.locations"));
+
             configMenu.AddBoolOption(ModManifest, () => Config.FarmOnly, val => Config.FarmOnly = val,
                 name: () => Helper.Translation.Get("config.farm-only.name"),
                 tooltip: () => Helper.Translation.Get("config.farm-only.tooltip"));
+
+            configMenu.AddBoolOption(ModManifest, () => Config.HideFishAtNight, val => Config.HideFishAtNight = val,
+                name: () => Helper.Translation.Get("config.hide-night.name"),
+                tooltip: () => Helper.Translation.Get("config.hide-night.tooltip"));
+
+            configMenu.AddNumberOption(ModManifest, () => Config.HoursAfterSunset, val => Config.HoursAfterSunset = val,
+                name: () => Helper.Translation.Get("config.sunset-offset.name"),
+                tooltip: () => Helper.Translation.Get("config.sunset-offset.tooltip"), min: 0, max: 6);
+
             configMenu.AddTextOption(ModManifest,
                 () => string.Join(",", Config.ExcludedLocations),
                 val => Config.ExcludedLocations = new List<string>(val.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)),
@@ -73,13 +90,11 @@ namespace ShadowsOfTheDeep
 
         private void OnSaveLoaded(object? sender, SaveLoadedEventArgs e)
         {
-            // Init for main player
             ShadowManagers.Value = new ShadowManager(Helper);
         }
 
         private void OnWarped(object? sender, WarpedEventArgs e)
         {
-            // Only update the manager associated with the screen that just warped
             if (e.IsLocalPlayer)
             {
                 if (ShadowManagers.Value == null)
@@ -92,8 +107,6 @@ namespace ShadowsOfTheDeep
         private void OnUpdateTicked(object? sender, UpdateTickedEventArgs e)
         {
             if (!Context.IsWorldReady) return;
-
-            // Updates the logic for the specific player/screen currently being processed
             ShadowManagers.Value?.Update(e);
         }
     }

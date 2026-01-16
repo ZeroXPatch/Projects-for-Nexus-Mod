@@ -1,0 +1,16 @@
+{
+  "config.enabled.name": "Activé",
+  "config.enabled.tooltip": "Si activé, votre animal émettra de la lumière la nuit.",
+  "config.delay.name": "Activation tardive",
+  "config.delay.tooltip": "Si activé, la lumière s’allume 2 heures après le coucher du soleil. Sinon, elle s’allume exactement au coucher du soleil.",
+  "config.preset.name": "Préréglage de couleur",
+  "config.preset.tooltip": "Choisissez un thème de couleur pour la lumière.",
+  "preset.Normal": "Normal",
+  "preset.Moonlight": "Clair de lune",
+  "preset.Spooky": "Effrayant",
+  "preset.Custom": "Personnalisé",
+  "config.radius.name": "Rayon de lumière",
+  "config.radius.tooltip": "La distance à laquelle la lumière brille.",
+  "config.section.custom": "Couleurs personnalisées",
+  "config.section.custom.text": "Ajustez ces valeurs si vous avez sélectionné le préréglage « Personnalisé »."
+}

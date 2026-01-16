@@ -1,0 +1,17 @@
+{
+  "config.section.visuals": "ビジュアル",
+  "config.opacity.name": "影の不透明度",
+  "config.opacity.tooltip": "影の暗さ。低いほど控えめになります。",
+  "config.scale.name": "影のスケール",
+  "config.scale.tooltip": "魚に対する影の大きさ。",
+  "config.section.population": "個体数",
+  "config.max-fish.name": "最大魚数",
+  "config.max-fish.tooltip": "1か所に出現できる最大の魚数。",
+  "config.density.name": "出現確率",
+  "config.density.tooltip": "タイルごとに魚が出現する確率。",
+  "config.section.locations": "場所",
+  "config.farm-only.name": "農場のみ",
+  "config.farm-only.tooltip": "有効にすると、魚は農場にのみ出現します。",
+  "config.excluded.name": "除外された場所",
+  "config.excluded.tooltip": "無視する場所名をカンマ区切りで指定します（例: Sewer, BugLand）。"
+}

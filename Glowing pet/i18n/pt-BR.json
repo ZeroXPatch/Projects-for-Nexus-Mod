@@ -1,0 +1,16 @@
+{
+  "config.enabled.name": "Ativado",
+  "config.enabled.tooltip": "Se ativado, seu animal emitirá luz à noite.",
+  "config.delay.name": "Ativação tardia",
+  "config.delay.tooltip": "Se ativado, a luz acende 2 horas após o pôr do sol. Se desativado, acende exatamente no pôr do sol.",
+  "config.preset.name": "Predefinição de cor",
+  "config.preset.tooltip": "Escolha um tema de cor para a luz.",
+  "preset.Normal": "Normal",
+  "preset.Moonlight": "Luar",
+  "preset.Spooky": "Assustador",
+  "preset.Custom": "Personalizado",
+  "config.radius.name": "Raio de luz",
+  "config.radius.tooltip": "Quão longe a luz alcança.",
+  "config.section.custom": "Cores personalizadas",
+  "config.section.custom.text": "Ajuste estes valores se você selecionou a predefinição «Personalizado»."
+}

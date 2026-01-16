@@ -1,0 +1,16 @@
+{
+  "config.enabled.name": "Включено",
+  "config.enabled.tooltip": "Если включено, ваш питомец будет излучать свет ночью.",
+  "config.delay.name": "Поздняя активация",
+  "config.delay.tooltip": "Если включено, свет включается через 2 часа после заката. Если выключено, включается точно на закате.",
+  "config.preset.name": "Цветовой пресет",
+  "config.preset.tooltip": "Выберите цветовую тему для света.",
+  "preset.Normal": "Обычный",
+  "preset.Moonlight": "Лунный свет",
+  "preset.Spooky": "Жуткий",
+  "preset.Custom": "Пользовательский",
+  "config.radius.name": "Радиус света",
+  "config.radius.tooltip": "Как далеко распространяется свет.",
+  "config.section.custom": "Пользовательские цвета",
+  "config.section.custom.text": "Настройте эти значения, если вы выбрали пресет «Пользовательский»."
+}

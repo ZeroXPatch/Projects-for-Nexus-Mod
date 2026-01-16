@@ -1,0 +1,16 @@
+{
+  "config.enabled.name": "有効",
+  "config.enabled.tooltip": "有効にすると、夜にペットが光を放ちます。",
+  "config.delay.name": "遅延起動",
+  "config.delay.tooltip": "有効にすると、日没から2時間後に点灯します。無効の場合は日没と同時に点灯します。",
+  "config.preset.name": "カラープリセット",
+  "config.preset.tooltip": "ライトのカラーテーマを選択します。",
+  "preset.Normal": "通常",
+  "preset.Moonlight": "月明かり",
+  "preset.Spooky": "不気味",
+  "preset.Custom": "カスタム",
+  "config.radius.name": "光の範囲",
+  "config.radius.tooltip": "光が届く距離。",
+  "config.section.custom": "カスタムカラー",
+  "config.section.custom.text": "上で「カスタム」を選択した場合、これらの値を調整してください。"
+}

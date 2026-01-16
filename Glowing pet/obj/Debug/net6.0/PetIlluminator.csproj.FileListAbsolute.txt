@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet\obj\Debug\net6.0\PetIlluminator.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet\obj\Debug\net6.0\PetIlluminator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet\obj\Debug\net6.0\PetIlluminator.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet\obj\Debug\net6.0\PetIlluminator.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet\obj\Debug\net6.0\PetIlluminator.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet\obj\Debug\net6.0\PetIlluminator.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet\bin\Debug\net6.0\PetIlluminator.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet\bin\Debug\net6.0\PetIlluminator.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet\obj\Debug\net6.0\PetIlluminator.dll

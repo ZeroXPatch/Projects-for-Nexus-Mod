@@ -1,10 +1,10 @@
 {
-  "Name": "Shadows of the Deep",
+  "Name": "Immersive Fish Shadows",
   "Author": "ZeroXPatch",
-  "Version": "1.0.0",
+  "Version": "2.0.0",
   "Description": "Adds immersive, configurable fish shadows to the water.",
   "UniqueID": "ZeroXPatch.ShadowsOfTheDeep",
   "EntryDll": "ShadowsOfTheDeep.dll",
   "MinimumApiVersion": "4.0.0",
-  "UpdateKeys": [ "" ]
+  "UpdateKeys": [ "Nexus:41302" ]
 }

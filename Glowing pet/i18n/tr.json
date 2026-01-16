@@ -1,0 +1,16 @@
+{
+  "config.enabled.name": "Etkin",
+  "config.enabled.tooltip": "Etkinleştirildiğinde, evcil hayvanınız gece ışık saçar.",
+  "config.delay.name": "Geç Etkinleştirme",
+  "config.delay.tooltip": "Etkinleştirilirse, ışık gün batımından 2 saat sonra yanar. Devre dışıysa, tam gün batımında yanar.",
+  "config.preset.name": "Renk Ön Ayarı",
+  "config.preset.tooltip": "Işık için bir renk teması seçin.",
+  "preset.Normal": "Normal",
+  "preset.Moonlight": "Ay Işığı",
+  "preset.Spooky": "Ürkütücü",
+  "preset.Custom": "Özel",
+  "config.radius.name": "Işık Yarıçapı",
+  "config.radius.tooltip": "Işığın ne kadar uzağa ulaştığı.",
+  "config.section.custom": "Özel Renkler",
+  "config.section.custom.text": "Yukarıda «Özel» ön ayarını seçtiyseniz bu değerleri ayarlayın."
+}

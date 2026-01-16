@@ -1,0 +1,16 @@
+{
+  "config.enabled.name": "启用",
+  "config.enabled.tooltip": "启用后，你的宠物将在夜晚发光。",
+  "config.delay.name": "延迟启动",
+  "config.delay.tooltip": "启用后，灯光将在日落后2小时开启。若禁用，则在日落时立即开启。",
+  "config.preset.name": "颜色预设",
+  "config.preset.tooltip": "选择灯光的颜色主题。",
+  "preset.Normal": "普通",
+  "preset.Moonlight": "月光",
+  "preset.Spooky": "诡异",
+  "preset.Custom": "自定义",
+  "config.radius.name": "光照范围",
+  "config.radius.tooltip": "灯光照射的距离。",
+  "config.section.custom": "自定义颜色",
+  "config.section.custom.text": "如果上方选择了“自定义”预设，请调整这些数值。"
+}

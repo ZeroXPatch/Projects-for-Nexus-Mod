@@ -1,0 +1,16 @@
+{
+  "config.enabled.name": "Bật",
+  "config.enabled.tooltip": "Khi bật, thú cưng của bạn sẽ phát sáng vào ban đêm.",
+  "config.delay.name": "Kích hoạt trễ",
+  "config.delay.tooltip": "Khi bật, đèn sẽ sáng sau hoàng hôn 2 giờ. Khi tắt, đèn bật đúng lúc hoàng hôn.",
+  "config.preset.name": "Mẫu màu",
+  "config.preset.tooltip": "Chọn chủ đề màu cho ánh sáng.",
+  "preset.Normal": "Bình thường",
+  "preset.Moonlight": "Ánh trăng",
+  "preset.Spooky": "Rùng rợn",
+  "preset.Custom": "Tùy chỉnh",
+  "config.radius.name": "Bán kính ánh sáng",
+  "config.radius.tooltip": "Khoảng cách ánh sáng chiếu tới.",
+  "config.section.custom": "Màu tùy chỉnh",
+  "config.section.custom.text": "Điều chỉnh các giá trị này nếu bạn đã chọn mẫu «Tùy chỉnh»."
+}

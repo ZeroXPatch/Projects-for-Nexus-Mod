@@ -1,0 +1,16 @@
+{
+  "config.enabled.name": "Włączone",
+  "config.enabled.tooltip": "Jeśli włączone, twoje zwierzę będzie emitować światło w nocy.",
+  "config.delay.name": "Opóźniona aktywacja",
+  "config.delay.tooltip": "Jeśli włączone, światło zapala się 2 godziny po zachodzie słońca. Jeśli wyłączone, zapala się dokładnie o zachodzie.",
+  "config.preset.name": "Preset kolorów",
+  "config.preset.tooltip": "Wybierz motyw kolorystyczny światła.",
+  "preset.Normal": "Normalny",
+  "preset.Moonlight": "Światło księżyca",
+  "preset.Spooky": "Upiorny",
+  "preset.Custom": "Niestandardowy",
+  "config.radius.name": "Zasięg światła",
+  "config.radius.tooltip": "Jak daleko sięga światło.",
+  "config.section.custom": "Kolory niestandardowe",
+  "config.section.custom.text": "Dostosuj te wartości, jeśli wybrano preset „Niestandardowy”."
+}

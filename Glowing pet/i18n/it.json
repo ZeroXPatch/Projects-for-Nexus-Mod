@@ -1,0 +1,16 @@
+{
+  "config.enabled.name": "Abilitato",
+  "config.enabled.tooltip": "Se abilitato, il tuo animale emetterà luce di notte.",
+  "config.delay.name": "Attivazione ritardata",
+  "config.delay.tooltip": "Se abilitato, la luce si accende 2 ore dopo il tramonto. Se disabilitato, si accende esattamente al tramonto.",
+  "config.preset.name": "Predefinito colore",
+  "config.preset.tooltip": "Scegli un tema di colore per la luce.",
+  "preset.Normal": "Normale",
+  "preset.Moonlight": "Luce lunare",
+  "preset.Spooky": "Spettrale",
+  "preset.Custom": "Personalizzato",
+  "config.radius.name": "Raggio di luce",
+  "config.radius.tooltip": "Quanto lontano arriva la luce.",
+  "config.section.custom": "Colori personalizzati",
+  "config.section.custom.text": "Regola questi valori se hai selezionato il preset «Personalizzato»."
+}

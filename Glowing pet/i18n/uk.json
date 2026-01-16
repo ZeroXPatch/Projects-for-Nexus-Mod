@@ -1,0 +1,16 @@
+{
+  "config.enabled.name": "Увімкнено",
+  "config.enabled.tooltip": "Якщо увімкнено, ваш улюбленець світитиметься вночі.",
+  "config.delay.name": "Пізня активація",
+  "config.delay.tooltip": "Якщо увімкнено, світло вмикається через 2 години після заходу сонця. Якщо вимкнено, вмикається точно під час заходу.",
+  "config.preset.name": "Колірний пресет",
+  "config.preset.tooltip": "Оберіть кольорову тему для світла.",
+  "preset.Normal": "Звичайний",
+  "preset.Moonlight": "Місячне світло",
+  "preset.Spooky": "Моторошний",
+  "preset.Custom": "Користувацький",
+  "config.radius.name": "Радіус світла",
+  "config.radius.tooltip": "На яку відстань світить світло.",
+  "config.section.custom": "Користувацькі кольори",
+  "config.section.custom.text": "Налаштуйте ці значення, якщо ви вибрали пресет «Користувацький»."
+}
