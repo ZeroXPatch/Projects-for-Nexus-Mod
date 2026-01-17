@@ -1,0 +1,9 @@
+{
+  "config.section.settings": "Настройки",
+  "config.enabled.name": "Включено",
+  "config.enabled.tooltip": "Включить/выключить статическую полосу рыбалки.",
+  "config.pos_x.name": "Позиция X (%)",
+  "config.pos_x.tooltip": "Горизонтальная позиция (0 = Слева, 1 = Справа).",
+  "config.pos_y.name": "Позиция Y (%)",
+  "config.pos_y.tooltip": "Вертикальная позиция (0 = Сверху, 1 = Снизу)."
+}

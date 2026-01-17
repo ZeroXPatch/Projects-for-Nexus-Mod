@@ -1,0 +1,9 @@
+{
+  "config.section.settings": "Settings",
+  "config.enabled.name": "Enabled",
+  "config.enabled.tooltip": "Toggle the static fishing bar functionality.",
+  "config.pos_x.name": "Position X (%)",
+  "config.pos_x.tooltip": "Horizontal position on screen (0 = Left, 1 = Right).",
+  "config.pos_y.name": "Position Y (%)",
+  "config.pos_y.tooltip": "Vertical position on screen (0 = Top, 1 = Bottom)."
+}

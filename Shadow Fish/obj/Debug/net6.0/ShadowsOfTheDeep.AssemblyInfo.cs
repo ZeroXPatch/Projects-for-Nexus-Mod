@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShadowsOfTheDeep")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0801626ce7d6635bbaf273106d045cf031f0278")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a86122e631ff0f27bad6dd217ad7a25b1f369dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShadowsOfTheDeep")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShadowsOfTheDeep")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

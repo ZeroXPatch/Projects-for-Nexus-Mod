@@ -1,0 +1,9 @@
+{
+  "config.section.settings": "Ajustes",
+  "config.enabled.name": "Habilitado",
+  "config.enabled.tooltip": "Activa o desactiva la barra de pesca estática.",
+  "config.pos_x.name": "Posición X (%)",
+  "config.pos_x.tooltip": "Posición horizontal (0 = Izquierda, 1 = Derecha).",
+  "config.pos_y.name": "Posición Y (%)",
+  "config.pos_y.tooltip": "Posición vertical (0 = Arriba, 1 = Abajo)."
+}

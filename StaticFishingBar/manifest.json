@@ -1,0 +1,10 @@
+{
+  "Name": "Static Fishing Bar",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Makes the fishing bar static and movable.",
+  "UniqueID": "ZeroXPatch.StaticFishingBar",
+  "EntryDll": "StaticFishingBar.dll",
+  "MinimumApiVersion": "3.14.0",
+  "UpdateKeys": []
+}

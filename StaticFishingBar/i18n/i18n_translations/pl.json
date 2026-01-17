@@ -1,0 +1,9 @@
+{
+  "config.section.settings": "Ustawienia",
+  "config.enabled.name": "Włączone",
+  "config.enabled.tooltip": "Przełącza statyczny pasek łowienia.",
+  "config.pos_x.name": "Pozycja X (%)",
+  "config.pos_x.tooltip": "Pozycja pozioma (0 = Lewo, 1 = Prawo).",
+  "config.pos_y.name": "Pozycja Y (%)",
+  "config.pos_y.tooltip": "Pozycja pionowa (0 = Góra, 1 = Dół)."
+}

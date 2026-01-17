@@ -1,0 +1,18 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet - Copy\bin\Debug\net6.0\StaticFishingBar.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet - Copy\bin\Debug\net6.0\StaticFishingBar.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet - Copy\obj\Debug\net6.0\StaticFishingBar.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet - Copy\obj\Debug\net6.0\StaticFishingBar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet - Copy\obj\Debug\net6.0\StaticFishingBar.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet - Copy\obj\Debug\net6.0\StaticFishingBar.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet - Copy\obj\Debug\net6.0\StaticFishingBar.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet - Copy\obj\Debug\net6.0\StaticFishingBar.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Glowing pet - Copy\obj\Debug\net6.0\StaticFishingBar.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaticFishingBar\bin\Debug\net6.0\StaticFishingBar.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaticFishingBar\bin\Debug\net6.0\StaticFishingBar.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaticFishingBar\obj\Debug\net6.0\StaticFishingBar.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaticFishingBar\obj\Debug\net6.0\StaticFishingBar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaticFishingBar\obj\Debug\net6.0\StaticFishingBar.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaticFishingBar\obj\Debug\net6.0\StaticFishingBar.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaticFishingBar\obj\Debug\net6.0\StaticFishingBar.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaticFishingBar\obj\Debug\net6.0\StaticFishingBar.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaticFishingBar\obj\Debug\net6.0\StaticFishingBar.dll

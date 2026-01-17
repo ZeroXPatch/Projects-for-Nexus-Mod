@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CustomNightLights")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6b0a6bb716972a32e93032083ed3180625f4cb1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a86122e631ff0f27bad6dd217ad7a25b1f369dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("CustomNightLights")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CustomNightLights")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

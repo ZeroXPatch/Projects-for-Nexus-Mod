@@ -1,0 +1,9 @@
+{
+  "config.section.settings": "Ayarlar",
+  "config.enabled.name": "Etkin",
+  "config.enabled.tooltip": "Statik balık tutma çubuğunu açar/kapatır.",
+  "config.pos_x.name": "Konum X (%)",
+  "config.pos_x.tooltip": "Yatay konum (0 = Sol, 1 = Sağ).",
+  "config.pos_y.name": "Konum Y (%)",
+  "config.pos_y.tooltip": "Dikey konum (0 = Üst, 1 = Alt)."
+}

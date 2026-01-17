@@ -1,0 +1,9 @@
+{
+  "config.section.settings": "Paramètres",
+  "config.enabled.name": "Activé",
+  "config.enabled.tooltip": "Bascule la barre de pêche statique.",
+  "config.pos_x.name": "Position X (%)",
+  "config.pos_x.tooltip": "Position horizontale (0 = Gauche, 1 = Droite).",
+  "config.pos_y.name": "Position Y (%)",
+  "config.pos_y.tooltip": "Position verticale (0 = Haut, 1 = Bas)."
+}

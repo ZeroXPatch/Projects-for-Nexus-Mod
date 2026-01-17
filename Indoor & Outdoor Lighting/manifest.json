@@ -1,7 +1,7 @@
 {
   "Name": "Indoor & Outdoor Lighting",
   "Author": "YourName",
-  "Version": "1.0.0",
+  "Version": "1.0.1",
   "Description": "Independently adjust the color, intensity, and radius of lights for indoors and outdoors.",
   "UniqueID": "YourName.IndoorOutdoorLighting",
   "EntryDll": "CustomNightLights.dll",

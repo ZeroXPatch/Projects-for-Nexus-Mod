@@ -1,0 +1,9 @@
+{
+  "config.section.settings": "설정",
+  "config.enabled.name": "활성화됨",
+  "config.enabled.tooltip": "고정된 낚시바 기능을 켭니다.",
+  "config.pos_x.name": "위치 X (%)",
+  "config.pos_x.tooltip": "가로 위치 (0 = 왼쪽, 1 = 오른쪽).",
+  "config.pos_y.name": "위치 Y (%)",
+  "config.pos_y.tooltip": "세로 위치 (0 = 위쪽, 1 = 아래쪽)."
+}

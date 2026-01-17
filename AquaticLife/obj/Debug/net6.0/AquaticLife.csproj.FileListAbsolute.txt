@@ -1,0 +1,11 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AquaticLife\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AquaticLife\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AquaticLife\bin\Debug\net6.0\AquaticLife.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AquaticLife\bin\Debug\net6.0\AquaticLife.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AquaticLife\obj\Debug\net6.0\AquaticLife.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AquaticLife\obj\Debug\net6.0\AquaticLife.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AquaticLife\obj\Debug\net6.0\AquaticLife.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AquaticLife\obj\Debug\net6.0\AquaticLife.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AquaticLife\obj\Debug\net6.0\AquaticLife.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AquaticLife\obj\Debug\net6.0\AquaticLife.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\AquaticLife\obj\Debug\net6.0\AquaticLife.dll

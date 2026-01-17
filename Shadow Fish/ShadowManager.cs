@@ -16,6 +16,7 @@ namespace ShadowsOfTheDeep
         private List<string> _possibleFishIds = new();
         private GameLocation? _currentLocation;
         private readonly Random _random = new();
+        private int _currentSessionCap = 50;
 
         public ShadowManager(IModHelper helper)
         {
@@ -33,12 +34,16 @@ namespace ShadowsOfTheDeep
             if (ModEntry.Config.ExcludedLocations.Contains(location.Name)) return;
             if (IsPastCurfew()) return;
 
+            int min = Math.Min(ModEntry.Config.MinFishCount, ModEntry.Config.MaxFishCount);
+            int max = Math.Max(ModEntry.Config.MinFishCount, ModEntry.Config.MaxFishCount);
+            _currentSessionCap = _random.Next(min, max + 1);
+
             PopulateFishCache(location);
 
             if (_possibleFishIds.Any())
             {
                 int tilesToCheck = location.Map.Layers[0].LayerWidth * location.Map.Layers[0].LayerHeight;
-                int initialSpawnCount = (int)Math.Min(ModEntry.Config.MaxFishCount, tilesToCheck * ModEntry.Config.SpawnChance * 0.1f);
+                int initialSpawnCount = (int)Math.Min(_currentSessionCap, tilesToCheck * ModEntry.Config.SpawnChance * 0.1f);
 
                 for (int i = 0; i < initialSpawnCount; i++)
                 {
@@ -93,7 +98,7 @@ namespace ShadowsOfTheDeep
             {
                 bool aggressive = _shadows.Count < 5;
                 uint tickRate = aggressive ? 10u : 60u;
-                if (e.IsMultipleOf(tickRate) && _shadows.Count < ModEntry.Config.MaxFishCount)
+                if (e.IsMultipleOf(tickRate) && _shadows.Count < _currentSessionCap)
                 {
                     if (_random.NextDouble() < ModEntry.Config.SpawnChance)
                         TrySpawnFish(forceRandomMapPosition: false);
@@ -149,10 +154,12 @@ namespace ShadowsOfTheDeep
         {
             if (!IsTileWater(tileX, tileY)) return false;
 
+            // Cardinal
             if (!IsTileWater(tileX + 1, tileY) || !IsTileWater(tileX - 1, tileY) ||
                 !IsTileWater(tileX, tileY + 1) || !IsTileWater(tileX, tileY - 1))
                 return false;
 
+            // DIAGONAL RESTORED
             if (!IsTileWater(tileX + 1, tileY + 1) || !IsTileWater(tileX - 1, tileY - 1) ||
                 !IsTileWater(tileX + 1, tileY - 1) || !IsTileWater(tileX - 1, tileY + 1))
                 return false;

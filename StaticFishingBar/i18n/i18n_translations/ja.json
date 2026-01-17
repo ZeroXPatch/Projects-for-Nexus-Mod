@@ -1,0 +1,9 @@
+{
+  "config.section.settings": "設定",
+  "config.enabled.name": "有効",
+  "config.enabled.tooltip": "静止した釣りバー機能を切り替えます。",
+  "config.pos_x.name": "位置 X (%)",
+  "config.pos_x.tooltip": "水平方向の位置 (0 = 左, 1 = 右)。",
+  "config.pos_y.name": "位置 Y (%)",
+  "config.pos_y.tooltip": "垂直方向の位置 (0 = 上, 1 = 下)。"
+}

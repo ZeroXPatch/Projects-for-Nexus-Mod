@@ -1,0 +1,9 @@
+{
+  "config.section.settings": "Налаштування",
+  "config.enabled.name": "Увімкнено",
+  "config.enabled.tooltip": "Перемкнути статичну панель риболовлі.",
+  "config.pos_x.name": "Позиція X (%)",
+  "config.pos_x.tooltip": "Горизонтальна позиція (0 = Зліва, 1 = Справа).",
+  "config.pos_y.name": "Позиція Y (%)",
+  "config.pos_y.tooltip": "Вертикальна позиція (0 = Зверху, 1 = Знизу)."
+}

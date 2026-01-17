@@ -1,0 +1,9 @@
+{
+  "config.section.settings": "Einstellungen",
+  "config.enabled.name": "Aktiviert",
+  "config.enabled.tooltip": "Schaltet die statische Angelleiste ein oder aus.",
+  "config.pos_x.name": "Position X (%)",
+  "config.pos_x.tooltip": "Horizontale Position (0 = Links, 1 = Rechts).",
+  "config.pos_y.name": "Position Y (%)",
+  "config.pos_y.tooltip": "Vertikale Position (0 = Oben, 1 = Unten)."
+}

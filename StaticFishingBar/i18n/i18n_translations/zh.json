@@ -1,0 +1,9 @@
+{
+  "config.section.settings": "设置",
+  "config.enabled.name": "启用",
+  "config.enabled.tooltip": "切换静态钓鱼条功能。",
+  "config.pos_x.name": "位置 X (%)",
+  "config.pos_x.tooltip": "水平屏幕位置 (0 = 左, 1 = 右)。",
+  "config.pos_y.name": "位置 Y (%)",
+  "config.pos_y.tooltip": "垂直屏幕位置 (0 = 上, 1 = 下)。"
+}

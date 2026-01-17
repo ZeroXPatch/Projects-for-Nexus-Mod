@@ -1,0 +1,9 @@
+{
+  "config.section.settings": "Cài đặt",
+  "config.enabled.name": "Đã bật",
+  "config.enabled.tooltip": "Bật/tắt thanh câu cá tĩnh.",
+  "config.pos_x.name": "Vị trí X (%)",
+  "config.pos_x.tooltip": "Vị trí ngang (0 = Trái, 1 = Phải).",
+  "config.pos_y.name": "Vị trí Y (%)",
+  "config.pos_y.tooltip": "Vị trí dọc (0 = Trên, 1 = Dưới)."
+}

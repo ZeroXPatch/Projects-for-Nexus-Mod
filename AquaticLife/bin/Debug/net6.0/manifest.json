@@ -1,0 +1,10 @@
+{
+  "Name": "Aquatic Life",
+  "Author": "YourName",
+  "Version": "1.0.0",
+  "Description": "Populates the waters with visible, swimming fish using smart navigation AI.",
+  "UniqueID": "YourName.AquaticLife",
+  "EntryDll": "AquaticLife.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "" ]
+}
