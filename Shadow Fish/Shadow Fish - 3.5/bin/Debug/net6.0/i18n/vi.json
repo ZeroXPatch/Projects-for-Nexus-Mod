@@ -1,0 +1,23 @@
+{
+  "config.section.visuals": "Hình ảnh",
+  "config.opacity.name": "Độ mờ bóng",
+  "config.opacity.tooltip": "Độ tối của bóng (0.1 = mờ, 1.0 = đen tuyền).",
+  "config.scale.name": "Kích thước bóng",
+  "config.scale.tooltip": "Kích thước của bóng so với cá.",
+  "config.fade.name": "Bật hiệu ứng mờ dần",
+  "config.fade.tooltip": "Nếu bật, cá sẽ hiện ra và biến mất một cách mượt mà.",
+  "config.section.population": "Số lượng",
+  "config.max-fish.name": "Cá tối đa",
+  "config.max-fish.tooltip": "Số lượng cá tối đa cho phép tại một địa điểm.",
+  "config.density.name": "Mật độ xuất hiện",
+  "config.density.tooltip": "Xác suất cá xuất hiện trên mỗi ô kiểm tra.",
+  "config.section.locations": "Vị trí & Thời gian",
+  "config.farm-only.name": "Chỉ ở trang trại",
+  "config.farm-only.tooltip": "Nếu bật, cá chỉ xuất hiện trong trang trại.",
+  "config.excluded.name": "Vị trí bị loại trừ",
+  "config.excluded.tooltip": "Danh sách tên các địa điểm cần bỏ qua, phân cách bằng dấu phẩy (ví dụ: Cống rãnh, Hang bọ).",
+  "config.hide-night.name": "Ẩn vào ban đêm",
+  "config.hide-night.tooltip": "Nếu bật, cá sẽ biến mất sau khi mặt trời lặn.",
+  "config.sunset-offset.name": "Giờ sau hoàng hôn",
+  "config.sunset-offset.tooltip": "Bao nhiêu giờ sau khi mặt trời lặn trước khi cá biến mất (Mặc định: 2)."
+}

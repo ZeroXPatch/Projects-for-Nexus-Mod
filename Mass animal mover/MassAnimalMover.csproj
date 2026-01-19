@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>MassAnimalMover</AssemblyName>
+    <Version>1.0.0</Version>
+    <Description>A mod to move animals between buildings in batches.</Description>
+    <Authors>YourName</Authors>
+    <UniqueID>YourName.MassAnimalMover</UniqueID>
+    
+    <!-- Stardew Valley 1.6 uses .NET 6 -->
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Platforms>x64;AnyCPU</Platforms>
+    
+    <!-- Create the manifest.json automatically based on properties above -->
+    <EnableModDeploy>true</EnableModDeploy>
+    <ModZipPath>$(SolutionDir)\_releases</ModZipPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- This package automatically finds your game install and references the DLLs -->
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Exclude bin/obj folders from the mod build to keep it clean -->
+    <None Remove="bin\**" />
+    <None Remove="obj\**" />
+  </ItemGroup>
+
+</Project>

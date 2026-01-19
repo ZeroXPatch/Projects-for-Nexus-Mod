@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseStarterKit\bin\Debug\net6.0\HorseStarterKit.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseStarterKit\bin\Debug\net6.0\HorseStarterKit.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseStarterKit\obj\Debug\net6.0\HorseStarterKit.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseStarterKit\obj\Debug\net6.0\HorseStarterKit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseStarterKit\obj\Debug\net6.0\HorseStarterKit.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseStarterKit\obj\Debug\net6.0\HorseStarterKit.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseStarterKit\obj\Debug\net6.0\HorseStarterKit.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseStarterKit\obj\Debug\net6.0\HorseStarterKit.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseStarterKit\obj\Debug\net6.0\HorseStarterKit.dll

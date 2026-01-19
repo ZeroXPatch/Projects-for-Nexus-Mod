@@ -1,0 +1,10 @@
+{
+  "Name": "Wild Swimming Ducks",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Spawns wild ducks that swim in the water periodically.",
+  "UniqueID": "YourName.WildSwimmingDucks",
+  "EntryDll": "WildSwimmingDucks.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

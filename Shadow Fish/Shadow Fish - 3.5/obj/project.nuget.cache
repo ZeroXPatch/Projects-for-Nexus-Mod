@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "MJcrmZYk5GU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\ShadowsOfTheDeep.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zjmto\\.nuget\\packages\\lib.harmony\\2.3.0-prerelease.2\\lib.harmony.2.3.0-prerelease.2.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\mono.cecil\\0.11.4\\mono.cecil.0.11.4.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\monomod.backports\\1.0.0-prerelease.2\\monomod.backports.1.0.0-prerelease.2.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\monomod.core\\1.0.0-prerelease.2\\monomod.core.1.0.0-prerelease.2.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\monomod.ilhelpers\\1.0.0-prerelease.2\\monomod.ilhelpers.1.0.0-prerelease.2.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\monomod.utils\\25.0.0-prerelease.2\\monomod.utils.25.0.0-prerelease.2.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\pathoschild.stardew.modbuildconfig.4.4.0.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\system.text.json\\5.0.2\\system.text.json.5.0.2.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
+  ],
+  "logs": []
+}

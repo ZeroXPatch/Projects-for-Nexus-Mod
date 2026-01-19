@@ -1,0 +1,10 @@
+{
+  "Name": "Phantom Guard",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Summons a customizable ghostly bodyguard to fight for you. Features smart combat AI, map persistence, and full configuration.",
+  "UniqueID": "ZeroXPatch.PhantomGuard",
+  "EntryDll": "PhantomGuard.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

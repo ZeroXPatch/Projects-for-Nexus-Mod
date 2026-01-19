@@ -1,0 +1,6 @@
+{
+  "item.name": "Stable Deed",
+  "item.description": "A magical contract that mandates the immediate construction of a Stable. Use this to summon Robin.",
+  "mail.day2": "Traveler,^I have watched you toil, walking endlessly across these lands. It is time you moved with the speed of the wind.^Enclosed is a prepaid deed. Use it to commission a shelter for a noble steed. Do not worry about the cost; it has been taken care of.^   - A Friend of the Wind%item object ZeroXPatch.HorseStarterKit.Deed 1 %%",
+  "mail.day3": "Traveler,^Now that you have a stable, you require the means to call your companion from the void.^Take this flute. Play it, and your steed shall answer instantly, no matter how far you roam.^   - A Friend of the Wind%item object 911 1 %%"
+}

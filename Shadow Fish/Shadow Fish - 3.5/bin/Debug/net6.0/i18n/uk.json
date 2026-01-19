@@ -1,0 +1,23 @@
+{
+  "config.section.visuals": "Візуалізація",
+  "config.opacity.name": "Прозорість тіні",
+  "config.opacity.tooltip": "Наскільки темними є тіні (0.1 = слабкі, 1.0 = чорні).",
+  "config.scale.name": "Розмір тіні",
+  "config.scale.tooltip": "Розмір тіней відносно риби.",
+  "config.fade.name": "Ефекти згасання",
+  "config.fade.tooltip": "Якщо увімкнено, риби плавно з'являються та зникають.",
+  "config.section.population": "Популяція",
+  "config.max-fish.name": "Макс. риб",
+  "config.max-fish.tooltip": "Максимальна кількість риби в одній локації.",
+  "config.density.name": "Щільність появи",
+  "config.density.tooltip": "Ймовірність появи риби при перевірці клітинки.",
+  "config.section.locations": "Локації та час",
+  "config.farm-only.name": "Тільки ферма",
+  "config.farm-only.tooltip": "Якщо увімкнено, риба з'являється тільки на фермі.",
+  "config.excluded.name": "Виключені місця",
+  "config.excluded.tooltip": "Список локацій через кому (наприклад: Каналізація, Лігво жуків).",
+  "config.hide-night.name": "Ховати вночі",
+  "config.hide-night.tooltip": "Якщо увімкнено, риба зникне після заходу сонця.",
+  "config.sunset-offset.name": "Годин після заходу",
+  "config.sunset-offset.tooltip": "Через скільки годин після заходу сонця риба зникне (За замовч.: 2)."
+}

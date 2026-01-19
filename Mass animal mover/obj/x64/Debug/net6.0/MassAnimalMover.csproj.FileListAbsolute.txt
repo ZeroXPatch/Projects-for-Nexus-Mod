@@ -1,0 +1,6 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Mass animal mover\obj\x64\Debug\net6.0\MassAnimalMover.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Mass animal mover\obj\x64\Debug\net6.0\MassAnimalMover.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Mass animal mover\obj\x64\Debug\net6.0\MassAnimalMover.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Mass animal mover\obj\x64\Debug\net6.0\MassAnimalMover.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Mass animal mover\obj\x64\Debug\net6.0\MassAnimalMover.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Mass animal mover\obj\x64\Debug\net6.0\MassAnimalMover.sourcelink.json

@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseFluteGift\bin\Debug\net6.0\HorseFluteGift.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseFluteGift\bin\Debug\net6.0\HorseFluteGift.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseFluteGift\obj\Debug\net6.0\HorseFluteGift.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseFluteGift\obj\Debug\net6.0\HorseFluteGift.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseFluteGift\obj\Debug\net6.0\HorseFluteGift.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseFluteGift\obj\Debug\net6.0\HorseFluteGift.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseFluteGift\obj\Debug\net6.0\HorseFluteGift.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseFluteGift\obj\Debug\net6.0\HorseFluteGift.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseFluteGift\obj\Debug\net6.0\HorseFluteGift.dll

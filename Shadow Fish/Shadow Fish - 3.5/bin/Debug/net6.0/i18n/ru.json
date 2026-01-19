@@ -1,0 +1,23 @@
+{
+  "config.section.visuals": "Визуализация",
+  "config.opacity.name": "Прозрачность тени",
+  "config.opacity.tooltip": "Насколько темными будут тени (0.1 = слабые, 1.0 = черные).",
+  "config.scale.name": "Размер тени",
+  "config.scale.tooltip": "Размер теней относительно рыбы.",
+  "config.fade.name": "Эффекты затухания",
+  "config.fade.tooltip": "Если включено, рыбы плавно появляются и исчезают.",
+  "config.section.population": "Популяция",
+  "config.max-fish.name": "Макс. рыб",
+  "config.max-fish.tooltip": "Максимальное количество рыбы в одной локации.",
+  "config.density.name": "Плотность спавна",
+  "config.density.tooltip": "Вероятность появления рыбы при проверке клетки.",
+  "config.section.locations": "Локации и время",
+  "config.farm-only.name": "Только ферма",
+  "config.farm-only.tooltip": "Если включено, рыба появляется только на ферме.",
+  "config.excluded.name": "Исключенные места",
+  "config.excluded.tooltip": "Список локаций через запятую (например: Канализация, Логово жуков).",
+  "config.hide-night.name": "Скрывать ночью",
+  "config.hide-night.tooltip": "Если включено, рыба исчезнет после заката.",
+  "config.sunset-offset.name": "Часов после заката",
+  "config.sunset-offset.tooltip": "Через сколько часов после заката рыба исчезнет (По умолч.: 2)."
+}

@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SummonAlly\bin\Debug\net6.0\PhantomGuard.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SummonAlly\bin\Debug\net6.0\PhantomGuard.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SummonAlly\obj\Debug\net6.0\Phantom Guard.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SummonAlly\obj\Debug\net6.0\Phantom Guard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SummonAlly\obj\Debug\net6.0\Phantom Guard.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SummonAlly\obj\Debug\net6.0\Phantom Guard.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SummonAlly\obj\Debug\net6.0\Phantom Guard.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SummonAlly\obj\Debug\net6.0\Phantom Guard.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SummonAlly\obj\Debug\net6.0\PhantomGuard.dll

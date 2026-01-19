@@ -1,0 +1,23 @@
+{
+  "config.section.visuals": "Visuais",
+  "config.opacity.name": "Opacidade da Sombra",
+  "config.opacity.tooltip": "Quão escuras são as sombras (0.1 = fraco, 1.0 = preto sólido).",
+  "config.scale.name": "Escala da Sombra",
+  "config.scale.tooltip": "Tamanho das sombras em relação aos peixes.",
+  "config.fade.name": "Ativar Efeitos de Fade",
+  "config.fade.tooltip": "Se ativado, os peixes aparecem e desaparecem suavemente.",
+  "config.section.population": "População",
+  "config.max-fish.name": "Máx. Peixes",
+  "config.max-fish.tooltip": "Número máximo de peixes permitidos em um local.",
+  "config.density.name": "Densidade de Spawn",
+  "config.density.tooltip": "Probabilidade de um peixe aparecer por verificação de tile.",
+  "config.section.locations": "Locais e Tempo",
+  "config.farm-only.name": "Apenas Fazenda",
+  "config.farm-only.tooltip": "Se ativado, os peixes aparecem apenas na fazenda.",
+  "config.excluded.name": "Locais Excluídos",
+  "config.excluded.tooltip": "Lista separada por vírgulas de nomes de locais a ignorar (ex: Esgoto, Terra dos Insetos).",
+  "config.hide-night.name": "Ocultar à Noite",
+  "config.hide-night.tooltip": "Se ativado, os peixes desaparecerão após o pôr do sol.",
+  "config.sunset-offset.name": "Horas após Pôr do Sol",
+  "config.sunset-offset.tooltip": "Quantas horas após o pôr do sol antes de os peixes desaparecerem (Padrão: 2)."
+}

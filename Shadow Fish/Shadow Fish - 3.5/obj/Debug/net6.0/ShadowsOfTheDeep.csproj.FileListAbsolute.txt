@@ -1,0 +1,48 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\ShadowsOfTheDeep.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\ShadowsOfTheDeep.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\obj\Debug\net6.0\ShadowsOfTheDeep.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\obj\Debug\net6.0\ShadowsOfTheDeep.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\obj\Debug\net6.0\ShadowsOfTheDeep.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\obj\Debug\net6.0\ShadowsOfTheDeep.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\obj\Debug\net6.0\ShadowsOfTheDeep.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\obj\Debug\net6.0\ShadowsOfTheDeep.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\obj\Debug\net6.0\ShadowsOfTheDeep.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\i18n\de.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\i18n\es.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\i18n\fr.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\i18n\it.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\i18n\ja.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\i18n\ko.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\i18n\pl.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\i18n\pt-BR.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\i18n\ru.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\i18n\tr.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\i18n\uk.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\i18n\vi.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\bin\Debug\net6.0\i18n\zh.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\i18n\de.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\i18n\es.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\i18n\fr.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\i18n\it.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\i18n\ja.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\i18n\ko.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\i18n\pl.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\i18n\pt-BR.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\i18n\ru.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\i18n\tr.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\i18n\uk.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\i18n\vi.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\i18n\zh.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\ShadowsOfTheDeep.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\bin\Debug\net6.0\ShadowsOfTheDeep.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\obj\Debug\net6.0\ShadowsOfTheDeep.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\obj\Debug\net6.0\ShadowsOfTheDeep.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\obj\Debug\net6.0\ShadowsOfTheDeep.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\obj\Debug\net6.0\ShadowsOfTheDeep.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\obj\Debug\net6.0\ShadowsOfTheDeep.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\obj\Debug\net6.0\ShadowsOfTheDeep.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Shadow Fish\Shadow Fish - 3.3\obj\Debug\net6.0\ShadowsOfTheDeep.dll

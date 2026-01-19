@@ -1,0 +1,10 @@
+{
+  "Name": "Mass Animal Mover",
+  "Author": "YourName",
+  "Version": "1.0.0",
+  "Description": "Allows moving multiple animals between buildings at once.",
+  "UniqueID": "YourName.MassAnimalMover",
+  "EntryDll": "MassAnimalMover.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

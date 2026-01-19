@@ -1,0 +1,19 @@
+{
+  "config.section.summon": "Summon Settings",
+  "config.section.stats": "Ghost Stats",
+  
+  "config.key": "Summon Key",
+  "config.energy": "Energy Cost",
+  "config.duration": "Duration (Seconds)",
+  "config.duration.tooltip": "How long the ghost lasts. 86 seconds is roughly 2 in-game hours.",
+  
+  "config.hp": "Max HP",
+  "config.damage": "Attack Damage",
+  "config.cooldown": "Attack Cooldown (Sec)",
+  "config.armor": "Damage Taken Multiplier",
+  "config.armor.tooltip": "Lower is stronger. 0.5 = Takes 50% damage. 0.0 = Invincible.",
+  "config.message": "Show HUD Message",
+
+  "hud.no_energy": "Not enough energy!",
+  "hud.summoned": "Ghost Summoned!"
+}

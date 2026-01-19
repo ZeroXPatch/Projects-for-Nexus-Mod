@@ -1,0 +1,11 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Wild Duck\obj\Debug\net6.0\WildSwimmingDucks.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Wild Duck\obj\Debug\net6.0\WildSwimmingDucks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Wild Duck\obj\Debug\net6.0\WildSwimmingDucks.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Wild Duck\obj\Debug\net6.0\WildSwimmingDucks.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Wild Duck\obj\Debug\net6.0\WildSwimmingDucks.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Wild Duck\obj\Debug\net6.0\WildSwimmingDucks.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Wild Duck\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Wild Duck\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Wild Duck\bin\Debug\net6.0\WildSwimmingDucks.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Wild Duck\bin\Debug\net6.0\WildSwimmingDucks.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Wild Duck\obj\Debug\net6.0\WildSwimmingDucks.dll
