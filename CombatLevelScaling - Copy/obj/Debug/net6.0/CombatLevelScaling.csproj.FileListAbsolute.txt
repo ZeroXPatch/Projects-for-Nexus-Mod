@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\CombatLevelScaling\obj\Debug\net6.0\CombatLevelScaling.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\CombatLevelScaling\obj\Debug\net6.0\CombatLevelScaling.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\CombatLevelScaling\obj\Debug\net6.0\CombatLevelScaling.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\CombatLevelScaling\obj\Debug\net6.0\CombatLevelScaling.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\CombatLevelScaling\obj\Debug\net6.0\CombatLevelScaling.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\CombatLevelScaling\obj\Debug\net6.0\CombatLevelScaling.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\CombatLevelScaling\bin\Debug\net6.0\CombatLevelScaling.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\CombatLevelScaling\bin\Debug\net6.0\CombatLevelScaling.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\CombatLevelScaling\obj\Debug\net6.0\CombatLevelScaling.dll

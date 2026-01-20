@@ -1,0 +1,23 @@
+{
+  "config.title.stats": "Stats Scaling",
+  "config.stat.percent": "Stat Increase Per Level",
+  "config.stat.percent.tooltip": "The percentage (0.05 = 5%) to increase Health, Damage, and Speed per Combat Level.",
+
+  "config.title.locations": "Active Locations",
+  "config.loc.mines": "Enable in Mines",
+  "config.loc.skull": "Enable in Skull Cavern",
+  "config.loc.volcano": "Enable in Volcano",
+  "config.loc.wild": "Enable in Wilderness/Farm",
+
+  "config.title.spawn": "Spawn Rate",
+  "config.spawn.enable": "Enable Increased Spawns",
+  "config.spawn.percent": "Spawn Chance Per Level",
+  "config.spawn.percent.tooltip": "Chance (0.03 = 3%) per Combat Level to duplicate a monster when it spawns.",
+
+  "config.title.elite": "Elite Monsters",
+  "config.elite.enable": "Enable Elite Monsters",
+  "config.elite.chance": "Elite Spawn Chance",
+  "config.elite.chance.tooltip": "Chance (0.01 = 1%) for a monster to become Elite.",
+  "config.elite.multi": "Elite Stat Multiplier",
+  "config.elite.multi.tooltip": "Multiplier (1.5 = 150%) applied to the already scaled stats for Elite monsters."
+}

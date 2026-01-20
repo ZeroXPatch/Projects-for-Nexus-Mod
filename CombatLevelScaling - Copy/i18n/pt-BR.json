@@ -1,0 +1,20 @@
+{
+  "config.title.stats": "Escalonamento de atributos",
+  "config.stat.percent": "Aumento de atributos por nível",
+  "config.stat.percent.tooltip": "A porcentagem (0,05 = 5%) para aumentar vida, dano e velocidade por nível de combate.",
+  "config.title.locations": "Locais ativos",
+  "config.loc.mines": "Ativar nas minas",
+  "config.loc.skull": "Ativar na Caverna da Caveira",
+  "config.loc.volcano": "Ativar no vulcão",
+  "config.loc.wild": "Ativar na natureza/fazenda",
+  "config.title.spawn": "Taxa de surgimento",
+  "config.spawn.enable": "Ativar surgimentos aumentados",
+  "config.spawn.percent": "Chance de surgimento por nível",
+  "config.spawn.percent.tooltip": "Chance (0,03 = 3%) por nível de combate de duplicar um monstro ao surgir.",
+  "config.title.elite": "Monstros de elite",
+  "config.elite.enable": "Ativar monstros de elite",
+  "config.elite.chance": "Chance de surgimento elite",
+  "config.elite.chance.tooltip": "Chance (0,01 = 1%) de um monstro se tornar elite.",
+  "config.elite.multi": "Multiplicador de atributos elite",
+  "config.elite.multi.tooltip": "Multiplicador (1,5 = 150%) aplicado aos atributos já escalonados dos monstros de elite."
+}

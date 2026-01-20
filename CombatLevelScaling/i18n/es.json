@@ -1,0 +1,20 @@
+{
+  "config.title.stats": "Escalado de estadísticas",
+  "config.stat.percent": "Aumento de estadísticas por nivel",
+  "config.stat.percent.tooltip": "El porcentaje (0,05 = 5 %) para aumentar la salud, el daño y la velocidad por nivel de combate.",
+  "config.title.locations": "Ubicaciones activas",
+  "config.loc.mines": "Activar en las minas",
+  "config.loc.skull": "Activar en la Caverna Calavera",
+  "config.loc.volcano": "Activar en el volcán",
+  "config.loc.wild": "Activar en naturaleza/granja",
+  "config.title.spawn": "Tasa de aparición",
+  "config.spawn.enable": "Activar apariciones aumentadas",
+  "config.spawn.percent": "Probabilidad de aparición por nivel",
+  "config.spawn.percent.tooltip": "Probabilidad (0,03 = 3 %) por nivel de combate de duplicar un monstruo al aparecer.",
+  "config.title.elite": "Monstruos élite",
+  "config.elite.enable": "Activar monstruos élite",
+  "config.elite.chance": "Probabilidad de aparición élite",
+  "config.elite.chance.tooltip": "Probabilidad (0,01 = 1 %) de que un monstruo se vuelva élite.",
+  "config.elite.multi": "Multiplicador de estadísticas élite",
+  "config.elite.multi.tooltip": "Multiplicador (1,5 = 150 %) aplicado a las estadísticas ya escaladas de los monstruos élite."
+}

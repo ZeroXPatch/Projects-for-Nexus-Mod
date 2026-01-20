@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "MassAnimalBuyer/1.0.0": {
+        "runtime": {
+          "MassAnimalBuyer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MassAnimalBuyer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

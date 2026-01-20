@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>MassAnimalBuyer</AssemblyName>
+    <Version>1.0.0</Version>
+    <Description>Buy animals in bulk from Marnie by holding Shift.</Description>
+    <Authors>YourName</Authors>
+    <UniqueID>YourName.MassAnimalBuyer</UniqueID>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Platforms>x64;AnyCPU</Platforms>
+    <EnableModDeploy>true</EnableModDeploy>
+    <ModZipPath>$(SolutionDir)\_releases</ModZipPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.3.1" />
+  </ItemGroup>
+</Project>

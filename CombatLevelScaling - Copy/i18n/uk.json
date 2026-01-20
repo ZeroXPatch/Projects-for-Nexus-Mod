@@ -1,0 +1,20 @@
+{
+  "config.title.stats": "Масштабування характеристик",
+  "config.stat.percent": "Збільшення характеристик за рівень",
+  "config.stat.percent.tooltip": "Відсоток (0,05 = 5%) збільшення здоров’я, шкоди та швидкості за рівень бою.",
+  "config.title.locations": "Активні локації",
+  "config.loc.mines": "Увімкнути в шахтах",
+  "config.loc.skull": "Увімкнути в Печері Черепа",
+  "config.loc.volcano": "Увімкнути у вулкані",
+  "config.loc.wild": "Увімкнути в дикій місцевості/на фермі",
+  "config.title.spawn": "Частота появи",
+  "config.spawn.enable": "Увімкнути збільшену появу",
+  "config.spawn.percent": "Шанс появи за рівень",
+  "config.spawn.percent.tooltip": "Шанс (0,03 = 3%) за рівень бою подвоїти монстра при появі.",
+  "config.title.elite": "Елітні монстри",
+  "config.elite.enable": "Увімкнути елітних монстрів",
+  "config.elite.chance": "Шанс появи еліти",
+  "config.elite.chance.tooltip": "Шанс (0,01 = 1%), що монстр стане елітним.",
+  "config.elite.multi": "Множник характеристик еліти",
+  "config.elite.multi.tooltip": "Множник (1,5 = 150%), що застосовується до вже масштабованих характеристик елітних монстрів."
+}

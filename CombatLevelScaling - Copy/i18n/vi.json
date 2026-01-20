@@ -1,0 +1,20 @@
+{
+  "config.title.stats": "Tăng trưởng chỉ số",
+  "config.stat.percent": "Tăng chỉ số mỗi cấp",
+  "config.stat.percent.tooltip": "Tỷ lệ (0,05 = 5%) để tăng máu, sát thương và tốc độ mỗi cấp chiến đấu.",
+  "config.title.locations": "Khu vực áp dụng",
+  "config.loc.mines": "Bật trong hầm mỏ",
+  "config.loc.skull": "Bật trong Hang Sọ",
+  "config.loc.volcano": "Bật trong núi lửa",
+  "config.loc.wild": "Bật trong hoang dã/nông trại",
+  "config.title.spawn": "Tỷ lệ sinh",
+  "config.spawn.enable": "Bật tăng sinh",
+  "config.spawn.percent": "Tỷ lệ sinh mỗi cấp",
+  "config.spawn.percent.tooltip": "Xác suất (0,03 = 3%) mỗi cấp chiến đấu để nhân đôi quái vật khi xuất hiện.",
+  "config.title.elite": "Quái vật tinh anh",
+  "config.elite.enable": "Bật quái vật tinh anh",
+  "config.elite.chance": "Tỷ lệ sinh tinh anh",
+  "config.elite.chance.tooltip": "Xác suất (0,01 = 1%) để quái vật trở thành tinh anh.",
+  "config.elite.multi": "Hệ số chỉ số tinh anh",
+  "config.elite.multi.tooltip": "Hệ số (1,5 = 150%) áp dụng cho các chỉ số đã được tăng trưởng của quái vật tinh anh."
+}
