@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DynamicMonsters\bin\Debug\net6.0\DynamicMonsters.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DynamicMonsters\bin\Debug\net6.0\DynamicMonsters.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DynamicMonsters\obj\Debug\net6.0\DynamicMonsters.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DynamicMonsters\obj\Debug\net6.0\DynamicMonsters.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DynamicMonsters\obj\Debug\net6.0\DynamicMonsters.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DynamicMonsters\obj\Debug\net6.0\DynamicMonsters.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DynamicMonsters\obj\Debug\net6.0\DynamicMonsters.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DynamicMonsters\obj\Debug\net6.0\DynamicMonsters.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DynamicMonsters\obj\Debug\net6.0\DynamicMonsters.dll

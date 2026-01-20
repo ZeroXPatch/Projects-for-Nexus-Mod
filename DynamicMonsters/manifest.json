@@ -1,0 +1,10 @@
+{
+  "Name": "Combat Level Scaling",
+  "Author": "ZeroXPatch",
+  "Version": "1.2.0",
+  "Description": "Scales monster stats based on combat level. Configurable locations, elite mobs, and extra spawns.",
+  "UniqueID": "ZeroXPatch.DynamicMonsters",
+  "EntryDll": "DynamicMonsters.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus:41463" ]
+}

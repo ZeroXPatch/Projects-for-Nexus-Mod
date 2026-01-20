@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SwiftWalker\obj\Debug\net6.0\SwiftWalker.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SwiftWalker\obj\Debug\net6.0\SwiftWalker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SwiftWalker\obj\Debug\net6.0\SwiftWalker.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SwiftWalker\obj\Debug\net6.0\SwiftWalker.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SwiftWalker\obj\Debug\net6.0\SwiftWalker.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SwiftWalker\obj\Debug\net6.0\SwiftWalker.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SwiftWalker\bin\Debug\net6.0\SwiftWalker.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SwiftWalker\bin\Debug\net6.0\SwiftWalker.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SwiftWalker\obj\Debug\net6.0\SwiftWalker.dll

@@ -1,0 +1,10 @@
+{
+  "Name": "Swift Walker",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Removes the movement speed penalty when walking through grass and crops. Compatible with Ol' Slitherlegs.",
+  "UniqueID": "ZeroXPatch.SwiftWalker",
+  "EntryDll": "SwiftWalker.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}
