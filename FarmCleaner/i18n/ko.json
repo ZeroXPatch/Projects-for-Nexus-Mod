@@ -1,0 +1,21 @@
+{
+  "config.section.controls": "조작",
+  "config.section.cleaning": "청소 항목",
+  "config.key.name": "청소 키",
+  "config.key.tooltip": "이 키를 눌러 농장을 스캔하고 청소합니다.",
+  "config.stones.name": "돌 제거",
+  "config.stones.tooltip": "작은 돌과 바위를 제거합니다.",
+  "config.twigs.name": "나뭇가지 제거",
+  "config.twigs.tooltip": "작은 나뭇가지를 제거합니다.",
+  "config.weeds.name": "잡초 제거",
+  "config.weeds.tooltip": "잡초와 섬유 식물을 제거합니다.",
+  "config.saplings.name": "묘목 제거",
+  "config.saplings.tooltip": "나무 씨앗과 어린 나무를 제거합니다.",
+  "config.grass.name": "풀 제거",
+  "config.grass.tooltip": "동물이 먹는 풀을 제거합니다.",
+  "config.stumps.name": "큰 그루터기 제거",
+  "config.stumps.tooltip": "단단한 나무 그루터기를 제거합니다.",
+  "msg.scanning": "농장의 잔해를 스캔 중...",
+  "msg.cleared": "잔해 {{count}}개를 삭제했습니다.",
+  "msg.none_found": "청소할 항목을 찾지 못했습니다."
+}

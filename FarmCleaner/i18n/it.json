@@ -1,0 +1,21 @@
+{
+  "config.section.controls": "Comandi",
+  "config.section.cleaning": "Cosa pulire",
+  "config.key.name": "Tasto di pulizia",
+  "config.key.tooltip": "Premi questo tasto per scansionare e pulire la fattoria.",
+  "config.stones.name": "Rimuovi pietre",
+  "config.stones.tooltip": "Rimuove piccole pietre e rocce.",
+  "config.twigs.name": "Rimuovi ramoscelli",
+  "config.twigs.tooltip": "Rimuove piccoli ramoscelli di legno.",
+  "config.weeds.name": "Rimuovi erbacce",
+  "config.weeds.tooltip": "Rimuove erbacce e piante fibrose.",
+  "config.saplings.name": "Rimuovi germogli",
+  "config.saplings.tooltip": "Rimuove semi di alberi e alberelli.",
+  "config.grass.name": "Rimuovi erba",
+  "config.grass.tooltip": "Rimuove l'erba mangiata dagli animali.",
+  "config.stumps.name": "Rimuovi ceppi grandi",
+  "config.stumps.tooltip": "Rimuove ceppi di legno duro.",
+  "msg.scanning": "Scansione della fattoria in corso...",
+  "msg.cleared": "{{count}} oggetti di detriti eliminati.",
+  "msg.none_found": "Nessun elemento da pulire trovato."
+}

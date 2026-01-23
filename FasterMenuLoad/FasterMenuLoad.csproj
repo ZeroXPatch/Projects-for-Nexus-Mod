@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>FasterMenuLoad</AssemblyName>
+    <RootNamespace>FasterMenuLoad</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <ModFolderName>FasterMenuLoad</ModFolderName>
+    <!-- Warns about referenced assemblies, usually safe to ignore for Mods -->
+    <NoWarn>MSB3277</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+    <!-- We need Harmony to patch the menu logic -->
+    <PackageReference Include="Lib.Harmony" Version="2.3.0-alpha.5" />
+  </ItemGroup>
+
+</Project>

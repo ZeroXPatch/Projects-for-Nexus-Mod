@@ -1,0 +1,6 @@
+{
+  "item.name": "Khế Ước Chuồng Ngựa",
+  "item.description": "Một khế ước ma thuật yêu cầu xây dựng ngay lập tức một chuồng ngựa. Dùng nó để triệu hồi Robin.",
+  "mail.day2": "Lữ khách,^Ta đã dõi theo sự vất vả của ngươi khi không ngừng băng qua những vùng đất này. Đã đến lúc di chuyển với tốc độ của gió.^Kèm theo là một khế ước đã được thanh toán. Hãy dùng nó để xây dựng nơi trú ẩn cho chú ngựa cao quý. Đừng lo về chi phí; mọi thứ đã được lo liệu.^   - Một Người Bạn của Gió%item object ZeroXPatch.HorseStarterKit.Deed 1 %%",
+  "mail.day3": "Lữ khách,^Giờ đây khi đã có chuồng ngựa, ngươi cần một cách để gọi người bạn đồng hành từ hư không.^Hãy cầm lấy cây sáo này. Thổi lên, và chú ngựa sẽ lập tức đáp lời, dù ngươi ở xa đến đâu.^   - Một Người Bạn của Gió%item object 911 1 %%"
+}

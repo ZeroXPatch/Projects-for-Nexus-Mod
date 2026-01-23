@@ -1,0 +1,11 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPCsTrashBack\bin\Debug\net6.0\i18n\default.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPCsTrashBack\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPCsTrashBack\bin\Debug\net6.0\NPCsTrashBack.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPCsTrashBack\bin\Debug\net6.0\NPCsTrashBack.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPCsTrashBack\obj\Debug\net6.0\NPCsTrashBack.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPCsTrashBack\obj\Debug\net6.0\NPCsTrashBack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPCsTrashBack\obj\Debug\net6.0\NPCsTrashBack.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPCsTrashBack\obj\Debug\net6.0\NPCsTrashBack.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPCsTrashBack\obj\Debug\net6.0\NPCsTrashBack.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPCsTrashBack\obj\Debug\net6.0\NPCsTrashBack.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\NPCsTrashBack\obj\Debug\net6.0\NPCsTrashBack.dll

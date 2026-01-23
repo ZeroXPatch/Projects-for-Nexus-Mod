@@ -1,0 +1,16 @@
+{
+  "config.section.performance": "Paramètres de performance",
+  "config.section.performance.desc": "Décochez un onglet s’il provoque des problèmes.",
+  "config.lazy_skills.name": "Chargement différé des compétences (Onglet 1)",
+  "config.lazy_skills.desc": "Retarde le chargement de la page Compétences jusqu’à l’ouverture.",
+  "config.lazy_social.name": "Chargement différé du social (Onglet 2)",
+  "config.lazy_social.desc": "Retarde le chargement de la page Sociale jusqu’à l’ouverture.",
+  "config.lazy_crafting.name": "Chargement différé artisanat/cuisine (Onglet 4)",
+  "config.lazy_crafting.desc": "Retarde le chargement de la page Artisanat/Cuisine jusqu’à l’ouverture.",
+  "config.lazy_animals.name": "Chargement différé des animaux (Onglet 5)",
+  "config.lazy_animals.desc": "Retarde le chargement de la page Animaux jusqu’à l’ouverture.",
+  "config.lazy_powers.name": "Chargement différé des pouvoirs (Onglet 6)",
+  "config.lazy_powers.desc": "Retarde le chargement de la page Pouvoirs jusqu’à l’ouverture.",
+  "config.lazy_collections.name": "Chargement différé des collections (Onglet 7)",
+  "config.lazy_collections.desc": "Retarde le chargement de la page Collections jusqu’à l’ouverture."
+}

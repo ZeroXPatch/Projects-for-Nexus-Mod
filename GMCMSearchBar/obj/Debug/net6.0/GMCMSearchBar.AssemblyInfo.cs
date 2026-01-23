@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GMCMSearchBar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76756fa3f0f59dafe2c0ac0a8f208ffe6e442857")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41a997da120b6844978b8018119e628eb22db885")]
 [assembly: System.Reflection.AssemblyProductAttribute("GMCMSearchBar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GMCMSearchBar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

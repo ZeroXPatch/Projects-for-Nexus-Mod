@@ -15,8 +15,6 @@ namespace CombatLevelScaling
         private ModConfig Config = new();
         private const string PROCESSED_KEY = "ZeroXPatch.CombatLevelScaling.Processed";
 
-        // We use this to cache the calculated multiplier for the Debug Overlay
-        // Key: MonsterID, Value: InfoString
         private readonly Dictionary<int, string> _debugInfo = new();
         private readonly Dictionary<int, string> _eliteLights = new();
 
@@ -48,9 +46,7 @@ namespace CombatLevelScaling
         {
             if (!e.IsLocalPlayer || !ShouldScaleInCurrentLocation(e.NewLocation)) return;
 
-            // Clear debug info for the new location to keep memory clean
             _debugInfo.Clear();
-
             List<Monster> mobsToProcess = new();
 
             foreach (var npc in e.NewLocation.characters)
@@ -109,7 +105,6 @@ namespace CombatLevelScaling
         {
             int combatLevel = Game1.player.CombatLevel;
 
-            // MATH: 1 + (10 * 0.05) = 1.5x
             float multiplier = 1.0f + (combatLevel * Config.StatIncreasePerLevel);
             bool isElite = false;
 
@@ -120,35 +115,13 @@ namespace CombatLevelScaling
                 MakeEliteVisuals(monster);
             }
 
-            // Save info for Debug Overlay
             string debugStats = $"Lvl:{combatLevel} x {Config.StatIncreasePerLevel:0.00} = {multiplier:0.0}x";
             if (isElite) debugStats += " (ELITE)";
             _debugInfo[monster.id] = debugStats;
 
-            // Apply Stats
             monster.MaxHealth = (int)(monster.MaxHealth * multiplier);
             monster.Health = monster.MaxHealth;
             monster.DamageToFarmer = (int)(monster.DamageToFarmer * multiplier);
-
-            // --- IMPROVED SPEED MATH ---
-            if (Config.StatIncreasePerLevel > 0)
-            {
-                float baseSpeed = monster.Speed;
-                float finalSpeed = baseSpeed * multiplier;
-
-                if (isElite) finalSpeed += 1.5f;
-
-                float speedDiff = finalSpeed - baseSpeed;
-
-                // FIX: Use Ceiling to ensure ANY increase (even 0.1) rounds up to +1 speed.
-                // This guarantees speed increases even with small multipliers.
-                int roundedAddedSpeed = (int)Math.Ceiling(speedDiff);
-
-                if (roundedAddedSpeed > 0)
-                {
-                    monster.addedSpeed = roundedAddedSpeed;
-                }
-            }
         }
 
         private void MakeEliteVisuals(Monster monster)
@@ -198,6 +171,7 @@ namespace CombatLevelScaling
 
         private void TrySpawnClone(Monster original, GameLocation location)
         {
+            // FTM Safety Check
             if (original.GetType().Assembly != typeof(Game1).Assembly) return;
 
             double chance = Game1.player.CombatLevel * Config.SpawnIncreasePerLevel;
@@ -207,7 +181,18 @@ namespace CombatLevelScaling
                 Vector2 spawnPos = FindOpenTile(location, original.Tile);
                 if (spawnPos == Vector2.Zero) return;
 
-                Monster? clone = CreateSafeClone(original, spawnPos * 64f);
+                // Determine Difficulty Level for Constructor
+                int difficultyLevel = 0;
+                if (location is MineShaft mine)
+                {
+                    difficultyLevel = mine.mineLevel;
+                }
+                else if (location is VolcanoDungeon volcano)
+                {
+                    difficultyLevel = volcano.level.Value;
+                }
+
+                Monster? clone = CreateSafeClone(original, spawnPos * 64f, difficultyLevel);
                 if (clone != null)
                 {
                     clone.id = Game1.random.Next();
@@ -218,23 +203,32 @@ namespace CombatLevelScaling
             }
         }
 
-        private static Monster? CreateSafeClone(Monster original, Vector2 position)
+        private static Monster? CreateSafeClone(Monster original, Vector2 position, int difficultyLevel)
         {
             try
             {
                 Type type = original.GetType();
 
-                if (original is GreenSlime) return new GreenSlime(position, 0);
-                if (original is Bat) return new Bat(position);
+                // Types that require Difficulty Level to spawn correct variants (Iridium vs Normal)
+                if (original is GreenSlime) return new GreenSlime(position, difficultyLevel);
+                if (original is Bat) return new Bat(position, difficultyLevel);
+                if (original is Bug) return new Bug(position, difficultyLevel);
+                if (original is BigSlime) return new BigSlime(position, difficultyLevel);
+                // FIXED: Use difficultyLevel for MetalHead (determines if it's a HotHead or not)
+                if (original is MetalHead) return new MetalHead(position, difficultyLevel);
+
+                // Types that do NOT take difficulty level
                 if (original is Ghost) return new Ghost(position);
                 if (original is RockCrab) return new RockCrab(position);
-                if (original is Grub) return new Grub(position);
-                if (original is Fly) return new Fly(position);
+                if (original is Grub) return new Grub(position, true);
+                if (original is Fly) return new Fly(position, true);
                 if (original is DustSpirit) return new DustSpirit(position);
-                if (original is Bug) return new Bug(position, 0);
                 if (original is SquidKid) return new SquidKid(position);
                 if (original is Skeleton) return new Skeleton(position, false);
+                if (original is ShadowBrute) return new ShadowBrute(position);
+                if (original is ShadowShaman) return new ShadowShaman(position);
 
+                // Fallback
                 return Activator.CreateInstance(type, position) as Monster;
             }
             catch
@@ -272,7 +266,7 @@ namespace CombatLevelScaling
                 return Config.EnableInSkullCavern;
             }
             if (loc is VolcanoDungeon) return Config.EnableInVolcano;
-            return Config.EnableInWilderness;
+            return false;
         }
 
         private void OnRenderedWorld(object? sender, RenderedWorldEventArgs e)
@@ -285,13 +279,11 @@ namespace CombatLevelScaling
                 if (npc is Monster monster)
                 {
                     Vector2 screenPos = Game1.GlobalToLocal(Game1.viewport, monster.Position);
-                    screenPos.Y -= 60; // Moved up slightly to fit more text
+                    screenPos.Y -= 60;
 
-                    string text = $"HP: {monster.Health}/{monster.MaxHealth}\nDMG: {monster.DamageToFarmer}\nSPD: {monster.Speed}+{monster.addedSpeed}";
+                    string text = $"HP: {monster.Health}/{monster.MaxHealth}\nDMG: {monster.DamageToFarmer}";
 
                     if (monster.modData.ContainsKey(PROCESSED_KEY)) text += "\n[SCALED]";
-
-                    // NEW: Show the calculated logic for this specific monster
                     if (_debugInfo.TryGetValue(monster.id, out string? debugStats))
                     {
                         text += $"\n{debugStats}";
@@ -314,7 +306,6 @@ namespace CombatLevelScaling
                 () => Helper.Translation.Get("config.debug.enable"), () => Helper.Translation.Get("config.debug.tooltip"));
 
             configMenu.AddSectionTitle(ModManifest, () => Helper.Translation.Get("config.title.stats"));
-
             configMenu.AddNumberOption(ModManifest, () => Config.StatIncreasePerLevel, val => Config.StatIncreasePerLevel = val,
                 () => Helper.Translation.Get("config.stat.percent"), () => Helper.Translation.Get("config.stat.percent.tooltip"), 0f, 5f, 0.01f);
 
@@ -322,7 +313,6 @@ namespace CombatLevelScaling
             configMenu.AddBoolOption(ModManifest, () => Config.EnableInMines, val => Config.EnableInMines = val, () => Helper.Translation.Get("config.loc.mines"));
             configMenu.AddBoolOption(ModManifest, () => Config.EnableInSkullCavern, val => Config.EnableInSkullCavern = val, () => Helper.Translation.Get("config.loc.skull"));
             configMenu.AddBoolOption(ModManifest, () => Config.EnableInVolcano, val => Config.EnableInVolcano = val, () => Helper.Translation.Get("config.loc.volcano"));
-            configMenu.AddBoolOption(ModManifest, () => Config.EnableInWilderness, val => Config.EnableInWilderness = val, () => Helper.Translation.Get("config.loc.wild"));
 
             configMenu.AddSectionTitle(ModManifest, () => Helper.Translation.Get("config.title.spawn"));
             configMenu.AddBoolOption(ModManifest, () => Config.IncreaseSpawnRate, val => Config.IncreaseSpawnRate = val, () => Helper.Translation.Get("config.spawn.enable"));

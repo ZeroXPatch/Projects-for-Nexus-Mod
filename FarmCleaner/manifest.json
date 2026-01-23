@@ -1,0 +1,10 @@
+{
+  "Name": "Farm Cleaner",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "A shortcut to clean stones, twigs, weeds, and saplings from the farm.",
+  "UniqueID": "ZeroXPatch.FarmCleaner",
+  "EntryDll": "FarmCleaner.dll",
+  "MinimumApiVersion": "3.14.0",
+  "UpdateKeys": [ "Nexus:41557" ]
+}

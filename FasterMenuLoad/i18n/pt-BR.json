@@ -1,0 +1,16 @@
+{
+  "config.section.performance": "Configurações de desempenho",
+  "config.section.performance.desc": "Desmarque uma aba se causar problemas.",
+  "config.lazy_skills.name": "Carregamento lento de habilidades (Aba 1)",
+  "config.lazy_skills.desc": "Atrasa o carregamento da página de habilidades até clicar.",
+  "config.lazy_social.name": "Carregamento lento social (Aba 2)",
+  "config.lazy_social.desc": "Atrasa o carregamento da página social até clicar.",
+  "config.lazy_crafting.name": "Carregamento lento de criação/cozinha (Aba 4)",
+  "config.lazy_crafting.desc": "Atrasa o carregamento da página de criação/cozinha até clicar.",
+  "config.lazy_animals.name": "Carregamento lento de animais (Aba 5)",
+  "config.lazy_animals.desc": "Atrasa o carregamento da página de animais até clicar.",
+  "config.lazy_powers.name": "Carregamento lento de poderes (Aba 6)",
+  "config.lazy_powers.desc": "Atrasa o carregamento da página de poderes até clicar.",
+  "config.lazy_collections.name": "Carregamento lento de coleções (Aba 7)",
+  "config.lazy_collections.desc": "Atrasa o carregamento da página de coleções até clicar."
+}

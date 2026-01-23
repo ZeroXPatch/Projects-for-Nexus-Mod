@@ -6,5 +6,5 @@
   "UniqueID": "ZeroXPatch.MassAnimalBuyer",
   "EntryDll": "MassAnimalBuyer.dll",
   "MinimumApiVersion": "4.0.0",
-  "UpdateKeys": []
+  "UpdateKeys": [ "Nexus:41457" ]
 }

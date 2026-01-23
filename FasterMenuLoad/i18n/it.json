@@ -1,0 +1,16 @@
+{
+  "config.section.performance": "Impostazioni prestazioni",
+  "config.section.performance.desc": "Deseleziona una scheda se causa problemi.",
+  "config.lazy_skills.name": "Caricamento differito abilità (Scheda 1)",
+  "config.lazy_skills.desc": "Ritarda il caricamento della pagina Abilità finché non la apri.",
+  "config.lazy_social.name": "Caricamento differito social (Scheda 2)",
+  "config.lazy_social.desc": "Ritarda il caricamento della pagina Social finché non la apri.",
+  "config.lazy_crafting.name": "Caricamento differito artigianato/cucina (Scheda 4)",
+  "config.lazy_crafting.desc": "Ritarda il caricamento della pagina Artigianato/Cucina finché non la apri.",
+  "config.lazy_animals.name": "Caricamento differito animali (Scheda 5)",
+  "config.lazy_animals.desc": "Ritarda il caricamento della pagina Animali finché non la apri.",
+  "config.lazy_powers.name": "Caricamento differito poteri (Scheda 6)",
+  "config.lazy_powers.desc": "Ritarda il caricamento della pagina Poteri finché non la apri.",
+  "config.lazy_collections.name": "Caricamento differito collezioni (Scheda 7)",
+  "config.lazy_collections.desc": "Ritarda il caricamento della pagina Collezioni finché non la apri."
+}

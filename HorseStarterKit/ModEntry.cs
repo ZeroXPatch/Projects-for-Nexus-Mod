@@ -15,7 +15,7 @@ namespace HorseStarterKit
         // Vanilla IDs
         private const string StableBuildingId = "Stable";
 
-        // Custom IDs (Updated to match new mod name)
+        // Custom IDs
         private const string DeedItemId = "ZeroXPatch.HorseStarterKit.Deed";
         private const string InstallDayKey = "ZeroXPatch.HorseStarterKit/InstallDay";
         private const string MailDay2Id = "ZeroXPatch_HSK_Day2";
@@ -71,8 +71,8 @@ namespace HorseStarterKit
                     if (data.TryGetValue(StableBuildingId, out var stableData))
                     {
                         stableData.BuildCost = 0;
-                        stableData.BuildMaterials = new List<BuildingMaterial>(); // Clears wood/iron/hardwood requirements
-                        stableData.BuildDays = 0; // Instant build
+                        stableData.BuildMaterials = new List<BuildingMaterial>();
+                        stableData.BuildDays = 0;
                         stableData.Builder = "Robin";
                     }
                 });
@@ -124,47 +124,39 @@ namespace HorseStarterKit
         {
             if (!Context.IsPlayerFree) return;
 
-            // Check if player uses the Action button (Right Click)
             if (e.Button.IsActionButton())
             {
-                // Check if holding the Deed
                 if (Game1.player.CurrentItem != null && Game1.player.CurrentItem.QualifiedItemId == $"(O){DeedItemId}")
                 {
                     if (Game1.currentLocation.IsBuildableLocation())
                     {
                         this.Helper.Input.Suppress(e.Button);
 
-                        // Open Robin's Menu
+                        // 1. Create and Open Robin's Menu
                         var carpenterMenu = new CarpenterMenu("Robin");
                         Game1.activeClickableMenu = carpenterMenu;
 
-                        // Auto-select the Stable
+                        // 2. Select Stable (Direct Access - No Reflection needed in 1.6)
                         try
                         {
-                            var blueprints = this.Helper.Reflection.GetField<List<object>>(carpenterMenu, "Blueprints").GetValue();
-                            object? stableBlueprint = null;
-
-                            foreach (var bp in blueprints)
+                            // "Blueprints" is a public List<BlueprintEntry> in 1.6+
+                            foreach (var bp in carpenterMenu.Blueprints)
                             {
-                                var id = this.Helper.Reflection.GetProperty<string>(bp, "Id").GetValue();
-                                if (id == StableBuildingId)
+                                if (bp.Id == StableBuildingId)
                                 {
-                                    stableBlueprint = bp;
+                                    // "SetNewActiveBlueprint" is a public method in 1.6+
+                                    carpenterMenu.SetNewActiveBlueprint(bp);
                                     break;
                                 }
-                            }
-
-                            if (stableBlueprint != null)
-                            {
-                                this.Helper.Reflection.GetMethod(carpenterMenu, "SetNewActiveBlueprint").Invoke(stableBlueprint);
                             }
                         }
                         catch (Exception ex)
                         {
+                            // Just log warning; menu still opens, user just has to click "Stable" manually
                             this.Monitor.Log($"Failed to auto-select Stable: {ex.Message}", LogLevel.Warn);
                         }
 
-                        // Remove the deed from inventory
+                        // 3. Consume the Deed
                         Game1.player.reduceActiveItemByOne();
                     }
                     else

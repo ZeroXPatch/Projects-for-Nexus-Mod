@@ -1,0 +1,10 @@
+{
+  "Name": "Faster Menu Load",
+  "Author": "ZeroXPatch",
+  "Version": "1.2.0",
+  "Description": "Speeds up opening the E menu by loading tabs only when clicked.",
+  "UniqueID": "ZeroXPatch.FasterMenuLoad",
+  "EntryDll": "FasterMenuLoad.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus: 41564 "]
+}

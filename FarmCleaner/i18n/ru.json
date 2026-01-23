@@ -1,0 +1,21 @@
+{
+  "config.section.controls": "Управление",
+  "config.section.cleaning": "Что очищать",
+  "config.key.name": "Клавиша очистки",
+  "config.key.tooltip": "Нажмите эту клавишу, чтобы сканировать и очистить ферму.",
+  "config.stones.name": "Удалить камни",
+  "config.stones.tooltip": "Удаляет мелкие камни и валуны.",
+  "config.twigs.name": "Удалить ветки",
+  "config.twigs.tooltip": "Удаляет маленькие деревянные ветки.",
+  "config.weeds.name": "Удалить сорняки",
+  "config.weeds.tooltip": "Удаляет сорняки и волокнистые растения.",
+  "config.saplings.name": "Удалить саженцы",
+  "config.saplings.tooltip": "Удаляет семена деревьев и молодые деревья.",
+  "config.grass.name": "Удалить траву",
+  "config.grass.tooltip": "Удаляет траву, которую едят животные.",
+  "config.stumps.name": "Удалить большие пни",
+  "config.stumps.tooltip": "Удаляет пни из твердой древесины.",
+  "msg.scanning": "Сканирование фермы на наличие мусора...",
+  "msg.cleared": "Удалено объектов мусора: {{count}}.",
+  "msg.none_found": "Подходящие объекты для очистки не найдены."
+}

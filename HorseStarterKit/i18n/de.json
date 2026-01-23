@@ -1,0 +1,6 @@
+{
+  "item.name": "Stallurkunde",
+  "item.description": "Ein magischer Vertrag, der den sofortigen Bau eines Stalls anordnet. Verwende ihn, um Robin zu rufen.",
+  "mail.day2": "Reisender,^Ich habe gesehen, wie du dich abmühst und endlos durch diese Lande wanderst. Es ist Zeit, dich mit der Geschwindigkeit des Windes zu bewegen.^Beiliegend findest du eine vorausbezahlte Urkunde. Nutze sie, um einen Unterschlupf für ein edles Ross zu errichten. Sorge dich nicht um die Kosten; sie sind bereits beglichen.^   - Ein Freund des Windes%item object ZeroXPatch.HorseStarterKit.Deed 1 %%",
+  "mail.day3": "Reisender,^Nun da du einen Stall besitzt, benötigst du ein Mittel, um deinen Gefährten aus der Leere zu rufen.^Nimm diese Flöte. Spiele sie, und dein Ross wird augenblicklich antworten, egal wie weit du gereist bist.^   - Ein Freund des Windes%item object 911 1 %%"
+}

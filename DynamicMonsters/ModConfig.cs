@@ -2,20 +2,23 @@ namespace CombatLevelScaling
 {
     public class ModConfig
     {
-        public bool ShowDebugInfo { get; set; } = false; // New Debug Toggle
+        public bool ShowDebugInfo { get; set; } = false;
 
-        public float StatIncreasePerLevel { get; set; } = 0.03f;
+        // Stats
+        public float StatIncreasePerLevel { get; set; } = 0.05f;
 
+        // Locations (Wilderness Removed)
         public bool EnableInMines { get; set; } = true;
-        public bool EnableInSkullCavern { get; set; } = false;
+        public bool EnableInSkullCavern { get; set; } = true;
         public bool EnableInVolcano { get; set; } = true;
-        public bool EnableInWilderness { get; set; } = true;
 
-        public bool IncreaseSpawnRate { get; set; } = true;
-        public float SpawnIncreasePerLevel { get; set; } = 0.02f;
+        // Spawn Rate
+        public bool IncreaseSpawnRate { get; set; } = false;
+        public float SpawnIncreasePerLevel { get; set; } = 0.03f;
 
+        // Elite Monsters
         public bool EnableEliteMonsters { get; set; } = true;
-        public float EliteChance { get; set; } = 0.05f;
+        public float EliteChance { get; set; } = 0.01f;
         public float EliteStatMultiplier { get; set; } = 1.5f;
     }
 }

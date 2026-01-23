@@ -1,0 +1,149 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "BuildAtRobin/1.0.0": {
+        "dependencies": {
+          "Lib.Harmony": "2.3.0-alpha.5"
+        },
+        "runtime": {
+          "BuildAtRobin.dll": {}
+        }
+      },
+      "Lib.Harmony/2.3.0-alpha.5": {
+        "dependencies": {
+          "MonoModReorg.Core": "23.3.22.1"
+        },
+        "runtime": {
+          "lib/net6.0/0Harmony.dll": {
+            "assemblyVersion": "2.3.0.0",
+            "fileVersion": "2.3.0.0"
+          }
+        }
+      },
+      "Mono.Cecil/0.11.4": {
+        "runtime": {
+          "lib/netstandard2.0/Mono.Cecil.Mdb.dll": {
+            "assemblyVersion": "0.11.4.0",
+            "fileVersion": "0.11.4.0"
+          },
+          "lib/netstandard2.0/Mono.Cecil.Pdb.dll": {
+            "assemblyVersion": "0.11.4.0",
+            "fileVersion": "0.11.4.0"
+          },
+          "lib/netstandard2.0/Mono.Cecil.Rocks.dll": {
+            "assemblyVersion": "0.11.4.0",
+            "fileVersion": "0.11.4.0"
+          },
+          "lib/netstandard2.0/Mono.Cecil.dll": {
+            "assemblyVersion": "0.11.4.0",
+            "fileVersion": "0.11.4.0"
+          }
+        }
+      },
+      "MonoModReorg.Backports/23.3.22.1": {
+        "dependencies": {
+          "MonoModReorg.ILHelpers": "23.3.22.1"
+        },
+        "runtime": {
+          "lib/net6.0/MonoMod.Backports.dll": {
+            "assemblyVersion": "23.3.22.1",
+            "fileVersion": "23.3.22.1"
+          }
+        }
+      },
+      "MonoModReorg.Core/23.3.22.1": {
+        "dependencies": {
+          "Mono.Cecil": "0.11.4",
+          "MonoModReorg.Backports": "23.3.22.1",
+          "MonoModReorg.ILHelpers": "23.3.22.1",
+          "MonoModReorg.Utils": "23.3.22.1"
+        },
+        "runtime": {
+          "lib/net6.0/MonoMod.Core.dll": {
+            "assemblyVersion": "23.3.22.1",
+            "fileVersion": "23.3.22.1"
+          },
+          "lib/net6.0/MonoMod.Iced.dll": {
+            "assemblyVersion": "1.17.0.0",
+            "fileVersion": "1.17.0.0"
+          }
+        }
+      },
+      "MonoModReorg.ILHelpers/23.3.22.1": {
+        "runtime": {
+          "lib/net6.0/MonoMod.ILHelpers.dll": {
+            "assemblyVersion": "23.3.22.1",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "MonoModReorg.Utils/23.3.22.1": {
+        "dependencies": {
+          "Mono.Cecil": "0.11.4",
+          "MonoModReorg.Backports": "23.3.22.1",
+          "MonoModReorg.ILHelpers": "23.3.22.1"
+        },
+        "runtime": {
+          "lib/net6.0/MonoMod.Utils.dll": {
+            "assemblyVersion": "23.3.22.1",
+            "fileVersion": "23.3.22.1"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BuildAtRobin/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Lib.Harmony/2.3.0-alpha.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-72xnOWfTWUZn0XyjC0av5V5r1fdCslxu+J9Au1PdHODzkMEzRIdnkT0UYE2mJy4idvnpvS+tJpSIFshCywUhkw==",
+      "path": "lib.harmony/2.3.0-alpha.5",
+      "hashPath": "lib.harmony.2.3.0-alpha.5.nupkg.sha512"
+    },
+    "Mono.Cecil/0.11.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IC1h5g0NeJGHIUgzM1P82ld57knhP0IcQfrYITDPXlNpMYGUrsG5TxuaWTjaeqDNQMBDNZkB8L0rBnwsY6JHuQ==",
+      "path": "mono.cecil/0.11.4",
+      "hashPath": "mono.cecil.0.11.4.nupkg.sha512"
+    },
+    "MonoModReorg.Backports/23.3.22.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nLx18prtZbS0nVO8YHElP+TUj1kkDswRgQpa9agt3tyNWke9Kqk5lVkGu87Y3cCMhG+m5Ai0ZDH0+V5B6bXF+Q==",
+      "path": "monomodreorg.backports/23.3.22.1",
+      "hashPath": "monomodreorg.backports.23.3.22.1.nupkg.sha512"
+    },
+    "MonoModReorg.Core/23.3.22.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Q3ZOgm6AOTL0icgcHsT/6mV5kYt6meqX3DEN1p/et5PxJsXUhVkiZfAptp8y/i+cO6HNgkcESpXEQ4jUWVwsDA==",
+      "path": "monomodreorg.core/23.3.22.1",
+      "hashPath": "monomodreorg.core.23.3.22.1.nupkg.sha512"
+    },
+    "MonoModReorg.ILHelpers/23.3.22.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dHE/3VZtnTUTkQ34j8Gu6CxKes1QDL8tBuF3QElxHHpPl/QabGCK938k47WWRcRBMoP7IAthkn+Bob4H97rBgw==",
+      "path": "monomodreorg.ilhelpers/23.3.22.1",
+      "hashPath": "monomodreorg.ilhelpers.23.3.22.1.nupkg.sha512"
+    },
+    "MonoModReorg.Utils/23.3.22.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q1cX0mbYxdw2WcE/qGBB84lVY/ffobEr46VQFuwGcWhtw6f1Ql1k4TZfs8gebpesSxHnca13grLeVHrUSpy1+g==",
+      "path": "monomodreorg.utils/23.3.22.1",
+      "hashPath": "monomodreorg.utils.23.3.22.1.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "config.section.controls": "Điều khiển",
+  "config.section.cleaning": "Nội dung dọn dẹp",
+  "config.key.name": "Phím dọn dẹp",
+  "config.key.tooltip": "Nhấn phím này để quét và dọn dẹp nông trại.",
+  "config.stones.name": "Xóa đá",
+  "config.stones.tooltip": "Loại bỏ đá nhỏ và tảng đá.",
+  "config.twigs.name": "Xóa cành cây",
+  "config.twigs.tooltip": "Loại bỏ các cành gỗ nhỏ.",
+  "config.weeds.name": "Xóa cỏ dại",
+  "config.weeds.tooltip": "Loại bỏ cỏ dại và cây sợi.",
+  "config.saplings.name": "Xóa cây non",
+  "config.saplings.tooltip": "Loại bỏ hạt cây và cây non.",
+  "config.grass.name": "Xóa cỏ",
+  "config.grass.tooltip": "Loại bỏ cỏ mà động vật ăn.",
+  "config.stumps.name": "Xóa gốc cây lớn",
+  "config.stumps.tooltip": "Loại bỏ gốc cây gỗ cứng.",
+  "msg.scanning": "Đang quét nông trại tìm rác...",
+  "msg.cleared": "Đã xóa {{count}} vật thể rác.",
+  "msg.none_found": "Không tìm thấy mục phù hợp để dọn dẹp."
+}

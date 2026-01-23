@@ -1,0 +1,10 @@
+{
+  "Name": "Craft Anywhere",
+  "Author": "ZeroXPatch",
+  "Version": "1.2.0",
+  "Description": "Allows crafting from any chest or fridge in the world.",
+  "UniqueID": "ZeroXPatch.CraftAnywhere",
+  "EntryDll": "CraftAnywhere.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus:41499" ]
+}

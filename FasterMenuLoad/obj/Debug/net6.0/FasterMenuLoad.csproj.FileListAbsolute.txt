@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FasterMenuLoad\bin\Debug\net6.0\FasterMenuLoad.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FasterMenuLoad\bin\Debug\net6.0\FasterMenuLoad.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FasterMenuLoad\obj\Debug\net6.0\FasterMenuLoad.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FasterMenuLoad\obj\Debug\net6.0\FasterMenuLoad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FasterMenuLoad\obj\Debug\net6.0\FasterMenuLoad.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FasterMenuLoad\obj\Debug\net6.0\FasterMenuLoad.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FasterMenuLoad\obj\Debug\net6.0\FasterMenuLoad.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FasterMenuLoad\obj\Debug\net6.0\FasterMenuLoad.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FasterMenuLoad\obj\Debug\net6.0\FasterMenuLoad.dll

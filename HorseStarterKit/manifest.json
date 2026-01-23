@@ -1,10 +1,10 @@
 {
   "Name": "Horse Starter Kit",
   "Author": "ZeroXPatch",
-  "Version": "1.0.0",
+  "Version": "1.1.0",
   "Description": "Receives a free Stable Deed on Day 2 and a Horse Flute on Day 3 via mail.",
   "UniqueID": "ZeroXPatch.HorseStarterKit",
   "EntryDll": "HorseStarterKit.dll",
   "MinimumApiVersion": "4.0.0",
-  "UpdateKeys": []
+  "UpdateKeys": [ "Nexus:41349" ]
 }

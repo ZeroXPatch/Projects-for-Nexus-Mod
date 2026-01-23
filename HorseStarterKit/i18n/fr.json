@@ -1,0 +1,6 @@
+{
+  "item.name": "Acte de l’Écurie",
+  "item.description": "Un contrat magique ordonnant la construction immédiate d’une écurie. Utilisez-le pour invoquer Robin.",
+  "mail.day2": "Voyageur,^Je t’ai vu peiner, parcourant sans fin ces terres. Il est temps de te déplacer à la vitesse du vent.^Ci-joint se trouve un acte prépayé. Utilise-le pour commander un abri pour une noble monture. Ne t’inquiète pas du coût ; tout a été réglé.^   - Un Ami du Vent%item object ZeroXPatch.HorseStarterKit.Deed 1 %%",
+  "mail.day3": "Voyageur,^Maintenant que tu possèdes une écurie, il te faut un moyen d’appeler ton compagnon depuis le néant.^Prends cette flûte. Joue-en, et ta monture répondra instantanément, peu importe la distance.^   - Un Ami du Vent%item object 911 1 %%"
+}

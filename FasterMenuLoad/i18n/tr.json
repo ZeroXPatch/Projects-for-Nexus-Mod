@@ -1,0 +1,16 @@
+{
+  "config.section.performance": "Performans ayarları",
+  "config.section.performance.desc": "Sorun çıkarıyorsa sekmenin işaretini kaldırın.",
+  "config.lazy_skills.name": "Yetenekleri tembel yükleme (Sekme 1)",
+  "config.lazy_skills.desc": "Tıklayana kadar yetenekler sayfasını yüklemez.",
+  "config.lazy_social.name": "Sosyal tembel yükleme (Sekme 2)",
+  "config.lazy_social.desc": "Tıklayana kadar sosyal sayfayı yüklemez.",
+  "config.lazy_crafting.name": "Üretim/Yemek tembel yükleme (Sekme 4)",
+  "config.lazy_crafting.desc": "Tıklayana kadar üretim/yemek sayfasını yüklemez.",
+  "config.lazy_animals.name": "Hayvanlar tembel yükleme (Sekme 5)",
+  "config.lazy_animals.desc": "Tıklayana kadar hayvanlar sayfasını yüklemez.",
+  "config.lazy_powers.name": "Güçler tembel yükleme (Sekme 6)",
+  "config.lazy_powers.desc": "Tıklayana kadar güçler sayfasını yüklemez.",
+  "config.lazy_collections.name": "Koleksiyonlar tembel yükleme (Sekme 7)",
+  "config.lazy_collections.desc": "Tıklayana kadar koleksiyonlar sayfasını yüklemez."
+}

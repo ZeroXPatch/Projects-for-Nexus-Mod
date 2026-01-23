@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "sQ9mk4/s6lc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\FasterMenuLoad.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zjmto\\.nuget\\packages\\lib.harmony\\2.3.0-alpha.5\\lib.harmony.2.3.0-alpha.5.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\mono.cecil\\0.11.4\\mono.cecil.0.11.4.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\monomodreorg.backports\\23.3.22.1\\monomodreorg.backports.23.3.22.1.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\monomodreorg.core\\23.3.22.1\\monomodreorg.core.23.3.22.1.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\monomodreorg.ilhelpers\\23.3.22.1\\monomodreorg.ilhelpers.23.3.22.1.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\monomodreorg.utils\\23.3.22.1\\monomodreorg.utils.23.3.22.1.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\pathoschild.stardew.modbuildconfig.4.4.0.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\system.text.json\\5.0.2\\system.text.json.5.0.2.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\zjmto\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
+  ],
+  "logs": []
+}

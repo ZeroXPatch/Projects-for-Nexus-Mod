@@ -1,0 +1,10 @@
+{
+  "Name": "Quality Stacker",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Allows items of different qualities to stack together to save chest space.",
+  "UniqueID": "ZeroXPatch.QualityStacker",
+  "EntryDll": "QualityStacker.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

@@ -1,0 +1,16 @@
+{
+  "Name": "Texture Cache Purge",
+  "Author": "ZeroXPatch",
+  "Version": "1.2.0",
+  "Description": "Optimizes performance by purging the texture cache manually, at sleep, or when RAM thresholds are met.",
+  "UniqueID": "ZeroXPatch.TextureCachePurge",
+  "EntryDll": "TextureCachePurge.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus:41493" ],
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ]
+}

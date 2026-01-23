@@ -1,0 +1,21 @@
+{
+  "config.section.controls": "Steuerung",
+  "config.section.cleaning": "Was gereinigt werden soll",
+  "config.key.name": "Reinigungstaste",
+  "config.key.tooltip": "Drücke diese Taste, um die Farm zu scannen und zu reinigen.",
+  "config.stones.name": "Steine entfernen",
+  "config.stones.tooltip": "Entfernt kleine Steine und Felsen.",
+  "config.twigs.name": "Zweige entfernen",
+  "config.twigs.tooltip": "Entfernt kleine Holzzweige.",
+  "config.weeds.name": "Unkraut entfernen",
+  "config.weeds.tooltip": "Entfernt Unkraut und Faserpflanzen.",
+  "config.saplings.name": "Setzlinge entfernen",
+  "config.saplings.tooltip": "Entfernt Baumsamen und junge Bäume.",
+  "config.grass.name": "Gras entfernen",
+  "config.grass.tooltip": "Entfernt das Gras, das Tiere fressen.",
+  "config.stumps.name": "Große Baumstümpfe entfernen",
+  "config.stumps.tooltip": "Entfernt Hartholzstümpfe.",
+  "msg.scanning": "Farm wird nach Schutt durchsucht...",
+  "msg.cleared": "{{count}} Schuttobjekte gelöscht.",
+  "msg.none_found": "Keine passenden Objekte zum Reinigen gefunden."
+}

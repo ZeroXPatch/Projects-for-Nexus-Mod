@@ -1,0 +1,6 @@
+{
+  "item.name": "Escritura del Establo",
+  "item.description": "Un contrato mágico que ordena la construcción inmediata de un establo. Úsalo para invocar a Robin.",
+  "mail.day2": "Viajero,^He observado tu esfuerzo, caminando sin descanso por estas tierras. Es hora de moverte con la velocidad del viento.^Adjunto encontrarás una escritura prepagada. Úsala para encargar un refugio para un noble corcel. No te preocupes por el costo; ya ha sido cubierto.^   - Un Amigo del Viento%item object ZeroXPatch.HorseStarterKit.Deed 1 %%",
+  "mail.day3": "Viajero,^Ahora que tienes un establo, necesitas la forma de llamar a tu compañero desde el vacío.^Toma esta flauta. Tócala y tu corcel responderá al instante, sin importar lo lejos que estés.^   - Un Amigo del Viento%item object 911 1 %%"
+}

@@ -1,0 +1,6 @@
+{
+  "item.name": "Akt Stajni",
+  "item.description": "Magiczny kontrakt nakazujący natychmiastową budowę stajni. Użyj go, aby przywołać Robin.",
+  "mail.day2": "Podróżniku,^Widziałem, jak ciężko pracujesz, przemierzając bez końca te ziemie. Nadszedł czas, by poruszać się z prędkością wiatru.^W załączeniu znajduje się opłacony akt. Użyj go, aby zlecić budowę schronienia dla szlachetnego rumaka. Nie martw się kosztami; wszystko zostało opłacone.^   - Przyjaciel Wiatru%item object ZeroXPatch.HorseStarterKit.Deed 1 %%",
+  "mail.day3": "Podróżniku,^Skoro masz już stajnię, potrzebujesz sposobu, by przywołać swojego towarzysza z pustki.^Weź ten flet. Zagraj na nim, a twój rumak natychmiast odpowie, bez względu na odległość.^   - Przyjaciel Wiatru%item object 911 1 %%"
+}

@@ -1,0 +1,21 @@
+{
+  "config.section.controls": "Controles",
+  "config.section.cleaning": "O que limpar",
+  "config.key.name": "Tecla de limpeza",
+  "config.key.tooltip": "Pressione esta tecla para escanear e limpar a fazenda.",
+  "config.stones.name": "Remover pedras",
+  "config.stones.tooltip": "Remove pedras pequenas e rochas.",
+  "config.twigs.name": "Remover galhos",
+  "config.twigs.tooltip": "Remove pequenos galhos de madeira.",
+  "config.weeds.name": "Remover ervas daninhas",
+  "config.weeds.tooltip": "Remove ervas daninhas e plantas fibrosas.",
+  "config.saplings.name": "Remover mudas",
+  "config.saplings.tooltip": "Remove sementes de árvores e árvores jovens.",
+  "config.grass.name": "Remover grama",
+  "config.grass.tooltip": "Remove a grama que os animais comem.",
+  "config.stumps.name": "Remover tocos grandes",
+  "config.stumps.tooltip": "Remove tocos de madeira dura.",
+  "msg.scanning": "Escaneando a fazenda em busca de detritos...",
+  "msg.cleared": "{{count}} objetos de detritos removidos.",
+  "msg.none_found": "Nenhum item encontrado para limpeza."
+}

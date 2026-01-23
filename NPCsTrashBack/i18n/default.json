@@ -1,0 +1,16 @@
+{
+  "config.section.general": "General settings",
+  "config.section.scaling": "Friendship Scaling",
+
+  "config.enabled.name": "Enable Mod",
+  "config.enabled.desc": "Turn the mod on or off.",
+
+  "config.base_chance.name": "Base Trash Chance",
+  "config.base_chance.desc": "The base chance an NPC will give you trash if they dislike your gift (0.5 = 50%).",
+
+  "config.scaling.name": "Enable Scaling",
+  "config.scaling.desc": "If enabled, higher friendship reduces the chance of receiving trash.",
+
+  "config.reduction.name": "Reduction Per Heart",
+  "config.reduction.desc": "How much the chance is REDUCED per heart (0.03 = -3%)."
+}

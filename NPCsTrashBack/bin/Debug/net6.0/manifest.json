@@ -1,0 +1,10 @@
+{
+  "Name": "NPCs Trash Back",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "If you give an NPC a gift they dislike or hate, they might give you trash back.",
+  "UniqueID": "ZeroXPatch.NPCsTrashBack",
+  "EntryDll": "NPCsTrashBack.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

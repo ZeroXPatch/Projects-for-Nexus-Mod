@@ -1,0 +1,16 @@
+{
+  "config.section.performance": "パフォーマンス設定",
+  "config.section.performance.desc": "問題が発生する場合はタブのチェックを外してください。",
+  "config.lazy_skills.name": "スキルの遅延読み込み（タブ1）",
+  "config.lazy_skills.desc": "クリックするまでスキルページを読み込みません。",
+  "config.lazy_social.name": "ソーシャルの遅延読み込み（タブ2）",
+  "config.lazy_social.desc": "クリックするまでソーシャルページを読み込みません。",
+  "config.lazy_crafting.name": "クラフト/料理の遅延読み込み（タブ4）",
+  "config.lazy_crafting.desc": "クリックするまでクラフト/料理ページを読み込みません。",
+  "config.lazy_animals.name": "動物の遅延読み込み（タブ5）",
+  "config.lazy_animals.desc": "クリックするまで動物ページを読み込みません。",
+  "config.lazy_powers.name": "パワーの遅延読み込み（タブ6）",
+  "config.lazy_powers.desc": "クリックするまでパワーページを読み込みません。",
+  "config.lazy_collections.name": "コレクションの遅延読み込み（タブ7）",
+  "config.lazy_collections.desc": "クリックするまでコレクションページを読み込みません。"
+}

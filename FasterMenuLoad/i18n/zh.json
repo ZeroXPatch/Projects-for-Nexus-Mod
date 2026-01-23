@@ -1,0 +1,16 @@
+{
+  "config.section.performance": "性能设置",
+  "config.section.performance.desc": "如果某个标签导致问题，请取消勾选。",
+  "config.lazy_skills.name": "技能延迟加载（标签 1）",
+  "config.lazy_skills.desc": "点击后才加载技能页面。",
+  "config.lazy_social.name": "社交延迟加载（标签 2）",
+  "config.lazy_social.desc": "点击后才加载社交页面。",
+  "config.lazy_crafting.name": "制作/烹饪延迟加载（标签 4）",
+  "config.lazy_crafting.desc": "点击后才加载制作/烹饪页面。",
+  "config.lazy_animals.name": "动物延迟加载（标签 5）",
+  "config.lazy_animals.desc": "点击后才加载动物页面。",
+  "config.lazy_powers.name": "能力延迟加载（标签 6）",
+  "config.lazy_powers.desc": "点击后才加载能力页面。",
+  "config.lazy_collections.name": "收集延迟加载（标签 7）",
+  "config.lazy_collections.desc": "点击后才加载收集页面。"
+}

@@ -1,0 +1,21 @@
+{
+  "config.section.controls": "Controles",
+  "config.section.cleaning": "Qué limpiar",
+  "config.key.name": "Tecla de limpieza",
+  "config.key.tooltip": "Pulsa esta tecla para escanear y limpiar la granja.",
+  "config.stones.name": "Quitar piedras",
+  "config.stones.tooltip": "Elimina piedras pequeñas y rocas.",
+  "config.twigs.name": "Quitar ramas",
+  "config.twigs.tooltip": "Elimina pequeñas ramas de madera.",
+  "config.weeds.name": "Quitar maleza",
+  "config.weeds.tooltip": "Elimina maleza y plantas de fibra.",
+  "config.saplings.name": "Quitar brotes",
+  "config.saplings.tooltip": "Elimina semillas de árboles y árboles jóvenes.",
+  "config.grass.name": "Quitar hierba",
+  "config.grass.tooltip": "Elimina la hierba que comen los animales.",
+  "config.stumps.name": "Quitar tocones grandes",
+  "config.stumps.tooltip": "Elimina tocones de madera dura.",
+  "msg.scanning": "Escaneando la granja en busca de escombros...",
+  "msg.cleared": "Se eliminaron {{count}} objetos de escombros.",
+  "msg.none_found": "No se encontraron elementos para limpiar."
+}

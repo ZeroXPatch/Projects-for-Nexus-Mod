@@ -1,0 +1,24 @@
+{
+  "config.auto-sleep.name": "Auto-Clear at Sleep",
+  "config.auto-sleep.description": "Automatically purges the texture cache when the day ends.",
+
+  "config.frequency.name": "Sleep Purge Frequency (Days)",
+  "config.frequency.description": "How often to run the sleep purge. Set to 1 for every night. Increase this number (e.g. 3) if the end-of-day freeze bothers you.",
+
+  "config.sleep-ram-min.name": "Min RAM to Purge (MB)",
+  "config.sleep-ram-min.description": "Only run the sleep purge if RAM usage is HIGHER than this. \nDefault: 3072 (3GB). \nThis prevents unnecessary freezing if your game memory is doing fine.",
+
+  "config.manual-key.name": "Manual Purge Key",
+  "config.manual-key.description": "The key to press to manually clear the image cache. Useful for fixing visual glitches.",
+
+  "config.force-gc.name": "Aggressive Memory Clean",
+  "config.force-gc.description": "Forces the computer to free RAM immediately. \nDisable this if your game crashes with an 'AccessViolation' error.",
+
+  "config.ram-enable.name": "Enable Active RAM Limit - Disable this if you use 'Stardew Stabilizer'",
+  "config.ram-enable.description": "If enabled, the mod will clear the cache while playing if RAM gets too high (CAUTION: Causes freeze).",
+
+  "config.ram-value.name": "Active RAM Limit (MB)",
+  "config.ram-value.description": "The RAM usage limit in MB that triggers an emergency purge while playing.",
+
+  "hud.purged": "Texture cache purged for performance."
+}

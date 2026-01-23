@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmCleaner\bin\Debug\net6.0\FarmCleaner.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmCleaner\bin\Debug\net6.0\FarmCleaner.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmCleaner\obj\Debug\net6.0\FarmCleaner.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmCleaner\obj\Debug\net6.0\FarmCleaner.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmCleaner\obj\Debug\net6.0\FarmCleaner.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmCleaner\obj\Debug\net6.0\FarmCleaner.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmCleaner\obj\Debug\net6.0\FarmCleaner.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmCleaner\obj\Debug\net6.0\FarmCleaner.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\FarmCleaner\obj\Debug\net6.0\FarmCleaner.dll

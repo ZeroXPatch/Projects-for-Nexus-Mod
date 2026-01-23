@@ -17,13 +17,11 @@ namespace GMCMSearchBar
             bool includeContentPacks
         )
         {
-            // Try reflection first (best quality: only GMCM-registered entries)
             var reflected = TryGetRegisteredModsViaReflection(helper, gmcmApiObj, monitor, includeContentPacks);
 
             if (reflected.Count > 0)
                 return CleanSort(reflected, selfManifest);
 
-            // Fallback: show everything (then entries that fail to open will get removed by SearchMenu)
             monitor.Log("Couldn't locate GMCM registry via reflection; falling back to all loaded mods.", LogLevel.Warn);
 
             var fallback = helper.ModRegistry
@@ -41,7 +39,6 @@ namespace GMCMSearchBar
             try
             {
                 var best = new Candidate();
-
                 var visited = new HashSet<object>(ReferenceEqualityComparer.Instance);
                 var queue = new Queue<(object Obj, int Depth)>();
 
@@ -50,9 +47,7 @@ namespace GMCMSearchBar
                     if (obj is null) return;
                     if (depth > 4) return;
                     if (obj is string) return;
-
-                    if (visited.Add(obj))
-                        queue.Enqueue((obj, depth));
+                    if (visited.Add(obj)) queue.Enqueue((obj, depth));
                 }
 
                 Enqueue(gmcmApiObj, 0);
@@ -61,7 +56,6 @@ namespace GMCMSearchBar
                 {
                     var (obj, depth) = queue.Dequeue();
 
-                    // dictionary candidates often contain the registration state
                     if (TryExtractManyManifests(helper, obj, out var manifests, includeContentPacks))
                     {
                         var list = manifests.DistinctBy(m => m.UniqueID).ToList();
@@ -69,9 +63,7 @@ namespace GMCMSearchBar
                             best = new Candidate(list);
                     }
 
-                    // walk fields + properties
                     const BindingFlags flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
-
                     foreach (var f in obj.GetType().GetFields(flags))
                     {
                         object? v;
@@ -80,12 +72,10 @@ namespace GMCMSearchBar
                         if (IsLeaf(v)) continue;
                         Enqueue(v, depth + 1);
                     }
-
                     foreach (var p in obj.GetType().GetProperties(flags))
                     {
                         if (!p.CanRead) continue;
                         if (p.GetIndexParameters().Length != 0) continue;
-
                         object? v;
                         try { v = p.GetValue(obj); } catch { continue; }
                         if (v is null) continue;
@@ -93,7 +83,6 @@ namespace GMCMSearchBar
                         Enqueue(v, depth + 1);
                     }
                 }
-
                 return best.Manifests;
             }
             catch (Exception ex)
@@ -106,38 +95,23 @@ namespace GMCMSearchBar
         private static bool TryExtractManyManifests(IModHelper helper, object obj, out IEnumerable<IManifest> manifests, bool includeContentPacks)
         {
             var results = new List<IManifest>();
-
-            // 1) IDictionary (non-generic)
             if (obj is IDictionary dict)
             {
                 foreach (DictionaryEntry entry in dict)
                 {
                     AddIfFound(helper, entry.Key, results, includeContentPacks);
                     AddIfFound(helper, entry.Value, results, includeContentPacks);
-
-                    if (entry.Key is string uidKey)
-                        AddUid(helper, uidKey, results, includeContentPacks);
-
-                    if (entry.Value is string uidVal)
-                        AddUid(helper, uidVal, results, includeContentPacks);
+                    if (entry.Key is string uidKey) AddUid(helper, uidKey, results, includeContentPacks);
+                    if (entry.Value is string uidVal) AddUid(helper, uidVal, results, includeContentPacks);
                 }
             }
-
-            // 2) IEnumerable of anything
             if (obj is IEnumerable enumerable && obj is not string)
             {
                 foreach (var item in enumerable)
                     AddIfFound(helper, item, results, includeContentPacks);
             }
-
-            // 3) object might itself contain a manifest
             AddIfFound(helper, obj, results, includeContentPacks);
-
-            results = results
-                .Where(m => m is not null)
-                .DistinctBy(m => m.UniqueID)
-                .ToList();
-
+            results = results.Where(m => m is not null).DistinctBy(m => m.UniqueID).ToList();
             manifests = results;
             return results.Count > 0;
         }
@@ -151,38 +125,26 @@ namespace GMCMSearchBar
         private static void AddUid(IModHelper helper, string uid, List<IManifest> results, bool includeContentPacks)
         {
             var info = helper.ModRegistry.Get(uid);
-            if (info?.Manifest is null)
-                return;
-
-            if (!includeContentPacks && info.IsContentPack)
-                return;
-
+            if (info?.Manifest is null) return;
+            if (!includeContentPacks && info.IsContentPack) return;
             results.Add(info.Manifest);
         }
 
         private static bool TryExtractManifest(IModHelper helper, object? obj, out IManifest manifest, bool includeContentPacks)
         {
             manifest = null!;
-
-            if (obj is null)
-                return false;
-
+            if (obj is null) return false;
             if (obj is IManifest m)
             {
                 if (!includeContentPacks)
                 {
                     var info = helper.ModRegistry.Get(m.UniqueID);
-                    if (info?.IsContentPack == true)
-                        return false;
+                    if (info?.IsContentPack == true) return false;
                 }
-
                 manifest = m;
                 return true;
             }
-
             var t = obj.GetType();
-
-            // common pattern: something.Manifest
             var prop = t.GetProperty("Manifest", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
             if (prop is not null && typeof(IManifest).IsAssignableFrom(prop.PropertyType) && prop.CanRead)
             {
@@ -193,15 +155,12 @@ namespace GMCMSearchBar
                     {
                         if (!includeContentPacks && helper.ModRegistry.Get(v.UniqueID)?.IsContentPack == true)
                             return false;
-
                         manifest = v;
                         return true;
                     }
                 }
                 catch { }
             }
-
-            // sometimes only UniqueID/ModID exists
             foreach (var name in new[] { "UniqueID", "UniqueId", "ModID", "ModId", "Id", "ID" })
             {
                 var p = t.GetProperty(name, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
@@ -213,12 +172,8 @@ namespace GMCMSearchBar
                         if (!string.IsNullOrWhiteSpace(uid))
                         {
                             var info = helper.ModRegistry.Get(uid);
-                            if (info?.Manifest is null)
-                                break;
-
-                            if (!includeContentPacks && info.IsContentPack)
-                                return false;
-
+                            if (info?.Manifest is null) break;
+                            if (!includeContentPacks && info.IsContentPack) return false;
                             manifest = info.Manifest;
                             return true;
                         }
@@ -226,7 +181,6 @@ namespace GMCMSearchBar
                     catch { }
                 }
             }
-
             return false;
         }
 
@@ -243,15 +197,12 @@ namespace GMCMSearchBar
 
         private static bool IsLeaf(object v)
         {
-            return v is string
-                   || v.GetType().IsPrimitive
-                   || v is decimal;
+            return v is string || v.GetType().IsPrimitive || v is decimal;
         }
 
         private sealed class Candidate
         {
             public List<IManifest> Manifests { get; }
-
             public Candidate() : this(new List<IManifest>()) { }
             public Candidate(List<IManifest> manifests) => this.Manifests = manifests;
         }
@@ -259,7 +210,6 @@ namespace GMCMSearchBar
         private sealed class ReferenceEqualityComparer : IEqualityComparer<object>
         {
             public static readonly ReferenceEqualityComparer Instance = new();
-
             public new bool Equals(object? x, object? y) => ReferenceEquals(x, y);
             public int GetHashCode(object obj) => System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode(obj);
         }

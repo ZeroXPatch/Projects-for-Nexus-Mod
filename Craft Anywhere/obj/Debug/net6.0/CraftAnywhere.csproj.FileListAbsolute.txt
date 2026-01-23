@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Craft Anywhere\bin\Debug\net6.0\CraftAnywhere.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Craft Anywhere\bin\Debug\net6.0\CraftAnywhere.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Craft Anywhere\obj\Debug\net6.0\CraftAnywhere.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Craft Anywhere\obj\Debug\net6.0\CraftAnywhere.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Craft Anywhere\obj\Debug\net6.0\CraftAnywhere.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Craft Anywhere\obj\Debug\net6.0\CraftAnywhere.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Craft Anywhere\obj\Debug\net6.0\CraftAnywhere.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Craft Anywhere\obj\Debug\net6.0\CraftAnywhere.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Craft Anywhere\obj\Debug\net6.0\CraftAnywhere.dll

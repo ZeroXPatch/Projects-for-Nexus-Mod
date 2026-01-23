@@ -1,0 +1,21 @@
+{
+  "config.section.controls": "Sterowanie",
+  "config.section.cleaning": "Co czyścić",
+  "config.key.name": "Klawisz czyszczenia",
+  "config.key.tooltip": "Naciśnij ten klawisz, aby zeskanować i wyczyścić farmę.",
+  "config.stones.name": "Usuń kamienie",
+  "config.stones.tooltip": "Usuwa małe kamienie i skały.",
+  "config.twigs.name": "Usuń gałęzie",
+  "config.twigs.tooltip": "Usuwa małe drewniane gałązki.",
+  "config.weeds.name": "Usuń chwasty",
+  "config.weeds.tooltip": "Usuwa chwasty i rośliny włókniste.",
+  "config.saplings.name": "Usuń sadzonki",
+  "config.saplings.tooltip": "Usuwa nasiona drzew i młode drzewa.",
+  "config.grass.name": "Usuń trawę",
+  "config.grass.tooltip": "Usuwa trawę jedzoną przez zwierzęta.",
+  "config.stumps.name": "Usuń duże pnie",
+  "config.stumps.tooltip": "Usuwa pnie z twardego drewna.",
+  "msg.scanning": "Skanowanie farmy w poszukiwaniu odpadów...",
+  "msg.cleared": "Usunięto {{count}} obiektów odpadów.",
+  "msg.none_found": "Nie znaleziono elementów do czyszczenia."
+}

@@ -1,0 +1,21 @@
+{
+  "config.section.controls": "Керування",
+  "config.section.cleaning": "Що очищати",
+  "config.key.name": "Клавіша очищення",
+  "config.key.tooltip": "Натисніть цю клавішу, щоб просканувати та очистити ферму.",
+  "config.stones.name": "Прибрати каміння",
+  "config.stones.tooltip": "Прибирає дрібне каміння та валуни.",
+  "config.twigs.name": "Прибрати гілки",
+  "config.twigs.tooltip": "Прибирає дрібні дерев'яні гілки.",
+  "config.weeds.name": "Прибрати бур'яни",
+  "config.weeds.tooltip": "Прибирає бур'яни та волокнисті рослини.",
+  "config.saplings.name": "Прибрати саджанці",
+  "config.saplings.tooltip": "Прибирає насіння дерев та молоді дерева.",
+  "config.grass.name": "Прибрати траву",
+  "config.grass.tooltip": "Прибирає траву, яку їдять тварини.",
+  "config.stumps.name": "Прибрати великі пні",
+  "config.stumps.tooltip": "Прибирає пні з твердого дерева.",
+  "msg.scanning": "Сканування ферми на сміття...",
+  "msg.cleared": "Видалено {{count}} об'єктів сміття.",
+  "msg.none_found": "Не знайдено відповідних об'єктів для очищення."
+}

@@ -1,0 +1,21 @@
+{
+  "config.section.controls": "Kontroller",
+  "config.section.cleaning": "Temizlenecekler",
+  "config.key.name": "Temizleme Tuşu",
+  "config.key.tooltip": "Çiftliği taramak ve temizlemek için bu tuşa basın.",
+  "config.stones.name": "Taşları Temizle",
+  "config.stones.tooltip": "Küçük taşları ve kayaları kaldırır.",
+  "config.twigs.name": "Dalları Temizle",
+  "config.twigs.tooltip": "Küçük odun dallarını kaldırır.",
+  "config.weeds.name": "Yabani Otları Temizle",
+  "config.weeds.tooltip": "Yabani otları ve lifli bitkileri kaldırır.",
+  "config.saplings.name": "Fidanları Temizle",
+  "config.saplings.tooltip": "Ağaç tohumlarını ve genç ağaçları kaldırır.",
+  "config.grass.name": "Çimleri Temizle",
+  "config.grass.tooltip": "Hayvanların yediği çimleri kaldırır.",
+  "config.stumps.name": "Büyük Kütükleri Temizle",
+  "config.stumps.tooltip": "Sert ağaç kütüklerini kaldırır.",
+  "msg.scanning": "Çiftlikte enkaz taranıyor...",
+  "msg.cleared": "{{count}} enkaz nesnesi silindi.",
+  "msg.none_found": "Temizlenecek eşleşen öğe bulunamadı."
+}

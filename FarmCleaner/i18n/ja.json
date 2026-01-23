@@ -1,0 +1,21 @@
+{
+  "config.section.controls": "操作",
+  "config.section.cleaning": "掃除対象",
+  "config.key.name": "掃除キー",
+  "config.key.tooltip": "このキーを押して農場をスキャンし、掃除します。",
+  "config.stones.name": "石を除去",
+  "config.stones.tooltip": "小さな石や岩を除去します。",
+  "config.twigs.name": "枝を除去",
+  "config.twigs.tooltip": "小さな木の枝を除去します。",
+  "config.weeds.name": "雑草を除去",
+  "config.weeds.tooltip": "雑草や繊維植物を除去します。",
+  "config.saplings.name": "苗木を除去",
+  "config.saplings.tooltip": "木の種や若木を除去します。",
+  "config.grass.name": "草を除去",
+  "config.grass.tooltip": "動物が食べる草を除去します。",
+  "config.stumps.name": "大きな切り株を除去",
+  "config.stumps.tooltip": "広葉樹の切り株を除去します。",
+  "msg.scanning": "農場のゴミをスキャン中...",
+  "msg.cleared": "{{count}} 個のゴミを削除しました。",
+  "msg.none_found": "掃除する対象が見つかりませんでした。"
+}

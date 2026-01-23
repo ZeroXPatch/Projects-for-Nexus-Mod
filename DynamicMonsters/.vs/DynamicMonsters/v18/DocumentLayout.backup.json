@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\DynamicMonsters\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D73B087F-F62B-9125-FB81-717284D7402E}|DynamicMonsters.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\dynamicmonsters\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D73B087F-F62B-9125-FB81-717284D7402E}|DynamicMonsters.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D73B087F-F62B-9125-FB81-717284D7402E}|DynamicMonsters.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\dynamicmonsters\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D73B087F-F62B-9125-FB81-717284D7402E}|DynamicMonsters.csproj|solutionrelative:i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73B087F-F62B-9125-FB81-717284D7402E}|DynamicMonsters.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\dynamicmonsters\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D73B087F-F62B-9125-FB81-717284D7402E}|DynamicMonsters.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D73B087F-F62B-9125-FB81-717284D7402E}|DynamicMonsters.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\dynamicmonsters\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D73B087F-F62B-9125-FB81-717284D7402E}|DynamicMonsters.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,26 +36,38 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "ModConfig.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\DynamicMonsters\\ModConfig.cs",
+              "RelativeDocumentMoniker": "ModConfig.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\DynamicMonsters\\ModConfig.cs",
+              "RelativeToolTip": "ModConfig.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwBcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T03:06:24.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\DynamicMonsters\\ModEntry.cs",
               "RelativeDocumentMoniker": "ModEntry.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\DynamicMonsters\\ModEntry.cs",
               "RelativeToolTip": "ModEntry.cs",
-              "ViewState": "AgIAADkBAAAAAAAAAAAowFMBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAD0BAAAAAAAAAAAuwEMBAABuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-20T05:13:35.756Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "default.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\DynamicMonsters\\i18n\\default.json",
               "RelativeDocumentMoniker": "i18n\\default.json",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\DynamicMonsters\\i18n\\default.json",
               "RelativeToolTip": "i18n\\default.json",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-01-20T05:01:29.277Z",
               "EditorCaption": ""

@@ -1,6 +1,0 @@
-C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Mass Animal Buyer\obj\x64\Debug\net6.0\MassAnimalBuyer.csproj.AssemblyReference.cache
-C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Mass Animal Buyer\obj\x64\Debug\net6.0\MassAnimalBuyer.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Mass Animal Buyer\obj\x64\Debug\net6.0\MassAnimalBuyer.AssemblyInfoInputs.cache
-C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Mass Animal Buyer\obj\x64\Debug\net6.0\MassAnimalBuyer.AssemblyInfo.cs
-C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Mass Animal Buyer\obj\x64\Debug\net6.0\MassAnimalBuyer.csproj.CoreCompileInputs.cache
-C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Mass Animal Buyer\obj\x64\Debug\net6.0\MassAnimalBuyer.sourcelink.json

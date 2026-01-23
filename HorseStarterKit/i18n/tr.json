@@ -1,0 +1,6 @@
+{
+  "item.name": "Ahır Senedi",
+  "item.description": "Bir ahırın derhal inşa edilmesini emreden büyülü bir sözleşme. Robin’i çağırmak için kullan.",
+  "mail.day2": "Gezgin,^Bu topraklarda durmaksızın yürüyüp emek verdiğini izledim. Artık rüzgarın hızıyla hareket etme zamanı.^Ekte, ön ödemesi yapılmış bir senet bulunuyor. Asil bir at için bir barınak yaptırmak üzere kullan. Maliyeti dert etme; her şey halledildi.^   - Rüzgarın Dostu%item object ZeroXPatch.HorseStarterKit.Deed 1 %%",
+  "mail.day3": "Gezgin,^Artık bir ahırın olduğuna göre, yoldaşını boşluktan çağırmanın bir yoluna ihtiyacın var.^Bu flütü al. Çal ve atın ne kadar uzakta olursa olsun anında yanıt versin.^   - Rüzgarın Dostu%item object 911 1 %%"
+}

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Buy animals in bulk from Marnie by holding Shift.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72283ecdb14ee9357be0a0d438ae1a2e6ba18f55")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41a997da120b6844978b8018119e628eb22db885")]
 [assembly: System.Reflection.AssemblyProductAttribute("MassAnimalBuyer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MassAnimalBuyer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

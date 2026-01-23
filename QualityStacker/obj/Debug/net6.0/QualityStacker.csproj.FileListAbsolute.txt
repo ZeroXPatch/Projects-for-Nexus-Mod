@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\QualityStacker\bin\Debug\net6.0\QualityStacker.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\QualityStacker\bin\Debug\net6.0\QualityStacker.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\QualityStacker\obj\Debug\net6.0\QualityStacker.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\QualityStacker\obj\Debug\net6.0\QualityStacker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\QualityStacker\obj\Debug\net6.0\QualityStacker.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\QualityStacker\obj\Debug\net6.0\QualityStacker.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\QualityStacker\obj\Debug\net6.0\QualityStacker.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\QualityStacker\obj\Debug\net6.0\QualityStacker.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\QualityStacker\obj\Debug\net6.0\QualityStacker.dll

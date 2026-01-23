@@ -7,7 +7,7 @@ namespace GMCMSearchBar
     {
         public KeybindList OpenSearchMenuKey { get; set; } = new KeybindList(SButton.F6);
 
-        public bool ShowUniqueId { get; set; } = true;
+        public bool ShowUniqueId { get; set; } = false;
 
         // IMPORTANT for “multiple configs”: many of those are content packs
         public bool IncludeContentPacks { get; set; } = true;

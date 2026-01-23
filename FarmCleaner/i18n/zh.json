@@ -1,0 +1,21 @@
+{
+  "config.section.controls": "控制",
+  "config.section.cleaning": "清理内容",
+  "config.key.name": "清理按键",
+  "config.key.tooltip": "按下此键扫描并清理农场。",
+  "config.stones.name": "清除石头",
+  "config.stones.tooltip": "移除小石头和岩石。",
+  "config.twigs.name": "清除树枝",
+  "config.twigs.tooltip": "移除小木枝。",
+  "config.weeds.name": "清除杂草",
+  "config.weeds.tooltip": "移除杂草和纤维植物。",
+  "config.saplings.name": "清除树苗",
+  "config.saplings.tooltip": "移除树种和幼树。",
+  "config.grass.name": "清除草",
+  "config.grass.tooltip": "移除动物食用的草。",
+  "config.stumps.name": "清除大型树桩",
+  "config.stumps.tooltip": "移除硬木树桩。",
+  "msg.scanning": "正在扫描农场杂物...",
+  "msg.cleared": "已删除 {{count}} 个杂物对象。",
+  "msg.none_found": "未找到可清理的匹配项目。"
+}

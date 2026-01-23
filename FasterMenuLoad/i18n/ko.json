@@ -1,0 +1,16 @@
+{
+  "config.section.performance": "성능 설정",
+  "config.section.performance.desc": "문제가 발생하면 탭을 해제하세요.",
+  "config.lazy_skills.name": "기술 지연 로드 (탭 1)",
+  "config.lazy_skills.desc": "클릭할 때까지 기술 페이지를 불러오지 않습니다.",
+  "config.lazy_social.name": "사회 지연 로드 (탭 2)",
+  "config.lazy_social.desc": "클릭할 때까지 사회 페이지를 불러오지 않습니다.",
+  "config.lazy_crafting.name": "제작/요리 지연 로드 (탭 4)",
+  "config.lazy_crafting.desc": "클릭할 때까지 제작/요리 페이지를 불러오지 않습니다.",
+  "config.lazy_animals.name": "동물 지연 로드 (탭 5)",
+  "config.lazy_animals.desc": "클릭할 때까지 동물 페이지를 불러오지 않습니다.",
+  "config.lazy_powers.name": "능력 지연 로드 (탭 6)",
+  "config.lazy_powers.desc": "클릭할 때까지 능력 페이지를 불러오지 않습니다.",
+  "config.lazy_collections.name": "컬렉션 지연 로드 (탭 7)",
+  "config.lazy_collections.desc": "클릭할 때까지 컬렉션 페이지를 불러오지 않습니다."
+}

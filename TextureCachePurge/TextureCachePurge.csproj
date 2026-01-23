@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    
+    <AssemblyName>TextureCachePurge</AssemblyName>
+    <RootNamespace>TextureCachePurge</RootNamespace>
+    <Version>1.0.0</Version>
+
+    <!-- Copies the mod to your game folder automatically -->
+    <EnableModDeploy>true</EnableModDeploy>
+    <ModZipPath>releases</ModZipPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Updated version to 4.4.0 to match your installed package -->
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="manifest.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="i18n\*.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,6 @@
+{
+  "item.name": "Atto della Scuderia",
+  "item.description": "Un contratto magico che ordina la costruzione immediata di una scuderia. Usalo per evocare Robin.",
+  "mail.day2": "Viaggiatore,^Ti ho visto faticare, camminando senza sosta attraverso queste terre. È tempo di muoverti con la velocità del vento.^In allegato trovi un atto prepagato. Usalo per commissionare un rifugio per un nobile destriero. Non preoccuparti del costo; è già stato saldato.^   - Un Amico del Vento%item object ZeroXPatch.HorseStarterKit.Deed 1 %%",
+  "mail.day3": "Viaggiatore,^Ora che possiedi una scuderia, ti serve un modo per richiamare il tuo compagno dal vuoto.^Prendi questo flauto. Suonalo e il tuo destriero risponderà all’istante, ovunque tu sia.^   - Un Amico del Vento%item object 911 1 %%"
+}

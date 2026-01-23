@@ -1,0 +1,10 @@
+{
+  "Name": "Build at Robin with Materials Home",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.1",
+  "Description": "Build buildings at Robin's or the Wizard's using materials stored in your chests at home.",
+  "UniqueID": "ZeroXPatch.BuildAtRobin",
+  "EntryDll": "BuildAtRobin.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

@@ -1,0 +1,21 @@
+{
+  "config.section.controls": "Commandes",
+  "config.section.cleaning": "Éléments à nettoyer",
+  "config.key.name": "Touche de nettoyage",
+  "config.key.tooltip": "Appuyez sur cette touche pour analyser et nettoyer la ferme.",
+  "config.stones.name": "Supprimer les pierres",
+  "config.stones.tooltip": "Supprime les petites pierres et rochers.",
+  "config.twigs.name": "Supprimer les brindilles",
+  "config.twigs.tooltip": "Supprime les petites branches de bois.",
+  "config.weeds.name": "Supprimer les mauvaises herbes",
+  "config.weeds.tooltip": "Supprime les mauvaises herbes et plantes fibreuses.",
+  "config.saplings.name": "Supprimer les jeunes pousses",
+  "config.saplings.tooltip": "Supprime les graines d'arbres et jeunes arbres.",
+  "config.grass.name": "Supprimer l'herbe",
+  "config.grass.tooltip": "Supprime l'herbe mangée par les animaux.",
+  "config.stumps.name": "Supprimer les grosses souches",
+  "config.stumps.tooltip": "Supprime les souches de bois dur.",
+  "msg.scanning": "Analyse de la ferme en cours...",
+  "msg.cleared": "{{count}} objets de débris supprimés.",
+  "msg.none_found": "Aucun élément correspondant à nettoyer."
+}

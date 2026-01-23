@@ -1,0 +1,31 @@
+{
+  "config.section.controls": "Controls",
+  "config.section.cleaning": "What to Clean",
+
+  "config.key.name": "Clean Key",
+  "config.key.tooltip": "Press this key to scan and clean the farm.",
+
+  "config.stones.name": "Clear Stones",
+  "config.stones.tooltip": "Remove small stones and rocks.",
+
+  "config.twigs.name": "Clear Twigs",
+  "config.twigs.tooltip": "Remove small wood twigs.",
+
+  "config.weeds.name": "Clear Weeds",
+  "config.weeds.tooltip": "Remove weeds and fiber plants.",
+
+  "config.saplings.name": "Clear Saplings",
+  "config.saplings.tooltip": "Remove tree seeds and baby trees.",
+
+  "config.grass.name": "Clear Grass",
+  "config.grass.tooltip": "Remove the grass that animals eat.",
+
+  "config.stumps.name": "Clear Large Stumps",
+  "config.stumps.tooltip": "Remove hardwood stumps.",
+
+  "msg.scanning": "Scanning farm for debris...",
+
+  "msg.cleared": "Deleted {{count}} debris objects.",
+
+  "msg.none_found": "No matching items found to clean."
+}

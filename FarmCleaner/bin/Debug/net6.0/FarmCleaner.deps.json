@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "FarmCleaner/1.0.0": {
+        "runtime": {
+          "FarmCleaner.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FarmCleaner/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

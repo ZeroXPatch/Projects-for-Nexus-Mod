@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HorseStarterKit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8aeac3ba0e2a6d014d38e0462c73ae61c5a79b23")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41a997da120b6844978b8018119e628eb22db885")]
 [assembly: System.Reflection.AssemblyProductAttribute("HorseStarterKit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HorseStarterKit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
