@@ -1,0 +1,18 @@
+{
+  "config.section.general": "常规设置",
+  "config.debug.name": "调试模式",
+  "config.debug.tooltip": "在玩家头顶显示当前工具大师统计数据。",
+  "config.adaptive.name": "自适应模式",
+  "config.adaptive.tooltip": "如果为真,使用下面的时间表。如果为假,使用常量设置。",
+  "config.adaptive.note": "为每个时间段设置消耗和速度。更改每秒应用一次。",
+  "config.section.constant": "常量模式",
+  "config.cost.name": "体力消耗 %",
+  "config.cost.tooltip": "能量消耗倍数。100% = 正常。50% = 半消耗。200% = 双倍消耗。",
+  "config.speed.name": "工具速度 %",
+  "config.speed.tooltip": "工具充能/挥动速度。100% = 正常。150% = 快50%。50% = 半速。",
+  "config.section.adaptive": "自适应时间表",
+  "config.time.6to9": "上午6:00 - 上午9:00(早晨)",
+  "config.time.9to5": "上午9:00 - 下午5:00(工作日)",
+  "config.time.5to12": "下午5:00 - 上午12:00(傍晚)",
+  "config.time.12to2": "上午12:00 - 上午6:00(深夜)"
+}

@@ -1,0 +1,18 @@
+{
+  "config.section.general": "Impostazioni Generali",
+  "config.debug.name": "Modalità Debug",
+  "config.debug.tooltip": "Mostra le statistiche attuali di Tool Master sopra la testa del giocatore.",
+  "config.adaptive.name": "Modalità Adattiva",
+  "config.adaptive.tooltip": "Se attivo, usa la pianificazione qui sotto. Se disattivo, usa impostazioni costanti.",
+  "config.adaptive.note": "Imposta Costo e Velocità per ogni fascia oraria. Le modifiche si applicano ogni secondo.",
+  "config.section.constant": "Modalità Costante",
+  "config.cost.name": "Costo Energia %",
+  "config.cost.tooltip": "Moltiplicatore costo energia. 100% = Normale. 50% = Metà Costo. 200% = Doppio Costo.",
+  "config.speed.name": "Velocità Strumento %",
+  "config.speed.tooltip": "Velocità di carica/oscillazione dello strumento. 100% = Normale. 150% = 50% Più Veloce. 50% = Metà Velocità.",
+  "config.section.adaptive": "Pianificazione Adattiva",
+  "config.time.6to9": "6:00 - 9:00 (Mattina)",
+  "config.time.9to5": "9:00 - 17:00 (Giornata Lavorativa)",
+  "config.time.5to12": "17:00 - 24:00 (Sera)",
+  "config.time.12to2": "00:00 - 6:00 (Tarda Notte)"
+}

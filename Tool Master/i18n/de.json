@@ -1,0 +1,18 @@
+{
+  "config.section.general": "Allgemeine Einstellungen",
+  "config.debug.name": "Debug-Modus",
+  "config.debug.tooltip": "Zeigt aktuelle Tool Master-Statistiken über dem Spielerkopf an.",
+  "config.adaptive.name": "Adaptiver Modus",
+  "config.adaptive.tooltip": "Wenn aktiviert, wird der unten stehende Zeitplan verwendet. Wenn deaktiviert, werden konstante Einstellungen verwendet.",
+  "config.adaptive.note": "Legen Sie Kosten und Geschwindigkeit für jeden Zeitblock fest. Änderungen werden jede Sekunde angewendet.",
+  "config.section.constant": "Konstanter Modus",
+  "config.cost.name": "Ausdauerkosten %",
+  "config.cost.tooltip": "Energiekosten-Multiplikator. 100% = Normal. 50% = Halbe Kosten. 200% = Doppelte Kosten.",
+  "config.speed.name": "Werkzeuggeschwindigkeit %",
+  "config.speed.tooltip": "Werkzeug-Lade-/Schwunggeschwindigkeit. 100% = Normal. 150% = 50% schneller. 50% = Halbe Geschwindigkeit.",
+  "config.section.adaptive": "Adaptiver Zeitplan",
+  "config.time.6to9": "6:00 - 9:00 Uhr (Morgen)",
+  "config.time.9to5": "9:00 - 17:00 Uhr (Arbeitstag)",
+  "config.time.5to12": "17:00 - 24:00 Uhr (Abend)",
+  "config.time.12to2": "0:00 - 6:00 Uhr (Späte Nacht)"
+}

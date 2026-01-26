@@ -1,0 +1,18 @@
+{
+  "config.section.general": "Cài Đặt Chung",
+  "config.debug.name": "Chế Độ Gỡ Lỗi",
+  "config.debug.tooltip": "Hiển thị thống kê Tool Master hiện tại phía trên đầu người chơi.",
+  "config.adaptive.name": "Chế Độ Thích Ứng",
+  "config.adaptive.tooltip": "Nếu đúng, sử dụng lịch trình bên dưới. Nếu sai, sử dụng cài đặt không đổi.",
+  "config.adaptive.note": "Đặt Chi Phí và Tốc Độ cho mỗi khung giờ. Thay đổi được áp dụng mỗi giây.",
+  "config.section.constant": "Chế Độ Không Đổi",
+  "config.cost.name": "Chi Phí Thể Lực %",
+  "config.cost.tooltip": "Hệ số chi phí năng lượng. 100% = Bình thường. 50% = Nửa Chi Phí. 200% = Gấp Đôi Chi Phí.",
+  "config.speed.name": "Tốc Độ Công Cụ %",
+  "config.speed.tooltip": "Tốc độ nạp/vung công cụ. 100% = Bình thường. 150% = Nhanh hơn 50%. 50% = Nửa Tốc Độ.",
+  "config.section.adaptive": "Lịch Trình Thích Ứng",
+  "config.time.6to9": "6:00 Sáng - 9:00 Sáng (Buổi Sáng)",
+  "config.time.9to5": "9:00 Sáng - 5:00 Chiều (Giờ Làm Việc)",
+  "config.time.5to12": "5:00 Chiều - 12:00 Đêm (Buổi Tối)",
+  "config.time.12to2": "12:00 Đêm - 6:00 Sáng (Đêm Khuya)"
+}

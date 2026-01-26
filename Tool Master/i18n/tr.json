@@ -1,0 +1,18 @@
+{
+  "config.section.general": "Genel Ayarlar",
+  "config.debug.name": "Hata Ayıklama Modu",
+  "config.debug.tooltip": "Oyuncunun başının üzerinde mevcut Tool Master istatistiklerini gösterir.",
+  "config.adaptive.name": "Uyarlanabilir Mod",
+  "config.adaptive.tooltip": "Etkinse, aşağıdaki programı kullanır. Devre dışıysa, sabit ayarları kullanır.",
+  "config.adaptive.note": "Her zaman dilimi için Maliyet ve Hız ayarlayın. Değişiklikler her saniye uygulanır.",
+  "config.section.constant": "Sabit Mod",
+  "config.cost.name": "Dayanıklılık Maliyeti %",
+  "config.cost.tooltip": "Enerji maliyeti çarpanı. %100 = Normal. %50 = Yarı Maliyet. %200 = Çift Maliyet.",
+  "config.speed.name": "Alet Hızı %",
+  "config.speed.tooltip": "Alet şarj/sallanma hızı. %100 = Normal. %150 = %50 Daha Hızlı. %50 = Yarı Hız.",
+  "config.section.adaptive": "Uyarlanabilir Program",
+  "config.time.6to9": "06:00 - 09:00 (Sabah)",
+  "config.time.9to5": "09:00 - 17:00 (İş Günü)",
+  "config.time.5to12": "17:00 - 00:00 (Akşam)",
+  "config.time.12to2": "00:00 - 06:00 (Gece Geç Saatler)"
+}

@@ -1,0 +1,18 @@
+{
+  "config.section.general": "一般設定",
+  "config.debug.name": "デバッグモード",
+  "config.debug.tooltip": "プレイヤーの頭上に現在のTool Masterの統計を表示します。",
+  "config.adaptive.name": "適応モード",
+  "config.adaptive.tooltip": "有効の場合、以下のスケジュールを使用します。無効の場合、定数設定を使用します。",
+  "config.adaptive.note": "各時間帯のコストと速度を設定します。変更は毎秒適用されます。",
+  "config.section.constant": "定数モード",
+  "config.cost.name": "スタミナコスト %",
+  "config.cost.tooltip": "エネルギーコスト倍率。100% = 通常。50% = 半分のコスト。200% = 2倍のコスト。",
+  "config.speed.name": "ツール速度 %",
+  "config.speed.tooltip": "ツールのチャージ/スイング速度。100% = 通常。150% = 50%速い。50% = 半分の速度。",
+  "config.section.adaptive": "適応スケジュール",
+  "config.time.6to9": "午前6:00 - 午前9:00(朝)",
+  "config.time.9to5": "午前9:00 - 午後5:00(勤務時間)",
+  "config.time.5to12": "午後5:00 - 午前0:00(夕方)",
+  "config.time.12to2": "午前0:00 - 午前6:00(深夜)"
+}

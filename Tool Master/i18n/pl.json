@@ -1,0 +1,18 @@
+{
+  "config.section.general": "Ustawienia Ogólne",
+  "config.debug.name": "Tryb Debugowania",
+  "config.debug.tooltip": "Pokazuje aktualne statystyki Tool Master nad głową gracza.",
+  "config.adaptive.name": "Tryb Adaptacyjny",
+  "config.adaptive.tooltip": "Jeśli włączony, używa harmonogramu poniżej. Jeśli wyłączony, używa stałych ustawień.",
+  "config.adaptive.note": "Ustaw Koszt i Prędkość dla każdego przedziału czasowego. Zmiany stosowane są co sekundę.",
+  "config.section.constant": "Tryb Stały",
+  "config.cost.name": "Koszt Wytrzymałości %",
+  "config.cost.tooltip": "Mnożnik kosztu energii. 100% = Normalny. 50% = Połowa Kosztu. 200% = Podwójny Koszt.",
+  "config.speed.name": "Prędkość Narzędzia %",
+  "config.speed.tooltip": "Prędkość ładowania/machania narzędziem. 100% = Normalny. 150% = 50% Szybciej. 50% = Połowa Prędkości.",
+  "config.section.adaptive": "Harmonogram Adaptacyjny",
+  "config.time.6to9": "6:00 - 9:00 (Ranek)",
+  "config.time.9to5": "9:00 - 17:00 (Dzień Pracy)",
+  "config.time.5to12": "17:00 - 00:00 (Wieczór)",
+  "config.time.12to2": "00:00 - 6:00 (Późna Noc)"
+}

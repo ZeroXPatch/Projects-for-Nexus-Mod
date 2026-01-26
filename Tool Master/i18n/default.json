@@ -1,0 +1,22 @@
+{
+  "config.section.general": "General Settings",
+  "config.debug.name": "Debug Mode",
+  "config.debug.tooltip": "Shows current Tool Master stats above player head.",
+  "config.adaptive.name": "Adaptive Mode",
+  "config.adaptive.tooltip": "If true, uses the schedule below. If false, uses constant settings.",
+  "config.adaptive.note": "Set Cost and Speed for each time slot. Changes apply every second.",
+
+  "config.section.constant": "Constant Mode",
+  "config.cost.name": "Stamina Cost %",
+  "config.cost.tooltip": "Energy cost multiplier. 100% = Normal. 50% = Half Cost. 200% = Double Cost.",
+
+  "config.speed.name": "Tool Speed %",
+  "config.speed.tooltip": "Tool charge/swing speed. 100% = Normal. 150% = 50% Faster. 50% = Half Speed.",
+
+  "config.section.adaptive": "Adaptive Schedule",
+
+  "config.time.6to9": "6:00 AM - 9:00 AM (Morning)",
+  "config.time.9to5": "9:00 AM - 5:00 PM (Work Day)",
+  "config.time.5to12": "5:00 PM - 12:00 AM (Evening)",
+  "config.time.12to2": "12:00 AM - 6:00 AM (Late Night)"
+}
