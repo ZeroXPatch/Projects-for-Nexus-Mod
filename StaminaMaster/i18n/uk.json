@@ -1,0 +1,21 @@
+{
+  "config.section.general": "Загальні Налаштування",
+  "config.debug.name": "Режим Налагодження",
+  "config.debug.tooltip": "Показує поточну енергію над гравцем.",
+  "config.adaptive.name": "Адаптивний Режим",
+  "config.adaptive.tooltip": "Якщо ввімкнено, використовується розклад нижче. Інакше — постійні налаштування.",
+  "config.frequency.name": "Частота Відновлення (Сек)",
+  "config.frequency.tooltip": "Секунди між відновленням витривалості. (Типово: 5)",
+  "config.section.constant": "Постійний Режим",
+  "config.regen.name": "Фіксоване Відновлення (+)",
+  "config.regen.tooltip": "Кількість витривалості за такт.",
+  "config.drain.name": "Зменшення Витрат (%)",
+  "config.drain.tooltip": "Відсоток ігнорованих витрат енергії (0 = нормально, 100 = безкоштовно).",
+  "config.section.adaptive": "Адаптивний Розклад",
+  "config.adaptive.note": "Налаштуйте відновлення і витрати для кожного періоду.",
+  "config.time.6to9": "6:00 - 9:00 (Ранок)",
+  "config.time.9to12": "9:00 - 12:00 (День)",
+  "config.time.12to5": "12:00 - 17:00 (Після обіду)",
+  "config.time.5to12": "17:00 - 0:00 (Вечір)",
+  "config.time.12to2": "0:00 - 2:00 (Пізня Ніч)"
+}

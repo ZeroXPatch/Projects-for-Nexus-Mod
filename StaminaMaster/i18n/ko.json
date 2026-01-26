@@ -1,0 +1,21 @@
+{
+  "config.section.general": "일반 설정",
+  "config.debug.name": "디버그 모드",
+  "config.debug.tooltip": "플레이어 머리 위에 현재 에너지 상태를 표시합니다.",
+  "config.adaptive.name": "적응형 모드",
+  "config.adaptive.tooltip": "활성화 시 아래 일정 사용, 비활성화 시 고정 설정 사용.",
+  "config.frequency.name": "회복 주기 (초)",
+  "config.frequency.tooltip": "스태미나 회복 사이의 대기 시간입니다. (기본값: 5)",
+  "config.section.constant": "고정 모드",
+  "config.regen.name": "고정 회복 (+)",
+  "config.regen.tooltip": "틱당 회복되는 스태미나 양입니다.",
+  "config.drain.name": "소모 감소 (%)",
+  "config.drain.tooltip": "무시할 도구 에너지 소모 비율 (0 = 정상, 100 = 무료).",
+  "config.section.adaptive": "적응형 일정",
+  "config.adaptive.note": "시간대별 회복 및 소모를 설정합니다.",
+  "config.time.6to9": "오전 6:00 - 9:00 (아침)",
+  "config.time.9to12": "오전 9:00 - 12:00 (정오)",
+  "config.time.12to5": "오후 12:00 - 5:00 (오후)",
+  "config.time.5to12": "오후 5:00 - 오전 12:00 (저녁)",
+  "config.time.12to2": "오전 12:00 - 2:00 (심야)"
+}

@@ -1,0 +1,10 @@
+{
+    "machine.name": "Reciclador de Lixo",
+    "machine.description": "Insira lixo para receber um item aleatório.",
+    "recipe.name": "Reciclador de Lixo",
+    "config.section.machine": "Configurações da Máquina",
+    "config.maxvalue.name": "Valor Máx. do Item",
+    "config.maxvalue.tooltip": "A máquina produzirá um item aleatório valendo MENOS que esta quantia.",
+    "config.processtime.name": "Tempo de Processamento (Horas)",
+    "config.processtime.tooltip": "Quantas horas no jogo leva para processar o lixo."
+}

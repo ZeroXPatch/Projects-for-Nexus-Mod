@@ -1,0 +1,10 @@
+{
+  "Name": "Stamina Master",
+  "Author": "YourName",
+  "Version": "1.0.0",
+  "Description": "Control stamina regeneration and drain reduction based on time of day.",
+  "UniqueID": "YourName.StaminaMaster",
+  "EntryDll": "StaminaMaster.dll",
+  "MinimumApiVersion": "3.14.0",
+  "UpdateKeys": [ "Nexus:41653" ]
+}

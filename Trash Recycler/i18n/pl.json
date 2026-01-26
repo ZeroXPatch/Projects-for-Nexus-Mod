@@ -1,0 +1,10 @@
+{
+    "machine.name": "Przetwórca śmieci",
+    "machine.description": "Włóż śmieci, aby otrzymać losowy przedmiot.",
+    "recipe.name": "Przetwórca śmieci",
+    "config.section.machine": "Ustawienia maszyny",
+    "config.maxvalue.name": "Maks. wartość przedmiotu",
+    "config.maxvalue.tooltip": "Maszyna wyprodukuje losowy przedmiot wart MNIEJ niż ta kwota.",
+    "config.processtime.name": "Czas przetwarzania (Godziny)",
+    "config.processtime.tooltip": "Ile godzin w grze zajmuje przetworzenie śmieci."
+}

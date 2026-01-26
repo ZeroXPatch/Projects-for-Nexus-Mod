@@ -1,0 +1,21 @@
+{
+  "config.section.general": "Genel Ayarlar",
+  "config.debug.name": "Hata Ayıklama Modu",
+  "config.debug.tooltip": "Oyuncunun başının üzerinde mevcut enerji durumunu gösterir.",
+  "config.adaptive.name": "Uyarlanabilir Mod",
+  "config.adaptive.tooltip": "Açıksa aşağıdaki programı kullanır. Kapalıysa sabit ayarları kullanır.",
+  "config.frequency.name": "Yenilenme Sıklığı (Sn)",
+  "config.frequency.tooltip": "Dayanıklılık yenilenmeleri arasındaki saniye. (Varsayılan: 5)",
+  "config.section.constant": "Sabit Mod",
+  "config.regen.name": "Sabit Yenilenme (+)",
+  "config.regen.tooltip": "Her döngüde yenilenen dayanıklılık miktarı.",
+  "config.drain.name": "Tüketim Azaltma (%)",
+  "config.drain.tooltip": "Yok sayılacak enerji maliyeti yüzdesi (0 = normal, 100 = ücretsiz).",
+  "config.section.adaptive": "Uyarlanabilir Program",
+  "config.adaptive.note": "Her zaman dilimi için yenilenme ve tüketimi ayarlayın.",
+  "config.time.6to9": "06:00 - 09:00 (Sabah)",
+  "config.time.9to12": "09:00 - 12:00 (Öğle)",
+  "config.time.12to5": "12:00 - 17:00 (Öğleden Sonra)",
+  "config.time.5to12": "17:00 - 00:00 (Akşam)",
+  "config.time.12to2": "00:00 - 02:00 (Gece)"
+}

@@ -9,12 +9,12 @@ namespace FasterMenuLoad
     {
         public static ModConfig Config = new();
         public static IMonitor ModMonitor = null!;
-        public static ITranslationHelper I18n = null!; // ADD THIS
+        public static ITranslationHelper I18n = null!;
 
         public override void Entry(IModHelper helper)
         {
             ModMonitor = Monitor;
-            I18n = helper.Translation; // ADD THIS - Hook up i18n
+            I18n = helper.Translation;
             Config = helper.ReadConfig<ModConfig>();
 
             var harmony = new Harmony(this.ModManifest.UniqueID);
@@ -30,7 +30,6 @@ namespace FasterMenuLoad
 
             configMenu.Register(this.ModManifest, () => Config = new ModConfig(), () => this.Helper.WriteConfig(Config));
 
-            // FIXED: Use i18n translations instead of hardcoded strings
             configMenu.AddSectionTitle(
                 this.ModManifest,
                 () => I18n.Get("config.section.performance"),
@@ -83,6 +82,21 @@ namespace FasterMenuLoad
                 v => Config.LazyLoadCollections = v,
                 () => I18n.Get("config.lazy_collections.name"),
                 () => I18n.Get("config.lazy_collections.desc")
+            );
+
+            // Add Debug section
+            configMenu.AddSectionTitle(
+                this.ModManifest,
+                () => I18n.Get("config.section.debug"),
+                () => I18n.Get("config.section.debug.desc")
+            );
+
+            configMenu.AddBoolOption(
+                this.ModManifest,
+                () => Config.EnableDebugLogging,
+                v => Config.EnableDebugLogging = v,
+                () => I18n.Get("config.debug_logging.name"),
+                () => I18n.Get("config.debug_logging.desc")
             );
         }
     }

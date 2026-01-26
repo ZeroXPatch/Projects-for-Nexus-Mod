@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaminaMaster\bin\Debug\net6.0\StaminaMaster.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaminaMaster\bin\Debug\net6.0\StaminaMaster.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaminaMaster\obj\Debug\net6.0\StaminaMaster.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaminaMaster\obj\Debug\net6.0\StaminaMaster.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaminaMaster\obj\Debug\net6.0\StaminaMaster.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaminaMaster\obj\Debug\net6.0\StaminaMaster.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaminaMaster\obj\Debug\net6.0\StaminaMaster.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaminaMaster\obj\Debug\net6.0\StaminaMaster.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\StaminaMaster\obj\Debug\net6.0\StaminaMaster.dll

@@ -1,0 +1,10 @@
+{
+    "machine.name": "垃圾回收机",
+    "machine.description": "放入垃圾以获取随机物品。",
+    "recipe.name": "垃圾回收机",
+    "config.section.machine": "机器设置",
+    "config.maxvalue.name": "物品最大价值",
+    "config.maxvalue.tooltip": "机器将产出价值低于此金额的随机物品。",
+    "config.processtime.name": "处理时间（小时）",
+    "config.processtime.tooltip": "处理垃圾所需的游戏内小时数。"
+}

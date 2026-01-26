@@ -1,0 +1,17 @@
+{
+  "config.section.general": "Загальні налаштування",
+  "config.debug.name": "Режим налагодження",
+  "config.debug.tooltip": "Показує поточний бонус швидкості над головою гравця.",
+  "config.adaptive.name": "Адаптивний режим",
+  "config.adaptive.tooltip": "Якщо увімкнено, швидкість змінюється залежно від часу доби.\nЯкщо вимкнено, використовується постійна швидкість.",
+  "config.section.constant": "Постійний режим",
+  "config.constant_speed.name": "Додаткова швидкість (+)",
+  "config.constant_speed.tooltip": "Кількість доданої швидкості (1–20).",
+  "config.section.adaptive": "Адаптивний розклад",
+  "config.adaptive.note": "Ці налаштування застосовуються лише якщо вище увімкнено 'Адаптивний режим'.",
+  "config.time.6to9": "6:00 - 9:00",
+  "config.time.9to12": "9:00 - 12:00",
+  "config.time.12to5": "12:00 - 17:00",
+  "config.time.5to12": "17:00 - 0:00",
+  "config.time.12to2": "0:00 - 2:00"
+}

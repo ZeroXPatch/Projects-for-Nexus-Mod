@@ -1,0 +1,21 @@
+{
+  "config.section.general": "Общие Настройки",
+  "config.debug.name": "Режим Отладки",
+  "config.debug.tooltip": "Показывает текущую энергию над игроком.",
+  "config.adaptive.name": "Адаптивный Режим",
+  "config.adaptive.tooltip": "Если включено, используется расписание ниже. Иначе постоянные настройки.",
+  "config.frequency.name": "Частота Регенерации (Сек)",
+  "config.frequency.tooltip": "Секунды между восстановлением выносливости. (По умолчанию: 5)",
+  "config.section.constant": "Постоянный Режим",
+  "config.regen.name": "Фиксированное Восстановление (+)",
+  "config.regen.tooltip": "Количество выносливости за тик.",
+  "config.drain.name": "Снижение Расхода (%)",
+  "config.drain.tooltip": "Процент игнорируемых затрат энергии (0 = нормально, 100 = бесплатно).",
+  "config.section.adaptive": "Адаптивное Расписание",
+  "config.adaptive.note": "Настройте восстановление и расход для каждого периода.",
+  "config.time.6to9": "6:00 - 9:00 (Утро)",
+  "config.time.9to12": "9:00 - 12:00 (День)",
+  "config.time.12to5": "12:00 - 17:00 (После полудня)",
+  "config.time.5to12": "17:00 - 0:00 (Вечер)",
+  "config.time.12to2": "0:00 - 2:00 (Поздняя Ночь)"
+}

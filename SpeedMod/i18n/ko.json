@@ -1,0 +1,17 @@
+{
+  "config.section.general": "일반 설정",
+  "config.debug.name": "디버그 모드",
+  "config.debug.tooltip": "현재 속도 버프를 플레이어 머리 위에 표시합니다.",
+  "config.adaptive.name": "적응형 모드",
+  "config.adaptive.tooltip": "활성화하면 시간대에 따라 속도가 변경됩니다.\n비활성화 시 일정한 속도를 사용합니다.",
+  "config.section.constant": "고정 모드",
+  "config.constant_speed.name": "추가 속도 (+)",
+  "config.constant_speed.tooltip": "추가할 속도 수치 (1~20).",
+  "config.section.adaptive": "적응형 일정",
+  "config.adaptive.note": "이 설정은 위에서 '적응형 모드'가 체크된 경우에만 적용됩니다.",
+  "config.time.6to9": "오전 6:00 - 9:00",
+  "config.time.9to12": "오전 9:00 - 12:00",
+  "config.time.12to5": "오후 12:00 - 5:00",
+  "config.time.5to12": "오후 5:00 - 오전 12:00",
+  "config.time.12to2": "오전 12:00 - 2:00"
+}

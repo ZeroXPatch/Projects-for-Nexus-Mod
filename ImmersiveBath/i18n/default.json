@@ -1,0 +1,38 @@
+{
+  "item.name": "Bath Sponge",
+  "item.description": "Use near water. Attach soap for a deep clean (100%). Rinsing without soap only reaches 70%.",
+  "item.soap.name": "Soap",
+  "item.soap.description": "Attach to a sponge to reach 100% cleanliness.",
+
+  "dialog.title": "Take a bath?",
+  "dialog.yes": "Yes",
+  "dialog.no": "No",
+
+  "notification.clean": "You feel fresh and clean! Friendship and Luck are increased.",
+  "notification.partial": "You feel a bit cleaner, but you need soap for a deep clean.",
+  "notification.neutral": "You feel okay.",
+  "notification.dirty": "You feel worked up and dirty! Speed, Defense, and Attack are increased.",
+
+  "buff.clean.name": "Clean",
+  "buff.neutral.name": "Neutral",
+  "buff.dirty.name": "Dirty",
+  "buff.revitalized.name": "Revitalized",
+
+  "config.section.ui": "UI Settings",
+  "config.section.decay": "Decay Settings",
+  "config.section.clean_buff": "Clean Buff (80-100%)",
+  "config.section.dirty_buff": "Dirty Buff (0-40%)",
+  "config.section.revitalized": "Revitalized Buff (Morning)",
+
+  "config.show-ui.name": "Show Cleanliness UI",
+  "config.ui-x.name": "UI Position X",
+  "config.ui-y.name": "UI Position Y",
+  "config.decay-rate.name": "Time Decay Multiplier",
+  "config.tool-decay.name": "Tool Use Decay Amount",
+  "config.luck-buff.name": "Luck Bonus",
+  "config.friendship.name": "Friendship Points",
+  "config.speed-buff.name": "Speed Bonus",
+  "config.defense-buff.name": "Defense Bonus",
+  "config.attack-buff.name": "Attack Bonus",
+  "config.energy-buff.name": "Max Energy Bonus"
+}

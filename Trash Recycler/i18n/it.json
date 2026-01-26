@@ -1,0 +1,10 @@
+{
+    "machine.name": "Riciclatore di rifiuti",
+    "machine.description": "Inserisci rifiuti per ricevere un oggetto casuale.",
+    "recipe.name": "Riciclatore di rifiuti",
+    "config.section.machine": "Impostazioni macchina",
+    "config.maxvalue.name": "Valore max oggetto",
+    "config.maxvalue.tooltip": "La macchina produrrà un oggetto casuale di valore INFERIORE a questo importo.",
+    "config.processtime.name": "Tempo di elaborazione (Ore)",
+    "config.processtime.tooltip": "Quante ore di gioco sono necessarie per elaborare i rifiuti."
+}

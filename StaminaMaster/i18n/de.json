@@ -1,0 +1,21 @@
+{
+  "config.section.general": "Allgemeine Einstellungen",
+  "config.debug.name": "Debug-Modus",
+  "config.debug.tooltip": "Zeigt aktuelle Energiestatistiken über dem Kopf des Spielers an.",
+  "config.adaptive.name": "Adaptiver Modus",
+  "config.adaptive.tooltip": "Wenn aktiviert, wird der untenstehende Zeitplan verwendet. Andernfalls konstante Einstellungen.",
+  "config.frequency.name": "Regenerationsfrequenz (Sek.)",
+  "config.frequency.tooltip": "Sekunden zwischen Ausdauer-Regenerationstakten. (Standard: 5)",
+  "config.section.constant": "Konstanter Modus",
+  "config.regen.name": "Feste Regeneration (+)",
+  "config.regen.tooltip": "Wie viel Ausdauer pro Tick wiederhergestellt wird.",
+  "config.drain.name": "Energieverbrauch-Reduktion (%)",
+  "config.drain.tooltip": "Prozentsatz der Werkzeugkosten, die ignoriert werden (0 = normal, 100 = kostenlos).",
+  "config.section.adaptive": "Adaptiver Zeitplan",
+  "config.adaptive.note": "Regeneration und Verbrauch für jedes Zeitfenster festlegen.",
+  "config.time.6to9": "6:00 - 9:00 (Morgen)",
+  "config.time.9to12": "9:00 - 12:00 (Vormittag)",
+  "config.time.12to5": "12:00 - 17:00 (Nachmittag)",
+  "config.time.5to12": "17:00 - 0:00 (Abend)",
+  "config.time.12to2": "0:00 - 2:00 (Späte Nacht)"
+}

@@ -1,0 +1,25 @@
+{
+  "config.section.general": "General Settings",
+  "config.debug.name": "Debug Mode",
+  "config.debug.tooltip": "Shows current energy stats above player head.",
+  "config.adaptive.name": "Adaptive Mode",
+  "config.adaptive.tooltip": "If true, uses the schedule below. If false, uses constant settings.",
+
+  "config.frequency.name": "Regen Frequency (Sec)",
+  "config.frequency.tooltip": "How many seconds to wait between stamina regeneration ticks. (Default: 5)",
+
+  "config.section.constant": "Constant Mode",
+  "config.regen.name": "Flat Regen (+)",
+  "config.regen.tooltip": "How much stamina to restore per tick.",
+  "config.drain.name": "Drain Reduction (%)",
+  "config.drain.tooltip": "What percentage of tool energy cost to ignore (0 = normal cost, 100 = free tools).",
+
+  "config.section.adaptive": "Adaptive Schedule",
+  "config.adaptive.note": "Set Regen and Drain for each time slot.",
+
+  "config.time.6to9": "6:00 AM - 9:00 AM (Morning)",
+  "config.time.9to12": "9:00 AM - 12:00 PM (Midday)",
+  "config.time.12to5": "12:00 PM - 5:00 PM (Afternoon)",
+  "config.time.5to12": "5:00 PM - 12:00 AM (Evening)",
+  "config.time.12to2": "12:00 AM - 2:00 AM (Late Night)"
+}

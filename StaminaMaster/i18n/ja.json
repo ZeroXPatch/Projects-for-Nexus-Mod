@@ -1,0 +1,21 @@
+{
+  "config.section.general": "一般設定",
+  "config.debug.name": "デバッグモード",
+  "config.debug.tooltip": "プレイヤーの頭上に現在のエネルギー状態を表示します。",
+  "config.adaptive.name": "適応モード",
+  "config.adaptive.tooltip": "有効な場合、以下のスケジュールを使用します。無効の場合は固定設定です。",
+  "config.frequency.name": "回復頻度（秒）",
+  "config.frequency.tooltip": "スタミナ回復までの待機秒数。（デフォルト：5）",
+  "config.section.constant": "固定モード",
+  "config.regen.name": "固定回復量 (+)",
+  "config.regen.tooltip": "1回ごとに回復するスタミナ量。",
+  "config.drain.name": "消費軽減率 (%)",
+  "config.drain.tooltip": "無視するツール消費エネルギーの割合（0 = 通常、100 = 無料）。",
+  "config.section.adaptive": "適応スケジュール",
+  "config.adaptive.note": "時間帯ごとに回復量と消費を設定します。",
+  "config.time.6to9": "6:00 - 9:00（朝）",
+  "config.time.9to12": "9:00 - 12:00（昼）",
+  "config.time.12to5": "12:00 - 17:00（午後）",
+  "config.time.5to12": "17:00 - 0:00（夕方）",
+  "config.time.12to2": "0:00 - 2:00（深夜）"
+}

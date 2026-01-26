@@ -1,0 +1,17 @@
+{
+  "config.section.general": "Allgemeine Einstellungen",
+  "config.debug.name": "Debug-Modus",
+  "config.debug.tooltip": "Zeigt den aktuellen Geschwindigkeitsbonus über dem Kopf des Spielers an.",
+  "config.adaptive.name": "Adaptiver Modus",
+  "config.adaptive.tooltip": "Wenn aktiviert, ändert sich die Geschwindigkeit je nach Tageszeit.\nWenn deaktiviert, wird eine konstante Geschwindigkeit verwendet.",
+  "config.section.constant": "Konstanter Modus",
+  "config.constant_speed.name": "Zusätzliche Geschwindigkeit (+)",
+  "config.constant_speed.tooltip": "Menge der hinzuzufügenden Geschwindigkeit (1 bis 20).",
+  "config.section.adaptive": "Adaptiver Zeitplan",
+  "config.adaptive.note": "Diese Einstellungen gelten nur, wenn oben der 'Adaptive Modus' aktiviert ist.",
+  "config.time.6to9": "6:00 - 9:00 Uhr",
+  "config.time.9to12": "9:00 - 12:00 Uhr",
+  "config.time.12to5": "12:00 - 17:00 Uhr",
+  "config.time.5to12": "17:00 - 0:00 Uhr",
+  "config.time.12to2": "0:00 - 2:00 Uhr"
+}

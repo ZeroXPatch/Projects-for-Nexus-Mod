@@ -1,0 +1,17 @@
+{
+  "config.section.general": "General Settings",
+  "config.debug.name": "Debug Mode",
+  "config.debug.tooltip": "Shows the current speed buff above the player's head.",
+  "config.adaptive.name": "Adaptive Mode",
+  "config.adaptive.tooltip": "If true, speed changes based on time of day.\nIf false, uses constant speed.",
+  "config.section.constant": "Constant Mode",
+  "config.constant_speed.name": "Added Speed (+)",
+  "config.constant_speed.tooltip": "Amount of speed to add (1 to 20).",
+  "config.section.adaptive": "Adaptive Schedule",
+  "config.adaptive.note": "These settings only apply if 'Adaptive Mode' is checked above.",
+  "config.time.6to9": "6:00 AM - 9:00 AM",
+  "config.time.9to12": "9:00 AM - 12:00 PM",
+  "config.time.12to5": "12:00 PM - 5:00 PM",
+  "config.time.5to12": "5:00 PM - 12:00 AM",
+  "config.time.12to2": "12:00 AM - 2:00 AM"
+}

@@ -1,0 +1,21 @@
+{
+  "config.section.general": "Impostazioni Generali",
+  "config.debug.name": "Modalità Debug",
+  "config.debug.tooltip": "Mostra le statistiche di energia sopra il giocatore.",
+  "config.adaptive.name": "Modalità Adattiva",
+  "config.adaptive.tooltip": "Se attiva, usa il programma sotto. Altrimenti impostazioni costanti.",
+  "config.frequency.name": "Frequenza Rigenerazione (Sec)",
+  "config.frequency.tooltip": "Secondi tra ogni rigenerazione di stamina. (Predefinito: 5)",
+  "config.section.constant": "Modalità Costante",
+  "config.regen.name": "Rigenerazione Fissa (+)",
+  "config.regen.tooltip": "Quantità di stamina ripristinata per ciclo.",
+  "config.drain.name": "Riduzione Consumo (%)",
+  "config.drain.tooltip": "Percentuale del costo energetico ignorata (0 = normale, 100 = gratis).",
+  "config.section.adaptive": "Programma Adattivo",
+  "config.adaptive.note": "Imposta rigenerazione e consumo per fascia oraria.",
+  "config.time.6to9": "6:00 - 9:00 (Mattino)",
+  "config.time.9to12": "9:00 - 12:00 (Mezzogiorno)",
+  "config.time.12to5": "12:00 - 17:00 (Pomeriggio)",
+  "config.time.5to12": "17:00 - 0:00 (Sera)",
+  "config.time.12to2": "0:00 - 2:00 (Notte Tarda)"
+}

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CraftAnywhere")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41a997da120b6844978b8018119e628eb22db885")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+423b055b573b9fa0460c38f1592470470ef178d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CraftAnywhere")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CraftAnywhere")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

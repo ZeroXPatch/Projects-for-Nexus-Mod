@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpeedMod\bin\Debug\net6.0\SpeedMod.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpeedMod\bin\Debug\net6.0\SpeedMod.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpeedMod\obj\Debug\net6.0\SpeedMod.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpeedMod\obj\Debug\net6.0\SpeedMod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpeedMod\obj\Debug\net6.0\SpeedMod.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpeedMod\obj\Debug\net6.0\SpeedMod.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpeedMod\obj\Debug\net6.0\SpeedMod.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpeedMod\obj\Debug\net6.0\SpeedMod.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SpeedMod\obj\Debug\net6.0\SpeedMod.dll

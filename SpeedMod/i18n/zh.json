@@ -1,0 +1,17 @@
+{
+  "config.section.general": "常规设置",
+  "config.debug.name": "调试模式",
+  "config.debug.tooltip": "在玩家头顶显示当前速度加成。",
+  "config.adaptive.name": "自适应模式",
+  "config.adaptive.tooltip": "启用后，速度会根据一天中的时间变化。\n禁用时使用固定速度。",
+  "config.section.constant": "固定模式",
+  "config.constant_speed.name": "增加速度 (+)",
+  "config.constant_speed.tooltip": "要增加的速度数值（1 到 20）。",
+  "config.section.adaptive": "自适应时间表",
+  "config.adaptive.note": "这些设置仅在上方勾选“自适应模式”时生效。",
+  "config.time.6to9": "上午 6:00 - 9:00",
+  "config.time.9to12": "上午 9:00 - 12:00",
+  "config.time.12to5": "中午 12:00 - 下午 5:00",
+  "config.time.5to12": "下午 5:00 - 上午 12:00",
+  "config.time.12to2": "上午 12:00 - 2:00"
+}

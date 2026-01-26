@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Recycler\bin\Debug\net6.0\TrashToTreasure.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Recycler\bin\Debug\net6.0\TrashToTreasure.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Recycler\obj\Debug\net6.0\TrashToTreasure.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Recycler\obj\Debug\net6.0\TrashToTreasure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Recycler\obj\Debug\net6.0\TrashToTreasure.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Recycler\obj\Debug\net6.0\TrashToTreasure.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Recycler\obj\Debug\net6.0\TrashToTreasure.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Recycler\obj\Debug\net6.0\TrashToTreasure.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Trash Recycler\obj\Debug\net6.0\TrashToTreasure.dll

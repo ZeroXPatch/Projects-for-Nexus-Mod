@@ -1,0 +1,10 @@
+{
+    "machine.name": "Recycleur de déchets",
+    "machine.description": "Insérez des déchets pour recevoir un objet aléatoire.",
+    "recipe.name": "Recycleur de déchets",
+    "config.section.machine": "Paramètres de la machine",
+    "config.maxvalue.name": "Valeur max. de l'objet",
+    "config.maxvalue.tooltip": "La machine produira un objet aléatoire valant MOINS que ce montant.",
+    "config.processtime.name": "Temps de traitement (Heures)",
+    "config.processtime.tooltip": "Nombre d'heures en jeu nécessaires pour traiter les déchets."
+}

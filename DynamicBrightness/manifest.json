@@ -1,0 +1,10 @@
+{
+  "Name": "Dynamic Day Brightness",
+  "Author": "ZeroXpatch",
+  "Version": "1.0.0",
+  "Description": "Adjusts the brightness of the day dynamically.",
+  "UniqueID": "ZeroXpatch.DynamicBrightness",
+  "EntryDll": "DynamicBrightness.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus:12345" ]
+}

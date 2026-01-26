@@ -1,0 +1,21 @@
+{
+  "config.section.general": "常规设置",
+  "config.debug.name": "调试模式",
+  "config.debug.tooltip": "在玩家头顶显示当前体力状态。",
+  "config.adaptive.name": "自适应模式",
+  "config.adaptive.tooltip": "启用时使用下方时间表，关闭时使用固定设置。",
+  "config.frequency.name": "恢复频率（秒）",
+  "config.frequency.tooltip": "体力恢复之间的等待秒数。（默认：5）",
+  "config.section.constant": "固定模式",
+  "config.regen.name": "固定恢复 (+)",
+  "config.regen.tooltip": "每次恢复的体力量。",
+  "config.drain.name": "消耗减免 (%)",
+  "config.drain.tooltip": "忽略的工具体力消耗百分比（0 = 正常，100 = 免费）。",
+  "config.section.adaptive": "自适应时间表",
+  "config.adaptive.note": "为每个时间段设置恢复与消耗。",
+  "config.time.6to9": "6:00 - 9:00（早晨）",
+  "config.time.9to12": "9:00 - 12:00（中午）",
+  "config.time.12to5": "12:00 - 17:00（下午）",
+  "config.time.5to12": "17:00 - 0:00（傍晚）",
+  "config.time.12to2": "0:00 - 2:00（深夜）"
+}

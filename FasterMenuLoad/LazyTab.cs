@@ -26,8 +26,9 @@ namespace FasterMenuLoad
 
         public IClickableMenu CreateRealPage()
         {
-            // PROOF: Log when this actually runs
-            ModEntry.ModMonitor.Log($"[LazyTab] Activated! Generating real page at {_lastX}, {_lastY}", LogLevel.Alert);
+            // Only log if debug logging is enabled
+            if (ModEntry.Config.EnableDebugLogging)
+                ModEntry.ModMonitor.Log($"[LazyTab] Activated! Generating real page at {_lastX}, {_lastY}", LogLevel.Alert);
 
             // Use the most recent known coordinates
             return _pageGenerator(_lastX, _lastY, _lastW, _lastH);

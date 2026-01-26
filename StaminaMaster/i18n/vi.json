@@ -1,0 +1,21 @@
+{
+  "config.section.general": "Cài Đặt Chung",
+  "config.debug.name": "Chế Độ Gỡ Lỗi",
+  "config.debug.tooltip": "Hiển thị trạng thái năng lượng hiện tại trên đầu người chơi.",
+  "config.adaptive.name": "Chế Độ Thích Ứng",
+  "config.adaptive.tooltip": "Nếu bật, sử dụng lịch trình bên dưới. Nếu tắt, dùng cài đặt cố định.",
+  "config.frequency.name": "Tần Suất Hồi Phục (Giây)",
+  "config.frequency.tooltip": "Số giây chờ giữa các lần hồi stamina. (Mặc định: 5)",
+  "config.section.constant": "Chế Độ Cố Định",
+  "config.regen.name": "Hồi Phục Cố Định (+)",
+  "config.regen.tooltip": "Lượng stamina được hồi mỗi lần.",
+  "config.drain.name": "Giảm Tiêu Hao (%)",
+  "config.drain.tooltip": "Phần trăm năng lượng công cụ được bỏ qua (0 = bình thường, 100 = miễn phí).",
+  "config.section.adaptive": "Lịch Trình Thích Ứng",
+  "config.adaptive.note": "Thiết lập hồi phục và tiêu hao cho từng khung giờ.",
+  "config.time.6to9": "6:00 - 9:00 (Sáng)",
+  "config.time.9to12": "9:00 - 12:00 (Trưa)",
+  "config.time.12to5": "12:00 - 17:00 (Chiều)",
+  "config.time.5to12": "17:00 - 0:00 (Tối)",
+  "config.time.12to2": "0:00 - 2:00 (Khuya)"
+}

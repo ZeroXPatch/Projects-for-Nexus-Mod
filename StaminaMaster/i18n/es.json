@@ -1,0 +1,21 @@
+{
+  "config.section.general": "Configuración General",
+  "config.debug.name": "Modo Depuración",
+  "config.debug.tooltip": "Muestra las estadísticas actuales de energía sobre la cabeza del jugador.",
+  "config.adaptive.name": "Modo Adaptativo",
+  "config.adaptive.tooltip": "Si está activado, usa el horario inferior. Si no, usa valores constantes.",
+  "config.frequency.name": "Frecuencia de Regeneración (Seg)",
+  "config.frequency.tooltip": "Segundos entre cada regeneración de resistencia. (Predeterminado: 5)",
+  "config.section.constant": "Modo Constante",
+  "config.regen.name": "Regeneración Fija (+)",
+  "config.regen.tooltip": "Cantidad de resistencia restaurada por ciclo.",
+  "config.drain.name": "Reducción de Consumo (%)",
+  "config.drain.tooltip": "Porcentaje del costo de energía ignorado (0 = normal, 100 = gratis).",
+  "config.section.adaptive": "Horario Adaptativo",
+  "config.adaptive.note": "Configura regeneración y consumo por franja horaria.",
+  "config.time.6to9": "6:00 - 9:00 (Mañana)",
+  "config.time.9to12": "9:00 - 12:00 (Mediodía)",
+  "config.time.12to5": "12:00 - 17:00 (Tarde)",
+  "config.time.5to12": "17:00 - 0:00 (Noche)",
+  "config.time.12to2": "0:00 - 2:00 (Madrugada)"
+}

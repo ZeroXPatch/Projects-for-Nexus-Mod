@@ -7,9 +7,8 @@ namespace CraftAnywhere
     public interface IBetterCraftingApi
     {
         /// <summary>
-        /// This event is fired whenever a new Better Crafting menu is opened,
-        /// allowing other mods to manipulate the list of containers. This
-        /// version of the event doesn't include a reference to the menu.
+        /// This event is raised when Better Crafting wants to populate the list of additional
+        /// containers for crafting. Use event subscription (+=) syntax.
         /// </summary>
         event Action<ISimplePopulateContainersEvent>? MenuSimplePopulateContainers;
     }
@@ -17,7 +16,8 @@ namespace CraftAnywhere
     public interface ISimplePopulateContainersEvent
     {
         /// <summary>
-        /// A list of all the containers this menu should draw items from.
+        /// The list of additional containers to add items from.
+        /// Each entry is a Tuple of (object, GameLocation?) where object is typically a Chest.
         /// </summary>
         IList<Tuple<object, GameLocation?>> Containers { get; }
 

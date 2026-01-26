@@ -1,0 +1,10 @@
+{
+    "machine.name": "쓰레기 재활용기",
+    "machine.description": "쓰레기를 넣으면 무작위 아이템을 얻습니다.",
+    "recipe.name": "쓰레기 재활용기",
+    "config.section.machine": "기계 설정",
+    "config.maxvalue.name": "최대 아이템 가치",
+    "config.maxvalue.tooltip": "기계는 이 금액보다 적은 가치의 무작위 아이템을 출력합니다.",
+    "config.processtime.name": "처리 시간 (시간)",
+    "config.processtime.tooltip": "쓰레기를 처리하는 데 걸리는 게임 내 시간입니다."
+}

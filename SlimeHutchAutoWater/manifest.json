@@ -1,0 +1,10 @@
+{
+  "Name": "Slime Hutch Auto-Water",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Automatically fills all water troughs in the Slime Hutch every morning.",
+  "UniqueID": "ZeroXPatch.SlimeHutchAutoWater",
+  "EntryDll": "SlimeHutchAutoWater.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus:41618" ]
+}

@@ -1,0 +1,10 @@
+{
+    "machine.name": "Máy Tái Chế Rác",
+    "machine.description": "Cho rác vào để nhận một vật phẩm ngẫu nhiên.",
+    "recipe.name": "Máy Tái Chế Rác",
+    "config.section.machine": "Cài đặt máy",
+    "config.maxvalue.name": "Giá trị vật phẩm tối đa",
+    "config.maxvalue.tooltip": "Máy sẽ tạo ra một vật phẩm ngẫu nhiên có giá trị NHỎ HƠN số tiền này.",
+    "config.processtime.name": "Thời gian xử lý (Giờ)",
+    "config.processtime.tooltip": "Cần bao nhiêu giờ trong game để xử lý rác."
+}

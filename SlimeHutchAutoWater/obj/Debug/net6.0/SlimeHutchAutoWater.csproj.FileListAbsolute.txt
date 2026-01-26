@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SlimeHutchAutoWater\obj\Debug\net6.0\SlimeHutchAutoWater.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SlimeHutchAutoWater\obj\Debug\net6.0\SlimeHutchAutoWater.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SlimeHutchAutoWater\obj\Debug\net6.0\SlimeHutchAutoWater.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SlimeHutchAutoWater\obj\Debug\net6.0\SlimeHutchAutoWater.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SlimeHutchAutoWater\obj\Debug\net6.0\SlimeHutchAutoWater.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SlimeHutchAutoWater\obj\Debug\net6.0\SlimeHutchAutoWater.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SlimeHutchAutoWater\bin\Debug\net6.0\SlimeHutchAutoWater.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SlimeHutchAutoWater\bin\Debug\net6.0\SlimeHutchAutoWater.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\SlimeHutchAutoWater\obj\Debug\net6.0\SlimeHutchAutoWater.dll

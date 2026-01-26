@@ -1,0 +1,17 @@
+{
+  "config.section.general": "Ustawienia ogólne",
+  "config.debug.name": "Tryb debugowania",
+  "config.debug.tooltip": "Wyświetla aktualny bonus prędkości nad głową gracza.",
+  "config.adaptive.name": "Tryb adaptacyjny",
+  "config.adaptive.tooltip": "Jeśli włączone, prędkość zmienia się w zależności od pory dnia.\nJeśli wyłączone, używa stałej prędkości.",
+  "config.section.constant": "Tryb stały",
+  "config.constant_speed.name": "Dodana prędkość (+)",
+  "config.constant_speed.tooltip": "Ilość dodawanej prędkości (1–20).",
+  "config.section.adaptive": "Harmonogram adaptacyjny",
+  "config.adaptive.note": "Te ustawienia obowiązują tylko, jeśli powyżej zaznaczono 'Tryb adaptacyjny'.",
+  "config.time.6to9": "6:00 - 9:00",
+  "config.time.9to12": "9:00 - 12:00",
+  "config.time.12to5": "12:00 - 17:00",
+  "config.time.5to12": "17:00 - 0:00",
+  "config.time.12to2": "0:00 - 2:00"
+}

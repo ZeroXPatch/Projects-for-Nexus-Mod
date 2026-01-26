@@ -1,0 +1,10 @@
+{
+    "machine.name": "Çöp Geri Dönüştürücü",
+    "machine.description": "Rastgele bir eşya almak için çöp yerleştirin.",
+    "recipe.name": "Çöp Geri Dönüştürücü",
+    "config.section.machine": "Makine Ayarları",
+    "config.maxvalue.name": "Maksimum Eşya Değeri",
+    "config.maxvalue.tooltip": "Makine, bu miktardan DAHA AZ değere sahip rastgele bir eşya verecektir.",
+    "config.processtime.name": "İşlem Süresi (Saat)",
+    "config.processtime.tooltip": "Çöpü işlemenin kaç oyun saati süreceği."
+}

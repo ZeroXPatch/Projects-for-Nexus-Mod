@@ -1,7 +1,7 @@
 {
   "Name": "Craft Anywhere",
   "Author": "ZeroXPatch",
-  "Version": "1.2.0",
+  "Version": "1.3.0",
   "Description": "Allows crafting from any chest or fridge in the world.",
   "UniqueID": "ZeroXPatch.CraftAnywhere",
   "EntryDll": "CraftAnywhere.dll",

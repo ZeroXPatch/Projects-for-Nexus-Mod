@@ -1,0 +1,17 @@
+{
+  "config.section.general": "Configuración general",
+  "config.debug.name": "Modo depuración",
+  "config.debug.tooltip": "Muestra el aumento de velocidad actual sobre la cabeza del jugador.",
+  "config.adaptive.name": "Modo adaptativo",
+  "config.adaptive.tooltip": "Si está activado, la velocidad cambia según la hora del día.\nSi está desactivado, usa velocidad constante.",
+  "config.section.constant": "Modo constante",
+  "config.constant_speed.name": "Velocidad añadida (+)",
+  "config.constant_speed.tooltip": "Cantidad de velocidad a añadir (1 a 20).",
+  "config.section.adaptive": "Horario adaptativo",
+  "config.adaptive.note": "Estos ajustes solo se aplican si el 'Modo adaptativo' está activado arriba.",
+  "config.time.6to9": "6:00 - 9:00",
+  "config.time.9to12": "9:00 - 12:00",
+  "config.time.12to5": "12:00 - 17:00",
+  "config.time.5to12": "17:00 - 0:00",
+  "config.time.12to2": "0:00 - 2:00"
+}

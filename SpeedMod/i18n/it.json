@@ -1,0 +1,17 @@
+{
+  "config.section.general": "Impostazioni generali",
+  "config.debug.name": "Modalità debug",
+  "config.debug.tooltip": "Mostra il bonus di velocità attuale sopra la testa del giocatore.",
+  "config.adaptive.name": "Modalità adattiva",
+  "config.adaptive.tooltip": "Se attiva, la velocità cambia in base all'ora del giorno.\nSe disattiva, usa una velocità costante.",
+  "config.section.constant": "Modalità costante",
+  "config.constant_speed.name": "Velocità aggiunta (+)",
+  "config.constant_speed.tooltip": "Quantità di velocità da aggiungere (1 a 20).",
+  "config.section.adaptive": "Programma adattivo",
+  "config.adaptive.note": "Queste impostazioni si applicano solo se la 'Modalità adattiva' è attivata sopra.",
+  "config.time.6to9": "6:00 - 9:00",
+  "config.time.9to12": "9:00 - 12:00",
+  "config.time.12to5": "12:00 - 17:00",
+  "config.time.5to12": "17:00 - 0:00",
+  "config.time.12to2": "0:00 - 2:00"
+}

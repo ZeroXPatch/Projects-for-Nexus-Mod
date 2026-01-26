@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.2.11415.280 d18.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicBrightness", "DynamicBrightness.csproj", "{FFF08B0F-D419-D5DE-BF17-09FE97EC18CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFF08B0F-D419-D5DE-BF17-09FE97EC18CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFF08B0F-D419-D5DE-BF17-09FE97EC18CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFF08B0F-D419-D5DE-BF17-09FE97EC18CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFF08B0F-D419-D5DE-BF17-09FE97EC18CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {291D7621-3B73-42D1-A7CE-E16DB3B16613}
+	EndGlobalSection
+EndGlobal

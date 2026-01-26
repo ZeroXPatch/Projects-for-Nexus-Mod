@@ -1,0 +1,10 @@
+{
+    "machine.name": "Переробник сміття",
+    "machine.description": "Вставте сміття, щоб отримати випадковий предмет.",
+    "recipe.name": "Переробник сміття",
+    "config.section.machine": "Налаштування машини",
+    "config.maxvalue.name": "Макс. вартість предмета",
+    "config.maxvalue.tooltip": "Машина видасть випадковий предмет вартістю МЕНШЕ цієї суми.",
+    "config.processtime.name": "Час обробки (годин)",
+    "config.processtime.tooltip": "Скільки ігрових годин потрібно для переробки сміття."
+}

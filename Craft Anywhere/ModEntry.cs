@@ -15,6 +15,8 @@ namespace CraftAnywhere
         private IClickableMenu? LastInjectedMenu;
         private int LastTabId = -1;
         private IBetterCraftingApi? BetterCrafting;
+        private ItemBagsIntegration? ItemBags;
+        private ConvenientChestsIntegration? ConvenientChests;
 
         public override void Entry(IModHelper helper)
         {
@@ -27,19 +29,27 @@ namespace CraftAnywhere
 
         private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
         {
+            // Initialize Better Crafting integration
             this.BetterCrafting = this.Helper.ModRegistry.GetApi<IBetterCraftingApi>("leclair.bettercrafting");
 
             if (this.BetterCrafting != null)
             {
                 this.Monitor.Log("Better Crafting detected. Hooking into container population...", LogLevel.Info);
 
-                // Subscribe to the event
+                // Subscribe to the event using += syntax
                 this.BetterCrafting.MenuSimplePopulateContainers += this.OnBetterCraftingPopulate;
             }
+
+            // Initialize Item Bags integration
+            this.ItemBags = new ItemBagsIntegration(this.Helper, this.Monitor);
+
+            // Initialize Convenient Chests integration
+            this.ConvenientChests = new ConvenientChestsIntegration(this.Helper, this.Monitor);
         }
 
         private void OnBetterCraftingPopulate(ISimplePopulateContainersEvent e)
         {
+            // Add all chests from the world
             var globalChests = this.Scanner!.GetAllChests();
 
             foreach (var chest in globalChests)
@@ -47,6 +57,22 @@ namespace CraftAnywhere
                 // Add the chest and its location to the containers list
                 var containerData = new Tuple<object, GameLocation?>(chest, chest.Location);
                 e.Containers.Add(containerData);
+            }
+
+            // Add item bags from player inventory
+            if (this.ItemBags != null && this.ItemBags.IsItemBagLoaded)
+            {
+                var bagInventories = this.ItemBags.GetItemBagInventories();
+                foreach (var bagInventory in bagInventories)
+                {
+                    var containerData = new Tuple<object, GameLocation?>(bagInventory, null);
+                    e.Containers.Add(containerData);
+                }
+
+                if (bagInventories.Count > 0)
+                {
+                    this.Monitor.LogOnce($"Injected {bagInventories.Count} item bags into Better Crafting.", LogLevel.Trace);
+                }
             }
 
             this.Monitor.LogOnce($"Injected {globalChests.Count} chests into Better Crafting.", LogLevel.Trace);
@@ -86,10 +112,16 @@ namespace CraftAnywhere
             if (this.BetterCrafting != null)
                 return;
 
+            // If Convenient Chests is handling crafting, defer to it
+            if (this.ConvenientChests != null && this.ConvenientChests.IsHandlingCrafting())
+            {
+                this.Monitor.LogOnce("Convenient Chests is handling crafting. Craft Anywhere will not inject chests.", LogLevel.Debug);
+                return;
+            }
+
             this.LastInjectedMenu = Game1.activeClickableMenu ?? page;
 
             List<Chest> globalChests = this.Scanner!.GetAllChests();
-            if (globalChests.Count == 0) return;
 
             var containersField = this.Helper.Reflection.GetField<List<IInventory>>(page, "_materialContainers");
             List<IInventory> currentContainers = containersField.GetValue();
@@ -101,6 +133,8 @@ namespace CraftAnywhere
             }
 
             currentContainers.Clear();
+
+            // Add all chests
             foreach (Chest chest in globalChests)
             {
                 try
@@ -109,6 +143,21 @@ namespace CraftAnywhere
                         currentContainers.Add(chest.Items);
                 }
                 catch (Exception) { }
+            }
+
+            // Add item bags
+            if (this.ItemBags != null && this.ItemBags.IsItemBagLoaded)
+            {
+                var bagInventories = this.ItemBags.GetItemBagInventories();
+                foreach (var bagInventory in bagInventories)
+                {
+                    try
+                    {
+                        if (bagInventory is IInventory inventory)
+                            currentContainers.Add(inventory);
+                    }
+                    catch (Exception) { }
+                }
             }
         }
     }

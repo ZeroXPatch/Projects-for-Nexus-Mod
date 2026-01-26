@@ -1,0 +1,10 @@
+{
+  "Name": "Trash To Treasure",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "A machine that turns trash into random items.",
+  "UniqueID": "ZeroXPatch.TrashToTreasure",
+  "EntryDll": "TrashToTreasure.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus:41586" ]
+}

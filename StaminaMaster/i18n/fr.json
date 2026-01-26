@@ -1,0 +1,21 @@
+{
+  "config.section.general": "Paramètres Généraux",
+  "config.debug.name": "Mode Debug",
+  "config.debug.tooltip": "Affiche les statistiques d'énergie au-dessus du joueur.",
+  "config.adaptive.name": "Mode Adaptatif",
+  "config.adaptive.tooltip": "Si activé, utilise le planning ci-dessous. Sinon, paramètres constants.",
+  "config.frequency.name": "Fréquence de Régénération (Sec)",
+  "config.frequency.tooltip": "Secondes entre chaque régénération d'endurance. (Par défaut : 5)",
+  "config.section.constant": "Mode Constant",
+  "config.regen.name": "Régénération Fixe (+)",
+  "config.regen.tooltip": "Quantité d'endurance restaurée par tick.",
+  "config.drain.name": "Réduction de Consommation (%)",
+  "config.drain.tooltip": "Pourcentage du coût d'énergie ignoré (0 = normal, 100 = gratuit).",
+  "config.section.adaptive": "Planning Adaptatif",
+  "config.adaptive.note": "Définir régénération et consommation par tranche horaire.",
+  "config.time.6to9": "6:00 - 9:00 (Matin)",
+  "config.time.9to12": "9:00 - 12:00 (Midi)",
+  "config.time.12to5": "12:00 - 17:00 (Après-midi)",
+  "config.time.5to12": "17:00 - 0:00 (Soir)",
+  "config.time.12to2": "0:00 - 2:00 (Nuit Tardive)"
+}

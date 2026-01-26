@@ -1,0 +1,17 @@
+{
+  "config.section.general": "Cài đặt chung",
+  "config.debug.name": "Chế độ gỡ lỗi",
+  "config.debug.tooltip": "Hiển thị hiệu ứng tăng tốc độ hiện tại trên đầu người chơi.",
+  "config.adaptive.name": "Chế độ thích ứng",
+  "config.adaptive.tooltip": "Nếu bật, tốc độ sẽ thay đổi theo thời gian trong ngày.\nNếu tắt, sử dụng tốc độ cố định.",
+  "config.section.constant": "Chế độ cố định",
+  "config.constant_speed.name": "Tốc độ thêm (+)",
+  "config.constant_speed.tooltip": "Lượng tốc độ được thêm (1 đến 20).",
+  "config.section.adaptive": "Lịch trình thích ứng",
+  "config.adaptive.note": "Các cài đặt này chỉ áp dụng nếu 'Chế độ thích ứng' được bật ở trên.",
+  "config.time.6to9": "6:00 - 9:00",
+  "config.time.9to12": "9:00 - 12:00",
+  "config.time.12to5": "12:00 - 17:00",
+  "config.time.5to12": "17:00 - 0:00",
+  "config.time.12to2": "0:00 - 2:00"
+}

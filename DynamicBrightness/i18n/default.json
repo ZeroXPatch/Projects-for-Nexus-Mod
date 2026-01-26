@@ -1,0 +1,33 @@
+{
+  "config.section.general": "General Settings",
+  "config.section.random": "Random Brightness Settings",
+  "config.section.manual": "Manual Weekly Brightness",
+
+  "config.mod_enabled.name": "Enable Mod",
+  "config.mod_enabled.desc": "Turn the entire mod on or off.",
+
+  "config.random_mode.name": "Enable Random Mode",
+  "config.random_mode.desc": "If enabled, brightness changes randomly based on the frequency.",
+
+  "config.frequency.name": "Random Frequency",
+  "config.frequency.desc": "How often the brightness percent changes.",
+  "config.frequency.daily": "Daily",
+  "config.frequency.weekly": "Weekly",
+  "config.frequency.seasonal": "Seasonal",
+
+  "config.min_percent.name": "Darkest Limit %",
+  "config.min_percent.desc": "The darkest the day can get (e.g. -20 for 20% darker). Max is -50.",
+  "config.max_percent.name": "Lightest Limit %",
+  "config.max_percent.desc": "The lightest the day can get (0 = Normal Day).",
+
+  "config.manual.desc": "Set the brightness percentage for this specific week (-50% to 0%).",
+  "config.subtitle.spring": "Spring Schedule",
+  "config.subtitle.summer": "Summer Schedule",
+  "config.subtitle.fall": "Fall Schedule",
+  "config.subtitle.winter": "Winter Schedule",
+
+  "config.week1": "Week 1",
+  "config.week2": "Week 2",
+  "config.week3": "Week 3",
+  "config.week4": "Week 4"
+}

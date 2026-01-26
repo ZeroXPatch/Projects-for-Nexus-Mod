@@ -1,0 +1,10 @@
+{
+    "machine.name": "Переработчик мусора",
+    "machine.description": "Поместите мусор, чтобы получить случайный предмет.",
+    "recipe.name": "Переработчик мусора",
+    "config.section.machine": "Настройки автомата",
+    "config.maxvalue.name": "Макс. стоимость предмета",
+    "config.maxvalue.tooltip": "Автомат выдаст случайный предмет, стоящий МЕНЬШЕ этой суммы.",
+    "config.processtime.name": "Время обработки (часы)",
+    "config.processtime.tooltip": "Сколько игровых часов требуется для переработки мусора."
+}

@@ -1,0 +1,10 @@
+{
+    "machine.name": "Müllverwerter",
+    "machine.description": "Lege Müll ein, um einen zufälligen Gegenstand zu erhalten.",
+    "recipe.name": "Müllverwerter",
+    "config.section.machine": "Maschineneinstellungen",
+    "config.maxvalue.name": "Maximaler Gegenstandswert",
+    "config.maxvalue.tooltip": "Die Maschine gibt einen zufälligen Gegenstand aus, der WENIGER wert ist als dieser Betrag.",
+    "config.processtime.name": "Verarbeitungszeit (Stunden)",
+    "config.processtime.tooltip": "Wie viele Stunden im Spiel es dauert, Müll zu verarbeiten."
+}

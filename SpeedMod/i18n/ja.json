@@ -1,0 +1,17 @@
+{
+  "config.section.general": "一般設定",
+  "config.debug.name": "デバッグモード",
+  "config.debug.tooltip": "現在のスピードボーナスをプレイヤーの頭上に表示します。",
+  "config.adaptive.name": "アダプティブモード",
+  "config.adaptive.tooltip": "有効にすると、時間帯に応じて速度が変化します。\n無効の場合は一定の速度を使用します。",
+  "config.section.constant": "固定モード",
+  "config.constant_speed.name": "追加速度 (+)",
+  "config.constant_speed.tooltip": "追加する速度の量（1～20）。",
+  "config.section.adaptive": "アダプティブスケジュール",
+  "config.adaptive.note": "これらの設定は、上で「アダプティブモード」が有効な場合のみ適用されます。",
+  "config.time.6to9": "午前6時～9時",
+  "config.time.9to12": "午前9時～正午",
+  "config.time.12to5": "正午～午後5時",
+  "config.time.5to12": "午後5時～午前0時",
+  "config.time.12to2": "午前0時～2時"
+}

@@ -102,7 +102,9 @@ namespace FasterMenuLoad
                     // 1. Check for Skills Page (Tab 1)
                     if (ModEntry.Config.LazyLoadSkills && page is SkillsPage)
                     {
-                        ModEntry.ModMonitor.Log($"[FasterMenuLoad] Found SkillsPage at Tab {i}. Replacing with LazyTab...", LogLevel.Alert);
+                        if (ModEntry.Config.EnableDebugLogging)
+                            ModEntry.ModMonitor.Log($"[FasterMenuLoad] Found SkillsPage at Tab {i}. Replacing with LazyTab...", LogLevel.Alert);
+
                         pages[i] = new LazyTab(page.xPositionOnScreen, page.yPositionOnScreen, page.width, page.height,
                             (x, y, w, h) => new SkillsPage(x, y, w, h));
                     }
@@ -110,7 +112,9 @@ namespace FasterMenuLoad
                     // 2. Check for Social Page (Tab 2)
                     else if (ModEntry.Config.LazyLoadSocial && page is SocialPage)
                     {
-                        ModEntry.ModMonitor.Log($"[FasterMenuLoad] Found SocialPage at Tab {i}. Replacing with LazyTab...", LogLevel.Alert);
+                        if (ModEntry.Config.EnableDebugLogging)
+                            ModEntry.ModMonitor.Log($"[FasterMenuLoad] Found SocialPage at Tab {i}. Replacing with LazyTab...", LogLevel.Alert);
+
                         pages[i] = new LazyTab(page.xPositionOnScreen, page.yPositionOnScreen, page.width, page.height,
                             (x, y, w, h) => new SocialPage(x, y, w, h));
                     }
@@ -126,7 +130,9 @@ namespace FasterMenuLoad
                             {
                                 bool isCooking = (bool)cookingField.GetValue(cPage);
                                 string typeName = isCooking ? "Cooking" : "Crafting";
-                                ModEntry.ModMonitor.Log($"[FasterMenuLoad] Found {typeName} Page at Tab {i}. Replacing with LazyTab...", LogLevel.Alert);
+
+                                if (ModEntry.Config.EnableDebugLogging)
+                                    ModEntry.ModMonitor.Log($"[FasterMenuLoad] Found {typeName} Page at Tab {i}. Replacing with LazyTab...", LogLevel.Alert);
 
                                 pages[i] = new LazyTab(page.xPositionOnScreen, page.yPositionOnScreen, page.width, page.height,
                                     (x, y, w, h) => new CraftingPage(x, y, w, h, isCooking));
@@ -145,7 +151,9 @@ namespace FasterMenuLoad
                     // 4. Check for Animals Page (Tab 5 - New in 1.6)
                     else if (ModEntry.Config.LazyLoadAnimals && page is AnimalPage)
                     {
-                        ModEntry.ModMonitor.Log($"[FasterMenuLoad] Found AnimalPage at Tab {i}. Replacing with LazyTab...", LogLevel.Alert);
+                        if (ModEntry.Config.EnableDebugLogging)
+                            ModEntry.ModMonitor.Log($"[FasterMenuLoad] Found AnimalPage at Tab {i}. Replacing with LazyTab...", LogLevel.Alert);
+
                         pages[i] = new LazyTab(page.xPositionOnScreen, page.yPositionOnScreen, page.width, page.height,
                             (x, y, w, h) => new AnimalPage(x, y, w, h));
                     }
@@ -153,7 +161,9 @@ namespace FasterMenuLoad
                     // 5. Check for Powers Page (Tab 6 - New in 1.6)
                     else if (ModEntry.Config.LazyLoadPowers && page is PowersTab)
                     {
-                        ModEntry.ModMonitor.Log($"[FasterMenuLoad] Found PowersTab at Tab {i}. Replacing with LazyTab...", LogLevel.Alert);
+                        if (ModEntry.Config.EnableDebugLogging)
+                            ModEntry.ModMonitor.Log($"[FasterMenuLoad] Found PowersTab at Tab {i}. Replacing with LazyTab...", LogLevel.Alert);
+
                         pages[i] = new LazyTab(page.xPositionOnScreen, page.yPositionOnScreen, page.width, page.height,
                             (x, y, w, h) => new PowersTab(x, y, w, h));
                     }
@@ -161,7 +171,9 @@ namespace FasterMenuLoad
                     // 6. Check for Collections Page (Tab 7)
                     else if (ModEntry.Config.LazyLoadCollections && page is CollectionsPage)
                     {
-                        ModEntry.ModMonitor.Log($"[FasterMenuLoad] Found CollectionsPage at Tab {i}. Replacing with LazyTab...", LogLevel.Alert);
+                        if (ModEntry.Config.EnableDebugLogging)
+                            ModEntry.ModMonitor.Log($"[FasterMenuLoad] Found CollectionsPage at Tab {i}. Replacing with LazyTab...", LogLevel.Alert);
+
                         pages[i] = new LazyTab(page.xPositionOnScreen, page.yPositionOnScreen, page.width, page.height,
                             (x, y, w, h) => new CollectionsPage(x, y, w, h));
                     }
@@ -172,7 +184,9 @@ namespace FasterMenuLoad
                 {
                     if (pages[__instance.currentTab] is LazyTab lazy)
                     {
-                        ModEntry.ModMonitor.Log($"[FasterMenuLoad] Menu opened directly to Tab {__instance.currentTab}. Waking it up immediately.", LogLevel.Info);
+                        if (ModEntry.Config.EnableDebugLogging)
+                            ModEntry.ModMonitor.Log($"[FasterMenuLoad] Menu opened directly to Tab {__instance.currentTab}. Waking it up immediately.", LogLevel.Info);
+
                         pages[__instance.currentTab] = lazy.CreateRealPage();
                     }
                 }
@@ -197,7 +211,8 @@ namespace FasterMenuLoad
 
                 if (__instance.pages[whichTab] is LazyTab lazyTab)
                 {
-                    ModEntry.ModMonitor.Log($"[FasterMenuLoad] User clicked Tab {whichTab}. Loading real content now...", LogLevel.Alert);
+                    if (ModEntry.Config.EnableDebugLogging)
+                        ModEntry.ModMonitor.Log($"[FasterMenuLoad] User clicked Tab {whichTab}. Loading real content now...", LogLevel.Alert);
 
                     // Hydrate the tab
                     __instance.pages[whichTab] = lazyTab.CreateRealPage();

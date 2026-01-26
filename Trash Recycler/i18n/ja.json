@@ -1,0 +1,10 @@
+{
+    "machine.name": "ゴミ再生機",
+    "machine.description": "ゴミを入れるとランダムなアイテムが手に入ります。",
+    "recipe.name": "ゴミ再生機",
+    "config.section.machine": "マシンの設定",
+    "config.maxvalue.name": "最大アイテム価値",
+    "config.maxvalue.tooltip": "この金額未満の価値を持つランダムなアイテムが出力されます。",
+    "config.processtime.name": "処理時間（時間）",
+    "config.processtime.tooltip": "ゴミを処理するのにかかるゲーム内時間。"
+}

@@ -1,0 +1,17 @@
+{
+  "config.section.general": "Общие настройки",
+  "config.debug.name": "Режим отладки",
+  "config.debug.tooltip": "Показывает текущий бонус скорости над головой игрока.",
+  "config.adaptive.name": "Адаптивный режим",
+  "config.adaptive.tooltip": "Если включено, скорость меняется в зависимости от времени суток.\nЕсли выключено, используется постоянная скорость.",
+  "config.section.constant": "Постоянный режим",
+  "config.constant_speed.name": "Добавленная скорость (+)",
+  "config.constant_speed.tooltip": "Количество добавляемой скорости (1–20).",
+  "config.section.adaptive": "Адаптивное расписание",
+  "config.adaptive.note": "Эти настройки применяются только если выше включён 'Адаптивный режим'.",
+  "config.time.6to9": "6:00 - 9:00",
+  "config.time.9to12": "9:00 - 12:00",
+  "config.time.12to5": "12:00 - 17:00",
+  "config.time.5to12": "17:00 - 0:00",
+  "config.time.12to2": "0:00 - 2:00"
+}

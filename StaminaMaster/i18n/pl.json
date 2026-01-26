@@ -1,0 +1,21 @@
+{
+  "config.section.general": "Ustawienia Ogólne",
+  "config.debug.name": "Tryb Debugowania",
+  "config.debug.tooltip": "Wyświetla aktualne statystyki energii nad graczem.",
+  "config.adaptive.name": "Tryb Adaptacyjny",
+  "config.adaptive.tooltip": "Jeśli włączone, używa harmonogramu poniżej. W przeciwnym razie ustawienia stałe.",
+  "config.frequency.name": "Częstotliwość Regeneracji (Sek)",
+  "config.frequency.tooltip": "Sekundy między regeneracją staminy. (Domyślnie: 5)",
+  "config.section.constant": "Tryb Stały",
+  "config.regen.name": "Stała Regeneracja (+)",
+  "config.regen.tooltip": "Ilość staminy przywracanej na cykl.",
+  "config.drain.name": "Redukcja Zużycia (%)",
+  "config.drain.tooltip": "Procent kosztu energii ignorowany (0 = normalnie, 100 = za darmo).",
+  "config.section.adaptive": "Harmonogram Adaptacyjny",
+  "config.adaptive.note": "Ustaw regenerację i zużycie dla każdej pory dnia.",
+  "config.time.6to9": "6:00 - 9:00 (Rano)",
+  "config.time.9to12": "9:00 - 12:00 (Południe)",
+  "config.time.12to5": "12:00 - 17:00 (Popołudnie)",
+  "config.time.5to12": "17:00 - 0:00 (Wieczór)",
+  "config.time.12to2": "0:00 - 2:00 (Późna Noc)"
+}

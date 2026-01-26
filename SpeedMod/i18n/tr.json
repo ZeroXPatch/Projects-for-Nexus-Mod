@@ -1,0 +1,17 @@
+{
+  "config.section.general": "Genel Ayarlar",
+  "config.debug.name": "Hata Ayıklama Modu",
+  "config.debug.tooltip": "Mevcut hız artışını oyuncunun başının üzerinde gösterir.",
+  "config.adaptive.name": "Uyarlanabilir Mod",
+  "config.adaptive.tooltip": "Etkinse hız, günün saatine göre değişir.\nDevre dışıysa sabit hız kullanılır.",
+  "config.section.constant": "Sabit Mod",
+  "config.constant_speed.name": "Eklenen Hız (+)",
+  "config.constant_speed.tooltip": "Eklenecek hız miktarı (1–20).",
+  "config.section.adaptive": "Uyarlanabilir Program",
+  "config.adaptive.note": "Bu ayarlar yalnızca yukarıda 'Uyarlanabilir Mod' işaretliyse geçerlidir.",
+  "config.time.6to9": "06:00 - 09:00",
+  "config.time.9to12": "09:00 - 12:00",
+  "config.time.12to5": "12:00 - 17:00",
+  "config.time.5to12": "17:00 - 00:00",
+  "config.time.12to2": "00:00 - 02:00"
+}
