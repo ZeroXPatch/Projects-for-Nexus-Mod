@@ -1,0 +1,20 @@
+{
+  "config.section.general": "일반 설정",
+  "config.hotkey.name": "말 소환 키",
+  "config.hotkey.tooltip": "이 키를 누르면 말이 당신에게로 순간이동합니다. 기본값: 없음.",
+  "msg.summoned": "말 소환됨!",
+  "config.debug.name": "디버그 모드",
+  "config.debug.tooltip": "플레이어 위에 현재 속도 통계를 표시합니다.",
+  "config.adaptive.name": "적응형 모드",
+  "config.adaptive.tooltip": "체크 시, 기력 %에 따라 속도가 변경됩니다.",
+  "config.section.constant": "고정 모드",
+  "config.constant.name": "기본 말 속도",
+  "config.constant.tooltip": "적응형 모드가 꺼져있을 때 말에 추가되는 속도입니다.",
+  "config.section.adaptive": "기력 레벨",
+  "config.adaptive.note": "각 기력 레벨에 대한 속도 보너스를 설정합니다.",
+  "config.energy.100": "100% (기력 가득)",
+  "config.energy.99_70": "99% - 70% 기력",
+  "config.energy.69_40": "69% - 40% 기력",
+  "config.energy.39_10": "39% - 10% 기력",
+  "config.energy.09_00": "9% - 0% (탈진)"
+}

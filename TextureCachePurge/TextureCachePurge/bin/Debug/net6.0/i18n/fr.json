@@ -1,0 +1,15 @@
+{
+  "config.auto-sleep.name": "Nettoyage automatique au sommeil",
+  "config.auto-sleep.description": "Vide automatiquement le cache des textures à la fin de la journée.",
+  "config.frequency.name": "Fréquence de nettoyage au sommeil (jours)",
+  "config.frequency.description": "Fréquence d'exécution du nettoyage au sommeil. Réglez sur 1 pour chaque nuit. Augmentez ce nombre (ex. 3) si le gel en fin de journée vous dérange.",
+  "config.sleep-ram-min.name": "RAM minimale à nettoyer (MB)",
+  "config.sleep-ram-min.description": "Exécute le nettoyage uniquement si l'utilisation de la RAM est supérieure à cette valeur.\nPar défaut : 3072 (3GB).\nÉvite les gels inutiles si la mémoire est correcte.",
+  "config.manual-key.name": "Touche de nettoyage manuel",
+  "config.manual-key.description": "La touche pour vider manuellement le cache d'images. Utile pour corriger des bugs visuels.",
+  "config.ram-enable.name": "Activer la limite active de RAM – Désactivez si vous utilisez 'Stardew Stabilizer'",
+  "config.ram-enable.description": "Si activé, le mod videra le cache pendant le jeu si la RAM devient trop élevée (ATTENTION : provoque un gel).",
+  "config.ram-value.name": "Limite active de RAM (MB)",
+  "config.ram-value.description": "La limite d'utilisation de la RAM en MB qui déclenche un nettoyage d'urgence pendant le jeu.",
+  "hud.purged": "Cache des textures vidé pour améliorer les performances."
+}

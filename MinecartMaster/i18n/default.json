@@ -1,0 +1,33 @@
+{
+  "message.locked": "The Minecart system is currently closed due to schedule.",
+  "message.choose_destination": "Choose a destination:",
+  "message.insufficient_funds": "You don't have enough gold for the trip. (Cost: {0}g)",
+  "message.travel_cost": "Travel Cost: {0}g",
+
+  "dest.mines": "Mines",
+  "dest.town": "Town",
+  "dest.bus": "Bus Stop",
+  "dest.quarry": "Quarry",
+
+  "config.section.general": "General Settings",
+  "config.enabled.name": "Mod Enabled",
+  "config.enabled.tooltip": "Turn the mod on or off.",
+
+  "config.unlock_early.name": "Unlock All Minecarts",
+  "config.unlock_early.tooltip": "If true, you can use minecarts immediately without completing the Boiler Room bundles.",
+
+  "config.adaptive.name": "Adaptive Mode",
+  "config.adaptive.tooltip": "If true, minecarts open/close based on the schedule below.\nIf false, minecarts are always open.",
+
+  "config.travel_cost.name": "Travel Cost",
+  "config.travel_cost.tooltip": "Amount of gold required to use the minecart. Set to 0 for free travel.",
+
+  "config.section.schedule": "Operating Hours",
+  "config.schedule.note": "Uncheck a box to close the minecarts during that time.",
+
+  "config.time.6to9": "6:00 AM - 9:00 AM",
+  "config.time.9to12": "9:00 AM - 12:00 PM",
+  "config.time.12to5": "12:00 PM - 5:00 PM",
+  "config.time.5to12": "5:00 PM - 12:00 AM",
+  "config.time.12to2": "12:00 AM - 2:00 AM"
+}

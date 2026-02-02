@@ -39,8 +39,8 @@ namespace SleepBuffs
                 mod: this.ModManifest,
                 getValue: () => this.Config.EnableDebuffs,
                 setValue: value => this.Config.EnableDebuffs = value,
-                name: () => "Enable Sleep Debuffs",
-                tooltip: () => "If enabled, sleeping less than 6 hours (after 12:00 AM) will give random negative stats."
+                name: () => this.Helper.Translation.Get("config.enableDebuffs.name"),
+                tooltip: () => this.Helper.Translation.Get("config.enableDebuffs.tooltip")
             );
         }
 
@@ -75,13 +75,13 @@ namespace SleepBuffs
             if (bedTime <= 2200)
             {
                 ApplyRandomStats(isDebuff: false);
-                Game1.addHUDMessage(new HUDMessage("You feel well rested!", 1));
+                Game1.addHUDMessage(new HUDMessage(this.Helper.Translation.Get("message.wellRested"), 1));
             }
             // Condition 2: < 6 Hours Sleep (Bedtime > 2400)
             else if (this.Config.EnableDebuffs && bedTime > 2400)
             {
                 ApplyRandomStats(isDebuff: true);
-                Game1.addHUDMessage(new HUDMessage("You didn't get enough sleep...", 3));
+                Game1.addHUDMessage(new HUDMessage(this.Helper.Translation.Get("message.sleepDeprived"), 3));
             }
         }
 
@@ -95,7 +95,6 @@ namespace SleepBuffs
                 "Luck", "Speed", "Defense", "Attack", "MaxStamina"
             };
 
-            // FIX: Changed Game1.Random to Game1.random (lowercase)
             var chosenStats = stats.OrderBy(x => Game1.random.Next()).Take(2).ToList();
 
             float value = isDebuff ? -1f : 1f;
@@ -118,10 +117,16 @@ namespace SleepBuffs
             }
 
             string id = isDebuff ? "SleepDeprived" : "WellRested";
-            string title = isDebuff ? "Sleep Deprived" : "Well Rested";
-            string desc = isDebuff
-                ? $"Groggy: {string.Join(", ", chosenStats)} down."
-                : $"Energized: {string.Join(", ", chosenStats)} up.";
+            string title = this.Helper.Translation.Get(isDebuff ? "buff.sleepDeprived.name" : "buff.wellRested.name");
+
+            // Translate stat names
+            List<string> translatedStats = chosenStats.Select(stat =>
+                this.Helper.Translation.Get($"stat.{stat.ToLower()}").ToString()).ToList();
+
+            string desc = this.Helper.Translation.Get(
+                isDebuff ? "buff.sleepDeprived.description" : "buff.wellRested.description",
+                new { stats = string.Join(", ", translatedStats) }
+            );
 
             int iconIndex = isDebuff ? 18 : 0;
 

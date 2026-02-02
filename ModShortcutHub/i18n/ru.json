@@ -1,0 +1,23 @@
+{
+  "menu.title": "Справочник горячих клавиш",
+  "menu.search": "Поиск:",
+  "menu.button.addNew": "Добавить",
+  "menu.button.sortKey": "Сорт: Клавиша",
+  "menu.button.sortDescription": "Сорт: Описание",
+  "menu.button.sortCustomFirst": "Сорт: Свои сначала",
+  "menu.button.hideEmpty": "Скрыть пустые",
+  "menu.button.showAll": "Показать все",
+  "menu.header.shortcut": "Клавиши",
+  "menu.header.description": "Описание",
+  "menu.row.noDescription": "(Нет описания)",
+  "menu.row.edit": "(Изм.)",
+  "menu.row.delete": "(Удал.)",
+  "menu.footer.showing": "Показано {{count}} шт.",
+  "menu.footer.pressK": "Нажмите K для вкл/выкл",
+  "edit.title": "Введите описание для {{key}}:",
+  "add.title": "Добавить свою комбинацию",
+  "add.keyCombo": "Сочетание клавиш (нажмите):",
+  "add.description": "Описание:",
+  "add.button.save": "Сохранить",
+  "add.button.cancel": "Отмена"
+}

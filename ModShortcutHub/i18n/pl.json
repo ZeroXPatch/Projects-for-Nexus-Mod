@@ -1,0 +1,23 @@
+{
+  "menu.title": "Centrum Skrótów",
+  "menu.search": "Szukaj:",
+  "menu.button.addNew": "Dodaj Nowy",
+  "menu.button.sortKey": "Sort: Klawisz",
+  "menu.button.sortDescription": "Sort: Opis",
+  "menu.button.sortCustomFirst": "Sort: Własne Pierwsze",
+  "menu.button.hideEmpty": "Ukryj Puste",
+  "menu.button.showAll": "Pokaż Wszystkie",
+  "menu.header.shortcut": "Skrót",
+  "menu.header.description": "Opis",
+  "menu.row.noDescription": "(Brak opisu)",
+  "menu.row.edit": "(Edytuj)",
+  "menu.row.delete": "(Usuń)",
+  "menu.footer.showing": "Pokazano {{count}} skrótów",
+  "menu.footer.pressK": "Naciśnij K aby przełączyć",
+  "edit.title": "Wpisz opis dla {{key}}:",
+  "add.title": "Dodaj Własny Skrót",
+  "add.keyCombo": "Kombinacja Klawiszy (kliknij i naciśnij):",
+  "add.description": "Opis:",
+  "add.button.save": "Zapisz",
+  "add.button.cancel": "Anuluj"
+}

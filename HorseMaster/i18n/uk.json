@@ -1,0 +1,20 @@
+{
+  "config.section.general": "Загальні налаштування",
+  "config.hotkey.name": "Клавіша приклику коня",
+  "config.hotkey.tooltip": "Натисніть цю клавішу, щоб телепортувати коня до себе. За замовчуванням: Немає.",
+  "msg.summoned": "Коня прикликано!",
+  "config.debug.name": "Режим налагодження",
+  "config.debug.tooltip": "Показувати поточну швидкість над гравцем.",
+  "config.adaptive.name": "Адаптивний режим",
+  "config.adaptive.tooltip": "Якщо позначено, швидкість змінюється залежно від % енергії.",
+  "config.section.constant": "Постійний режим",
+  "config.constant.name": "Базова швидкість коня",
+  "config.constant.tooltip": "Швидкість, що додається до коня, коли адаптивний режим ВИМК.",
+  "config.section.adaptive": "Рівні енергії",
+  "config.adaptive.note": "Встановіть бонус швидкості для кожного рівня енергії.",
+  "config.energy.100": "100% (Повна енергія)",
+  "config.energy.99_70": "99% - 70% Енергії",
+  "config.energy.69_40": "69% - 40% Енергії",
+  "config.energy.39_10": "39% - 10% Енергії",
+  "config.energy.09_00": "9% - 0% (Виснаження)"
+}

@@ -1,0 +1,12 @@
+{
+  "Name": "Minecart Master",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Control minecart availability with daily schedules and unlock them early.",
+  "UniqueID": "ZeroXPatch.MinecartMaster",
+  "EntryDll": "MinecartMaster.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [
+    "Nexus:???"
+  ]
+}

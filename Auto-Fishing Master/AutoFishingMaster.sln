@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.2.11415.280 d18.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoFishingMaster", "AutoFishingMaster.csproj", "{52CD205B-93D7-582B-943C-471CD468291B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52CD205B-93D7-582B-943C-471CD468291B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52CD205B-93D7-582B-943C-471CD468291B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52CD205B-93D7-582B-943C-471CD468291B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52CD205B-93D7-582B-943C-471CD468291B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C90C1B6-AE8B-41DE-8A6B-FB6F2F05F0ED}
+	EndGlobalSection
+EndGlobal

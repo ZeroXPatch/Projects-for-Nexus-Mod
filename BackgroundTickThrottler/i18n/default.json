@@ -1,0 +1,11 @@
+{
+  "config.title": "Performance Settings",
+  "config.enabled.name": "Enable Throttling",
+  "config.enabled.tooltip": "If enabled, NPCs not in your current location will update less frequently to save FPS.",
+  "config.interval.name": "Update Interval",
+  "config.interval.tooltip": "How often background NPCs update.\n2 = Every other frame (50% load).\n10 = Very choppy background movement (Low load).",
+  "config.force-villagers.name": "Always Update Villagers",
+  "config.force-villagers.tooltip": "If true, named villagers (like Caroline) are never throttled, only monsters/horses/junimos are.",
+  "config.debug.name": "Enable Debug Logging",
+  "config.debug.tooltip": "Shows performance stats in SMAPI console every second. Use this to verify the mod is working and see how much CPU load you're saving!"
+}

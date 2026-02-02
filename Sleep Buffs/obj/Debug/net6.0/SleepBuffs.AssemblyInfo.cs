@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SleepBuffs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc030f9825987daa7404844b21e0c0613c7d2b08")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6952400195c776c0d6bddad12f678918c5059b83")]
 [assembly: System.Reflection.AssemblyProductAttribute("SleepBuffs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SleepBuffs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

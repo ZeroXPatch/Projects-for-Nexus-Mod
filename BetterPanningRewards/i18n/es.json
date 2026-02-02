@@ -1,0 +1,20 @@
+{
+  "config.general": "Ajustes Generales",
+  "config.enabled.name": "Mod Habilitado",
+  "config.enabled.tooltip": "Si está desactivado, no aparecerán recompensas extra de bateo.",
+  "day.monday": "Ajustes del Lunes",
+  "day.tuesday": "Ajustes del Martes",
+  "day.wednesday": "Ajustes del Miércoles",
+  "day.thursday": "Ajustes del Jueves",
+  "day.friday": "Ajustes del Viernes",
+  "day.saturday": "Ajustes del Sábado",
+  "day.sunday": "Ajustes del Domingo",
+  "option.ore_amount": "Cantidad Extra de Mena",
+  "option.common_mats": "Materiales Comunes (Madera/Piedra)",
+  "option.bonus_coal": "Habilitar Carbón Extra",
+  "option.copper_iron": "Habilitar Cobre y Hierro",
+  "option.gold_bonus": "Habilitar Bonus de Oro",
+  "option.iridium_bonus": "Habilitar Bonus de Iridio",
+  "option.prismatic_chance": "Prob. Fragmento Prismático (0-1)",
+  "option.rare_gem": "Gema Rara Garantizada"
+}

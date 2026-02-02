@@ -1,0 +1,20 @@
+{
+  "config.general": "Ustawienia Ogólne",
+  "config.enabled.name": "Mod Włączony",
+  "config.enabled.tooltip": "Jeśli wyłączone, nie pojawią się dodatkowe nagrody za płukanie.",
+  "day.monday": "Ustawienia Poniedziałku",
+  "day.tuesday": "Ustawienia Wtorku",
+  "day.wednesday": "Ustawienia Środy",
+  "day.thursday": "Ustawienia Czwartku",
+  "day.friday": "Ustawienia Piątku",
+  "day.saturday": "Ustawienia Soboty",
+  "day.sunday": "Ustawienia Niedzieli",
+  "option.ore_amount": "Dodatkowa Ilość Rudy",
+  "option.common_mats": "Włącz Pospolite Materiały (Drewno/Kamień)",
+  "option.bonus_coal": "Włącz Dodatkowy Węgiel",
+  "option.copper_iron": "Włącz Miedź i Żelazo",
+  "option.gold_bonus": "Włącz Bonus Złota",
+  "option.iridium_bonus": "Włącz Bonus Irydu",
+  "option.prismatic_chance": "Szansa na Pryzmatyczny Odłamek (0-1)",
+  "option.rare_gem": "Gwarantowany Rzadki Klejnot"
+}

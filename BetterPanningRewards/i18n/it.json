@@ -1,0 +1,20 @@
+{
+  "config.general": "Impostazioni Generali",
+  "config.enabled.name": "Mod Abilitata",
+  "config.enabled.tooltip": "Se disabilitato, non appariranno ricompense extra dal setaccio.",
+  "day.monday": "Impostazioni Lunedì",
+  "day.tuesday": "Impostazioni Martedì",
+  "day.wednesday": "Impostazioni Mercoledì",
+  "day.thursday": "Impostazioni Giovedì",
+  "day.friday": "Impostazioni Venerdì",
+  "day.saturday": "Impostazioni Sabato",
+  "day.sunday": "Impostazioni Domenica",
+  "option.ore_amount": "Quantità Minerale Extra",
+  "option.common_mats": "Materiali Comuni (Legno/Pietra)",
+  "option.bonus_coal": "Abilita Carbone Bonus",
+  "option.copper_iron": "Abilita Rame e Ferro",
+  "option.gold_bonus": "Abilita Bonus Oro",
+  "option.iridium_bonus": "Abilita Bonus Iridio",
+  "option.prismatic_chance": "Prob. Scheggia Prismatica (0-1)",
+  "option.rare_gem": "Gemma Rara Garantita"
+}

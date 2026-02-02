@@ -1,0 +1,20 @@
+{
+  "config.enableDebuffs.name": "Habilitar desventajas por sueño",
+  "config.enableDebuffs.tooltip": "Si está activado, dormir menos de 6 horas (después de las 12:00 a. m.) dará estadísticas negativas aleatorias.",
+  "message.wellRested": "¡Te sientes bien descansado!",
+  "message.sleepDeprived": "No dormiste lo suficiente...",
+  "buff.wellRested.name": "Bien descansado",
+  "buff.wellRested.description": "Energizado: {{stats}} aumenta.",
+  "buff.sleepDeprived.name": "Privado de sueño",
+  "buff.sleepDeprived.description": "Somnoliento: {{stats}} disminuye.",
+  "stat.farming": "Agricultura",
+  "stat.fishing": "Pesca",
+  "stat.mining": "Minería",
+  "stat.combat": "Combate",
+  "stat.foraging": "Recolección",
+  "stat.luck": "Suerte",
+  "stat.speed": "Velocidad",
+  "stat.defense": "Defensa",
+  "stat.attack": "Ataque",
+  "stat.maxstamina": "Resistencia máxima"
+}

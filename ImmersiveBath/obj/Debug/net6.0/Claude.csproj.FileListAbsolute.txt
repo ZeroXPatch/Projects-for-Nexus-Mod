@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ImmersiveBath - Google AI\ImmersiveBath - Claude\bin\Debug\net6.0\ImmersiveBath.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ImmersiveBath - Google AI\ImmersiveBath - Claude\bin\Debug\net6.0\ImmersiveBath.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ImmersiveBath - Google AI\ImmersiveBath - Claude\obj\Debug\net6.0\Claude.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ImmersiveBath - Google AI\ImmersiveBath - Claude\obj\Debug\net6.0\Claude.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ImmersiveBath - Google AI\ImmersiveBath - Claude\obj\Debug\net6.0\Claude.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ImmersiveBath - Google AI\ImmersiveBath - Claude\obj\Debug\net6.0\Claude.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ImmersiveBath - Google AI\ImmersiveBath - Claude\obj\Debug\net6.0\Claude.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ImmersiveBath - Google AI\ImmersiveBath - Claude\obj\Debug\net6.0\Claude.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ImmersiveBath - Google AI\ImmersiveBath - Claude\obj\Debug\net6.0\ImmersiveBath.dll

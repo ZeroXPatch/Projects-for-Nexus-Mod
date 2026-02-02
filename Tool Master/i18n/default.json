@@ -10,8 +10,8 @@
   "config.cost.name": "Stamina Cost %",
   "config.cost.tooltip": "Energy cost multiplier. 100% = Normal. 50% = Half Cost. 200% = Double Cost.",
 
-  "config.speed.name": "Tool Speed %",
-  "config.speed.tooltip": "Tool charge/swing speed. 100% = Normal. 150% = 50% Faster. 50% = Half Speed.",
+  "config.speed.name": "Tool Speed",
+  "config.speed.tooltip": "Tool charge/swing speed multiplier. 0.1x = Very Slow. 0.5x = Half Speed. 1.0x = Normal. 2.0x = Double Speed. 5.0x = Very Fast.",
 
   "config.section.adaptive": "Adaptive Schedule",
 

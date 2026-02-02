@@ -1,0 +1,15 @@
+{
+  "config.auto-sleep.name": "Automatisches Leeren beim Schlafen",
+  "config.auto-sleep.description": "Leert den Textur-Cache automatisch, wenn der Tag endet.",
+  "config.frequency.name": "Häufigkeit des Schlaf-Leerens (Tage)",
+  "config.frequency.description": "Wie oft das Leeren beim Schlafen ausgeführt wird. Auf 1 setzen für jede Nacht. Erhöhe diesen Wert (z.B. 3), wenn das Einfrieren am Tagesende stört.",
+  "config.sleep-ram-min.name": "Minimaler RAM zum Leeren (MB)",
+  "config.sleep-ram-min.description": "Führt das Leeren nur aus, wenn der RAM-Verbrauch höher ist als dieser Wert.\nStandard: 3072 (3GB).\nVerhindert unnötiges Einfrieren, wenn der Speicherverbrauch in Ordnung ist.",
+  "config.manual-key.name": "Manuelle Leer-Taste",
+  "config.manual-key.description": "Die Taste zum manuellen Leeren des Bild-Caches. Nützlich zur Behebung visueller Fehler.",
+  "config.ram-enable.name": "Aktives RAM-Limit aktivieren – Deaktivieren, wenn du 'Stardew Stabilizer' verwendest",
+  "config.ram-enable.description": "Wenn aktiviert, leert der Mod den Cache während des Spielens, wenn der RAM zu hoch wird (ACHTUNG: Verursacht Einfrieren).",
+  "config.ram-value.name": "Aktives RAM-Limit (MB)",
+  "config.ram-value.description": "Das RAM-Limit in MB, das während des Spielens eine Notfall-Leerung auslöst.",
+  "hud.purged": "Textur-Cache zur Leistungsverbesserung geleert."
+}

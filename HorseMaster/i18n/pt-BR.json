@@ -1,0 +1,20 @@
+{
+  "config.section.general": "Configurações Gerais",
+  "config.hotkey.name": "Tecla Invocar Cavalo",
+  "config.hotkey.tooltip": "Pressione esta tecla para teletransportar seu cavalo até você. Padrão: Nenhum.",
+  "msg.summoned": "Cavalo Invocado!",
+  "config.debug.name": "Modo Depuração",
+  "config.debug.tooltip": "Mostrar estatísticas de velocidade acima do jogador.",
+  "config.adaptive.name": "Modo Adaptativo",
+  "config.adaptive.tooltip": "Se marcado, a velocidade muda com base na sua % de Energia.",
+  "config.section.constant": "Modo Constante",
+  "config.constant.name": "Velocidade Base do Cavalo",
+  "config.constant.tooltip": "Velocidade adicionada ao cavalo quando o Modo Adaptativo está DESLIGADO.",
+  "config.section.adaptive": "Níveis de Energia",
+  "config.adaptive.note": "Definir bônus de velocidade para cada nível de energia.",
+  "config.energy.100": "100% (Energia Cheia)",
+  "config.energy.99_70": "99% - 70% Energia",
+  "config.energy.69_40": "69% - 40% Energia",
+  "config.energy.39_10": "39% - 10% Energia",
+  "config.energy.09_00": "9% - 0% (Exausto)"
+}

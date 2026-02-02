@@ -1,0 +1,15 @@
+{
+  "config.auto-sleep.name": "就寝時に自動クリア",
+  "config.auto-sleep.description": "一日の終了時にテクスチャキャッシュを自動的にクリアします。",
+  "config.frequency.name": "就寝時クリア頻度（日）",
+  "config.frequency.description": "就寝時のクリアを実行する頻度です。毎晩実行する場合は1に設定してください。終了時のフリーズが気になる場合は数値（例：3）を増やしてください。",
+  "config.sleep-ram-min.name": "クリアする最小RAM（MB）",
+  "config.sleep-ram-min.description": "RAM使用量がこの値を超えた場合のみクリアを実行します。\nデフォルト：3072（3GB）。\nメモリに余裕がある場合の不要なフリーズを防ぎます。",
+  "config.manual-key.name": "手動クリアキー",
+  "config.manual-key.description": "画像キャッシュを手動でクリアするためのキーです。表示の不具合修正に便利です。",
+  "config.ram-enable.name": "アクティブRAM制限を有効化 – 'Stardew Stabilizer'使用時は無効にしてください",
+  "config.ram-enable.description": "有効にすると、RAMが高くなった際にプレイ中でもキャッシュをクリアします（注意：フリーズが発生します）。",
+  "config.ram-value.name": "アクティブRAM制限（MB）",
+  "config.ram-value.description": "プレイ中に緊急クリアを引き起こすRAM使用量の上限（MB）です。",
+  "hud.purged": "パフォーマンス向上のためテクスチャキャッシュをクリアしました。"
+}

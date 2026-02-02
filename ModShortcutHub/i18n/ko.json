@@ -1,0 +1,23 @@
+{
+  "menu.title": "단축키 참조 허브",
+  "menu.search": "검색:",
+  "menu.button.addNew": "새로 추가",
+  "menu.button.sortKey": "정렬: 키",
+  "menu.button.sortDescription": "정렬: 설명",
+  "menu.button.sortCustomFirst": "정렬: 사용자 정의 우선",
+  "menu.button.hideEmpty": "빈 항목 숨기기",
+  "menu.button.showAll": "모두 표시",
+  "menu.header.shortcut": "단축키",
+  "menu.header.description": "설명",
+  "menu.row.noDescription": "(설명 없음)",
+  "menu.row.edit": "(편집)",
+  "menu.row.delete": "(삭제)",
+  "menu.footer.showing": "{{count}}개 단축키 표시 중",
+  "menu.footer.pressK": "K를 눌러 메뉴 토글",
+  "edit.title": "{{key}}에 대한 설명 입력:",
+  "add.title": "사용자 정의 단축키 추가",
+  "add.keyCombo": "키 조합 (클릭 후 입력):",
+  "add.description": "설명:",
+  "add.button.save": "저장",
+  "add.button.cancel": "취소"
+}

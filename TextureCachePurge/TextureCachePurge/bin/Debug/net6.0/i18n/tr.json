@@ -1,0 +1,15 @@
+{
+  "config.auto-sleep.name": "Uyku sırasında otomatik temizleme",
+  "config.auto-sleep.description": "Gün sona erdiğinde doku önbelleğini otomatik olarak temizler.",
+  "config.frequency.name": "Uyku temizleme sıklığı (gün)",
+  "config.frequency.description": "Uyku temizlemesinin ne sıklıkla çalışacağını belirler. Her gece için 1 olarak ayarlayın. Gün sonu donmaları rahatsız ediyorsa değeri (ör. 3) artırın.",
+  "config.sleep-ram-min.name": "Temizleme için minimum RAM (MB)",
+  "config.sleep-ram-min.description": "RAM kullanımı bu değerden yüksekse temizleme çalışır.\nVarsayılan: 3072 (3GB).\nGereksiz donmaları önler.",
+  "config.manual-key.name": "Manuel temizleme tuşu",
+  "config.manual-key.description": "Görüntü önbelleğini manuel olarak temizlemek için tuş. Görsel hataları düzeltmek için kullanışlıdır.",
+  "config.ram-enable.name": "Aktif RAM sınırını etkinleştir – 'Stardew Stabilizer' kullanıyorsanız devre dışı bırakın",
+  "config.ram-enable.description": "Etkinleştirildiğinde RAM çok yükselirse oyun sırasında önbelleği temizler (DİKKAT: donmaya neden olur).",
+  "config.ram-value.name": "Aktif RAM sınırı (MB)",
+  "config.ram-value.description": "Oyun sırasında acil temizlemeyi tetikleyen RAM kullanım sınırı (MB).",
+  "hud.purged": "Performans için doku önbelleği temizlendi."
+}

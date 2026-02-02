@@ -1,0 +1,20 @@
+{
+  "config.section.general": "一般設定",
+  "config.hotkey.name": "馬を呼ぶキー",
+  "config.hotkey.tooltip": "このキーを押すと、馬を自分の場所にテレポートさせます。デフォルト: なし。",
+  "msg.summoned": "馬を呼びました！",
+  "config.debug.name": "デバッグモード",
+  "config.debug.tooltip": "プレイヤーの頭上に現在の速度を表示します。",
+  "config.adaptive.name": "適応モード",
+  "config.adaptive.tooltip": "有効にすると、エナジー残量(%)に基づいて速度が変化します。",
+  "config.section.constant": "固定モード",
+  "config.constant.name": "馬の基本速度",
+  "config.constant.tooltip": "適応モードがOFFの時に馬に追加される速度です。",
+  "config.section.adaptive": "エナジーレベル",
+  "config.adaptive.note": "各エナジーレベルごとの速度ボーナスを設定します。",
+  "config.energy.100": "100% (元気満タン)",
+  "config.energy.99_70": "99% - 70% エナジー",
+  "config.energy.69_40": "69% - 40% エナジー",
+  "config.energy.39_10": "39% - 10% エナジー",
+  "config.energy.09_00": "9% - 0% (疲労困憊)"
+}

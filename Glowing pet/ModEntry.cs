@@ -135,22 +135,33 @@ public class ModEntry : Mod
 
     private void UpdatePetLight(Pet pet)
     {
-        Vector2 position = new Vector2(pet.Position.X + 32f, pet.Position.Y + 16f);
-        Color colorFromPreset = this.GetColorFromPreset();
+        Vector2 petPos = new Vector2(pet.Position.X + 32, pet.Position.Y + 16);
+        Color color = GetColorFromPreset();
 
-        if (this.CurrentLight != null && Game1.currentLocation.sharedLights.ContainsKey(this.LightId))
+        if (CurrentLight != null && Game1.currentLocation.sharedLights.ContainsKey(LightId))
         {
-            this.CurrentLight.position.Value = position;
-            this.CurrentLight.color.Value = colorFromPreset;
-            this.CurrentLight.radius.Value = this.Config.LightRadius;
+            CurrentLight.position.Value = petPos;
+            CurrentLight.color.Value = color;
+            CurrentLight.radius.Value = Config.LightRadius;
         }
         else
         {
-            this.CurrentLight = new LightSource(this.LightId, 4, position, this.Config.LightRadius, colorFromPreset, LightSource.LightContext.None, 0L);
-            Game1.currentLocation.sharedLights[this.LightId] = this.CurrentLight;
+            // FIX: Use 'LightContext.None' (SmallObject does not exist),
+            // but KEEP the PlayerID. The PlayerID is what stops the flickering/deletion.
+            CurrentLight = new LightSource(
+                LightId,
+                4,
+                petPos,
+                Config.LightRadius,
+                color,
+                LightSource.LightContext.None,  // <--- Corrected Enum
+                Game1.player.UniqueMultiplayerID
+            );
+
+            Game1.currentLocation.sharedLights[LightId] = CurrentLight;
         }
     }
-
+    
     private void RemoveLight()
     {
         if (this.CurrentLight == null || Game1.currentLocation == null)

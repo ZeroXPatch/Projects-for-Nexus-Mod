@@ -1,0 +1,24 @@
+{
+  "config.section.general": "General Settings",
+
+  "config.hotkey.name": "Summon Horse Key",
+  "config.hotkey.tooltip": "Press this key to teleport your horse to you. Default: None.",
+  "msg.summoned": "Horse Summoned!",
+
+  "config.debug.name": "Debug Mode",
+  "config.debug.tooltip": "Show current speed stats above player.",
+  "config.adaptive.name": "Adaptive Mode",
+  "config.adaptive.tooltip": "If checked, speed changes based on your Energy %.",
+
+  "config.section.constant": "Constant Mode",
+  "config.constant.name": "Base Horse Speed",
+  "config.constant.tooltip": "Speed added to horse when Adaptive Mode is OFF.",
+
+  "config.section.adaptive": "Energy Levels",
+  "config.adaptive.note": "Set speed bonus for each energy level.",
+  "config.energy.100": "100% (Full Energy)",
+  "config.energy.99_70": "99% - 70% Energy",
+  "config.energy.69_40": "69% - 40% Energy",
+  "config.energy.39_10": "39% - 10% Energy",
+  "config.energy.09_00": "9% - 0% (Exhausted)"
+}

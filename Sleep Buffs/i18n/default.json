@@ -1,0 +1,24 @@
+{
+  "config.enableDebuffs.name": "Enable Sleep Debuffs",
+  "config.enableDebuffs.tooltip": "If enabled, sleeping less than 6 hours (after 12:00 AM) will give random negative stats.",
+  
+  "message.wellRested": "You feel well rested!",
+  "message.sleepDeprived": "You didn't get enough sleep...",
+  
+  "buff.wellRested.name": "Well Rested",
+  "buff.wellRested.description": "Energized: {{stats}} up.",
+  
+  "buff.sleepDeprived.name": "Sleep Deprived",
+  "buff.sleepDeprived.description": "Groggy: {{stats}} down.",
+  
+  "stat.farming": "Farming",
+  "stat.fishing": "Fishing",
+  "stat.mining": "Mining",
+  "stat.combat": "Combat",
+  "stat.foraging": "Foraging",
+  "stat.luck": "Luck",
+  "stat.speed": "Speed",
+  "stat.defense": "Defense",
+  "stat.attack": "Attack",
+  "stat.maxstamina": "Max Stamina"
+}

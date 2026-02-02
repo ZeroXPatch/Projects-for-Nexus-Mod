@@ -79,6 +79,14 @@ namespace FasterMenuLoad
         {
             try
             {
+                // COMPATIBILITY CHECK: If UI Info Suite 2 detected, skip all lazy loading
+                if (ModEntry.IsFullyDisabled)
+                {
+                    if (ModEntry.Config.EnableDebugLogging)
+                        ModEntry.ModMonitor.Log("[FasterMenuLoad] UI Info Suite 2 detected - all lazy loading disabled", LogLevel.Info);
+                    return;
+                }
+
                 List<IClickableMenu> pages = __instance.pages;
 
                 // Safety check for null pages list
@@ -120,7 +128,8 @@ namespace FasterMenuLoad
                     }
 
                     // 3. Check for Crafting Page (Tab 4 - Crafting & Cooking)
-                    else if (ModEntry.Config.LazyLoadCrafting && page is CraftingPage cPage)
+                    // COMPATIBILITY CHECK: Skip if Better Crafting is detected
+                    else if (ModEntry.Config.LazyLoadCrafting && !ModEntry.IsCraftingDisabled && page is CraftingPage cPage)
                     {
                         try
                         {
@@ -146,6 +155,11 @@ namespace FasterMenuLoad
                         {
                             ModEntry.ModMonitor.Log($"Error checking CraftingPage cooking field: {ex}", LogLevel.Warn);
                         }
+                    }
+                    else if (page is CraftingPage && ModEntry.IsCraftingDisabled)
+                    {
+                        if (ModEntry.Config.EnableDebugLogging)
+                            ModEntry.ModMonitor.Log($"[FasterMenuLoad] Found CraftingPage at Tab {i} but skipping due to Better Crafting compatibility", LogLevel.Info);
                     }
 
                     // 4. Check for Animals Page (Tab 5 - New in 1.6)
@@ -201,6 +215,10 @@ namespace FasterMenuLoad
         {
             try
             {
+                // Skip if fully disabled
+                if (ModEntry.IsFullyDisabled)
+                    return;
+
                 if (__instance.pages == null)
                 {
                     ModEntry.ModMonitor.Log("GameMenu.pages is null in ChangeTab", LogLevel.Warn);

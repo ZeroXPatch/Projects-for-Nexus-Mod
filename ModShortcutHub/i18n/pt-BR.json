@@ -1,0 +1,23 @@
+{
+  "menu.title": "Central de Atalhos",
+  "menu.search": "Buscar:",
+  "menu.button.addNew": "Add Novo",
+  "menu.button.sortKey": "Ord: Tecla",
+  "menu.button.sortDescription": "Ord: Descrição",
+  "menu.button.sortCustomFirst": "Ord: Person. Primeiro",
+  "menu.button.hideEmpty": "Ocultar Vazios",
+  "menu.button.showAll": "Mostrar Todos",
+  "menu.header.shortcut": "Atalho",
+  "menu.header.description": "Descrição",
+  "menu.row.noDescription": "(Sem descrição)",
+  "menu.row.edit": "(Edit)",
+  "menu.row.delete": "(Del)",
+  "menu.footer.showing": "Exibindo {{count}} atalhos",
+  "menu.footer.pressK": "Pressione K para alternar",
+  "edit.title": "Insira descrição para {{key}}:",
+  "add.title": "Add Atalho Personalizado",
+  "add.keyCombo": "Combinação de Teclas (clique e pressione):",
+  "add.description": "Descrição:",
+  "add.button.save": "Salvar",
+  "add.button.cancel": "Cancelar"
+}

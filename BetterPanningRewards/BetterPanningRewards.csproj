@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>BetterPanningRewards</AssemblyName>
+    <RootNamespace>BetterPanningRewards</RootNamespace>
+    <ModFolderName>BetterPanningRewards</ModFolderName>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\GOG Games\Stardew Valley\smapi-internal\0Harmony.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

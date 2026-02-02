@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\BlackAndWhiteMod\bin\Debug\net6.0\BlackAndWhiteMod.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\BlackAndWhiteMod\bin\Debug\net6.0\BlackAndWhiteMod.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\BlackAndWhiteMod\obj\Debug\net6.0\BlackAndWhiteMod.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\BlackAndWhiteMod\obj\Debug\net6.0\BlackAndWhiteMod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\BlackAndWhiteMod\obj\Debug\net6.0\BlackAndWhiteMod.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\BlackAndWhiteMod\obj\Debug\net6.0\BlackAndWhiteMod.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\BlackAndWhiteMod\obj\Debug\net6.0\BlackAndWhiteMod.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\BlackAndWhiteMod\obj\Debug\net6.0\BlackAndWhiteMod.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\BlackAndWhiteMod\obj\Debug\net6.0\BlackAndWhiteMod.dll

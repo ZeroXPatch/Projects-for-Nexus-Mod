@@ -1,0 +1,20 @@
+{
+  "config.general": "Genel Ayarlar",
+  "config.enabled.name": "Mod Etkin",
+  "config.enabled.tooltip": "Devre dışı bırakılırsa, eleme ödülleri çıkmaz.",
+  "day.monday": "Pazartesi Ayarları",
+  "day.tuesday": "Salı Ayarları",
+  "day.wednesday": "Çarşamba Ayarları",
+  "day.thursday": "Perşembe Ayarları",
+  "day.friday": "Cuma Ayarları",
+  "day.saturday": "Cumartesi Ayarları",
+  "day.sunday": "Pazar Ayarları",
+  "option.ore_amount": "Ekstra Cevher Miktarı",
+  "option.common_mats": "Yaygın Malzemeler (Odun/Taş)",
+  "option.bonus_coal": "Bonus Kömürü Etkinleştir",
+  "option.copper_iron": "Bakır ve Demiri Etkinleştir",
+  "option.gold_bonus": "Altın Bonusunu Etkinleştir",
+  "option.iridium_bonus": "İridyum Bonusunu Etkinleştir",
+  "option.prismatic_chance": "Prizma Parçası Şansı (0-1)",
+  "option.rare_gem": "Garanti Nadir Mücevher"
+}

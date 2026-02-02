@@ -1,0 +1,23 @@
+{
+  "menu.title": "Довідник гарячих клавіш",
+  "menu.search": "Пошук:",
+  "menu.button.addNew": "Додати",
+  "menu.button.sortKey": "Сорт: Клавіша",
+  "menu.button.sortDescription": "Сорт: Опис",
+  "menu.button.sortCustomFirst": "Сорт: Власні спочатку",
+  "menu.button.hideEmpty": "Сховати порожні",
+  "menu.button.showAll": "Показати всі",
+  "menu.header.shortcut": "Клавіші",
+  "menu.header.description": "Опис",
+  "menu.row.noDescription": "(Без опису)",
+  "menu.row.edit": "(Змін)",
+  "menu.row.delete": "(Видал)",
+  "menu.footer.showing": "Показано {{count}} шт.",
+  "menu.footer.pressK": "Натисніть K для перемикання",
+  "edit.title": "Введіть опис для {{key}}:",
+  "add.title": "Додати власну комбінацію",
+  "add.keyCombo": "Комбінація клавіш (натисніть):",
+  "add.description": "Опис:",
+  "add.button.save": "Зберегти",
+  "add.button.cancel": "Скасувати"
+}

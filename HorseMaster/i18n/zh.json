@@ -1,0 +1,20 @@
+{
+  "config.section.general": "常规设置",
+  "config.hotkey.name": "召唤马匹按键",
+  "config.hotkey.tooltip": "按下此按键将马匹传送至你身边。默认：无。",
+  "msg.summoned": "马匹已召唤！",
+  "config.debug.name": "调试模式",
+  "config.debug.tooltip": "在玩家上方显示当前速度数据。",
+  "config.adaptive.name": "自适应模式",
+  "config.adaptive.tooltip": "若勾选，速度将根据你的能量百分比变化。",
+  "config.section.constant": "恒定模式",
+  "config.constant.name": "基础马匹速度",
+  "config.constant.tooltip": "当自适应模式关闭时增加给马匹的速度。",
+  "config.section.adaptive": "能量等级",
+  "config.adaptive.note": "为每个能量等级设置速度加成。",
+  "config.energy.100": "100% (精力充沛)",
+  "config.energy.99_70": "99% - 70% 能量",
+  "config.energy.69_40": "69% - 40% 能量",
+  "config.energy.39_10": "39% - 10% 能量",
+  "config.energy.09_00": "9% - 0% (精疲力尽)"
+}

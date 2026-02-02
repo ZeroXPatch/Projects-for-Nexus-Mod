@@ -1,0 +1,23 @@
+{
+  "menu.title": "Centro de Atajos",
+  "menu.search": "Buscar:",
+  "menu.button.addNew": "Añadir Nuevo",
+  "menu.button.sortKey": "Ord: Tecla",
+  "menu.button.sortDescription": "Ord: Descrip.",
+  "menu.button.sortCustomFirst": "Ord: Person. Primero",
+  "menu.button.hideEmpty": "Ocultar Vacíos",
+  "menu.button.showAll": "Mostrar Todos",
+  "menu.header.shortcut": "Atajo",
+  "menu.header.description": "Descripción",
+  "menu.row.noDescription": "(Sin descripción)",
+  "menu.row.edit": "(Edit)",
+  "menu.row.delete": "(Borrar)",
+  "menu.footer.showing": "Mostrando {{count}} atajos",
+  "menu.footer.pressK": "Presiona K para alternar",
+  "edit.title": "Descripción para {{key}}:",
+  "add.title": "Añadir Atajo Personalizado",
+  "add.keyCombo": "Combinación de teclas (clic y presionar):",
+  "add.description": "Descripción:",
+  "add.button.save": "Guardar",
+  "add.button.cancel": "Cancelar"
+}

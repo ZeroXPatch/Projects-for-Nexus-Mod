@@ -11,6 +11,10 @@ namespace FasterMenuLoad
         public static IMonitor ModMonitor = null!;
         public static ITranslationHelper I18n = null!;
 
+        // Compatibility flags
+        public static bool IsFullyDisabled { get; private set; }
+        public static bool IsCraftingDisabled { get; private set; }
+
         public override void Entry(IModHelper helper)
         {
             ModMonitor = Monitor;
@@ -25,10 +29,54 @@ namespace FasterMenuLoad
 
         private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
         {
+            // Check for UI Info Suite 2 - disables entire mod
+            if (Helper.ModRegistry.IsLoaded("Annosz.UiInfoSuite2"))
+            {
+                var modInfo = Helper.ModRegistry.Get("Annosz.UiInfoSuite2");
+                IsFullyDisabled = true;
+                Monitor.Log(
+                    $"Detected '{modInfo?.Manifest.Name}'. Faster Menu Load is fully disabled for compatibility. " +
+                    "UI Info Suite 2 requires real menu pages to function properly.",
+                    LogLevel.Warn
+                );
+            }
+
+            // Check for Better Crafting - disables crafting page only
+            if (Helper.ModRegistry.IsLoaded("leclair.bettercrafting") ||
+                Helper.ModRegistry.IsLoaded("spacechase0.BetterCrafting"))
+            {
+                var modInfo = Helper.ModRegistry.Get("leclair.bettercrafting") ??
+                             Helper.ModRegistry.Get("spacechase0.BetterCrafting");
+                IsCraftingDisabled = true;
+                Monitor.Log(
+                    $"Detected '{modInfo?.Manifest.Name}'. Lazy loading disabled for Crafting page only. " +
+                    "Other pages will still use lazy loading.",
+                    LogLevel.Info
+                );
+            }
+
             var configMenu = this.Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
             if (configMenu is null) return;
 
             configMenu.Register(this.ModManifest, () => Config = new ModConfig(), () => this.Helper.WriteConfig(Config));
+
+            // Add compatibility warning section if needed
+            if (IsFullyDisabled)
+            {
+                configMenu.AddSectionTitle(
+                    this.ModManifest,
+                    () => "⚠️ MOD FULLY DISABLED",
+                    () => "UI Info Suite 2 detected. All lazy loading features are disabled to prevent conflicts. The settings below will have no effect."
+                );
+            }
+            else if (IsCraftingDisabled)
+            {
+                configMenu.AddSectionTitle(
+                    this.ModManifest,
+                    () => "ℹ️ Partial Compatibility Mode",
+                    () => "Better Crafting detected. Crafting page lazy loading is disabled, but other pages will still benefit from lazy loading."
+                );
+            }
 
             configMenu.AddSectionTitle(
                 this.ModManifest,
@@ -41,7 +89,7 @@ namespace FasterMenuLoad
                 () => Config.LazyLoadSkills,
                 v => Config.LazyLoadSkills = v,
                 () => I18n.Get("config.lazy_skills.name"),
-                () => I18n.Get("config.lazy_skills.desc")
+                () => IsFullyDisabled ? "Disabled due to UI Info Suite 2" : I18n.Get("config.lazy_skills.desc")
             );
 
             configMenu.AddBoolOption(
@@ -49,7 +97,7 @@ namespace FasterMenuLoad
                 () => Config.LazyLoadSocial,
                 v => Config.LazyLoadSocial = v,
                 () => I18n.Get("config.lazy_social.name"),
-                () => I18n.Get("config.lazy_social.desc")
+                () => IsFullyDisabled ? "Disabled due to UI Info Suite 2" : I18n.Get("config.lazy_social.desc")
             );
 
             configMenu.AddBoolOption(
@@ -57,7 +105,9 @@ namespace FasterMenuLoad
                 () => Config.LazyLoadCrafting,
                 v => Config.LazyLoadCrafting = v,
                 () => I18n.Get("config.lazy_crafting.name"),
-                () => I18n.Get("config.lazy_crafting.desc")
+                () => IsFullyDisabled ? "Disabled due to UI Info Suite 2" :
+                      IsCraftingDisabled ? "Disabled due to Better Crafting" :
+                      I18n.Get("config.lazy_crafting.desc")
             );
 
             configMenu.AddBoolOption(
@@ -65,7 +115,7 @@ namespace FasterMenuLoad
                 () => Config.LazyLoadAnimals,
                 v => Config.LazyLoadAnimals = v,
                 () => I18n.Get("config.lazy_animals.name"),
-                () => I18n.Get("config.lazy_animals.desc")
+                () => IsFullyDisabled ? "Disabled due to UI Info Suite 2" : I18n.Get("config.lazy_animals.desc")
             );
 
             configMenu.AddBoolOption(
@@ -73,7 +123,7 @@ namespace FasterMenuLoad
                 () => Config.LazyLoadPowers,
                 v => Config.LazyLoadPowers = v,
                 () => I18n.Get("config.lazy_powers.name"),
-                () => I18n.Get("config.lazy_powers.desc")
+                () => IsFullyDisabled ? "Disabled due to UI Info Suite 2" : I18n.Get("config.lazy_powers.desc")
             );
 
             configMenu.AddBoolOption(
@@ -81,7 +131,7 @@ namespace FasterMenuLoad
                 () => Config.LazyLoadCollections,
                 v => Config.LazyLoadCollections = v,
                 () => I18n.Get("config.lazy_collections.name"),
-                () => I18n.Get("config.lazy_collections.desc")
+                () => IsFullyDisabled ? "Disabled due to UI Info Suite 2" : I18n.Get("config.lazy_collections.desc")
             );
 
             // Add Debug section

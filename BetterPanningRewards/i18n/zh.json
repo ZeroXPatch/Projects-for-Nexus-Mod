@@ -1,0 +1,20 @@
+{
+  "config.general": "常规设置",
+  "config.enabled.name": "模组已启用",
+  "config.enabled.tooltip": "若禁用，将不会生成额外的淘金奖励。",
+  "day.monday": "周一设置",
+  "day.tuesday": "周二设置",
+  "day.wednesday": "周三设置",
+  "day.thursday": "周四设置",
+  "day.friday": "周五设置",
+  "day.saturday": "周六设置",
+  "day.sunday": "周日设置",
+  "option.ore_amount": "额外矿石数量",
+  "option.common_mats": "启用常见材料（木材/石头）",
+  "option.bonus_coal": "启用额外煤炭",
+  "option.copper_iron": "启用铜和铁",
+  "option.gold_bonus": "启用黄金奖励",
+  "option.iridium_bonus": "启用铱金奖励",
+  "option.prismatic_chance": "五彩碎片几率 (0-1)",
+  "option.rare_gem": "必出稀有宝石"
+}

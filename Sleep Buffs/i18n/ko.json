@@ -1,0 +1,20 @@
+{
+  "config.enableDebuffs.name": "수면 디버프 활성화",
+  "config.enableDebuffs.tooltip": "활성화하면 6시간 미만 수면(자정 이후) 시 무작위 부정 효과가 적용됩니다.",
+  "message.wellRested": "푹 쉰 기분이다!",
+  "message.sleepDeprived": "잠을 충분히 자지 못했다...",
+  "buff.wellRested.name": "충분한 휴식",
+  "buff.wellRested.description": "활력 충만: {{stats}} 증가.",
+  "buff.sleepDeprived.name": "수면 부족",
+  "buff.sleepDeprived.description": "몽롱함: {{stats}} 감소.",
+  "stat.farming": "농사",
+  "stat.fishing": "낚시",
+  "stat.mining": "채광",
+  "stat.combat": "전투",
+  "stat.foraging": "채집",
+  "stat.luck": "행운",
+  "stat.speed": "속도",
+  "stat.defense": "방어",
+  "stat.attack": "공격",
+  "stat.maxstamina": "최대 기력"
+}

@@ -1,0 +1,15 @@
+{
+  "config.auto-sleep.name": "睡眠时自动清理",
+  "config.auto-sleep.description": "在一天结束时自动清理纹理缓存。",
+  "config.frequency.name": "睡眠清理频率（天）",
+  "config.frequency.description": "睡眠时执行清理的频率。设置为 1 表示每晚执行。如果一天结束时卡顿，请提高该数值（例如 3）。",
+  "config.sleep-ram-min.name": "最小清理内存（MB）",
+  "config.sleep-ram-min.description": "仅当内存使用量高于此值时才执行清理。\n默认值：3072（3GB）。\n可避免在内存充足时发生不必要的卡顿。",
+  "config.manual-key.name": "手动清理按键",
+  "config.manual-key.description": "用于手动清理图像缓存的按键。可用于修复视觉异常。",
+  "config.ram-enable.name": "启用活动内存限制 – 如果使用“Stardew Stabilizer”请禁用",
+  "config.ram-enable.description": "启用后，当内存过高时将在游戏过程中清理缓存（注意：会导致卡顿）。",
+  "config.ram-value.name": "活动内存限制（MB）",
+  "config.ram-value.description": "在游戏过程中触发紧急清理的内存使用上限（MB）。",
+  "hud.purged": "已清理纹理缓存以提升性能。"
+}

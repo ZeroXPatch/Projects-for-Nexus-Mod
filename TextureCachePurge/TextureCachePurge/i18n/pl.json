@@ -1,0 +1,15 @@
+{
+  "config.auto-sleep.name": "Automatyczne czyszczenie przy śnie",
+  "config.auto-sleep.description": "Automatycznie czyści pamięć podręczną tekstur po zakończeniu dnia.",
+  "config.frequency.name": "Częstotliwość czyszczenia przy śnie (dni)",
+  "config.frequency.description": "Jak często uruchamiane jest czyszczenie przy śnie. Ustaw 1 dla każdej nocy. Zwiększ wartość (np. 3), jeśli przeszkadza zawieszanie się na koniec dnia.",
+  "config.sleep-ram-min.name": "Minimalny RAM do czyszczenia (MB)",
+  "config.sleep-ram-min.description": "Uruchamia czyszczenie tylko wtedy, gdy użycie RAM jest wyższe niż ta wartość.\nDomyślnie: 3072 (3GB).\nZapobiega niepotrzebnym zawieszeniom.",
+  "config.manual-key.name": "Klawisz ręcznego czyszczenia",
+  "config.manual-key.description": "Klawisz do ręcznego czyszczenia pamięci podręcznej obrazów. Przydatne do naprawy błędów wizualnych.",
+  "config.ram-enable.name": "Włącz aktywny limit RAM – Wyłącz, jeśli używasz 'Stardew Stabilizer'",
+  "config.ram-enable.description": "Po włączeniu mod czyści pamięć podręczną podczas gry, gdy RAM jest zbyt wysoki (UWAGA: powoduje zawieszenie).",
+  "config.ram-value.name": "Aktywny limit RAM (MB)",
+  "config.ram-value.description": "Limit użycia RAM w MB, który uruchamia awaryjne czyszczenie podczas gry.",
+  "hud.purged": "Pamięć podręczna tekstur wyczyszczona dla lepszej wydajności."
+}

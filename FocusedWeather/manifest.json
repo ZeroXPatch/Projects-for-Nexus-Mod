@@ -1,0 +1,10 @@
+{
+  "Name": "Focused Weather",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Optimizes weather rendering by only showing weather effects in the current location, significantly improving FPS during rain and snow.",
+  "UniqueID": "ZeroXPatch.FocusedWeather",
+  "EntryDll": "FocusedWeather.dll",
+  "MinimumApiVersion": "3.0.0",
+  "UpdateKeys": []
+}

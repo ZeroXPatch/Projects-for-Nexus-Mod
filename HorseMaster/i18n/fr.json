@@ -1,0 +1,20 @@
+{
+  "config.section.general": "Paramètres Généraux",
+  "config.hotkey.name": "Touche Appeler Cheval",
+  "config.hotkey.tooltip": "Appuyez sur cette touche pour téléporter votre cheval vers vous. Défaut : Aucun.",
+  "msg.summoned": "Cheval appelé !",
+  "config.debug.name": "Mode Débogage",
+  "config.debug.tooltip": "Afficher les stats de vitesse au-dessus du joueur.",
+  "config.adaptive.name": "Mode Adaptatif",
+  "config.adaptive.tooltip": "Si coché, la vitesse change selon votre % d'Énergie.",
+  "config.section.constant": "Mode Constant",
+  "config.constant.name": "Vitesse de Base du Cheval",
+  "config.constant.tooltip": "Vitesse ajoutée au cheval quand le Mode Adaptatif est DÉSACTIVÉ.",
+  "config.section.adaptive": "Niveaux d'Énergie",
+  "config.adaptive.note": "Définir le bonus de vitesse pour chaque niveau d'énergie.",
+  "config.energy.100": "100% (Énergie Pleine)",
+  "config.energy.99_70": "99% - 70% Énergie",
+  "config.energy.69_40": "69% - 40% Énergie",
+  "config.energy.39_10": "39% - 10% Énergie",
+  "config.energy.09_00": "9% - 0% (Épuisé)"
+}

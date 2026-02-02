@@ -1,0 +1,20 @@
+{
+  "config.enableDebuffs.name": "启用睡眠负面效果",
+  "config.enableDebuffs.tooltip": "若启用，睡眠少于 6 小时（午夜 12 点后）将获得随机负面属性。",
+  "message.wellRested": "你感觉精神饱满！",
+  "message.sleepDeprived": "你没有睡够……",
+  "buff.wellRested.name": "充分休息",
+  "buff.wellRested.description": "精力充沛：{{stats}} 提升。",
+  "buff.sleepDeprived.name": "睡眠不足",
+  "buff.sleepDeprived.description": "昏昏沉沉：{{stats}} 降低。",
+  "stat.farming": "耕作",
+  "stat.fishing": "钓鱼",
+  "stat.mining": "采矿",
+  "stat.combat": "战斗",
+  "stat.foraging": "采集",
+  "stat.luck": "运气",
+  "stat.speed": "速度",
+  "stat.defense": "防御",
+  "stat.attack": "攻击",
+  "stat.maxstamina": "最大体力"
+}

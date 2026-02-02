@@ -1,0 +1,10 @@
+{
+  "Name": "Auto-Fishing Master",
+  "Author": "YourName",
+  "Version": "1.0.0",
+  "Description": "Complete fishing automation. Auto-catch, auto-hit, max casting power, and auto-treasure collection without menus.",
+  "UniqueID": "YourName.AutoFishingMaster",
+  "EntryDll": "AutoFishingMaster.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

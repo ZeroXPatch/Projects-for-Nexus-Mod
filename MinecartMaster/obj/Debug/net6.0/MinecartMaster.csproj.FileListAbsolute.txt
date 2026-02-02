@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\MinecartMaster\bin\Debug\net6.0\MinecartMaster.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\MinecartMaster\bin\Debug\net6.0\MinecartMaster.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\MinecartMaster\obj\Debug\net6.0\MinecartMaster.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\MinecartMaster\obj\Debug\net6.0\MinecartMaster.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\MinecartMaster\obj\Debug\net6.0\MinecartMaster.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\MinecartMaster\obj\Debug\net6.0\MinecartMaster.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\MinecartMaster\obj\Debug\net6.0\MinecartMaster.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\MinecartMaster\obj\Debug\net6.0\MinecartMaster.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\MinecartMaster\obj\Debug\net6.0\MinecartMaster.dll

@@ -1,0 +1,23 @@
+{
+  "menu.title": "Hub des Raccourcis",
+  "menu.search": "Rechercher :",
+  "menu.button.addNew": "Ajouter",
+  "menu.button.sortKey": "Tri : Touche",
+  "menu.button.sortDescription": "Tri : Description",
+  "menu.button.sortCustomFirst": "Tri : Perso. d'abord",
+  "menu.button.hideEmpty": "Masquer vides",
+  "menu.button.showAll": "Tout afficher",
+  "menu.header.shortcut": "Raccourci",
+  "menu.header.description": "Description",
+  "menu.row.noDescription": "(Pas de description)",
+  "menu.row.edit": "(Modif)",
+  "menu.row.delete": "(Suppr)",
+  "menu.footer.showing": "Affiche {{count}} raccourcis",
+  "menu.footer.pressK": "Appuyez sur K pour basculer",
+  "edit.title": "Description pour {{key}} :",
+  "add.title": "Ajouter Raccourci Perso.",
+  "add.keyCombo": "Combinaison de touches (cliquer et appuyer) :",
+  "add.description": "Description :",
+  "add.button.save": "Enregistrer",
+  "add.button.cancel": "Annuler"
+}

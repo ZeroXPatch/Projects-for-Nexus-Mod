@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseMaster\bin\Debug\net6.0\HorseMaster.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseMaster\bin\Debug\net6.0\HorseMaster.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseMaster\obj\Debug\net6.0\HorseMaster.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseMaster\obj\Debug\net6.0\HorseMaster.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseMaster\obj\Debug\net6.0\HorseMaster.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseMaster\obj\Debug\net6.0\HorseMaster.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseMaster\obj\Debug\net6.0\HorseMaster.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseMaster\obj\Debug\net6.0\HorseMaster.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\HorseMaster\obj\Debug\net6.0\HorseMaster.dll

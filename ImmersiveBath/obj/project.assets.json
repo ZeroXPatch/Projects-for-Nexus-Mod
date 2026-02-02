@@ -43,11 +43,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\ImmersiveBath\\ImmersiveBath.csproj",
+      "projectUniqueName": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\ImmersiveBath - Google AI\\ImmersiveBath - Claude\\Claude.csproj",
       "projectName": "ImmersiveBath",
-      "projectPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\ImmersiveBath\\ImmersiveBath.csproj",
+      "projectPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\ImmersiveBath - Google AI\\ImmersiveBath - Claude\\Claude.csproj",
       "packagesPath": "C:\\Users\\zjmto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\ImmersiveBath\\obj\\",
+      "outputPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\ImmersiveBath - Google AI\\ImmersiveBath - Claude\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zjmto\\AppData\\Roaming\\NuGet\\NuGet.Config",

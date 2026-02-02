@@ -12,6 +12,8 @@ namespace ToolMaster
         private ModConfig Config = new();
         private float _lastStamina = 0;
         private bool _wasUsingTool = false;
+        private float _baseInterval = 0f;
+        private int _lastAnimationFrame = -1;
 
         public override void Entry(IModHelper helper)
         {
@@ -83,36 +85,45 @@ namespace ToolMaster
 
         private void HandleToolSpeed(Farmer player)
         {
-            int currentSpeed = this.Config.ConstantSpeed;
+            float currentSpeed = this.Config.ConstantSpeed;
 
             if (this.Config.UseAdaptive)
             {
-                currentSpeed = GetAdaptiveValue(Game1.timeOfDay, "speed");
+                currentSpeed = GetAdaptiveSpeed(Game1.timeOfDay);
             }
 
-            if (currentSpeed != 100)
+            if (player.FarmerSprite.currentSingleAnimation != -1)
             {
-                // Modify animation speed
-                float speedMultiplier = currentSpeed / 100f;
-
-                // Adjust the farmer sprite timer
-                if (player.FarmerSprite.currentSingleAnimation != -1)
+                // Detect if this is a new animation
+                if (player.FarmerSprite.currentAnimationIndex != _lastAnimationFrame)
                 {
-                    // Speed up the animation by reducing the interval between frames
-                    float baseInterval = 20f; // Default tool animation interval
-                    player.FarmerSprite.interval = baseInterval / speedMultiplier;
+                    // Store the base interval when animation starts/changes
+                    _baseInterval = player.FarmerSprite.interval;
+                    _lastAnimationFrame = player.FarmerSprite.currentAnimationIndex;
                 }
 
-                // Also adjust the tool's animation timer directly
-                if (player.CurrentTool != null)
+                if (currentSpeed != 1.0f && _baseInterval > 0)
                 {
-                    // This helps with charging tools like the hoe and watering can
-                    var toolTimer = typeof(StardewValley.Tool).GetField("upgradeLevel",
-                        System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                    // Clamp speed to safe range
+                    currentSpeed = Math.Clamp(currentSpeed, 0.1f, 5f);
 
-                    // For charged tools, we need to adjust how quickly they charge
-                    // This is handled by the animation speed above
+                    // currentSpeed is now a direct multiplier
+                    // 0.1 = very slow, 1.0 = normal, 5.0 = 5x faster
+                    // In Stardew, lower interval = faster, so we divide
+                    float newInterval = _baseInterval / currentSpeed;
+
+                    // Safety check: don't let interval go below 1ms to prevent issues
+                    if (newInterval < 1f)
+                        newInterval = 1f;
+
+                    player.FarmerSprite.interval = newInterval;
                 }
+            }
+            else
+            {
+                // Reset when no animation is playing
+                _baseInterval = 0f;
+                _lastAnimationFrame = -1;
             }
         }
 
@@ -125,13 +136,15 @@ namespace ToolMaster
                 if (timeOfDay >= 1700 && timeOfDay < 2400) return this.Config.Cost_1700_to_2400;
                 return this.Config.Cost_2400_to_0600;
             }
-            else // speed
-            {
-                if (timeOfDay >= 600 && timeOfDay < 900) return this.Config.Speed_0600_to_0900;
-                if (timeOfDay >= 900 && timeOfDay < 1700) return this.Config.Speed_0900_to_1700;
-                if (timeOfDay >= 1700 && timeOfDay < 2400) return this.Config.Speed_1700_to_2400;
-                return this.Config.Speed_2400_to_0600;
-            }
+            return 100; // Default for cost
+        }
+
+        private float GetAdaptiveSpeed(int timeOfDay)
+        {
+            if (timeOfDay >= 600 && timeOfDay < 900) return this.Config.Speed_0600_to_0900;
+            if (timeOfDay >= 900 && timeOfDay < 1700) return this.Config.Speed_0900_to_1700;
+            if (timeOfDay >= 1700 && timeOfDay < 2400) return this.Config.Speed_1700_to_2400;
+            return this.Config.Speed_2400_to_0600;
         }
 
         // --- DEBUG MODE ---
@@ -143,9 +156,9 @@ namespace ToolMaster
                 Vector2 textPos = new Vector2(screenPos.X, screenPos.Y - 120);
 
                 int cost = this.Config.UseAdaptive ? GetAdaptiveValue(Game1.timeOfDay, "cost") : this.Config.ConstantCost;
-                int speed = this.Config.UseAdaptive ? GetAdaptiveValue(Game1.timeOfDay, "speed") : this.Config.ConstantSpeed;
+                float speed = this.Config.UseAdaptive ? GetAdaptiveSpeed(Game1.timeOfDay) : this.Config.ConstantSpeed;
 
-                string debugText = $"Tool Master\nCost: {cost}%\nSpeed: {speed}%\nTime: {Game1.timeOfDay}\nUsing Tool: {Game1.player.UsingTool}\nStamina: {(int)Game1.player.stamina}";
+                string debugText = $"Tool Master\nCost: {cost}%\nSpeed: {speed:F1}x\nTime: {Game1.timeOfDay}\nUsing Tool: {Game1.player.UsingTool}\nStamina: {(int)Game1.player.stamina}";
 
                 e.SpriteBatch.DrawString(Game1.dialogueFont, debugText, textPos + new Vector2(2, 2), Color.Black);
                 e.SpriteBatch.DrawString(Game1.dialogueFont, debugText, textPos, Color.Orange);
@@ -182,7 +195,7 @@ namespace ToolMaster
             configMenu.AddNumberOption(this.ModManifest, () => this.Config.ConstantSpeed, val => this.Config.ConstantSpeed = val,
                 () => this.Helper.Translation.Get("config.speed.name"),
                 () => this.Helper.Translation.Get("config.speed.tooltip"),
-                10, 200, 5, val => $"{val}%");
+                0.1f, 5f, 0.1f, val => $"{val:F1}x");
 
             // Adaptive Mode
             configMenu.AddSectionTitle(this.ModManifest, () => this.Helper.Translation.Get("config.section.adaptive"));
@@ -207,7 +220,7 @@ namespace ToolMaster
 
         private void AddTimeslotOptions(IGenericModConfigMenuApi api, string timeKey,
             Func<int> getCost, Action<int> setCost,
-            Func<int> getSpeed, Action<int> setSpeed)
+            Func<float> getSpeed, Action<float> setSpeed)
         {
             api.AddSubHeader(this.ModManifest, () => this.Helper.Translation.Get(timeKey));
 
@@ -219,7 +232,7 @@ namespace ToolMaster
             api.AddNumberOption(this.ModManifest, getSpeed, setSpeed,
                 () => this.Helper.Translation.Get("config.speed.name"),
                 () => this.Helper.Translation.Get("config.speed.tooltip"),
-                10, 200, 5, val => $"{val}%");
+                0.1f, 5f, 0.1f, val => $"{val:F1}x");
         }
     }
 }

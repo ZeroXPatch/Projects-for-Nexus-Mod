@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using StardewModdingAPI;
@@ -17,6 +18,17 @@ namespace ImmersiveBath
         private string CurrentState = "Clean";
         private bool WasRevitalizedEligible = false;
         private string LastTalkedNPC = "";
+        private Dictionary<NPC, EmoteDisplay> ActiveEmotes = new Dictionary<NPC, EmoteDisplay>();
+        private Texture2D? SickEmoteTexture = null;
+
+        private class EmoteDisplay
+        {
+            public float Timer;
+            public float StartY;
+            public float CurrentY;
+            public const float Duration = 2.0f; // 2 seconds
+            public const float RiseDistance = 64f; // pixels to rise
+        }
 
         public override void Entry(IModHelper helper)
         {
@@ -25,9 +37,11 @@ namespace ImmersiveBath
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.TimeChanged += OnTimeChanged;
             helper.Events.GameLoop.DayStarted += OnDayStarted;
+            helper.Events.GameLoop.UpdateTicked += OnUpdateTicked;
             helper.Events.Input.ButtonPressed += OnButtonPressed;
             helper.Events.Content.AssetRequested += OnAssetRequested;
             helper.Events.Display.RenderedHud += OnRenderedHud;
+            helper.Events.Display.RenderedWorld += OnRenderedWorld;
             helper.Events.Display.MenuChanged += OnMenuChanged;
         }
 
@@ -37,6 +51,13 @@ namespace ImmersiveBath
             if (configMenu is null) return;
 
             configMenu.Register(ModManifest, () => Config = new ModConfig(), () => Helper.WriteConfig(Config));
+
+            // --- GENERAL SECTION ---
+            configMenu.AddSectionTitle(ModManifest, () => Helper.Translation.Get("config.section.general"));
+
+            configMenu.AddBoolOption(ModManifest, () => Config.BathAnywhere, (v) => Config.BathAnywhere = v,
+                () => Helper.Translation.Get("config.bath-anywhere.name"),
+                () => Helper.Translation.Get("config.bath-anywhere.tooltip"));
 
             // --- UI SECTION (Integers) ---
             configMenu.AddSectionTitle(ModManifest, () => Helper.Translation.Get("config.section.ui"));
@@ -68,6 +89,8 @@ namespace ImmersiveBath
             configMenu.AddNumberOption(ModManifest, () => Config.DirtyDefenseBuff, (v) => Config.DirtyDefenseBuff = v, () => Helper.Translation.Get("config.defense-buff.name"), min: 0, max: 10);
 
             configMenu.AddNumberOption(ModManifest, () => Config.DirtyAttackBuff, (v) => Config.DirtyAttackBuff = v, () => Helper.Translation.Get("config.attack-buff.name"), min: 0, max: 10);
+
+            configMenu.AddNumberOption(ModManifest, () => Config.DirtyFriendshipPenalty, (v) => Config.DirtyFriendshipPenalty = v, () => Helper.Translation.Get("config.dirty-friendship.name"), min: -50, max: 0);
 
             // --- REVITALIZED (Integers) ---
             configMenu.AddSectionTitle(ModManifest, () => Helper.Translation.Get("config.section.revitalized"));
@@ -101,8 +124,8 @@ namespace ImmersiveBath
                     {
                         ClassName = "GenericTool",
                         Name = "Bath Sponge",
-                        DisplayName = Helper.Translation.Get("item.name"),
-                        Description = Helper.Translation.Get("item.description"),
+                        DisplayName = Helper.Translation.Get("item.sponge.name"),
+                        Description = Helper.Translation.Get("item.sponge.description"),
                         Texture = "ZeroXPatch.ImmersiveBath/Sponge",
                         AttachmentSlots = 1,
                         SalePrice = 50
@@ -111,6 +134,8 @@ namespace ImmersiveBath
             }
             if (e.NameWithoutLocale.IsEquivalentTo("ZeroXPatch.ImmersiveBath/Sponge")) e.LoadFromModFile<Texture2D>("assets/sponge.png", AssetLoadPriority.Medium);
             if (e.NameWithoutLocale.IsEquivalentTo("ZeroXPatch.ImmersiveBath/Soap")) e.LoadFromModFile<Texture2D>("assets/soap.png", AssetLoadPriority.Medium);
+            if (e.NameWithoutLocale.IsEquivalentTo("ZeroXPatch.ImmersiveBath/FriendshipDebuff")) e.LoadFromModFile<Texture2D>("assets/sick_emote.png", AssetLoadPriority.Medium);
+            if (e.NameWithoutLocale.IsEquivalentTo("ZeroXPatch.ImmersiveBath/HeartBuff")) e.LoadFromModFile<Texture2D>("assets/heart_buff.png", AssetLoadPriority.Medium);
 
             if (e.NameWithoutLocale.IsEquivalentTo("Data/Shops"))
             {
@@ -130,7 +155,7 @@ namespace ImmersiveBath
             if (!Context.IsPlayerFree) return;
             if (e.Button.IsActionButton() && Game1.player.CurrentTool?.QualifiedItemId == "(T)ZeroXPatch.BathSponge")
             {
-                if (IsNearWater(Game1.player))
+                if (Config.BathAnywhere || IsNearWater(Game1.player))
                 {
                     Helper.Input.Suppress(e.Button);
                     Response[] responses = { new Response("Yes", Helper.Translation.Get("dialog.yes")), new Response("No", Helper.Translation.Get("dialog.no")) };
@@ -192,31 +217,150 @@ namespace ImmersiveBath
             }
             Game1.player.buffs.Remove("ZeroXPatch.CleanBuff");
             Game1.player.buffs.Remove("ZeroXPatch.DirtyBuff");
+            Game1.player.buffs.Remove("ZeroXPatch.FriendshipDebuff");
 
             if (CurrentState == "Clean")
             {
-                Game1.player.buffs.Apply(new Buff(id: "ZeroXPatch.CleanBuff", displayName: Helper.Translation.Get("buff.clean.name"), effects: new BuffEffects() { LuckLevel = { Config.CleanLuckBuff } }, duration: 60000));
+                Game1.player.buffs.Apply(new Buff(
+                    id: "ZeroXPatch.CleanBuff",
+                    displayName: Helper.Translation.Get("buff.clean.name"),
+                    iconTexture: Helper.GameContent.Load<Texture2D>("ZeroXPatch.ImmersiveBath/HeartBuff"),
+                    effects: new BuffEffects() { LuckLevel = { Config.CleanLuckBuff } },
+                    duration: 60000,
+                    description: Helper.Translation.Get("buff.clean.description")
+                ));
             }
             else if (CurrentState == "Dirty")
             {
                 Game1.player.buffs.Apply(new Buff(id: "ZeroXPatch.DirtyBuff", displayName: Helper.Translation.Get("buff.dirty.name"), effects: new BuffEffects() { Speed = { Config.DirtySpeedBuff }, Defense = { Config.DirtyDefenseBuff }, Attack = { Config.DirtyAttackBuff } }, duration: 60000));
+
+                // Add Friendship Debuff with custom icon
+                Game1.player.buffs.Apply(new Buff(
+                    id: "ZeroXPatch.FriendshipDebuff",
+                    displayName: Helper.Translation.Get("buff.friendshipdebuff.name"),
+                    iconTexture: Helper.GameContent.Load<Texture2D>("ZeroXPatch.ImmersiveBath/FriendshipDebuff"),
+                    duration: 60000,
+                    description: Helper.Translation.Get("buff.friendshipdebuff.description")
+                ));
             }
         }
 
         private void OnMenuChanged(object? sender, MenuChangedEventArgs e)
         {
-            if (CurrentState == "Clean" && e.NewMenu is DialogueBox)
+            if (e.NewMenu is DialogueBox)
             {
                 NPC s = Game1.currentSpeaker;
-                if (s != null && LastTalkedNPC != s.Name) { Game1.player.changeFriendship(Config.CleanFriendshipBonus, s); LastTalkedNPC = s.Name; }
+                if (s != null && LastTalkedNPC != s.Name)
+                {
+                    if (CurrentState == "Clean")
+                    {
+                        Game1.player.changeFriendship(Config.CleanFriendshipBonus, s);
+                    }
+                    else if (CurrentState == "Dirty")
+                    {
+                        Game1.player.changeFriendship(Config.DirtyFriendshipPenalty, s);
+                        // Show angry/frustrated emote above NPC
+                        s.doEmote(12);
+                    }
+                    LastTalkedNPC = s.Name;
+                }
             }
             if (e.NewMenu == null) LastTalkedNPC = "";
+        }
+
+        private void ShowSickEmote(NPC npc)
+        {
+            if (SickEmoteTexture == null)
+            {
+                try
+                {
+                    SickEmoteTexture = Helper.GameContent.Load<Texture2D>("ZeroXPatch.ImmersiveBath/SickEmote");
+                }
+                catch
+                {
+                    Monitor.Log("Failed to load sick emote texture. Make sure assets/sick_emote.png exists.", LogLevel.Warn);
+                    return;
+                }
+            }
+
+            var emote = new EmoteDisplay
+            {
+                Timer = 0f,
+                StartY = npc.Position.Y - 96f, // Start above NPC's head
+                CurrentY = npc.Position.Y - 96f
+            };
+            ActiveEmotes[npc] = emote;
+        }
+
+        private void OnUpdateTicked(object? sender, UpdateTickedEventArgs e)
+        {
+            if (!Context.IsWorldReady) return;
+
+            // Update emote animations
+            var toRemove = new List<NPC>();
+            foreach (var kvp in ActiveEmotes)
+            {
+                var emote = kvp.Value;
+                emote.Timer += (float)Game1.currentGameTime.ElapsedGameTime.TotalSeconds;
+
+                if (emote.Timer >= EmoteDisplay.Duration)
+                {
+                    toRemove.Add(kvp.Key);
+                }
+                else
+                {
+                    // Rise up slowly and fade
+                    float progress = emote.Timer / EmoteDisplay.Duration;
+                    emote.CurrentY = emote.StartY - (EmoteDisplay.RiseDistance * progress);
+                }
+            }
+
+            foreach (var npc in toRemove)
+            {
+                ActiveEmotes.Remove(npc);
+            }
+        }
+
+        private void OnRenderedWorld(object? sender, RenderedWorldEventArgs e)
+        {
+            if (!Context.IsWorldReady || SickEmoteTexture == null) return;
+
+            foreach (var kvp in ActiveEmotes)
+            {
+                var npc = kvp.Key;
+                var emote = kvp.Value;
+
+                // Calculate opacity (fade out as it rises)
+                float progress = emote.Timer / EmoteDisplay.Duration;
+                float opacity = 1f - progress;
+
+                // Get screen position
+                Vector2 npcScreenPos = Game1.GlobalToLocal(Game1.viewport, npc.Position);
+                Vector2 emoteScreenPos = new Vector2(
+                    npcScreenPos.X + 16f, // Center on NPC (32px sprite / 2 - 28px emote / 2)
+                    emote.CurrentY - Game1.viewport.Y
+                );
+
+                // Draw the emote
+                e.SpriteBatch.Draw(
+                    SickEmoteTexture,
+                    emoteScreenPos,
+                    null,
+                    Color.White * opacity,
+                    0f,
+                    Vector2.Zero,
+                    2f, // Scale 2x (56x56 pixels at 2x scale)
+                    SpriteEffects.None,
+                    1f // Draw on top layer
+                );
+            }
         }
 
         private void OnDayStarted(object? sender, DayStartedEventArgs e)
         {
             if (WasRevitalizedEligible) Game1.player.buffs.Apply(new Buff(id: "ZeroXPatch.Revitalized", displayName: Helper.Translation.Get("buff.revitalized.name"), effects: new BuffEffects() { MaxStamina = { Config.RevitalizedMaxEnergy } }, duration: -2));
             WasRevitalizedEligible = false;
+            ActiveEmotes.Clear(); // Clear any leftover emotes
         }
 
         private void OnRenderedHud(object? sender, RenderedHudEventArgs e)

@@ -1,0 +1,18 @@
+{
+  "config.toggleEnabled.name": "Enable Auto-Fishing",
+  "config.toggleEnabled.description": "Master toggle to enable or disable all auto-fishing features",
+  "config.toggleKey.name": "Toggle Hotkey",
+  "config.toggleKey.description": "Press this key to quickly enable/disable auto-fishing",
+  "config.autoCast.name": "Auto Cast",
+  "config.autoCast.description": "Automatically cast your fishing rod when ready",
+  "config.autoHit.name": "Auto Hook and Skip Mini Game",
+  "config.autoHit.description": "Automatically catch fish when they bite",
+  "config.autoLootTreasure.name": "Auto Loot Treasure (Only works when 'Auto Hook and Skip Mini Game' is on)",
+  "config.autoLootTreasure.description": "Automatically collect treasure chests without opening menus",
+  "config.alwaysPerfect.name": "Always Perfect Catch",
+  "config.alwaysPerfect.description": "Every catch will be perfect quality",
+  "config.alwaysMaxCastPower.name": "Always Max Cast Power",
+  "config.alwaysMaxCastPower.description": "Always cast at maximum power/distance",
+  "config.debugMode.name": "Debug Mode",
+  "config.debugMode.description": "Enable debug logging for troubleshooting"
+}

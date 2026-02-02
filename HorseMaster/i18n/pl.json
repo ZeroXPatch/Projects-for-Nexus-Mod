@@ -1,0 +1,20 @@
+{
+  "config.section.general": "Ustawienia Ogólne",
+  "config.hotkey.name": "Klawisz Przywołania Konia",
+  "config.hotkey.tooltip": "Naciśnij ten klawisz, aby przeteleportować konia do siebie. Domyślnie: Brak.",
+  "msg.summoned": "Koń przywołany!",
+  "config.debug.name": "Tryb Debugowania",
+  "config.debug.tooltip": "Pokaż statystyki prędkości nad graczem.",
+  "config.adaptive.name": "Tryb Adaptacyjny",
+  "config.adaptive.tooltip": "Jeśli zaznaczone, prędkość zmienia się zależnie od % Energii.",
+  "config.section.constant": "Tryb Stały",
+  "config.constant.name": "Bazowa Prędkość Konia",
+  "config.constant.tooltip": "Prędkość dodana do konia, gdy Tryb Adaptacyjny jest WYŁĄCZONY.",
+  "config.section.adaptive": "Poziomy Energii",
+  "config.adaptive.note": "Ustaw bonus prędkości dla każdego poziomu energii.",
+  "config.energy.100": "100% (Pełna Energia)",
+  "config.energy.99_70": "99% - 70% Energii",
+  "config.energy.69_40": "69% - 40% Energii",
+  "config.energy.39_10": "39% - 10% Energii",
+  "config.energy.09_00": "9% - 0% (Wyczerpanie)"
+}

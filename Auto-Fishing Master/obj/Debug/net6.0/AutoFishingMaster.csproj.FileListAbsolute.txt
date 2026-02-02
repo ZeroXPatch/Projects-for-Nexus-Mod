@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Auto-Fishing Master\bin\Debug\net6.0\AutoFishingMaster.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Auto-Fishing Master\bin\Debug\net6.0\AutoFishingMaster.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Auto-Fishing Master\obj\Debug\net6.0\AutoFishingMaster.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Auto-Fishing Master\obj\Debug\net6.0\AutoFishingMaster.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Auto-Fishing Master\obj\Debug\net6.0\AutoFishingMaster.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Auto-Fishing Master\obj\Debug\net6.0\AutoFishingMaster.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Auto-Fishing Master\obj\Debug\net6.0\AutoFishingMaster.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Auto-Fishing Master\obj\Debug\net6.0\AutoFishingMaster.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\Auto-Fishing Master\obj\Debug\net6.0\AutoFishingMaster.dll

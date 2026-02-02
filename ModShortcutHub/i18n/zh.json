@@ -1,0 +1,23 @@
+{
+  "menu.title": "快捷键参考中心",
+  "menu.search": "搜索：",
+  "menu.button.addNew": "新增",
+  "menu.button.sortKey": "排序：按键",
+  "menu.button.sortDescription": "排序：描述",
+  "menu.button.sortCustomFirst": "排序：自定义优先",
+  "menu.button.hideEmpty": "隐藏空项",
+  "menu.button.showAll": "显示全部",
+  "menu.header.shortcut": "快捷键",
+  "menu.header.description": "描述",
+  "menu.row.noDescription": "（无描述）",
+  "menu.row.edit": "（编辑）",
+  "menu.row.delete": "（删除）",
+  "menu.footer.showing": "显示 {{count}} 个快捷键",
+  "menu.footer.pressK": "按 K 键切换菜单",
+  "edit.title": "输入 {{key}} 的描述：",
+  "add.title": "添加自定义快捷键",
+  "add.keyCombo": "按键组合（点击后按下）：",
+  "add.description": "描述：",
+  "add.button.save": "保存",
+  "add.button.cancel": "取消"
+}

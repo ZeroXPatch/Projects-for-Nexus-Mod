@@ -1,0 +1,10 @@
+{
+  "Name": "Black and White World",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Applies a noir grayscale filter to the game world.",
+  "UniqueID": "ZeroXPatch.BlackAndWhiteMod",
+  "EntryDll": "BlackAndWhiteMod.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

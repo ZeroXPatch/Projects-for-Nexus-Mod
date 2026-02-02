@@ -1,0 +1,15 @@
+{
+  "config.auto-sleep.name": "Tự động dọn khi ngủ",
+  "config.auto-sleep.description": "Tự động dọn bộ nhớ đệm texture khi ngày kết thúc.",
+  "config.frequency.name": "Tần suất dọn khi ngủ (ngày)",
+  "config.frequency.description": "Mức độ thường xuyên chạy dọn khi ngủ. Đặt 1 cho mỗi đêm. Tăng giá trị (ví dụ 3) nếu bị đứng hình lúc hết ngày.",
+  "config.sleep-ram-min.name": "RAM tối thiểu để dọn (MB)",
+  "config.sleep-ram-min.description": "Chỉ chạy dọn khi mức sử dụng RAM cao hơn giá trị này.\nMặc định: 3072 (3GB).\nTránh đứng hình không cần thiết.",
+  "config.manual-key.name": "Phím dọn thủ công",
+  "config.manual-key.description": "Phím dùng để dọn bộ nhớ đệm hình ảnh thủ công. Hữu ích để sửa lỗi hiển thị.",
+  "config.ram-enable.name": "Bật giới hạn RAM chủ động – Tắt nếu dùng 'Stardew Stabilizer'",
+  "config.ram-enable.description": "Nếu bật, mod sẽ dọn bộ nhớ đệm trong lúc chơi khi RAM quá cao (CẢNH BÁO: gây đứng hình).",
+  "config.ram-value.name": "Giới hạn RAM chủ động (MB)",
+  "config.ram-value.description": "Giới hạn sử dụng RAM (MB) kích hoạt dọn khẩn cấp khi đang chơi.",
+  "hud.purged": "Đã dọn bộ nhớ đệm texture để cải thiện hiệu suất."
+}

@@ -1,0 +1,20 @@
+{
+  "config.section.general": "Общие настройки",
+  "config.hotkey.name": "Клавиша призыва лошади",
+  "config.hotkey.tooltip": "Нажмите эту клавишу, чтобы телепортировать лошадь к себе. По умолчанию: Нет.",
+  "msg.summoned": "Лошадь призвана!",
+  "config.debug.name": "Режим отладки",
+  "config.debug.tooltip": "Показывать текущую скорость над игроком.",
+  "config.adaptive.name": "Адаптивный режим",
+  "config.adaptive.tooltip": "Если включено, скорость меняется в зависимости от % энергии.",
+  "config.section.constant": "Постоянный режим",
+  "config.constant.name": "Базовая скорость лошади",
+  "config.constant.tooltip": "Скорость, добавляемая лошади, когда Адаптивный режим ВЫКЛ.",
+  "config.section.adaptive": "Уровни энергии",
+  "config.adaptive.note": "Установите бонус скорости для каждого уровня энергии.",
+  "config.energy.100": "100% (Полная энергия)",
+  "config.energy.99_70": "99% - 70% Энергии",
+  "config.energy.69_40": "69% - 40% Энергии",
+  "config.energy.39_10": "39% - 10% Энергии",
+  "config.energy.09_00": "9% - 0% (Истощение)"
+}

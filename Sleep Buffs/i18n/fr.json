@@ -1,0 +1,20 @@
+{
+  "config.enableDebuffs.name": "Activer les malus de sommeil",
+  "config.enableDebuffs.tooltip": "Si activé, dormir moins de 6 heures (après minuit) donnera des statistiques négatives aléatoires.",
+  "message.wellRested": "Vous vous sentez bien reposé !",
+  "message.sleepDeprived": "Vous n'avez pas assez dormi...",
+  "buff.wellRested.name": "Bien reposé",
+  "buff.wellRested.description": "Énergisé : {{stats}} en hausse.",
+  "buff.sleepDeprived.name": "Privé de sommeil",
+  "buff.sleepDeprived.description": "Brumeux : {{stats}} en baisse.",
+  "stat.farming": "Agriculture",
+  "stat.fishing": "Pêche",
+  "stat.mining": "Mine",
+  "stat.combat": "Combat",
+  "stat.foraging": "Cueillette",
+  "stat.luck": "Chance",
+  "stat.speed": "Vitesse",
+  "stat.defense": "Défense",
+  "stat.attack": "Attaque",
+  "stat.maxstamina": "Endurance max."
+}

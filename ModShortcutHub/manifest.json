@@ -1,0 +1,10 @@
+{
+  "Name": "Mod Shortcut Reference Hub",
+  "Author": "ZeroXPatch",
+  "Version": "1.2.0",
+  "Description": "A centralized hub for documenting and referencing all your mod keybindings. Press K to open!",
+  "UniqueID": "ZeroXPatch.ModShortcutReferenceHub",
+  "MinimumApiVersion": "3.0.0",
+  "UpdateKeys": [ "Nexus:41846" ],
+  "EntryDll": "ModShortcutReferenceHub.dll"
+}

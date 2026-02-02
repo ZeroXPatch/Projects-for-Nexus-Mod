@@ -1,0 +1,22 @@
+{
+  "config.general": "General Settings",
+  "config.enabled.name": "Mod Enabled",
+  "config.enabled.tooltip": "If disabled, no extra panning rewards will spawn.",
+
+  "day.monday": "Monday Settings",
+  "day.tuesday": "Tuesday Settings",
+  "day.wednesday": "Wednesday Settings",
+  "day.thursday": "Thursday Settings",
+  "day.friday": "Friday Settings",
+  "day.saturday": "Saturday Settings",
+  "day.sunday": "Sunday Settings",
+
+  "option.ore_amount": "Extra Ore Count",
+  "option.common_mats": "Enable Common Materials (Wood/Stone)",
+  "option.bonus_coal": "Enable Bonus Coal",
+  "option.copper_iron": "Enable Copper & Iron",
+  "option.gold_bonus": "Enable Gold Bonus",
+  "option.iridium_bonus": "Enable Iridium Bonus",
+  "option.prismatic_chance": "Prismatic Shard Chance (0-1)",
+  "option.rare_gem": "Guaranteed Rare Gem"
+}

@@ -1,0 +1,23 @@
+{
+  "menu.title": "Trung Tâm Phím Tắt",
+  "menu.search": "Tìm kiếm:",
+  "menu.button.addNew": "Thêm Mới",
+  "menu.button.sortKey": "Sắp xếp: Phím",
+  "menu.button.sortDescription": "Sắp xếp: Mô tả",
+  "menu.button.sortCustomFirst": "Sắp xếp: Tùy chỉnh trước",
+  "menu.button.hideEmpty": "Ẩn mục trống",
+  "menu.button.showAll": "Hiện tất cả",
+  "menu.header.shortcut": "Phím tắt",
+  "menu.header.description": "Mô tả",
+  "menu.row.noDescription": "(Không mô tả)",
+  "menu.row.edit": "(Sửa)",
+  "menu.row.delete": "(Xóa)",
+  "menu.footer.showing": "Đang hiện {{count}} phím tắt",
+  "menu.footer.pressK": "Nhấn K để bật/tắt",
+  "edit.title": "Nhập mô tả cho {{key}}:",
+  "add.title": "Thêm Phím Tắt Tùy Chỉnh",
+  "add.keyCombo": "Tổ hợp phím (nhấn để nhập):",
+  "add.description": "Mô tả:",
+  "add.button.save": "Lưu",
+  "add.button.cancel": "Hủy"
+}

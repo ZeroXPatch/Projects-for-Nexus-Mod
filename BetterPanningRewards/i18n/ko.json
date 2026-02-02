@@ -1,0 +1,20 @@
+{
+  "config.general": "일반 설정",
+  "config.enabled.name": "모드 활성화",
+  "config.enabled.tooltip": "비활성화 시, 패닝 추가 보상이 생성되지 않습니다.",
+  "day.monday": "월요일 설정",
+  "day.tuesday": "화요일 설정",
+  "day.wednesday": "수요일 설정",
+  "day.thursday": "목요일 설정",
+  "day.friday": "금요일 설정",
+  "day.saturday": "토요일 설정",
+  "day.sunday": "일요일 설정",
+  "option.ore_amount": "추가 광석 수량",
+  "option.common_mats": "일반 재료 활성화 (나무/돌)",
+  "option.bonus_coal": "보너스 석탄 활성화",
+  "option.copper_iron": "구리 & 철 활성화",
+  "option.gold_bonus": "금 보너스 활성화",
+  "option.iridium_bonus": "이리듐 보너스 활성화",
+  "option.prismatic_chance": "무지개 파편 확률 (0-1)",
+  "option.rare_gem": "희귀 보석 보장"
+}

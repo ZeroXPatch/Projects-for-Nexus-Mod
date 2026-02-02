@@ -1,0 +1,20 @@
+{
+  "config.general": "一般設定",
+  "config.enabled.name": "Mod有効化",
+  "config.enabled.tooltip": "無効にすると、砂金掘りの追加報酬が発生しません。",
+  "day.monday": "月曜日の設定",
+  "day.tuesday": "火曜日の設定",
+  "day.wednesday": "水曜日の設定",
+  "day.thursday": "木曜日の設定",
+  "day.friday": "金曜日の設定",
+  "day.saturday": "土曜日の設定",
+  "day.sunday": "日曜日の設定",
+  "option.ore_amount": "追加鉱石数",
+  "option.common_mats": "一般素材を有効化 (木材/石)",
+  "option.bonus_coal": "ボーナス石炭を有効化",
+  "option.copper_iron": "銅・鉄を有効化",
+  "option.gold_bonus": "金ボーナスを有効化",
+  "option.iridium_bonus": "イリジウムボーナスを有効化",
+  "option.prismatic_chance": "プリズムの破片の確率 (0-1)",
+  "option.rare_gem": "レア宝石確定"
+}

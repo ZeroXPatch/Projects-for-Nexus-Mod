@@ -1,0 +1,15 @@
+{
+  "config.auto-sleep.name": "Limpieza automática al dormir",
+  "config.auto-sleep.description": "Limpia automáticamente la caché de texturas cuando termina el día.",
+  "config.frequency.name": "Frecuencia de limpieza al dormir (días)",
+  "config.frequency.description": "Con qué frecuencia se ejecuta la limpieza al dormir. Establece 1 para cada noche. Aumenta este valor (p.ej. 3) si el congelamiento al final del día te molesta.",
+  "config.sleep-ram-min.name": "RAM mínima para limpiar (MB)",
+  "config.sleep-ram-min.description": "Solo ejecuta la limpieza si el uso de RAM es mayor que este valor.\nPredeterminado: 3072 (3GB).\nEvita congelamientos innecesarios si la memoria está bien.",
+  "config.manual-key.name": "Tecla de limpieza manual",
+  "config.manual-key.description": "La tecla para limpiar manualmente la caché de imágenes. Útil para corregir errores visuales.",
+  "config.ram-enable.name": "Habilitar límite activo de RAM – Desactiva esto si usas 'Stardew Stabilizer'",
+  "config.ram-enable.description": "Si está habilitado, el mod limpiará la caché mientras juegas si la RAM es demasiado alta (PRECAUCIÓN: causa congelamientos).",
+  "config.ram-value.name": "Límite activo de RAM (MB)",
+  "config.ram-value.description": "El límite de uso de RAM en MB que activa una limpieza de emergencia mientras juegas.",
+  "hud.purged": "Caché de texturas limpiada para mejorar el rendimiento."
+}

@@ -1,0 +1,20 @@
+{
+  "config.general": "Общие настройки",
+  "config.enabled.name": "Мод включен",
+  "config.enabled.tooltip": "Если отключено, дополнительные награды за промывку не появятся.",
+  "day.monday": "Настройки понедельника",
+  "day.tuesday": "Настройки вторника",
+  "day.wednesday": "Настройки среды",
+  "day.thursday": "Настройки четверга",
+  "day.friday": "Настройки пятницы",
+  "day.saturday": "Настройки субботы",
+  "day.sunday": "Настройки воскресенья",
+  "option.ore_amount": "Кол-во доп. руды",
+  "option.common_mats": "Обычные материалы (Дерево/Камень)",
+  "option.bonus_coal": "Включить бонусный уголь",
+  "option.copper_iron": "Включить Медь и Железо",
+  "option.gold_bonus": "Включить Золото",
+  "option.iridium_bonus": "Включить Иридий",
+  "option.prismatic_chance": "Шанс Радужного осколка (0-1)",
+  "option.rare_gem": "Гарантированный редкий самоцвет"
+}

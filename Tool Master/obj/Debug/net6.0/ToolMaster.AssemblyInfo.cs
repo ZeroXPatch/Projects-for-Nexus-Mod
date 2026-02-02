@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ToolMaster")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+615892aad853d2c0f25028b0c7ad4fd4077b0df4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6952400195c776c0d6bddad12f678918c5059b83")]
 [assembly: System.Reflection.AssemblyProductAttribute("ToolMaster")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ToolMaster")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

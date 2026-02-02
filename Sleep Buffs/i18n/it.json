@@ -1,0 +1,20 @@
+{
+  "config.enableDebuffs.name": "Abilita penalità da sonno",
+  "config.enableDebuffs.tooltip": "Se attivo, dormire meno di 6 ore (dopo mezzanotte) darà statistiche negative casuali.",
+  "message.wellRested": "Ti senti ben riposato!",
+  "message.sleepDeprived": "Non hai dormito abbastanza...",
+  "buff.wellRested.name": "Ben riposato",
+  "buff.wellRested.description": "Energizzato: {{stats}} aumentata.",
+  "buff.sleepDeprived.name": "Privato del sonno",
+  "buff.sleepDeprived.description": "Intontito: {{stats}} ridotta.",
+  "stat.farming": "Agricoltura",
+  "stat.fishing": "Pesca",
+  "stat.mining": "Estrazione",
+  "stat.combat": "Combattimento",
+  "stat.foraging": "Raccolta",
+  "stat.luck": "Fortuna",
+  "stat.speed": "Velocità",
+  "stat.defense": "Difesa",
+  "stat.attack": "Attacco",
+  "stat.maxstamina": "Resistenza massima"
+}

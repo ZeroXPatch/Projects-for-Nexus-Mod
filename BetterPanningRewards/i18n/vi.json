@@ -1,0 +1,20 @@
+{
+  "config.general": "Cài Đặt Chung",
+  "config.enabled.name": "Đã Bật Mod",
+  "config.enabled.tooltip": "Nếu tắt, sẽ không có thêm phần thưởng đãi vàng.",
+  "day.monday": "Cài Đặt Thứ Hai",
+  "day.tuesday": "Cài Đặt Thứ Ba",
+  "day.wednesday": "Cài Đặt Thứ Tư",
+  "day.thursday": "Cài Đặt Thứ Năm",
+  "day.friday": "Cài Đặt Thứ Sáu",
+  "day.saturday": "Cài Đặt Thứ Bảy",
+  "day.sunday": "Cài Đặt Chủ Nhật",
+  "option.ore_amount": "Số Lượng Quặng Thêm",
+  "option.common_mats": "Bật Vật Liệu Thường (Gỗ/Đá)",
+  "option.bonus_coal": "Bật Than Thưởng",
+  "option.copper_iron": "Bật Đồng & Sắt",
+  "option.gold_bonus": "Bật Thưởng Vàng",
+  "option.iridium_bonus": "Bật Thưởng Iridium",
+  "option.prismatic_chance": "Tỉ Lệ Mảnh Vỡ Lăng Kính (0-1)",
+  "option.rare_gem": "Đảm Bảo Đá Quý Hiếm"
+}

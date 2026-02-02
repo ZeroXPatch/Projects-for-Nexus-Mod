@@ -1,7 +1,7 @@
 {
   "Name": "Immersive Bath",
   "Author": "ZeroXPatch",
-  "Version": "1.0.0",
+  "Version": "3.0.0",
   "Description": "Adds a cleanliness mechanic. Use a sponge near water to stay clean and get buffs.",
   "UniqueID": "ZeroXPatch.ImmersiveBath",
   "EntryDll": "ImmersiveBath.dll",

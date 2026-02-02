@@ -1,7 +1,10 @@
-﻿namespace ImmersiveBath
+namespace ImmersiveBath
 {
     public class ModConfig
     {
+        // General
+        public bool BathAnywhere { get; set; } = false;
+
         // UI (Integers)
         public bool ShowUI { get; set; } = true;
         public int UI_X { get; set; } = 20;
@@ -14,6 +17,7 @@
         // Buffs (Integers)
         public int CleanLuckBuff { get; set; } = 1;
         public int CleanFriendshipBonus { get; set; } = 5;
+        public int DirtyFriendshipPenalty { get; set; } = -5;
         public int DirtySpeedBuff { get; set; } = 1;
         public int DirtyDefenseBuff { get; set; } = 1;
         public int DirtyAttackBuff { get; set; } = 1;

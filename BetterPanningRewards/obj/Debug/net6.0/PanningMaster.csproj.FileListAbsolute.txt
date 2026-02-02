@@ -1,0 +1,12 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PanningMaster\bin\Debug\net6.0\PanningMaster.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PanningMaster\bin\Debug\net6.0\PanningMaster.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PanningMaster\obj\Debug\net6.0\PanningMaster.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PanningMaster\obj\Debug\net6.0\PanningMaster.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PanningMaster\obj\Debug\net6.0\PanningMaster.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PanningMaster\obj\Debug\net6.0\PanningMaster.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PanningMaster\obj\Debug\net6.0\PanningMaster.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PanningMaster\obj\Debug\net6.0\PanningMaster.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PanningMaster\obj\Debug\net6.0\PanningMaster.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PanningMaster\bin\Debug\net6.0\0Harmony.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PanningMaster\bin\Debug\net6.0\0Harmony.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\PanningMaster\obj\Debug\net6.0\PanningM.9A3C25E7.Up2Date

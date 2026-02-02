@@ -1,0 +1,20 @@
+{
+  "config.enableDebuffs.name": "Schlaf-Debuffs aktivieren",
+  "config.enableDebuffs.tooltip": "Wenn aktiviert, führt Schlaf unter 6 Stunden (nach 0:00 Uhr) zu zufälligen negativen Werten.",
+  "message.wellRested": "Du fühlst dich gut ausgeruht!",
+  "message.sleepDeprived": "Du hast nicht genug geschlafen...",
+  "buff.wellRested.name": "Ausgeruht",
+  "buff.wellRested.description": "Energiegeladen: {{stats}} erhöht.",
+  "buff.sleepDeprived.name": "Schlafmangel",
+  "buff.sleepDeprived.description": "Benommen: {{stats}} verringert.",
+  "stat.farming": "Landwirtschaft",
+  "stat.fishing": "Angeln",
+  "stat.mining": "Bergbau",
+  "stat.combat": "Kampf",
+  "stat.foraging": "Sammeln",
+  "stat.luck": "Glück",
+  "stat.speed": "Tempo",
+  "stat.defense": "Verteidigung",
+  "stat.attack": "Angriff",
+  "stat.maxstamina": "Max. Ausdauer"
+}

@@ -1,0 +1,20 @@
+{
+  "config.section.general": "Genel Ayarlar",
+  "config.hotkey.name": "At Çağırma Tuşu",
+  "config.hotkey.tooltip": "Atınızı yanınıza ışınlamak için bu tuşa basın. Varsayılan: Yok.",
+  "msg.summoned": "At Çağrıldı!",
+  "config.debug.name": "Hata Ayıklama Modu",
+  "config.debug.tooltip": "Oyuncunun üzerinde mevcut hız istatistiklerini göster.",
+  "config.adaptive.name": "Uyarlamalı Mod",
+  "config.adaptive.tooltip": "İşaretlenirse, hız Enerji %'nize göre değişir.",
+  "config.section.constant": "Sabit Mod",
+  "config.constant.name": "Temel At Hızı",
+  "config.constant.tooltip": "Uyarlamalı Mod KAPALI olduğunda ata eklenen hız.",
+  "config.section.adaptive": "Enerji Seviyeleri",
+  "config.adaptive.note": "Her enerji seviyesi için hız bonusu ayarlayın.",
+  "config.energy.100": "%100 (Tam Enerji)",
+  "config.energy.99_70": "%99 - %70 Enerji",
+  "config.energy.69_40": "%69 - %40 Enerji",
+  "config.energy.39_10": "%39 - %10 Enerji",
+  "config.energy.09_00": "%9 - %0 (Bitkin)"
+}

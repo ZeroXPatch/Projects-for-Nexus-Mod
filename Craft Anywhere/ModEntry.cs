@@ -20,7 +20,7 @@ namespace CraftAnywhere
 
         public override void Entry(IModHelper helper)
         {
-            this.Scanner = new ChestScanner();
+            this.Scanner = new ChestScanner(helper, this.Monitor);
 
             helper.Events.GameLoop.GameLaunched += this.OnGameLaunched;
             helper.Events.Display.MenuChanged += this.OnMenuChanged;

@@ -1,0 +1,20 @@
+{
+  "config.section.general": "Cài Đặt Chung",
+  "config.hotkey.name": "Phím Gọi Ngựa",
+  "config.hotkey.tooltip": "Nhấn phím này để dịch chuyển ngựa đến chỗ bạn. Mặc định: Không.",
+  "msg.summoned": "Đã Gọi Ngựa!",
+  "config.debug.name": "Chế Độ Gỡ Lỗi",
+  "config.debug.tooltip": "Hiện chỉ số tốc độ hiện tại trên đầu người chơi.",
+  "config.adaptive.name": "Chế Độ Thích Nghi",
+  "config.adaptive.tooltip": "Nếu chọn, tốc độ sẽ thay đổi dựa trên % Năng lượng của bạn.",
+  "config.section.constant": "Chế Độ Cố Định",
+  "config.constant.name": "Tốc Độ Ngựa Cơ Bản",
+  "config.constant.tooltip": "Tốc độ cộng thêm cho ngựa khi Chế Độ Thích Nghi TẮT.",
+  "config.section.adaptive": "Mức Năng Lượng",
+  "config.adaptive.note": "Đặt mức thưởng tốc độ cho từng mức năng lượng.",
+  "config.energy.100": "100% (Đầy Năng Lượng)",
+  "config.energy.99_70": "99% - 70% Năng Lượng",
+  "config.energy.69_40": "69% - 40% Năng Lượng",
+  "config.energy.39_10": "39% - 10% Năng Lượng",
+  "config.energy.09_00": "9% - 0% (Kiệt Sức)"
+}

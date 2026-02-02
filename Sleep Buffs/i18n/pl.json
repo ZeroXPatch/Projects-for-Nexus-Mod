@@ -1,0 +1,20 @@
+{
+  "config.enableDebuffs.name": "Włącz kary za sen",
+  "config.enableDebuffs.tooltip": "Po włączeniu spanie krócej niż 6 godzin (po północy) da losowe ujemne statystyki.",
+  "message.wellRested": "Czujesz się wypoczęty!",
+  "message.sleepDeprived": "Nie spałeś wystarczająco...",
+  "buff.wellRested.name": "Wypoczęty",
+  "buff.wellRested.description": "Pełen energii: {{stats}} w górę.",
+  "buff.sleepDeprived.name": "Niewyspany",
+  "buff.sleepDeprived.description": "Otępienie: {{stats}} w dół.",
+  "stat.farming": "Rolnictwo",
+  "stat.fishing": "Wędkarstwo",
+  "stat.mining": "Górnictwo",
+  "stat.combat": "Walka",
+  "stat.foraging": "Zbieractwo",
+  "stat.luck": "Szczęście",
+  "stat.speed": "Prędkość",
+  "stat.defense": "Obrona",
+  "stat.attack": "Atak",
+  "stat.maxstamina": "Maks. energia"
+}

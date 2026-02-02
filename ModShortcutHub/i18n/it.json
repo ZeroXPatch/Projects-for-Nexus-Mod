@@ -1,0 +1,23 @@
+{
+  "menu.title": "Hub Scorciatoie",
+  "menu.search": "Cerca:",
+  "menu.button.addNew": "Aggiungi Nuovo",
+  "menu.button.sortKey": "Ord: Tasto",
+  "menu.button.sortDescription": "Ord: Descrizione",
+  "menu.button.sortCustomFirst": "Ord: Pers. Prima",
+  "menu.button.hideEmpty": "Nascondi Vuoti",
+  "menu.button.showAll": "Mostra Tutti",
+  "menu.header.shortcut": "Scorciatoia",
+  "menu.header.description": "Descrizione",
+  "menu.row.noDescription": "(Nessuna descrizione)",
+  "menu.row.edit": "(Modif)",
+  "menu.row.delete": "(Elim)",
+  "menu.footer.showing": "Mostrando {{count}} scorciatoie",
+  "menu.footer.pressK": "Premi K per aprire/chiudere",
+  "edit.title": "Inserisci desc. per {{key}}:",
+  "add.title": "Aggiungi Scorciatoia Pers.",
+  "add.keyCombo": "Combinazione Tasti (clicca e premi):",
+  "add.description": "Descrizione:",
+  "add.button.save": "Salva",
+  "add.button.cancel": "Annulla"
+}

@@ -1,0 +1,20 @@
+{
+  "config.section.general": "Allgemeine Einstellungen",
+  "config.hotkey.name": "Pferd rufen Taste",
+  "config.hotkey.tooltip": "Drücke diese Taste, um dein Pferd zu dir zu teleportieren. Standard: Keine.",
+  "msg.summoned": "Pferd gerufen!",
+  "config.debug.name": "Debug-Modus",
+  "config.debug.tooltip": "Zeige aktuelle Geschwindigkeitswerte über dem Spieler.",
+  "config.adaptive.name": "Adaptiver Modus",
+  "config.adaptive.tooltip": "Wenn aktiviert, ändert sich die Geschwindigkeit basierend auf deiner Energie %.",
+  "config.section.constant": "Konstanter Modus",
+  "config.constant.name": "Basis-Pferdegeschwindigkeit",
+  "config.constant.tooltip": "Geschwindigkeit, die dem Pferd hinzugefügt wird, wenn der Adaptive Modus AUS ist.",
+  "config.section.adaptive": "Energielevel",
+  "config.adaptive.note": "Setze Geschwindigkeitsbonus für jedes Energielevel.",
+  "config.energy.100": "100% (Volle Energie)",
+  "config.energy.99_70": "99% - 70% Energie",
+  "config.energy.69_40": "69% - 40% Energie",
+  "config.energy.39_10": "39% - 10% Energie",
+  "config.energy.09_00": "9% - 0% (Erschöpft)"
+}

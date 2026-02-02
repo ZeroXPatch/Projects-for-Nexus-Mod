@@ -1,0 +1,25 @@
+{
+  "menu.title": "Shortcut Reference Hub",
+  "menu.search": "Search:",
+  "menu.button.addNew": "Add New",
+  "menu.button.sortKey": "Sort: Key",
+  "menu.button.sortDescription": "Sort: Description",
+  "menu.button.sortCustomFirst": "Sort: Custom First",
+  "menu.button.hideEmpty": "Hide Empty",
+  "menu.button.showAll": "Show All",
+  "menu.header.shortcut": "Shortcut",
+  "menu.header.description": "Description",
+  "menu.row.noDescription": "(No description)",
+  "menu.row.edit": "(Edit)",
+  "menu.row.delete": "(Del)",
+  "menu.footer.showing": "Showing {{count}} shortcuts",
+  "menu.footer.pressKey": "Press {{key}} to toggle this menu",
+
+  "edit.title": "Enter description for {{key}}:",
+
+  "add.title": "Add Custom Shortcut",
+  "add.keyCombo": "Key Combination (click and press keys):",
+  "add.description": "Description:",
+  "add.button.save": "Save",
+  "add.button.cancel": "Cancel"
+}

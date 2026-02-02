@@ -1,0 +1,20 @@
+{
+  "config.enableDebuffs.name": "Uyku cezalarını etkinleştir",
+  "config.enableDebuffs.tooltip": "Etkinleştirilirse, 6 saatten az uyku (gece yarısından sonra) rastgele olumsuz etkiler verir.",
+  "message.wellRested": "İyi dinlenmiş hissediyorsun!",
+  "message.sleepDeprived": "Yeterince uyumadın...",
+  "buff.wellRested.name": "İyi dinlenmiş",
+  "buff.wellRested.description": "Enerjik: {{stats}} artar.",
+  "buff.sleepDeprived.name": "Uykusuz",
+  "buff.sleepDeprived.description": "Sersem: {{stats}} azalır.",
+  "stat.farming": "Çiftçilik",
+  "stat.fishing": "Balıkçılık",
+  "stat.mining": "Madencilik",
+  "stat.combat": "Savaş",
+  "stat.foraging": "Toplayıcılık",
+  "stat.luck": "Şans",
+  "stat.speed": "Hız",
+  "stat.defense": "Savunma",
+  "stat.attack": "Saldırı",
+  "stat.maxstamina": "Maks. dayanıklılık"
+}

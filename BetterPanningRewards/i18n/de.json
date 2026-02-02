@@ -1,0 +1,20 @@
+{
+  "config.general": "Allgemeine Einstellungen",
+  "config.enabled.name": "Mod aktiviert",
+  "config.enabled.tooltip": "Wenn deaktiviert, erscheinen keine zusätzlichen Schürf-Belohnungen.",
+  "day.monday": "Montag Einstellungen",
+  "day.tuesday": "Dienstag Einstellungen",
+  "day.wednesday": "Mittwoch Einstellungen",
+  "day.thursday": "Donnerstag Einstellungen",
+  "day.friday": "Freitag Einstellungen",
+  "day.saturday": "Samstag Einstellungen",
+  "day.sunday": "Sonntag Einstellungen",
+  "option.ore_amount": "Anzahl zusätzlicher Erze",
+  "option.common_mats": "Gewöhnliche Materialien (Holz/Stein)",
+  "option.bonus_coal": "Bonus-Kohle aktivieren",
+  "option.copper_iron": "Kupfer & Eisen aktivieren",
+  "option.gold_bonus": "Gold-Bonus aktivieren",
+  "option.iridium_bonus": "Iridium-Bonus aktivieren",
+  "option.prismatic_chance": "Chance auf Prismatische Scherbe (0-1)",
+  "option.rare_gem": "Garantierter seltener Edelstein"
+}

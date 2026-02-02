@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PetIlluminator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59dee5edfc07800811a048d887d1a648d04e5bf3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6952400195c776c0d6bddad12f678918c5059b83")]
 [assembly: System.Reflection.AssemblyProductAttribute("PetIlluminator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PetIlluminator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

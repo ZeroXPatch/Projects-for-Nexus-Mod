@@ -1,0 +1,20 @@
+{
+  "config.section.general": "Impostazioni Generali",
+  "config.hotkey.name": "Tasto Chiama Cavallo",
+  "config.hotkey.tooltip": "Premi questo tasto per teletrasportare il tuo cavallo da te. Predefinito: Nessuno.",
+  "msg.summoned": "Cavallo Chiamato!",
+  "config.debug.name": "Modalità Debug",
+  "config.debug.tooltip": "Mostra statistiche velocità sopra il giocatore.",
+  "config.adaptive.name": "Modalità Adattiva",
+  "config.adaptive.tooltip": "Se selezionato, la velocità cambia in base alla tua % di Energia.",
+  "config.section.constant": "Modalità Costante",
+  "config.constant.name": "Velocità Base Cavallo",
+  "config.constant.tooltip": "Velocità aggiunta al cavallo quando la Modalità Adattiva è OFF.",
+  "config.section.adaptive": "Livelli Energia",
+  "config.adaptive.note": "Imposta bonus velocità per ogni livello di energia.",
+  "config.energy.100": "100% (Energia Piena)",
+  "config.energy.99_70": "99% - 70% Energia",
+  "config.energy.69_40": "69% - 40% Energia",
+  "config.energy.39_10": "39% - 10% Energia",
+  "config.energy.09_00": "9% - 0% (Esausto)"
+}

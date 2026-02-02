@@ -1,0 +1,12 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ZeroXPatch\bin\Debug\net6.0\FocusedWeather.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ZeroXPatch\bin\Debug\net6.0\FocusedWeather.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ZeroXPatch\bin\Debug\net6.0\0Harmony.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ZeroXPatch\bin\Debug\net6.0\0Harmony.xml
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ZeroXPatch\obj\Debug\net6.0\FocusedWeather.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ZeroXPatch\obj\Debug\net6.0\FocusedWeather.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ZeroXPatch\obj\Debug\net6.0\FocusedWeather.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ZeroXPatch\obj\Debug\net6.0\FocusedWeather.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ZeroXPatch\obj\Debug\net6.0\FocusedWeather.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ZeroXPatch\obj\Debug\net6.0\FocusedWeather.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ZeroXPatch\obj\Debug\net6.0\FocusedW.11FCAA44.Up2Date
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\ZeroXPatch\obj\Debug\net6.0\FocusedWeather.dll

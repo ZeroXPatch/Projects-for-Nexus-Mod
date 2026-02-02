@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Craft Anywhere\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BDA2B829-659A-376A-EB7D-0C9B32EB97CF}|CraftAnywhere.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\craft anywhere\\chestscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA2B829-659A-376A-EB7D-0C9B32EB97CF}|CraftAnywhere.csproj|solutionrelative:chestscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BDA2B829-659A-376A-EB7D-0C9B32EB97CF}|CraftAnywhere.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\craft anywhere\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BDA2B829-659A-376A-EB7D-0C9B32EB97CF}|CraftAnywhere.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BDA2B829-659A-376A-EB7D-0C9B32EB97CF}|CraftAnywhere.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\craft anywhere\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{BDA2B829-659A-376A-EB7D-0C9B32EB97CF}|CraftAnywhere.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDA2B829-659A-376A-EB7D-0C9B32EB97CF}|CraftAnywhere.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\craft anywhere\\chestscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDA2B829-659A-376A-EB7D-0C9B32EB97CF}|CraftAnywhere.csproj|solutionrelative:chestscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,41 +36,41 @@
         },
         {
           "DockedWidth": 405,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BetterCraftingIntegration.cs",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Craft Anywhere\\BetterCraftingIntegration.cs",
-              "RelativeDocumentMoniker": "BetterCraftingIntegration.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Craft Anywhere\\BetterCraftingIntegration.cs",
-              "RelativeToolTip": "BetterCraftingIntegration.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAqwB0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T17:48:29.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Craft Anywhere\\ModEntry.cs",
               "RelativeDocumentMoniker": "ModEntry.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Craft Anywhere\\ModEntry.cs",
               "RelativeToolTip": "ModEntry.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAqwKMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAiwKMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T04:13:08.547Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "ChestScanner.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Craft Anywhere\\ChestScanner.cs",
+              "RelativeDocumentMoniker": "ChestScanner.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Craft Anywhere\\ChestScanner.cs",
+              "RelativeToolTip": "ChestScanner.cs",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAiwJ8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T04:13:17.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Craft Anywhere\\manifest.json",
               "RelativeDocumentMoniker": "manifest.json",
@@ -78,20 +78,19 @@
               "RelativeToolTip": "manifest.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-21T16:19:28.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-21T16:19:28.664Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChestScanner.cs",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Craft Anywhere\\ChestScanner.cs",
-              "RelativeDocumentMoniker": "ChestScanner.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Craft Anywhere\\ChestScanner.cs",
-              "RelativeToolTip": "ChestScanner.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAIwEgAAAABAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "BetterCraftingIntegration.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Craft Anywhere\\BetterCraftingIntegration.cs",
+              "RelativeDocumentMoniker": "BetterCraftingIntegration.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Craft Anywhere\\BetterCraftingIntegration.cs",
+              "RelativeToolTip": "BetterCraftingIntegration.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAqwB0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T04:13:17.799Z"
+              "WhenOpened": "2026-01-23T17:48:29.876Z"
             }
           ]
         },

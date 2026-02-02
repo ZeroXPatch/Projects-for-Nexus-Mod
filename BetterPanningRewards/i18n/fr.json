@@ -1,0 +1,20 @@
+{
+  "config.general": "Paramètres Généraux",
+  "config.enabled.name": "Mod Activé",
+  "config.enabled.tooltip": "Si désactivé, aucune récompense d'orpaillage supplémentaire n'apparaîtra.",
+  "day.monday": "Paramètres du Lundi",
+  "day.tuesday": "Paramètres du Mardi",
+  "day.wednesday": "Paramètres du Mercredi",
+  "day.thursday": "Paramètres du Jeudi",
+  "day.friday": "Paramètres du Vendredi",
+  "day.saturday": "Paramètres du Samedi",
+  "day.sunday": "Paramètres du Dimanche",
+  "option.ore_amount": "Quantité de Minerai Supplémentaire",
+  "option.common_mats": "Matériaux Communs (Bois/Pierre)",
+  "option.bonus_coal": "Activer Charbon Bonus",
+  "option.copper_iron": "Activer Cuivre & Fer",
+  "option.gold_bonus": "Activer Bonus d'Or",
+  "option.iridium_bonus": "Activer Bonus d'Iridium",
+  "option.prismatic_chance": "Chance Tesson Prismatique (0-1)",
+  "option.rare_gem": "Gemme Rare Garantie"
+}

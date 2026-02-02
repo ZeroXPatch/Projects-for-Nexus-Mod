@@ -1,0 +1,20 @@
+{
+  "config.general": "Configurações Gerais",
+  "config.enabled.name": "Mod Ativado",
+  "config.enabled.tooltip": "Se desativado, nenhuma recompensa extra de peneiramento aparecerá.",
+  "day.monday": "Configurações de Segunda",
+  "day.tuesday": "Configurações de Terça",
+  "day.wednesday": "Configurações de Quarta",
+  "day.thursday": "Configurações de Quinta",
+  "day.friday": "Configurações de Sexta",
+  "day.saturday": "Configurações de Sábado",
+  "day.sunday": "Configurações de Domingo",
+  "option.ore_amount": "Qtd. Extra de Minério",
+  "option.common_mats": "Materiais Comuns (Madeira/Pedra)",
+  "option.bonus_coal": "Ativar Carvão Bônus",
+  "option.copper_iron": "Ativar Cobre e Ferro",
+  "option.gold_bonus": "Ativar Bônus de Ouro",
+  "option.iridium_bonus": "Ativar Bônus de Irídio",
+  "option.prismatic_chance": "Chance de Fragmento Prismático (0-1)",
+  "option.rare_gem": "Gema Rara Garantida"
+}

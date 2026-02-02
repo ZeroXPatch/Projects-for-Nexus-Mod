@@ -1,0 +1,20 @@
+{
+  "config.enableDebuffs.name": "Включить штрафы за сон",
+  "config.enableDebuffs.tooltip": "Если включено, сон менее 6 часов (после полуночи) даст случайные отрицательные эффекты.",
+  "message.wellRested": "Вы чувствуете себя отдохнувшим!",
+  "message.sleepDeprived": "Вы не выспались...",
+  "buff.wellRested.name": "Хорошо отдохнувший",
+  "buff.wellRested.description": "Бодрость: {{stats}} повышены.",
+  "buff.sleepDeprived.name": "Недосып",
+  "buff.sleepDeprived.description": "Сонливость: {{stats}} понижены.",
+  "stat.farming": "Фермерство",
+  "stat.fishing": "Рыбалка",
+  "stat.mining": "Добыча",
+  "stat.combat": "Бой",
+  "stat.foraging": "Собирательство",
+  "stat.luck": "Удача",
+  "stat.speed": "Скорость",
+  "stat.defense": "Защита",
+  "stat.attack": "Атака",
+  "stat.maxstamina": "Макс. выносливость"
+}

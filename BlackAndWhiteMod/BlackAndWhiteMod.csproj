@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>BlackAndWhiteMod</AssemblyName>
+    <RootNamespace>BlackAndWhiteMod</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <ModFolderName>BlackAndWhiteMod</ModFolderName>
+    <NoWarn>MSB3277</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+  </ItemGroup>
+
+  <!-- Track asset files so the post-build target can find them -->
+  <ItemGroup>
+    <ModAsset Include="assets\**\*" />
+  </ItemGroup>
+
+  <!--
+    After ModBuildConfig deploys the mod it sets $(ModPath).
+    This target copies every file in assets\ into that deployed folder.
+    Falls back to $(OutputPath) if ModPath is not set.
+  -->
+  <Target Name="CopyModAssets" AfterTargets="Build">
+    <PropertyGroup>
+      <_Dest Condition="'$(ModPath)' != ''">$(ModPath)</_Dest>
+      <_Dest Condition="'$(ModPath)' == ''">$(OutputPath)</_Dest>
+    </PropertyGroup>
+    <Copy
+      SourceFiles="@(ModAsset)"
+      DestinationFiles="@(ModAsset->'$(_Dest)%(Identity)')"
+      OverwriteReadOnlyFiles="true"
+      SkipUnchangedFiles="true" />
+  </Target>
+
+</Project>

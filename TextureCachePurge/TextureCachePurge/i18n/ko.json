@@ -1,0 +1,15 @@
+{
+  "config.auto-sleep.name": "수면 시 자동 정리",
+  "config.auto-sleep.description": "하루가 끝나면 텍스처 캐시를 자동으로 정리합니다.",
+  "config.frequency.name": "수면 정리 빈도 (일)",
+  "config.frequency.description": "수면 시 정리를 실행하는 빈도입니다. 매일 밤 실행하려면 1로 설정하세요. 하루 종료 시 멈춤이 불편하다면 값(예: 3)을 늘리세요.",
+  "config.sleep-ram-min.name": "정리할 최소 RAM (MB)",
+  "config.sleep-ram-min.description": "RAM 사용량이 이 값보다 높을 때만 정리를 실행합니다.\n기본값: 3072 (3GB).\n메모리가 충분할 경우 불필요한 멈춤을 방지합니다.",
+  "config.manual-key.name": "수동 정리 키",
+  "config.manual-key.description": "이미지 캐시를 수동으로 정리하는 키입니다. 시각적 오류 수정에 유용합니다.",
+  "config.ram-enable.name": "활성 RAM 제한 사용 – 'Stardew Stabilizer' 사용 시 비활성화",
+  "config.ram-enable.description": "활성화하면 RAM이 너무 높을 경우 플레이 중 캐시를 정리합니다 (주의: 멈춤 발생).",
+  "config.ram-value.name": "활성 RAM 제한 (MB)",
+  "config.ram-value.description": "플레이 중 긴급 정리를 유발하는 RAM 사용 한계(MB)입니다.",
+  "hud.purged": "성능 향상을 위해 텍스처 캐시를 정리했습니다."
+}

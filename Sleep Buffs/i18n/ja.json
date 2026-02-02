@@ -1,0 +1,20 @@
+{
+  "config.enableDebuffs.name": "睡眠デバフを有効化",
+  "config.enableDebuffs.tooltip": "有効にすると、6時間未満の睡眠（午前0時以降）でランダムなマイナス効果が発生します。",
+  "message.wellRested": "よく眠れた気がする！",
+  "message.sleepDeprived": "十分に眠れなかった...",
+  "buff.wellRested.name": "十分な睡眠",
+  "buff.wellRested.description": "元気いっぱい：{{stats}} 上昇。",
+  "buff.sleepDeprived.name": "睡眠不足",
+  "buff.sleepDeprived.description": "眠気：{{stats}} 低下。",
+  "stat.farming": "農業",
+  "stat.fishing": "釣り",
+  "stat.mining": "採掘",
+  "stat.combat": "戦闘",
+  "stat.foraging": "採取",
+  "stat.luck": "運",
+  "stat.speed": "移動速度",
+  "stat.defense": "防御",
+  "stat.attack": "攻撃",
+  "stat.maxstamina": "最大スタミナ"
+}

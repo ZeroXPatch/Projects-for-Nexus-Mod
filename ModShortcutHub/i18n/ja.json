@@ -1,0 +1,23 @@
+{
+  "menu.title": "ショートカット一覧",
+  "menu.search": "検索:",
+  "menu.button.addNew": "新規追加",
+  "menu.button.sortKey": "順: キー",
+  "menu.button.sortDescription": "順: 説明",
+  "menu.button.sortCustomFirst": "順: カスタム優先",
+  "menu.button.hideEmpty": "空を隠す",
+  "menu.button.showAll": "すべて表示",
+  "menu.header.shortcut": "ショートカット",
+  "menu.header.description": "説明",
+  "menu.row.noDescription": "(説明なし)",
+  "menu.row.edit": "(編集)",
+  "menu.row.delete": "(削除)",
+  "menu.footer.showing": "{{count}} 件を表示中",
+  "menu.footer.pressK": "Kキーでメニュー切替",
+  "edit.title": "{{key}} の説明を入力:",
+  "add.title": "カスタムショートカット追加",
+  "add.keyCombo": "キーの組み合わせ (クリックして入力):",
+  "add.description": "説明:",
+  "add.button.save": "保存",
+  "add.button.cancel": "キャンセル"
+}

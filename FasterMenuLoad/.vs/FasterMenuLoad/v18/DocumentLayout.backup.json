@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\fastermenuload\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\fastermenuload\\lazytab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|solutionrelative:lazytab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\fastermenuload\\menupatches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|solutionrelative:menupatches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\fastermenuload\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\fastermenuload\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\fastermenuload\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\fastermenuload\\menupatches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|solutionrelative:menupatches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\fastermenuload\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\fastermenuload\\lazytab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|solutionrelative:lazytab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E2BBE824-0A06-CFAD-9DC4-9FC81398353B}|FasterMenuLoad.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\fastermenuload\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,7 +47,7 @@
         },
         {
           "DockedWidth": 405,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -57,22 +57,9 @@
               "RelativeDocumentMoniker": "MenuPatches.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\MenuPatches.cs",
               "RelativeToolTip": "MenuPatches.cs",
-              "ViewState": "AgIAANgAAAAAAAAAAAAwwOgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAOIAAAAAAAAAAAAUwPoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-23T00:40:09.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LazyTab.cs",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\LazyTab.cs",
-              "RelativeDocumentMoniker": "LazyTab.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\LazyTab.cs",
-              "RelativeToolTip": "LazyTab.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAwwDoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T00:40:01.308Z",
               "EditorCaption": ""
             },
             {
@@ -82,41 +69,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "manifest.json",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\manifest.json",
-              "RelativeDocumentMoniker": "manifest.json",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\manifest.json",
-              "RelativeToolTip": "manifest.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-23T00:39:03.698Z",
+              "Title": "ModConfig.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\ModConfig.cs",
+              "RelativeDocumentMoniker": "ModConfig.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\ModConfig.cs",
+              "RelativeToolTip": "ModConfig.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T01:01:12.288Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\ModEntry.cs",
               "RelativeDocumentMoniker": "ModEntry.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\ModEntry.cs",
               "RelativeToolTip": "ModEntry.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAwwGYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAUwJgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-23T00:39:11.854Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ModConfig.cs",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\ModConfig.cs",
-              "RelativeDocumentMoniker": "ModConfig.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\ModConfig.cs",
-              "RelativeToolTip": "ModConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T01:01:12.288Z",
+              "DocumentIndex": 3,
+              "Title": "manifest.json",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\manifest.json",
+              "RelativeDocumentMoniker": "manifest.json",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\manifest.json",
+              "RelativeToolTip": "manifest.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-23T00:39:03.698Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LazyTab.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\LazyTab.cs",
+              "RelativeDocumentMoniker": "LazyTab.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\FasterMenuLoad\\LazyTab.cs",
+              "RelativeToolTip": "LazyTab.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAwwDoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T00:40:01.308Z"
             },
             {
               "$type": "Document",

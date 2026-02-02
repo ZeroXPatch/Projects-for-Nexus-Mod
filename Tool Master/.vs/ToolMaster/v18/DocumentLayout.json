@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Tool Master\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{058417D6-7606-0132-B50A-DE8C7C663807}|ToolMaster.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\tool master\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{058417D6-7606-0132-B50A-DE8C7C663807}|ToolMaster.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{058417D6-7606-0132-B50A-DE8C7C663807}|ToolMaster.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\tool master\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{058417D6-7606-0132-B50A-DE8C7C663807}|ToolMaster.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{058417D6-7606-0132-B50A-DE8C7C663807}|ToolMaster.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\tool master\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{058417D6-7606-0132-B50A-DE8C7C663807}|ToolMaster.csproj|solutionrelative:i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{058417D6-7606-0132-B50A-DE8C7C663807}|ToolMaster.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\tool master\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{058417D6-7606-0132-B50A-DE8C7C663807}|ToolMaster.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{058417D6-7606-0132-B50A-DE8C7C663807}|ToolMaster.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\tool master\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{058417D6-7606-0132-B50A-DE8C7C663807}|ToolMaster.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{058417D6-7606-0132-B50A-DE8C7C663807}|ToolMaster.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\tool master\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{058417D6-7606-0132-B50A-DE8C7C663807}|ToolMaster.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,24 +36,24 @@
         },
         {
           "DockedWidth": 405,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Tool Master\\manifest.json",
               "RelativeDocumentMoniker": "manifest.json",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Tool Master\\manifest.json",
               "RelativeToolTip": "manifest.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-01-26T02:00:12.101Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "default.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Tool Master\\i18n\\default.json",
               "RelativeDocumentMoniker": "i18n\\default.json",
@@ -66,26 +66,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Tool Master\\ModEntry.cs",
               "RelativeDocumentMoniker": "ModEntry.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Tool Master\\ModEntry.cs",
               "RelativeToolTip": "ModEntry.cs",
-              "ViewState": "AgIAAMgAAAAAAAAAAAAUwOAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAANgAAAAAAAAAAAAAAO0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-26T01:13:11.084Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ModConfig.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Tool Master\\ModConfig.cs",
               "RelativeDocumentMoniker": "ModConfig.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Tool Master\\ModConfig.cs",
               "RelativeToolTip": "ModConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwBcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-26T01:12:55.46Z",
               "EditorCaption": ""

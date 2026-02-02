@@ -1,0 +1,23 @@
+{
+  "menu.title": "Tastenkürzel-Hub",
+  "menu.search": "Suchen:",
+  "menu.button.addNew": "Neu hinzufügen",
+  "menu.button.sortKey": "Sort.: Taste",
+  "menu.button.sortDescription": "Sort.: Beschr.",
+  "menu.button.sortCustomFirst": "Sort.: Eigene zuerst",
+  "menu.button.hideEmpty": "Leere ausblenden",
+  "menu.button.showAll": "Alle anzeigen",
+  "menu.header.shortcut": "Kürzel",
+  "menu.header.description": "Beschreibung",
+  "menu.row.noDescription": "(Keine Beschreibung)",
+  "menu.row.edit": "(Bearb.)",
+  "menu.row.delete": "(Lösch.)",
+  "menu.footer.showing": "Zeige {{count}} Kürzel",
+  "menu.footer.pressK": "Drücke K zum Umschalten",
+  "edit.title": "Beschreibung für {{key}} eingeben:",
+  "add.title": "Eigenes Kürzel hinzufügen",
+  "add.keyCombo": "Tastenkombination (Klicken & Drücken):",
+  "add.description": "Beschreibung:",
+  "add.button.save": "Speichern",
+  "add.button.cancel": "Abbrechen"
+}

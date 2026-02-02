@@ -1,0 +1,20 @@
+{
+  "config.enableDebuffs.name": "Bật hiệu ứng xấu do thiếu ngủ",
+  "config.enableDebuffs.tooltip": "Nếu bật, ngủ ít hơn 6 giờ (sau 12:00 đêm) sẽ nhận hiệu ứng tiêu cực ngẫu nhiên.",
+  "message.wellRested": "Bạn cảm thấy được nghỉ ngơi đầy đủ!",
+  "message.sleepDeprived": "Bạn ngủ không đủ giấc...",
+  "buff.wellRested.name": "Ngủ đủ giấc",
+  "buff.wellRested.description": "Tràn đầy năng lượng: {{stats}} tăng.",
+  "buff.sleepDeprived.name": "Thiếu ngủ",
+  "buff.sleepDeprived.description": "Uể oải: {{stats}} giảm.",
+  "stat.farming": "Nông nghiệp",
+  "stat.fishing": "Câu cá",
+  "stat.mining": "Khai thác",
+  "stat.combat": "Chiến đấu",
+  "stat.foraging": "Hái lượm",
+  "stat.luck": "May mắn",
+  "stat.speed": "Tốc độ",
+  "stat.defense": "Phòng thủ",
+  "stat.attack": "Tấn công",
+  "stat.maxstamina": "Thể lực tối đa"
+}

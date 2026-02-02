@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Glowing pet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{918E70F6-86CA-F757-6A8F-FFAEC95C01E5}|PetIlluminator.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\glowing pet\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{918E70F6-86CA-F757-6A8F-FFAEC95C01E5}|PetIlluminator.csproj|solutionrelative:i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{918E70F6-86CA-F757-6A8F-FFAEC95C01E5}|PetIlluminator.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\glowing pet\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{918E70F6-86CA-F757-6A8F-FFAEC95C01E5}|PetIlluminator.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{918E70F6-86CA-F757-6A8F-FFAEC95C01E5}|PetIlluminator.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\glowing pet\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,8 +15,8 @@
       "RelativeMoniker": "D:0:0:{918E70F6-86CA-F757-6A8F-FFAEC95C01E5}|PetIlluminator.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{918E70F6-86CA-F757-6A8F-FFAEC95C01E5}|PetIlluminator.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\glowing pet\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{918E70F6-86CA-F757-6A8F-FFAEC95C01E5}|PetIlluminator.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{918E70F6-86CA-F757-6A8F-FFAEC95C01E5}|PetIlluminator.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\glowing pet\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{918E70F6-86CA-F757-6A8F-FFAEC95C01E5}|PetIlluminator.csproj|solutionrelative:i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{918E70F6-86CA-F757-6A8F-FFAEC95C01E5}|PetIlluminator.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\glowing pet\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,7 +43,7 @@
         },
         {
           "DockedWidth": 405,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -53,7 +53,7 @@
               "RelativeDocumentMoniker": "ModEntry.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Glowing pet\\ModEntry.cs",
               "RelativeToolTip": "ModEntry.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAowJkAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAAAKMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-16T01:26:58.438Z",
               "EditorCaption": ""
@@ -73,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "default.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Glowing pet\\i18n\\default.json",
               "RelativeDocumentMoniker": "i18n\\default.json",
@@ -85,10 +85,6 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "IGenericModConfigMenuApi.cs",
@@ -98,18 +94,17 @@
               "RelativeToolTip": "IGenericModConfigMenuApi.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAuwBAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T01:45:59.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-16T01:45:59.998Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Glowing pet\\manifest.json",
               "RelativeDocumentMoniker": "manifest.json",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Glowing pet\\manifest.json",
               "RelativeToolTip": "manifest.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-01-16T01:31:39.933Z",
               "EditorCaption": ""
@@ -124,8 +119,11 @@
               "RelativeToolTip": "..\\..\\..\\..\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.4.0\\build\\Pathoschild.Stardew.ModBuildConfig.targets",
               "ViewState": "AgIAAEcAAAAAAAAAAAAswFYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-01-16T01:29:34.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-16T01:29:34.687Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         },

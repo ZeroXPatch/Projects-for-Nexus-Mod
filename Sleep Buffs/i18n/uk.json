@@ -1,0 +1,20 @@
+{
+  "config.enableDebuffs.name": "Увімкнути штрафи за сон",
+  "config.enableDebuffs.tooltip": "Якщо ввімкнено, сон менше 6 годин (після півночі) дасть випадкові негативні ефекти.",
+  "message.wellRested": "Ви добре відпочили!",
+  "message.sleepDeprived": "Ви не виспалися...",
+  "buff.wellRested.name": "Добре відпочилий",
+  "buff.wellRested.description": "Бадьорість: {{stats}} підвищено.",
+  "buff.sleepDeprived.name": "Недосип",
+  "buff.sleepDeprived.description": "Млявість: {{stats}} знижено.",
+  "stat.farming": "Фермерство",
+  "stat.fishing": "Риболовля",
+  "stat.mining": "Видобуток",
+  "stat.combat": "Бій",
+  "stat.foraging": "Збирання",
+  "stat.luck": "Удача",
+  "stat.speed": "Швидкість",
+  "stat.defense": "Захист",
+  "stat.attack": "Атака",
+  "stat.maxstamina": "Макс. витривалість"
+}

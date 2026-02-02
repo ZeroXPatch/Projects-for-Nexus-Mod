@@ -1,0 +1,23 @@
+{
+  "menu.title": "Kısayol Merkezi",
+  "menu.search": "Ara:",
+  "menu.button.addNew": "Yeni Ekle",
+  "menu.button.sortKey": "Sırala: Tuş",
+  "menu.button.sortDescription": "Sırala: Açıklama",
+  "menu.button.sortCustomFirst": "Sırala: Özel Önce",
+  "menu.button.hideEmpty": "Boşları Gizle",
+  "menu.button.showAll": "Tümünü Göster",
+  "menu.header.shortcut": "Kısayol",
+  "menu.header.description": "Açıklama",
+  "menu.row.noDescription": "(Açıklama yok)",
+  "menu.row.edit": "(Düzenle)",
+  "menu.row.delete": "(Sil)",
+  "menu.footer.showing": "{{count}} kısayol gösteriliyor",
+  "menu.footer.pressK": "Menü için K'ye bas",
+  "edit.title": "{{key}} için açıklama gir:",
+  "add.title": "Özel Kısayol Ekle",
+  "add.keyCombo": "Tuş Kombinasyonu (tıkla ve bas):",
+  "add.description": "Açıklama:",
+  "add.button.save": "Kaydet",
+  "add.button.cancel": "İptal"
+}
