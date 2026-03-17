@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MJcrmZYk5GU=",
+  "dgSpecHash": "a7GpiinqSms=",
   "success": true,
-  "projectFilePath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\ShadowsOfTheDeep.csproj",
+  "projectFilePath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\ShadowsOfTheDeep.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zjmto\\.nuget\\packages\\lib.harmony\\2.3.0-prerelease.2\\lib.harmony.2.3.0-prerelease.2.nupkg.sha512",
     "C:\\Users\\zjmto\\.nuget\\packages\\mono.cecil\\0.11.4\\mono.cecil.0.11.4.nupkg.sha512",

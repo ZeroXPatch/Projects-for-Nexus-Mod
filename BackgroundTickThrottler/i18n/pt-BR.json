@@ -1,0 +1,11 @@
+{
+  "config.title": "Configurações de Desempenho",
+  "config.enabled.name": "Ativar Otimização",
+  "config.enabled.tooltip": "Se ativado, NPCs fora do seu local atualizarão com menos frequência para economizar FPS.",
+  "config.interval.name": "Intervalo de Atualização",
+  "config.interval.tooltip": "Frequência de atualização de NPCs em segundo plano.\n2 = Quadro alternado (50% de carga).\n10 = Movimento travado (Baixa carga).",
+  "config.force-villagers.name": "Sempre Atualizar Aldeões",
+  "config.force-villagers.tooltip": "Se verdadeiro, aldeões nomeados (como Caroline) nunca são limitados, apenas monstros/cavalos/junimos.",
+  "config.debug.name": "Ativar Log de Depuração",
+  "config.debug.tooltip": "Mostra estatísticas no console SMAPI a cada segundo. Use para verificar a economia de CPU!"
+}

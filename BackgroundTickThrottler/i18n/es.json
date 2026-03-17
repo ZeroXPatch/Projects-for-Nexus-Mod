@@ -1,0 +1,11 @@
+{
+  "config.title": "Ajustes de Rendimiento",
+  "config.enabled.name": "Habilitar Limitación",
+  "config.enabled.tooltip": "Si se activa, los NPCs que no estén en tu ubicación se actualizarán con menos frecuencia para ahorrar FPS.",
+  "config.interval.name": "Intervalo de Actualización",
+  "config.interval.tooltip": "Con qué frecuencia se actualizan los NPCs de fondo.\n2 = Cada dos fotogramas (50% carga).\n10 = Movimiento de fondo muy entrecortado (Carga baja).",
+  "config.force-villagers.name": "Actualizar Siempre Aldeanos",
+  "config.force-villagers.tooltip": "Si es verdadero, los aldeanos con nombre (como Caroline) nunca se limitan, solo monstruos/caballos/junimos.",
+  "config.debug.name": "Registro de Depuración",
+  "config.debug.tooltip": "Muestra estadísticas de rendimiento en la consola SMAPI cada segundo. ¡Úsalo para verificar el ahorro de CPU!"
+}

@@ -1,0 +1,22 @@
+{
+  "config.enableMod.name": "모드 활성",
+  "config.enableMod.description": "자동 낚시 마스터",
+  "config.toggleKey.name": "전환 키",
+  "config.toggleKey.description": "눌러 전환",
+  "config.autoCast.name": "자동 캐스팅",
+  "config.autoCast.description": "자동 투척",
+  "config.autoHit.name": "자동 낚기",
+  "config.autoHit.description": "자동 포획",
+  "config.autoLootTreasure.name": "보물 자동",
+  "config.autoLootTreasure.description": "자동 수집",
+  "config.alwaysPerfect.name": "항상 완벽",
+  "config.alwaysPerfect.description": "매번 완벽",
+  "config.alwaysMaxCastPower.name": "최대 파워",
+  "config.alwaysMaxCastPower.description": "항상 최대",
+  "config.enableStaminaCheck.name": "저에너지 중지",
+  "config.enableStaminaCheck.description": "낮으면 중지",
+  "config.staminaThreshold.name": "기준",
+  "config.staminaThreshold.description": "여기서 중지",
+  "config.debugMode.name": "디버그",
+  "config.debugMode.description": "로그"
+}

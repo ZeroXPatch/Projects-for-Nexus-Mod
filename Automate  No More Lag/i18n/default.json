@@ -1,0 +1,32 @@
+{
+  "common.enabled": "ENABLED",
+  "common.disabled": "DISABLED",
+
+  "log.patched-successfully": "Successfully patched Automate.",
+  "log.idle-mode": "Only Process When Idle: {{enabled}}",
+  "log.idle-threshold": "Idle Threshold: {{ticks}} ticks ({{seconds}} seconds)",
+  "log.pause-cutscenes": "Pause Timer During Cutscenes: {{enabled}}",
+  "log.pause-input": "Pause Timer On Input Activity: {{enabled}}",
+  "log.idle-warning": "Automation will ONLY run when you are idle (not moving)!",
+  "log.debug-mode": "Debug Mode: {{enabled}}",
+  "log.automate-not-found": "Automate mod not found. Automate No More Lag will not apply any patches.",
+
+  "config.section.performance": "Performance Options",
+  "config.section.debugging": "Debugging",
+
+  "config.idle.name": "Only Process When Idle",
+  "config.idle.tooltip": "Only automate when you stop moving (AFK). Disables automation while walking around. Default: false",
+
+  "config.idle-delay.name": "Idle Delay (seconds)",
+  "config.idle-delay.tooltip": "How many seconds you must stand still before automation starts. Default: 8 seconds",
+  "config.idle-delay.format": "{{seconds}}s",
+
+  "config.pause-cutscenes.name": "Pause Timer During Cutscenes",
+  "config.pause-cutscenes.tooltip": "Don't count idle time during cutscenes, events, or NPC dialogue. Timer will pause and resume when finished. Default: true",
+
+  "config.pause-input.name": "Pause Timer On Input",
+  "config.pause-input.tooltip": "Pause idle timer when any input is detected: mouse clicks/movement, keyboard keys, controller buttons, or touch screen. Prevents automation from running while you're actively interacting with the game. Default: true",
+
+  "config.debug.name": "Debug Mode",
+  "config.debug.tooltip": "Enable detailed logging to see what's happening. Check SMAPI console. Default: false"
+}

@@ -1,0 +1,11 @@
+{
+  "config.title": "Leistungseinstellungen",
+  "config.enabled.name": "Drosselung aktivieren",
+  "config.enabled.tooltip": "Wenn aktiviert, werden NPCs, die nicht am selben Ort sind, seltener aktualisiert, um FPS zu sparen.",
+  "config.interval.name": "Aktualisierungsintervall",
+  "config.interval.tooltip": "Wie oft Hintergrund-NPCs aktualisiert werden.\n2 = Jedes zweite Bild (50% Last).\n10 = Sehr abgehackte Hintergrundbewegung (Geringe Last).",
+  "config.force-villagers.name": "Dorfbewohner immer aktualisieren",
+  "config.force-villagers.tooltip": "Wenn wahr, werden benannte Dorfbewohner (wie Caroline) nie gedrosselt, nur Monster/Pferde/Junimos.",
+  "config.debug.name": "Debug-Logging aktivieren",
+  "config.debug.tooltip": "Zeigt jede Sekunde Leistungsstatistiken in der SMAPI-Konsole. Nutze dies, um zu prüfen, ob die Mod funktioniert und wie viel CPU-Last du sparst!"
+}

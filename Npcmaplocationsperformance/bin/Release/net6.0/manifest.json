@@ -1,0 +1,16 @@
+{
+  "Name": "Performance Patch - NPC Map Locations",
+  "Author": "YourName",
+  "Version": "1.0.0",
+  "Description": "Forces NPC Map Locations to only update when the map is open, dramatically reducing CPU usage. NPC positions will not update while the map is closed.",
+  "UniqueID": "YourName.NPCMapLocationsPerformancePatch",
+  "MinimumApiVersion": "3.0.0",
+  "UpdateKeys": [],
+  "Dependencies": [
+    {
+      "UniqueID": "Bouhm.NPCMapLocations",
+      "IsRequired": true
+    }
+  ],
+  "ContentPackFor": null
+}

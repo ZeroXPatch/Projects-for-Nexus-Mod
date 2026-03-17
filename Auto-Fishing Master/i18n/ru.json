@@ -1,0 +1,22 @@
+{
+  "config.enableMod.name": "Включить мод",
+  "config.enableMod.description": "Главный переключатель",
+  "config.toggleKey.name": "Клавиша",
+  "config.toggleKey.description": "Нажмите",
+  "config.autoCast.name": "Авто заброс",
+  "config.autoCast.description": "Авто",
+  "config.autoHit.name": "Авто ловля",
+  "config.autoHit.description": "Ловит",
+  "config.autoLootTreasure.name": "Авто сундуки",
+  "config.autoLootTreasure.description": "Собирает",
+  "config.alwaysPerfect.name": "Всегда идеально",
+  "config.alwaysPerfect.description": "Идеально",
+  "config.alwaysMaxCastPower.name": "Макс",
+  "config.alwaysMaxCastPower.description": "Всегда",
+  "config.enableStaminaCheck.name": "Стоп энергия",
+  "config.enableStaminaCheck.description": "Отключает",
+  "config.staminaThreshold.name": "Порог",
+  "config.staminaThreshold.description": "Тут",
+  "config.debugMode.name": "Debug",
+  "config.debugMode.description": "Логи"
+}

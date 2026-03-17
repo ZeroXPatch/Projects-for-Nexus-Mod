@@ -1,0 +1,9 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DebrisOptimizer\bin\Debug\net6.0\DebrisOptimizer.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DebrisOptimizer\bin\Debug\net6.0\DebrisOptimizer.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DebrisOptimizer\obj\Debug\net6.0\DebrisOptimizer.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DebrisOptimizer\obj\Debug\net6.0\DebrisOptimizer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DebrisOptimizer\obj\Debug\net6.0\DebrisOptimizer.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DebrisOptimizer\obj\Debug\net6.0\DebrisOptimizer.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DebrisOptimizer\obj\Debug\net6.0\DebrisOptimizer.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DebrisOptimizer\obj\Debug\net6.0\DebrisOptimizer.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\DebrisOptimizer\obj\Debug\net6.0\DebrisOptimizer.dll

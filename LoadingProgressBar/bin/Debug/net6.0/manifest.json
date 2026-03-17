@@ -1,0 +1,10 @@
+{
+  "Name": "Loading Progress Bar",
+  "Author": "YourName",
+  "Version": "1.0.0",
+  "Description": "Shows a visual progress bar (0-100%) during day-to-day transitions so you know the game is still working.",
+  "UniqueID": "YourName.LoadingProgressBar",
+  "EntryDll": "LoadingProgressBar.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

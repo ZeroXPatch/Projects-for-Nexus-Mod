@@ -14,6 +14,8 @@ namespace AutoFishingMaster
         private ModConfig Config;
         private IReflectedField<MouseState> _currentMouseState;
         private int _debugCounter = 0;
+        private int _castCooldown = 0;
+        private int _fishingRodSlot = -1;
 
         public override void Entry(IModHelper helper)
         {
@@ -46,55 +48,89 @@ namespace AutoFishingMaster
                     save: () => this.Helper.WriteConfig(this.Config)
                 );
 
-                configMenu.AddSectionTitle(this.ModManifest, () => "Controls");
+                configMenu.AddSectionTitle(this.ModManifest, () => this.Helper.Translation.Get("config.general.title"));
+                configMenu.AddBoolOption(
+                    this.ModManifest,
+                    () => this.Config.EnableMod,
+                    (val) => this.Config.EnableMod = val,
+                    () => this.Helper.Translation.Get("config.enableMod.name"),
+                    () => this.Helper.Translation.Get("config.enableMod.description")
+                );
+
+                configMenu.AddSectionTitle(this.ModManifest, () => this.Helper.Translation.Get("config.controls.title"));
                 configMenu.AddKeybind(
                     this.ModManifest,
                     () => this.Config.ToggleKey,
                     (val) => this.Config.ToggleKey = val,
-                    () => "Toggle Mod Key"
+                    () => this.Helper.Translation.Get("config.toggleKey.name"),
+                    () => this.Helper.Translation.Get("config.toggleKey.description")
                 );
 
-                configMenu.AddSectionTitle(this.ModManifest, () => "Automation");
+                configMenu.AddSectionTitle(this.ModManifest, () => this.Helper.Translation.Get("config.automation.title"));
                 configMenu.AddBoolOption(
                     this.ModManifest,
                     () => this.Config.AutoCast,
                     (val) => this.Config.AutoCast = val,
-                    () => "Auto Cast"
+                    () => this.Helper.Translation.Get("config.autoCast.name"),
+                    () => this.Helper.Translation.Get("config.autoCast.description")
                 );
                 configMenu.AddBoolOption(
                     this.ModManifest,
                     () => this.Config.AlwaysMaxCastPower,
                     (val) => this.Config.AlwaysMaxCastPower = val,
-                    () => "Always Max Distance"
+                    () => this.Helper.Translation.Get("config.alwaysMaxCastPower.name"),
+                    () => this.Helper.Translation.Get("config.alwaysMaxCastPower.description")
                 );
                 configMenu.AddBoolOption(
                     this.ModManifest,
                     () => this.Config.AutoHit,
                     (val) => this.Config.AutoHit = val,
-                    () => "Auto Hook & Skip Minigame"
+                    () => this.Helper.Translation.Get("config.autoHit.name"),
+                    () => this.Helper.Translation.Get("config.autoHit.description")
                 );
 
-                configMenu.AddSectionTitle(this.ModManifest, () => "Rewards");
+                configMenu.AddSectionTitle(this.ModManifest, () => this.Helper.Translation.Get("config.rewards.title"));
                 configMenu.AddBoolOption(
                     this.ModManifest,
                     () => this.Config.AutoLootTreasure,
                     (val) => this.Config.AutoLootTreasure = val,
-                    () => "Auto Collect Treasure"
+                    () => this.Helper.Translation.Get("config.autoLootTreasure.name"),
+                    () => this.Helper.Translation.Get("config.autoLootTreasure.description")
                 );
                 configMenu.AddBoolOption(
                     this.ModManifest,
                     () => this.Config.AlwaysPerfect,
                     (val) => this.Config.AlwaysPerfect = val,
-                    () => "Always Perfect Catch",
-                    () => "Perfect catches give bonus XP and better base quality chance, but don't guarantee iridium"
+                    () => this.Helper.Translation.Get("config.alwaysPerfect.name"),
+                    () => this.Helper.Translation.Get("config.alwaysPerfect.description")
                 );
 
-                configMenu.AddSectionTitle(this.ModManifest, () => "Debug");
+                configMenu.AddSectionTitle(this.ModManifest, () => this.Helper.Translation.Get("config.safety.title"));
+                configMenu.AddBoolOption(
+                    this.ModManifest,
+                    () => this.Config.EnableStaminaCheck,
+                    (val) => this.Config.EnableStaminaCheck = val,
+                    () => this.Helper.Translation.Get("config.enableStaminaCheck.name"),
+                    () => this.Helper.Translation.Get("config.enableStaminaCheck.description")
+                );
+                configMenu.AddNumberOption(
+                    this.ModManifest,
+                    () => this.Config.StaminaThreshold,
+                    (val) => this.Config.StaminaThreshold = val,
+                    () => this.Helper.Translation.Get("config.staminaThreshold.name"),
+                    () => this.Helper.Translation.Get("config.staminaThreshold.description"),
+                    min: 1,
+                    max: 100,
+                    interval: 1
+                );
+
+                configMenu.AddSectionTitle(this.ModManifest, () => this.Helper.Translation.Get("config.debug.title"));
                 configMenu.AddBoolOption(
                     this.ModManifest,
                     () => this.Config.DebugMode,
                     (val) => this.Config.DebugMode = val,
-                    () => "Debug Mode (Console Logging)"
+                    () => this.Helper.Translation.Get("config.debugMode.name"),
+                    () => this.Helper.Translation.Get("config.debugMode.description")
                 );
 
                 this.Monitor.Log("Config menu registered successfully", LogLevel.Debug);
@@ -111,8 +147,8 @@ namespace AutoFishingMaster
 
             if (e.Button == this.Config.ToggleKey)
             {
-                this.Config.ToggleEnabled = !this.Config.ToggleEnabled;
-                string status = this.Config.ToggleEnabled ? "ON" : "OFF";
+                this.Config.EnableMod = !this.Config.EnableMod;
+                string status = this.Config.EnableMod ? "ON" : "OFF";
                 Game1.addHUDMessage(new HUDMessage($"Auto-Fishing Master: {status}", 2));
                 this.Monitor.Log($"Mod toggled {status}", LogLevel.Info);
             }
@@ -120,7 +156,26 @@ namespace AutoFishingMaster
 
         private void OnUpdateTicked(object sender, UpdateTickedEventArgs e)
         {
-            if (!Context.IsWorldReady || !this.Config.ToggleEnabled || Game1.player == null)
+            if (!Context.IsWorldReady || Game1.player == null)
+                return;
+
+            // Decrement cast cooldown
+            if (_castCooldown > 0)
+                _castCooldown--;
+
+            // Check stamina threshold and auto-disable if needed
+            if (this.Config.EnableMod && this.Config.EnableStaminaCheck)
+            {
+                if (Game1.player.stamina <= this.Config.StaminaThreshold)
+                {
+                    this.Config.EnableMod = false;
+                    Game1.addHUDMessage(new HUDMessage($"Auto-Fishing stopped: Low energy ({(int)Game1.player.stamina}/{this.Config.StaminaThreshold})", 3));
+                    this.Monitor.Log($"Mod auto-disabled due to low stamina: {Game1.player.stamina:F1}/{this.Config.StaminaThreshold}", LogLevel.Info);
+                    return;
+                }
+            }
+
+            if (!this.Config.EnableMod)
                 return;
 
             // Debug logging every 60 ticks (1 second) - only if debug mode is enabled
@@ -136,7 +191,26 @@ namespace AutoFishingMaster
 
             // Get fishing rod
             if (Game1.player.CurrentTool is not FishingRod rod)
+            {
+                // If we had a rod before but now it's not selected, try to re-select it
+                if (_fishingRodSlot >= 0 && Game1.player.Items[_fishingRodSlot] is FishingRod)
+                {
+                    Game1.player.CurrentToolIndex = _fishingRodSlot;
+                    if (this.Config.DebugMode)
+                        this.Monitor.Log($"Auto re-selected fishing rod in slot {_fishingRodSlot}", LogLevel.Debug);
+                    return; // Wait for next tick to continue with the rod
+                }
                 return;
+            }
+
+            // Track the fishing rod's inventory slot
+            int currentRodSlot = Game1.player.CurrentToolIndex;
+            if (_fishingRodSlot != currentRodSlot)
+            {
+                _fishingRodSlot = currentRodSlot;
+                if (this.Config.DebugMode)
+                    this.Monitor.Log($"Fishing rod detected in slot {_fishingRodSlot}", LogLevel.Trace);
+            }
 
             // Stop any stuck reeling sounds
             StopReelingSound(rod);
@@ -149,6 +223,10 @@ namespace AutoFishingMaster
                     if (this.Config.DebugMode)
                         this.Monitor.Log("Treasure chest detected, collecting...", LogLevel.Debug);
                     CollectTreasure(itemMenu);
+                    // Set cooldown to prevent immediate recast
+                    _castCooldown = 60;
+                    if (this.Config.DebugMode)
+                        this.Monitor.Log("Cast cooldown set: 60 ticks (1s) after treasure", LogLevel.Debug);
                     return;
                 }
             }
@@ -159,6 +237,10 @@ namespace AutoFishingMaster
                 if (this.Config.DebugMode)
                     this.Monitor.Log("Fish caught screen detected, dismissing...", LogLevel.Debug);
                 DismissFishScreen(rod);
+                // Set cooldown to prevent immediate recast (45 ticks = 0.75 seconds)
+                _castCooldown = 45;
+                if (this.Config.DebugMode)
+                    this.Monitor.Log("Cast cooldown set: 45 ticks (0.75s) after fish screen dismiss", LogLevel.Debug);
                 return;
             }
 
@@ -188,6 +270,12 @@ namespace AutoFishingMaster
                     this.Monitor.Log("Auto-casting...", LogLevel.Debug);
                 AutoCast(rod);
             }
+            else if (this.Config.AutoCast && _castCooldown > 0 && this.Config.DebugMode)
+            {
+                // Only log this occasionally to avoid spam
+                if (_castCooldown % 15 == 0)
+                    this.Monitor.Log($"Auto-cast on cooldown: {_castCooldown} ticks remaining", LogLevel.Trace);
+            }
         }
 
         private void LogCurrentState()
@@ -195,7 +283,9 @@ namespace AutoFishingMaster
             if (Game1.player.CurrentTool is FishingRod rod)
             {
                 this.Monitor.Log($"=== STATE DEBUG ===", LogLevel.Trace);
-                this.Monitor.Log($"Mod Enabled: {this.Config.ToggleEnabled}", LogLevel.Trace);
+                this.Monitor.Log($"Mod Enabled: {this.Config.EnableMod}", LogLevel.Trace);
+                this.Monitor.Log($"Cast Cooldown: {_castCooldown} ticks", LogLevel.Trace);
+                this.Monitor.Log($"Fishing Rod Slot: {_fishingRodSlot}, Current Slot: {Game1.player.CurrentToolIndex}", LogLevel.Trace);
                 this.Monitor.Log($"AutoCast: {this.Config.AutoCast}, AutoHit: {this.Config.AutoHit}, MaxPower: {this.Config.AlwaysMaxCastPower}", LogLevel.Trace);
                 this.Monitor.Log($"Rod States - isCasting: {rod.isCasting}, isFishing: {rod.isFishing}, isNibbling: {rod.isNibbling}, isReeling: {rod.isReeling}", LogLevel.Trace);
                 this.Monitor.Log($"Rod States - pullingOut: {rod.pullingOutOfWater}, bobberInAir: {rod.castedButBobberStillInAir}, fishCaught: {rod.fishCaught}, hit: {rod.hit}", LogLevel.Trace);
@@ -217,8 +307,13 @@ namespace AutoFishingMaster
 
         private bool CanAutoCast(FishingRod rod)
         {
+            // Check if cooldown is active
+            if (_castCooldown > 0)
+                return false;
+
             return Context.CanPlayerMove &&
                    Game1.activeClickableMenu == null &&
+                   !Game1.isFestival() &&
                    !rod.castedButBobberStillInAir &&
                    !rod.hit &&
                    !rod.inUse() &&
@@ -413,6 +508,14 @@ namespace AutoFishingMaster
                 // Update rod
                 rod.tickUpdate(Game1.currentGameTime, Game1.player);
 
+                // Re-select the fishing rod after dismissing fish screen
+                if (_fishingRodSlot >= 0 && Game1.player.CurrentToolIndex != _fishingRodSlot)
+                {
+                    Game1.player.CurrentToolIndex = _fishingRodSlot;
+                    if (this.Config.DebugMode)
+                        this.Monitor.Log($"Re-selected fishing rod in slot {_fishingRodSlot}", LogLevel.Debug);
+                }
+
                 if (this.Config.DebugMode)
                     this.Monitor.Log("Fish screen dismissed", LogLevel.Debug);
             }
@@ -456,6 +559,14 @@ namespace AutoFishingMaster
                     itemMenu.ItemsToGrabMenu.actualInventory.Clear();
                 }
                 Game1.exitActiveMenu();
+
+                // Re-select the fishing rod after menu closes
+                if (_fishingRodSlot >= 0 && Game1.player.CurrentToolIndex != _fishingRodSlot)
+                {
+                    Game1.player.CurrentToolIndex = _fishingRodSlot;
+                    if (this.Config.DebugMode)
+                        this.Monitor.Log($"Re-selected fishing rod in slot {_fishingRodSlot}", LogLevel.Debug);
+                }
 
                 if (this.Config.DebugMode)
                     this.Monitor.Log("Treasure collection complete", LogLevel.Debug);

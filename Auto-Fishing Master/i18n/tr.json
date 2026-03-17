@@ -1,0 +1,22 @@
+{
+  "config.enableMod.name": "Mod aç",
+  "config.enableMod.description": "Ana anahtar",
+  "config.toggleKey.name": "Tuş",
+  "config.toggleKey.description": "Bas",
+  "config.autoCast.name": "Oto atış",
+  "config.autoCast.description": "Otomatik",
+  "config.autoHit.name": "Oto yakala",
+  "config.autoHit.description": "Yakar",
+  "config.autoLootTreasure.name": "Oto ganimet",
+  "config.autoLootTreasure.description": "Toplar",
+  "config.alwaysPerfect.name": "Hep mükemmel",
+  "config.alwaysPerfect.description": "Mükemmel",
+  "config.alwaysMaxCastPower.name": "Maks",
+  "config.alwaysMaxCastPower.description": "Her zaman",
+  "config.enableStaminaCheck.name": "Enerji stop",
+  "config.enableStaminaCheck.description": "Kapatır",
+  "config.staminaThreshold.name": "Eşik",
+  "config.staminaThreshold.description": "Burada",
+  "config.debugMode.name": "Debug",
+  "config.debugMode.description": "Log"
+}

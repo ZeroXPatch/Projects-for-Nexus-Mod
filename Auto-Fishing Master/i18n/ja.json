@@ -1,0 +1,22 @@
+{
+  "config.enableMod.name": "MOD有効",
+  "config.enableMod.description": "自動釣りマスター",
+  "config.toggleKey.name": "切替キー",
+  "config.toggleKey.description": "押して切替",
+  "config.autoCast.name": "自動キャスト",
+  "config.autoCast.description": "自動で投げる",
+  "config.autoHit.name": "自動ヒット",
+  "config.autoHit.description": "自動捕獲",
+  "config.autoLootTreasure.name": "宝箱自動",
+  "config.autoLootTreasure.description": "自動回収",
+  "config.alwaysPerfect.name": "常に完璧",
+  "config.alwaysPerfect.description": "毎回完璧",
+  "config.alwaysMaxCastPower.name": "最大パワー",
+  "config.alwaysMaxCastPower.description": "常に最大",
+  "config.enableStaminaCheck.name": "低スタミナ停止",
+  "config.enableStaminaCheck.description": "低下で停止",
+  "config.staminaThreshold.name": "閾値",
+  "config.staminaThreshold.description": "ここで停止",
+  "config.debugMode.name": "デバッグ",
+  "config.debugMode.description": "ログ有効"
+}

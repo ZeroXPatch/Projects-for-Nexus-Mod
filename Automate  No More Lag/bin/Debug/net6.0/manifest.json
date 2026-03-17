@@ -1,0 +1,16 @@
+{
+  "Name": "Automate No More Lag",
+  "Author": "ZeroXPatch",
+  "Version": "1.1.0",
+  "Description": "Eliminates Automate mod lag by pausing automation while you’re moving and only running it when you’re idle, restoring smooth FPS during normal gameplay.",
+  "UniqueID": "ZeroXPatch.AutomateNoMoreLag",
+  "EntryDll": "AutomateNML.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus:41945" ],
+  "Dependencies": [
+    {
+      "UniqueID": "Pathoschild.Automate",
+      "IsRequired": true
+    }
+  ]
+}

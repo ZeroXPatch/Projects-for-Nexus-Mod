@@ -1,0 +1,11 @@
+{
+  "config.title": "Paramètres de Performance",
+  "config.enabled.name": "Activer la Régulation",
+  "config.enabled.tooltip": "Si activé, les PNJ hors de votre zone se mettront à jour moins souvent pour économiser des FPS.",
+  "config.interval.name": "Intervalle de Mise à Jour",
+  "config.interval.tooltip": "Fréquence de mise à jour des PNJ en arrière-plan.\n2 = Une image sur deux (Charge 50%).\n10 = Mouvements très saccadés (Charge faible).",
+  "config.force-villagers.name": "Toujours Mettre à Jour les Villageois",
+  "config.force-villagers.tooltip": "Si vrai, les villageois nommés (comme Caroline) ne sont jamais régulés, seuls les monstres/chevaux/junimos le sont.",
+  "config.debug.name": "Activer les Logs de Débogage",
+  "config.debug.tooltip": "Affiche les stats de performance dans la console SMAPI chaque seconde. Utile pour vérifier le fonctionnement du mod !"
+}

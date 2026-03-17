@@ -1,37 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\",
+  "WorkspaceRootPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\shadow fish\\shadow fish - 3.3\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\shadow fish\\shadow fish - 3.5\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|solutionrelative:modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\shadow fish\\shadow fish - 3.3\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\shadow fish\\shadow fish - 3.5\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|solutionrelative:modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\shadow fish\\shadow fish - 3.3\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\shadow fish\\shadow fish - 3.5\\igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|solutionrelative:igenericmodconfigmenuapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\shadow fish\\shadow fish - 3.3\\shadowmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\shadow fish\\shadow fish - 3.5\\shadowmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|solutionrelative:shadowmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\shadow fish\\shadow fish - 3.3\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\shadow fish\\shadow fish - 3.5\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|solutionrelative:i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\shadow fish\\shadow fish - 3.3\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\shadow fish\\shadow fish - 3.5\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\shadow fish\\shadow fish - 3.3\\shadowboid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\shadow fish\\shadow fish - 3.5\\shadowboid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|solutionrelative:shadowboid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\shadow fish\\shadow fish - 3.3\\waterpatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\shadow fish\\shadow fish - 3.5\\waterpatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB28DBC3-666D-30EB-94B3-55CD28FD9950}|ShadowsOfTheDeep.csproj|solutionrelative:waterpatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -55,15 +55,19 @@
         },
         {
           "DockedWidth": 405,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "WaterPatch.cs",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\WaterPatch.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\WaterPatch.cs",
               "RelativeDocumentMoniker": "WaterPatch.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\WaterPatch.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\WaterPatch.cs",
               "RelativeToolTip": "WaterPatch.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -73,63 +77,59 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "IGenericModConfigMenuApi.cs",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\IGenericModConfigMenuApi.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\IGenericModConfigMenuApi.cs",
               "RelativeDocumentMoniker": "IGenericModConfigMenuApi.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\IGenericModConfigMenuApi.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\IGenericModConfigMenuApi.cs",
               "RelativeToolTip": "IGenericModConfigMenuApi.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAQwBUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T23:38:35.486Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T23:38:35.486Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "ShadowBoid.cs",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\ShadowBoid.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\ShadowBoid.cs",
               "RelativeDocumentMoniker": "ShadowBoid.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\ShadowBoid.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\ShadowBoid.cs",
               "RelativeToolTip": "ShadowBoid.cs",
               "ViewState": "AgIAAJ8BAAAAAAAAAADwv7gBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T23:36:21.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T23:36:21.721Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "ShadowManager.cs",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\ShadowManager.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\ShadowManager.cs",
               "RelativeDocumentMoniker": "ShadowManager.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\ShadowManager.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\ShadowManager.cs",
               "RelativeToolTip": "ShadowManager.cs",
               "ViewState": "AgIAAMIAAAAAAAAAAADwv9sAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T23:35:59.983Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T23:35:59.983Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ModEntry.cs",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\ModEntry.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\ModEntry.cs",
               "RelativeDocumentMoniker": "ModEntry.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\ModEntry.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\ModEntry.cs",
               "RelativeToolTip": "ModEntry.cs",
               "ViewState": "AgIAADQAAAAAAAAAAADwv00AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T23:35:34.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T23:35:34.203Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ModConfig.cs",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\ModConfig.cs",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\ModConfig.cs",
               "RelativeDocumentMoniker": "ModConfig.cs",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\ModConfig.cs",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\ModConfig.cs",
               "RelativeToolTip": "ModConfig.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA0wB8AAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwB8AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-15T23:35:26.725Z",
               "EditorCaption": ""
@@ -138,31 +138,25 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "manifest.json",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\manifest.json",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\manifest.json",
               "RelativeDocumentMoniker": "manifest.json",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\manifest.json",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\manifest.json",
               "RelativeToolTip": "manifest.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-16T03:53:35.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-16T03:53:35.399Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "default.json",
-              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\i18n\\default.json",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\i18n\\default.json",
               "RelativeDocumentMoniker": "i18n\\default.json",
-              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\i18n\\default.json",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\i18n\\default.json",
               "RelativeToolTip": "i18n\\default.json",
               "ViewState": "AgIAABMAAAAAAAAAAAAuwC0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-16T00:03:52.165Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2026-01-16T00:03:52.165Z"
             },
             {
               "$type": "Document",

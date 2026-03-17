@@ -398,11 +398,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\ShadowsOfTheDeep.csproj",
+      "projectUniqueName": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\ShadowsOfTheDeep.csproj",
       "projectName": "ShadowsOfTheDeep",
-      "projectPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\ShadowsOfTheDeep.csproj",
+      "projectPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\ShadowsOfTheDeep.csproj",
       "packagesPath": "C:\\Users\\zjmto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.3\\obj\\",
+      "outputPath": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\Shadow Fish\\Shadow Fish - 3.5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zjmto\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -477,7 +477,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

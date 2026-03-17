@@ -14,17 +14,14 @@ namespace BackgroundTickThrottler
         private static int _skippedUpdates = 0;
         private static int _allowedUpdates = 0;
         private static int _sameLocationUpdates = 0;
-        private static int _nearbyDistanceUpdates = 0;
         private static int _eventUpdates = 0;
+        private static int _festivalDayUpdates = 0;  // NEW - tracks pre-festival hours
         private static int _villagerForceUpdates = 0;
         private static int _monsterUpdates = 0;
         private static int _animalUpdates = 0;
         private static int _horseUpdates = 0;
         private static int _junimoUpdates = 0;
         private static int _dialogueUpdates = 0;
-
-        // Render distance in pixels (approximately 20 tiles)
-        private const float RENDER_DISTANCE = 1500f;
 
         public static bool Prefix(NPC __instance, GameTime time, GameLocation location)
         {
@@ -46,7 +43,6 @@ namespace BackgroundTickThrottler
             }
 
             // 2. MONSTERS - ALWAYS update for proper combat
-            // Without this, combat becomes broken and unfair
             if (__instance is Monster)
             {
                 if (ModEntry.Config.EnableDebug) _monsterUpdates++;
@@ -60,14 +56,14 @@ namespace BackgroundTickThrottler
                 return true;
             }
 
-            // 4. PETS - ALWAYS update (they're part of the player's home)
+            // 4. PETS - ALWAYS update
             if (__instance is Pet)
             {
                 if (ModEntry.Config.EnableDebug) _animalUpdates++;
                 return true;
             }
 
-            // 5. FARM ANIMALS - ALWAYS update for proper production and behavior
+            // 5. FARM ANIMALS - ALWAYS update for proper production
             if (__instance is FarmAnimal)
             {
                 if (ModEntry.Config.EnableDebug) _animalUpdates++;
@@ -84,25 +80,25 @@ namespace BackgroundTickThrottler
             // 7. Same location as player - ALWAYS update
             if (location == Game1.currentLocation)
             {
-                // Additionally check if NPC is within visible range
-                // This prevents throttling NPCs you can actually see
-                float distance = Vector2.Distance(Game1.player.Position, __instance.Position);
-
-                if (ModEntry.Config.EnableDebug)
-                {
-                    if (distance < RENDER_DISTANCE)
-                        _nearbyDistanceUpdates++;
-                    else
-                        _sameLocationUpdates++;
-                }
-
-                return true; // Always update if in same location
+                if (ModEntry.Config.EnableDebug) _sameLocationUpdates++;
+                return true;
             }
 
-            // 8. Events/Cutscenes/Festivals - ALWAYS update to prevent soft-locks
-            if (Game1.eventUp || Game1.isFestival())
+            // 8. FESTIVAL DAYS - ALWAYS update
+            // CRITICAL FIX: Check both active festivals AND festival days
+            // This prevents NPCs from being throttled on festival days before the event starts
+            // (e.g., Moonlight Jelly festival starts at 10 PM, but shops need to open at 9 AM)
+            bool isFestivalDay = Utility.isFestivalDay(Game1.dayOfMonth, Game1.season);
+            if (Game1.eventUp || Game1.isFestival() || isFestivalDay)
             {
-                if (ModEntry.Config.EnableDebug) _eventUpdates++;
+                if (ModEntry.Config.EnableDebug)
+                {
+                    // Track separately: festival day vs active festival
+                    if (isFestivalDay && !Game1.isFestival())
+                        _festivalDayUpdates++;  // Day of festival, but event hasn't started
+                    else
+                        _eventUpdates++;  // Active event/cutscene/festival
+                }
                 return true;
             }
 
@@ -113,8 +109,7 @@ namespace BackgroundTickThrottler
                 return true;
             }
 
-            // 10. NPCs with active dialogue or interactions
-            // FIXED: Check Game1.activeClickableMenu instead of player.CurrentDialogueBox
+            // 10. NPCs with active dialogue
             if (Game1.activeClickableMenu is DialogueBox dialogueBox &&
                 dialogueBox.characterDialogue?.speaker == __instance)
             {
@@ -126,15 +121,13 @@ namespace BackgroundTickThrottler
             // THROTTLING LOGIC - Only applied to background NPCs
             // ====================================================================
 
-            // Use global tick count + NPC ID for distributed load
-            // This ensures not all NPCs update on the same frame
             long currentTick = Game1.ticks;
             bool shouldUpdate = (currentTick + __instance.id) % ModEntry.Config.UpdateInterval == 0;
 
             if (shouldUpdate)
             {
                 if (ModEntry.Config.EnableDebug) _allowedUpdates++;
-                return true; // Run the original update
+                return true;
             }
 
             // Skip this update to save CPU
@@ -154,8 +147,8 @@ namespace BackgroundTickThrottler
                     $"  Total Update Attempts: {_totalUpdateAttempts}\n" +
                     $"  ├─ Skipped (Throttled): {_skippedUpdates} ({skipPercentage:F1}% saved!)\n" +
                     $"  ├─ Same Location (Always): {_sameLocationUpdates}\n" +
-                    $"  ├─ Nearby/Visible (Always): {_nearbyDistanceUpdates}\n" +
-                    $"  ├─ Event/Festival (Always): {_eventUpdates}\n" +
+                    $"  ├─ Event/Festival Active (Always): {_eventUpdates}\n" +
+                    $"  ├─ Festival Day Pre-Event (Always): {_festivalDayUpdates}\n" +
                     $"  ├─ Villager Force (Always): {_villagerForceUpdates}\n" +
                     $"  ├─ Monsters (Always): {_monsterUpdates}\n" +
                     $"  ├─ Animals/Horses (Always): {_animalUpdates + _horseUpdates}\n" +
@@ -173,8 +166,8 @@ namespace BackgroundTickThrottler
             _skippedUpdates = 0;
             _allowedUpdates = 0;
             _sameLocationUpdates = 0;
-            _nearbyDistanceUpdates = 0;
             _eventUpdates = 0;
+            _festivalDayUpdates = 0;
             _villagerForceUpdates = 0;
             _monsterUpdates = 0;
             _animalUpdates = 0;

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TrashToTreasure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+423b055b573b9fa0460c38f1592470470ef178d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ce18905a9b7218f49f0f032bf69c9ef1a7c27cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("TrashToTreasure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TrashToTreasure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

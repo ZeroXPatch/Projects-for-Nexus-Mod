@@ -4,8 +4,8 @@ namespace AutoFishingMaster
 {
     public class ModConfig
     {
-        public bool ToggleEnabled { get; set; } = true;
-        public SButton ToggleKey { get; set; } = SButton.F5;
+        public bool EnableMod { get; set; } = false;
+        public SButton ToggleKey { get; set; } = SButton.F3;
 
         // Core Features
         public bool AutoCast { get; set; } = true;
@@ -15,6 +15,10 @@ namespace AutoFishingMaster
         public bool AutoLootTreasure { get; set; } = true;
         public bool AlwaysPerfect { get; set; } = true;
         public bool AlwaysMaxCastPower { get; set; } = true;
+
+        // Safety
+        public bool EnableStaminaCheck { get; set; } = true;
+        public int StaminaThreshold { get; set; } = 15;
 
         // Debug
         public bool DebugMode { get; set; } = false;

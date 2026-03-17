@@ -1,0 +1,22 @@
+{
+  "config.enableMod.name": "Activer le mod",
+  "config.enableMod.description": "Interrupteur principal",
+  "config.toggleKey.name": "Touche",
+  "config.toggleKey.description": "Appuyez pour basculer",
+  "config.autoCast.name": "Lancer auto",
+  "config.autoCast.description": "Lance automatiquement",
+  "config.autoHit.name": "Accrochage auto",
+  "config.autoHit.description": "Attrape automatiquement",
+  "config.autoLootTreasure.name": "Butin auto",
+  "config.autoLootTreasure.description": "Ramasse coffres",
+  "config.alwaysPerfect.name": "Toujours parfait",
+  "config.alwaysPerfect.description": "Chaque prise parfaite",
+  "config.alwaysMaxCastPower.name": "Puissance max",
+  "config.alwaysMaxCastPower.description": "Toujours max",
+  "config.enableStaminaCheck.name": "Stop énergie basse",
+  "config.enableStaminaCheck.description": "Désactive faible énergie",
+  "config.staminaThreshold.name": "Seuil énergie",
+  "config.staminaThreshold.description": "Arrêt ici",
+  "config.debugMode.name": "Debug",
+  "config.debugMode.description": "Logs debug"
+}

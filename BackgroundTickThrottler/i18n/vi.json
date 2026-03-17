@@ -1,0 +1,11 @@
+{
+  "config.title": "Cài Đặt Hiệu Suất",
+  "config.enabled.name": "Bật Giới Hạn Tải",
+  "config.enabled.tooltip": "Nếu bật, các NPC không ở vị trí hiện tại của bạn sẽ cập nhật ít thường xuyên hơn để tiết kiệm FPS.",
+  "config.interval.name": "Khoảng Cách Cập Nhật",
+  "config.interval.tooltip": "Tần suất cập nhật NPC nền.\n2 = Mỗi khung hình khác (50% tải).\n10 = Chuyển động nền rất giật (Tải thấp).",
+  "config.force-villagers.name": "Luôn Cập Nhật Dân Làng",
+  "config.force-villagers.tooltip": "Nếu đúng, những người dân làng có tên (như Caroline) không bao giờ bị giới hạn, chỉ quái vật/ngựa/junimo bị ảnh hưởng.",
+  "config.debug.name": "Bật Nhật Ký Gỡ Lỗi",
+  "config.debug.tooltip": "Hiện thống kê hiệu suất trong bảng điều khiển SMAPI mỗi giây. Dùng để kiểm tra mod hoạt động và xem tiết kiệm được bao nhiêu CPU!"
+}

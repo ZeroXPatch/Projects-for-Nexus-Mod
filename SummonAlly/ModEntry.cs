@@ -14,6 +14,7 @@ namespace GhostAlly
         public static ModConfig Config = new ModConfig();
 
         private Monster? CurrentGhost = null;
+        private GameLocation? GhostLocation = null; // Track WHICH location the ghost is in
         private double SummonTimeStart = 0;
 
         public override void Entry(IModHelper helper)
@@ -25,6 +26,11 @@ namespace GhostAlly
             helper.Events.GameLoop.UpdateTicked += OnUpdateTicked;
             helper.Events.Player.Warped += OnPlayerWarped;
             helper.Events.GameLoop.DayEnding += OnDayEnding;
+
+            // FIX 1: Always remove the ghost before the save serializer runs.
+            // This is the primary safety net — without it, AllyGhost in any
+            // location's characters list will crash the XML serializer.
+            helper.Events.GameLoop.Saving += OnSaving;
         }
 
         private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
@@ -65,9 +71,17 @@ namespace GhostAlly
             RemoveCurrentGhost();
         }
 
-        private void OnPlayerWarped(object? sender, WarpedEventArgs e)
+        // FIX 1 handler: remove ghost before XML serialization begins.
+        private void OnSaving(object? sender, SavingEventArgs e)
         {
             RemoveCurrentGhost();
+        }
+
+        private void OnPlayerWarped(object? sender, WarpedEventArgs e)
+        {
+            // FIX 2: After a warp, Game1.currentLocation is already the NEW map.
+            // We must remove the ghost from the OLD location it was actually added to.
+            RemoveCurrentGhost(e.OldLocation);
         }
 
         private void OnUpdateTicked(object? sender, UpdateTickedEventArgs e)
@@ -76,16 +90,16 @@ namespace GhostAlly
 
             if (CurrentGhost != null)
             {
-                if (CurrentGhost.Health <= 0 || !Game1.currentLocation.characters.Contains(CurrentGhost))
+                if (CurrentGhost.Health <= 0 || GhostLocation == null || !GhostLocation.characters.Contains(CurrentGhost))
                 {
                     CurrentGhost = null;
+                    GhostLocation = null;
                     return;
                 }
 
                 double now = Game1.currentGameTime.TotalGameTime.TotalSeconds;
                 if (now - SummonTimeStart > Config.DurationSeconds)
                 {
-                    Game1.currentLocation.playSound("wand");
                     RemoveCurrentGhost();
                 }
             }
@@ -106,24 +120,34 @@ namespace GhostAlly
             CurrentGhost.MaxHealth = Config.GhostMaxHP;
             CurrentGhost.Health = Config.GhostMaxHP;
 
-            Game1.currentLocation.characters.Add(CurrentGhost);
+            GhostLocation = Game1.currentLocation; // Remember where we placed it
+            GhostLocation.characters.Add(CurrentGhost);
 
             Game1.player.Stamina -= Config.EnergyCost;
             SummonTimeStart = Game1.currentGameTime.TotalGameTime.TotalSeconds;
 
             if (Config.ShowMessage)
                 Game1.addHUDMessage(new HUDMessage(this.Helper.Translation.Get("hud.summoned"), HUDMessage.achievement_type));
-
-            Game1.currentLocation.playSound("wand");
         }
 
-        private void RemoveCurrentGhost()
+        /// <summary>
+        /// Removes the current ghost. Pass a specific location to target (e.g. on warp),
+        /// or leave null to use the tracked GhostLocation.
+        /// </summary>
+        private void RemoveCurrentGhost(GameLocation? location = null)
         {
             if (CurrentGhost != null)
             {
-                if (Game1.currentLocation != null && Game1.currentLocation.characters.Contains(CurrentGhost))
-                    Game1.currentLocation.characters.Remove(CurrentGhost);
+                // Use the explicitly supplied location first, then fall back to the
+                // tracked spawn location. Never blindly use Game1.currentLocation —
+                // that's the bug that caused the crash on warp and during save.
+                GameLocation? target = location ?? GhostLocation;
+
+                if (target != null && target.characters.Contains(CurrentGhost))
+                    target.characters.Remove(CurrentGhost);
+
                 CurrentGhost = null;
+                GhostLocation = null;
             }
         }
 
@@ -148,6 +172,8 @@ namespace GhostAlly
     public class AllyGhost : Ghost
     {
         public float AttackCooldownTimer { get; set; } = 0f;
+        private float DamageCooldownTimer = 0f;
+        private const float DAMAGE_COOLDOWN = 1.0f; // seconds between taking hits from proximity
 
         public AllyGhost() : base() { }
         public AllyGhost(Vector2 position) : base(position)
@@ -173,6 +199,12 @@ namespace GhostAlly
 
             if (AttackCooldownTimer > 0)
                 AttackCooldownTimer -= (float)time.ElapsedGameTime.TotalSeconds;
+
+            if (DamageCooldownTimer > 0)
+                DamageCooldownTimer -= (float)time.ElapsedGameTime.TotalSeconds;
+
+            // Monsters never call takeDamage on non-Farmer characters — we handle it manually.
+            TakeProximityDamage();
 
             NPC? target = FindTarget();
 
@@ -251,7 +283,7 @@ namespace GhostAlly
             );
 
             // 2. Extra Loot Check
-            // If the monster died, we verify loot dropped. 
+            // If the monster died, we verify loot dropped.
             // In rare cases (distance), we force it using the correct 1.6 API (ItemRegistry).
             if (target.Health <= 0 && hpBefore > 0)
             {
@@ -310,12 +342,38 @@ namespace GhostAlly
             this.position.Y += (float)Math.Sin(time.TotalGameTime.TotalMilliseconds / 150.0) * 0.5f;
         }
 
+        private void TakeProximityDamage()
+        {
+            if (DamageCooldownTimer > 0) return;
+
+            foreach (var npc in this.currentLocation.characters)
+            {
+                if (npc is Monster enemy && enemy != this && !(enemy is AllyGhost))
+                {
+                    if (Vector2.Distance(this.Position, enemy.Position) < 70f)
+                    {
+                        // Route through our takeDamage override so DamageTakenMultiplier applies.
+                        // who=null signals "monster source" and bypasses the player-hit guard.
+                        int raw = Math.Max(1, enemy.DamageToFarmer);
+                        this.takeDamage(raw, 0, 0, false, 0.0, (Farmer)null!);
+                        DamageCooldownTimer = DAMAGE_COOLDOWN;
+                        break;
+                    }
+                }
+            }
+        }
+
         private void UpdateFacing(Vector2 dir)
         {
-            if (Math.Abs(dir.X) > Math.Abs(dir.Y))
+            // Ghost sprites only visually differ left/right (horizontal flip).
+            // Up/down uses the same frame, so setting FacingDirection 0 or 2 just
+            // makes the ghost appear to face away from travel direction.
+            // Only update facing when horizontal movement clearly dominates AND
+            // is above a small threshold — this prevents the Y sine-bob from
+            // ever flipping the facing direction between frames.
+            if (Math.Abs(dir.X) > Math.Abs(dir.Y) && Math.Abs(dir.X) > 0.15f)
                 this.FacingDirection = dir.X > 0 ? 1 : 3;
-            else
-                this.FacingDirection = dir.Y > 0 ? 2 : 0;
+            // If movement is vertical-dominant or near-zero, keep current facing unchanged.
         }
     }
 }

@@ -33,8 +33,19 @@ namespace GMCMSearchBar
         private int selectedIndex = 0;
         private int scrollOffset = 0;
 
+        // GMCM's UpdateTicking handler reflects on Game1.activeClickableMenu looking for
+        // this field (it exists on GMCM's own menu base). Without it, GMCM throws an
+        // InvalidOperationException every tick while our menu is open.
+#pragma warning disable CS0414
+        private bool titleInPosition = true;
+#pragma warning restore CS0414
+
         private bool draggingThumb = false;
         private int dragGrabOffsetY = 0;
+
+        // True while the search box should own keyboard input.
+        // Re-asserted every tick AFTER TextBox.Update() which can deselect on its own.
+        private bool searchBoxFocused = true;
 
         // UI tuning knobs
         private const int OuterPad = 32;
@@ -96,9 +107,7 @@ namespace GMCMSearchBar
                 Text = ""
             };
 
-            // Select it immediately
-            this.searchBox.Selected = true;
-            Game1.keyboardDispatcher.Subscriber = this.searchBox;
+            // Focus is re-asserted every tick after TextBox.Update() in update().
         }
 
         protected override void cleanupBeforeExit()
@@ -237,7 +246,18 @@ namespace GMCMSearchBar
         public override void update(GameTime time)
         {
             base.update(time);
+
+            // Let TextBox process its own logic (cursor blink, internal click detection)
             this.searchBox.Update();
+
+            // Re-assert AFTER TextBox.Update() because Update() checks mouse state
+            // and will deselect the box if the cursor isn't hovering over it.
+            // By forcing focus here we always win that race.
+            if (this.searchBoxFocused)
+            {
+                this.searchBox.Selected = true;
+                Game1.keyboardDispatcher.Subscriber = this.searchBox;
+            }
 
             string now = this.searchBox.Text ?? "";
             if (!string.Equals(now, this.lastSearch, StringComparison.Ordinal))
@@ -352,9 +372,14 @@ namespace GMCMSearchBar
 
             if (this.searchRect.Contains(x, y))
             {
+                this.searchBoxFocused = true;
                 this.searchBox.SelectMe();
                 return;
             }
+
+            // Clicking outside the search bar releases focus.
+            this.searchBoxFocused = false;
+            this.searchBox.Selected = false;
 
             if (this.listRect.Contains(x, y))
             {

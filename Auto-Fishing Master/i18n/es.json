@@ -1,0 +1,22 @@
+{
+  "config.enableMod.name": "Activar mod",
+  "config.enableMod.description": "Interruptor maestro para activar o desactivar todas las funciones",
+  "config.toggleKey.name": "Tecla rápida",
+  "config.toggleKey.description": "Pulsa esta tecla para activar o desactivar rápidamente",
+  "config.autoCast.name": "Lanzado automático",
+  "config.autoCast.description": "Lanza la caña automáticamente",
+  "config.autoHit.name": "Auto enganchar",
+  "config.autoHit.description": "Atrapa peces automáticamente",
+  "config.autoLootTreasure.name": "Botín automático",
+  "config.autoLootTreasure.description": "Recoge cofres automáticamente",
+  "config.alwaysPerfect.name": "Captura perfecta",
+  "config.alwaysPerfect.description": "Cada captura será perfecta",
+  "config.alwaysMaxCastPower.name": "Potencia máxima",
+  "config.alwaysMaxCastPower.description": "Siempre lanza al máximo",
+  "config.enableStaminaCheck.name": "Parar con baja energía",
+  "config.enableStaminaCheck.description": "Desactiva el mod con poca energía",
+  "config.staminaThreshold.name": "Umbral de energía",
+  "config.staminaThreshold.description": "Detiene la pesca",
+  "config.debugMode.name": "Modo depuración",
+  "config.debugMode.description": "Activa registros"
+}

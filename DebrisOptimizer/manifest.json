@@ -1,0 +1,16 @@
+{
+  "Name": "Debris Performance Optimizer",
+  "Author": "ZeroXPatch",
+  "Version": "1.0.0",
+  "Description": "Improves performance when there's a lot of debris on screen by hiding excess debris visually while ensuring you still receive all items.",
+  "UniqueID": "ZeroXPatch.DebrisOptimizer",
+  "EntryDll": "DebrisOptimizer.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [],
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ]
+}

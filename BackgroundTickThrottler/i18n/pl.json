@@ -1,0 +1,11 @@
+{
+  "config.title": "Ustawienia Wydajności",
+  "config.enabled.name": "Włącz Ograniczanie (Throttling)",
+  "config.enabled.tooltip": "Jeśli włączone, NPC spoza twojej lokacji będą aktualizować się rzadziej, aby oszczędzać FPS.",
+  "config.interval.name": "Interwał Aktualizacji",
+  "config.interval.tooltip": "Jak często aktualizują się NPC w tle.\n2 = Co drugą klatkę (50% obciążenia).\n10 = Bardzo rwane ruchy w tle (Niskie obciążenie).",
+  "config.force-villagers.name": "Zawsze Aktualizuj Mieszkańców",
+  "config.force-villagers.tooltip": "Jeśli włączone, nazwani mieszkańcy (jak Caroline) nigdy nie są ograniczani, tylko potwory/konie/junimo.",
+  "config.debug.name": "Włącz Logowanie Debugowania",
+  "config.debug.tooltip": "Pokazuje statystyki wydajności w konsoli SMAPI co sekundę. Użyj tego, aby sprawdzić działanie moda i oszczędność CPU!"
+}

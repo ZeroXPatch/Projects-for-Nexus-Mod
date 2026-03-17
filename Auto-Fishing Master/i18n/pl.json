@@ -1,0 +1,22 @@
+{
+  "config.enableMod.name": "Włącz mod",
+  "config.enableMod.description": "Główny przełącznik",
+  "config.toggleKey.name": "Klawisz",
+  "config.toggleKey.description": "Naciśnij",
+  "config.autoCast.name": "Auto rzut",
+  "config.autoCast.description": "Automatyczny",
+  "config.autoHit.name": "Auto łapanie",
+  "config.autoHit.description": "Łapie sam",
+  "config.autoLootTreasure.name": "Auto skarb",
+  "config.autoLootTreasure.description": "Zbiera",
+  "config.alwaysPerfect.name": "Zawsze idealnie",
+  "config.alwaysPerfect.description": "Perfekcyjnie",
+  "config.alwaysMaxCastPower.name": "Maks",
+  "config.alwaysMaxCastPower.description": "Zawsze",
+  "config.enableStaminaCheck.name": "Stop energia",
+  "config.enableStaminaCheck.description": "Wyłącza",
+  "config.staminaThreshold.name": "Próg",
+  "config.staminaThreshold.description": "Tutaj",
+  "config.debugMode.name": "Debug",
+  "config.debugMode.description": "Logi"
+}

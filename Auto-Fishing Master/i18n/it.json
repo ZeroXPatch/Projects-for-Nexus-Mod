@@ -1,0 +1,22 @@
+{
+  "config.enableMod.name": "Abilita mod",
+  "config.enableMod.description": "Interruttore principale",
+  "config.toggleKey.name": "Tasto rapido",
+  "config.toggleKey.description": "Premi per alternare",
+  "config.autoCast.name": "Lancio auto",
+  "config.autoCast.description": "Lancia automaticamente",
+  "config.autoHit.name": "Aggancio auto",
+  "config.autoHit.description": "Pesca automaticamente",
+  "config.autoLootTreasure.name": "Bottino auto",
+  "config.autoLootTreasure.description": "Raccoglie forzieri",
+  "config.alwaysPerfect.name": "Sempre perfetto",
+  "config.alwaysPerfect.description": "Ogni pesca perfetta",
+  "config.alwaysMaxCastPower.name": "Potenza max",
+  "config.alwaysMaxCastPower.description": "Sempre massimo",
+  "config.enableStaminaCheck.name": "Stop energia",
+  "config.enableStaminaCheck.description": "Disattiva energia bassa",
+  "config.staminaThreshold.name": "Soglia",
+  "config.staminaThreshold.description": "Ferma qui",
+  "config.debugMode.name": "Debug",
+  "config.debugMode.description": "Log debug"
+}

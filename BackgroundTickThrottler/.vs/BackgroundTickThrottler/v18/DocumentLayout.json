@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{9A7707BC-9B17-27A9-DCF8-58C33DC6B810}|BackgroundTickThrottler.csproj|solutionrelative:npcpatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9A7707BC-9B17-27A9-DCF8-58C33DC6B810}|BackgroundTickThrottler.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\backgroundtickthrottler\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9A7707BC-9B17-27A9-DCF8-58C33DC6B810}|BackgroundTickThrottler.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9A7707BC-9B17-27A9-DCF8-58C33DC6B810}|BackgroundTickThrottler.csproj|c:\\users\\zjmto\\documents\\github\\projects-for-nexus-mod\\backgroundtickthrottler\\i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{9A7707BC-9B17-27A9-DCF8-58C33DC6B810}|BackgroundTickThrottler.csproj|solutionrelative:i18n\\default.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -36,11 +40,24 @@
         },
         {
           "DockedWidth": 405,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "manifest.json",
+              "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\BackgroundTickThrottler\\manifest.json",
+              "RelativeDocumentMoniker": "manifest.json",
+              "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\BackgroundTickThrottler\\manifest.json",
+              "RelativeToolTip": "manifest.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-02T16:55:37.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "default.json",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\BackgroundTickThrottler\\i18n\\default.json",
               "RelativeDocumentMoniker": "i18n\\default.json",
@@ -48,12 +65,11 @@
               "RelativeToolTip": "i18n\\default.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-02T00:58:40.365Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T00:58:40.365Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ModConfig.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\BackgroundTickThrottler\\ModConfig.cs",
               "RelativeDocumentMoniker": "ModConfig.cs",
@@ -61,8 +77,7 @@
               "RelativeToolTip": "ModConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T00:58:33.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T00:58:33.127Z"
             },
             {
               "$type": "Document",
@@ -72,18 +87,14 @@
               "RelativeDocumentMoniker": "NPCPatch.cs",
               "ToolTip": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\BackgroundTickThrottler\\NPCPatch.cs",
               "RelativeToolTip": "NPCPatch.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAowLkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAcwLIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-02T00:58:17.033Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ModEntry.cs",
               "DocumentMoniker": "C:\\Users\\zjmto\\Documents\\GitHub\\Projects-for-Nexus-Mod\\BackgroundTickThrottler\\ModEntry.cs",
               "RelativeDocumentMoniker": "ModEntry.cs",
@@ -91,8 +102,11 @@
               "RelativeToolTip": "ModEntry.cs",
               "ViewState": "AgIAAFIAAAAAAAAAAAAiwGIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T00:49:47.958Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T00:49:47.958Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         },

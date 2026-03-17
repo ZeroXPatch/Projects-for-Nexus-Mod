@@ -1,0 +1,11 @@
+{
+  "config.title": "パフォーマンス設定",
+  "config.enabled.name": "処理の軽量化を有効化",
+  "config.enabled.tooltip": "有効にすると、プレイヤーと同じ場所にいないNPCの更新頻度を下げてFPSを向上させます。",
+  "config.interval.name": "更新間隔",
+  "config.interval.tooltip": "背景NPCの更新頻度。\n2 = 2フレームに1回 (負荷50%)。\n10 = 動きがカクつきます (低負荷)。",
+  "config.force-villagers.name": "住人を常に更新",
+  "config.force-villagers.tooltip": "有効にすると、名前のある住人（キャロラインなど）は軽量化されず、モンスター/馬/ジュニモのみが対象になります。",
+  "config.debug.name": "デバッグログを有効化",
+  "config.debug.tooltip": "SMAPIコンソールに毎秒パフォーマンス統計を表示します。Modが動作しているか、どれだけCPU負荷を節約できているか確認できます！"
+}

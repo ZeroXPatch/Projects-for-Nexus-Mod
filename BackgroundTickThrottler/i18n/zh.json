@@ -1,0 +1,11 @@
+{
+  "config.title": "性能设置",
+  "config.enabled.name": "启用性能节流",
+  "config.enabled.tooltip": "若启用，不在当前位置的NPC更新频率将降低以节省FPS。",
+  "config.interval.name": "更新间隔",
+  "config.interval.tooltip": "后台NPC更新的频率。\n2 = 每隔一帧（50%负载）。\n10 = 背景移动非常卡顿（低负载）。",
+  "config.force-villagers.name": "始终更新村民",
+  "config.force-villagers.tooltip": "若为真，有名字的村民（如卡洛琳）绝不会被节流，只有怪物/马/祝尼魔会被节流。",
+  "config.debug.name": "启用调试日志",
+  "config.debug.tooltip": "每秒在SMAPI控制台显示性能统计信息。用于验证模组是否工作并查看节省了多少CPU负载！"
+}

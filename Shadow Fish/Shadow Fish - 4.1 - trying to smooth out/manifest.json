@@ -1,0 +1,10 @@
+{
+  "Name": "Visible Fish And Shadows",
+  "Author": "ZeroXPatch",
+  "Version": "4.2.0",
+  "Description": "Adds immersive, configurable fish shadows or visible fish to the water.",
+  "UniqueID": "ZeroXPatch.VisibleFishAndShadows",
+  "EntryDll": "VisibleFishAndShadows.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus:41302" ]
+}

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackgroundTickThrottler")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6952400195c776c0d6bddad12f678918c5059b83")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ce18905a9b7218f49f0f032bf69c9ef1a7c27cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackgroundTickThrottler")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackgroundTickThrottler")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

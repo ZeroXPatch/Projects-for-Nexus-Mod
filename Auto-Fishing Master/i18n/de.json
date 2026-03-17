@@ -1,0 +1,22 @@
+{
+  "config.enableMod.name": "Mod aktivieren",
+  "config.enableMod.description": "Hauptschalter zum Aktivieren oder Deaktivieren aller Auto-Angelfunktionen",
+  "config.toggleKey.name": "Umschalt-Taste",
+  "config.toggleKey.description": "Drücke diese Taste, um den Mod schnell ein- oder auszuschalten",
+  "config.autoCast.name": "Automatisch auswerfen",
+  "config.autoCast.description": "Wirft die Angel automatisch aus, sobald sie bereit ist",
+  "config.autoHit.name": "Automatisch haken & Minispiel überspringen",
+  "config.autoHit.description": "Fische werden automatisch gefangen, wenn sie anbeißen",
+  "config.autoLootTreasure.name": "Schatz automatisch einsammeln",
+  "config.autoLootTreasure.description": "Sammelt Schatztruhen automatisch ein",
+  "config.alwaysPerfect.name": "Immer perfekter Fang",
+  "config.alwaysPerfect.description": "Jeder Fang ist perfekt",
+  "config.alwaysMaxCastPower.name": "Immer maximale Wurfkraft",
+  "config.alwaysMaxCastPower.description": "Wirft immer mit maximaler Distanz",
+  "config.enableStaminaCheck.name": "Auto-Stopp bei wenig Energie",
+  "config.enableStaminaCheck.description": "Deaktiviert den Mod automatisch bei niedrigem Energiewert",
+  "config.staminaThreshold.name": "Energie-Schwelle",
+  "config.staminaThreshold.description": "Stoppt Angeln bei diesem Energiewert",
+  "config.debugMode.name": "Debug-Modus",
+  "config.debugMode.description": "Aktiviert Debug-Protokolle"
+}

@@ -1,0 +1,22 @@
+{
+  "config.enableMod.name": "Увімкнути мод",
+  "config.enableMod.description": "Головний перемикач",
+  "config.toggleKey.name": "Клавіша",
+  "config.toggleKey.description": "Натисніть",
+  "config.autoCast.name": "Автозакид",
+  "config.autoCast.description": "Авто",
+  "config.autoHit.name": "Автоловля",
+  "config.autoHit.description": "Ловить",
+  "config.autoLootTreasure.name": "Автоскарби",
+  "config.autoLootTreasure.description": "Збирає",
+  "config.alwaysPerfect.name": "Завжди ідеально",
+  "config.alwaysPerfect.description": "Ідеально",
+  "config.alwaysMaxCastPower.name": "Макс",
+  "config.alwaysMaxCastPower.description": "Завжди",
+  "config.enableStaminaCheck.name": "Стоп енергія",
+  "config.enableStaminaCheck.description": "Вимикає",
+  "config.staminaThreshold.name": "Поріг",
+  "config.staminaThreshold.description": "Тут",
+  "config.debugMode.name": "Debug",
+  "config.debugMode.description": "Логи"
+}

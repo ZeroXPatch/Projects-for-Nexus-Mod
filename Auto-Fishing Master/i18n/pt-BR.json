@@ -1,0 +1,22 @@
+{
+  "config.enableMod.name": "Ativar mod",
+  "config.enableMod.description": "Interruptor geral",
+  "config.toggleKey.name": "Tecla",
+  "config.toggleKey.description": "Pressione",
+  "config.autoCast.name": "Arremesso auto",
+  "config.autoCast.description": "Automático",
+  "config.autoHit.name": "Fisgar auto",
+  "config.autoHit.description": "Captura",
+  "config.autoLootTreasure.name": "Saque auto",
+  "config.autoLootTreasure.description": "Coleta",
+  "config.alwaysPerfect.name": "Sempre perfeito",
+  "config.alwaysPerfect.description": "Perfeito",
+  "config.alwaysMaxCastPower.name": "Força máx",
+  "config.alwaysMaxCastPower.description": "Sempre",
+  "config.enableStaminaCheck.name": "Parar energia",
+  "config.enableStaminaCheck.description": "Desativa",
+  "config.staminaThreshold.name": "Limite",
+  "config.staminaThreshold.description": "Aqui",
+  "config.debugMode.name": "Debug",
+  "config.debugMode.description": "Logs"
+}

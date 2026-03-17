@@ -1,0 +1,11 @@
+{
+  "config.title": "성능 설정",
+  "config.enabled.name": "스로틀링(최적화) 활성화",
+  "config.enabled.tooltip": "활성화하면, 현재 위치에 없는 NPC가 덜 자주 업데이트되어 FPS를 확보합니다.",
+  "config.interval.name": "업데이트 간격",
+  "config.interval.tooltip": "백그라운드 NPC 업데이트 빈도입니다.\n2 = 2프레임마다 (부하 50%).\n10 = 움직임이 매우 끊김 (낮은 부하).",
+  "config.force-villagers.name": "주민 항상 업데이트",
+  "config.force-villagers.tooltip": "체크 시, 이름이 있는 주민(캐롤라인 등)은 최적화되지 않고, 몬스터/말/주니모만 제한됩니다.",
+  "config.debug.name": "디버그 로깅 활성화",
+  "config.debug.tooltip": "SMAPI 콘솔에 매초 성능 통계를 표시합니다. CPU 부하를 얼마나 절약하고 있는지 확인하세요!"
+}

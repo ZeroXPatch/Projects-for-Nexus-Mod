@@ -43,42 +43,72 @@ namespace TrashToTreasure
 
         private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
         {
+            // Register with Generic Mod Config Menu
             var configMenu = this.Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
-            if (configMenu is null) return;
+            if (configMenu is not null)
+            {
+                configMenu.Register(
+                    mod: this.ModManifest,
+                    reset: () => {
+                        this.Config = new ModConfig();
+                        _cachedValidItemIds = null;
+                    },
+                    save: () => {
+                        this.Helper.WriteConfig(this.Config);
+                        _cachedValidItemIds = null;
+                    }
+                );
 
-            configMenu.Register(
-                mod: this.ModManifest,
-                reset: () => {
-                    this.Config = new ModConfig();
-                    _cachedValidItemIds = null;
-                },
-                save: () => {
-                    this.Helper.WriteConfig(this.Config);
-                    _cachedValidItemIds = null;
+                configMenu.AddSectionTitle(this.ModManifest, () => "Machine Settings");
+
+                configMenu.AddNumberOption(
+                    mod: this.ModManifest,
+                    getValue: () => this.Config.MaxItemValue,
+                    setValue: value => this.Config.MaxItemValue = value,
+                    name: () => "Max Item Value",
+                    tooltip: () => "The machine will output a random item worth LESS than this amount.",
+                    min: 10,
+                    max: 50000
+                );
+
+                configMenu.AddNumberOption(
+                    mod: this.ModManifest,
+                    getValue: () => this.Config.ProcessTimeHours,
+                    setValue: value => this.Config.ProcessTimeHours = value,
+                    name: () => "Process Time (Hours)",
+                    tooltip: () => "How many in-game hours it takes to process trash.",
+                    min: 0.1f,
+                    max: 24f
+                );
+            }
+
+            // Register with Automate using dynamic typing to avoid proxy mapping issues
+            try
+            {
+                var automateApi = this.Helper.ModRegistry.GetApi("Pathoschild.Automate");
+                if (automateApi is not null)
+                {
+                    var factory = new TrashRecyclerFactory(
+                        machineId: MachineId,
+                        config: this.Config,
+                        getRandomItem: this.GetRandomItem
+                    );
+
+                    this.Helper.Reflection
+                        .GetMethod(automateApi, "AddFactory")
+                        .Invoke(factory);
+
+                    this.Monitor.Log("Successfully registered Trash Recycler with Automate!", LogLevel.Info);
                 }
-            );
-
-            configMenu.AddSectionTitle(this.ModManifest, () => "Machine Settings");
-
-            configMenu.AddNumberOption(
-                mod: this.ModManifest,
-                getValue: () => this.Config.MaxItemValue,
-                setValue: value => this.Config.MaxItemValue = value,
-                name: () => "Max Item Value",
-                tooltip: () => "The machine will output a random item worth LESS than this amount.",
-                min: 10,
-                max: 50000
-            );
-
-            configMenu.AddNumberOption(
-                mod: this.ModManifest,
-                getValue: () => this.Config.ProcessTimeHours,
-                setValue: value => this.Config.ProcessTimeHours = value,
-                name: () => "Process Time (Hours)",
-                tooltip: () => "How many in-game hours it takes to process trash.",
-                min: 0.1f,
-                max: 24f
-            );
+                else
+                {
+                    this.Monitor.Log("Automate API not found - is Automate installed?", LogLevel.Warn);
+                }
+            }
+            catch (Exception ex)
+            {
+                this.Monitor.Log($"Failed to register with Automate: {ex}", LogLevel.Error);
+            }
         }
 
         private void OnAssetRequested(object? sender, AssetRequestedEventArgs e)
@@ -181,7 +211,7 @@ namespace TrashToTreasure
             }
         }
 
-        private Item GetRandomItem()
+        public Item GetRandomItem()
         {
             if (_cachedValidItemIds == null || _cachedValidItemIds.Count == 0)
             {

@@ -1,0 +1,11 @@
+{
+  "config.title": "Performans Ayarları",
+  "config.enabled.name": "Kısıtlamayı Etkinleştir",
+  "config.enabled.tooltip": "Etkinleştirilirse, mevcut konumunuzda olmayan NPC'ler FPS tasarrufu için daha az sıklıkla güncellenir.",
+  "config.interval.name": "Güncelleme Aralığı",
+  "config.interval.tooltip": "Arka plan NPC'lerinin güncellenme sıklığı.\n2 = Her iki karede bir (%50 yük).\n10 = Çok kesik hareketler (Düşük yük).",
+  "config.force-villagers.name": "Köylüleri Daima Güncelle",
+  "config.force-villagers.tooltip": "Eğer doğruysa, isimlendirilmiş köylüler (Caroline gibi) asla kısıtlanmaz, sadece canavarlar/atlar/junimolar kısıtlanır.",
+  "config.debug.name": "Hata Ayıklama Günlüğünü Etkinleştir",
+  "config.debug.tooltip": "SMAPI konsolunda her saniye performans istatistiklerini gösterir. Modun çalıştığını doğrulamak için kullanın!"
+}

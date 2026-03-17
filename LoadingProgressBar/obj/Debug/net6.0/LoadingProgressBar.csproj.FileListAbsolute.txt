@@ -1,0 +1,10 @@
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoadingProgressBar\bin\Debug\net6.0\manifest.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoadingProgressBar\bin\Debug\net6.0\LoadingProgressBar.deps.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoadingProgressBar\bin\Debug\net6.0\LoadingProgressBar.dll
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoadingProgressBar\obj\Debug\net6.0\LoadingProgressBar.csproj.AssemblyReference.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoadingProgressBar\obj\Debug\net6.0\LoadingProgressBar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoadingProgressBar\obj\Debug\net6.0\LoadingProgressBar.AssemblyInfoInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoadingProgressBar\obj\Debug\net6.0\LoadingProgressBar.AssemblyInfo.cs
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoadingProgressBar\obj\Debug\net6.0\LoadingProgressBar.csproj.CoreCompileInputs.cache
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoadingProgressBar\obj\Debug\net6.0\LoadingProgressBar.sourcelink.json
+C:\Users\zjmto\Documents\GitHub\Projects-for-Nexus-Mod\LoadingProgressBar\obj\Debug\net6.0\LoadingProgressBar.dll

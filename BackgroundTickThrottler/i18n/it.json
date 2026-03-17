@@ -1,0 +1,11 @@
+{
+  "config.title": "Impostazioni Prestazioni",
+  "config.enabled.name": "Abilita Limitazione",
+  "config.enabled.tooltip": "Se abilitato, gli NPC non nella tua posizione si aggiorneranno meno frequentemente per risparmiare FPS.",
+  "config.interval.name": "Intervallo Aggiornamento",
+  "config.interval.tooltip": "Ogni quanto si aggiornano gli NPC in background.\n2 = A frame alterni (Carico 50%).\n10 = Movimento molto scattoso (Carico basso).",
+  "config.force-villagers.name": "Aggiorna Sempre Abitanti",
+  "config.force-villagers.tooltip": "Se vero, gli abitanti con nome (come Caroline) non vengono mai limitati, solo mostri/cavalli/junimos.",
+  "config.debug.name": "Abilita Log Debug",
+  "config.debug.tooltip": "Mostra statistiche prestazioni nella console SMAPI ogni secondo. Usalo per verificare quanto carico CPU stai risparmiando!"
+}

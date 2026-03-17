@@ -1,0 +1,22 @@
+{
+  "config.enableMod.name": "Bật mod",
+  "config.enableMod.description": "Công tắc chính",
+  "config.toggleKey.name": "Phím",
+  "config.toggleKey.description": "Nhấn",
+  "config.autoCast.name": "Quăng tự động",
+  "config.autoCast.description": "Tự động",
+  "config.autoHit.name": "Tự bắt",
+  "config.autoHit.description": "Bắt cá",
+  "config.autoLootTreasure.name": "Nhặt rương",
+  "config.autoLootTreasure.description": "Tự động",
+  "config.alwaysPerfect.name": "Luôn hoàn hảo",
+  "config.alwaysPerfect.description": "Hoàn hảo",
+  "config.alwaysMaxCastPower.name": "Lực tối đa",
+  "config.alwaysMaxCastPower.description": "Luôn max",
+  "config.enableStaminaCheck.name": "Dừng năng lượng",
+  "config.enableStaminaCheck.description": "Tắt",
+  "config.staminaThreshold.name": "Ngưỡng",
+  "config.staminaThreshold.description": "Tại đây",
+  "config.debugMode.name": "Debug",
+  "config.debugMode.description": "Log"
+}

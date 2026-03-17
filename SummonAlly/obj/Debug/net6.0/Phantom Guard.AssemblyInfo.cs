@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PhantomGuard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8aeac3ba0e2a6d014d38e0462c73ae61c5a79b23")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ce18905a9b7218f49f0f032bf69c9ef1a7c27cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("PhantomGuard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PhantomGuard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
