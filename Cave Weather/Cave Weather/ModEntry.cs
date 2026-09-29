@@ -598,6 +598,12 @@ namespace CaveWeather
         {
             kind = MineLocationKind.Mines;
 
+            // currentLocation can temporarily be null during multiplayer transitions.
+            if (location == null)
+            {
+                return false;
+            }
+
             if (location is MineShaft)
             {
                 if (string.Equals(location.NameOrUniqueName, "SkullCave", StringComparison.OrdinalIgnoreCase))
